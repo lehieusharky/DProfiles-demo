@@ -52,7 +52,7 @@ class MyButton extends StatelessWidget {
         shape: shape(context),
       ),
       child: Padding(
-        padding: context.padding(vertical: 10),
+        padding: context.padding(vertical: 5),
         child: child ??
             Row(
               mainAxisSize: MainAxisSize.min,
