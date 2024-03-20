@@ -40,8 +40,17 @@ class $AssetsIconsLogosGen {
   SvgGenImage get dprofilesBlack =>
       const SvgGenImage('assets/icons/logos/dprofiles_black.svg');
 
+  /// File path: assets/icons/logos/talent_up_black.svg
+  SvgGenImage get talentUpBlack =>
+      const SvgGenImage('assets/icons/logos/talent_up_black.svg');
+
+  /// File path: assets/icons/logos/talent_up_logo.svg
+  SvgGenImage get talentUpLogo =>
+      const SvgGenImage('assets/icons/logos/talent_up_logo.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [dWhitePGreen, dWhitePWhite, dprofilesBlack];
+  List<SvgGenImage> get values =>
+      [dWhitePGreen, dWhitePWhite, dprofilesBlack, talentUpBlack, talentUpLogo];
 }
 
 class $AssetsImagesAuthGen {
