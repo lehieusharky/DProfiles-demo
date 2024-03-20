@@ -56,6 +56,7 @@ class MyButton extends StatelessWidget {
         child: child ??
             Row(
               mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 prefixIcon ?? SizedBox.fromSize(),
                 Padding(

@@ -5,6 +5,7 @@ import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/body_onboarding_page.dart';
 import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/onboarding_page_indicator.dart';
 import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/skip_button.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
@@ -49,9 +50,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
             width: context.width,
             onPressed: () => _onButtonPressed(),
             title: _titleButton(),
-            titleStyle: AppFont()
-                .fontTheme(context, weight: FontWeight.w600)
-                .labelMedium,
           ),
           OnboardingPageIndicator(
             controller: _pageController,
@@ -68,7 +66,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
     if (!_isLastPage) {
       _pageController.nextPage(
           duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
-    } else {}
+    } else {
+      context.router.push(const ConnectWalletRoute());
+    }
   }
 
   String _titleButton() => _isLastPage ? 'Get Started' : 'Next';

@@ -21,5 +21,6 @@ extension MyButtonExtension on MyButton {
       );
 
   TextStyle? textStyle(BuildContext context) =>
-      titleStyle ?? AppFont().fontTheme(context).labelMedium;
+      titleStyle ??
+      AppFont().fontTheme(context, weight: FontWeight.w600).labelMedium;
 }
