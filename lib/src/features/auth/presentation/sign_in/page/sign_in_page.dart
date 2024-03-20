@@ -94,7 +94,7 @@ class _SignInPageState extends State<SignInPage> {
                   controller: _passwordController,
                   hintText: 'Password',
                   isPasswordField: true,
-                  keyboardType: TextInputType.emailAddress,
+                  keyboardType: TextInputType.text,
                 ),
                 Padding(
                   padding: context.padding(top: 12),

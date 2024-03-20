@@ -28,6 +28,18 @@ class $AssetsImagesGen {
 class $AssetsIconsLogosGen {
   const $AssetsIconsLogosGen();
 
+  /// File path: assets/icons/logos/copy_icon.svg
+  SvgGenImage get copyIcon =>
+      const SvgGenImage('assets/icons/logos/copy_icon.svg');
+
+  /// File path: assets/icons/logos/d_grey_profile_green.svg
+  SvgGenImage get dGreyProfileGreen =>
+      const SvgGenImage('assets/icons/logos/d_grey_profile_green.svg');
+
+  /// File path: assets/icons/logos/d_grey_profile_green_logo.svg
+  SvgGenImage get dGreyProfileGreenLogo =>
+      const SvgGenImage('assets/icons/logos/d_grey_profile_green_logo.svg');
+
   /// File path: assets/icons/logos/d_white_P_green.svg
   SvgGenImage get dWhitePGreen =>
       const SvgGenImage('assets/icons/logos/d_white_P_green.svg');
@@ -49,8 +61,16 @@ class $AssetsIconsLogosGen {
       const SvgGenImage('assets/icons/logos/talent_up_logo.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values =>
-      [dWhitePGreen, dWhitePWhite, dprofilesBlack, talentUpBlack, talentUpLogo];
+  List<SvgGenImage> get values => [
+        copyIcon,
+        dGreyProfileGreen,
+        dGreyProfileGreenLogo,
+        dWhitePGreen,
+        dWhitePWhite,
+        dprofilesBlack,
+        talentUpBlack,
+        talentUpLogo
+      ];
 }
 
 class $AssetsImagesAuthGen {
@@ -60,8 +80,12 @@ class $AssetsImagesAuthGen {
   AssetGenImage get connectWallet =>
       const AssetGenImage('assets/images/auth/connect_wallet.png');
 
+  /// File path: assets/images/auth/sign_up_success.png
+  AssetGenImage get signUpSuccess =>
+      const AssetGenImage('assets/images/auth/sign_up_success.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [connectWallet];
+  List<AssetGenImage> get values => [connectWallet, signUpSuccess];
 }
 
 class $AssetsImagesOnboardingGen {

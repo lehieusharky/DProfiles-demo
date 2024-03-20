@@ -122,7 +122,7 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
         labelText: widget.labelText,
         labelStyle: AppFont().fontTheme(context).labelSmall,
         contentPadding: EdgeInsets.symmetric(
-            vertical: context.sizeHeight(15),
+            vertical: context.sizeHeight(10),
             horizontal: context.sizeWidth(10)),
         focusColor: Theme.of(context).colorScheme.primary,
         enabledBorder: OutlineInputBorder(
@@ -171,7 +171,7 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
         ),
         hintStyle: AppFont()
             .fontTheme(context, color: colorScheme(context).outline)
-            .labelSmall,
+            .bodyLarge,
       ),
     );
   }
