@@ -36,7 +36,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
       horizontalMargin: 32,
       body: Column(
         children: [
-          SkipButton(isLastPage: _isLastPage),
+          SkipButton(
+            isLastPage: _isLastPage,
+            onSkip: () => _skip(),
+          ),
           Expanded(
               child: BodyOnboardingPage(
             onPageChanged: (page) => _onPageChanged(page),
@@ -44,9 +47,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
           )),
           MyButton(
             width: context.width,
-            onPressed: () => _pageController.nextPage(
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut),
+            onPressed: () => _onButtonPressed(),
             title: _titleButton(),
             titleStyle: AppFont()
                 .fontTheme(context, weight: FontWeight.w600)
@@ -59,6 +60,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
         ],
       ),
     );
+  }
+
+  void _skip() => _pageController.jumpToPage(countOfSubPage - 1);
+
+  void _onButtonPressed() {
+    if (!_isLastPage) {
+      _pageController.nextPage(
+          duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+    } else {}
   }
 
   String _titleButton() => _isLastPage ? 'Get Started' : 'Next';

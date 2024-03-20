@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 
 class SkipButton extends StatelessWidget {
   final bool isLastPage;
-  const SkipButton({Key? key, required this.isLastPage}) : super(key: key);
+  final VoidCallback onSkip;
+
+  const SkipButton({Key? key, required this.isLastPage, required this.onSkip})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +21,7 @@ class SkipButton extends StatelessWidget {
               style: ButtonStyle(
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(40)))),
-              onPressed: () {},
+              onPressed: onSkip,
               child: Text(
                 'SKIP',
                 style: AppFont()
