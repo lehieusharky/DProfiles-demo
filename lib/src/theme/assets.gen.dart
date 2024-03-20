@@ -8,12 +8,51 @@
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
 import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/services.dart';
+
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  $AssetsIconsLogosGen get logos => const $AssetsIconsLogosGen();
+}
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  $AssetsImagesAuthGen get auth => const $AssetsImagesAuthGen();
   $AssetsImagesOnboardingGen get onboarding =>
       const $AssetsImagesOnboardingGen();
+}
+
+class $AssetsIconsLogosGen {
+  const $AssetsIconsLogosGen();
+
+  /// File path: assets/icons/logos/d_white_P_green.svg
+  SvgGenImage get dWhitePGreen =>
+      const SvgGenImage('assets/icons/logos/d_white_P_green.svg');
+
+  /// File path: assets/icons/logos/d_white_P_white.svg
+  SvgGenImage get dWhitePWhite =>
+      const SvgGenImage('assets/icons/logos/d_white_P_white.svg');
+
+  /// File path: assets/icons/logos/dprofiles_black.svg
+  SvgGenImage get dprofilesBlack =>
+      const SvgGenImage('assets/icons/logos/dprofiles_black.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [dWhitePGreen, dWhitePWhite, dprofilesBlack];
+}
+
+class $AssetsImagesAuthGen {
+  const $AssetsImagesAuthGen();
+
+  /// File path: assets/images/auth/connect_wallet.png
+  AssetGenImage get connectWallet =>
+      const AssetGenImage('assets/images/auth/connect_wallet.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [connectWallet];
 }
 
 class $AssetsImagesOnboardingGen {
@@ -38,6 +77,7 @@ class $AssetsImagesOnboardingGen {
 class Assets {
   Assets._();
 
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
@@ -107,6 +147,59 @@ class AssetGenImage {
       _assetName,
       bundle: bundle,
       package: package,
+    );
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
+}
+
+class SvgGenImage {
+  const SvgGenImage(this._assetName);
+
+  final String _assetName;
+
+  SvgPicture svg({
+    Key? key,
+    bool matchTextDirection = false,
+    AssetBundle? bundle,
+    String? package,
+    double? width,
+    double? height,
+    BoxFit fit = BoxFit.contain,
+    AlignmentGeometry alignment = Alignment.center,
+    bool allowDrawingOutsideViewBox = false,
+    WidgetBuilder? placeholderBuilder,
+    String? semanticsLabel,
+    bool excludeFromSemantics = false,
+    SvgTheme theme = const SvgTheme(),
+    ColorFilter? colorFilter,
+    Clip clipBehavior = Clip.hardEdge,
+    @deprecated Color? color,
+    @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
+    @deprecated bool cacheColorFilter = false,
+  }) {
+    return SvgPicture.asset(
+      _assetName,
+      key: key,
+      matchTextDirection: matchTextDirection,
+      bundle: bundle,
+      package: package,
+      width: width,
+      height: height,
+      fit: fit,
+      alignment: alignment,
+      allowDrawingOutsideViewBox: allowDrawingOutsideViewBox,
+      placeholderBuilder: placeholderBuilder,
+      semanticsLabel: semanticsLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      theme: theme,
+      colorFilter: colorFilter,
+      color: color,
+      colorBlendMode: colorBlendMode,
+      clipBehavior: clipBehavior,
+      cacheColorFilter: cacheColorFilter,
     );
   }
 

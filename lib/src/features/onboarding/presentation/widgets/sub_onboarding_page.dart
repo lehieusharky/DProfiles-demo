@@ -31,7 +31,7 @@ class SubOnboardingPage extends StatelessWidget {
             title,
             textAlign: TextAlign.center,
             style: AppFont()
-                .fontTheme(context, weight: FontWeight.w600)
+                .fontTheme(context, weight: FontWeight.w700)
                 .headlineMedium,
           ),
         ),
@@ -39,7 +39,8 @@ class SubOnboardingPage extends StatelessWidget {
           description,
           textAlign: TextAlign.center,
           style: AppFont()
-              .fontTheme(context, color: colorScheme(context).outline)
+              .fontTheme(context,
+                  color: colorScheme(context).outline, weight: FontWeight.w400)
               .bodyMedium,
         ),
       ],
