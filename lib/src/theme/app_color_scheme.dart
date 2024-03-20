@@ -5,12 +5,19 @@ ColorScheme colorScheme(context) => Theme.of(context).colorScheme;
 
 class AppColorScheme {
   static final lightTheme = FlexThemeData.light(
-      background: const Color(0xffFFFFFF),
-      scheme: FlexScheme.indigo,
+      scaffoldBackground: const Color(0xffFFFFFF),
+      colors: const FlexSchemeColor(
+        primary: Color(0xff58BD7D),
+        primaryContainer: Color(0xff7b7f9e),
+        secondary: Color(0xff3d56f0),
+        secondaryContainer: Color(0xff23b0b0),
+        tertiary: Color(0xffeef7fe),
+        tertiaryContainer: Color(0xff0c0c41),
+        appBarColor: Color(0xff23b0b0),
+        error: Color(0xffb00020),
+      ),
       surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
       blendLevel: 7,
-      swapLegacyOnMaterial3: true,
-      swapColors: true,
       subThemesData: const FlexSubThemesData(
           blendOnLevel: 10,
           blendOnColors: false,
@@ -32,13 +39,20 @@ class AppColorScheme {
       visualDensity: FlexColorScheme.comfortablePlatformDensity,
       useMaterial3: true);
   static final darkTheme = FlexThemeData.dark(
-      background: const Color(0xff1a202a),
-      scheme: FlexScheme.indigo,
+      scaffoldBackground: const Color(0xff2A2F3C),
+      colors: const FlexSchemeColor(
+        primary: Color(0xff58BD7D),
+        primaryContainer: Color(0xff7b7f9e),
+        secondary: Color(0xff3d56f0),
+        secondaryContainer: Color(0xff23b0b0),
+        tertiary: Color(0xff212531),
+        tertiaryContainer: Color(0xff37364a),
+        appBarColor: Color(0xff23b0b0),
+        error: Color(0xffcf6679),
+      ),
       surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
       blendLevel: 13,
       appBarStyle: FlexAppBarStyle.material,
-      swapLegacyOnMaterial3: true,
-      swapColors: true,
       subThemesData: const FlexSubThemesData(
           blendOnLevel: 20,
           useTextTheme: true,
