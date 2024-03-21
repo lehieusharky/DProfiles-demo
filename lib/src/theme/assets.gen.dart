@@ -21,6 +21,7 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   $AssetsImagesAuthGen get auth => const $AssetsImagesAuthGen();
+  $AssetsImagesHomeGen get home => const $AssetsImagesHomeGen();
   $AssetsImagesOnboardingGen get onboarding =>
       const $AssetsImagesOnboardingGen();
 }
@@ -52,6 +53,10 @@ class $AssetsIconsLogosGen {
   SvgGenImage get dprofilesBlack =>
       const SvgGenImage('assets/icons/logos/dprofiles_black.svg');
 
+  /// File path: assets/icons/logos/home_logo.svg
+  SvgGenImage get homeLogo =>
+      const SvgGenImage('assets/icons/logos/home_logo.svg');
+
   /// File path: assets/icons/logos/talent_up_black.svg
   SvgGenImage get talentUpBlack =>
       const SvgGenImage('assets/icons/logos/talent_up_black.svg');
@@ -68,6 +73,7 @@ class $AssetsIconsLogosGen {
         dWhitePGreen,
         dWhitePWhite,
         dprofilesBlack,
+        homeLogo,
         talentUpBlack,
         talentUpLogo
       ];
@@ -86,6 +92,23 @@ class $AssetsImagesAuthGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [connectWallet, signUpSuccess];
+}
+
+class $AssetsImagesHomeGen {
+  const $AssetsImagesHomeGen();
+
+  /// File path: assets/images/home/gift.png
+  AssetGenImage get gift => const AssetGenImage('assets/images/home/gift.png');
+
+  /// File path: assets/images/home/live.png
+  AssetGenImage get live => const AssetGenImage('assets/images/home/live.png');
+
+  /// File path: assets/images/home/scholaships.png
+  AssetGenImage get scholaships =>
+      const AssetGenImage('assets/images/home/scholaships.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [gift, live, scholaships];
 }
 
 class $AssetsImagesOnboardingGen {

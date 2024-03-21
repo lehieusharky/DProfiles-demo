@@ -6,17 +6,21 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 class OnboardingPageIndicator extends StatelessWidget {
   final PageController controller;
   final int countOfSubPage;
+  final double? bottom;
+  final double? top;
 
   const OnboardingPageIndicator({
     super.key,
     required this.controller,
     required this.countOfSubPage,
+    this.bottom,
+    this.top,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.padding(bottom: 32, top: 45),
+      padding: context.padding(bottom: bottom ?? 32, top: top ?? 45),
       child: SmoothPageIndicator(
         controller: controller,
         count: countOfSubPage,
