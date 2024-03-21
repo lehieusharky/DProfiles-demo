@@ -60,7 +60,9 @@ class MyButton extends StatelessWidget {
               children: [
                 prefixIcon ?? SizedBox.fromSize(),
                 Padding(
-                  padding: context.padding(horizontal: 5),
+                  padding: context.padding(
+                      horizontal:
+                          prefixIcon == null && suffixIcon == null ? 0 : 5),
                   child: Text(title),
                 ),
                 suffixIcon ?? SizedBox.fromSize(),

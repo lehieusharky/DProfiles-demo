@@ -130,7 +130,7 @@ class _SignInPageState extends State<SignInPage> {
             padding: context.padding(vertical: 32),
             child: MyButton(
               width: context.width,
-              onPressed: () {},
+              onPressed: () => context.router.push(const DashboardRoute()),
               title: 'Login',
             ),
           ),

@@ -7,7 +7,6 @@ import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/onbo
 import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/skip_button.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 
-import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()

@@ -12,6 +12,7 @@ class MyScaffold extends StatelessWidget {
   final Color? backgroundColor;
   final Widget? floatingButton;
   final bool? isBack;
+  final Widget? titleWidget;
 
   const MyScaffold({
     Key? key,
@@ -23,6 +24,7 @@ class MyScaffold extends StatelessWidget {
     this.backgroundColor,
     this.floatingButton,
     this.isBack,
+    this.titleWidget,
   }) : super(key: key);
 
   @override
@@ -35,6 +37,7 @@ class MyScaffold extends StatelessWidget {
               title: appBarTitle,
               action: action,
               isBack: isBack,
+              titleWidget: titleWidget,
             )
           : null,
       body: Padding(
