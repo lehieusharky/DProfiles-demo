@@ -10,7 +10,7 @@ import 'dashboard_page.dart';
 extension DashboardExtension on DashboardPage {
   List<PersistentBottomNavBarItem>? items(BuildContext context) => [
         const Tuple2(IconsaxOutline.home, 'Home'),
-        const Tuple2(IconsaxOutline.user, 'Person'),
+        const Tuple2(IconsaxOutline.user, 'Profile'),
         const Tuple2(IconsaxOutline.setting, 'Setting'),
       ]
           .map((e) => PersistentBottomNavBarItem(
