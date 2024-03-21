@@ -98,18 +98,16 @@ class _HomePageState extends State<HomePage>
             ),
             Padding(
               padding: context.padding(horizontal: 20, top: 20),
-              child: Expanded(
-                child: SizedBox(
-                  height: context.sizeHeight(400 * 3),
-                  child: TabBarView(
-                    controller: _tabController,
-                    children: const [
-                      DiscoverListHomePage(),
-                      DiscoverListHomePage(),
-                      DiscoverListHomePage(),
-                      DiscoverListHomePage(),
-                    ],
-                  ),
+              child: SizedBox(
+                height: context.sizeHeight(400 * 3),
+                child: TabBarView(
+                  controller: _tabController,
+                  children: const [
+                    DiscoverListHomePage(),
+                    DiscoverListHomePage(),
+                    DiscoverListHomePage(),
+                    DiscoverListHomePage(),
+                  ],
                 ),
               ),
             ),

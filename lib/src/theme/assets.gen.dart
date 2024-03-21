@@ -24,6 +24,7 @@ class $AssetsImagesGen {
   $AssetsImagesHomeGen get home => const $AssetsImagesHomeGen();
   $AssetsImagesOnboardingGen get onboarding =>
       const $AssetsImagesOnboardingGen();
+  $AssetsImagesProfileGen get profile => const $AssetsImagesProfileGen();
 }
 
 class $AssetsIconsLogosGen {
@@ -128,6 +129,24 @@ class $AssetsImagesOnboardingGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [bgr1, bgr2, bgr3];
+}
+
+class $AssetsImagesProfileGen {
+  const $AssetsImagesProfileGen();
+
+  /// File path: assets/images/profile/dot.svg
+  SvgGenImage get dot => const SvgGenImage('assets/images/profile/dot.svg');
+
+  /// File path: assets/images/profile/profile_background.png
+  AssetGenImage get profileBackground =>
+      const AssetGenImage('assets/images/profile/profile_background.png');
+
+  /// File path: assets/images/profile/us_flag.svg
+  SvgGenImage get usFlag =>
+      const SvgGenImage('assets/images/profile/us_flag.svg');
+
+  /// List of all assets
+  List<dynamic> get values => [dot, profileBackground, usFlag];
 }
 
 class Assets {

@@ -13,6 +13,7 @@ class MyScaffold extends StatelessWidget {
   final Widget? floatingButton;
   final bool? isBack;
   final Widget? titleWidget;
+  final double? topPadding;
 
   const MyScaffold({
     Key? key,
@@ -25,6 +26,7 @@ class MyScaffold extends StatelessWidget {
     this.floatingButton,
     this.isBack,
     this.titleWidget,
+    this.topPadding,
   }) : super(key: key);
 
   @override
@@ -42,7 +44,8 @@ class MyScaffold extends StatelessWidget {
           : null,
       body: Padding(
         padding: context.padding(
-            top: useAppBar == true ? 0 : 60, horizontal: horizontalMargin ?? 0),
+            top: useAppBar == true ? 0 : topPadding ?? 60,
+            horizontal: horizontalMargin ?? 0),
         child: body,
       ),
       floatingActionButton: floatingButton != null
