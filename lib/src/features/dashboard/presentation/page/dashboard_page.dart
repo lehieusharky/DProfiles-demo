@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_extension.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/pages/home_page.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/page/profile_page.dart';
 import 'package:demo_dprofiles/src/features/setting/presentation/pages/setting_page.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
@@ -26,7 +27,7 @@ class _DashboardPageState extends State<DashboardPage> {
   List<Widget> _buildScreens() {
     return [
       const HomePage(),
-      const HomePage(),
+      const ProfilePage(),
       const SettingPage(),
     ];
   }

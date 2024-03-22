@@ -9,17 +9,18 @@ extension MyButtonExtension on MyButton {
       ? null
       : Size(
           context.sizeWidth(width!),
-          context.sizeHeight(height ?? 60),
+          context.sizeHeight(height ?? 48),
         );
 
   OutlinedBorder shape(BuildContext context) => RoundedRectangleBorder(
         borderRadius:
-            BorderRadius.circular(context.sizeWidth(borderRadius ?? 12)),
+            BorderRadius.circular(context.sizeWidth(borderRadius ?? 90)),
         side: BorderSide(
             color: borderColor ?? Colors.transparent,
             width: context.sizeWidth(width ?? 1)),
       );
 
   TextStyle? textStyle(BuildContext context) =>
-      titleStyle ?? AppFont().fontTheme(context).labelMedium;
+      titleStyle ??
+      AppFont().fontTheme(context, weight: FontWeight.w600).labelMedium;
 }

@@ -14,7 +14,7 @@ class MyTextFormField extends StatefulWidget {
   final FocusNode? focusNode;
   final int? maxLines;
   final int? minLines;
-  final TextInputType keyboardType;
+  final TextInputType? keyboardType;
   final AutovalidateMode? autoValidateMode;
   final void Function(String)? onChanged;
   final String? hintText;
@@ -40,7 +40,7 @@ class MyTextFormField extends StatefulWidget {
     this.textStyle,
     this.maxLines,
     this.height,
-    required this.keyboardType,
+    this.keyboardType,
     this.autoValidateMode,
     this.hintText,
     this.onChanged,
@@ -122,7 +122,7 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
         labelText: widget.labelText,
         labelStyle: AppFont().fontTheme(context).labelSmall,
         contentPadding: EdgeInsets.symmetric(
-            vertical: context.sizeHeight(15),
+            vertical: context.sizeHeight(10),
             horizontal: context.sizeWidth(10)),
         focusColor: Theme.of(context).colorScheme.primary,
         enabledBorder: OutlineInputBorder(
@@ -130,12 +130,12 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
               widget.borderRadius ?? context.sizeWidth(12)),
           borderSide: BorderSide(
               color: widget.defaultBorderColor ??
-                  Theme.of(context).colorScheme.outline,
-              width: 0.5),
+                  Theme.of(context).colorScheme.outlineVariant,
+              width: 1),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(
-              widget.borderRadius ?? context.sizeWidth(16)),
+              widget.borderRadius ?? context.sizeWidth(12)),
           borderSide: BorderSide(color: colorScheme(context).primary, width: 1),
         ),
         prefixIcon: widget.prefixIcon,
@@ -169,7 +169,9 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
           borderSide:
               BorderSide(color: colorScheme(context).primary, width: 0.5),
         ),
-        hintStyle: AppFont().fontTheme(context).labelMedium,
+        hintStyle: AppFont()
+            .fontTheme(context, color: colorScheme(context).outline)
+            .bodyLarge,
       ),
     );
   }
