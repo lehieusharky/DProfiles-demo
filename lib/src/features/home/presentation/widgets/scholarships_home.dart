@@ -48,7 +48,7 @@ class _ScholarshipsHomeState extends State<ScholarshipsHome> {
             ),
           ),
           SizedBox(
-            height: context.sizeHeight(265),
+            height: context.sizeHeight(268),
             child: ListView.builder(
                 itemCount: 3,
                 shrinkWrap: true,
@@ -58,7 +58,7 @@ class _ScholarshipsHomeState extends State<ScholarshipsHome> {
                     padding: context.padding(right: 16),
                     child: Container(
                       alignment: Alignment.topCenter,
-                      width: context.sizeWidth(240),
+                      width: context.sizeWidth(242),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.start,
