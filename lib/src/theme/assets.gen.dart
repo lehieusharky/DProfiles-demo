@@ -134,6 +134,10 @@ class $AssetsImagesOnboardingGen {
 class $AssetsImagesProfileGen {
   const $AssetsImagesProfileGen();
 
+  /// File path: assets/images/profile/company_demo.png
+  AssetGenImage get companyDemo =>
+      const AssetGenImage('assets/images/profile/company_demo.png');
+
   /// File path: assets/images/profile/dot.svg
   SvgGenImage get dot => const SvgGenImage('assets/images/profile/dot.svg');
 
@@ -146,7 +150,7 @@ class $AssetsImagesProfileGen {
       const SvgGenImage('assets/images/profile/us_flag.svg');
 
   /// List of all assets
-  List<dynamic> get values => [dot, profileBackground, usFlag];
+  List<dynamic> get values => [companyDemo, dot, profileBackground, usFlag];
 }
 
 class Assets {

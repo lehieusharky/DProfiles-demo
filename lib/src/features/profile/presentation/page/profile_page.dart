@@ -1,7 +1,6 @@
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/features/home/presentation/widgets/discover_list_home_page.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/avatar.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/profile_sub_page.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
@@ -380,6 +379,14 @@ class _ProfilePageState extends State<ProfilePage>
                     ],
                   ),
                 ),
+              ),
+              Container(
+                padding: context.padding(vertical: 6, horizontal: 24),
+                width: context.width,
+                height: context.sizeHeight(12),
+                decoration: BoxDecoration(
+                    color:
+                        colorScheme(context).outlineVariant.withOpacity(0.2)),
               ),
             ],
           ),

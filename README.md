@@ -16,7 +16,7 @@ flutter packages pub run build_runner watch
 ```
 
 ## Generate assets
-
+z
 ```bash
 fluttergen -c pubspec.yaml  
 ```
