@@ -1,13 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/core/ui/my_text_form_field.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/sign_in/widgets/sign_in_form.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/widgets/bottom_navigation_text.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -21,6 +20,7 @@ class SignInPage extends StatefulWidget {
 class _SignInPageState extends State<SignInPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return MyScaffold(
@@ -51,112 +51,12 @@ class _SignInPageState extends State<SignInPage> {
               color: colorScheme(context).outlineVariant,
             ),
           ),
-          Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: context.padding(bottom: 10),
-                child: Text(
-                  'EMAIL',
-                  style: AppFont()
-                      .fontTheme(context,
-                          weight: FontWeight.w700,
-                          color: colorScheme(context).outline)
-                      .bodySmall,
-                ),
-              ),
-              MyTextFormField(
-                controller: _emailController,
-                hintText: 'Email address',
-                keyboardType: TextInputType.emailAddress,
-              ),
-            ],
+          const SignInForm(),
+          const BottomNavigationText(
+            content1: "Don’t have an account?  ",
+            content2: 'Login',
+            pageRoute: SignUpRoute(),
           ),
-          Padding(
-            padding: context.padding(top: 32),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: context.padding(bottom: 10),
-                  child: Text(
-                    'PASSWORD',
-                    style: AppFont()
-                        .fontTheme(context,
-                            weight: FontWeight.w700,
-                            color: colorScheme(context).outline)
-                        .bodySmall,
-                  ),
-                ),
-                MyTextFormField(
-                  controller: _passwordController,
-                  hintText: 'Password',
-                  isPasswordField: true,
-                  keyboardType: TextInputType.text,
-                ),
-                Padding(
-                  padding: context.padding(top: 12),
-                  child: RichText(
-                      text: TextSpan(children: [
-                    TextSpan(
-                      text: 'Forgot your password  ',
-                      style: AppFont()
-                          .fontTheme(
-                            context,
-                            weight: FontWeight.w700,
-                            color: colorScheme(context).onBackground,
-                          )
-                          .bodyMedium,
-                    ),
-                    TextSpan(
-                      text: 'Reset password',
-                      style: AppFont()
-                          .fontTheme(context,
-                              color: colorScheme(context).primary,
-                              weight: FontWeight.w700)
-                          .bodyMedium,
-                      recognizer: TapGestureRecognizer()
-                        ..onTap =
-                            () => context.router.push(const SignUpRoute()),
-                    ),
-                  ])),
-                )
-              ],
-            ),
-          ),
-          Padding(
-            padding: context.padding(vertical: 32),
-            child: MyButton(
-              width: context.width,
-              onPressed: () => context.router.push(const DashboardRoute()),
-              title: 'Login',
-            ),
-          ),
-          RichText(
-              text: TextSpan(children: [
-            TextSpan(
-              text: 'Don’t have an account?  ',
-              style: AppFont()
-                  .fontTheme(
-                    context,
-                    weight: FontWeight.w700,
-                    color: colorScheme(context).onBackground,
-                  )
-                  .bodyMedium,
-            ),
-            TextSpan(
-              text: 'Sign up',
-              style: AppFont()
-                  .fontTheme(context,
-                      color: colorScheme(context).primary,
-                      weight: FontWeight.w700)
-                  .bodyMedium,
-              recognizer: TapGestureRecognizer()
-                ..onTap = () => context.router.push(const SignUpRoute()),
-            ),
-          ]))
         ],
       ),
     );

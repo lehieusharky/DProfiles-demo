@@ -3,11 +3,11 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/auth/data/mock/mock_auth.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/widgets/bottom_navigation_text.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -64,29 +64,10 @@ class ConnectWalletPage extends StatelessWidget {
               title: 'Connect wallet',
             ),
           ),
-          RichText(
-              text: TextSpan(children: [
-            TextSpan(
-              text: 'Already have an account?  ',
-              style: AppFont()
-                  .fontTheme(
-                    context,
-                    weight: FontWeight.w700,
-                    color: colorScheme(context).onBackground,
-                  )
-                  .bodyMedium,
-            ),
-            TextSpan(
-              text: 'Login',
-              style: AppFont()
-                  .fontTheme(context,
-                      color: colorScheme(context).primary,
-                      weight: FontWeight.w700)
-                  .bodyMedium,
-              recognizer: TapGestureRecognizer()
-                ..onTap = () => context.router.push(const SignInRoute()),
-            ),
-          ]))
+          const BottomNavigationText(
+              content1: 'Already have an account?  ',
+              content2: 'Login',
+              pageRoute: SignInRoute()),
         ],
       ),
     );
