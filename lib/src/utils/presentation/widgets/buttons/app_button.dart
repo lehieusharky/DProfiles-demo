@@ -9,7 +9,8 @@ abstract class AbstractFactoryAppButton {
     Color? iconColor,
     Color? backgroundColor,
   });
-  MyButton elevatedButton({
+
+  Widget elevatedButton({
     required VoidCallback onPressed,
     required String title,
     Widget? prefixIcon,

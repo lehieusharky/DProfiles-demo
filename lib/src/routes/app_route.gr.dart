@@ -19,7 +19,7 @@ import 'package:demo_dprofiles/src/features/auth/presentation/sign_up/page/sign_
     as _i7;
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_page.dart'
     as _i2;
-import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/edit_profile.dart'
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/edit_profile_page.dart'
     as _i3;
 import 'package:demo_dprofiles/src/features/onboarding/presentation/page/onboarding_page.dart'
     as _i4;

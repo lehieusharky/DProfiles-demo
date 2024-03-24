@@ -9,12 +9,17 @@ class AuthField extends StatelessWidget {
   final String hint;
   final TextEditingController controller;
   final Widget? suffixIcon;
+  final TextInputType? keyboardType;
+  final int? maxLines;
 
   const AuthField(
       {Key? key,
       required this.title,
       required this.hint,
-      required this.controller, this.suffixIcon})
+      required this.controller,
+      this.suffixIcon,
+      this.keyboardType,
+      this.maxLines})
       : super(key: key);
 
   @override
@@ -38,7 +43,8 @@ class AuthField extends StatelessWidget {
           controller: controller,
           hintText: hint,
           suffixIcon: suffixIcon,
-          keyboardType: TextInputType.emailAddress,
+          maxLines: maxLines,
+          keyboardType: keyboardType ?? TextInputType.text,
         ),
       ],
     );
