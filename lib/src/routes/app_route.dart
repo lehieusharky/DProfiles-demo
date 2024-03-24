@@ -12,5 +12,7 @@ class AppRouter extends $AppRouter {
         AutoRoute(path: '/sign_up', page: SignUpRoute.page),
         AutoRoute(path: '/sign_up_success', page: SignUpSuccessRoute.page),
         AutoRoute(path: '/edit_profile', page: EditProfileRoute.page),
+        AutoRoute(path: '/open_to_work', page: OpenToWorkRoute.page),
+        AutoRoute(path: '/about_profile', page: AboutRoute.page),
       ];
 }

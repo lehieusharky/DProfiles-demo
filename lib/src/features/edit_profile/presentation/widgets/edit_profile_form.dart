@@ -21,7 +21,6 @@ class _EditProfileFormState extends State<EditProfileForm> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-
         Padding(
           padding: context.padding(top: 32),
           child: AuthField(
