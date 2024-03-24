@@ -41,10 +41,10 @@ abstract class $AppRouter extends _i8.RootStackRouter {
         child: const _i2.DashboardPage(),
       );
     },
-    EditProfile.name: (routeData) {
+    EditProfileRoute.name: (routeData) {
       return _i8.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.EditProfile(),
+        child: const _i3.EditProfilePage(),
       );
     },
     OnboardingRoute.name: (routeData) {
@@ -103,15 +103,15 @@ class DashboardRoute extends _i8.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i3.EditProfile]
-class EditProfile extends _i8.PageRouteInfo<void> {
-  const EditProfile({List<_i8.PageRouteInfo>? children})
+/// [_i3.EditProfilePage]
+class EditProfileRoute extends _i8.PageRouteInfo<void> {
+  const EditProfileRoute({List<_i8.PageRouteInfo>? children})
       : super(
-          EditProfile.name,
+          EditProfileRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'EditProfile';
+  static const String name = 'EditProfileRoute';
 
   static const _i8.PageInfo<void> page = _i8.PageInfo<void>(name);
 }

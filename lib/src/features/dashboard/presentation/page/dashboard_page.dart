@@ -20,7 +20,7 @@ class _DashboardPageState extends State<DashboardPage> {
 
   @override
   void initState() {
-    _controller = PersistentTabController(initialIndex: 0);
+    _controller = PersistentTabController(initialIndex: 1);
     super.initState();
   }
 
