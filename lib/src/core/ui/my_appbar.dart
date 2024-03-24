@@ -3,9 +3,13 @@ import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
 class MyAppbar extends StatefulWidget implements PreferredSizeWidget {
-  const MyAppbar(
-      {Key? key, this.title, this.action, this.isBack, this.titleWidget})
-      : super(key: key);
+  const MyAppbar({
+    Key? key,
+    this.title,
+    this.action,
+    this.isBack,
+    this.titleWidget,
+  }) : super(key: key);
 
   final String? title;
   final List<Widget>? action;

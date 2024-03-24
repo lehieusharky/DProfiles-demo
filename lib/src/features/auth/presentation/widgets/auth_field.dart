@@ -8,12 +8,13 @@ class AuthField extends StatelessWidget {
   final String title;
   final String hint;
   final TextEditingController controller;
+  final Widget? suffixIcon;
 
   const AuthField(
       {Key? key,
       required this.title,
       required this.hint,
-      required this.controller})
+      required this.controller, this.suffixIcon})
       : super(key: key);
 
   @override
@@ -36,6 +37,7 @@ class AuthField extends StatelessWidget {
         MyTextFormField(
           controller: controller,
           hintText: hint,
+          suffixIcon: suffixIcon,
           keyboardType: TextInputType.emailAddress,
         ),
       ],

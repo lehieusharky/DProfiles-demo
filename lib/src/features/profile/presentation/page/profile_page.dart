@@ -1,8 +1,10 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/avatar.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/profile_sub_page.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
@@ -51,7 +53,10 @@ class _ProfilePageState extends State<ProfilePage>
                               .fontTheme(context, weight: FontWeight.w600)
                               .titleSmall,
                         ),
-                        const Icon(IconsaxOutline.more)
+                        IconButton(
+                            onPressed: () =>
+                                context.router.push(const EditProfileRoute()),
+                            icon: const Icon(IconsaxOutline.more)),
                       ],
                     ),
                     Row(
