@@ -113,14 +113,14 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
       validator: widget.validator,
       onEditingComplete: widget.onEditComplete,
       textInputAction: widget.textInputAction,
-      style: AppFont().fontTheme(context).labelMedium,
+      style: AppFont().fontTheme(context).labelSmall,
       autovalidateMode: widget.autoValidateMode,
       keyboardType: widget.keyboardType,
       onChanged: widget.onChanged,
       minLines: widget.minLines,
       decoration: InputDecoration(
         labelText: widget.labelText,
-        labelStyle: AppFont().fontTheme(context).labelSmall,
+        labelStyle: AppFont().fontTheme(context).bodyLarge,
         contentPadding: EdgeInsets.symmetric(
             vertical: context.sizeHeight(10),
             horizontal: context.sizeWidth(10)),

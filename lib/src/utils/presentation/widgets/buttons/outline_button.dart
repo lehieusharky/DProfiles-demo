@@ -32,12 +32,21 @@ class AppOutlineButton implements AbstractFactoryAppButton {
   }
 
   @override
-  MyButton elevatedButton(
-      {required VoidCallback onPressed,
-      required String title,
-      Widget? prefixIcon,
-      Widget? suffixIcon}) {
-    // TODO: implement elevatedButton
-    throw UnimplementedError();
+  Widget    elevatedButton({
+    required VoidCallback onPressed,
+    required String title,
+    Widget? prefixIcon,
+    Widget? suffixIcon,
+    double? width,
+    double? height,
+  }) {
+    return MyButton(
+      backgroundColor: colorScheme(context).background,
+      borderColor: colorScheme(context).outlineVariant.withOpacity(0.5),
+      onPressed: onPressed,
+      title: title,
+      width: width,
+      height: height,
+    );
   }
 }

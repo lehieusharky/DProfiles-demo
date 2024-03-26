@@ -4,6 +4,7 @@ import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/my_text_form_field.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/edit_profile_form.dart';
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/path_direction.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -21,9 +22,6 @@ class EditProfilePage extends StatefulWidget {
 }
 
 class _EditProfilePageState extends State<EditProfilePage> {
-  final _emailController = TextEditingController();
-  final _passwordController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return MyScaffold(
@@ -49,18 +47,20 @@ class _EditProfilePageState extends State<EditProfilePage> {
           ),
         ),
       ],
-      titleWidget: Assets.icons.logos.homeLogo.svg(),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Edit Profile',
-            style: AppFont()
-                .fontTheme(context, weight: FontWeight.w700)
-                .labelMedium,
-          ),
-          EditProfileForm(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const PathDirection(currentPage: 'Edit Profile',),
+            Text(
+              'Edit Profile',
+              style: AppFont()
+                  .fontTheme(context, weight: FontWeight.w700)
+                  .labelMedium,
+            ),
+            const EditProfileForm(),
+          ],
+        ),
       ),
     );
   }

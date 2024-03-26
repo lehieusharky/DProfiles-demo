@@ -1,8 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/about_page.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/certificate_item.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/education_item.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/experience_item.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/skill_item.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:ficonsax/ficonsax.dart';
@@ -26,9 +29,12 @@ class ProfileSubPage extends StatelessWidget {
                     .fontTheme(context, weight: FontWeight.bold)
                     .labelMedium,
               ),
-              Icon(
-                IconsaxBold.edit_2,
-                color: colorScheme(context).outlineVariant,
+              IconButton(
+                onPressed: () => context.router.push(const OpenToWorkRoute()),
+                icon: Icon(
+                  IconsaxBold.edit_2,
+                  color: colorScheme(context).outlineVariant,
+                ),
               ),
             ],
           ),
@@ -119,10 +125,13 @@ class ProfileSubPage extends StatelessWidget {
                     .fontTheme(context, weight: FontWeight.bold)
                     .labelMedium,
               ),
-              Icon(
-                IconsaxBold.edit_2,
-                color: colorScheme(context).outlineVariant,
-              ),
+              IconButton(
+                onPressed: () => context.router.push(AboutRoute()),
+                icon: Icon(
+                  IconsaxBold.edit_2,
+                  color: colorScheme(context).outlineVariant,
+                ),
+              )
             ],
           ),
           Padding(
