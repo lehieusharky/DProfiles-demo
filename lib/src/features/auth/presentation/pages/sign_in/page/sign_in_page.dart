@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/features/auth/presentation/sign_in/widgets/sign_in_form.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/widgets/sign_in_form.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/bottom_navigation_text.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
@@ -41,7 +41,7 @@ class _SignInPageState extends State<SignInPage> {
                 .fontTheme(context, weight: FontWeight.w700)
                 .headlineMedium,
           ),
-          Padding( 
+          Padding(
             padding: context.padding(vertical: 32),
             child: Divider(
               thickness: 0.5,

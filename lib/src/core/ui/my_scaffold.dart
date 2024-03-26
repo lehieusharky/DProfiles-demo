@@ -16,6 +16,7 @@ class MyScaffold extends StatelessWidget {
   final double? topPadding;
   final VoidCallback? onBack;
   final double? heightAppBar;
+  final bool? isLoading;
 
   const MyScaffold({
     Key? key,
@@ -31,6 +32,7 @@ class MyScaffold extends StatelessWidget {
     this.topPadding,
     this.onBack,
     this.heightAppBar,
+    this.isLoading,
   }) : super(key: key);
 
   @override
@@ -52,7 +54,15 @@ class MyScaffold extends StatelessWidget {
         padding: context.padding(
             top: useAppBar == true ? 0 : topPadding ?? 60,
             horizontal: horizontalMargin ?? 0),
-        child: body,
+        child: Stack(
+          children: [
+            if (isLoading == true)
+              const Center(
+                child: CircularProgressIndicator(),
+              ),
+            body,
+          ],
+        ),
       ),
       floatingActionButton: floatingButton != null
           ? Padding(

@@ -5,10 +5,13 @@ import 'dio_interceptor.dart';
 class HttpUtil {
   static RestClient restClient() {
     Dio dio = Dio();
-    //  add header
+
+    dio.options.headers['Demo-Header'] = 'demo header';
+
     dio.interceptors.add(DioInterceptor());
 
     final restClient = RestClient(dio);
+
     return restClient;
   }
 }

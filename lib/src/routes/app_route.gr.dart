@@ -9,23 +9,23 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i15;
-import 'package:demo_dprofiles/src/features/auth/presentation/connect_wallet/presentation/connect_wallet_page.dart'
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/connect_wallet/presentation/connect_wallet_page.dart'
     as _i2;
-import 'package:demo_dprofiles/src/features/auth/presentation/forgot_password/pages/forgot_password_page.dart'
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/pages/forgot_password_page.dart'
     as _i6;
-import 'package:demo_dprofiles/src/features/auth/presentation/forgot_password/pages/update_new_password_page.dart'
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/pages/update_new_password_page.dart'
     as _i12;
-import 'package:demo_dprofiles/src/features/auth/presentation/forgot_password/pages/verify_email_forgot_password.dart'
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/pages/verify_email_forgot_password.dart'
     as _i13;
-import 'package:demo_dprofiles/src/features/auth/presentation/sign_in/page/sign_in_page.dart'
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/page/sign_in_page.dart'
     as _i9;
-import 'package:demo_dprofiles/src/features/auth/presentation/sign_up/page/create_an_account_page.dart'
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/create_an_account_page.dart'
     as _i3;
-import 'package:demo_dprofiles/src/features/auth/presentation/sign_up/page/sign_up_page.dart'
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/sign_up_page.dart'
     as _i10;
-import 'package:demo_dprofiles/src/features/auth/presentation/sign_up/page/sign_up_success_page.dart'
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/sign_up_success_page.dart'
     as _i11;
-import 'package:demo_dprofiles/src/features/auth/presentation/sign_up/page/verify_email_page.dart'
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/verify_sign_up_page.dart'
     as _i14;
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_page.dart'
     as _i4;
@@ -121,10 +121,10 @@ abstract class $AppRouter extends _i15.RootStackRouter {
         child: const _i13.VerifyEmailForgotPasswordPage(),
       );
     },
-    VerifyEmailRoute.name: (routeData) {
+    VerifySignUpRoute.name: (routeData) {
       return _i15.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i14.VerifyEmailPage(),
+        child: const _i14.VerifySignUpPage(),
       );
     },
   };
@@ -313,15 +313,15 @@ class VerifyEmailForgotPasswordRoute extends _i15.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i14.VerifyEmailPage]
-class VerifyEmailRoute extends _i15.PageRouteInfo<void> {
-  const VerifyEmailRoute({List<_i15.PageRouteInfo>? children})
+/// [_i14.VerifySignUpPage]
+class VerifySignUpRoute extends _i15.PageRouteInfo<void> {
+  const VerifySignUpRoute({List<_i15.PageRouteInfo>? children})
       : super(
-          VerifyEmailRoute.name,
+          VerifySignUpRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'VerifyEmailRoute';
+  static const String name = 'VerifySignUpRoute';
 
   static const _i15.PageInfo<void> page = _i15.PageInfo<void>(name);
 }
