@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/body_onboarding_page.dart';
 import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/onboarding_page_indicator.dart';

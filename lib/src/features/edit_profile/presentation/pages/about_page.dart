@@ -3,7 +3,6 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
-import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/edit_profile_form.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/path_direction.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
