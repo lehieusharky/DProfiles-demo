@@ -14,7 +14,7 @@ class AppRouter extends $AppRouter {
           initial: true,
         ),
         AutoRoute(path: '/sign_up', page: SignUpRoute.page),
-        AutoRoute(path: '/verify_email', page: VerifyEmailRoute.page),
+        AutoRoute(path: '/verify_email_sign_up', page: VerifySignUpRoute.page),
         AutoRoute(path: '/create_an_account', page: CreateAnAccountRoute.page),
         AutoRoute(path: '/sign_up_success', page: SignUpSuccessRoute.page),
         AutoRoute(path: '/edit_profile', page: EditProfileRoute.page),

@@ -20,7 +20,6 @@ class _PinPutVerifyEmailCodeState extends State<PinPutVerifyEmailCode> {
   @override
   Widget build(BuildContext context) {
     final focusedBorderColor = colorScheme(context).primary;
-    final borderColor = colorScheme(context).outlineVariant;
 
     final defaultPinTheme = PinTheme(
       width: context.sizeWidth(43),

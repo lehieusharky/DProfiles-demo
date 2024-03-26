@@ -1,6 +1,6 @@
 import 'package:demo_dprofiles/src/l10n/app_localizations.dart';
-import 'package:demo_dprofiles/src/utils/https/app_rest_client.dart';
-import 'package:demo_dprofiles/src/utils/https/http_util.dart';
+import 'package:demo_dprofiles/src/utils/https/dio/app_rest_client.dart';
+import 'package:demo_dprofiles/src/utils/https/dio/http_util.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';

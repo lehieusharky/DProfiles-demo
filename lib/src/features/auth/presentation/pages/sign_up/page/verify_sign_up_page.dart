@@ -1,8 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/features/auth/presentation/sign_up/widgets/pinput_verify_email_code.dart';
-import 'package:demo_dprofiles/src/features/auth/presentation/widgets/bottom_navigation_text.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/widgets/pinput_verify_email_code.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -11,26 +10,24 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
-class VerifyEmailForgotPasswordPage extends StatefulWidget {
-  const VerifyEmailForgotPasswordPage({Key? key}) : super(key: key);
+class VerifySignUpPage extends StatefulWidget {
+  const VerifySignUpPage({Key? key}) : super(key: key);
 
   @override
-  State<VerifyEmailForgotPasswordPage> createState() =>
-      _VerifyEmailForgotPasswordPageState();
+  State<VerifySignUpPage> createState() => _VerifySignUpPageState();
 }
 
-class _VerifyEmailForgotPasswordPageState
-    extends State<VerifyEmailForgotPasswordPage> {
+class _VerifySignUpPageState extends State<VerifySignUpPage> {
+  int _countDown = 120;
+
   @override
   Widget build(BuildContext context) {
     return MyScaffold(
       horizontalMargin: 32,
-      heightAppBar: 50,
-      isBack: true,
       body: Column(
         children: [
           Padding(
-            padding: context.padding(top: 20, bottom: 24),
+            padding: context.padding(top: 5, bottom: 40),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -40,24 +37,17 @@ class _VerifyEmailForgotPasswordPageState
               ],
             ),
           ),
-          const BottomNavigationText(
-            content1: "Don’t have an account?   ",
-            content2: 'Sign up for free',
-            pageRoute: SignUpRoute(),
+          Text(
+            'Enter your security code',
+            textAlign: TextAlign.center,
+            style: AppFont()
+                .fontTheme(context, weight: FontWeight.w700)
+                .headlineMedium,
           ),
           Padding(
-            padding: context.padding(top: 80, bottom: 32),
+            padding: context.padding(horizontal: 20, top: 32, bottom: 12),
             child: Text(
-              'Security verification',
-              style: AppFont()
-                  .fontTheme(context, weight: FontWeight.w700)
-                  .headlineMedium,
-            ),
-          ),
-          Padding(
-            padding: context.padding(bottom: 12, horizontal: 16),
-            child: Text(
-              'Please enter the 6-digit code sent to your email for verification.',
+              'Please enter the 6-digit code sent to your email for verification',
               textAlign: TextAlign.center,
               style: AppFont()
                   .fontTheme(context, color: colorScheme(context).outline)
@@ -66,7 +56,7 @@ class _VerifyEmailForgotPasswordPageState
           ),
           PinPutVerifyEmailCode(
             onCompleted: (pin) =>
-                context.router.push(const UpdateNewPasswordRoute()),
+                context.router.push(const CreateAnAccountRoute()),
           ),
           Padding(
             padding: context.padding(top: 28),
