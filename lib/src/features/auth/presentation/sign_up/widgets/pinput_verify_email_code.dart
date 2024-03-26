@@ -1,13 +1,12 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
 class PinPutVerifyEmailCode extends StatefulWidget {
-  const PinPutVerifyEmailCode({Key? key}) : super(key: key);
+  final void Function(String)? onCompleted;
+  const PinPutVerifyEmailCode({Key? key, this.onCompleted}) : super(key: key);
 
   @override
   State<PinPutVerifyEmailCode> createState() => _PinPutVerifyEmailCodeState();
@@ -42,7 +41,7 @@ class _PinPutVerifyEmailCodeState extends State<PinPutVerifyEmailCode> {
       separatorBuilder: (index) => SizedBox(width: context.sizeWidth(10)),
       validator: (value) => null,
       hapticFeedbackType: HapticFeedbackType.lightImpact,
-      onCompleted: (pin) => context.router.push(const CreateAnAccountRoute()),
+      onCompleted: widget.onCompleted,
       onChanged: (value) {},
       cursor: Column(
         mainAxisAlignment: MainAxisAlignment.end,

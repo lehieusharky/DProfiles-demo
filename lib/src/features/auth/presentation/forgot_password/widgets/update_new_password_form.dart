@@ -1,15 +1,18 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:flutter/material.dart';
 
-class CreateAccountForm extends StatefulWidget {
-  const CreateAccountForm({Key? key}) : super(key: key);
+class UpdateNewPasswordForm extends StatefulWidget {
+  const UpdateNewPasswordForm({Key? key}) : super(key: key);
 
   @override
-  State<CreateAccountForm> createState() => _CreateAccountFormState();
+  State<UpdateNewPasswordForm> createState() => _UpdateNewPasswordFormState();
 }
 
-class _CreateAccountFormState extends State<CreateAccountForm> {
+class _UpdateNewPasswordFormState extends State<UpdateNewPasswordForm> {
   final _emailController = TextEditingController();
 
   @override
@@ -19,9 +22,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         AuthField(
-            title: 'NAME',
-            hint: 'Enter your name',
-            controller: _emailController),
+            title: 'EMAIL', hint: 'Your email', controller: _emailController),
         Padding(
           padding: context.padding(top: 32),
           child: AuthField(
@@ -37,6 +38,14 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
               hint: 'Password',
               isPasswordField: true,
               controller: _emailController),
+        ),
+        Padding(
+          padding: context.padding(top: 32, bottom: 24),
+          child: MyButton(
+            width: context.width,
+            onPressed: () => context.router.push(const SignInRoute()),
+            title: 'Continue',
+          ),
         ),
       ],
     );

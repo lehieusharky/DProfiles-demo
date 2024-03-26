@@ -14,6 +14,8 @@ class MyScaffold extends StatelessWidget {
   final bool? isBack;
   final Widget? titleWidget;
   final double? topPadding;
+  final VoidCallback? onBack;
+  final double? heightAppBar;
 
   const MyScaffold({
     Key? key,
@@ -27,6 +29,8 @@ class MyScaffold extends StatelessWidget {
     this.isBack,
     this.titleWidget,
     this.topPadding,
+    this.onBack,
+    this.heightAppBar,
   }) : super(key: key);
 
   @override
@@ -34,11 +38,13 @@ class MyScaffold extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: backgroundColor,
-      appBar: useAppBar == true
+      appBar: useAppBar == true || isBack == true
           ? MyAppbar(
               title: appBarTitle,
               action: action,
               isBack: isBack,
+              onBack: onBack,
+              height: heightAppBar,
               titleWidget: titleWidget,
             )
           : null,

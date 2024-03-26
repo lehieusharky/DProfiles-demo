@@ -47,7 +47,8 @@ class _SignInFormState extends State<SignInForm> {
                   .bodyMedium,
             ),
             TextButton(
-                onPressed: () {},
+                onPressed: () =>
+                    context.router.push(const ForgotPasswordRoute()),
                 child: Text(
                   'Reset password',
                   style: AppFont()
