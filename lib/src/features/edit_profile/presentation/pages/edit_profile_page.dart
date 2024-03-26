@@ -1,16 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/core/ui/my_text_form_field.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/edit_profile_form.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/path_direction.dart';
-import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
-import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:ficonsax/ficonsax.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()

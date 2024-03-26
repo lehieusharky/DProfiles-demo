@@ -3,12 +3,10 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/sign_up/widgets/sign_up_form.dart';
-import 'package:demo_dprofiles/src/features/auth/presentation/sign_up/widgets/wallet_id.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -20,8 +18,6 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  bool _isAgreePolicy = false;
-
   @override
   Widget build(BuildContext context) {
     return MyScaffold(
@@ -62,8 +58,7 @@ class _SignUpPageState extends State<SignUpPage> {
               padding: context.padding(vertical: 32),
               child: MyButton(
                 width: context.width,
-                onPressed: () =>
-                    context.router.push(const SignUpSuccessRoute()),
+                onPressed: () => context.router.push(const VerifyEmailRoute()),
                 title: 'Sign up',
               ),
             ),

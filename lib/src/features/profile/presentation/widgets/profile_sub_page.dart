@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/about_page.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/certificate_item.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/education_item.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/experience_item.dart';
