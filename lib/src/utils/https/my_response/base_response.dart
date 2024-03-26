@@ -7,8 +7,9 @@ part 'base_response.g.dart';
 class BaseResponse with _$BaseResponse {
   const factory BaseResponse({
     required String message,
-    required String error,
-    required int statusCode,
+    @Default(false) bool? success,
+    @Default(null) String? error,
+    @Default(200) int? statusCode,
   }) = _BaseResponse;
 
   factory BaseResponse.fromJson(Map<String, Object?> json) =>

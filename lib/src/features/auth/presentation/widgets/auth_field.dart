@@ -13,6 +13,8 @@ class AuthField extends StatelessWidget {
   final int? maxLines;
   final bool? isPasswordField;
   final String? Function(String?)? validator;
+  final TextInputAction? textInputAction;
+  final VoidCallback? onTap;
 
   const AuthField(
       {Key? key,
@@ -23,7 +25,9 @@ class AuthField extends StatelessWidget {
       this.keyboardType,
       this.maxLines,
       this.isPasswordField,
-      this.validator})
+      this.validator,
+      this.textInputAction,
+      this.onTap})
       : super(key: key);
 
   @override
@@ -48,8 +52,10 @@ class AuthField extends StatelessWidget {
           hintText: hint,
           suffixIcon: suffixIcon,
           isPasswordField: isPasswordField,
+          onTap: onTap,
           maxLines: maxLines,
           validator: validator,
+          textInputAction: textInputAction ?? TextInputAction.done,
           keyboardType: keyboardType ?? TextInputType.text,
         ),
       ],

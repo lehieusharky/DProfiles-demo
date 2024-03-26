@@ -2,6 +2,7 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pinput/pinput.dart';
 
 class PinPutVerifyEmailCode extends StatefulWidget {
@@ -34,8 +35,8 @@ class _PinPutVerifyEmailCodeState extends State<PinPutVerifyEmailCode> {
       controller: pinController,
       length: 6,
       focusNode: focusNode,
-      androidSmsAutofillMethod: AndroidSmsAutofillMethod.smsUserConsentApi,
-      listenForMultipleSmsOnAndroid: true,
+      autofocus: true,
+      keyboardType: TextInputType.text,
       defaultPinTheme: defaultPinTheme,
       separatorBuilder: (index) => SizedBox(width: context.sizeWidth(10)),
       validator: (value) => null,

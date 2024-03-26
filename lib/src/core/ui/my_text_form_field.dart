@@ -94,6 +94,7 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
   }
 
   _onTapped() {
+    widget.onTap;
     setState(() {
       _isTapped = !_isTapped;
     });
