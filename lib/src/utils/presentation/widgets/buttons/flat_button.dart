@@ -38,11 +38,11 @@ class AppFlatButton implements AbstractFactoryAppButton {
   }) {
     return MyIconButton(
       onPressed: onPressed,
-      backgroundColor: backgroundColor,
+      backgroundColor: backgroundColor ?? colorScheme(context).primary,
       icon: Icon(
         iconData,
-        color: iconColor ?? colorScheme(context).onSurface,
-        size: iconSize ?? context.sizeHeight(25),
+        color: iconColor ?? colorScheme(context).background,
+        size:  context.sizeHeight(iconSize ??25),
       ),
     );
   }

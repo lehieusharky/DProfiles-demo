@@ -34,19 +34,22 @@ class _SignUpPageState extends State<SignUpPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Assets.icons.logos.dGreyProfileGreenLogo.svg(),
+                  Assets.icons.logos.dWhitePWhite.svg(),
                   context.sizedBox(width: 9),
-                  Assets.icons.logos.dGreyProfileGreen.svg(),
+                  Assets.icons.logos.dprofilesBlack.svg(),
                 ],
               ),
             ),
             Text(
-              'Create Account',
+              'Get Started',
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.w700)
                   .headlineMedium,
             ),
-            const WalletId(),
+            Text(
+              'by creating a free account.',
+              style: AppFont().fontTheme(context).bodyMedium,
+            ),
             Padding(
               padding: context.padding(vertical: 32),
               child: Divider(
@@ -55,55 +58,6 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
             ),
             const SignUpForm(),
-            Padding(
-              padding: context.padding(top: 32),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Checkbox(
-                    value: _isAgreePolicy,
-                    checkColor: colorScheme(context).background,
-                    activeColor: colorScheme(context).primary,
-                    fillColor: MaterialStateProperty.all(_isAgreePolicy
-                        ? colorScheme(context).primary
-                        : colorScheme(context).outlineVariant),
-                    onChanged: (value) {
-                      setState(() {
-                        _isAgreePolicy = !_isAgreePolicy;
-                      });
-                    },
-                  ),
-                  Expanded(
-                    child: RichText(
-                        text: TextSpan(children: [
-                      TextSpan(
-                        text:
-                            'By signing up I agree that I’m 18 years of age or older, to the ',
-                        style: AppFont()
-                            .fontTheme(
-                              context,
-                              weight: FontWeight.w400,
-                              color: colorScheme(context).outline,
-                            )
-                            .bodyMedium,
-                      ),
-                      TextSpan(
-                        text:
-                            'User Agreements, Privacy Policy, Cookie Policy, E-Sign Consent.',
-                        style: AppFont()
-                            .fontTheme(context,
-                                color: colorScheme(context).onBackground,
-                                weight: FontWeight.bold)
-                            .bodyMedium,
-                        recognizer: TapGestureRecognizer()
-                          ..onTap =
-                              () => context.router.push(const SignUpRoute()),
-                      ),
-                    ])),
-                  ),
-                ],
-              ),
-            ),
             Padding(
               padding: context.padding(vertical: 32),
               child: MyButton(

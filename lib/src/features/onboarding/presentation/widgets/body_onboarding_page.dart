@@ -25,12 +25,12 @@ class BodyOnboardingPage extends StatelessWidget {
           MockDataOnBoarding.description1,
         ),
         Tuple3(
-          Assets.images.onboarding.bgr2.path,
+          Assets.images.onboarding.bgr3.path,
           MockDataOnBoarding.title2,
           MockDataOnBoarding.description2,
         ),
         Tuple3(
-          Assets.images.onboarding.bgr3.path,
+          Assets.images.onboarding.bgr2.path,
           MockDataOnBoarding.title3,
           MockDataOnBoarding.description3,
         ),

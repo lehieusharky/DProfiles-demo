@@ -19,18 +19,15 @@ class OnboardingPageIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: context.padding(bottom: bottom ?? 32, top: top ?? 45),
-      child: SmoothPageIndicator(
-        controller: controller,
-        count: countOfSubPage,
-        effect: ExpandingDotsEffect(
-          expansionFactor: 4,
-          activeDotColor: colorScheme(context).primary,
-          dotWidth: context.sizeHeight(6),
-          dotHeight: context.sizeHeight(6),
-          dotColor: colorScheme(context).outlineVariant,
-        ),
+    return SmoothPageIndicator(
+      controller: controller,
+      count: countOfSubPage,
+      effect: ExpandingDotsEffect(
+        expansionFactor: 4,
+        activeDotColor: colorScheme(context).primary,
+        dotWidth: context.sizeHeight(6),
+        dotHeight: context.sizeHeight(6),
+        dotColor: colorScheme(context).outlineVariant,
       ),
     );
   }
