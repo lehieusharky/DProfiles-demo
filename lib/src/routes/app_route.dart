@@ -7,11 +7,12 @@ class AppRouter extends $AppRouter {
   List<AutoRoute> get routes => [
         AutoRoute(path: '/onboarding', page: OnboardingRoute.page),
         AutoRoute(path: '/dashboard', page: DashboardRoute.page),
+        AutoRoute(path: '/connect_wallet', page: ConnectWalletRoute.page),
         AutoRoute(
-            path: '/connect_wallet',
-            initial: true,
-            page: ConnectWalletRoute.page),
-        AutoRoute(path: '/sign_in', page: SignInRoute.page),
+          path: '/sign_in',
+          page: SignInRoute.page,
+          initial: true,
+        ),
         AutoRoute(path: '/sign_up', page: SignUpRoute.page),
         AutoRoute(path: '/verify_email', page: VerifyEmailRoute.page),
         AutoRoute(path: '/create_an_account', page: CreateAnAccountRoute.page),
@@ -19,5 +20,11 @@ class AppRouter extends $AppRouter {
         AutoRoute(path: '/edit_profile', page: EditProfileRoute.page),
         AutoRoute(path: '/open_to_work', page: OpenToWorkRoute.page),
         AutoRoute(path: '/about_profile', page: AboutRoute.page),
+        AutoRoute(path: '/forgot_password', page: ForgotPasswordRoute.page),
+        AutoRoute(
+            path: '/verify_email_forgot_password',
+            page: VerifyEmailForgotPasswordRoute.page),
+        AutoRoute(
+            path: '/update_new_password', page: UpdateNewPasswordRoute.page),
       ];
 }

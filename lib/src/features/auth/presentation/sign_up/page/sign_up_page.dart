@@ -44,7 +44,9 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             Text(
               'by creating a free account.',
-              style: AppFont().fontTheme(context).bodyMedium,
+              style: AppFont()
+                  .fontTheme(context, color: colorScheme(context).outline)
+                  .bodyMedium,
             ),
             Padding(
               padding: context.padding(vertical: 32),

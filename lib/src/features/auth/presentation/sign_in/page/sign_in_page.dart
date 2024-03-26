@@ -29,9 +29,9 @@ class _SignInPageState extends State<SignInPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Assets.icons.logos.talentUpLogo.svg(),
+                Assets.icons.logos.dWhitePWhite.svg(),
                 context.sizedBox(width: 9),
-                Assets.icons.logos.talentUpBlack.svg(),
+                Assets.icons.logos.dprofilesBlack.svg(),
               ],
             ),
           ),
