@@ -11,6 +11,7 @@ class AuthField extends StatelessWidget {
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
   final int? maxLines;
+  final bool? isPasswordField;
 
   const AuthField(
       {Key? key,
@@ -19,7 +20,8 @@ class AuthField extends StatelessWidget {
       required this.controller,
       this.suffixIcon,
       this.keyboardType,
-      this.maxLines})
+      this.maxLines,
+      this.isPasswordField})
       : super(key: key);
 
   @override
@@ -34,15 +36,16 @@ class AuthField extends StatelessWidget {
             title,
             style: AppFont()
                 .fontTheme(context,
-                    weight: FontWeight.w700,
-                    color: colorScheme(context).outline)
-                .bodySmall,
+                    weight: FontWeight.bold,
+                    color: colorScheme(context).outlineVariant)
+                .bodyMedium,
           ),
         ),
         MyTextFormField(
           controller: controller,
           hintText: hint,
           suffixIcon: suffixIcon,
+          isPasswordField: isPasswordField,
           maxLines: maxLines,
           keyboardType: keyboardType ?? TextInputType.text,
         ),

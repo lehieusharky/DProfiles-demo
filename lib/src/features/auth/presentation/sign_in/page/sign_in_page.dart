@@ -44,17 +44,17 @@ class _SignInPageState extends State<SignInPage> {
                 .fontTheme(context, weight: FontWeight.w700)
                 .headlineMedium,
           ),
-          Padding(
+          Padding( 
             padding: context.padding(vertical: 32),
             child: Divider(
-              thickness: 1,
+              thickness: 0.5,
               color: colorScheme(context).outlineVariant,
             ),
           ),
           const SignInForm(),
           const BottomNavigationText(
             content1: "Don’t have an account?  ",
-            content2: 'Login',
+            content2: 'SignUp',
             pageRoute: SignUpRoute(),
           ),
         ],

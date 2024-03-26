@@ -6,6 +6,8 @@ import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/body
 import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/onboarding_page_indicator.dart';
 import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/skip_button.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
+import 'package:ficonsax/ficonsax.dart';
 
 import 'package:flutter/material.dart';
 
@@ -45,15 +47,21 @@ class _OnboardingPageState extends State<OnboardingPage> {
             onPageChanged: (page) => _onPageChanged(page),
             controller: _pageController,
           )),
-          MyButton(
-            width: context.width,
-            onPressed: () => _onButtonPressed(),
-            title: _titleButton(),
+          Padding(
+            padding: context.padding(bottom: 80),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                OnboardingPageIndicator(
+                  controller: _pageController,
+                  countOfSubPage: countOfSubPage,
+                ),
+                AppFlatButton(context).iconButton(IconsaxOutline.arrow_right_3,
+                    iconSize: 25, onPressed: _onButtonPressed),
+              ],
+            ),
           ),
-          OnboardingPageIndicator(
-            controller: _pageController,
-            countOfSubPage: countOfSubPage,
-          )
         ],
       ),
     );

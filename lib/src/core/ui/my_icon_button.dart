@@ -16,7 +16,7 @@ class MyIconButton extends IconButton {
     return Container(
       decoration: BoxDecoration(boxShadow: [
         BoxShadow(
-          color: colorScheme(context).outlineVariant.withOpacity(0.4),
+          color: colorScheme(context).outlineVariant.withOpacity(0.3),
           spreadRadius: 3,
           blurRadius: 10,
           offset: const Offset(0, 3), // changes position of shadow

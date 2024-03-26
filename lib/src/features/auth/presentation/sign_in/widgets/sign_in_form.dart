@@ -3,6 +3,8 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
+import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
+import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class SignInForm extends StatefulWidget {
@@ -28,8 +30,36 @@ class _SignInFormState extends State<SignInForm> {
             padding: context.padding(top: 32),
             child: AuthField(
                 controller: _passwordController,
+                isPasswordField: true,
                 title: 'PASSWORD',
                 hint: 'Password')),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Forgot your password?',
+              style: AppFont()
+                  .fontTheme(
+                    context,
+                    weight: FontWeight.w700,
+                    color: colorScheme(context).onBackground,
+                  )
+                  .bodyMedium,
+            ),
+            TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Reset password',
+                  style: AppFont()
+                      .fontTheme(
+                        context,
+                        weight: FontWeight.w700,
+                        color: colorScheme(context).primary,
+                      )
+                      .bodyMedium,
+                )),
+          ],
+        ),
         Padding(
           padding: context.padding(vertical: 32),
           child: MyButton(
