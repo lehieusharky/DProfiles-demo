@@ -25,7 +25,7 @@ class SignUpSuccessPage extends StatelessWidget {
           Padding(
             padding: context.padding(vertical: 28),
             child: Text(
-              'You successfully signed up!\n Welcome to TalentUP',
+              'You successfully signed up!\nWelcome to dProfiles',
               textAlign: TextAlign.center,
               style: AppFont()
                   .fontTheme(context,
@@ -37,7 +37,7 @@ class SignUpSuccessPage extends StatelessWidget {
           MyButton(
             width: context.width,
             onPressed: () => context.router.push(const SignInRoute()),
-            title: 'Start your talent journey!',
+            title: 'Get started!',
             titleStyle: AppFont()
                 .fontTheme(context, weight: FontWeight.w600)
                 .labelSmall,

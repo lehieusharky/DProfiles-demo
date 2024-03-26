@@ -4,7 +4,7 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String title;
   final Color? backgroundColor;
   final TextStyle? titleStyle;
@@ -21,7 +21,7 @@ class MyButton extends StatelessWidget {
 
   const MyButton({
     Key? key,
-    required this.onPressed,
+     this.onPressed,
     required this.title,
     this.backgroundColor,
     this.titleStyle,
