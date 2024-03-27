@@ -37,6 +37,7 @@ import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/open
     as _i8;
 import 'package:demo_dprofiles/src/features/onboarding/presentation/page/onboarding_page.dart'
     as _i7;
+import 'package:flutter/material.dart' as _i16;
 
 abstract class $AppRouter extends _i15.RootStackRouter {
   $AppRouter({super.navigatorKey});
@@ -56,9 +57,13 @@ abstract class $AppRouter extends _i15.RootStackRouter {
       );
     },
     CreateAnAccountRoute.name: (routeData) {
+      final args = routeData.argsAs<CreateAnAccountRouteArgs>();
       return _i15.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.CreateAnAccountPage(),
+        child: _i3.CreateAnAccountPage(
+          key: args.key,
+          email: args.email,
+        ),
       );
     },
     DashboardRoute.name: (routeData) {
@@ -122,9 +127,13 @@ abstract class $AppRouter extends _i15.RootStackRouter {
       );
     },
     VerifySignUpRoute.name: (routeData) {
+      final args = routeData.argsAs<VerifySignUpRouteArgs>();
       return _i15.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i14.VerifySignUpPage(),
+        child: _i14.VerifySignUpPage(
+          key: args.key,
+          email: args.email,
+        ),
       );
     },
   };
@@ -160,16 +169,41 @@ class ConnectWalletRoute extends _i15.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.CreateAnAccountPage]
-class CreateAnAccountRoute extends _i15.PageRouteInfo<void> {
-  const CreateAnAccountRoute({List<_i15.PageRouteInfo>? children})
-      : super(
+class CreateAnAccountRoute
+    extends _i15.PageRouteInfo<CreateAnAccountRouteArgs> {
+  CreateAnAccountRoute({
+    _i16.Key? key,
+    required String email,
+    List<_i15.PageRouteInfo>? children,
+  }) : super(
           CreateAnAccountRoute.name,
+          args: CreateAnAccountRouteArgs(
+            key: key,
+            email: email,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'CreateAnAccountRoute';
 
-  static const _i15.PageInfo<void> page = _i15.PageInfo<void>(name);
+  static const _i15.PageInfo<CreateAnAccountRouteArgs> page =
+      _i15.PageInfo<CreateAnAccountRouteArgs>(name);
+}
+
+class CreateAnAccountRouteArgs {
+  const CreateAnAccountRouteArgs({
+    this.key,
+    required this.email,
+  });
+
+  final _i16.Key? key;
+
+  final String email;
+
+  @override
+  String toString() {
+    return 'CreateAnAccountRouteArgs{key: $key, email: $email}';
+  }
 }
 
 /// generated route for
@@ -314,14 +348,38 @@ class VerifyEmailForgotPasswordRoute extends _i15.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i14.VerifySignUpPage]
-class VerifySignUpRoute extends _i15.PageRouteInfo<void> {
-  const VerifySignUpRoute({List<_i15.PageRouteInfo>? children})
-      : super(
+class VerifySignUpRoute extends _i15.PageRouteInfo<VerifySignUpRouteArgs> {
+  VerifySignUpRoute({
+    _i16.Key? key,
+    required String email,
+    List<_i15.PageRouteInfo>? children,
+  }) : super(
           VerifySignUpRoute.name,
+          args: VerifySignUpRouteArgs(
+            key: key,
+            email: email,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'VerifySignUpRoute';
 
-  static const _i15.PageInfo<void> page = _i15.PageInfo<void>(name);
+  static const _i15.PageInfo<VerifySignUpRouteArgs> page =
+      _i15.PageInfo<VerifySignUpRouteArgs>(name);
+}
+
+class VerifySignUpRouteArgs {
+  const VerifySignUpRouteArgs({
+    this.key,
+    required this.email,
+  });
+
+  final _i16.Key? key;
+
+  final String email;
+
+  @override
+  String toString() {
+    return 'VerifySignUpRouteArgs{key: $key, email: $email}';
+  }
 }

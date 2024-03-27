@@ -28,5 +28,5 @@ abstract class AppModule {
   Future<SharedPreferences> get sharedPreferences =>
       SharedPreferences.getInstance();
 
-  RestClient get restClient => HttpUtil.restClient();
+  RestClient get restClient => MyHttp.rl();
 }
