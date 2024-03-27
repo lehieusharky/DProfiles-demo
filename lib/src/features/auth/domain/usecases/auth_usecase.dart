@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/create_account_model.dart';
+import 'package:demo_dprofiles/src/features/auth/data/models/sign_in_model.dart';
 import 'package:demo_dprofiles/src/features/auth/domain/repositories/auth_repository.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:injectable/injectable.dart';
@@ -17,6 +18,8 @@ abstract class AuthUseCase {
 
   Future<Either<String, BaseResponse>> createAnAccount(
       CreateAccountModel model);
+
+  Future<Either<String, SignInModel?>> signIn(String email, String password);
 }
 
 @Injectable(as: AuthUseCase)
@@ -60,6 +63,17 @@ class AuthUseCaseImpl implements AuthUseCase {
   Future<Either<String, BaseResponse>> createAnAccount(
       CreateAccountModel model) async {
     final result = await _authRepository.createAnAccount(model);
+
+    return result.fold(
+      (l) => Left(l.msg),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, SignInModel?>> signIn(
+      String email, String password) async {
+    final result = await _authRepository.signIn(email, password);
 
     return result.fold(
       (l) => Left(l.msg),

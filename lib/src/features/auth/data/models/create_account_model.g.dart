@@ -9,12 +9,10 @@ part of 'create_account_model.dart';
 _$CreateAccountModelImpl _$$CreateAccountModelImplFromJson(
         Map<String, dynamic> json) =>
     _$CreateAccountModelImpl(
-      walletAddress: json['wallet_address'] as String? ?? '',
+      walletAddress: json['wallet_address'] as String?,
       username: json['username'] as String,
       password: json['password'] as String,
       email: json['email'] as String? ?? '',
-      firstName: json['first_name'] as String? ?? '',
-      lastName: json['last_name'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$CreateAccountModelImplToJson(
@@ -24,6 +22,4 @@ Map<String, dynamic> _$$CreateAccountModelImplToJson(
       'username': instance.username,
       'password': instance.password,
       'email': instance.email,
-      'first_name': instance.firstName,
-      'last_name': instance.lastName,
     };

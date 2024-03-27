@@ -4,7 +4,8 @@ part of 'auth_bloc.dart';
 class AuthState with _$AuthState {
   const factory AuthState.initial() = _Initial;
   const factory AuthState.loading() = AuthLoading;
-  const factory AuthState.error(String message) = AuthError;
+  const factory AuthState.error({required String message, String? title}) =
+      AuthError;
   const factory AuthState.sendSignUpEmailSuccess() = AuthSendSignUpEmailSuccess;
   const factory AuthState.resendSignUpEmailSuccess() =
       AuthResendSignUpEmailSuccess;
@@ -15,4 +16,6 @@ class AuthState with _$AuthState {
       AuthValidateSignUpCodeFailed;
 
   const factory AuthState.createAnAccountSuccess() = AuthCreateAnAccountSuccess;
+
+  const factory AuthState.signInSuccess() = AuthSignInSuccess;
 }

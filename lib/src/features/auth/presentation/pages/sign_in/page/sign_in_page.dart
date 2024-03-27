@@ -1,6 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
+import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/widgets/sign_in_form.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/bottom_navigation_text.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
@@ -8,6 +10,7 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
 class SignInPage extends StatefulWidget {
@@ -20,41 +23,71 @@ class SignInPage extends StatefulWidget {
 class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
-    return MyScaffold(
-      horizontalMargin: 32,
-      body: Column(
-        children: [
-          Padding(
-            padding: context.padding(top: 20, bottom: 90),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+    return BlocProvider(
+      create: (context) => AuthBloc(),
+      child: BlocConsumer<AuthBloc, AuthState>(
+        listener: (context, state) {
+          if (state is AuthSignInSuccess) {
+            context.router.replace(const DashboardRoute());
+          }
+
+          if (state is AuthError) {
+            showErrorDialog(
+              context,
+              title: state.title ?? 'Sign in failed',
+              description: state.message,
+            );
+          }
+        },
+        builder: (context, state) {
+          return MyScaffold(
+            horizontalMargin: 32,
+            body: Stack(
               children: [
-                Assets.icons.logos.dWhitePWhite.svg(),
-                context.sizedBox(width: 9),
-                Assets.icons.logos.dprofilesBlack.svg(),
+                Column(
+                  children: [
+                    Padding(
+                      padding: context.padding(top: 20, bottom: 90),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Assets.icons.logos.dWhitePWhite.svg(),
+                          context.sizedBox(width: 9),
+                          Assets.icons.logos.dprofilesBlack.svg(),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      'Login',
+                      style: AppFont()
+                          .fontTheme(context, weight: FontWeight.w700)
+                          .headlineMedium,
+                    ),
+                    Padding(
+                      padding: context.padding(vertical: 32),
+                      child: Divider(
+                        thickness: 0.5,
+                        color: colorScheme(context).outlineVariant,
+                      ),
+                    ),
+                    const SignInForm(),
+                    const BottomNavigationText(
+                      content1: "Don’t have an account?  ",
+                      content2: 'SignUp',
+                      pageRoute: SignUpRoute(),
+                    ),
+                  ],
+                ),
+                if (state is AuthLoading)
+                  SizedBox(
+                    width: context.width,
+                    height: context.height,
+                    child: const Center(child: CircularProgressIndicator()),
+                  ),
               ],
             ),
-          ),
-          Text(
-            'Login',
-            style: AppFont()
-                .fontTheme(context, weight: FontWeight.w700)
-                .headlineMedium,
-          ),
-          Padding(
-            padding: context.padding(vertical: 32),
-            child: Divider(
-              thickness: 0.5,
-              color: colorScheme(context).outlineVariant,
-            ),
-          ),
-          const SignInForm(),
-          const BottomNavigationText(
-            content1: "Don’t have an account?  ",
-            content2: 'SignUp',
-            pageRoute: SignUpRoute(),
-          ),
-        ],
+          );
+        },
       ),
     );
   }

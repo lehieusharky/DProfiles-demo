@@ -25,10 +25,6 @@ mixin _$CreateAccountModel {
   String get username => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
-  @JsonKey(name: 'first_name')
-  String get firstName => throw _privateConstructorUsedError;
-  @JsonKey(name: 'last_name')
-  String get lastName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,9 +42,7 @@ abstract class $CreateAccountModelCopyWith<$Res> {
       {@JsonKey(name: 'wallet_address') String? walletAddress,
       String username,
       String password,
-      String? email,
-      @JsonKey(name: 'first_name') String firstName,
-      @JsonKey(name: 'last_name') String lastName});
+      String? email});
 }
 
 /// @nodoc
@@ -68,8 +62,6 @@ class _$CreateAccountModelCopyWithImpl<$Res, $Val extends CreateAccountModel>
     Object? username = null,
     Object? password = null,
     Object? email = freezed,
-    Object? firstName = null,
-    Object? lastName = null,
   }) {
     return _then(_value.copyWith(
       walletAddress: freezed == walletAddress
@@ -88,14 +80,6 @@ class _$CreateAccountModelCopyWithImpl<$Res, $Val extends CreateAccountModel>
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      firstName: null == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
-              as String,
-      lastName: null == lastName
-          ? _value.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
-              as String,
     ) as $Val);
   }
 }
@@ -112,9 +96,7 @@ abstract class _$$CreateAccountModelImplCopyWith<$Res>
       {@JsonKey(name: 'wallet_address') String? walletAddress,
       String username,
       String password,
-      String? email,
-      @JsonKey(name: 'first_name') String firstName,
-      @JsonKey(name: 'last_name') String lastName});
+      String? email});
 }
 
 /// @nodoc
@@ -132,8 +114,6 @@ class __$$CreateAccountModelImplCopyWithImpl<$Res>
     Object? username = null,
     Object? password = null,
     Object? email = freezed,
-    Object? firstName = null,
-    Object? lastName = null,
   }) {
     return _then(_$CreateAccountModelImpl(
       walletAddress: freezed == walletAddress
@@ -152,14 +132,6 @@ class __$$CreateAccountModelImplCopyWithImpl<$Res>
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      firstName: null == firstName
-          ? _value.firstName
-          : firstName // ignore: cast_nullable_to_non_nullable
-              as String,
-      lastName: null == lastName
-          ? _value.lastName
-          : lastName // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -168,12 +140,10 @@ class __$$CreateAccountModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CreateAccountModelImpl implements _CreateAccountModel {
   const _$CreateAccountModelImpl(
-      {@JsonKey(name: 'wallet_address') this.walletAddress = '',
+      {@JsonKey(name: 'wallet_address') this.walletAddress,
       required this.username,
       required this.password,
-      this.email = '',
-      @JsonKey(name: 'first_name') this.firstName = '',
-      @JsonKey(name: 'last_name') this.lastName = ''});
+      this.email = ''});
 
   factory _$CreateAccountModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$CreateAccountModelImplFromJson(json);
@@ -188,16 +158,10 @@ class _$CreateAccountModelImpl implements _CreateAccountModel {
   @override
   @JsonKey()
   final String? email;
-  @override
-  @JsonKey(name: 'first_name')
-  final String firstName;
-  @override
-  @JsonKey(name: 'last_name')
-  final String lastName;
 
   @override
   String toString() {
-    return 'CreateAccountModel(walletAddress: $walletAddress, username: $username, password: $password, email: $email, firstName: $firstName, lastName: $lastName)';
+    return 'CreateAccountModel(walletAddress: $walletAddress, username: $username, password: $password, email: $email)';
   }
 
   @override
@@ -211,17 +175,13 @@ class _$CreateAccountModelImpl implements _CreateAccountModel {
                 other.username == username) &&
             (identical(other.password, password) ||
                 other.password == password) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.firstName, firstName) ||
-                other.firstName == firstName) &&
-            (identical(other.lastName, lastName) ||
-                other.lastName == lastName));
+            (identical(other.email, email) || other.email == email));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, walletAddress, username,
-      password, email, firstName, lastName);
+  int get hashCode =>
+      Object.hash(runtimeType, walletAddress, username, password, email);
 
   @JsonKey(ignore: true)
   @override
@@ -240,13 +200,10 @@ class _$CreateAccountModelImpl implements _CreateAccountModel {
 
 abstract class _CreateAccountModel implements CreateAccountModel {
   const factory _CreateAccountModel(
-          {@JsonKey(name: 'wallet_address') final String? walletAddress,
-          required final String username,
-          required final String password,
-          final String? email,
-          @JsonKey(name: 'first_name') final String firstName,
-          @JsonKey(name: 'last_name') final String lastName}) =
-      _$CreateAccountModelImpl;
+      {@JsonKey(name: 'wallet_address') final String? walletAddress,
+      required final String username,
+      required final String password,
+      final String? email}) = _$CreateAccountModelImpl;
 
   factory _CreateAccountModel.fromJson(Map<String, dynamic> json) =
       _$CreateAccountModelImpl.fromJson;
@@ -260,12 +217,6 @@ abstract class _CreateAccountModel implements CreateAccountModel {
   String get password;
   @override
   String? get email;
-  @override
-  @JsonKey(name: 'first_name')
-  String get firstName;
-  @override
-  @JsonKey(name: 'last_name')
-  String get lastName;
   @override
   @JsonKey(ignore: true)
   _$$CreateAccountModelImplCopyWith<_$CreateAccountModelImpl> get copyWith =>

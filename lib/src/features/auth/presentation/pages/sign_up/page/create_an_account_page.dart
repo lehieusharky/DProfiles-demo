@@ -13,6 +13,7 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:uuid/uuid.dart';
 
 @RoutePage()
 class CreateAnAccountPage extends StatefulWidget {
@@ -39,13 +40,13 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
       child: BlocConsumer<AuthBloc, AuthState>(
         listener: (context, state) {
           if (state is AuthCreateAnAccountSuccess) {
-            context.router.push(const SignInRoute());
+            context.router.push(const SignUpSuccessRoute());
           }
 
           if (state is AuthError) {
             showErrorDialog(
               context,
-              title: 'Create an account failed',
+              title: state.title ?? 'Create an account failed',
               description: state.message,
             );
           }
@@ -128,12 +129,10 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
       context.read<AuthBloc>().add(
             AuthCreateAccount(
               CreateAccountModel(
-                walletAddress: 'wallet : ${_usernameController.text.trim()}',
+                walletAddress: const Uuid().v4(),
                 username: _usernameController.text.trim(),
                 password: _passwordController.text.trim(),
                 email: widget.email,
-                firstName: '_',
-                lastName: '_',
               ),
             ),
           );
@@ -192,5 +191,13 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
         ),
       ],
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _usernameController.dispose();
+    _passwordController.dispose();
+    _confirmPasswordController.dispose();
   }
 }

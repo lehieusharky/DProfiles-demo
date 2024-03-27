@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:demo_dprofiles/src/features/auth/data/datasources/auth_datasource.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/create_account_model.dart';
+import 'package:demo_dprofiles/src/features/auth/data/models/sign_in_model.dart';
 import 'package:demo_dprofiles/src/features/auth/domain/repositories/auth_repository.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:injectable/injectable.dart';
@@ -49,6 +50,17 @@ class AuthRepositoryImpl implements AuthRepository {
       CreateAccountModel model) async {
     try {
       final response = await _authDataSource.createAnAccount(model);
+      return Right(response);
+    } catch (e) {
+      return Left(AuthFailure(e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<AuthFailure, SignInModel?>> signIn(
+      String email, String password) async {
+    try {
+      final response = await _authDataSource.signIn(email, password);
       return Right(response);
     } catch (e) {
       return Left(AuthFailure(e.toString()));

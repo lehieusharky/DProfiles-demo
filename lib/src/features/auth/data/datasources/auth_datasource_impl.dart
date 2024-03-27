@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/features/auth/data/datasources/auth_datasource.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/create_account_model.dart';
+import 'package:demo_dprofiles/src/features/auth/data/models/sign_in_model.dart';
 import 'package:demo_dprofiles/src/utils/https/dio/http_util.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:dio/dio.dart';
@@ -45,6 +46,19 @@ class AuthDataSourceImpl implements AuthDataSource {
         .createAnAccount(model.toJson())
         .catchError(
             (e) => BaseResponse.fromJson((e as DioException).response!.data));
+
+    return response;
+  }
+
+  @override
+  Future<SignInModel?> signIn(String email, String password) async {
+    final body = {"username": email, "password": password};
+
+    final response = await MyHttp.rl().signIn(body).catchError((e) => null);
+
+    if (response != null) {
+
+    }
 
     return response;
   }

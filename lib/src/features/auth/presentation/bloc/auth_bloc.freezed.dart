@@ -22,6 +22,7 @@ mixin _$AuthEvent {
     required TResult Function(String email) resendSignUpEmail,
     required TResult Function(String email, String code) validateSignUpCode,
     required TResult Function(CreateAccountModel model) createAccount,
+    required TResult Function(String email, String password) signIn,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$AuthEvent {
     TResult? Function(String email)? resendSignUpEmail,
     TResult? Function(String email, String code)? validateSignUpCode,
     TResult? Function(CreateAccountModel model)? createAccount,
+    TResult? Function(String email, String password)? signIn,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$AuthEvent {
     TResult Function(String email)? resendSignUpEmail,
     TResult Function(String email, String code)? validateSignUpCode,
     TResult Function(CreateAccountModel model)? createAccount,
+    TResult Function(String email, String password)? signIn,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$AuthEvent {
     required TResult Function(AuthResendSignUpEmail value) resendSignUpEmail,
     required TResult Function(AuthValidateSignUpCode value) validateSignUpCode,
     required TResult Function(AuthCreateAccount value) createAccount,
+    required TResult Function(AuthSignIn value) signIn,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$AuthEvent {
     TResult? Function(AuthResendSignUpEmail value)? resendSignUpEmail,
     TResult? Function(AuthValidateSignUpCode value)? validateSignUpCode,
     TResult? Function(AuthCreateAccount value)? createAccount,
+    TResult? Function(AuthSignIn value)? signIn,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$AuthEvent {
     TResult Function(AuthResendSignUpEmail value)? resendSignUpEmail,
     TResult Function(AuthValidateSignUpCode value)? validateSignUpCode,
     TResult Function(AuthCreateAccount value)? createAccount,
+    TResult Function(AuthSignIn value)? signIn,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -154,6 +160,7 @@ class _$AuthSendSignUpEmailImpl implements AuthSendSignUpEmail {
     required TResult Function(String email) resendSignUpEmail,
     required TResult Function(String email, String code) validateSignUpCode,
     required TResult Function(CreateAccountModel model) createAccount,
+    required TResult Function(String email, String password) signIn,
   }) {
     return sendSignUpEmail(email);
   }
@@ -165,6 +172,7 @@ class _$AuthSendSignUpEmailImpl implements AuthSendSignUpEmail {
     TResult? Function(String email)? resendSignUpEmail,
     TResult? Function(String email, String code)? validateSignUpCode,
     TResult? Function(CreateAccountModel model)? createAccount,
+    TResult? Function(String email, String password)? signIn,
   }) {
     return sendSignUpEmail?.call(email);
   }
@@ -176,6 +184,7 @@ class _$AuthSendSignUpEmailImpl implements AuthSendSignUpEmail {
     TResult Function(String email)? resendSignUpEmail,
     TResult Function(String email, String code)? validateSignUpCode,
     TResult Function(CreateAccountModel model)? createAccount,
+    TResult Function(String email, String password)? signIn,
     required TResult orElse(),
   }) {
     if (sendSignUpEmail != null) {
@@ -191,6 +200,7 @@ class _$AuthSendSignUpEmailImpl implements AuthSendSignUpEmail {
     required TResult Function(AuthResendSignUpEmail value) resendSignUpEmail,
     required TResult Function(AuthValidateSignUpCode value) validateSignUpCode,
     required TResult Function(AuthCreateAccount value) createAccount,
+    required TResult Function(AuthSignIn value) signIn,
   }) {
     return sendSignUpEmail(this);
   }
@@ -202,6 +212,7 @@ class _$AuthSendSignUpEmailImpl implements AuthSendSignUpEmail {
     TResult? Function(AuthResendSignUpEmail value)? resendSignUpEmail,
     TResult? Function(AuthValidateSignUpCode value)? validateSignUpCode,
     TResult? Function(AuthCreateAccount value)? createAccount,
+    TResult? Function(AuthSignIn value)? signIn,
   }) {
     return sendSignUpEmail?.call(this);
   }
@@ -213,6 +224,7 @@ class _$AuthSendSignUpEmailImpl implements AuthSendSignUpEmail {
     TResult Function(AuthResendSignUpEmail value)? resendSignUpEmail,
     TResult Function(AuthValidateSignUpCode value)? validateSignUpCode,
     TResult Function(AuthCreateAccount value)? createAccount,
+    TResult Function(AuthSignIn value)? signIn,
     required TResult orElse(),
   }) {
     if (sendSignUpEmail != null) {
@@ -302,6 +314,7 @@ class _$AuthResendSignUpEmailImpl implements AuthResendSignUpEmail {
     required TResult Function(String email) resendSignUpEmail,
     required TResult Function(String email, String code) validateSignUpCode,
     required TResult Function(CreateAccountModel model) createAccount,
+    required TResult Function(String email, String password) signIn,
   }) {
     return resendSignUpEmail(email);
   }
@@ -313,6 +326,7 @@ class _$AuthResendSignUpEmailImpl implements AuthResendSignUpEmail {
     TResult? Function(String email)? resendSignUpEmail,
     TResult? Function(String email, String code)? validateSignUpCode,
     TResult? Function(CreateAccountModel model)? createAccount,
+    TResult? Function(String email, String password)? signIn,
   }) {
     return resendSignUpEmail?.call(email);
   }
@@ -324,6 +338,7 @@ class _$AuthResendSignUpEmailImpl implements AuthResendSignUpEmail {
     TResult Function(String email)? resendSignUpEmail,
     TResult Function(String email, String code)? validateSignUpCode,
     TResult Function(CreateAccountModel model)? createAccount,
+    TResult Function(String email, String password)? signIn,
     required TResult orElse(),
   }) {
     if (resendSignUpEmail != null) {
@@ -339,6 +354,7 @@ class _$AuthResendSignUpEmailImpl implements AuthResendSignUpEmail {
     required TResult Function(AuthResendSignUpEmail value) resendSignUpEmail,
     required TResult Function(AuthValidateSignUpCode value) validateSignUpCode,
     required TResult Function(AuthCreateAccount value) createAccount,
+    required TResult Function(AuthSignIn value) signIn,
   }) {
     return resendSignUpEmail(this);
   }
@@ -350,6 +366,7 @@ class _$AuthResendSignUpEmailImpl implements AuthResendSignUpEmail {
     TResult? Function(AuthResendSignUpEmail value)? resendSignUpEmail,
     TResult? Function(AuthValidateSignUpCode value)? validateSignUpCode,
     TResult? Function(AuthCreateAccount value)? createAccount,
+    TResult? Function(AuthSignIn value)? signIn,
   }) {
     return resendSignUpEmail?.call(this);
   }
@@ -361,6 +378,7 @@ class _$AuthResendSignUpEmailImpl implements AuthResendSignUpEmail {
     TResult Function(AuthResendSignUpEmail value)? resendSignUpEmail,
     TResult Function(AuthValidateSignUpCode value)? validateSignUpCode,
     TResult Function(AuthCreateAccount value)? createAccount,
+    TResult Function(AuthSignIn value)? signIn,
     required TResult orElse(),
   }) {
     if (resendSignUpEmail != null) {
@@ -459,6 +477,7 @@ class _$AuthValidateSignUpCodeImpl implements AuthValidateSignUpCode {
     required TResult Function(String email) resendSignUpEmail,
     required TResult Function(String email, String code) validateSignUpCode,
     required TResult Function(CreateAccountModel model) createAccount,
+    required TResult Function(String email, String password) signIn,
   }) {
     return validateSignUpCode(email, code);
   }
@@ -470,6 +489,7 @@ class _$AuthValidateSignUpCodeImpl implements AuthValidateSignUpCode {
     TResult? Function(String email)? resendSignUpEmail,
     TResult? Function(String email, String code)? validateSignUpCode,
     TResult? Function(CreateAccountModel model)? createAccount,
+    TResult? Function(String email, String password)? signIn,
   }) {
     return validateSignUpCode?.call(email, code);
   }
@@ -481,6 +501,7 @@ class _$AuthValidateSignUpCodeImpl implements AuthValidateSignUpCode {
     TResult Function(String email)? resendSignUpEmail,
     TResult Function(String email, String code)? validateSignUpCode,
     TResult Function(CreateAccountModel model)? createAccount,
+    TResult Function(String email, String password)? signIn,
     required TResult orElse(),
   }) {
     if (validateSignUpCode != null) {
@@ -496,6 +517,7 @@ class _$AuthValidateSignUpCodeImpl implements AuthValidateSignUpCode {
     required TResult Function(AuthResendSignUpEmail value) resendSignUpEmail,
     required TResult Function(AuthValidateSignUpCode value) validateSignUpCode,
     required TResult Function(AuthCreateAccount value) createAccount,
+    required TResult Function(AuthSignIn value) signIn,
   }) {
     return validateSignUpCode(this);
   }
@@ -507,6 +529,7 @@ class _$AuthValidateSignUpCodeImpl implements AuthValidateSignUpCode {
     TResult? Function(AuthResendSignUpEmail value)? resendSignUpEmail,
     TResult? Function(AuthValidateSignUpCode value)? validateSignUpCode,
     TResult? Function(AuthCreateAccount value)? createAccount,
+    TResult? Function(AuthSignIn value)? signIn,
   }) {
     return validateSignUpCode?.call(this);
   }
@@ -518,6 +541,7 @@ class _$AuthValidateSignUpCodeImpl implements AuthValidateSignUpCode {
     TResult Function(AuthResendSignUpEmail value)? resendSignUpEmail,
     TResult Function(AuthValidateSignUpCode value)? validateSignUpCode,
     TResult Function(AuthCreateAccount value)? createAccount,
+    TResult Function(AuthSignIn value)? signIn,
     required TResult orElse(),
   }) {
     if (validateSignUpCode != null) {
@@ -617,6 +641,7 @@ class _$AuthCreateAccountImpl implements AuthCreateAccount {
     required TResult Function(String email) resendSignUpEmail,
     required TResult Function(String email, String code) validateSignUpCode,
     required TResult Function(CreateAccountModel model) createAccount,
+    required TResult Function(String email, String password) signIn,
   }) {
     return createAccount(model);
   }
@@ -628,6 +653,7 @@ class _$AuthCreateAccountImpl implements AuthCreateAccount {
     TResult? Function(String email)? resendSignUpEmail,
     TResult? Function(String email, String code)? validateSignUpCode,
     TResult? Function(CreateAccountModel model)? createAccount,
+    TResult? Function(String email, String password)? signIn,
   }) {
     return createAccount?.call(model);
   }
@@ -639,6 +665,7 @@ class _$AuthCreateAccountImpl implements AuthCreateAccount {
     TResult Function(String email)? resendSignUpEmail,
     TResult Function(String email, String code)? validateSignUpCode,
     TResult Function(CreateAccountModel model)? createAccount,
+    TResult Function(String email, String password)? signIn,
     required TResult orElse(),
   }) {
     if (createAccount != null) {
@@ -654,6 +681,7 @@ class _$AuthCreateAccountImpl implements AuthCreateAccount {
     required TResult Function(AuthResendSignUpEmail value) resendSignUpEmail,
     required TResult Function(AuthValidateSignUpCode value) validateSignUpCode,
     required TResult Function(AuthCreateAccount value) createAccount,
+    required TResult Function(AuthSignIn value) signIn,
   }) {
     return createAccount(this);
   }
@@ -665,6 +693,7 @@ class _$AuthCreateAccountImpl implements AuthCreateAccount {
     TResult? Function(AuthResendSignUpEmail value)? resendSignUpEmail,
     TResult? Function(AuthValidateSignUpCode value)? validateSignUpCode,
     TResult? Function(AuthCreateAccount value)? createAccount,
+    TResult? Function(AuthSignIn value)? signIn,
   }) {
     return createAccount?.call(this);
   }
@@ -676,6 +705,7 @@ class _$AuthCreateAccountImpl implements AuthCreateAccount {
     TResult Function(AuthResendSignUpEmail value)? resendSignUpEmail,
     TResult Function(AuthValidateSignUpCode value)? validateSignUpCode,
     TResult Function(AuthCreateAccount value)? createAccount,
+    TResult Function(AuthSignIn value)? signIn,
     required TResult orElse(),
   }) {
     if (createAccount != null) {
@@ -696,41 +726,206 @@ abstract class AuthCreateAccount implements AuthEvent {
 }
 
 /// @nodoc
+abstract class _$$AuthSignInImplCopyWith<$Res> {
+  factory _$$AuthSignInImplCopyWith(
+          _$AuthSignInImpl value, $Res Function(_$AuthSignInImpl) then) =
+      __$$AuthSignInImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email, String password});
+}
+
+/// @nodoc
+class __$$AuthSignInImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$AuthSignInImpl>
+    implements _$$AuthSignInImplCopyWith<$Res> {
+  __$$AuthSignInImplCopyWithImpl(
+      _$AuthSignInImpl _value, $Res Function(_$AuthSignInImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+    Object? password = null,
+  }) {
+    return _then(_$AuthSignInImpl(
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+      null == password
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AuthSignInImpl implements AuthSignIn {
+  const _$AuthSignInImpl(this.email, this.password);
+
+  @override
+  final String email;
+  @override
+  final String password;
+
+  @override
+  String toString() {
+    return 'AuthEvent.signIn(email: $email, password: $password)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AuthSignInImpl &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.password, password) ||
+                other.password == password));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, email, password);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AuthSignInImplCopyWith<_$AuthSignInImpl> get copyWith =>
+      __$$AuthSignInImplCopyWithImpl<_$AuthSignInImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email) sendSignUpEmail,
+    required TResult Function(String email) resendSignUpEmail,
+    required TResult Function(String email, String code) validateSignUpCode,
+    required TResult Function(CreateAccountModel model) createAccount,
+    required TResult Function(String email, String password) signIn,
+  }) {
+    return signIn(email, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String email)? sendSignUpEmail,
+    TResult? Function(String email)? resendSignUpEmail,
+    TResult? Function(String email, String code)? validateSignUpCode,
+    TResult? Function(CreateAccountModel model)? createAccount,
+    TResult? Function(String email, String password)? signIn,
+  }) {
+    return signIn?.call(email, password);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email)? sendSignUpEmail,
+    TResult Function(String email)? resendSignUpEmail,
+    TResult Function(String email, String code)? validateSignUpCode,
+    TResult Function(CreateAccountModel model)? createAccount,
+    TResult Function(String email, String password)? signIn,
+    required TResult orElse(),
+  }) {
+    if (signIn != null) {
+      return signIn(email, password);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(AuthSendSignUpEmail value) sendSignUpEmail,
+    required TResult Function(AuthResendSignUpEmail value) resendSignUpEmail,
+    required TResult Function(AuthValidateSignUpCode value) validateSignUpCode,
+    required TResult Function(AuthCreateAccount value) createAccount,
+    required TResult Function(AuthSignIn value) signIn,
+  }) {
+    return signIn(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(AuthSendSignUpEmail value)? sendSignUpEmail,
+    TResult? Function(AuthResendSignUpEmail value)? resendSignUpEmail,
+    TResult? Function(AuthValidateSignUpCode value)? validateSignUpCode,
+    TResult? Function(AuthCreateAccount value)? createAccount,
+    TResult? Function(AuthSignIn value)? signIn,
+  }) {
+    return signIn?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(AuthSendSignUpEmail value)? sendSignUpEmail,
+    TResult Function(AuthResendSignUpEmail value)? resendSignUpEmail,
+    TResult Function(AuthValidateSignUpCode value)? validateSignUpCode,
+    TResult Function(AuthCreateAccount value)? createAccount,
+    TResult Function(AuthSignIn value)? signIn,
+    required TResult orElse(),
+  }) {
+    if (signIn != null) {
+      return signIn(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AuthSignIn implements AuthEvent {
+  const factory AuthSignIn(final String email, final String password) =
+      _$AuthSignInImpl;
+
+  String get email;
+  String get password;
+  @JsonKey(ignore: true)
+  _$$AuthSignInImplCopyWith<_$AuthSignInImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$AuthState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) error,
+    required TResult Function(String message, String? title) error,
     required TResult Function() sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
     required TResult Function() createAnAccountSuccess,
+    required TResult Function() signInSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? error,
+    TResult? Function(String message, String? title)? error,
     TResult? Function()? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
     TResult? Function()? createAnAccountSuccess,
+    TResult? Function()? signInSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? error,
+    TResult Function(String message, String? title)? error,
     TResult Function()? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
     TResult Function()? createAnAccountSuccess,
+    TResult Function()? signInSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -749,6 +944,7 @@ mixin _$AuthState {
         validateSignUpCodeFailed,
     required TResult Function(AuthCreateAnAccountSuccess value)
         createAnAccountSuccess,
+    required TResult Function(AuthSignInSuccess value) signInSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -764,6 +960,7 @@ mixin _$AuthState {
     TResult? Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult? Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult? Function(AuthSignInSuccess value)? signInSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -779,6 +976,7 @@ mixin _$AuthState {
     TResult Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult Function(AuthSignInSuccess value)? signInSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -841,12 +1039,13 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) error,
+    required TResult Function(String message, String? title) error,
     required TResult Function() sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
     required TResult Function() createAnAccountSuccess,
+    required TResult Function() signInSuccess,
   }) {
     return initial();
   }
@@ -856,12 +1055,13 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? error,
+    TResult? Function(String message, String? title)? error,
     TResult? Function()? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
     TResult? Function()? createAnAccountSuccess,
+    TResult? Function()? signInSuccess,
   }) {
     return initial?.call();
   }
@@ -871,12 +1071,13 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? error,
+    TResult Function(String message, String? title)? error,
     TResult Function()? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
     TResult Function()? createAnAccountSuccess,
+    TResult Function()? signInSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -901,6 +1102,7 @@ class _$InitialImpl implements _Initial {
         validateSignUpCodeFailed,
     required TResult Function(AuthCreateAnAccountSuccess value)
         createAnAccountSuccess,
+    required TResult Function(AuthSignInSuccess value) signInSuccess,
   }) {
     return initial(this);
   }
@@ -919,6 +1121,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult? Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult? Function(AuthSignInSuccess value)? signInSuccess,
   }) {
     return initial?.call(this);
   }
@@ -937,6 +1140,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult Function(AuthSignInSuccess value)? signInSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -990,12 +1194,13 @@ class _$AuthLoadingImpl implements AuthLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) error,
+    required TResult Function(String message, String? title) error,
     required TResult Function() sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
     required TResult Function() createAnAccountSuccess,
+    required TResult Function() signInSuccess,
   }) {
     return loading();
   }
@@ -1005,12 +1210,13 @@ class _$AuthLoadingImpl implements AuthLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? error,
+    TResult? Function(String message, String? title)? error,
     TResult? Function()? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
     TResult? Function()? createAnAccountSuccess,
+    TResult? Function()? signInSuccess,
   }) {
     return loading?.call();
   }
@@ -1020,12 +1226,13 @@ class _$AuthLoadingImpl implements AuthLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? error,
+    TResult Function(String message, String? title)? error,
     TResult Function()? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
     TResult Function()? createAnAccountSuccess,
+    TResult Function()? signInSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1050,6 +1257,7 @@ class _$AuthLoadingImpl implements AuthLoading {
         validateSignUpCodeFailed,
     required TResult Function(AuthCreateAnAccountSuccess value)
         createAnAccountSuccess,
+    required TResult Function(AuthSignInSuccess value) signInSuccess,
   }) {
     return loading(this);
   }
@@ -1068,6 +1276,7 @@ class _$AuthLoadingImpl implements AuthLoading {
     TResult? Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult? Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult? Function(AuthSignInSuccess value)? signInSuccess,
   }) {
     return loading?.call(this);
   }
@@ -1086,6 +1295,7 @@ class _$AuthLoadingImpl implements AuthLoading {
     TResult Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult Function(AuthSignInSuccess value)? signInSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1105,7 +1315,7 @@ abstract class _$$AuthErrorImplCopyWith<$Res> {
           _$AuthErrorImpl value, $Res Function(_$AuthErrorImpl) then) =
       __$$AuthErrorImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String message});
+  $Res call({String message, String? title});
 }
 
 /// @nodoc
@@ -1120,12 +1330,17 @@ class __$$AuthErrorImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? message = null,
+    Object? title = freezed,
   }) {
     return _then(_$AuthErrorImpl(
-      null == message
+      message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1133,14 +1348,16 @@ class __$$AuthErrorImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AuthErrorImpl implements AuthError {
-  const _$AuthErrorImpl(this.message);
+  const _$AuthErrorImpl({required this.message, this.title});
 
   @override
   final String message;
+  @override
+  final String? title;
 
   @override
   String toString() {
-    return 'AuthState.error(message: $message)';
+    return 'AuthState.error(message: $message, title: $title)';
   }
 
   @override
@@ -1148,11 +1365,12 @@ class _$AuthErrorImpl implements AuthError {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AuthErrorImpl &&
-            (identical(other.message, message) || other.message == message));
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.title, title) || other.title == title));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, message);
+  int get hashCode => Object.hash(runtimeType, message, title);
 
   @JsonKey(ignore: true)
   @override
@@ -1165,14 +1383,15 @@ class _$AuthErrorImpl implements AuthError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) error,
+    required TResult Function(String message, String? title) error,
     required TResult Function() sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
     required TResult Function() createAnAccountSuccess,
+    required TResult Function() signInSuccess,
   }) {
-    return error(message);
+    return error(message, title);
   }
 
   @override
@@ -1180,14 +1399,15 @@ class _$AuthErrorImpl implements AuthError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? error,
+    TResult? Function(String message, String? title)? error,
     TResult? Function()? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
     TResult? Function()? createAnAccountSuccess,
+    TResult? Function()? signInSuccess,
   }) {
-    return error?.call(message);
+    return error?.call(message, title);
   }
 
   @override
@@ -1195,16 +1415,17 @@ class _$AuthErrorImpl implements AuthError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? error,
+    TResult Function(String message, String? title)? error,
     TResult Function()? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
     TResult Function()? createAnAccountSuccess,
+    TResult Function()? signInSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
-      return error(message);
+      return error(message, title);
     }
     return orElse();
   }
@@ -1225,6 +1446,7 @@ class _$AuthErrorImpl implements AuthError {
         validateSignUpCodeFailed,
     required TResult Function(AuthCreateAnAccountSuccess value)
         createAnAccountSuccess,
+    required TResult Function(AuthSignInSuccess value) signInSuccess,
   }) {
     return error(this);
   }
@@ -1243,6 +1465,7 @@ class _$AuthErrorImpl implements AuthError {
     TResult? Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult? Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult? Function(AuthSignInSuccess value)? signInSuccess,
   }) {
     return error?.call(this);
   }
@@ -1261,6 +1484,7 @@ class _$AuthErrorImpl implements AuthError {
     TResult Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult Function(AuthSignInSuccess value)? signInSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1271,9 +1495,11 @@ class _$AuthErrorImpl implements AuthError {
 }
 
 abstract class AuthError implements AuthState {
-  const factory AuthError(final String message) = _$AuthErrorImpl;
+  const factory AuthError(
+      {required final String message, final String? title}) = _$AuthErrorImpl;
 
   String get message;
+  String? get title;
   @JsonKey(ignore: true)
   _$$AuthErrorImplCopyWith<_$AuthErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1322,12 +1548,13 @@ class _$AuthSendSignUpEmailSuccessImpl implements AuthSendSignUpEmailSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) error,
+    required TResult Function(String message, String? title) error,
     required TResult Function() sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
     required TResult Function() createAnAccountSuccess,
+    required TResult Function() signInSuccess,
   }) {
     return sendSignUpEmailSuccess();
   }
@@ -1337,12 +1564,13 @@ class _$AuthSendSignUpEmailSuccessImpl implements AuthSendSignUpEmailSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? error,
+    TResult? Function(String message, String? title)? error,
     TResult? Function()? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
     TResult? Function()? createAnAccountSuccess,
+    TResult? Function()? signInSuccess,
   }) {
     return sendSignUpEmailSuccess?.call();
   }
@@ -1352,12 +1580,13 @@ class _$AuthSendSignUpEmailSuccessImpl implements AuthSendSignUpEmailSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? error,
+    TResult Function(String message, String? title)? error,
     TResult Function()? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
     TResult Function()? createAnAccountSuccess,
+    TResult Function()? signInSuccess,
     required TResult orElse(),
   }) {
     if (sendSignUpEmailSuccess != null) {
@@ -1382,6 +1611,7 @@ class _$AuthSendSignUpEmailSuccessImpl implements AuthSendSignUpEmailSuccess {
         validateSignUpCodeFailed,
     required TResult Function(AuthCreateAnAccountSuccess value)
         createAnAccountSuccess,
+    required TResult Function(AuthSignInSuccess value) signInSuccess,
   }) {
     return sendSignUpEmailSuccess(this);
   }
@@ -1400,6 +1630,7 @@ class _$AuthSendSignUpEmailSuccessImpl implements AuthSendSignUpEmailSuccess {
     TResult? Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult? Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult? Function(AuthSignInSuccess value)? signInSuccess,
   }) {
     return sendSignUpEmailSuccess?.call(this);
   }
@@ -1418,6 +1649,7 @@ class _$AuthSendSignUpEmailSuccessImpl implements AuthSendSignUpEmailSuccess {
     TResult Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult Function(AuthSignInSuccess value)? signInSuccess,
     required TResult orElse(),
   }) {
     if (sendSignUpEmailSuccess != null) {
@@ -1475,12 +1707,13 @@ class _$AuthResendSignUpEmailSuccessImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) error,
+    required TResult Function(String message, String? title) error,
     required TResult Function() sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
     required TResult Function() createAnAccountSuccess,
+    required TResult Function() signInSuccess,
   }) {
     return resendSignUpEmailSuccess();
   }
@@ -1490,12 +1723,13 @@ class _$AuthResendSignUpEmailSuccessImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? error,
+    TResult? Function(String message, String? title)? error,
     TResult? Function()? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
     TResult? Function()? createAnAccountSuccess,
+    TResult? Function()? signInSuccess,
   }) {
     return resendSignUpEmailSuccess?.call();
   }
@@ -1505,12 +1739,13 @@ class _$AuthResendSignUpEmailSuccessImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? error,
+    TResult Function(String message, String? title)? error,
     TResult Function()? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
     TResult Function()? createAnAccountSuccess,
+    TResult Function()? signInSuccess,
     required TResult orElse(),
   }) {
     if (resendSignUpEmailSuccess != null) {
@@ -1535,6 +1770,7 @@ class _$AuthResendSignUpEmailSuccessImpl
         validateSignUpCodeFailed,
     required TResult Function(AuthCreateAnAccountSuccess value)
         createAnAccountSuccess,
+    required TResult Function(AuthSignInSuccess value) signInSuccess,
   }) {
     return resendSignUpEmailSuccess(this);
   }
@@ -1553,6 +1789,7 @@ class _$AuthResendSignUpEmailSuccessImpl
     TResult? Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult? Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult? Function(AuthSignInSuccess value)? signInSuccess,
   }) {
     return resendSignUpEmailSuccess?.call(this);
   }
@@ -1571,6 +1808,7 @@ class _$AuthResendSignUpEmailSuccessImpl
     TResult Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult Function(AuthSignInSuccess value)? signInSuccess,
     required TResult orElse(),
   }) {
     if (resendSignUpEmailSuccess != null) {
@@ -1629,12 +1867,13 @@ class _$AuthValidateSignUpCodeSuccessImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) error,
+    required TResult Function(String message, String? title) error,
     required TResult Function() sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
     required TResult Function() createAnAccountSuccess,
+    required TResult Function() signInSuccess,
   }) {
     return validateSignUpCodeSuccess();
   }
@@ -1644,12 +1883,13 @@ class _$AuthValidateSignUpCodeSuccessImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? error,
+    TResult? Function(String message, String? title)? error,
     TResult? Function()? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
     TResult? Function()? createAnAccountSuccess,
+    TResult? Function()? signInSuccess,
   }) {
     return validateSignUpCodeSuccess?.call();
   }
@@ -1659,12 +1899,13 @@ class _$AuthValidateSignUpCodeSuccessImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? error,
+    TResult Function(String message, String? title)? error,
     TResult Function()? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
     TResult Function()? createAnAccountSuccess,
+    TResult Function()? signInSuccess,
     required TResult orElse(),
   }) {
     if (validateSignUpCodeSuccess != null) {
@@ -1689,6 +1930,7 @@ class _$AuthValidateSignUpCodeSuccessImpl
         validateSignUpCodeFailed,
     required TResult Function(AuthCreateAnAccountSuccess value)
         createAnAccountSuccess,
+    required TResult Function(AuthSignInSuccess value) signInSuccess,
   }) {
     return validateSignUpCodeSuccess(this);
   }
@@ -1707,6 +1949,7 @@ class _$AuthValidateSignUpCodeSuccessImpl
     TResult? Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult? Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult? Function(AuthSignInSuccess value)? signInSuccess,
   }) {
     return validateSignUpCodeSuccess?.call(this);
   }
@@ -1725,6 +1968,7 @@ class _$AuthValidateSignUpCodeSuccessImpl
     TResult Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult Function(AuthSignInSuccess value)? signInSuccess,
     required TResult orElse(),
   }) {
     if (validateSignUpCodeSuccess != null) {
@@ -1810,12 +2054,13 @@ class _$AuthValidateSignUpCodeFailedImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) error,
+    required TResult Function(String message, String? title) error,
     required TResult Function() sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
     required TResult Function() createAnAccountSuccess,
+    required TResult Function() signInSuccess,
   }) {
     return validateSignUpCodeFailed(message);
   }
@@ -1825,12 +2070,13 @@ class _$AuthValidateSignUpCodeFailedImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? error,
+    TResult? Function(String message, String? title)? error,
     TResult? Function()? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
     TResult? Function()? createAnAccountSuccess,
+    TResult? Function()? signInSuccess,
   }) {
     return validateSignUpCodeFailed?.call(message);
   }
@@ -1840,12 +2086,13 @@ class _$AuthValidateSignUpCodeFailedImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? error,
+    TResult Function(String message, String? title)? error,
     TResult Function()? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
     TResult Function()? createAnAccountSuccess,
+    TResult Function()? signInSuccess,
     required TResult orElse(),
   }) {
     if (validateSignUpCodeFailed != null) {
@@ -1870,6 +2117,7 @@ class _$AuthValidateSignUpCodeFailedImpl
         validateSignUpCodeFailed,
     required TResult Function(AuthCreateAnAccountSuccess value)
         createAnAccountSuccess,
+    required TResult Function(AuthSignInSuccess value) signInSuccess,
   }) {
     return validateSignUpCodeFailed(this);
   }
@@ -1888,6 +2136,7 @@ class _$AuthValidateSignUpCodeFailedImpl
     TResult? Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult? Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult? Function(AuthSignInSuccess value)? signInSuccess,
   }) {
     return validateSignUpCodeFailed?.call(this);
   }
@@ -1906,6 +2155,7 @@ class _$AuthValidateSignUpCodeFailedImpl
     TResult Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult Function(AuthSignInSuccess value)? signInSuccess,
     required TResult orElse(),
   }) {
     if (validateSignUpCodeFailed != null) {
@@ -1969,12 +2219,13 @@ class _$AuthCreateAnAccountSuccessImpl implements AuthCreateAnAccountSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message) error,
+    required TResult Function(String message, String? title) error,
     required TResult Function() sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
     required TResult Function() createAnAccountSuccess,
+    required TResult Function() signInSuccess,
   }) {
     return createAnAccountSuccess();
   }
@@ -1984,12 +2235,13 @@ class _$AuthCreateAnAccountSuccessImpl implements AuthCreateAnAccountSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message)? error,
+    TResult? Function(String message, String? title)? error,
     TResult? Function()? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
     TResult? Function()? createAnAccountSuccess,
+    TResult? Function()? signInSuccess,
   }) {
     return createAnAccountSuccess?.call();
   }
@@ -1999,12 +2251,13 @@ class _$AuthCreateAnAccountSuccessImpl implements AuthCreateAnAccountSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message)? error,
+    TResult Function(String message, String? title)? error,
     TResult Function()? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
     TResult Function()? createAnAccountSuccess,
+    TResult Function()? signInSuccess,
     required TResult orElse(),
   }) {
     if (createAnAccountSuccess != null) {
@@ -2029,6 +2282,7 @@ class _$AuthCreateAnAccountSuccessImpl implements AuthCreateAnAccountSuccess {
         validateSignUpCodeFailed,
     required TResult Function(AuthCreateAnAccountSuccess value)
         createAnAccountSuccess,
+    required TResult Function(AuthSignInSuccess value) signInSuccess,
   }) {
     return createAnAccountSuccess(this);
   }
@@ -2047,6 +2301,7 @@ class _$AuthCreateAnAccountSuccessImpl implements AuthCreateAnAccountSuccess {
     TResult? Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult? Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult? Function(AuthSignInSuccess value)? signInSuccess,
   }) {
     return createAnAccountSuccess?.call(this);
   }
@@ -2065,6 +2320,7 @@ class _$AuthCreateAnAccountSuccessImpl implements AuthCreateAnAccountSuccess {
     TResult Function(AuthValidateSignUpCodeFailed value)?
         validateSignUpCodeFailed,
     TResult Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult Function(AuthSignInSuccess value)? signInSuccess,
     required TResult orElse(),
   }) {
     if (createAnAccountSuccess != null) {
@@ -2076,4 +2332,159 @@ class _$AuthCreateAnAccountSuccessImpl implements AuthCreateAnAccountSuccess {
 
 abstract class AuthCreateAnAccountSuccess implements AuthState {
   const factory AuthCreateAnAccountSuccess() = _$AuthCreateAnAccountSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$AuthSignInSuccessImplCopyWith<$Res> {
+  factory _$$AuthSignInSuccessImplCopyWith(_$AuthSignInSuccessImpl value,
+          $Res Function(_$AuthSignInSuccessImpl) then) =
+      __$$AuthSignInSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AuthSignInSuccessImplCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$AuthSignInSuccessImpl>
+    implements _$$AuthSignInSuccessImplCopyWith<$Res> {
+  __$$AuthSignInSuccessImplCopyWithImpl(_$AuthSignInSuccessImpl _value,
+      $Res Function(_$AuthSignInSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AuthSignInSuccessImpl implements AuthSignInSuccess {
+  const _$AuthSignInSuccessImpl();
+
+  @override
+  String toString() {
+    return 'AuthState.signInSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AuthSignInSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message, String? title) error,
+    required TResult Function() sendSignUpEmailSuccess,
+    required TResult Function() resendSignUpEmailSuccess,
+    required TResult Function() validateSignUpCodeSuccess,
+    required TResult Function(String message) validateSignUpCodeFailed,
+    required TResult Function() createAnAccountSuccess,
+    required TResult Function() signInSuccess,
+  }) {
+    return signInSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message, String? title)? error,
+    TResult? Function()? sendSignUpEmailSuccess,
+    TResult? Function()? resendSignUpEmailSuccess,
+    TResult? Function()? validateSignUpCodeSuccess,
+    TResult? Function(String message)? validateSignUpCodeFailed,
+    TResult? Function()? createAnAccountSuccess,
+    TResult? Function()? signInSuccess,
+  }) {
+    return signInSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message, String? title)? error,
+    TResult Function()? sendSignUpEmailSuccess,
+    TResult Function()? resendSignUpEmailSuccess,
+    TResult Function()? validateSignUpCodeSuccess,
+    TResult Function(String message)? validateSignUpCodeFailed,
+    TResult Function()? createAnAccountSuccess,
+    TResult Function()? signInSuccess,
+    required TResult orElse(),
+  }) {
+    if (signInSuccess != null) {
+      return signInSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AuthLoading value) loading,
+    required TResult Function(AuthError value) error,
+    required TResult Function(AuthSendSignUpEmailSuccess value)
+        sendSignUpEmailSuccess,
+    required TResult Function(AuthResendSignUpEmailSuccess value)
+        resendSignUpEmailSuccess,
+    required TResult Function(AuthValidateSignUpCodeSuccess value)
+        validateSignUpCodeSuccess,
+    required TResult Function(AuthValidateSignUpCodeFailed value)
+        validateSignUpCodeFailed,
+    required TResult Function(AuthCreateAnAccountSuccess value)
+        createAnAccountSuccess,
+    required TResult Function(AuthSignInSuccess value) signInSuccess,
+  }) {
+    return signInSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AuthLoading value)? loading,
+    TResult? Function(AuthError value)? error,
+    TResult? Function(AuthSendSignUpEmailSuccess value)? sendSignUpEmailSuccess,
+    TResult? Function(AuthResendSignUpEmailSuccess value)?
+        resendSignUpEmailSuccess,
+    TResult? Function(AuthValidateSignUpCodeSuccess value)?
+        validateSignUpCodeSuccess,
+    TResult? Function(AuthValidateSignUpCodeFailed value)?
+        validateSignUpCodeFailed,
+    TResult? Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult? Function(AuthSignInSuccess value)? signInSuccess,
+  }) {
+    return signInSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AuthLoading value)? loading,
+    TResult Function(AuthError value)? error,
+    TResult Function(AuthSendSignUpEmailSuccess value)? sendSignUpEmailSuccess,
+    TResult Function(AuthResendSignUpEmailSuccess value)?
+        resendSignUpEmailSuccess,
+    TResult Function(AuthValidateSignUpCodeSuccess value)?
+        validateSignUpCodeSuccess,
+    TResult Function(AuthValidateSignUpCodeFailed value)?
+        validateSignUpCodeFailed,
+    TResult Function(AuthCreateAnAccountSuccess value)? createAnAccountSuccess,
+    TResult Function(AuthSignInSuccess value)? signInSuccess,
+    required TResult orElse(),
+  }) {
+    if (signInSuccess != null) {
+      return signInSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AuthSignInSuccess implements AuthState {
+  const factory AuthSignInSuccess() = _$AuthSignInSuccessImpl;
 }

@@ -1,3 +1,4 @@
+import 'package:demo_dprofiles/src/features/auth/data/models/sign_in_model.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
@@ -19,4 +20,7 @@ abstract class RestClient {
 
   @POST('/api/v1/user/register')
   Future<BaseResponse> createAnAccount(@Body() Map<String, dynamic> body);
+
+  @POST('/api/login')
+  Future<SignInModel?> signIn(@Body() Map<String, dynamic> body);
 }
