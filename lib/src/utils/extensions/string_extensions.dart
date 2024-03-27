@@ -13,4 +13,10 @@ extension StringExt on String? {
         ? 'Enter a valid email address'
         : null;
   }
+
+  String? passwordValidation() {
+    return this == null || this!.isEmpty || this!.length < 6
+        ? 'Check your password again'
+        : null;
+  }
 }

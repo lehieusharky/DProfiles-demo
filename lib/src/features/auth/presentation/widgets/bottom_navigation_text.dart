@@ -7,12 +7,12 @@ import 'package:flutter/material.dart';
 class BottomNavigationText extends StatelessWidget {
   final String content1;
   final String content2;
-  final PageRouteInfo pageRoute;
+  final VoidCallback? onPressed;
   const BottomNavigationText(
       {Key? key,
       required this.content1,
       required this.content2,
-      required this.pageRoute})
+      this.onPressed})
       : super(key: key);
 
   @override
@@ -37,8 +37,7 @@ class BottomNavigationText extends StatelessWidget {
                     color: colorScheme(context).primary,
                     weight: FontWeight.w700)
                 .bodyMedium,
-            recognizer: TapGestureRecognizer()
-              ..onTap = () => context.router.push(pageRoute),
+            recognizer: TapGestureRecognizer()..onTap = onPressed,
           ),
         ],
       ),

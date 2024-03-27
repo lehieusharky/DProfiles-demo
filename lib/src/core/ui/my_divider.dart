@@ -19,7 +19,7 @@ class MyDivider extends StatelessWidget {
     return Padding(
       padding: context.padding(vertical: verticalMargin ?? 32),
       child: Divider(
-        thickness: verticalMargin ?? 1,
+        thickness: verticalMargin ?? 0.5,
         color: color ?? colorScheme(context).outlineVariant,
       ),
     );

@@ -1,13 +1,17 @@
+import 'dart:async';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
+
 import 'package:demo_dprofiles/src/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/ext_sign_up_page.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/widgets/pinput_verify_email_code.dart';
-import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_logo.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_title.dart';
+
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,36 +26,22 @@ class VerifySignUpPage extends StatefulWidget {
 }
 
 class _VerifySignUpPageState extends State<VerifySignUpPage> {
+  late Timer timer;
+  int initCountDownValue = 120;
+
+  @override
+  void initState() {
+    super.initState();
+    startTimer();
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => AuthBloc(),
       child: BlocConsumer<AuthBloc, AuthState>(
         listener: (context, state) {
-          if (state is AuthResendSignUpEmailSuccess) {
-            showErrorDialog(context,
-                title: 'Resend', description: 'description');
-          }
-
-          if (state is AuthValidateSignUpCodeSuccess) {
-            context.router.push(CreateAnAccountRoute(email: widget.email));
-          }
-
-          if (state is AuthValidateSignUpCodeFailed) {
-            showErrorDialog(
-              context,
-              title: 'Verify failed',
-              description: state.message,
-            );
-          }
-
-          if (state is AuthError) {
-            showErrorDialog(
-              context,
-              title: 'Resend sign up email failed',
-              description: state.message,
-            );
-          }
+          widget.handleVerifySignUpState(state, context);
         },
         builder: (context, state) {
           return MyScaffold(
@@ -60,24 +50,8 @@ class _VerifySignUpPageState extends State<VerifySignUpPage> {
               children: [
                 Column(
                   children: [
-                    Padding(
-                      padding: context.padding(top: 5, bottom: 40),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Assets.icons.logos.dWhitePWhite.svg(),
-                          context.sizedBox(width: 9),
-                          Assets.icons.logos.dprofilesBlack.svg(),
-                        ],
-                      ),
-                    ),
-                    Text(
-                      'Enter your security code',
-                      textAlign: TextAlign.center,
-                      style: AppFont()
-                          .fontTheme(context, weight: FontWeight.w700)
-                          .headlineMedium,
-                    ),
+                    const AuthLogo(),
+                    const AuthTitle(title: 'Enter your security code'),
                     Padding(
                       padding:
                           context.padding(horizontal: 20, top: 32, bottom: 12),
@@ -129,7 +103,7 @@ class _VerifySignUpPageState extends State<VerifySignUpPage> {
                     Padding(
                       padding: context.padding(top: 12),
                       child: Text(
-                        'Request new code in 01:59s',
+                        'Request new code in ${formatTime(initCountDownValue)}',
                         style: AppFont()
                             .fontTheme(context,
                                 color: colorScheme(context).outline)
@@ -150,5 +124,32 @@ class _VerifySignUpPageState extends State<VerifySignUpPage> {
         },
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    timer.cancel();
+    super.dispose();
+  }
+
+  void startTimer() {
+    timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      setState(() {
+        if (initCountDownValue > 0) {
+          initCountDownValue--;
+        } else {
+          timer.cancel();
+        }
+      });
+    });
+  }
+
+  String formatTime(int seconds) {
+    int minutes = seconds ~/ 60;
+    int remainingSeconds = seconds % 60;
+    String minutesStr = (minutes < 10) ? '0$minutes' : '$minutes';
+    String secondsStr =
+        (remainingSeconds < 10) ? '0$remainingSeconds' : '$remainingSeconds';
+    return '$minutesStr:$secondsStr';
   }
 }

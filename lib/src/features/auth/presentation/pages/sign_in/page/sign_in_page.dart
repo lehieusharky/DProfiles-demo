@@ -1,9 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/ui/my_divider.dart';
+import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/page/ext_sign_in_page.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/widgets/sign_in_form.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_logo.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_title.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/bottom_navigation_text.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
@@ -27,17 +32,7 @@ class _SignInPageState extends State<SignInPage> {
       create: (context) => AuthBloc(),
       child: BlocConsumer<AuthBloc, AuthState>(
         listener: (context, state) {
-          if (state is AuthSignInSuccess) {
-            context.router.replace(const DashboardRoute());
-          }
-
-          if (state is AuthError) {
-            showErrorDialog(
-              context,
-              title: state.title ?? 'Sign in failed',
-              description: state.message,
-            );
-          }
+          widget.handleSignInState(state, context);
         },
         builder: (context, state) {
           return MyScaffold(
@@ -46,44 +41,18 @@ class _SignInPageState extends State<SignInPage> {
               children: [
                 Column(
                   children: [
-                    Padding(
-                      padding: context.padding(top: 20, bottom: 90),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Assets.icons.logos.dWhitePWhite.svg(),
-                          context.sizedBox(width: 9),
-                          Assets.icons.logos.dprofilesBlack.svg(),
-                        ],
-                      ),
-                    ),
-                    Text(
-                      'Login',
-                      style: AppFont()
-                          .fontTheme(context, weight: FontWeight.w700)
-                          .headlineMedium,
-                    ),
-                    Padding(
-                      padding: context.padding(vertical: 32),
-                      child: Divider(
-                        thickness: 0.5,
-                        color: colorScheme(context).outlineVariant,
-                      ),
-                    ),
+                    const AuthLogo(),
+                    const AuthTitle(title: 'Login'),
+                    const MyDivider(),
                     const SignInForm(),
-                    const BottomNavigationText(
+                    BottomNavigationText(
                       content1: "Don’t have an account?  ",
                       content2: 'SignUp',
-                      pageRoute: SignUpRoute(),
+                      onPressed: () => context.router.push(const SignUpRoute()),
                     ),
                   ],
                 ),
-                if (state is AuthLoading)
-                  SizedBox(
-                    width: context.width,
-                    height: context.height,
-                    child: const Center(child: CircularProgressIndicator()),
-                  ),
+                if (state is AuthLoading) const MyLoading(),
               ],
             ),
           );
