@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_extension.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/pages/home_page.dart';
+import 'package:demo_dprofiles/src/features/my_wallet/presentation/pages/my_wallet_page.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/page/profile_page.dart';
 import 'package:demo_dprofiles/src/features/setting/presentation/pages/setting_page.dart';
 import 'package:flutter/material.dart';
@@ -20,13 +21,14 @@ class _DashboardPageState extends State<DashboardPage> {
 
   @override
   void initState() {
-    _controller = PersistentTabController(initialIndex: 1);
+    _controller = PersistentTabController(initialIndex: 0);
     super.initState();
   }
 
   List<Widget> _buildScreens() {
     return [
       const HomePage(),
+      const MyWalletPage(),
       const ProfilePage(),
       const SettingPage(),
     ];

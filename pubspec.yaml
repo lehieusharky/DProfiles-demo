@@ -93,5 +93,6 @@ flutter:
     - assets/images/auth/
     - assets/images/home/
     - assets/images/profile/
+    - assets/images/my_wallet/
     - assets/icons/
     - assets/icons/logos/
