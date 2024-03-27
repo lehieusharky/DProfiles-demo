@@ -17,6 +17,8 @@ class MyScaffold extends StatelessWidget {
   final VoidCallback? onBack;
   final double? heightAppBar;
   final bool? isLoading;
+  final Widget? endDrawer;
+  final GlobalKey<ScaffoldState>? sKey;
 
   const MyScaffold({
     Key? key,
@@ -33,13 +35,16 @@ class MyScaffold extends StatelessWidget {
     this.onBack,
     this.heightAppBar,
     this.isLoading,
+    this.endDrawer, this.sKey,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: sKey,
       resizeToAvoidBottomInset: false,
       backgroundColor: backgroundColor,
+      endDrawer: endDrawer,
       appBar: useAppBar == true || isBack == true
           ? MyAppbar(
               title: appBarTitle,
