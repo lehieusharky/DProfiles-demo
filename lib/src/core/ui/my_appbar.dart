@@ -36,6 +36,7 @@ class _MyAppbarState extends State<MyAppbar> {
               icon: const Icon(IconsaxOutline.arrow_left_2),
             )
           : null,
+
       title: Padding(
         padding: context.padding(left: 20),
         child: widget.titleWidget ??

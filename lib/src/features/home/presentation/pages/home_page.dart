@@ -22,6 +22,8 @@ class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   void initState() {
     super.initState();
@@ -31,7 +33,89 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return MyScaffold(
+      sKey: _scaffoldKey,
       useAppBar: true,
+      endDrawer: Drawer(
+        width: context.width * 0.7,
+        child: Padding(
+          padding: context.padding(left: 16),
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: context.padding(right: 16),
+                      child: const CircleAvatar(
+                        radius: 30,
+                      ),
+                    ),
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Breanne',
+                          style: AppFont()
+                              .fontTheme(context, weight: FontWeight.bold)
+                              .bodyLarge,
+                        ),
+                        Padding(
+                          padding: context.padding(top: 4),
+                          child: Text(
+                            'Wallet: 12..dfdd',
+                            style: AppFont()
+                                .fontTheme(context,
+                                    color: colorScheme(context).outline)
+                                .bodySmall,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Text(
+                  'My Wallet',
+                  style: AppFont()
+                      .fontTheme(context, weight: FontWeight.bold)
+                      .bodyLarge,
+                ),
+                onTap: () {},
+              ),
+              ListTile(
+                title: Text(
+                  'Digital Profile',
+                  style: AppFont()
+                      .fontTheme(context, weight: FontWeight.bold)
+                      .bodyLarge,
+                ),
+                onTap: () {},
+              ),
+              ListTile(
+                title: Text(
+                  'Edit Profile',
+                  style: AppFont()
+                      .fontTheme(context, weight: FontWeight.bold)
+                      .bodyLarge,
+                ),
+                onTap: () {},
+              ),
+              ListTile(
+                title: Text(
+                  'Account Setting',
+                  style: AppFont()
+                      .fontTheme(context, weight: FontWeight.bold)
+                      .bodyLarge,
+                ),
+                onTap: () {},
+              ),
+            ],
+          ),
+        ),
+      ),
       action: [
         IconButton(
           onPressed: () {},
@@ -47,7 +131,7 @@ class _HomePageState extends State<HomePage>
         Padding(
           padding: context.padding(horizontal: 5),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () => _scaffoldKey.currentState!.openEndDrawer(),
             icon: const Icon(IconsaxOutline.menu_1),
           ),
         ),
