@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 
@@ -5,6 +6,7 @@ import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/discover_list_home_page.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_banner.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/scholarships_home.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
@@ -112,6 +114,15 @@ class _HomePageState extends State<HomePage>
                 ),
                 onTap: () {},
               ),
+              ListTile(
+                  title: Text(
+                    'Log out',
+                    style: AppFont()
+                        .fontTheme(context, weight: FontWeight.bold)
+                        .bodyLarge,
+                  ),
+                  onTap: () =>
+                      context.router.replace(const ConnectWalletRoute())),
             ],
           ),
         ),

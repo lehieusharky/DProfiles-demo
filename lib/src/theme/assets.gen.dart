@@ -22,6 +22,7 @@ class $AssetsImagesGen {
 
   $AssetsImagesAuthGen get auth => const $AssetsImagesAuthGen();
   $AssetsImagesHomeGen get home => const $AssetsImagesHomeGen();
+  $AssetsImagesMyWalletGen get myWallet => const $AssetsImagesMyWalletGen();
   $AssetsImagesOnboardingGen get onboarding =>
       const $AssetsImagesOnboardingGen();
   $AssetsImagesProfileGen get profile => const $AssetsImagesProfileGen();
@@ -58,6 +59,10 @@ class $AssetsIconsLogosGen {
   SvgGenImage get homeLogo =>
       const SvgGenImage('assets/icons/logos/home_logo.svg');
 
+  /// File path: assets/icons/logos/my_wallet_logo.svg
+  SvgGenImage get myWalletLogo =>
+      const SvgGenImage('assets/icons/logos/my_wallet_logo.svg');
+
   /// File path: assets/icons/logos/talent_up_black.svg
   SvgGenImage get talentUpBlack =>
       const SvgGenImage('assets/icons/logos/talent_up_black.svg');
@@ -75,6 +80,7 @@ class $AssetsIconsLogosGen {
         dWhitePWhite,
         dprofilesBlack,
         homeLogo,
+        myWalletLogo,
         talentUpBlack,
         talentUpLogo
       ];
@@ -110,6 +116,21 @@ class $AssetsImagesHomeGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [gift, live, scholaships];
+}
+
+class $AssetsImagesMyWalletGen {
+  const $AssetsImagesMyWalletGen();
+
+  /// File path: assets/images/my_wallet/btc.png
+  AssetGenImage get btc =>
+      const AssetGenImage('assets/images/my_wallet/btc.png');
+
+  /// File path: assets/images/my_wallet/nft_demo.png
+  AssetGenImage get nftDemo =>
+      const AssetGenImage('assets/images/my_wallet/nft_demo.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [btc, nftDemo];
 }
 
 class $AssetsImagesOnboardingGen {
