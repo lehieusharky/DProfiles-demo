@@ -64,10 +64,10 @@ class ConnectWalletPage extends StatelessWidget {
               title: 'Connect wallet',
             ),
           ),
-          const BottomNavigationText(
+          BottomNavigationText(
               content1: 'Already have an account?  ',
               content2: 'Login',
-              pageRoute: SignInRoute()),
+              onPressed: () => context.router.push(const SignInRoute())),
         ],
       ),
     );

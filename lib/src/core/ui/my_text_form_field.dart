@@ -85,18 +85,10 @@ class MyTextFormField extends StatefulWidget {
 
 class _MyTextFormFieldState extends State<MyTextFormField> {
   bool _obscuteText = false;
-  bool _isTapped = false;
 
   _onChangeVisibility() {
     setState(() {
       _obscuteText = !_obscuteText;
-    });
-  }
-
-  _onTapped() {
-    widget.onTap;
-    setState(() {
-      _isTapped = !_isTapped;
     });
   }
 
@@ -109,10 +101,12 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
       obscureText: _obscuteText,
       onTapOutside: (value) => FocusManager.instance.primaryFocus!.unfocus(),
       autofocus: widget.autoFocus ?? false,
-      onTap: () => _onTapped(),
+      onTap: widget.onTap,
       onFieldSubmitted: widget.onSubmit,
       validator: widget.validator,
       onEditingComplete: widget.onEditComplete,
+      // scrollPadding: EdgeInsets.only(
+      //     bottom: MediaQuery.of(context).viewInsets.bottom + 100 * 4),
       textInputAction: widget.textInputAction,
       style: AppFont().fontTheme(context).labelSmall,
       autovalidateMode: widget.autoValidateMode,

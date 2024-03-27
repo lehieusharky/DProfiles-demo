@@ -54,6 +54,7 @@ class AuthField extends StatelessWidget {
           isPasswordField: isPasswordField,
           onTap: onTap,
           maxLines: maxLines,
+
           validator: validator,
           textInputAction: textInputAction ?? TextInputAction.done,
           keyboardType: keyboardType ?? TextInputType.text,

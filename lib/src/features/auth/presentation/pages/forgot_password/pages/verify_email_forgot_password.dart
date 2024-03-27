@@ -40,10 +40,10 @@ class _VerifyEmailForgotPasswordPageState
               ],
             ),
           ),
-          const BottomNavigationText(
+          BottomNavigationText(
             content1: "Don’t have an account?   ",
             content2: 'Sign up for free',
-            pageRoute: SignUpRoute(),
+            onPressed: () => context.router.push(const SignUpRoute()),
           ),
           Padding(
             padding: context.padding(top: 80, bottom: 32),
