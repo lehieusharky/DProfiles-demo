@@ -5,8 +5,8 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
-class DiscoverListHomePage extends StatelessWidget {
-  const DiscoverListHomePage({super.key});
+class HomeFeedSubPage extends StatelessWidget {
+  const HomeFeedSubPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +37,7 @@ class DiscoverListHomePage extends StatelessWidget {
                           Text(
                             'Howard Barton',
                             style: AppFont()
-                                .fontTheme(context,
-                                    weight: FontWeight.w500,
-                                    color: colorScheme(context).onTertiary)
+                                .fontTheme(context, weight: FontWeight.w600)
                                 .bodyLarge,
                           ),
                           Padding(

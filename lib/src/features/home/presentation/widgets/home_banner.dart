@@ -4,6 +4,7 @@ import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/onbo
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:flutter/material.dart';
 
 class HomeBanner extends StatefulWidget {
@@ -35,59 +36,90 @@ class _HomeBannerState extends State<HomeBanner> {
             itemCount: pageCount,
             itemBuilder: (BuildContext context, int index) {
               return Container(
-                  padding: context.padding(horizontal: 20, top: 5),
-                  alignment: Alignment.topCenter,
-                  decoration: const BoxDecoration(color: Color(0xff23262F)),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text('Leveraged tokens now available',
-                                style: AppFont()
-                                    .fontTheme(context,
-                                        weight: FontWeight.w600,
-                                        color: Colors.white)
-                                    .titleSmall),
-                            Padding(
-                              padding: context.padding(top: 16, bottom: 10),
-                              child: Text(
-                                'Good things come in 3s. Get 3x Leveraged tokens now.',
-                                style: AppFont()
-                                    .fontTheme(context,
-                                        weight: FontWeight.w400,
-                                        color:
-                                            colorScheme(context).outlineVariant)
-                                    .bodyMedium,
-                              ),
-                            ),
-                            MyButton(
-                              height: context.sizeHeight(50),
-                              onPressed: () {},
-                              title: 'Connect wallet',
-                            ),
-                          ],
-                        ),
-                      ),
-                      Assets.images.home.gift
-                          .image(width: context.sizeWidth(150)),
-                    ],
-                  ));
+                height: context.sizeHeight(270),
+                decoration:
+                    BoxDecoration(color: colorScheme(context).secondary),
+                child: Stack(
+                  alignment: Alignment.topRight,
+                  children: [
+                    _buildBannerBackground(),
+                    Stack(
+                      alignment: Alignment.topLeft,
+                      children: [
+                        _buildWalletIcon(),
+                        _buildContent(),
+                      ],
+                    ),
+                  ],
+                ),
+              );
             },
           ),
         ),
-        Padding(
-          padding: context.padding(left: 20, bottom: 24),
-          child: OnboardingPageIndicator(
-            controller: _pageController,
-            countOfSubPage: pageCount,
-            bottom: 0,
-            top: 0,
-          ),
-        ),
+        _buildIndicator(),
       ],
     );
   }
+
+  Widget _buildWalletIcon() => Container(
+      padding: context.padding(top: 64),
+      alignment: Alignment.centerRight,
+      child: Assets.images.home.wallet
+          .image(width: context.sizeWidth(180), fit: BoxFit.cover));
+
+  Widget _buildContent() => Padding(
+        padding: context.padding(right: 100),
+        child: Container(
+          padding: context.padding(left: 20, top: 36),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Padding(
+                padding: context.padding(bottom: 16),
+                child: Text('Invesment Opportunity',
+                    style: AppFont()
+                        .fontTheme(context,
+                            weight: FontWeight.w400,
+                            color: colorScheme(context).outline)
+                        .bodyMedium),
+              ),
+              Text('dProfiles opens sales of \$DP1 Tokens',
+                  style: AppFont()
+                      .fontTheme(context,
+                          weight: FontWeight.w600,
+                          height: 1.3,
+                          color: MyColor.getWhite)
+                      .titleSmall),
+              Padding(
+                padding: context.padding(top: 5, bottom: 10),
+                child: Text('in angel investor round ',
+                    style: AppFont()
+                        .fontTheme(context,
+                            weight: FontWeight.w600, color: MyColor.getFFD166)
+                        .bodyLarge),
+              ),
+              MyButton(
+                onPressed: () {},
+                title: 'Buy \$DP1',
+              ),
+            ],
+          ),
+        ),
+      );
+
+  Widget _buildBannerBackground() => Assets.images.home.bannerBackground.image(
+      width: context.sizeWidth(220),
+      height: context.sizeHeight(200),
+      fit: BoxFit.cover);
+
+  Widget _buildIndicator() => Padding(
+        padding: context.padding(left: 20, bottom: 24),
+        child: OnboardingPageIndicator(
+          controller: _pageController,
+          countOfSubPage: pageCount,
+          bottom: 0,
+          top: 0,
+        ),
+      );
 }

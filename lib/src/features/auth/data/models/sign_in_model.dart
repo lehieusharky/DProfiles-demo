@@ -1,4 +1,3 @@
-import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'sign_in_model.freezed.dart';
