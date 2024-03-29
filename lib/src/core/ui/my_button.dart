@@ -21,7 +21,7 @@ class MyButton extends StatelessWidget {
 
   const MyButton({
     Key? key,
-     this.onPressed,
+    this.onPressed,
     required this.title,
     this.backgroundColor,
     this.titleStyle,

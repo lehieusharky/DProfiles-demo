@@ -20,6 +20,8 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  $AssetsImagesAiFeaturesGen get aiFeatures =>
+      const $AssetsImagesAiFeaturesGen();
   $AssetsImagesAuthGen get auth => const $AssetsImagesAuthGen();
   $AssetsImagesHomeGen get home => const $AssetsImagesHomeGen();
   $AssetsImagesMyWalletGen get myWallet => const $AssetsImagesMyWalletGen();
@@ -84,6 +86,34 @@ class $AssetsIconsLogosGen {
         talentUpBlack,
         talentUpLogo
       ];
+}
+
+class $AssetsImagesAiFeaturesGen {
+  const $AssetsImagesAiFeaturesGen();
+
+  /// File path: assets/images/ai_features/Folder.png
+  AssetGenImage get folder =>
+      const AssetGenImage('assets/images/ai_features/Folder.png');
+
+  /// File path: assets/images/ai_features/create_ai_character_icon.png
+  AssetGenImage get createAiCharacterIcon => const AssetGenImage(
+      'assets/images/ai_features/create_ai_character_icon.png');
+
+  /// File path: assets/images/ai_features/job.png
+  AssetGenImage get job =>
+      const AssetGenImage('assets/images/ai_features/job.png');
+
+  /// File path: assets/images/ai_features/letter.png
+  AssetGenImage get letter =>
+      const AssetGenImage('assets/images/ai_features/letter.png');
+
+  /// File path: assets/images/ai_features/profile_introduction.png
+  AssetGenImage get profileIntroduction =>
+      const AssetGenImage('assets/images/ai_features/profile_introduction.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values =>
+      [folder, createAiCharacterIcon, job, letter, profileIntroduction];
 }
 
 class $AssetsImagesAuthGen {

@@ -18,10 +18,14 @@ class AppFlatButton implements AbstractFactoryAppButton {
     Widget? prefixIcon,
     Widget? suffixIcon,
     Color? backgroundColor,
+    double? width,
+    double? height,
   }) {
     return MyButton(
       onPressed: onPressed,
       title: title,
+      width: width,
+      height: height ?? context.sizeHeight(45),
       prefixIcon: prefixIcon,
       suffixIcon: suffixIcon,
       backgroundColor: backgroundColor,
@@ -42,7 +46,7 @@ class AppFlatButton implements AbstractFactoryAppButton {
       icon: Icon(
         iconData,
         color: iconColor ?? colorScheme(context).background,
-        size:  context.sizeHeight(iconSize ??25),
+        size: context.sizeHeight(iconSize ?? 25),
       ),
     );
   }

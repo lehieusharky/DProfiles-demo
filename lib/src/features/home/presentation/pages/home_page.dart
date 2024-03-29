@@ -1,14 +1,8 @@
-import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
-import 'package:demo_dprofiles/src/core/app_responsive.dart';
-
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/pages/ext_home_page.dart';
-import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_feed_sub_page.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_banner.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_discover.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_drawer.dart';
-import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
-import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 
