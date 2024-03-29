@@ -104,6 +104,10 @@ class $AssetsImagesAuthGen {
 class $AssetsImagesHomeGen {
   const $AssetsImagesHomeGen();
 
+  /// File path: assets/images/home/banner_background.png
+  AssetGenImage get bannerBackground =>
+      const AssetGenImage('assets/images/home/banner_background.png');
+
   /// File path: assets/images/home/gift.png
   AssetGenImage get gift => const AssetGenImage('assets/images/home/gift.png');
 
@@ -114,8 +118,13 @@ class $AssetsImagesHomeGen {
   AssetGenImage get scholaships =>
       const AssetGenImage('assets/images/home/scholaships.png');
 
+  /// File path: assets/images/home/wallet.png
+  AssetGenImage get wallet =>
+      const AssetGenImage('assets/images/home/wallet.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [gift, live, scholaships];
+  List<AssetGenImage> get values =>
+      [bannerBackground, gift, live, scholaships, wallet];
 }
 
 class $AssetsImagesMyWalletGen {

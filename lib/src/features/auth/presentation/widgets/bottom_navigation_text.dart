@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/gestures.dart';

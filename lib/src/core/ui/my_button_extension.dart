@@ -9,7 +9,7 @@ extension MyButtonExtension on MyButton {
       ? null
       : Size(
           context.sizeWidth(width!),
-          context.sizeHeight(height ?? 48),
+          context.sizeHeight(height ?? 40),
         );
 
   OutlinedBorder shape(BuildContext context) => RoundedRectangleBorder(
@@ -22,5 +22,5 @@ extension MyButtonExtension on MyButton {
 
   TextStyle? textStyle(BuildContext context) =>
       titleStyle ??
-      AppFont().fontTheme(context, weight: FontWeight.w600).labelMedium;
+      AppFont().fontTheme(context, weight: FontWeight.w700).bodyMedium;
 }
