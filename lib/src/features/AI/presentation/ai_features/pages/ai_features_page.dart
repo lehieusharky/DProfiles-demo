@@ -33,7 +33,7 @@ class _AiFeaturesPageState extends State<AiFeaturesPage> {
                 colorScheme(context).primary,
                 'Write your profile Introduction',
                 Assets.images.aiFeatures.profileIntroduction.path,
-                () => context.router.push(const CreateAICharacterRoute()),
+                () => context.router.push(const CreateDigitalProfileRoute()),
               ),
               Tuple4(
                 colorScheme(context).secondaryContainer,

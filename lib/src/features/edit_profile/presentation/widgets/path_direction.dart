@@ -5,12 +5,14 @@ import 'package:flutter/material.dart';
 
 class PathDirection extends StatelessWidget {
   final String currentPage;
-  const PathDirection({Key? key, required this.currentPage}) : super(key: key);
+  final EdgeInsetsGeometry? padding;
+  const PathDirection({Key? key, required this.currentPage, this.padding})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.padding(bottom: 32),
+      padding: padding ?? context.padding(bottom: 32),
       child: Container(
         padding: context.padding(vertical: 12),
         child: Row(

@@ -1,10 +1,12 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/features/AI/presentation/create_ai_character/pages/create_ai_character_page.dart';
+
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:tuple/tuple.dart';
 
-extension CreateAICharacterPageExt on CreateAICharacterPage {
+import 'create_digital_profile_page.dart';
+
+extension CreateAIProfilePageExt on CreateDigitalProfilePage {
   List<Widget> actions(
     BuildContext context, {
     VoidCallback? onAction3Pressed,

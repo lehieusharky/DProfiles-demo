@@ -23,10 +23,9 @@ class AppRouter extends $AppRouter {
         AutoRoute(
             path: '/update_new_password', page: UpdateNewPasswordRoute.page),
         AutoRoute(
-            path: '/create_ai_character', page: CreateAICharacterRoute.page),
-        AutoRoute(
-            path: '/write_profile',
+            path: '/create_digital_profile',
             initial: true,
-            page: WriteProfileRoute.page),
+            page: CreateDigitalProfileRoute.page),
+        AutoRoute(path: '/write_profile', page: WriteProfileRoute.page),
       ];
 }
