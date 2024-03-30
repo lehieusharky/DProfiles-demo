@@ -133,14 +133,14 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<SignInModel?> signIn(Map<String, dynamic> body) async {
+  Future<SignInModel> signIn(Map<String, dynamic> body) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(body);
     final _result = await _dio
-        .fetch<Map<String, dynamic>?>(_setStreamType<SignInModel>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<SignInModel>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -156,8 +156,7 @@ class _RestClient implements RestClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value =
-        _result.data == null ? null : SignInModel.fromJson(_result.data!);
+    final value = SignInModel.fromJson(_result.data!);
     return value;
   }
 

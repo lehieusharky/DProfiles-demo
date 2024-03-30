@@ -1,9 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:demo_dprofiles/src/features/auth/data/datasources/auth_datasource.dart';
+import 'package:demo_dprofiles/src/features/auth/data/models/auth_error_response.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/create_account_model.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/sign_in_model.dart';
 import 'package:demo_dprofiles/src/features/auth/domain/repositories/auth_repository.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
+import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 
 @Injectable(as: AuthRepository)
@@ -17,9 +19,11 @@ class AuthRepositoryImpl implements AuthRepository {
       String email) async {
     try {
       final response = await _authDataSource.sendSignUpEmail(email);
+
       return Right(response);
-    } catch (e) {
-      return Left(AuthFailure(e.toString()));
+    } on DioException catch (e) {
+      return Left(
+          AuthFailure(response: AuthErrorResponse.fromJson(e.response!.data)));
     }
   }
 
@@ -29,8 +33,9 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final response = await _authDataSource.sendSignUpEmail(email);
       return Right(response);
-    } catch (e) {
-      return Left(AuthFailure(e.toString()));
+    } on DioException catch (e) {
+      return Left(
+          AuthFailure(response: AuthErrorResponse.fromJson(e.response!.data)));
     }
   }
 
@@ -40,8 +45,9 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final response = await _authDataSource.validateSignUpCode(email, code);
       return Right(response);
-    } catch (e) {
-      return Left(AuthFailure(e.toString()));
+    } on DioException catch (e) {
+      return Left(
+          AuthFailure(response: AuthErrorResponse.fromJson(e.response!.data)));
     }
   }
 
@@ -51,19 +57,21 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final response = await _authDataSource.createAnAccount(model);
       return Right(response);
-    } catch (e) {
-      return Left(AuthFailure(e.toString()));
+    } on DioException catch (e) {
+      return Left(
+          AuthFailure(response: AuthErrorResponse.fromJson(e.response!.data)));
     }
   }
 
   @override
-  Future<Either<AuthFailure, SignInModel?>> signIn(
+  Future<Either<AuthFailure, SignInModel>> signIn(
       String email, String password) async {
     try {
       final response = await _authDataSource.signIn(email, password);
       return Right(response);
-    } catch (e) {
-      return Left(AuthFailure(e.toString()));
+    } on DioException catch (e) {
+      return Left(
+          AuthFailure(response: AuthErrorResponse.fromJson(e.response!.data)));
     }
   }
 }

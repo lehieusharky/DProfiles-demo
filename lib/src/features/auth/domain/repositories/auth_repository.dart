@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/create_account_model.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/sign_in_model.dart';
-import 'package:demo_dprofiles/src/utils/https/failures/my_failure.dart';
+import 'package:demo_dprofiles/src/utils/domain/failures/app_failure.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 
 abstract class AuthRepository {
@@ -15,10 +15,10 @@ abstract class AuthRepository {
   Future<Either<AuthFailure, BaseResponse>> createAnAccount(
       CreateAccountModel model);
 
-  Future<Either<AuthFailure, SignInModel?>> signIn(
+  Future<Either<AuthFailure, SignInModel>> signIn(
       String email, String password);
 }
 
-class AuthFailure extends MyFailure {
-  AuthFailure(super.e);
+class AuthFailure extends AppFailure {
+  const AuthFailure({super.msgCode, super.response});
 }

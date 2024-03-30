@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
+import 'package:demo_dprofiles/src/features/auth/data/models/auth_error_response.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/create_account_model.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/sign_in_model.dart';
 import 'package:demo_dprofiles/src/features/auth/domain/repositories/auth_repository.dart';
@@ -19,7 +20,7 @@ abstract class AuthUseCase {
   Future<Either<String, BaseResponse>> createAnAccount(
       CreateAccountModel model);
 
-  Future<Either<String, SignInModel?>> signIn(String email, String password);
+  Future<Either<String, SignInModel>> signIn(String email, String password);
 }
 
 @Injectable(as: AuthUseCase)
@@ -33,7 +34,7 @@ class AuthUseCaseImpl implements AuthUseCase {
     final result = await _authRepository.sendSignUpEmail(email);
 
     return result.fold(
-      (l) => Left(l.msg),
+      (l) => Left((l.response as AuthErrorResponse).message!),
       (r) => Right(r),
     );
   }
@@ -43,7 +44,7 @@ class AuthUseCaseImpl implements AuthUseCase {
     final result = await _authRepository.sendSignUpEmail(email);
 
     return result.fold(
-      (l) => Left(l.msg),
+      (l) => Left((l.response as AuthErrorResponse).message!),
       (r) => Right(r),
     );
   }
@@ -54,7 +55,7 @@ class AuthUseCaseImpl implements AuthUseCase {
     final result = await _authRepository.validateSignUpCode(email, code);
 
     return result.fold(
-      (l) => Left(l.msg),
+      (l) => Left((l.response as AuthErrorResponse).message!),
       (r) => Right(r),
     );
   }
@@ -65,18 +66,18 @@ class AuthUseCaseImpl implements AuthUseCase {
     final result = await _authRepository.createAnAccount(model);
 
     return result.fold(
-      (l) => Left(l.msg),
+      (l) => Left((l.response as AuthErrorResponse).message!),
       (r) => Right(r),
     );
   }
 
   @override
-  Future<Either<String, SignInModel?>> signIn(
+  Future<Either<String, SignInModel>> signIn(
       String email, String password) async {
     final result = await _authRepository.signIn(email, password);
 
     return result.fold(
-      (l) => Left(l.msg),
+      (l) => Left((l.response as AuthErrorResponse).message!),
       (r) => Right(r),
     );
   }

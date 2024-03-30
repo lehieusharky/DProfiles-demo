@@ -21,7 +21,6 @@ class AppFailure extends Equatable implements AppFailureHandler {
 
   @override
   String msgTranslation(BuildContext context) {
-    // TODO: implement msgTranslation
     throw UnimplementedError();
   }
 
