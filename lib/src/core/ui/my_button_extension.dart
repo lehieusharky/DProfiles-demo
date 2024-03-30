@@ -17,7 +17,7 @@ extension MyButtonExtension on MyButton {
             BorderRadius.circular(context.sizeWidth(borderRadius ?? 90)),
         side: BorderSide(
             color: borderColor ?? Colors.transparent,
-            width: context.sizeWidth(width ?? 1)),
+            width: context.sizeWidth(borderWidth ?? 1)),
       );
 
   TextStyle? textStyle(BuildContext context) =>

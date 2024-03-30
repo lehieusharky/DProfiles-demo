@@ -10,8 +10,18 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
-import 'package:shared_preferences/shared_preferences.dart' as _i19;
+import 'package:shared_preferences/shared_preferences.dart' as _i24;
 
+import '../../features/AI/create_digital_profile/data/datasources/create_digital_profile_datasource.dart'
+    as _i12;
+import '../../features/AI/create_digital_profile/data/datasources/create_digital_profile_datasource_impl.dart'
+    as _i13;
+import '../../features/AI/create_digital_profile/data/repositories_impl/create_digital_profile_repository_impl.dart'
+    as _i15;
+import '../../features/AI/create_digital_profile/domain/repositories/create_digital_profile_repository.dart'
+    as _i14;
+import '../../features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart'
+    as _i16;
 import '../../features/auth/data/datasources/auth_datasource.dart' as _i7;
 import '../../features/auth/data/datasources/auth_datasource_impl.dart' as _i8;
 import '../../features/auth/data/repositories_impl/auth_repository_impl.dart'
@@ -22,20 +32,20 @@ import '../../features/home/data/datasources/remote/auth_datasource.dart'
     as _i5;
 import '../../features/home/data/datasources/remote/auth_datasource_impl.dart'
     as _i6;
-import '../../features/home/presentation/bloc/home_bloc.dart' as _i12;
+import '../../features/home/presentation/bloc/home_bloc.dart' as _i17;
 import '../../features/setting/data/datasources/setting_datasource.dart'
-    as _i14;
+    as _i19;
 import '../../features/setting/data/datasources/setting_datasource_impl.dart'
-    as _i15;
+    as _i20;
 import '../../features/setting/data/repositories_impl/setting_repository_impl.dart'
-    as _i17;
+    as _i22;
 import '../../features/setting/domain/repositories/setting_repository.dart'
-    as _i16;
-import '../../features/setting/domain/usecases/setting_usecase.dart' as _i18;
+    as _i21;
+import '../../features/setting/domain/usecases/setting_usecase.dart' as _i23;
 import '../../utils/data/cache/app_share_preference.dart' as _i3;
 import '../../utils/data/cache/app_share_preference_impl.dart' as _i4;
-import '../../utils/https/dio/app_rest_client.dart' as _i13;
-import 'di.dart' as _i20;
+import '../../utils/https/dio/app_rest_client.dart' as _i18;
+import 'di.dart' as _i25;
 
 // initializes the registration of main-scope dependencies inside of GetIt
 Future<_i1.GetIt> $initGetIt(
@@ -56,18 +66,26 @@ Future<_i1.GetIt> $initGetIt(
       () => _i10.AuthRepositoryImpl(gh<_i7.AuthDataSource>()));
   gh.factory<_i11.AuthUseCase>(
       () => _i11.AuthUseCaseImpl(gh<_i9.AuthRepository>()));
-  gh.singleton<_i12.HomeBloc>(() => _i12.HomeBloc());
-  gh.factory<_i13.RestClient>(() => appModule.restClient);
-  gh.factory<_i14.SettingDataSource>(() => _i15.SettingDataSourceImpl());
-  gh.factory<_i16.SettingRepository>(
-      () => _i17.SettingRepositoryImpl(gh<_i14.SettingDataSource>()));
-  gh.factory<_i18.SettingUseCase>(
-      () => _i18.SettingUseCaseImpl(gh<_i16.SettingRepository>()));
-  await gh.factoryAsync<_i19.SharedPreferences>(
+  gh.factory<_i12.CreateDigitalProfileDataSource>(
+      () => _i13.CreateDigitalProfileDataSourceImpl());
+  gh.factory<_i14.CreateDigitalProfileRepository>(() =>
+      _i15.CreateDigitalProfileRepositoryImpl(
+          gh<_i12.CreateDigitalProfileDataSource>()));
+  gh.factory<_i16.CreateDigitalProfileUseCase>(() =>
+      _i16.CreateDigitalProfileUseCaseImpl(
+          gh<_i14.CreateDigitalProfileRepository>()));
+  gh.singleton<_i17.HomeBloc>(() => _i17.HomeBloc());
+  gh.factory<_i18.RestClient>(() => appModule.restClient);
+  gh.factory<_i19.SettingDataSource>(() => _i20.SettingDataSourceImpl());
+  gh.factory<_i21.SettingRepository>(
+      () => _i22.SettingRepositoryImpl(gh<_i19.SettingDataSource>()));
+  gh.factory<_i23.SettingUseCase>(
+      () => _i23.SettingUseCaseImpl(gh<_i21.SettingRepository>()));
+  await gh.factoryAsync<_i24.SharedPreferences>(
     () => appModule.sharedPreferences,
     preResolve: true,
   );
   return getIt;
 }
 
-class _$AppModule extends _i20.AppModule {}
+class _$AppModule extends _i25.AppModule {}

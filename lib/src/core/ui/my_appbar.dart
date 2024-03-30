@@ -9,7 +9,8 @@ class MyAppbar extends StatefulWidget implements PreferredSizeWidget {
     this.action,
     this.isBack,
     this.titleWidget,
-    this.onBack, this.height,
+    this.onBack,
+    this.height,
   }) : super(key: key);
 
   final String? title;
@@ -23,7 +24,7 @@ class MyAppbar extends StatefulWidget implements PreferredSizeWidget {
   State<MyAppbar> createState() => _MyAppbarState();
 
   @override
-  Size get preferredSize => Size.fromHeight(height ?? 80);
+  Size get preferredSize => Size.fromHeight(height ?? 70);
 }
 
 class _MyAppbarState extends State<MyAppbar> {
@@ -36,7 +37,6 @@ class _MyAppbarState extends State<MyAppbar> {
               icon: const Icon(IconsaxOutline.arrow_left_2),
             )
           : null,
-
       title: Padding(
         padding: context.padding(left: 20),
         child: widget.titleWidget ??

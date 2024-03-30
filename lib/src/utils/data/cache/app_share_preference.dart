@@ -18,4 +18,12 @@ abstract class AppSharePreference {
   Future<SupportedLanguage> setLanguage(SupportedLanguage language);
 
   SupportedLanguage getLanguage();
+
+  Future<String> setAccessToken(String token);
+
+  Future<String> setRefreshToken(String token);
+
+  String? getAccessToken();
+
+  String? getRefreshToken();
 }

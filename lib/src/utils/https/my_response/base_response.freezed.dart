@@ -24,6 +24,7 @@ mixin _$BaseResponse {
   bool? get success => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
   int? get statusCode => throw _privateConstructorUsedError;
+  dynamic get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +38,12 @@ abstract class $BaseResponseCopyWith<$Res> {
           BaseResponse value, $Res Function(BaseResponse) then) =
       _$BaseResponseCopyWithImpl<$Res, BaseResponse>;
   @useResult
-  $Res call({String message, bool? success, String? error, int? statusCode});
+  $Res call(
+      {String message,
+      bool? success,
+      String? error,
+      int? statusCode,
+      dynamic data});
 }
 
 /// @nodoc
@@ -57,6 +63,7 @@ class _$BaseResponseCopyWithImpl<$Res, $Val extends BaseResponse>
     Object? success = freezed,
     Object? error = freezed,
     Object? statusCode = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
       message: null == message
@@ -75,6 +82,10 @@ class _$BaseResponseCopyWithImpl<$Res, $Val extends BaseResponse>
           ? _value.statusCode
           : statusCode // ignore: cast_nullable_to_non_nullable
               as int?,
+      data: freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as dynamic,
     ) as $Val);
   }
 }
@@ -87,7 +98,12 @@ abstract class _$$BaseResponseImplCopyWith<$Res>
       __$$BaseResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String message, bool? success, String? error, int? statusCode});
+  $Res call(
+      {String message,
+      bool? success,
+      String? error,
+      int? statusCode,
+      dynamic data});
 }
 
 /// @nodoc
@@ -105,6 +121,7 @@ class __$$BaseResponseImplCopyWithImpl<$Res>
     Object? success = freezed,
     Object? error = freezed,
     Object? statusCode = freezed,
+    Object? data = freezed,
   }) {
     return _then(_$BaseResponseImpl(
       message: null == message
@@ -123,6 +140,10 @@ class __$$BaseResponseImplCopyWithImpl<$Res>
           ? _value.statusCode
           : statusCode // ignore: cast_nullable_to_non_nullable
               as int?,
+      data: freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as dynamic,
     ));
   }
 }
@@ -134,7 +155,8 @@ class _$BaseResponseImpl implements _BaseResponse {
       {required this.message,
       this.success = false,
       this.error = null,
-      this.statusCode = 200});
+      this.statusCode = 200,
+      this.data});
 
   factory _$BaseResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$BaseResponseImplFromJson(json);
@@ -150,10 +172,12 @@ class _$BaseResponseImpl implements _BaseResponse {
   @override
   @JsonKey()
   final int? statusCode;
+  @override
+  final dynamic data;
 
   @override
   String toString() {
-    return 'BaseResponse(message: $message, success: $success, error: $error, statusCode: $statusCode)';
+    return 'BaseResponse(message: $message, success: $success, error: $error, statusCode: $statusCode, data: $data)';
   }
 
   @override
@@ -165,13 +189,14 @@ class _$BaseResponseImpl implements _BaseResponse {
             (identical(other.success, success) || other.success == success) &&
             (identical(other.error, error) || other.error == error) &&
             (identical(other.statusCode, statusCode) ||
-                other.statusCode == statusCode));
+                other.statusCode == statusCode) &&
+            const DeepCollectionEquality().equals(other.data, data));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, message, success, error, statusCode);
+  int get hashCode => Object.hash(runtimeType, message, success, error,
+      statusCode, const DeepCollectionEquality().hash(data));
 
   @JsonKey(ignore: true)
   @override
@@ -192,7 +217,8 @@ abstract class _BaseResponse implements BaseResponse {
       {required final String message,
       final bool? success,
       final String? error,
-      final int? statusCode}) = _$BaseResponseImpl;
+      final int? statusCode,
+      final dynamic data}) = _$BaseResponseImpl;
 
   factory _BaseResponse.fromJson(Map<String, dynamic> json) =
       _$BaseResponseImpl.fromJson;
@@ -205,6 +231,8 @@ abstract class _BaseResponse implements BaseResponse {
   String? get error;
   @override
   int? get statusCode;
+  @override
+  dynamic get data;
   @override
   @JsonKey(ignore: true)
   _$$BaseResponseImplCopyWith<_$BaseResponseImpl> get copyWith =>

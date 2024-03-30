@@ -9,9 +9,9 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i17;
-import 'package:demo_dprofiles/src/features/AI/presentation/create_ai_character/pages/create_ai_character_page.dart'
-    as _i3;
-import 'package:demo_dprofiles/src/features/AI/presentation/write_profile/pages/write_profile_page.dart'
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/create_digital_profile_page.dart'
+    as _i4;
+import 'package:demo_dprofiles/src/features/AI/write_profile/pages/write_profile_page.dart'
     as _i16;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/connect_wallet/presentation/connect_wallet_page.dart'
     as _i2;
@@ -24,7 +24,7 @@ import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_passw
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/page/sign_in_page.dart'
     as _i10;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/create_an_account_page.dart'
-    as _i4;
+    as _i3;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/sign_up_page.dart'
     as _i11;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/sign_up_success_page.dart'
@@ -60,20 +60,20 @@ abstract class $AppRouter extends _i17.RootStackRouter {
         child: const _i2.ConnectWalletPage(),
       );
     },
-    CreateAICharacterRoute.name: (routeData) {
-      return _i17.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i3.CreateAICharacterPage(),
-      );
-    },
     CreateAnAccountRoute.name: (routeData) {
       final args = routeData.argsAs<CreateAnAccountRouteArgs>();
       return _i17.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i4.CreateAnAccountPage(
+        child: _i3.CreateAnAccountPage(
           key: args.key,
           email: args.email,
         ),
+      );
+    },
+    CreateDigitalProfileRoute.name: (routeData) {
+      return _i17.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i4.CreateDigitalProfilePage(),
       );
     },
     DashboardRoute.name: (routeData) {
@@ -184,21 +184,7 @@ class ConnectWalletRoute extends _i17.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i3.CreateAICharacterPage]
-class CreateAICharacterRoute extends _i17.PageRouteInfo<void> {
-  const CreateAICharacterRoute({List<_i17.PageRouteInfo>? children})
-      : super(
-          CreateAICharacterRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'CreateAICharacterRoute';
-
-  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i4.CreateAnAccountPage]
+/// [_i3.CreateAnAccountPage]
 class CreateAnAccountRoute
     extends _i17.PageRouteInfo<CreateAnAccountRouteArgs> {
   CreateAnAccountRoute({
@@ -234,6 +220,20 @@ class CreateAnAccountRouteArgs {
   String toString() {
     return 'CreateAnAccountRouteArgs{key: $key, email: $email}';
   }
+}
+
+/// generated route for
+/// [_i4.CreateDigitalProfilePage]
+class CreateDigitalProfileRoute extends _i17.PageRouteInfo<void> {
+  const CreateDigitalProfileRoute({List<_i17.PageRouteInfo>? children})
+      : super(
+          CreateDigitalProfileRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CreateDigitalProfileRoute';
+
+  static const _i17.PageInfo<void> page = _i17.PageInfo<void>(name);
 }
 
 /// generated route for
