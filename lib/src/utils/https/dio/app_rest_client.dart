@@ -25,7 +25,7 @@ abstract class RestClient {
   Future<BaseResponse> createAnAccount(@Body() Map<String, dynamic> body);
 
   @POST('/api/login')
-  Future<SignInModel?> signIn(@Body() Map<String, dynamic> body);
+  Future<SignInModel> signIn(@Body() Map<String, dynamic> body);
 
   // user
 

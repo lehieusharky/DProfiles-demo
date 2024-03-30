@@ -1,6 +1,7 @@
 import 'package:demo_dprofiles/src/features/auth/data/datasources/auth_datasource.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/create_account_model.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/sign_in_model.dart';
+import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:demo_dprofiles/src/utils/https/dio/http_util.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:dio/dio.dart';
@@ -11,55 +12,68 @@ import 'package:injectable/injectable.dart';
 class AuthDataSourceImpl implements AuthDataSource {
   @override
   Future<BaseResponse> sendSignUpEmail(String email) async {
-    final body = {"email": email};
+    try {
+      final body = {"email": email};
 
-    final response = await MyHttp.rl().sendSignUpEmail(body).catchError(
-          (e) => BaseResponse.fromJson((e as DioException).response!.data),
-        );
+      final response = await MyHttp.rl().sendSignUpEmail(body);
 
-    return response;
+      return response;
+    } on DioException {
+      rethrow;
+    }
   }
 
   @override
   Future<BaseResponse> resendSignUpEmail(String email) async {
-    final body = {"email": email};
+    try {
+      final body = {"email": email};
 
-    final response = await MyHttp.rl().resendSignUpEmail(body).catchError(
-        (e) => BaseResponse.fromJson((e as DioException).response!.data));
+      final response = await MyHttp.rl().resendSignUpEmail(body);
 
-    return response;
+      return response;
+    } on DioException {
+      rethrow;
+    }
   }
 
   @override
   Future<BaseResponse> validateSignUpCode(String email, String code) async {
-    final body = {"code": code, "email": email};
+    try {
+      final body = {"code": code, "email": email};
 
-    final response = await MyHttp.rl().validateSignUpCode(body).catchError(
-        (e) => BaseResponse.fromJson((e as DioException).response!.data));
+      final response = await MyHttp.rl().validateSignUpCode(body);
 
-    return response;
+      return response;
+    } on DioException {
+      rethrow;
+    }
   }
 
   @override
   Future<BaseResponse> createAnAccount(CreateAccountModel model) async {
-    final response = await MyHttp.rl()
-        .createAnAccount(model.toJson())
-        .catchError(
-            (e) => BaseResponse.fromJson((e as DioException).response!.data));
+    try {
+      final response = await MyHttp.rl().createAnAccount(model.toJson());
 
-    return response;
+      return response;
+    } on DioException {
+      rethrow;
+    }
   }
 
   @override
-  Future<SignInModel?> signIn(String email, String password) async {
-    final body = {"username": email, "password": password};
+  Future<SignInModel> signIn(String email, String password) async {
+    try {
+      final body = {"username": email, "password": password};
 
-    final response = await MyHttp.rl().signIn(body).catchError((e) => null);
+      final response = await MyHttp.rl().signIn(body);
 
-    if (response != null) {
+      await sharePreference.setAccessToken(response.accessToken);
 
+      await sharePreference.setRefreshToken(response.refreshToken);
+
+      return response;
+    } on DioException {
+      rethrow;
     }
-
-    return response;
   }
 }
