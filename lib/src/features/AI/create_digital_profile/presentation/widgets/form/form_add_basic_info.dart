@@ -2,6 +2,7 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/bloc/create_digital_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
+import 'package:demo_dprofiles/src/utils/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -88,7 +89,7 @@ class _FormAddBasicInfoState extends State<FormAddBasicInfo> {
     if (_keyForm.currentState?.validate() ?? false) {
       context
           .read<CreateDigitalProfileBloc>()
-          .add(const ChangeCreationStep(isNext: true));
+          .add(UpdateUserInfo(UserInfoModel(username: _nameController.text)));
     }
   }
 }

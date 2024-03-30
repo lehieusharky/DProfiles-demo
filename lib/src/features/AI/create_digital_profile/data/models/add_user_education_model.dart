@@ -1,8 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'add_user_education.freezed.dart';
+part 'add_user_education_model.freezed.dart';
 
-part 'add_user_education.g.dart';
+part 'add_user_education_model.g.dart';
 
 @freezed
 class AddUserEducationModel with _$AddUserEducationModel {

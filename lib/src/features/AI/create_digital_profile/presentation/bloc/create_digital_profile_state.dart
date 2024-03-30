@@ -8,11 +8,18 @@ class CreateDigitalProfileState with _$CreateDigitalProfileState {
       CreateDigitalProfileLoading;
 
   const factory CreateDigitalProfileState.error(
-      {required List<String> message, String? title}) = CreateDigitalProfileError;
+      {required List<String> message,
+      String? title}) = CreateDigitalProfileError;
 
   const factory CreateDigitalProfileState.changeCreationStepSuccess(
       int currentStep) = ChangeCreationStepSuccess;
 
   const factory CreateDigitalProfileState.addUserEducationSuccess(
       BaseResponse response) = AddUserEducationSuccess;
+
+  const factory CreateDigitalProfileState.updateUserInfoSuccess(
+      BaseResponse response) = UpdateUserInfoSuccess;
+
+  const factory CreateDigitalProfileState.getUserInfoSuccess(
+      BaseResponse response) = GetUserInfoSuccess;
 }

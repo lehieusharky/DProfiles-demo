@@ -38,7 +38,7 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
       child: BlocListener<CreateDigitalProfileBloc, CreateDigitalProfileState>(
         listener: (context, state) {
           if (state is ChangeCreationStepSuccess) {
-            _tabController.animateTo(state.currentStep - 1,
+            _tabController.animateTo((state.currentStep - 1),
                 duration: const Duration(milliseconds: 300));
           }
         },
@@ -52,9 +52,8 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
               child: Column(
                 children: [
                   PathDirection(
-                    currentPage: 'Create your AI character',
-                    padding: context.padding(bottom: 8, horizontal: 20),
-                  ),
+                      currentPage: 'Create your AI character',
+                      padding: context.padding(bottom: 8, horizontal: 20)),
                   HeaderCreateDigitalProfile(
                       onPressed: (index) => _tabController.animateTo(index)),
                   Padding(

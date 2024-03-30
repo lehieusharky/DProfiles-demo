@@ -21,6 +21,8 @@ mixin _$CreateDigitalProfileEvent {
     required TResult Function() started,
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(AddUserEducationModel param) addUserEducation,
+    required TResult Function(UserInfoModel param) updateUserInfo,
+    required TResult Function() getUserInfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +30,8 @@ mixin _$CreateDigitalProfileEvent {
     TResult? Function()? started,
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(AddUserEducationModel param)? addUserEducation,
+    TResult? Function(UserInfoModel param)? updateUserInfo,
+    TResult? Function()? getUserInfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +39,8 @@ mixin _$CreateDigitalProfileEvent {
     TResult Function()? started,
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(AddUserEducationModel param)? addUserEducation,
+    TResult Function(UserInfoModel param)? updateUserInfo,
+    TResult Function()? getUserInfo,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +49,8 @@ mixin _$CreateDigitalProfileEvent {
     required TResult Function(_Started value) started,
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(AddUserEducation value) addUserEducation,
+    required TResult Function(UpdateUserInfo value) updateUserInfo,
+    required TResult Function(GetUserInfo value) getUserInfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +58,8 @@ mixin _$CreateDigitalProfileEvent {
     TResult? Function(_Started value)? started,
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(AddUserEducation value)? addUserEducation,
+    TResult? Function(UpdateUserInfo value)? updateUserInfo,
+    TResult? Function(GetUserInfo value)? getUserInfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +67,8 @@ mixin _$CreateDigitalProfileEvent {
     TResult Function(_Started value)? started,
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(AddUserEducation value)? addUserEducation,
+    TResult Function(UpdateUserInfo value)? updateUserInfo,
+    TResult Function(GetUserInfo value)? getUserInfo,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -122,6 +134,8 @@ class _$StartedImpl implements _Started {
     required TResult Function() started,
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(AddUserEducationModel param) addUserEducation,
+    required TResult Function(UserInfoModel param) updateUserInfo,
+    required TResult Function() getUserInfo,
   }) {
     return started();
   }
@@ -132,6 +146,8 @@ class _$StartedImpl implements _Started {
     TResult? Function()? started,
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(AddUserEducationModel param)? addUserEducation,
+    TResult? Function(UserInfoModel param)? updateUserInfo,
+    TResult? Function()? getUserInfo,
   }) {
     return started?.call();
   }
@@ -142,6 +158,8 @@ class _$StartedImpl implements _Started {
     TResult Function()? started,
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(AddUserEducationModel param)? addUserEducation,
+    TResult Function(UserInfoModel param)? updateUserInfo,
+    TResult Function()? getUserInfo,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -156,6 +174,8 @@ class _$StartedImpl implements _Started {
     required TResult Function(_Started value) started,
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(AddUserEducation value) addUserEducation,
+    required TResult Function(UpdateUserInfo value) updateUserInfo,
+    required TResult Function(GetUserInfo value) getUserInfo,
   }) {
     return started(this);
   }
@@ -166,6 +186,8 @@ class _$StartedImpl implements _Started {
     TResult? Function(_Started value)? started,
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(AddUserEducation value)? addUserEducation,
+    TResult? Function(UpdateUserInfo value)? updateUserInfo,
+    TResult? Function(GetUserInfo value)? getUserInfo,
   }) {
     return started?.call(this);
   }
@@ -176,6 +198,8 @@ class _$StartedImpl implements _Started {
     TResult Function(_Started value)? started,
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(AddUserEducation value)? addUserEducation,
+    TResult Function(UpdateUserInfo value)? updateUserInfo,
+    TResult Function(GetUserInfo value)? getUserInfo,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -258,6 +282,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     required TResult Function() started,
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(AddUserEducationModel param) addUserEducation,
+    required TResult Function(UserInfoModel param) updateUserInfo,
+    required TResult Function() getUserInfo,
   }) {
     return changeCreationStep(isNext);
   }
@@ -268,6 +294,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult? Function()? started,
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(AddUserEducationModel param)? addUserEducation,
+    TResult? Function(UserInfoModel param)? updateUserInfo,
+    TResult? Function()? getUserInfo,
   }) {
     return changeCreationStep?.call(isNext);
   }
@@ -278,6 +306,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult Function()? started,
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(AddUserEducationModel param)? addUserEducation,
+    TResult Function(UserInfoModel param)? updateUserInfo,
+    TResult Function()? getUserInfo,
     required TResult orElse(),
   }) {
     if (changeCreationStep != null) {
@@ -292,6 +322,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     required TResult Function(_Started value) started,
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(AddUserEducation value) addUserEducation,
+    required TResult Function(UpdateUserInfo value) updateUserInfo,
+    required TResult Function(GetUserInfo value) getUserInfo,
   }) {
     return changeCreationStep(this);
   }
@@ -302,6 +334,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult? Function(_Started value)? started,
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(AddUserEducation value)? addUserEducation,
+    TResult? Function(UpdateUserInfo value)? updateUserInfo,
+    TResult? Function(GetUserInfo value)? getUserInfo,
   }) {
     return changeCreationStep?.call(this);
   }
@@ -312,6 +346,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult Function(_Started value)? started,
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(AddUserEducation value)? addUserEducation,
+    TResult Function(UpdateUserInfo value)? updateUserInfo,
+    TResult Function(GetUserInfo value)? getUserInfo,
     required TResult orElse(),
   }) {
     if (changeCreationStep != null) {
@@ -410,6 +446,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     required TResult Function() started,
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(AddUserEducationModel param) addUserEducation,
+    required TResult Function(UserInfoModel param) updateUserInfo,
+    required TResult Function() getUserInfo,
   }) {
     return addUserEducation(param);
   }
@@ -420,6 +458,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult? Function()? started,
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(AddUserEducationModel param)? addUserEducation,
+    TResult? Function(UserInfoModel param)? updateUserInfo,
+    TResult? Function()? getUserInfo,
   }) {
     return addUserEducation?.call(param);
   }
@@ -430,6 +470,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult Function()? started,
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(AddUserEducationModel param)? addUserEducation,
+    TResult Function(UserInfoModel param)? updateUserInfo,
+    TResult Function()? getUserInfo,
     required TResult orElse(),
   }) {
     if (addUserEducation != null) {
@@ -444,6 +486,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     required TResult Function(_Started value) started,
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(AddUserEducation value) addUserEducation,
+    required TResult Function(UpdateUserInfo value) updateUserInfo,
+    required TResult Function(GetUserInfo value) getUserInfo,
   }) {
     return addUserEducation(this);
   }
@@ -454,6 +498,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult? Function(_Started value)? started,
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(AddUserEducation value)? addUserEducation,
+    TResult? Function(UpdateUserInfo value)? updateUserInfo,
+    TResult? Function(GetUserInfo value)? getUserInfo,
   }) {
     return addUserEducation?.call(this);
   }
@@ -464,6 +510,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult Function(_Started value)? started,
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(AddUserEducation value)? addUserEducation,
+    TResult Function(UpdateUserInfo value)? updateUserInfo,
+    TResult Function(GetUserInfo value)? getUserInfo,
     required TResult orElse(),
   }) {
     if (addUserEducation != null) {
@@ -484,6 +532,289 @@ abstract class AddUserEducation implements CreateDigitalProfileEvent {
 }
 
 /// @nodoc
+abstract class _$$UpdateUserInfoImplCopyWith<$Res> {
+  factory _$$UpdateUserInfoImplCopyWith(_$UpdateUserInfoImpl value,
+          $Res Function(_$UpdateUserInfoImpl) then) =
+      __$$UpdateUserInfoImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserInfoModel param});
+
+  $UserInfoModelCopyWith<$Res> get param;
+}
+
+/// @nodoc
+class __$$UpdateUserInfoImplCopyWithImpl<$Res>
+    extends _$CreateDigitalProfileEventCopyWithImpl<$Res, _$UpdateUserInfoImpl>
+    implements _$$UpdateUserInfoImplCopyWith<$Res> {
+  __$$UpdateUserInfoImplCopyWithImpl(
+      _$UpdateUserInfoImpl _value, $Res Function(_$UpdateUserInfoImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? param = null,
+  }) {
+    return _then(_$UpdateUserInfoImpl(
+      null == param
+          ? _value.param
+          : param // ignore: cast_nullable_to_non_nullable
+              as UserInfoModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserInfoModelCopyWith<$Res> get param {
+    return $UserInfoModelCopyWith<$Res>(_value.param, (value) {
+      return _then(_value.copyWith(param: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$UpdateUserInfoImpl implements UpdateUserInfo {
+  const _$UpdateUserInfoImpl(this.param);
+
+  @override
+  final UserInfoModel param;
+
+  @override
+  String toString() {
+    return 'CreateDigitalProfileEvent.updateUserInfo(param: $param)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateUserInfoImpl &&
+            (identical(other.param, param) || other.param == param));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, param);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateUserInfoImplCopyWith<_$UpdateUserInfoImpl> get copyWith =>
+      __$$UpdateUserInfoImplCopyWithImpl<_$UpdateUserInfoImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function(AddUserEducationModel param) addUserEducation,
+    required TResult Function(UserInfoModel param) updateUserInfo,
+    required TResult Function() getUserInfo,
+  }) {
+    return updateUserInfo(param);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function(AddUserEducationModel param)? addUserEducation,
+    TResult? Function(UserInfoModel param)? updateUserInfo,
+    TResult? Function()? getUserInfo,
+  }) {
+    return updateUserInfo?.call(param);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function(AddUserEducationModel param)? addUserEducation,
+    TResult Function(UserInfoModel param)? updateUserInfo,
+    TResult Function()? getUserInfo,
+    required TResult orElse(),
+  }) {
+    if (updateUserInfo != null) {
+      return updateUserInfo(param);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ChangeCreationStep value) changeCreationStep,
+    required TResult Function(AddUserEducation value) addUserEducation,
+    required TResult Function(UpdateUserInfo value) updateUserInfo,
+    required TResult Function(GetUserInfo value) getUserInfo,
+  }) {
+    return updateUserInfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ChangeCreationStep value)? changeCreationStep,
+    TResult? Function(AddUserEducation value)? addUserEducation,
+    TResult? Function(UpdateUserInfo value)? updateUserInfo,
+    TResult? Function(GetUserInfo value)? getUserInfo,
+  }) {
+    return updateUserInfo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ChangeCreationStep value)? changeCreationStep,
+    TResult Function(AddUserEducation value)? addUserEducation,
+    TResult Function(UpdateUserInfo value)? updateUserInfo,
+    TResult Function(GetUserInfo value)? getUserInfo,
+    required TResult orElse(),
+  }) {
+    if (updateUserInfo != null) {
+      return updateUserInfo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateUserInfo implements CreateDigitalProfileEvent {
+  const factory UpdateUserInfo(final UserInfoModel param) =
+      _$UpdateUserInfoImpl;
+
+  UserInfoModel get param;
+  @JsonKey(ignore: true)
+  _$$UpdateUserInfoImplCopyWith<_$UpdateUserInfoImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetUserInfoImplCopyWith<$Res> {
+  factory _$$GetUserInfoImplCopyWith(
+          _$GetUserInfoImpl value, $Res Function(_$GetUserInfoImpl) then) =
+      __$$GetUserInfoImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetUserInfoImplCopyWithImpl<$Res>
+    extends _$CreateDigitalProfileEventCopyWithImpl<$Res, _$GetUserInfoImpl>
+    implements _$$GetUserInfoImplCopyWith<$Res> {
+  __$$GetUserInfoImplCopyWithImpl(
+      _$GetUserInfoImpl _value, $Res Function(_$GetUserInfoImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetUserInfoImpl implements GetUserInfo {
+  const _$GetUserInfoImpl();
+
+  @override
+  String toString() {
+    return 'CreateDigitalProfileEvent.getUserInfo()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetUserInfoImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function(AddUserEducationModel param) addUserEducation,
+    required TResult Function(UserInfoModel param) updateUserInfo,
+    required TResult Function() getUserInfo,
+  }) {
+    return getUserInfo();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function(AddUserEducationModel param)? addUserEducation,
+    TResult? Function(UserInfoModel param)? updateUserInfo,
+    TResult? Function()? getUserInfo,
+  }) {
+    return getUserInfo?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function(AddUserEducationModel param)? addUserEducation,
+    TResult Function(UserInfoModel param)? updateUserInfo,
+    TResult Function()? getUserInfo,
+    required TResult orElse(),
+  }) {
+    if (getUserInfo != null) {
+      return getUserInfo();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ChangeCreationStep value) changeCreationStep,
+    required TResult Function(AddUserEducation value) addUserEducation,
+    required TResult Function(UpdateUserInfo value) updateUserInfo,
+    required TResult Function(GetUserInfo value) getUserInfo,
+  }) {
+    return getUserInfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ChangeCreationStep value)? changeCreationStep,
+    TResult? Function(AddUserEducation value)? addUserEducation,
+    TResult? Function(UpdateUserInfo value)? updateUserInfo,
+    TResult? Function(GetUserInfo value)? getUserInfo,
+  }) {
+    return getUserInfo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ChangeCreationStep value)? changeCreationStep,
+    TResult Function(AddUserEducation value)? addUserEducation,
+    TResult Function(UpdateUserInfo value)? updateUserInfo,
+    TResult Function(GetUserInfo value)? getUserInfo,
+    required TResult orElse(),
+  }) {
+    if (getUserInfo != null) {
+      return getUserInfo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetUserInfo implements CreateDigitalProfileEvent {
+  const factory GetUserInfo() = _$GetUserInfoImpl;
+}
+
+/// @nodoc
 mixin _$CreateDigitalProfileState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -492,6 +823,8 @@ mixin _$CreateDigitalProfileState {
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
     required TResult Function(BaseResponse response) addUserEducationSuccess,
+    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserInfoSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -501,6 +834,8 @@ mixin _$CreateDigitalProfileState {
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
     TResult? Function(BaseResponse response)? addUserEducationSuccess,
+    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserInfoSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -510,6 +845,8 @@ mixin _$CreateDigitalProfileState {
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
     TResult Function(BaseResponse response)? addUserEducationSuccess,
+    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserInfoSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -522,6 +859,9 @@ mixin _$CreateDigitalProfileState {
         changeCreationStepSuccess,
     required TResult Function(AddUserEducationSuccess value)
         addUserEducationSuccess,
+    required TResult Function(UpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(GetUserInfoSuccess value) getUserInfoSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -532,6 +872,8 @@ mixin _$CreateDigitalProfileState {
     TResult? Function(ChangeCreationStepSuccess value)?
         changeCreationStepSuccess,
     TResult? Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult? Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult? Function(GetUserInfoSuccess value)? getUserInfoSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -542,6 +884,8 @@ mixin _$CreateDigitalProfileState {
     TResult Function(ChangeCreationStepSuccess value)?
         changeCreationStepSuccess,
     TResult Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(GetUserInfoSuccess value)? getUserInfoSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -609,6 +953,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
     required TResult Function(BaseResponse response) addUserEducationSuccess,
+    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserInfoSuccess,
   }) {
     return initial();
   }
@@ -621,6 +967,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
     TResult? Function(BaseResponse response)? addUserEducationSuccess,
+    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserInfoSuccess,
   }) {
     return initial?.call();
   }
@@ -633,6 +981,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
     TResult Function(BaseResponse response)? addUserEducationSuccess,
+    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -651,6 +1001,9 @@ class _$InitialImpl implements _Initial {
         changeCreationStepSuccess,
     required TResult Function(AddUserEducationSuccess value)
         addUserEducationSuccess,
+    required TResult Function(UpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(GetUserInfoSuccess value) getUserInfoSuccess,
   }) {
     return initial(this);
   }
@@ -664,6 +1017,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ChangeCreationStepSuccess value)?
         changeCreationStepSuccess,
     TResult? Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult? Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult? Function(GetUserInfoSuccess value)? getUserInfoSuccess,
   }) {
     return initial?.call(this);
   }
@@ -677,6 +1032,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(ChangeCreationStepSuccess value)?
         changeCreationStepSuccess,
     TResult Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(GetUserInfoSuccess value)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -737,6 +1094,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
     required TResult Function(BaseResponse response) addUserEducationSuccess,
+    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserInfoSuccess,
   }) {
     return loading();
   }
@@ -749,6 +1108,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
     TResult? Function(BaseResponse response)? addUserEducationSuccess,
+    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserInfoSuccess,
   }) {
     return loading?.call();
   }
@@ -761,6 +1122,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
     TResult Function(BaseResponse response)? addUserEducationSuccess,
+    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -779,6 +1142,9 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
         changeCreationStepSuccess,
     required TResult Function(AddUserEducationSuccess value)
         addUserEducationSuccess,
+    required TResult Function(UpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(GetUserInfoSuccess value) getUserInfoSuccess,
   }) {
     return loading(this);
   }
@@ -792,6 +1158,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     TResult? Function(ChangeCreationStepSuccess value)?
         changeCreationStepSuccess,
     TResult? Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult? Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult? Function(GetUserInfoSuccess value)? getUserInfoSuccess,
   }) {
     return loading?.call(this);
   }
@@ -805,6 +1173,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     TResult Function(ChangeCreationStepSuccess value)?
         changeCreationStepSuccess,
     TResult Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(GetUserInfoSuccess value)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -910,6 +1280,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
     required TResult Function(BaseResponse response) addUserEducationSuccess,
+    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserInfoSuccess,
   }) {
     return error(message, title);
   }
@@ -922,6 +1294,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
     TResult? Function(BaseResponse response)? addUserEducationSuccess,
+    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserInfoSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -934,6 +1308,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
     TResult Function(BaseResponse response)? addUserEducationSuccess,
+    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -952,6 +1328,9 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
         changeCreationStepSuccess,
     required TResult Function(AddUserEducationSuccess value)
         addUserEducationSuccess,
+    required TResult Function(UpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(GetUserInfoSuccess value) getUserInfoSuccess,
   }) {
     return error(this);
   }
@@ -965,6 +1344,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     TResult? Function(ChangeCreationStepSuccess value)?
         changeCreationStepSuccess,
     TResult? Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult? Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult? Function(GetUserInfoSuccess value)? getUserInfoSuccess,
   }) {
     return error?.call(this);
   }
@@ -978,6 +1359,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     TResult Function(ChangeCreationStepSuccess value)?
         changeCreationStepSuccess,
     TResult Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(GetUserInfoSuccess value)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1073,6 +1456,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
     required TResult Function(BaseResponse response) addUserEducationSuccess,
+    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserInfoSuccess,
   }) {
     return changeCreationStepSuccess(currentStep);
   }
@@ -1085,6 +1470,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
     TResult? Function(BaseResponse response)? addUserEducationSuccess,
+    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserInfoSuccess,
   }) {
     return changeCreationStepSuccess?.call(currentStep);
   }
@@ -1097,6 +1484,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
     TResult Function(BaseResponse response)? addUserEducationSuccess,
+    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -1115,6 +1504,9 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
         changeCreationStepSuccess,
     required TResult Function(AddUserEducationSuccess value)
         addUserEducationSuccess,
+    required TResult Function(UpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(GetUserInfoSuccess value) getUserInfoSuccess,
   }) {
     return changeCreationStepSuccess(this);
   }
@@ -1128,6 +1520,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     TResult? Function(ChangeCreationStepSuccess value)?
         changeCreationStepSuccess,
     TResult? Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult? Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult? Function(GetUserInfoSuccess value)? getUserInfoSuccess,
   }) {
     return changeCreationStepSuccess?.call(this);
   }
@@ -1141,6 +1535,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     TResult Function(ChangeCreationStepSuccess value)?
         changeCreationStepSuccess,
     TResult Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(GetUserInfoSuccess value)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -1244,6 +1640,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
     required TResult Function(BaseResponse response) addUserEducationSuccess,
+    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserInfoSuccess,
   }) {
     return addUserEducationSuccess(response);
   }
@@ -1256,6 +1654,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
     TResult? Function(BaseResponse response)? addUserEducationSuccess,
+    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserInfoSuccess,
   }) {
     return addUserEducationSuccess?.call(response);
   }
@@ -1268,6 +1668,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
     TResult Function(BaseResponse response)? addUserEducationSuccess,
+    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (addUserEducationSuccess != null) {
@@ -1286,6 +1688,9 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
         changeCreationStepSuccess,
     required TResult Function(AddUserEducationSuccess value)
         addUserEducationSuccess,
+    required TResult Function(UpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(GetUserInfoSuccess value) getUserInfoSuccess,
   }) {
     return addUserEducationSuccess(this);
   }
@@ -1299,6 +1704,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     TResult? Function(ChangeCreationStepSuccess value)?
         changeCreationStepSuccess,
     TResult? Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult? Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult? Function(GetUserInfoSuccess value)? getUserInfoSuccess,
   }) {
     return addUserEducationSuccess?.call(this);
   }
@@ -1312,6 +1719,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     TResult Function(ChangeCreationStepSuccess value)?
         changeCreationStepSuccess,
     TResult Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(GetUserInfoSuccess value)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (addUserEducationSuccess != null) {
@@ -1329,4 +1738,369 @@ abstract class AddUserEducationSuccess implements CreateDigitalProfileState {
   @JsonKey(ignore: true)
   _$$AddUserEducationSuccessImplCopyWith<_$AddUserEducationSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateUserInfoSuccessImplCopyWith<$Res> {
+  factory _$$UpdateUserInfoSuccessImplCopyWith(
+          _$UpdateUserInfoSuccessImpl value,
+          $Res Function(_$UpdateUserInfoSuccessImpl) then) =
+      __$$UpdateUserInfoSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({BaseResponse response});
+
+  $BaseResponseCopyWith<$Res> get response;
+}
+
+/// @nodoc
+class __$$UpdateUserInfoSuccessImplCopyWithImpl<$Res>
+    extends _$CreateDigitalProfileStateCopyWithImpl<$Res,
+        _$UpdateUserInfoSuccessImpl>
+    implements _$$UpdateUserInfoSuccessImplCopyWith<$Res> {
+  __$$UpdateUserInfoSuccessImplCopyWithImpl(_$UpdateUserInfoSuccessImpl _value,
+      $Res Function(_$UpdateUserInfoSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? response = null,
+  }) {
+    return _then(_$UpdateUserInfoSuccessImpl(
+      null == response
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as BaseResponse,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BaseResponseCopyWith<$Res> get response {
+    return $BaseResponseCopyWith<$Res>(_value.response, (value) {
+      return _then(_value.copyWith(response: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
+  const _$UpdateUserInfoSuccessImpl(this.response);
+
+  @override
+  final BaseResponse response;
+
+  @override
+  String toString() {
+    return 'CreateDigitalProfileState.updateUserInfoSuccess(response: $response)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateUserInfoSuccessImpl &&
+            (identical(other.response, response) ||
+                other.response == response));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, response);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateUserInfoSuccessImplCopyWith<_$UpdateUserInfoSuccessImpl>
+      get copyWith => __$$UpdateUserInfoSuccessImplCopyWithImpl<
+          _$UpdateUserInfoSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function(BaseResponse response) addUserEducationSuccess,
+    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserInfoSuccess,
+  }) {
+    return updateUserInfoSuccess(response);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function(BaseResponse response)? addUserEducationSuccess,
+    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserInfoSuccess,
+  }) {
+    return updateUserInfoSuccess?.call(response);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function(BaseResponse response)? addUserEducationSuccess,
+    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserInfoSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateUserInfoSuccess != null) {
+      return updateUserInfoSuccess(response);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(CreateDigitalProfileLoading value) loading,
+    required TResult Function(CreateDigitalProfileError value) error,
+    required TResult Function(ChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(AddUserEducationSuccess value)
+        addUserEducationSuccess,
+    required TResult Function(UpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(GetUserInfoSuccess value) getUserInfoSuccess,
+  }) {
+    return updateUserInfoSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(CreateDigitalProfileLoading value)? loading,
+    TResult? Function(CreateDigitalProfileError value)? error,
+    TResult? Function(ChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult? Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult? Function(GetUserInfoSuccess value)? getUserInfoSuccess,
+  }) {
+    return updateUserInfoSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(CreateDigitalProfileLoading value)? loading,
+    TResult Function(CreateDigitalProfileError value)? error,
+    TResult Function(ChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(GetUserInfoSuccess value)? getUserInfoSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateUserInfoSuccess != null) {
+      return updateUserInfoSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateUserInfoSuccess implements CreateDigitalProfileState {
+  const factory UpdateUserInfoSuccess(final BaseResponse response) =
+      _$UpdateUserInfoSuccessImpl;
+
+  BaseResponse get response;
+  @JsonKey(ignore: true)
+  _$$UpdateUserInfoSuccessImplCopyWith<_$UpdateUserInfoSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetUserInfoSuccessImplCopyWith<$Res> {
+  factory _$$GetUserInfoSuccessImplCopyWith(_$GetUserInfoSuccessImpl value,
+          $Res Function(_$GetUserInfoSuccessImpl) then) =
+      __$$GetUserInfoSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({BaseResponse response});
+
+  $BaseResponseCopyWith<$Res> get response;
+}
+
+/// @nodoc
+class __$$GetUserInfoSuccessImplCopyWithImpl<$Res>
+    extends _$CreateDigitalProfileStateCopyWithImpl<$Res,
+        _$GetUserInfoSuccessImpl>
+    implements _$$GetUserInfoSuccessImplCopyWith<$Res> {
+  __$$GetUserInfoSuccessImplCopyWithImpl(_$GetUserInfoSuccessImpl _value,
+      $Res Function(_$GetUserInfoSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? response = null,
+  }) {
+    return _then(_$GetUserInfoSuccessImpl(
+      null == response
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as BaseResponse,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BaseResponseCopyWith<$Res> get response {
+    return $BaseResponseCopyWith<$Res>(_value.response, (value) {
+      return _then(_value.copyWith(response: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
+  const _$GetUserInfoSuccessImpl(this.response);
+
+  @override
+  final BaseResponse response;
+
+  @override
+  String toString() {
+    return 'CreateDigitalProfileState.getUserInfoSuccess(response: $response)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetUserInfoSuccessImpl &&
+            (identical(other.response, response) ||
+                other.response == response));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, response);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetUserInfoSuccessImplCopyWith<_$GetUserInfoSuccessImpl> get copyWith =>
+      __$$GetUserInfoSuccessImplCopyWithImpl<_$GetUserInfoSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function(BaseResponse response) addUserEducationSuccess,
+    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserInfoSuccess,
+  }) {
+    return getUserInfoSuccess(response);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function(BaseResponse response)? addUserEducationSuccess,
+    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserInfoSuccess,
+  }) {
+    return getUserInfoSuccess?.call(response);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function(BaseResponse response)? addUserEducationSuccess,
+    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserInfoSuccess,
+    required TResult orElse(),
+  }) {
+    if (getUserInfoSuccess != null) {
+      return getUserInfoSuccess(response);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(CreateDigitalProfileLoading value) loading,
+    required TResult Function(CreateDigitalProfileError value) error,
+    required TResult Function(ChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(AddUserEducationSuccess value)
+        addUserEducationSuccess,
+    required TResult Function(UpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(GetUserInfoSuccess value) getUserInfoSuccess,
+  }) {
+    return getUserInfoSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(CreateDigitalProfileLoading value)? loading,
+    TResult? Function(CreateDigitalProfileError value)? error,
+    TResult? Function(ChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult? Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult? Function(GetUserInfoSuccess value)? getUserInfoSuccess,
+  }) {
+    return getUserInfoSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(CreateDigitalProfileLoading value)? loading,
+    TResult Function(CreateDigitalProfileError value)? error,
+    TResult Function(ChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(AddUserEducationSuccess value)? addUserEducationSuccess,
+    TResult Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(GetUserInfoSuccess value)? getUserInfoSuccess,
+    required TResult orElse(),
+  }) {
+    if (getUserInfoSuccess != null) {
+      return getUserInfoSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetUserInfoSuccess implements CreateDigitalProfileState {
+  const factory GetUserInfoSuccess(final BaseResponse response) =
+      _$GetUserInfoSuccessImpl;
+
+  BaseResponse get response;
+  @JsonKey(ignore: true)
+  _$$GetUserInfoSuccessImplCopyWith<_$GetUserInfoSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

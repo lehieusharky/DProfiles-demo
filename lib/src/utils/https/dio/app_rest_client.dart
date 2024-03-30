@@ -1,4 +1,4 @@
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/data/models/add_user_education.dart';
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/data/models/add_user_education_model.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/sign_in_model.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:dio/dio.dart';
@@ -26,6 +26,14 @@ abstract class RestClient {
 
   @POST('/api/login')
   Future<SignInModel?> signIn(@Body() Map<String, dynamic> body);
+
+  // user
+
+  @GET('/api/v1/user')
+  Future<BaseResponse> getUserInfo();
+
+  @PUT('/api/v1/user')
+  Future<BaseResponse> updateUserInfo(@Body() Map<String, dynamic> body);
 
   // create digital profile
 
