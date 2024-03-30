@@ -30,7 +30,7 @@ class HeaderCreateDigitalProfile extends StatelessWidget {
 
   Widget _buildIcon(BuildContext context) =>
       Assets.images.aiFeatures.createAiCharacterIcon
-          .image(width: context.sizeWidth(80), fit: BoxFit.cover);
+          .image(width: context.sizeWidth(85), fit: BoxFit.cover);
 
   Widget _buildTitle(BuildContext context) => Column(
         mainAxisSize: MainAxisSize.min,

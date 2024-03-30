@@ -1,8 +1,9 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/features/AI/presentation/ai_features/pages/ai_features_page.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:tuple/tuple.dart';
+
+import 'ai_features_page.dart';
 
 extension AIFeaturePageExt on AiFeaturesPage {
   List<Widget> actions(

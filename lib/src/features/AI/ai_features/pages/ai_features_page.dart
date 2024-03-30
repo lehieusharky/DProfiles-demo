@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/features/AI/presentation/ai_features/pages/ext_ai_features_page.dart';
-import 'package:demo_dprofiles/src/features/AI/presentation/ai_features/widgets/header_ai_feature.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/pages/ext_ai_features_page.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/widgets/header_ai_feature.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';

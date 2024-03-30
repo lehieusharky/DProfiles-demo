@@ -46,7 +46,7 @@ class AppOutlineButton implements AbstractFactoryAppButton {
       onPressed: onPressed,
       title: title,
       width: width,
-      height: height,
+      height: height ?? context.sizeHeight(45),
     );
   }
 }

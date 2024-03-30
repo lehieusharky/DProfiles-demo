@@ -1,11 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/features/AI/presentation/write_profile/pages/ext_write_profile.dart';
-import 'package:demo_dprofiles/src/features/AI/presentation/write_profile/widgets/form_write_profile.dart';
-import 'package:demo_dprofiles/src/features/AI/presentation/write_profile/widgets/header_write_profile.dart';
-import 'package:demo_dprofiles/src/features/AI/presentation/write_profile/widgets/tabbar_write_profile.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/features/AI/write_profile/pages/ext_write_profile.dart';
+import 'package:demo_dprofiles/src/features/AI/write_profile/widgets/form_write_profile.dart';
+import 'package:demo_dprofiles/src/features/AI/write_profile/widgets/header_write_profile.dart';
+import 'package:demo_dprofiles/src/features/AI/write_profile/widgets/tabbar_write_profile.dart';import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
