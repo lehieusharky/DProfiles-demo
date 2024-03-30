@@ -63,4 +63,20 @@ class AppSharePreferenceImpl implements AppSharePreference {
 
     return (result == true && isFirstTime != null) ? isFirstTime : false;
   }
+
+  @override
+  String? getAccessToken() => (_prefs.getString('access_token'));
+
+  @override
+  String? getRefreshToken() => (_prefs.getString('refresh_token'));
+
+  @override
+  Future<String> setAccessToken(String token) async => await _prefs
+      .setString('access_token', token)
+      .then((value) => value ? token : 'null');
+
+  @override
+  Future<String> setRefreshToken(String token) async => await _prefs
+      .setString('refresh_token', token)
+      .then((value) => value ? token : 'null');
 }

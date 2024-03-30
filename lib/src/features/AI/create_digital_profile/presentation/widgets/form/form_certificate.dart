@@ -1,5 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/bloc/create_digital_profile_bloc.dart';
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/bloc/create_digital_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -8,14 +8,14 @@ import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_bu
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class FormEducationInfo extends StatefulWidget {
-  const FormEducationInfo({super.key});
+class FormCertificate extends StatefulWidget {
+  const FormCertificate({super.key});
 
   @override
-  State<FormEducationInfo> createState() => _FormEducationInfoState();
+  State<FormCertificate> createState() => _FormCertificateState();
 }
 
-class _FormEducationInfoState extends State<FormEducationInfo> {
+class _FormCertificateState extends State<FormCertificate> {
   final _nameController = TextEditingController();
   final _degreeController = TextEditingController();
   final _fieldOfStudyController = TextEditingController();
@@ -31,7 +31,7 @@ class _FormEducationInfoState extends State<FormEducationInfo> {
         Padding(
           padding: context.padding(bottom: 24),
           child: Text(
-            'Education Information',
+            'Certificate',
             style: AppFont()
                 .fontTheme(context, weight: FontWeight.bold)
                 .labelMedium,
@@ -49,7 +49,7 @@ class _FormEducationInfoState extends State<FormEducationInfo> {
               children: [
                 AuthField(
                     controller: _nameController,
-                    title: 'SCHOOL',
+                    title: 'NAME',
                     keyboardType: TextInputType.emailAddress,
                     textInputAction: TextInputAction.next,
                     hint: 'School name'),
@@ -57,23 +57,23 @@ class _FormEducationInfoState extends State<FormEducationInfo> {
                   padding: context.padding(top: 32),
                   child: AuthField(
                     controller: _degreeController,
-                    title: 'DEGREE',
-                    hint: 'dd/mm/yyyy',
+                    title: 'NUMBER',
+                    hint: '123321',
                   ),
                 ),
                 Padding(
                   padding: context.padding(top: 32),
                   child: AuthField(
                     controller: _fieldOfStudyController,
-                    title: 'FIELD OF STORY',
-                    hint: 'Vietnam',
+                    title: 'ISSUED BY',
+                    hint: 'School A',
                   ),
                 ),
                 Padding(
                   padding: context.padding(top: 32),
                   child: AuthField(
                     controller: _startDateController,
-                    title: 'START DATE',
+                    title: 'FROM',
                     hint: 'dd/mm/yyyy',
                   ),
                 ),
@@ -81,24 +81,24 @@ class _FormEducationInfoState extends State<FormEducationInfo> {
                   padding: context.padding(top: 32),
                   child: AuthField(
                     controller: _endDateController,
-                    title: 'END DATE',
+                    title: 'TO',
                     hint: 'dd/mm/yyyy',
                   ),
                 ),
                 Padding(
                   padding: context.padding(top: 24),
-                  child: _buildUpdateButtons(),
+                  child: _buildUpdateButtons(context),
                 ),
               ],
             ),
           ),
         ),
-        _buildNavigateButtons(context),
+        _buildNavigateButtons(),
       ],
     );
   }
 
-  Widget _buildUpdateButtons() {
+  Widget _buildUpdateButtons(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -117,7 +117,7 @@ class _FormEducationInfoState extends State<FormEducationInfo> {
     );
   }
 
-  Widget _buildNavigateButtons(BuildContext context) {
+  Widget _buildNavigateButtons() {
     return Padding(
       padding: context.padding(top: 32),
       child: Row(

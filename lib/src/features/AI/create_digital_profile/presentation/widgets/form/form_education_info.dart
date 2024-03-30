@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/bloc/create_digital_profile_bloc.dart';
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/data/models/add_user_education.dart';
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/bloc/create_digital_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -8,15 +9,15 @@ import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_bu
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class FormCertificate extends StatefulWidget {
-  const FormCertificate({super.key});
+class FormEducationInfo extends StatefulWidget {
+  const FormEducationInfo({super.key});
 
   @override
-  State<FormCertificate> createState() => _FormCertificateState();
+  State<FormEducationInfo> createState() => _FormEducationInfoState();
 }
 
-class _FormCertificateState extends State<FormCertificate> {
-  final _nameController = TextEditingController();
+class _FormEducationInfoState extends State<FormEducationInfo> {
+  final _schoolNameController = TextEditingController();
   final _degreeController = TextEditingController();
   final _fieldOfStudyController = TextEditingController();
   final _startDateController = TextEditingController();
@@ -31,7 +32,7 @@ class _FormCertificateState extends State<FormCertificate> {
         Padding(
           padding: context.padding(bottom: 24),
           child: Text(
-            'Certificate',
+            'Education Information',
             style: AppFont()
                 .fontTheme(context, weight: FontWeight.bold)
                 .labelMedium,
@@ -48,8 +49,8 @@ class _FormCertificateState extends State<FormCertificate> {
             child: Column(
               children: [
                 AuthField(
-                    controller: _nameController,
-                    title: 'NAME',
+                    controller: _schoolNameController,
+                    title: 'SCHOOL',
                     keyboardType: TextInputType.emailAddress,
                     textInputAction: TextInputAction.next,
                     hint: 'School name'),
@@ -57,23 +58,23 @@ class _FormCertificateState extends State<FormCertificate> {
                   padding: context.padding(top: 32),
                   child: AuthField(
                     controller: _degreeController,
-                    title: 'NUMBER',
-                    hint: '123321',
+                    title: 'DEGREE',
+                    hint: 'dd/mm/yyyy',
                   ),
                 ),
                 Padding(
                   padding: context.padding(top: 32),
                   child: AuthField(
                     controller: _fieldOfStudyController,
-                    title: 'ISSUED BY',
-                    hint: 'School A',
+                    title: 'FIELD OF STORY',
+                    hint: 'Vietnam',
                   ),
                 ),
                 Padding(
                   padding: context.padding(top: 32),
                   child: AuthField(
                     controller: _startDateController,
-                    title: 'FROM',
+                    title: 'START DATE',
                     hint: 'dd/mm/yyyy',
                   ),
                 ),
@@ -81,24 +82,24 @@ class _FormCertificateState extends State<FormCertificate> {
                   padding: context.padding(top: 32),
                   child: AuthField(
                     controller: _endDateController,
-                    title: 'TO',
+                    title: 'END DATE',
                     hint: 'dd/mm/yyyy',
                   ),
                 ),
                 Padding(
                   padding: context.padding(top: 24),
-                  child: _buildUpdateButtons(context),
+                  child: _buildUpdateButtons(),
                 ),
               ],
             ),
           ),
         ),
-        _buildNavigateButtons(),
+        _buildNavigateButtons(context),
       ],
     );
   }
 
-  Widget _buildUpdateButtons(BuildContext context) {
+  Widget _buildUpdateButtons() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -110,14 +111,14 @@ class _FormCertificateState extends State<FormCertificate> {
         context.sizedBox(width: 16),
         AppFlatButton(context).elevatedButton(
           width: context.sizeWidth(100),
-          onPressed: () => _continue(context),
+          onPressed: () => _add(context),
           title: 'Add',
         ),
       ],
     );
   }
 
-  Widget _buildNavigateButtons() {
+  Widget _buildNavigateButtons(BuildContext context) {
     return Padding(
       padding: context.padding(top: 32),
       child: Row(
@@ -140,6 +141,14 @@ class _FormCertificateState extends State<FormCertificate> {
         ],
       ),
     );
+  }
+
+  void _add(BuildContext context) {
+    context
+        .read<CreateDigitalProfileBloc>()
+        .add(AddUserEducation(AddUserEducationModel(
+          schoolName: _schoolNameController.text.trim(),
+        )));
   }
 
   void _back(BuildContext context) {

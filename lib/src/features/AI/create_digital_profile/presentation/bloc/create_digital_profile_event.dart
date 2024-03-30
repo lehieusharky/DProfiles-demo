@@ -5,4 +5,6 @@ class CreateDigitalProfileEvent with _$CreateDigitalProfileEvent {
   const factory CreateDigitalProfileEvent.started() = _Started;
 
   const factory CreateDigitalProfileEvent.changeCreationStep({required bool isNext}) = ChangeCreationStep;
+
+  const factory CreateDigitalProfileEvent.addUserEducation(AddUserEducationModel param) =  AddUserEducation;
 }

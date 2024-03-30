@@ -9,7 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i17;
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/pages/create_digital_profile_page.dart'
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/create_digital_profile_page.dart'
     as _i4;
 import 'package:demo_dprofiles/src/features/AI/write_profile/pages/write_profile_page.dart'
     as _i16;
