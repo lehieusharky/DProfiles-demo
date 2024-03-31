@@ -35,8 +35,57 @@ abstract class RestClient {
   @PUT('/api/v1/user')
   Future<BaseResponse> updateUserInfo(@Body() Map<String, dynamic> body);
 
-  // create digital profile
+  // education
 
   @POST('/api/v1/user-education')
   Future<BaseResponse> addUserEducation(@Body() Map<String, dynamic> body);
+
+  @GET('/api/v1/user-education')
+  Future<BaseResponse> getUserEducations();
+
+  @GET('/api/v1/user-education/{id}')
+  Future<BaseResponse> getEducationInfo(@Path() String id);
+
+  @DELETE('/api/v1/user-education/{id}')
+  Future<BaseResponse> deleteEducationInfo(@Path() String id);
+
+  @PUT('/api/v1/user-education/{id}')
+  Future<BaseResponse> updateEducationInfo(
+      @Path() String id, @Body() Map<String, dynamic> body);
+
+  // certificate
+
+  @POST('/api/v1/user-certificate')
+  Future<BaseResponse> addUserCertificate(@Body() Map<String, dynamic> body);
+
+  @GET('/api/v1/user-certificate')
+  Future<BaseResponse> getUserCertificates();
+
+  @GET('/api/v1/user-certificate/{id}')
+  Future<BaseResponse> getCertificateInfo(@Path() String id);
+
+  @PUT('/api/v1/user-certificate/{id}')
+  Future<BaseResponse> updateCertificateInfo(
+      @Path() String id, @Body() Map<String, dynamic> body);
+
+  @DELETE('/api/v1/user-certificate/{id}')
+  Future<BaseResponse> deleteCertificate(@Path() String id);
+
+  // experience
+
+  @GET('/api/v1/user-experience')
+  Future<BaseResponse> getUserExperiences();
+
+  @POST('/api/v1/user-experience')
+  Future<BaseResponse> addUserExperience(@Body() Map<String, dynamic> body);
+
+  @GET('/api/v1/user-experience/{id}')
+  Future<BaseResponse> getExperienceInfo(@Path() String id);
+
+  @PUT('/api/v1/user-experience/{id}')
+  Future<BaseResponse> updateExperienceInfo(
+      @Path() String id, @Body() Map<String, dynamic> body);
+
+  @DELETE('/api/v1/user-experience/{id}')
+  Future<BaseResponse> deleteExperienceInfo(@Path() String id);
 }

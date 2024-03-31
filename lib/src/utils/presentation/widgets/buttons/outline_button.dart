@@ -39,6 +39,7 @@ class AppOutlineButton implements AbstractFactoryAppButton {
     Widget? suffixIcon,
     double? width,
     double? height,
+    Widget? child,
   }) {
     return MyButton(
       backgroundColor: colorScheme(context).background,
@@ -47,6 +48,7 @@ class AppOutlineButton implements AbstractFactoryAppButton {
       title: title,
       width: width,
       height: height ?? context.sizeHeight(45),
+      child: child,
     );
   }
 }

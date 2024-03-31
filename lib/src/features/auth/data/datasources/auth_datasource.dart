@@ -12,4 +12,5 @@ abstract class AuthDataSource {
   Future<BaseResponse> createAnAccount(CreateAccountModel model);
 
   Future<SignInModel> signIn(String email, String password);
+
 }

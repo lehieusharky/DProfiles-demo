@@ -24,6 +24,7 @@ class NavigationStepCreateDigitalProfile extends StatelessWidget {
           isScrollable: true,
           dividerColor: Colors.transparent,
           indicatorColor: Colors.transparent,
+          tabAlignment: TabAlignment.start,
           tabs: [
             Tuple2(CreateDigitalProfileStep.basicInfo, () {}),
             Tuple2(CreateDigitalProfileStep.education, () {}),
@@ -36,23 +37,26 @@ class NavigationStepCreateDigitalProfile extends StatelessWidget {
   }
 }
 
-class _Item extends StatelessWidget {
+class _Item extends StatefulWidget {
   final CreateDigitalProfileStep step;
 
   const _Item(this.step);
 
   @override
-  Widget build(BuildContext context) {
-    return BlocSelector<CreateDigitalProfileBloc, CreateDigitalProfileState,
-        ChangeCreationStepSuccess>(selector: (state) {
-      if (state is ChangeCreationStepSuccess) {
-        return ChangeCreationStepSuccess(state.currentStep);
-      }
+  State<_Item> createState() => _ItemState();
+}
 
-      return ChangeCreationStepSuccess(
-          CreateDigitalProfileStep.basicInfo.position);
+class _ItemState extends State<_Item> {
+  bool _isSelected = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocConsumer<CreateDigitalProfileBloc, CreateDigitalProfileState>(
+        listener: (context, state) {
+      if (state is ChangeCreationStepSuccess) {
+        _isSelected = state.currentStep == widget.step.position;
+      }
     }, builder: (context, state) {
-      final isSelected = state.currentStep == step.position;
       return Row(
         children: [
           Container(
@@ -61,18 +65,18 @@ class _Item extends StatelessWidget {
             alignment: Alignment.center,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: isSelected
+              color: _isSelected
                   ? colorScheme(context).primary
                   : colorScheme(context).secondaryContainer,
             ),
-            child: isSelected
+            child: _isSelected
                 ? Icon(
                     Icons.check,
                     color: MyColor.getWhite,
                     size: context.sizeWidth(16),
                   )
                 : Text(
-                    step.position.toString(),
+                    widget.step.position.toString(),
                     style: AppFont()
                         .fontTheme(context,
                             color: MyColor.getWhite, weight: FontWeight.bold)
@@ -82,10 +86,10 @@ class _Item extends StatelessWidget {
           Padding(
             padding: context.padding(left: 4),
             child: Text(
-              step.title,
+              widget.step.title,
               style: AppFont()
                   .fontTheme(context,
-                      color: isSelected
+                      color: _isSelected
                           ? colorScheme(context).primary
                           : colorScheme(context).outline,
                       weight: FontWeight.bold)

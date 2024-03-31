@@ -19,7 +19,7 @@ class HeaderCreateDigitalProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: context.sizeHeight(205),
-      padding: context.padding(horizontal: 20, vertical: 24),
+      padding: context.padding(horizontal: 20, vertical: 16),
       decoration: BoxDecoration(color: colorScheme(context).secondary),
       child: Column(
         children: [

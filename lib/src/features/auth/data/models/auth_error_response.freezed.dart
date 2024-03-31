@@ -120,12 +120,13 @@ class __$$AuthErrorResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AuthErrorResponseImpl implements _AuthErrorResponse {
   const _$AuthErrorResponseImpl(
-      {this.message, this.error, this.statusCode = 400});
+      {this.message = "", this.error, this.statusCode = 400});
 
   factory _$AuthErrorResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$AuthErrorResponseImplFromJson(json);
 
   @override
+  @JsonKey()
   final String? message;
   @override
   final String? error;

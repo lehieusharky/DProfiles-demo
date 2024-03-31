@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
+import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/bloc/create_digital_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/ext_create_digital_profile.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/form/form_add_basic_info.dart';
@@ -39,7 +40,7 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => CreateDigitalProfileBloc(),
-      child: BlocListener<CreateDigitalProfileBloc, CreateDigitalProfileState>(
+      child: BlocConsumer<CreateDigitalProfileBloc, CreateDigitalProfileState>(
         listener: (context, state) {
           if (state is ChangeCreationStepSuccess) {
             _tabController.animateTo((state.currentStep - 1),
@@ -55,8 +56,16 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
                 .read<CreateDigitalProfileBloc>()
                 .add(const ChangeCreationStep(isNext: true));
           }
+
+          if (state is CreateDigitalProfileError) {
+            showErrorDialog(
+              context,
+              title: state.title ?? 'Error',
+              description: state.message.first,
+            );
+          }
         },
-        child: DefaultTabController(
+        builder: (context, state) => DefaultTabController(
           length: 3,
           child: MyScaffold(
             useAppBar: true,
@@ -75,7 +84,7 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
                   Padding(
                     padding: context.padding(vertical: 32, horizontal: 20),
                     child: SizedBox(
-                      height: context.height * 1.1,
+                      height: context.height * 1.2,
                       child: TabBarView(
                         controller: _tabController,
                         physics: const NeverScrollableScrollPhysics(),
