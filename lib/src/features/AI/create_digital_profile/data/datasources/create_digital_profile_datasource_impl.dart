@@ -25,7 +25,7 @@ class CreateDigitalProfileDataSourceImpl
     try {
       final baseResponse = await MyHttp.rl().updateUserInfo(params.toJson());
       return baseResponse;
-    } on DioException catch(e) {
+    } on DioException catch (e) {
       rethrow;
     }
   }
@@ -35,7 +35,7 @@ class CreateDigitalProfileDataSourceImpl
     try {
       final baseResponse = await MyHttp.rl().getUserInfo();
       return baseResponse;
-    } on DioException catch(e) {
+    } on DioException catch (e) {
       rethrow;
     }
   }

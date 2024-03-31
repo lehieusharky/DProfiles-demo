@@ -1,13 +1,16 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_button.dart';
+import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignUpForm extends StatefulWidget {
   final TextEditingController controller;
+
   const SignUpForm({super.key, required this.controller});
 
   @override
@@ -19,29 +22,34 @@ class _SignUpFormState extends State<SignUpForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: _keyForm,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          AuthField(
-            controller: widget.controller,
-            title: 'EMAIL',
-            hint: 'Email address',
-            keyboardType: TextInputType.emailAddress,
-            validator: (email) => email.emailValidation(),
+    return BlocBuilder<AuthBloc, AuthState>(
+      builder: (context, state) {
+        return Form(
+          key: _keyForm,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              AuthField(
+                controller: widget.controller,
+                title: 'EMAIL',
+                hint: 'Email address',
+                keyboardType: TextInputType.emailAddress,
+                validator: (email) => email.emailValidation(),
+              ),
+              Padding(
+                padding: context.padding(vertical: 32),
+                child: AppFlatButton(context).elevatedButton(
+                  width: context.width,
+                  onPressed: () => _signUp(context),
+                  title: 'Next',
+                  child: state is AuthLoading ? const MyLoading() : null,
+                ),
+              ),
+            ],
           ),
-          Padding(
-            padding: context.padding(vertical: 32),
-            child: MyButton(
-              width: context.width,
-              onPressed: () => _signUp(context),
-              title: 'Next',
-            ),
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 

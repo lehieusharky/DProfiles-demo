@@ -10,8 +10,10 @@ import 'navigation_step_create_digital_profile.dart';
 
 class HeaderCreateDigitalProfile extends StatelessWidget {
   final void Function(int index)? onPressed;
+  final TabController controller;
 
-  const HeaderCreateDigitalProfile({super.key, this.onPressed});
+  const HeaderCreateDigitalProfile(
+      {super.key, this.onPressed, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class HeaderCreateDigitalProfile extends StatelessWidget {
       child: Column(
         children: [
           _buildTitle(context),
-          const NavigationStepCreateDigitalProfile(),
+          NavigationStepCreateDigitalProfile(controller: controller),
         ],
       ),
     );
