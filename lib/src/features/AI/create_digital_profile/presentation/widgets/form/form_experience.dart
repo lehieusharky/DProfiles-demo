@@ -1,10 +1,12 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/bloc/create_digital_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FormExperience extends StatefulWidget {
   const FormExperience({super.key});
@@ -30,7 +32,7 @@ class _FormExperienceState extends State<FormExperience> {
           Padding(
             padding: context.padding(bottom: 24),
             child: Text(
-              'Certificate',
+              'Experience',
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.bold)
                   .labelMedium,
@@ -48,31 +50,23 @@ class _FormExperienceState extends State<FormExperience> {
                 children: [
                   AuthField(
                       controller: _nameController,
-                      title: 'NAME',
+                      title: 'COMPANY',
                       keyboardType: TextInputType.emailAddress,
                       textInputAction: TextInputAction.next,
-                      hint: 'School name'),
+                      hint: 'Company name'),
                   Padding(
                     padding: context.padding(top: 32),
                     child: AuthField(
                       controller: _degreeController,
-                      title: 'NUMBER',
-                      hint: '123321',
-                    ),
-                  ),
-                  Padding(
-                    padding: context.padding(top: 32),
-                    child: AuthField(
-                      controller: _fieldOfStudyController,
-                      title: 'ISSUED BY',
-                      hint: 'School A',
+                      title: 'JOB POSITION',
+                      hint: 'Position',
                     ),
                   ),
                   Padding(
                     padding: context.padding(top: 32),
                     child: AuthField(
                       controller: _startDateController,
-                      title: 'FROM',
+                      title: 'START DATE',
                       hint: 'dd/mm/yyyy',
                     ),
                   ),
@@ -80,8 +74,17 @@ class _FormExperienceState extends State<FormExperience> {
                     padding: context.padding(top: 32),
                     child: AuthField(
                       controller: _endDateController,
-                      title: 'TO',
+                      title: 'END DATE',
                       hint: 'dd/mm/yyyy',
+                    ),
+                  ),
+                  Padding(
+                    padding: context.padding(top: 32),
+                    child: AuthField(
+                      controller: _endDateController,
+                      title: 'DESCRIPTION',
+                      hint: 'Description',
+                      maxLines: 4,
                     ),
                   ),
                   Padding(
@@ -104,12 +107,13 @@ class _FormExperienceState extends State<FormExperience> {
       children: [
         AppOutlineButton(context).elevatedButton(
           width: context.sizeWidth(100),
-          onPressed: () => _continue(context),
+          onPressed: () => _save(context),
           title: 'Delete',
         ),
+        context.sizedBox(width: 16),
         AppFlatButton(context).elevatedButton(
           width: context.sizeWidth(100),
-          onPressed: () => _continue(context),
+          onPressed: () => _save(context),
           title: 'Add',
         ),
       ],
@@ -124,15 +128,16 @@ class _FormExperienceState extends State<FormExperience> {
           Flexible(
             child: AppOutlineButton(context).elevatedButton(
               width: context.width,
-              onPressed: () => _continue(context),
+              onPressed: () => _back(context),
               title: 'Back',
             ),
           ),
+          context.sizedBox(width: 16),
           Flexible(
             child: AppFlatButton(context).elevatedButton(
               width: context.width,
-              onPressed: () => _continue(context),
-              title: 'Next',
+              onPressed: () => _save(context),
+              title: 'Save',
             ),
           ),
         ],
@@ -140,7 +145,17 @@ class _FormExperienceState extends State<FormExperience> {
     );
   }
 
-  void _continue(BuildContext context) {
-    if (_keyForm.currentState?.validate() ?? false) {}
+  void _back(BuildContext context) {
+    context
+        .read<CreateDigitalProfileBloc>()
+        .add(const ChangeCreationStep(isNext: false));
+  }
+
+  void _save(BuildContext context) {
+    if (_keyForm.currentState?.validate() ?? false) {
+      context
+          .read<CreateDigitalProfileBloc>()
+          .add(const ChangeCreationStep(isNext: true));
+    }
   }
 }

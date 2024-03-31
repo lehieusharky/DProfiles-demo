@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/bloc/create_digital_profile_bloc.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/data/models/user_info_model.dart';
@@ -8,7 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FormAddBasicInfo extends StatefulWidget {
-  const FormAddBasicInfo({super.key});
+  final UserInfoModel userInfo;
+  const FormAddBasicInfo({super.key, required this.userInfo});
 
   @override
   State<FormAddBasicInfo> createState() => _FormAddBasicInfoState();
@@ -89,7 +91,10 @@ class _FormAddBasicInfoState extends State<FormAddBasicInfo> {
     if (_keyForm.currentState?.validate() ?? false) {
       context
           .read<CreateDigitalProfileBloc>()
-          .add(UpdateUserInfo(UserInfoModel(username: _nameController.text)));
+          .add(UpdateUserInfo(widget.userInfo.copyWith(
+            username: _nameController.text,
+            nationality: _nationalityController.text,
+          )));
     }
   }
 }

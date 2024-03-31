@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
+import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:flutter/material.dart';
 
 class MyLoading extends StatelessWidget {
@@ -7,13 +8,6 @@ class MyLoading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: colorScheme(context).outlineVariant.withOpacity(0.1),
-      ),
-      width: context.width,
-      height: context.height,
-      child: const Center(child: CircularProgressIndicator()),
-    );
+    return const CircularProgressIndicator(color: MyColor.getWhite);
   }
 }

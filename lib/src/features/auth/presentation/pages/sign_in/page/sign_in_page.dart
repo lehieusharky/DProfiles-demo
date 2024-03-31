@@ -25,33 +25,30 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => AuthBloc(),
-      child: BlocConsumer<AuthBloc, AuthState>(
+      child: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
           widget.handleSignInState(state, context);
         },
-        builder: (context, state) {
-          return MyScaffold(
-            horizontalMargin: 32,
-            body: Stack(
-              children: [
-                Column(
-                  children: [
-                    const AuthLogo(),
-                    const AuthTitle(title: 'Login'),
-                    const MyDivider(),
-                    const SignInForm(),
-                    BottomNavigationText(
-                      content1: "Don’t have an account?  ",
-                      content2: 'SignUp',
-                      onPressed: () => context.router.push(const SignUpRoute()),
-                    ),
-                  ],
-                ),
-                if (state is AuthLoading) const MyLoading(),
-              ],
-            ),
-          );
-        },
+        child: MyScaffold(
+          horizontalMargin: 32,
+          body: Stack(
+            children: [
+              Column(
+                children: [
+                  const AuthLogo(),
+                  const AuthTitle(title: 'Login'),
+                  const MyDivider(),
+                  const SignInForm(),
+                  BottomNavigationText(
+                    content1: "Don’t have an account?  ",
+                    content2: 'SignUp',
+                    onPressed: () => context.router.push(const SignUpRoute()),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

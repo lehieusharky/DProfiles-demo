@@ -27,38 +27,35 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => AuthBloc(),
-      child: BlocConsumer<AuthBloc, AuthState>(
+      child: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
           widget.handleSignUpState(
               state, context, _emailController.text.trim());
         },
-        builder: (context, state) {
-          return MyScaffold(
-            horizontalMargin: 32,
-            body: Stack(
-              children: [
-                SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      const AuthLogo(),
-                      const AuthTitle(title: 'Get Started'),
-                      Text(
-                        'by creating a free account.',
-                        style: AppFont()
-                            .fontTheme(context,
-                                color: colorScheme(context).outline)
-                            .bodyMedium,
-                      ),
-                      const MyDivider(),
-                      SignUpForm(controller: _emailController),
-                    ],
-                  ),
+        child: MyScaffold(
+          horizontalMargin: 32,
+          body: Stack(
+            children: [
+              SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const AuthLogo(),
+                    const AuthTitle(title: 'Get Started'),
+                    Text(
+                      'by creating a free account.',
+                      style: AppFont()
+                          .fontTheme(context,
+                              color: colorScheme(context).outline)
+                          .bodyMedium,
+                    ),
+                    const MyDivider(),
+                    SignUpForm(controller: _emailController),
+                  ],
                 ),
-                if (state is AuthLoading) const MyLoading()
-              ],
-            ),
-          );
-        },
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -6,6 +6,7 @@ import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -34,13 +35,10 @@ class SignUpSuccessPage extends StatelessWidget {
                   .bodyLarge,
             ),
           ),
-          MyButton(
+          AppFlatButton(context).elevatedButton(
             width: context.width,
             onPressed: () => context.router.push(const SignInRoute()),
             title: 'Get started!',
-            titleStyle: AppFont()
-                .fontTheme(context, weight: FontWeight.w600)
-                .labelSmall,
           ),
         ],
       ),

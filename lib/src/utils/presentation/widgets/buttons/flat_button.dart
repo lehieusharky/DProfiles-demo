@@ -13,13 +13,15 @@ class AppFlatButton implements AbstractFactoryAppButton {
 
   @override
   MyButton elevatedButton({
-    required VoidCallback onPressed,
+    VoidCallback? onPressed,
     required String title,
     Widget? prefixIcon,
     Widget? suffixIcon,
     Color? backgroundColor,
     double? width,
     double? height,
+    Widget? child,
+    Color? titleColor,
   }) {
     return MyButton(
       onPressed: onPressed,
@@ -29,6 +31,8 @@ class AppFlatButton implements AbstractFactoryAppButton {
       prefixIcon: prefixIcon,
       suffixIcon: suffixIcon,
       backgroundColor: backgroundColor,
+      titleColor: titleColor,
+      child: child,
     );
   }
 

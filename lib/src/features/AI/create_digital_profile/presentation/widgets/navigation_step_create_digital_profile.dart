@@ -8,19 +8,29 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tuple/tuple.dart';
 
 class NavigationStepCreateDigitalProfile extends StatelessWidget {
-  const NavigationStepCreateDigitalProfile({super.key});
+  final TabController controller;
+  const NavigationStepCreateDigitalProfile(
+      {super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: context.padding(top: 12),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Tuple2(CreateDigitalProfileStep.basicInfo, () {}),
-          Tuple2(CreateDigitalProfileStep.profile, () {}),
-          Tuple2(CreateDigitalProfileStep.character, () {}),
-        ].map((e) => _Item(e.item1)).toList(),
+      child: IgnorePointer(
+        ignoring: true,
+        child: TabBar(
+          controller: controller,
+          indicatorSize: TabBarIndicatorSize.label,
+          isScrollable: true,
+          dividerColor: Colors.transparent,
+          indicatorColor: Colors.transparent,
+          tabs: [
+            Tuple2(CreateDigitalProfileStep.basicInfo, () {}),
+            Tuple2(CreateDigitalProfileStep.education, () {}),
+            Tuple2(CreateDigitalProfileStep.certificate, () {}),
+            Tuple2(CreateDigitalProfileStep.experience, () {}),
+          ].map((e) => _Item(e.item1)).toList(),
+        ),
       ),
     );
   }
@@ -42,7 +52,7 @@ class _Item extends StatelessWidget {
       return ChangeCreationStepSuccess(
           CreateDigitalProfileStep.basicInfo.position);
     }, builder: (context, state) {
-      final _isSelected = state.currentStep == step.position;
+      final isSelected = state.currentStep == step.position;
       return Row(
         children: [
           Container(
@@ -51,11 +61,11 @@ class _Item extends StatelessWidget {
             alignment: Alignment.center,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: _isSelected
+              color: isSelected
                   ? colorScheme(context).primary
                   : colorScheme(context).secondaryContainer,
             ),
-            child: _isSelected
+            child: isSelected
                 ? Icon(
                     Icons.check,
                     color: MyColor.getWhite,
@@ -75,7 +85,7 @@ class _Item extends StatelessWidget {
               step.title,
               style: AppFont()
                   .fontTheme(context,
-                      color: _isSelected
+                      color: isSelected
                           ? colorScheme(context).primary
                           : colorScheme(context).outline,
                       weight: FontWeight.bold)
@@ -88,22 +98,24 @@ class _Item extends StatelessWidget {
   }
 }
 
-enum CreateDigitalProfileStep { basicInfo, profile, character }
+enum CreateDigitalProfileStep { basicInfo, education, certificate, experience }
 
 extension CreateCharacterStepExt on CreateDigitalProfileStep {
   String get title {
     return switch (this) {
       CreateDigitalProfileStep.basicInfo => 'Basic Information',
-      CreateDigitalProfileStep.profile => 'Education',
-      CreateDigitalProfileStep.character => 'Certificate',
+      CreateDigitalProfileStep.education => 'Education',
+      CreateDigitalProfileStep.certificate => 'Certificate',
+      CreateDigitalProfileStep.experience => 'Experience',
     };
   }
 
   int get position {
     return switch (this) {
       CreateDigitalProfileStep.basicInfo => 1,
-      CreateDigitalProfileStep.profile => 2,
-      CreateDigitalProfileStep.character => 3,
+      CreateDigitalProfileStep.education => 2,
+      CreateDigitalProfileStep.certificate => 3,
+      CreateDigitalProfileStep.experience => 4,
     };
   }
 }

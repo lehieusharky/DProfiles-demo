@@ -10,6 +10,7 @@ import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -95,7 +96,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                       ),
                       Padding(
                         padding: context.padding(vertical: 32),
-                        child: MyButton(
+                        child: AppFlatButton(context).elevatedButton(
                           backgroundColor: _isAgreePolicy
                               ? colorScheme(context).primary
                               : colorScheme(context).outlineVariant,
@@ -110,12 +111,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     ],
                   ),
                 ),
-                if (state is AuthLoading)
-                  SizedBox(
-                    width: context.width,
-                    height: context.height,
-                    child: const Center(child: CircularProgressIndicator()),
-                  ),
+
               ],
             ),
           );
