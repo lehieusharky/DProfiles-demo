@@ -32,7 +32,7 @@ Future<void> showErrorDialog(
     barrierDismissible: false,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Text(title),
+        title: Text(title, textAlign: TextAlign.center),
         content: Text(description),
         actions: action ??
             [

@@ -40,7 +40,7 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => CreateDigitalProfileBloc(),
-      child: BlocListener<CreateDigitalProfileBloc, CreateDigitalProfileState>(
+      child: BlocConsumer<CreateDigitalProfileBloc, CreateDigitalProfileState>(
         listener: (context, state) {
           if (state is ChangeCreationStepSuccess) {
             _tabController.animateTo((state.currentStep - 1),
@@ -60,12 +60,12 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
           if (state is CreateDigitalProfileError) {
             showErrorDialog(
               context,
-              title: 'Error test',
+              title: state.title ?? 'Error',
               description: state.message.first,
             );
           }
         },
-        child: DefaultTabController(
+        builder: (context, state) => DefaultTabController(
           length: 3,
           child: MyScaffold(
             useAppBar: true,

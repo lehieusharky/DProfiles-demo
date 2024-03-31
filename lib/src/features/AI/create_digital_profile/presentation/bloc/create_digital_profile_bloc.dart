@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/data/models/add_user_education_model.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart';
@@ -16,7 +17,9 @@ part 'create_digital_profile_bloc.freezed.dart';
 
 class CreateDigitalProfileBloc
     extends Bloc<CreateDigitalProfileEvent, CreateDigitalProfileState> {
-  int _currentStep = CreateDigitalProfileStep.basicInfo.position;
+  int _currentStep = 0;
+
+  int get currentStep => _currentStep;
 
   CreateDigitalProfileBloc()
       : super(const CreateDigitalProfileState.initial()) {
@@ -46,13 +49,19 @@ class CreateDigitalProfileBloc
     on<UpdateUserExperience>(_updateExperience);
 
     add(const GetUserInfo());
+
+    add(const ChangeCreationStep(isNext: true));
   }
 
   FutureOr<void> _changeCreateStep(
       ChangeCreationStep event, Emitter<CreateDigitalProfileState> emit) {
     try {
       emit(const CreateDigitalProfileLoading());
+
       event.isNext ? _currentStep++ : _currentStep--;
+
+      log("current_step: $_currentStep");
+
       emit(ChangeCreationStepSuccess(_currentStep));
     } catch (e) {
       emit(const CreateDigitalProfileError(
@@ -64,8 +73,8 @@ class CreateDigitalProfileBloc
       AddUserEducation event, Emitter<CreateDigitalProfileState> emit) async {
     emit(const CreateDigitalProfileLoading());
 
-    final result =
-        await createDigitalProfileUseCase.addUserEducation(event.educationModel);
+    final result = await createDigitalProfileUseCase
+        .addUserEducation(event.educationModel);
 
     result.fold(
       (l) => emit(CreateDigitalProfileError(message: l)),
@@ -81,7 +90,8 @@ class CreateDigitalProfileBloc
         await createDigitalProfileUseCase.updateUserInfo(event.param);
 
     result.fold(
-      (l) => emit(CreateDigitalProfileError(message: l)),
+      (l) => emit(CreateDigitalProfileError(
+          message: l, title: 'Update basic information failed')),
       (r) => emit(UpdateUserInfoSuccess(r)),
     );
   }
@@ -110,8 +120,8 @@ class CreateDigitalProfileBloc
 
   FutureOr<void> _addUserCertificate(
       AddUserCertificate event, Emitter<CreateDigitalProfileState> emit) async {
-    final result =
-        await createDigitalProfileUseCase.addUserCertificate(event.certificateModel);
+    final result = await createDigitalProfileUseCase
+        .addUserCertificate(event.certificateModel);
 
     result.fold(
       (l) => emit(CreateDigitalProfileError(message: l)),
