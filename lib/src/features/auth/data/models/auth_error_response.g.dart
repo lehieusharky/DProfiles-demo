@@ -9,7 +9,7 @@ part of 'auth_error_response.dart';
 _$AuthErrorResponseImpl _$$AuthErrorResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$AuthErrorResponseImpl(
-      message: json['message'] as String?,
+      message: json['message'] as String? ?? "",
       error: json['error'] as String?,
       statusCode: json['statusCode'] as int? ?? 400,
     );

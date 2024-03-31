@@ -146,7 +146,7 @@ class _FormEducationInfoState extends State<FormEducationInfo> {
   void _add(BuildContext context) {
     context
         .read<CreateDigitalProfileBloc>()
-        .add(AddUserEducation(AddUserEducationModel(
+        .add(AddUserEducation(EducationModel(
           schoolName: _schoolNameController.text.trim(),
         )));
   }

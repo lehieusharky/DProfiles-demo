@@ -24,6 +24,7 @@ class NavigationStepCreateDigitalProfile extends StatelessWidget {
           isScrollable: true,
           dividerColor: Colors.transparent,
           indicatorColor: Colors.transparent,
+          tabAlignment: TabAlignment.start,
           tabs: [
             Tuple2(CreateDigitalProfileStep.basicInfo, () {}),
             Tuple2(CreateDigitalProfileStep.education, () {}),
