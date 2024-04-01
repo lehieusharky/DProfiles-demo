@@ -20,6 +20,7 @@ EducationModel _$EducationModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EducationModel {
+  int? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'user_id')
   int? get userID => throw _privateConstructorUsedError;
   @JsonKey(name: 'degree_id')
@@ -31,6 +32,12 @@ mixin _$EducationModel {
   String? get startDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'end_date')
   String? get endDate => throw _privateConstructorUsedError;
+  @JsonKey(name: 'updated_on')
+  String? get updatedOn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'updated_ts')
+  String? get updatedTs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'created_ts')
+  String? get createdTs => throw _privateConstructorUsedError;
   int? get order => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
 
@@ -47,12 +54,16 @@ abstract class $EducationModelCopyWith<$Res> {
       _$EducationModelCopyWithImpl<$Res, EducationModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'user_id') int? userID,
+      {int? id,
+      @JsonKey(name: 'user_id') int? userID,
       @JsonKey(name: 'degree_id') int? degreeID,
       @JsonKey(name: 'school_name') String? schoolName,
       String? major,
       @JsonKey(name: 'start_date') String? startDate,
       @JsonKey(name: 'end_date') String? endDate,
+      @JsonKey(name: 'updated_on') String? updatedOn,
+      @JsonKey(name: 'updated_ts') String? updatedTs,
+      @JsonKey(name: 'created_ts') String? createdTs,
       int? order,
       String? description});
 }
@@ -70,16 +81,24 @@ class _$EducationModelCopyWithImpl<$Res, $Val extends EducationModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? userID = freezed,
     Object? degreeID = freezed,
     Object? schoolName = freezed,
     Object? major = freezed,
     Object? startDate = freezed,
     Object? endDate = freezed,
+    Object? updatedOn = freezed,
+    Object? updatedTs = freezed,
+    Object? createdTs = freezed,
     Object? order = freezed,
     Object? description = freezed,
   }) {
     return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       userID: freezed == userID
           ? _value.userID
           : userID // ignore: cast_nullable_to_non_nullable
@@ -103,6 +122,18 @@ class _$EducationModelCopyWithImpl<$Res, $Val extends EducationModel>
       endDate: freezed == endDate
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updatedOn: freezed == updatedOn
+          ? _value.updatedOn
+          : updatedOn // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updatedTs: freezed == updatedTs
+          ? _value.updatedTs
+          : updatedTs // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createdTs: freezed == createdTs
+          ? _value.createdTs
+          : createdTs // ignore: cast_nullable_to_non_nullable
               as String?,
       order: freezed == order
           ? _value.order
@@ -125,12 +156,16 @@ abstract class _$$EducationModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'user_id') int? userID,
+      {int? id,
+      @JsonKey(name: 'user_id') int? userID,
       @JsonKey(name: 'degree_id') int? degreeID,
       @JsonKey(name: 'school_name') String? schoolName,
       String? major,
       @JsonKey(name: 'start_date') String? startDate,
       @JsonKey(name: 'end_date') String? endDate,
+      @JsonKey(name: 'updated_on') String? updatedOn,
+      @JsonKey(name: 'updated_ts') String? updatedTs,
+      @JsonKey(name: 'created_ts') String? createdTs,
       int? order,
       String? description});
 }
@@ -146,16 +181,24 @@ class __$$EducationModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? userID = freezed,
     Object? degreeID = freezed,
     Object? schoolName = freezed,
     Object? major = freezed,
     Object? startDate = freezed,
     Object? endDate = freezed,
+    Object? updatedOn = freezed,
+    Object? updatedTs = freezed,
+    Object? createdTs = freezed,
     Object? order = freezed,
     Object? description = freezed,
   }) {
     return _then(_$EducationModelImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       userID: freezed == userID
           ? _value.userID
           : userID // ignore: cast_nullable_to_non_nullable
@@ -180,6 +223,18 @@ class __$$EducationModelImplCopyWithImpl<$Res>
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as String?,
+      updatedOn: freezed == updatedOn
+          ? _value.updatedOn
+          : updatedOn // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updatedTs: freezed == updatedTs
+          ? _value.updatedTs
+          : updatedTs // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createdTs: freezed == createdTs
+          ? _value.createdTs
+          : createdTs // ignore: cast_nullable_to_non_nullable
+              as String?,
       order: freezed == order
           ? _value.order
           : order // ignore: cast_nullable_to_non_nullable
@@ -196,18 +251,25 @@ class __$$EducationModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EducationModelImpl implements _EducationModel {
   const _$EducationModelImpl(
-      {@JsonKey(name: 'user_id') this.userID = 0,
+      {this.id = 0,
+      @JsonKey(name: 'user_id') this.userID = 0,
       @JsonKey(name: 'degree_id') this.degreeID,
       @JsonKey(name: 'school_name') this.schoolName,
       this.major,
       @JsonKey(name: 'start_date') this.startDate,
       @JsonKey(name: 'end_date') this.endDate,
+      @JsonKey(name: 'updated_on') this.updatedOn,
+      @JsonKey(name: 'updated_ts') this.updatedTs,
+      @JsonKey(name: 'created_ts') this.createdTs,
       this.order,
       this.description});
 
   factory _$EducationModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$EducationModelImplFromJson(json);
 
+  @override
+  @JsonKey()
+  final int? id;
   @override
   @JsonKey(name: 'user_id')
   final int? userID;
@@ -226,13 +288,22 @@ class _$EducationModelImpl implements _EducationModel {
   @JsonKey(name: 'end_date')
   final String? endDate;
   @override
+  @JsonKey(name: 'updated_on')
+  final String? updatedOn;
+  @override
+  @JsonKey(name: 'updated_ts')
+  final String? updatedTs;
+  @override
+  @JsonKey(name: 'created_ts')
+  final String? createdTs;
+  @override
   final int? order;
   @override
   final String? description;
 
   @override
   String toString() {
-    return 'EducationModel(userID: $userID, degreeID: $degreeID, schoolName: $schoolName, major: $major, startDate: $startDate, endDate: $endDate, order: $order, description: $description)';
+    return 'EducationModel(id: $id, userID: $userID, degreeID: $degreeID, schoolName: $schoolName, major: $major, startDate: $startDate, endDate: $endDate, updatedOn: $updatedOn, updatedTs: $updatedTs, createdTs: $createdTs, order: $order, description: $description)';
   }
 
   @override
@@ -240,6 +311,7 @@ class _$EducationModelImpl implements _EducationModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EducationModelImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.userID, userID) || other.userID == userID) &&
             (identical(other.degreeID, degreeID) ||
                 other.degreeID == degreeID) &&
@@ -249,6 +321,12 @@ class _$EducationModelImpl implements _EducationModel {
             (identical(other.startDate, startDate) ||
                 other.startDate == startDate) &&
             (identical(other.endDate, endDate) || other.endDate == endDate) &&
+            (identical(other.updatedOn, updatedOn) ||
+                other.updatedOn == updatedOn) &&
+            (identical(other.updatedTs, updatedTs) ||
+                other.updatedTs == updatedTs) &&
+            (identical(other.createdTs, createdTs) ||
+                other.createdTs == createdTs) &&
             (identical(other.order, order) || other.order == order) &&
             (identical(other.description, description) ||
                 other.description == description));
@@ -256,8 +334,20 @@ class _$EducationModelImpl implements _EducationModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, userID, degreeID, schoolName,
-      major, startDate, endDate, order, description);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      userID,
+      degreeID,
+      schoolName,
+      major,
+      startDate,
+      endDate,
+      updatedOn,
+      updatedTs,
+      createdTs,
+      order,
+      description);
 
   @JsonKey(ignore: true)
   @override
@@ -276,18 +366,24 @@ class _$EducationModelImpl implements _EducationModel {
 
 abstract class _EducationModel implements EducationModel {
   const factory _EducationModel(
-      {@JsonKey(name: 'user_id') final int? userID,
+      {final int? id,
+      @JsonKey(name: 'user_id') final int? userID,
       @JsonKey(name: 'degree_id') final int? degreeID,
       @JsonKey(name: 'school_name') final String? schoolName,
       final String? major,
       @JsonKey(name: 'start_date') final String? startDate,
       @JsonKey(name: 'end_date') final String? endDate,
+      @JsonKey(name: 'updated_on') final String? updatedOn,
+      @JsonKey(name: 'updated_ts') final String? updatedTs,
+      @JsonKey(name: 'created_ts') final String? createdTs,
       final int? order,
       final String? description}) = _$EducationModelImpl;
 
   factory _EducationModel.fromJson(Map<String, dynamic> json) =
       _$EducationModelImpl.fromJson;
 
+  @override
+  int? get id;
   @override
   @JsonKey(name: 'user_id')
   int? get userID;
@@ -305,6 +401,15 @@ abstract class _EducationModel implements EducationModel {
   @override
   @JsonKey(name: 'end_date')
   String? get endDate;
+  @override
+  @JsonKey(name: 'updated_on')
+  String? get updatedOn;
+  @override
+  @JsonKey(name: 'updated_ts')
+  String? get updatedTs;
+  @override
+  @JsonKey(name: 'created_ts')
+  String? get createdTs;
   @override
   int? get order;
   @override

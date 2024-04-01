@@ -14,8 +14,10 @@ class CreateDigitalProfileState with _$CreateDigitalProfileState {
   const factory CreateDigitalProfileState.changeCreationStepSuccess(
       int currentStep) = ChangeCreationStepSuccess;
 
+  // user info
+
   const factory CreateDigitalProfileState.updateUserInfoSuccess(
-      BaseResponse response) = UpdateUserInfoSuccess;
+      {BaseResponse? response}) = UpdateUserInfoSuccess;
 
   const factory CreateDigitalProfileState.getUserInfoSuccess(
       BaseResponse response) = GetUserInfoSuccess;
@@ -25,14 +27,14 @@ class CreateDigitalProfileState with _$CreateDigitalProfileState {
   const factory CreateDigitalProfileState.getUserCertificatesSuccess(
       BaseResponse response) = GetUserCertificatesSuccess;
 
-  const factory CreateDigitalProfileState.addUserCertificatesSuccess(
-      BaseResponse response) = AddUserCertificateSuccess;
+  const factory CreateDigitalProfileState.addUserCertificatesSuccess() =
+      AddUserCertificateSuccess;
 
   const factory CreateDigitalProfileState.getCertificateInfoSuccess(
       BaseResponse response) = GetCertificateInfoSuccess;
 
-  const factory CreateDigitalProfileState.deleteUserCertificateSuccess(
-      BaseResponse response) = DeleteUserCertificateSuccess;
+  const factory CreateDigitalProfileState.deleteUserCertificateSuccess() =
+      DeleteUserCertificateSuccess;
 
   const factory CreateDigitalProfileState.updateUserCertificateSuccess(
       BaseResponse response) = UpdateUserCertificateSuccess;
@@ -40,16 +42,16 @@ class CreateDigitalProfileState with _$CreateDigitalProfileState {
   // education
 
   const factory CreateDigitalProfileState.getUserEducationsSuccess(
-      BaseResponse response) = GetUserEducationsSuccess;
+      List<EducationModel> educations) = GetUserEducationsSuccess;
 
-  const factory CreateDigitalProfileState.addUserEducationsSuccess(
-      BaseResponse response) = AddUserEducationSuccess;
+  const factory CreateDigitalProfileState.addUserEducationsSuccess() =
+      AddUserEducationSuccess;
 
   const factory CreateDigitalProfileState.getEducationInfoSuccess(
       BaseResponse response) = GetEducationInfoSuccess;
 
-  const factory CreateDigitalProfileState.deleteUserEducationSuccess(
-      BaseResponse response) = DeleteUserEducationSuccess;
+  const factory CreateDigitalProfileState.deleteUserEducationSuccess() =
+      DeleteUserEducationSuccess;
 
   const factory CreateDigitalProfileState.updateUserEducationSuccess(
       BaseResponse response) = UpdateUserEducationSuccess;
@@ -59,15 +61,18 @@ class CreateDigitalProfileState with _$CreateDigitalProfileState {
   const factory CreateDigitalProfileState.getUserExperiencesSuccess(
       BaseResponse response) = GetUserExperiencesSuccess;
 
-  const factory CreateDigitalProfileState.addUserExperiencesSuccess(
-      BaseResponse response) = AddUserExperienceSuccess;
+  const factory CreateDigitalProfileState.addUserExperiencesSuccess() =
+      AddUserExperienceSuccess;
 
   const factory CreateDigitalProfileState.getExperienceInfoSuccess(
       BaseResponse response) = GetExperienceInfoSuccess;
 
-  const factory CreateDigitalProfileState.deleteUserExperienceSuccess(
-      BaseResponse response) = DeleteUserExperienceSuccess;
+  const factory CreateDigitalProfileState.deleteUserExperienceSuccess() =
+      DeleteUserExperienceSuccess;
 
   const factory CreateDigitalProfileState.updateUserExperienceSuccess(
       BaseResponse response) = UpdateUserExperienceSuccess;
+
+  const factory CreateDigitalProfileState.saveUpdatedProfileSuccess() =
+      SaveUpdatedProfileSuccess;
 }
