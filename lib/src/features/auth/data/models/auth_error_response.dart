@@ -5,13 +5,13 @@ part 'auth_error_response.freezed.dart';
 part 'auth_error_response.g.dart';
 
 @freezed
-class AuthErrorResponse with _$AuthErrorResponse implements AppResponse {
-  const factory AuthErrorResponse({
+class RegularErrorResponse with _$RegularErrorResponse implements AppResponse {
+  const factory RegularErrorResponse({
     @Default("") String? message,
     String? error,
     @Default(400) int? statusCode,
-  }) = _AuthErrorResponse;
+  }) = _RegularErrorResponse;
 
-  factory AuthErrorResponse.fromJson(Map<String, Object?> json) =>
-      _$AuthErrorResponseFromJson(json);
+  factory RegularErrorResponse.fromJson(Map<String, Object?> json) =>
+      _$RegularErrorResponseFromJson(json);
 }

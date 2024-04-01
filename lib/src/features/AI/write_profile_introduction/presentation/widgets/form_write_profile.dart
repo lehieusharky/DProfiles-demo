@@ -1,10 +1,13 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/features/AI/write_profile_introduction/data/models/profile_introduction_model.dart';
+import 'package:demo_dprofiles/src/features/AI/write_profile_introduction/presentation/bloc/write_profile_introduction_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FormWriteProfile extends StatefulWidget {
   const FormWriteProfile({super.key});
@@ -37,6 +40,7 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
               controller: _writeStyleController,
               title: 'WRITE STYLE',
               hint: 'Normal',
+              suffixIcon: const Icon(IconsaxOutline.arrow_down_1),
             ),
           ),
           Padding(
@@ -96,6 +100,14 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
       );
 
   void _sendToAI(BuildContext context) {
-    if (_keyForm.currentState?.validate() ?? false) {}
+    if (_keyForm.currentState?.validate() ?? false) {
+      final model = ProfileIntroductionModel(
+        summary: _writeStyleController.text.trim(),
+        style: _writeStyleController.text.trim(),
+      );
+      context
+          .read<WriteProfileIntroductionBloc>()
+          .add(GenerateProfileIntroduction(model));
+    }
   }
 }

@@ -14,35 +14,36 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-AuthErrorResponse _$AuthErrorResponseFromJson(Map<String, dynamic> json) {
-  return _AuthErrorResponse.fromJson(json);
+RegularErrorResponse _$RegularErrorResponseFromJson(Map<String, dynamic> json) {
+  return _RegularErrorResponse.fromJson(json);
 }
 
 /// @nodoc
-mixin _$AuthErrorResponse {
+mixin _$RegularErrorResponse {
   String? get message => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
   int? get statusCode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AuthErrorResponseCopyWith<AuthErrorResponse> get copyWith =>
+  $RegularErrorResponseCopyWith<RegularErrorResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AuthErrorResponseCopyWith<$Res> {
-  factory $AuthErrorResponseCopyWith(
-          AuthErrorResponse value, $Res Function(AuthErrorResponse) then) =
-      _$AuthErrorResponseCopyWithImpl<$Res, AuthErrorResponse>;
+abstract class $RegularErrorResponseCopyWith<$Res> {
+  factory $RegularErrorResponseCopyWith(RegularErrorResponse value,
+          $Res Function(RegularErrorResponse) then) =
+      _$RegularErrorResponseCopyWithImpl<$Res, RegularErrorResponse>;
   @useResult
   $Res call({String? message, String? error, int? statusCode});
 }
 
 /// @nodoc
-class _$AuthErrorResponseCopyWithImpl<$Res, $Val extends AuthErrorResponse>
-    implements $AuthErrorResponseCopyWith<$Res> {
-  _$AuthErrorResponseCopyWithImpl(this._value, this._then);
+class _$RegularErrorResponseCopyWithImpl<$Res,
+        $Val extends RegularErrorResponse>
+    implements $RegularErrorResponseCopyWith<$Res> {
+  _$RegularErrorResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -74,22 +75,22 @@ class _$AuthErrorResponseCopyWithImpl<$Res, $Val extends AuthErrorResponse>
 }
 
 /// @nodoc
-abstract class _$$AuthErrorResponseImplCopyWith<$Res>
-    implements $AuthErrorResponseCopyWith<$Res> {
-  factory _$$AuthErrorResponseImplCopyWith(_$AuthErrorResponseImpl value,
-          $Res Function(_$AuthErrorResponseImpl) then) =
-      __$$AuthErrorResponseImplCopyWithImpl<$Res>;
+abstract class _$$RegularErrorResponseImplCopyWith<$Res>
+    implements $RegularErrorResponseCopyWith<$Res> {
+  factory _$$RegularErrorResponseImplCopyWith(_$RegularErrorResponseImpl value,
+          $Res Function(_$RegularErrorResponseImpl) then) =
+      __$$RegularErrorResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? message, String? error, int? statusCode});
 }
 
 /// @nodoc
-class __$$AuthErrorResponseImplCopyWithImpl<$Res>
-    extends _$AuthErrorResponseCopyWithImpl<$Res, _$AuthErrorResponseImpl>
-    implements _$$AuthErrorResponseImplCopyWith<$Res> {
-  __$$AuthErrorResponseImplCopyWithImpl(_$AuthErrorResponseImpl _value,
-      $Res Function(_$AuthErrorResponseImpl) _then)
+class __$$RegularErrorResponseImplCopyWithImpl<$Res>
+    extends _$RegularErrorResponseCopyWithImpl<$Res, _$RegularErrorResponseImpl>
+    implements _$$RegularErrorResponseImplCopyWith<$Res> {
+  __$$RegularErrorResponseImplCopyWithImpl(_$RegularErrorResponseImpl _value,
+      $Res Function(_$RegularErrorResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +100,7 @@ class __$$AuthErrorResponseImplCopyWithImpl<$Res>
     Object? error = freezed,
     Object? statusCode = freezed,
   }) {
-    return _then(_$AuthErrorResponseImpl(
+    return _then(_$RegularErrorResponseImpl(
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -118,12 +119,12 @@ class __$$AuthErrorResponseImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$AuthErrorResponseImpl implements _AuthErrorResponse {
-  const _$AuthErrorResponseImpl(
+class _$RegularErrorResponseImpl implements _RegularErrorResponse {
+  const _$RegularErrorResponseImpl(
       {this.message = "", this.error, this.statusCode = 400});
 
-  factory _$AuthErrorResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AuthErrorResponseImplFromJson(json);
+  factory _$RegularErrorResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RegularErrorResponseImplFromJson(json);
 
   @override
   @JsonKey()
@@ -136,14 +137,14 @@ class _$AuthErrorResponseImpl implements _AuthErrorResponse {
 
   @override
   String toString() {
-    return 'AuthErrorResponse(message: $message, error: $error, statusCode: $statusCode)';
+    return 'RegularErrorResponse(message: $message, error: $error, statusCode: $statusCode)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AuthErrorResponseImpl &&
+            other is _$RegularErrorResponseImpl &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.error, error) || other.error == error) &&
             (identical(other.statusCode, statusCode) ||
@@ -157,26 +158,27 @@ class _$AuthErrorResponseImpl implements _AuthErrorResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AuthErrorResponseImplCopyWith<_$AuthErrorResponseImpl> get copyWith =>
-      __$$AuthErrorResponseImplCopyWithImpl<_$AuthErrorResponseImpl>(
-          this, _$identity);
+  _$$RegularErrorResponseImplCopyWith<_$RegularErrorResponseImpl>
+      get copyWith =>
+          __$$RegularErrorResponseImplCopyWithImpl<_$RegularErrorResponseImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AuthErrorResponseImplToJson(
+    return _$$RegularErrorResponseImplToJson(
       this,
     );
   }
 }
 
-abstract class _AuthErrorResponse implements AuthErrorResponse {
-  const factory _AuthErrorResponse(
+abstract class _RegularErrorResponse implements RegularErrorResponse {
+  const factory _RegularErrorResponse(
       {final String? message,
       final String? error,
-      final int? statusCode}) = _$AuthErrorResponseImpl;
+      final int? statusCode}) = _$RegularErrorResponseImpl;
 
-  factory _AuthErrorResponse.fromJson(Map<String, dynamic> json) =
-      _$AuthErrorResponseImpl.fromJson;
+  factory _RegularErrorResponse.fromJson(Map<String, dynamic> json) =
+      _$RegularErrorResponseImpl.fromJson;
 
   @override
   String? get message;
@@ -186,6 +188,6 @@ abstract class _AuthErrorResponse implements AuthErrorResponse {
   int? get statusCode;
   @override
   @JsonKey(ignore: true)
-  _$$AuthErrorResponseImplCopyWith<_$AuthErrorResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RegularErrorResponseImplCopyWith<_$RegularErrorResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -34,7 +34,7 @@ class AuthUseCaseImpl implements AuthUseCase {
     final result = await _authRepository.sendSignUpEmail(email);
 
     return result.fold(
-      (l) => Left((l.response as AuthErrorResponse).message!),
+      (l) => Left((l.response as RegularErrorResponse).message!),
       (r) => Right(r),
     );
   }
@@ -44,7 +44,7 @@ class AuthUseCaseImpl implements AuthUseCase {
     final result = await _authRepository.sendSignUpEmail(email);
 
     return result.fold(
-      (l) => Left((l.response as AuthErrorResponse).message!),
+      (l) => Left((l.response as RegularErrorResponse).message!),
       (r) => Right(r),
     );
   }
@@ -55,7 +55,7 @@ class AuthUseCaseImpl implements AuthUseCase {
     final result = await _authRepository.validateSignUpCode(email, code);
 
     return result.fold(
-      (l) => Left((l.response as AuthErrorResponse).message!),
+      (l) => Left((l.response as RegularErrorResponse).message!),
       (r) => Right(r),
     );
   }
@@ -66,7 +66,7 @@ class AuthUseCaseImpl implements AuthUseCase {
     final result = await _authRepository.createAnAccount(model);
 
     return result.fold(
-      (l) => Left((l.response as AuthErrorResponse).message!),
+      (l) => Left((l.response as RegularErrorResponse).message!),
       (r) => Right(r),
     );
   }
@@ -77,7 +77,7 @@ class AuthUseCaseImpl implements AuthUseCase {
     final result = await _authRepository.signIn(email, password);
 
     return result.fold(
-      (l) => Left((l.response as AuthErrorResponse).message!),
+      (l) => Left((l.response as RegularErrorResponse).message!),
       (r) => Right(r),
     );
   }
