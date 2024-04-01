@@ -7,7 +7,8 @@ import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
 extension CertificateModelExt on CertificateModel {
-  Widget toItem(BuildContext context) {
+  Widget toItem(BuildContext context,
+      {VoidCallback? onDelete, VoidCallback? onUpdate}) {
     return Padding(
       padding: context.padding(top: 6),
       child: Container(
@@ -59,7 +60,9 @@ extension CertificateModelExt on CertificateModel {
               padding: context.padding(horizontal: 15),
               child: const Icon(IconsaxOutline.edit, size: 20),
             ),
-            const Icon(IconsaxOutline.trash, size: 20),
+            InkWell(
+                onTap: onDelete,
+                child: const Icon(IconsaxOutline.trash, size: 20)),
           ],
         ),
       ),

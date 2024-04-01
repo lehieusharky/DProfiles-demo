@@ -20,6 +20,7 @@ ExperienceModel _$ExperienceModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ExperienceModel {
+  int? get id => throw _privateConstructorUsedError;
   int? get userId => throw _privateConstructorUsedError;
   @JsonKey(name: 'job_title')
   String? get jobTitle => throw _privateConstructorUsedError;
@@ -29,6 +30,12 @@ mixin _$ExperienceModel {
   String? get startDate => throw _privateConstructorUsedError;
   @JsonKey(name: 'end_date')
   String? get endDate => throw _privateConstructorUsedError;
+  @JsonKey(name: 'updated_on')
+  String? get updatedOn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'updated_ts')
+  String? get updatedTs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'created_ts')
+  String? get createdTs => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   int? get order => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_current')
@@ -47,11 +54,15 @@ abstract class $ExperienceModelCopyWith<$Res> {
       _$ExperienceModelCopyWithImpl<$Res, ExperienceModel>;
   @useResult
   $Res call(
-      {int? userId,
+      {int? id,
+      int? userId,
       @JsonKey(name: 'job_title') String? jobTitle,
       @JsonKey(name: 'company_name') String? companyName,
       @JsonKey(name: 'start_date') String? startDate,
       @JsonKey(name: 'end_date') String? endDate,
+      @JsonKey(name: 'updated_on') String? updatedOn,
+      @JsonKey(name: 'updated_ts') String? updatedTs,
+      @JsonKey(name: 'created_ts') String? createdTs,
       String? description,
       int? order,
       @JsonKey(name: 'is_current') int? isCurrent});
@@ -70,16 +81,24 @@ class _$ExperienceModelCopyWithImpl<$Res, $Val extends ExperienceModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? userId = freezed,
     Object? jobTitle = freezed,
     Object? companyName = freezed,
     Object? startDate = freezed,
     Object? endDate = freezed,
+    Object? updatedOn = freezed,
+    Object? updatedTs = freezed,
+    Object? createdTs = freezed,
     Object? description = freezed,
     Object? order = freezed,
     Object? isCurrent = freezed,
   }) {
     return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -99,6 +118,18 @@ class _$ExperienceModelCopyWithImpl<$Res, $Val extends ExperienceModel>
       endDate: freezed == endDate
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updatedOn: freezed == updatedOn
+          ? _value.updatedOn
+          : updatedOn // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updatedTs: freezed == updatedTs
+          ? _value.updatedTs
+          : updatedTs // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createdTs: freezed == createdTs
+          ? _value.createdTs
+          : createdTs // ignore: cast_nullable_to_non_nullable
               as String?,
       description: freezed == description
           ? _value.description
@@ -125,11 +156,15 @@ abstract class _$$ExperienceModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int? userId,
+      {int? id,
+      int? userId,
       @JsonKey(name: 'job_title') String? jobTitle,
       @JsonKey(name: 'company_name') String? companyName,
       @JsonKey(name: 'start_date') String? startDate,
       @JsonKey(name: 'end_date') String? endDate,
+      @JsonKey(name: 'updated_on') String? updatedOn,
+      @JsonKey(name: 'updated_ts') String? updatedTs,
+      @JsonKey(name: 'created_ts') String? createdTs,
       String? description,
       int? order,
       @JsonKey(name: 'is_current') int? isCurrent});
@@ -146,16 +181,24 @@ class __$$ExperienceModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? userId = freezed,
     Object? jobTitle = freezed,
     Object? companyName = freezed,
     Object? startDate = freezed,
     Object? endDate = freezed,
+    Object? updatedOn = freezed,
+    Object? updatedTs = freezed,
+    Object? createdTs = freezed,
     Object? description = freezed,
     Object? order = freezed,
     Object? isCurrent = freezed,
   }) {
     return _then(_$ExperienceModelImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -175,6 +218,18 @@ class __$$ExperienceModelImplCopyWithImpl<$Res>
       endDate: freezed == endDate
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updatedOn: freezed == updatedOn
+          ? _value.updatedOn
+          : updatedOn // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updatedTs: freezed == updatedTs
+          ? _value.updatedTs
+          : updatedTs // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createdTs: freezed == createdTs
+          ? _value.createdTs
+          : createdTs // ignore: cast_nullable_to_non_nullable
               as String?,
       description: freezed == description
           ? _value.description
@@ -196,11 +251,15 @@ class __$$ExperienceModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ExperienceModelImpl implements _ExperienceModel {
   const _$ExperienceModelImpl(
-      {this.userId,
+      {this.id,
+      this.userId,
       @JsonKey(name: 'job_title') this.jobTitle,
       @JsonKey(name: 'company_name') this.companyName,
       @JsonKey(name: 'start_date') this.startDate,
       @JsonKey(name: 'end_date') this.endDate,
+      @JsonKey(name: 'updated_on') this.updatedOn,
+      @JsonKey(name: 'updated_ts') this.updatedTs,
+      @JsonKey(name: 'created_ts') this.createdTs,
       this.description,
       this.order,
       @JsonKey(name: 'is_current') this.isCurrent});
@@ -208,6 +267,8 @@ class _$ExperienceModelImpl implements _ExperienceModel {
   factory _$ExperienceModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ExperienceModelImplFromJson(json);
 
+  @override
+  final int? id;
   @override
   final int? userId;
   @override
@@ -223,6 +284,15 @@ class _$ExperienceModelImpl implements _ExperienceModel {
   @JsonKey(name: 'end_date')
   final String? endDate;
   @override
+  @JsonKey(name: 'updated_on')
+  final String? updatedOn;
+  @override
+  @JsonKey(name: 'updated_ts')
+  final String? updatedTs;
+  @override
+  @JsonKey(name: 'created_ts')
+  final String? createdTs;
+  @override
   final String? description;
   @override
   final int? order;
@@ -232,7 +302,7 @@ class _$ExperienceModelImpl implements _ExperienceModel {
 
   @override
   String toString() {
-    return 'ExperienceModel(userId: $userId, jobTitle: $jobTitle, companyName: $companyName, startDate: $startDate, endDate: $endDate, description: $description, order: $order, isCurrent: $isCurrent)';
+    return 'ExperienceModel(id: $id, userId: $userId, jobTitle: $jobTitle, companyName: $companyName, startDate: $startDate, endDate: $endDate, updatedOn: $updatedOn, updatedTs: $updatedTs, createdTs: $createdTs, description: $description, order: $order, isCurrent: $isCurrent)';
   }
 
   @override
@@ -240,6 +310,7 @@ class _$ExperienceModelImpl implements _ExperienceModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ExperienceModelImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.userId, userId) || other.userId == userId) &&
             (identical(other.jobTitle, jobTitle) ||
                 other.jobTitle == jobTitle) &&
@@ -248,6 +319,12 @@ class _$ExperienceModelImpl implements _ExperienceModel {
             (identical(other.startDate, startDate) ||
                 other.startDate == startDate) &&
             (identical(other.endDate, endDate) || other.endDate == endDate) &&
+            (identical(other.updatedOn, updatedOn) ||
+                other.updatedOn == updatedOn) &&
+            (identical(other.updatedTs, updatedTs) ||
+                other.updatedTs == updatedTs) &&
+            (identical(other.createdTs, createdTs) ||
+                other.createdTs == createdTs) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.order, order) || other.order == order) &&
@@ -257,8 +334,20 @@ class _$ExperienceModelImpl implements _ExperienceModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, userId, jobTitle, companyName,
-      startDate, endDate, description, order, isCurrent);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      userId,
+      jobTitle,
+      companyName,
+      startDate,
+      endDate,
+      updatedOn,
+      updatedTs,
+      createdTs,
+      description,
+      order,
+      isCurrent);
 
   @JsonKey(ignore: true)
   @override
@@ -277,11 +366,15 @@ class _$ExperienceModelImpl implements _ExperienceModel {
 
 abstract class _ExperienceModel implements ExperienceModel {
   const factory _ExperienceModel(
-          {final int? userId,
+          {final int? id,
+          final int? userId,
           @JsonKey(name: 'job_title') final String? jobTitle,
           @JsonKey(name: 'company_name') final String? companyName,
           @JsonKey(name: 'start_date') final String? startDate,
           @JsonKey(name: 'end_date') final String? endDate,
+          @JsonKey(name: 'updated_on') final String? updatedOn,
+          @JsonKey(name: 'updated_ts') final String? updatedTs,
+          @JsonKey(name: 'created_ts') final String? createdTs,
           final String? description,
           final int? order,
           @JsonKey(name: 'is_current') final int? isCurrent}) =
@@ -290,6 +383,8 @@ abstract class _ExperienceModel implements ExperienceModel {
   factory _ExperienceModel.fromJson(Map<String, dynamic> json) =
       _$ExperienceModelImpl.fromJson;
 
+  @override
+  int? get id;
   @override
   int? get userId;
   @override
@@ -304,6 +399,15 @@ abstract class _ExperienceModel implements ExperienceModel {
   @override
   @JsonKey(name: 'end_date')
   String? get endDate;
+  @override
+  @JsonKey(name: 'updated_on')
+  String? get updatedOn;
+  @override
+  @JsonKey(name: 'updated_ts')
+  String? get updatedTs;
+  @override
+  @JsonKey(name: 'created_ts')
+  String? get createdTs;
   @override
   String? get description;
   @override

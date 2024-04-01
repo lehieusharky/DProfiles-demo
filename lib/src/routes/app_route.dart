@@ -28,6 +28,9 @@ class AppRouter extends $AppRouter {
         AutoRoute(
             path: '/create_digital_profile',
             page: CreateDigitalProfileRoute.page),
+        AutoRoute(
+            path: '/update_digital_profile_success',
+            page: CreateDigitalProfileSuccessRoute.page),
         AutoRoute(path: '/write_profile', page: WriteProfileRoute.page),
       ];
 }

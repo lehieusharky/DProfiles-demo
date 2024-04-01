@@ -15,3 +15,4 @@ class ErrorResponse with _$ErrorResponse implements AppResponse {
   factory ErrorResponse.fromJson(Map<String, Object?> json) =>
       _$ErrorResponseFromJson(json);
 }
+

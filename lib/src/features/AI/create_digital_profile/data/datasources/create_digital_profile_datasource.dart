@@ -1,4 +1,4 @@
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/data/models/add_user_education_model.dart';
+import 'package:demo_dprofiles/src/utils/data/models/add_user_education_model.dart';
 import 'package:demo_dprofiles/src/utils/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/utils/data/models/experiance_model.dart';
 import 'package:demo_dprofiles/src/utils/data/models/user_info_model.dart';

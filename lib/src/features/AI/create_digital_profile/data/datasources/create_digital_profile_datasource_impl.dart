@@ -1,5 +1,5 @@
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/data/datasources/create_digital_profile_datasource.dart';
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/data/models/add_user_education_model.dart';
+import 'package:demo_dprofiles/src/utils/data/models/add_user_education_model.dart';
 import 'package:demo_dprofiles/src/utils/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/utils/data/models/experiance_model.dart';
 import 'package:demo_dprofiles/src/utils/data/models/user_info_model.dart';
@@ -19,7 +19,7 @@ class CreateDigitalProfileDataSourceImpl
     try {
       final baseResponse = await MyHttp.rl().updateUserInfo(params.toJson());
       return baseResponse;
-    } on DioException catch (e) {
+    } on DioException {
       rethrow;
     }
   }
@@ -41,7 +41,7 @@ class CreateDigitalProfileDataSourceImpl
     try {
       final baseResponse = await MyHttp.rl().getUserCertificates();
       return baseResponse;
-    } on DioException catch (e) {
+    } on DioException catch(e) {
       rethrow;
     }
   }
@@ -51,7 +51,7 @@ class CreateDigitalProfileDataSourceImpl
     try {
       final baseResponse = await MyHttp.rl().addUserCertificate(param.toJson());
       return baseResponse;
-    } on DioException catch (e) {
+    } on DioException {
       rethrow;
     }
   }
@@ -63,7 +63,7 @@ class CreateDigitalProfileDataSourceImpl
       final baseResponse =
           await MyHttp.rl().updateCertificateInfo(id, data.toJson());
       return baseResponse;
-    } on DioException catch (e) {
+    } on DioException {
       rethrow;
     }
   }

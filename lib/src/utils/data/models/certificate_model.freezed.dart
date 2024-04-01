@@ -20,6 +20,7 @@ CertificateModel _$CertificateModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CertificateModel {
+  int? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'user_id')
   int? get userId => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
@@ -29,6 +30,12 @@ mixin _$CertificateModel {
   @JsonKey(name: 'credential_id')
   String? get credentialId => throw _privateConstructorUsedError;
   int? get order => throw _privateConstructorUsedError;
+  @JsonKey(name: 'updated_on')
+  String? get updatedOn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'updated_ts')
+  String? get updatedTs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'created_ts')
+  String? get createdTs => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,13 +50,17 @@ abstract class $CertificateModelCopyWith<$Res> {
       _$CertificateModelCopyWithImpl<$Res, CertificateModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'user_id') int? userId,
+      {int? id,
+      @JsonKey(name: 'user_id') int? userId,
       String? name,
       String? organization,
       String? date,
       String? link,
       @JsonKey(name: 'credential_id') String? credentialId,
-      int? order});
+      int? order,
+      @JsonKey(name: 'updated_on') String? updatedOn,
+      @JsonKey(name: 'updated_ts') String? updatedTs,
+      @JsonKey(name: 'created_ts') String? createdTs});
 }
 
 /// @nodoc
@@ -65,6 +76,7 @@ class _$CertificateModelCopyWithImpl<$Res, $Val extends CertificateModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? userId = freezed,
     Object? name = freezed,
     Object? organization = freezed,
@@ -72,8 +84,15 @@ class _$CertificateModelCopyWithImpl<$Res, $Val extends CertificateModel>
     Object? link = freezed,
     Object? credentialId = freezed,
     Object? order = freezed,
+    Object? updatedOn = freezed,
+    Object? updatedTs = freezed,
+    Object? createdTs = freezed,
   }) {
     return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -102,6 +121,18 @@ class _$CertificateModelCopyWithImpl<$Res, $Val extends CertificateModel>
           ? _value.order
           : order // ignore: cast_nullable_to_non_nullable
               as int?,
+      updatedOn: freezed == updatedOn
+          ? _value.updatedOn
+          : updatedOn // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updatedTs: freezed == updatedTs
+          ? _value.updatedTs
+          : updatedTs // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createdTs: freezed == createdTs
+          ? _value.createdTs
+          : createdTs // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -115,13 +146,17 @@ abstract class _$$CertificateModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'user_id') int? userId,
+      {int? id,
+      @JsonKey(name: 'user_id') int? userId,
       String? name,
       String? organization,
       String? date,
       String? link,
       @JsonKey(name: 'credential_id') String? credentialId,
-      int? order});
+      int? order,
+      @JsonKey(name: 'updated_on') String? updatedOn,
+      @JsonKey(name: 'updated_ts') String? updatedTs,
+      @JsonKey(name: 'created_ts') String? createdTs});
 }
 
 /// @nodoc
@@ -135,6 +170,7 @@ class __$$CertificateModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? userId = freezed,
     Object? name = freezed,
     Object? organization = freezed,
@@ -142,8 +178,15 @@ class __$$CertificateModelImplCopyWithImpl<$Res>
     Object? link = freezed,
     Object? credentialId = freezed,
     Object? order = freezed,
+    Object? updatedOn = freezed,
+    Object? updatedTs = freezed,
+    Object? createdTs = freezed,
   }) {
     return _then(_$CertificateModelImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       userId: freezed == userId
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -172,6 +215,18 @@ class __$$CertificateModelImplCopyWithImpl<$Res>
           ? _value.order
           : order // ignore: cast_nullable_to_non_nullable
               as int?,
+      updatedOn: freezed == updatedOn
+          ? _value.updatedOn
+          : updatedOn // ignore: cast_nullable_to_non_nullable
+              as String?,
+      updatedTs: freezed == updatedTs
+          ? _value.updatedTs
+          : updatedTs // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createdTs: freezed == createdTs
+          ? _value.createdTs
+          : createdTs // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -180,17 +235,24 @@ class __$$CertificateModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CertificateModelImpl implements _CertificateModel {
   const _$CertificateModelImpl(
-      {@JsonKey(name: 'user_id') this.userId = 0,
+      {this.id = 0,
+      @JsonKey(name: 'user_id') this.userId = 0,
       this.name,
       this.organization,
       this.date,
       this.link = "https://www.example.com",
       @JsonKey(name: 'credential_id') this.credentialId,
-      this.order});
+      this.order,
+      @JsonKey(name: 'updated_on') this.updatedOn,
+      @JsonKey(name: 'updated_ts') this.updatedTs,
+      @JsonKey(name: 'created_ts') this.createdTs});
 
   factory _$CertificateModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$CertificateModelImplFromJson(json);
 
+  @override
+  @JsonKey()
+  final int? id;
   @override
   @JsonKey(name: 'user_id')
   final int? userId;
@@ -208,10 +270,19 @@ class _$CertificateModelImpl implements _CertificateModel {
   final String? credentialId;
   @override
   final int? order;
+  @override
+  @JsonKey(name: 'updated_on')
+  final String? updatedOn;
+  @override
+  @JsonKey(name: 'updated_ts')
+  final String? updatedTs;
+  @override
+  @JsonKey(name: 'created_ts')
+  final String? createdTs;
 
   @override
   String toString() {
-    return 'CertificateModel(userId: $userId, name: $name, organization: $organization, date: $date, link: $link, credentialId: $credentialId, order: $order)';
+    return 'CertificateModel(id: $id, userId: $userId, name: $name, organization: $organization, date: $date, link: $link, credentialId: $credentialId, order: $order, updatedOn: $updatedOn, updatedTs: $updatedTs, createdTs: $createdTs)';
   }
 
   @override
@@ -219,6 +290,7 @@ class _$CertificateModelImpl implements _CertificateModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CertificateModelImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.userId, userId) || other.userId == userId) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.organization, organization) ||
@@ -227,13 +299,19 @@ class _$CertificateModelImpl implements _CertificateModel {
             (identical(other.link, link) || other.link == link) &&
             (identical(other.credentialId, credentialId) ||
                 other.credentialId == credentialId) &&
-            (identical(other.order, order) || other.order == order));
+            (identical(other.order, order) || other.order == order) &&
+            (identical(other.updatedOn, updatedOn) ||
+                other.updatedOn == updatedOn) &&
+            (identical(other.updatedTs, updatedTs) ||
+                other.updatedTs == updatedTs) &&
+            (identical(other.createdTs, createdTs) ||
+                other.createdTs == createdTs));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, userId, name, organization, date, link, credentialId, order);
+  int get hashCode => Object.hash(runtimeType, id, userId, name, organization,
+      date, link, credentialId, order, updatedOn, updatedTs, createdTs);
 
   @JsonKey(ignore: true)
   @override
@@ -252,17 +330,24 @@ class _$CertificateModelImpl implements _CertificateModel {
 
 abstract class _CertificateModel implements CertificateModel {
   const factory _CertificateModel(
-      {@JsonKey(name: 'user_id') final int? userId,
-      final String? name,
-      final String? organization,
-      final String? date,
-      final String? link,
-      @JsonKey(name: 'credential_id') final String? credentialId,
-      final int? order}) = _$CertificateModelImpl;
+          {final int? id,
+          @JsonKey(name: 'user_id') final int? userId,
+          final String? name,
+          final String? organization,
+          final String? date,
+          final String? link,
+          @JsonKey(name: 'credential_id') final String? credentialId,
+          final int? order,
+          @JsonKey(name: 'updated_on') final String? updatedOn,
+          @JsonKey(name: 'updated_ts') final String? updatedTs,
+          @JsonKey(name: 'created_ts') final String? createdTs}) =
+      _$CertificateModelImpl;
 
   factory _CertificateModel.fromJson(Map<String, dynamic> json) =
       _$CertificateModelImpl.fromJson;
 
+  @override
+  int? get id;
   @override
   @JsonKey(name: 'user_id')
   int? get userId;
@@ -279,6 +364,15 @@ abstract class _CertificateModel implements CertificateModel {
   String? get credentialId;
   @override
   int? get order;
+  @override
+  @JsonKey(name: 'updated_on')
+  String? get updatedOn;
+  @override
+  @JsonKey(name: 'updated_ts')
+  String? get updatedTs;
+  @override
+  @JsonKey(name: 'created_ts')
+  String? get createdTs;
   @override
   @JsonKey(ignore: true)
   _$$CertificateModelImplCopyWith<_$CertificateModelImpl> get copyWith =>
