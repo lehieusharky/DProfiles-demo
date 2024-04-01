@@ -23,8 +23,8 @@ class CreateDigitalProfileEvent with _$CreateDigitalProfileEvent {
   const factory CreateDigitalProfileEvent.getCertificateInfo(String id) =
       GetCertificateInfo;
 
-  const factory CreateDigitalProfileEvent.deleteUserCertificate(String id) =
-      DeleteUserCertificate;
+  const factory CreateDigitalProfileEvent.deleteUserCertificate(
+      CertificateModel certificateModel) = DeleteUserCertificate;
 
   const factory CreateDigitalProfileEvent.updateUserCertificate(
       String id, CertificateModel certificateModel) = UpdateUserCertificate;
@@ -40,8 +40,8 @@ class CreateDigitalProfileEvent with _$CreateDigitalProfileEvent {
   const factory CreateDigitalProfileEvent.getEducationInfo(String id) =
       GetEducationInfo;
 
-  const factory CreateDigitalProfileEvent.deleteUserEducation(String id) =
-      DeleteUserEducation;
+  const factory CreateDigitalProfileEvent.deleteUserEducation(
+      EducationModel ed) = DeleteUserEducation;
 
   const factory CreateDigitalProfileEvent.updateUserEducation(
       String id, EducationModel educationModel) = UpdateUserEducation;
@@ -57,9 +57,12 @@ class CreateDigitalProfileEvent with _$CreateDigitalProfileEvent {
   const factory CreateDigitalProfileEvent.getExperienceInfo(String id) =
       GetExperienceInfo;
 
-  const factory CreateDigitalProfileEvent.deleteUserExperience(String id) =
-      DeleteUserExperience;
+  const factory CreateDigitalProfileEvent.deleteUserExperience(
+      ExperienceModel experienceModel) = DeleteUserExperience;
 
   const factory CreateDigitalProfileEvent.updateUserExperience(
       String id, ExperienceModel experienceModel) = UpdateUserExperience;
+
+  const factory CreateDigitalProfileEvent.saveUpdatedProfile() =
+      SaveUpdatedProfile;
 }

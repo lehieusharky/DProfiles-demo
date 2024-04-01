@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
@@ -9,11 +10,9 @@ import 'package:flutter/material.dart';
 import 'navigation_step_create_digital_profile.dart';
 
 class HeaderCreateDigitalProfile extends StatelessWidget {
-  final void Function(int index)? onPressed;
   final TabController controller;
 
-  const HeaderCreateDigitalProfile(
-      {super.key, this.onPressed, required this.controller});
+  const HeaderCreateDigitalProfile({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -38,22 +37,19 @@ class HeaderCreateDigitalProfile extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(
-            IconsaxOutline.arrow_left,
-            color: MyColor.getWhite,
-            size: 25,
-          ),
+          const Icon(IconsaxOutline.arrow_left,
+              color: MyColor.getWhite, size: 25),
           Row(
             children: [
               Expanded(
-                child: Text('Create Digital Profile on the Blockchain',
-                    style: AppFont()
-                        .fontTheme(context,
-                            weight: FontWeight.w600,
-                            height: 1.3,
-                            color: MyColor.getWhite)
-                        .titleSmall),
-              ),
+                  child: Text(
+                      appLocal(context).createDigitalProfileOnTheBlockchain,
+                      style: AppFont()
+                          .fontTheme(context,
+                              weight: FontWeight.w600,
+                              height: 1.3,
+                              color: MyColor.getWhite)
+                          .titleSmall)),
               _buildIcon(context),
             ],
           ),

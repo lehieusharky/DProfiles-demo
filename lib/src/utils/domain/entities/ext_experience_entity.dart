@@ -2,11 +2,11 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
-import 'package:demo_dprofiles/src/utils/data/models/add_user_education_model.dart';
+import 'package:demo_dprofiles/src/utils/data/models/experiance_model.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
-extension EducationModelExt on EducationModel {
+extension ExperienceModelExt on ExperienceModel {
   Widget toItem(BuildContext context,
       {VoidCallback? onDelete, VoidCallback? onUpdate}) {
     return Padding(
@@ -29,9 +29,9 @@ extension EducationModelExt on EducationModel {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (schoolName != null)
+                    if (companyName != null)
                       Text(
-                        schoolName!,
+                        companyName!,
                         style: AppFont()
                             .fontTheme(context, weight: FontWeight.bold)
                             .bodyLarge,

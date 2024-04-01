@@ -26,22 +26,25 @@ mixin _$CreateDigitalProfileEvent {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -53,21 +56,22 @@ mixin _$CreateDigitalProfileEvent {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -79,21 +83,22 @@ mixin _$CreateDigitalProfileEvent {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,6 +125,7 @@ mixin _$CreateDigitalProfileEvent {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -143,6 +149,7 @@ mixin _$CreateDigitalProfileEvent {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -166,6 +173,7 @@ mixin _$CreateDigitalProfileEvent {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -236,22 +244,25 @@ class _$StartedImpl implements _Started {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return started();
   }
@@ -266,21 +277,22 @@ class _$StartedImpl implements _Started {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return started?.call();
   }
@@ -295,21 +307,22 @@ class _$StartedImpl implements _Started {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -342,6 +355,7 @@ class _$StartedImpl implements _Started {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return started(this);
   }
@@ -368,6 +382,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return started?.call(this);
   }
@@ -394,6 +409,7 @@ class _$StartedImpl implements _Started {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -481,22 +497,25 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return changeCreationStep(isNext);
   }
@@ -511,21 +530,22 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return changeCreationStep?.call(isNext);
   }
@@ -540,21 +560,22 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (changeCreationStep != null) {
@@ -587,6 +608,7 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return changeCreationStep(this);
   }
@@ -613,6 +635,7 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return changeCreationStep?.call(this);
   }
@@ -639,6 +662,7 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (changeCreationStep != null) {
@@ -741,22 +765,25 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return updateUserInfo(param);
   }
@@ -771,21 +798,22 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return updateUserInfo?.call(param);
   }
@@ -800,21 +828,22 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (updateUserInfo != null) {
@@ -847,6 +876,7 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return updateUserInfo(this);
   }
@@ -873,6 +903,7 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return updateUserInfo?.call(this);
   }
@@ -899,6 +930,7 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (updateUserInfo != null) {
@@ -964,22 +996,25 @@ class _$GetUserInfoImpl implements GetUserInfo {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return getUserInfo();
   }
@@ -994,21 +1029,22 @@ class _$GetUserInfoImpl implements GetUserInfo {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return getUserInfo?.call();
   }
@@ -1023,21 +1059,22 @@ class _$GetUserInfoImpl implements GetUserInfo {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -1070,6 +1107,7 @@ class _$GetUserInfoImpl implements GetUserInfo {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return getUserInfo(this);
   }
@@ -1096,6 +1134,7 @@ class _$GetUserInfoImpl implements GetUserInfo {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return getUserInfo?.call(this);
   }
@@ -1122,6 +1161,7 @@ class _$GetUserInfoImpl implements GetUserInfo {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -1183,22 +1223,25 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return getUserCertificates();
   }
@@ -1213,21 +1256,22 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return getUserCertificates?.call();
   }
@@ -1242,21 +1286,22 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -1289,6 +1334,7 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return getUserCertificates(this);
   }
@@ -1315,6 +1361,7 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return getUserCertificates?.call(this);
   }
@@ -1341,6 +1388,7 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -1439,22 +1487,25 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return addUserCertificates(certificateModel);
   }
@@ -1469,21 +1520,22 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return addUserCertificates?.call(certificateModel);
   }
@@ -1498,21 +1550,22 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (addUserCertificates != null) {
@@ -1545,6 +1598,7 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return addUserCertificates(this);
   }
@@ -1571,6 +1625,7 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return addUserCertificates?.call(this);
   }
@@ -1597,6 +1652,7 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (addUserCertificates != null) {
@@ -1690,22 +1746,25 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return getCertificateInfo(id);
   }
@@ -1720,21 +1779,22 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return getCertificateInfo?.call(id);
   }
@@ -1749,21 +1809,22 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getCertificateInfo != null) {
@@ -1796,6 +1857,7 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return getCertificateInfo(this);
   }
@@ -1822,6 +1884,7 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return getCertificateInfo?.call(this);
   }
@@ -1848,6 +1911,7 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getCertificateInfo != null) {
@@ -1873,7 +1937,9 @@ abstract class _$$DeleteUserCertificateImplCopyWith<$Res> {
           $Res Function(_$DeleteUserCertificateImpl) then) =
       __$$DeleteUserCertificateImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String id});
+  $Res call({CertificateModel certificateModel});
+
+  $CertificateModelCopyWith<$Res> get certificateModel;
 }
 
 /// @nodoc
@@ -1888,28 +1954,36 @@ class __$$DeleteUserCertificateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? certificateModel = null,
   }) {
     return _then(_$DeleteUserCertificateImpl(
-      null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
+      null == certificateModel
+          ? _value.certificateModel
+          : certificateModel // ignore: cast_nullable_to_non_nullable
+              as CertificateModel,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CertificateModelCopyWith<$Res> get certificateModel {
+    return $CertificateModelCopyWith<$Res>(_value.certificateModel, (value) {
+      return _then(_value.copyWith(certificateModel: value));
+    });
   }
 }
 
 /// @nodoc
 
 class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
-  const _$DeleteUserCertificateImpl(this.id);
+  const _$DeleteUserCertificateImpl(this.certificateModel);
 
   @override
-  final String id;
+  final CertificateModel certificateModel;
 
   @override
   String toString() {
-    return 'CreateDigitalProfileEvent.deleteUserCertificate(id: $id)';
+    return 'CreateDigitalProfileEvent.deleteUserCertificate(certificateModel: $certificateModel)';
   }
 
   @override
@@ -1917,11 +1991,12 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeleteUserCertificateImpl &&
-            (identical(other.id, id) || other.id == id));
+            (identical(other.certificateModel, certificateModel) ||
+                other.certificateModel == certificateModel));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id);
+  int get hashCode => Object.hash(runtimeType, certificateModel);
 
   @JsonKey(ignore: true)
   @override
@@ -1941,24 +2016,27 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
-    return deleteUserCertificate(id);
+    return deleteUserCertificate(certificateModel);
   }
 
   @override
@@ -1971,23 +2049,24 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
-    return deleteUserCertificate?.call(id);
+    return deleteUserCertificate?.call(certificateModel);
   }
 
   @override
@@ -2000,25 +2079,26 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (deleteUserCertificate != null) {
-      return deleteUserCertificate(id);
+      return deleteUserCertificate(certificateModel);
     }
     return orElse();
   }
@@ -2047,6 +2127,7 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return deleteUserCertificate(this);
   }
@@ -2073,6 +2154,7 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return deleteUserCertificate?.call(this);
   }
@@ -2099,6 +2181,7 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (deleteUserCertificate != null) {
@@ -2109,10 +2192,10 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
 }
 
 abstract class DeleteUserCertificate implements CreateDigitalProfileEvent {
-  const factory DeleteUserCertificate(final String id) =
+  const factory DeleteUserCertificate(final CertificateModel certificateModel) =
       _$DeleteUserCertificateImpl;
 
-  String get id;
+  CertificateModel get certificateModel;
   @JsonKey(ignore: true)
   _$$DeleteUserCertificateImplCopyWith<_$DeleteUserCertificateImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2212,22 +2295,25 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return updateUserCertificate(id, certificateModel);
   }
@@ -2242,21 +2328,22 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return updateUserCertificate?.call(id, certificateModel);
   }
@@ -2271,21 +2358,22 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (updateUserCertificate != null) {
@@ -2318,6 +2406,7 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return updateUserCertificate(this);
   }
@@ -2344,6 +2433,7 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return updateUserCertificate?.call(this);
   }
@@ -2370,6 +2460,7 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (updateUserCertificate != null) {
@@ -2438,22 +2529,25 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return getUserEducations();
   }
@@ -2468,21 +2562,22 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return getUserEducations?.call();
   }
@@ -2497,21 +2592,22 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -2544,6 +2640,7 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return getUserEducations(this);
   }
@@ -2570,6 +2667,7 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return getUserEducations?.call(this);
   }
@@ -2596,6 +2694,7 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -2694,22 +2793,25 @@ class _$AddUserEducationImpl implements AddUserEducation {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return addUserEducations(educationModel);
   }
@@ -2724,21 +2826,22 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return addUserEducations?.call(educationModel);
   }
@@ -2753,21 +2856,22 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (addUserEducations != null) {
@@ -2800,6 +2904,7 @@ class _$AddUserEducationImpl implements AddUserEducation {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return addUserEducations(this);
   }
@@ -2826,6 +2931,7 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return addUserEducations?.call(this);
   }
@@ -2852,6 +2958,7 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (addUserEducations != null) {
@@ -2945,22 +3052,25 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return getEducationInfo(id);
   }
@@ -2975,21 +3085,22 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return getEducationInfo?.call(id);
   }
@@ -3004,21 +3115,22 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getEducationInfo != null) {
@@ -3051,6 +3163,7 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return getEducationInfo(this);
   }
@@ -3077,6 +3190,7 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return getEducationInfo?.call(this);
   }
@@ -3103,6 +3217,7 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getEducationInfo != null) {
@@ -3127,7 +3242,9 @@ abstract class _$$DeleteUserEducationImplCopyWith<$Res> {
           $Res Function(_$DeleteUserEducationImpl) then) =
       __$$DeleteUserEducationImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String id});
+  $Res call({EducationModel ed});
+
+  $EducationModelCopyWith<$Res> get ed;
 }
 
 /// @nodoc
@@ -3142,28 +3259,36 @@ class __$$DeleteUserEducationImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? ed = null,
   }) {
     return _then(_$DeleteUserEducationImpl(
-      null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
+      null == ed
+          ? _value.ed
+          : ed // ignore: cast_nullable_to_non_nullable
+              as EducationModel,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EducationModelCopyWith<$Res> get ed {
+    return $EducationModelCopyWith<$Res>(_value.ed, (value) {
+      return _then(_value.copyWith(ed: value));
+    });
   }
 }
 
 /// @nodoc
 
 class _$DeleteUserEducationImpl implements DeleteUserEducation {
-  const _$DeleteUserEducationImpl(this.id);
+  const _$DeleteUserEducationImpl(this.ed);
 
   @override
-  final String id;
+  final EducationModel ed;
 
   @override
   String toString() {
-    return 'CreateDigitalProfileEvent.deleteUserEducation(id: $id)';
+    return 'CreateDigitalProfileEvent.deleteUserEducation(ed: $ed)';
   }
 
   @override
@@ -3171,11 +3296,11 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeleteUserEducationImpl &&
-            (identical(other.id, id) || other.id == id));
+            (identical(other.ed, ed) || other.ed == ed));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id);
+  int get hashCode => Object.hash(runtimeType, ed);
 
   @JsonKey(ignore: true)
   @override
@@ -3195,24 +3320,27 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
-    return deleteUserEducation(id);
+    return deleteUserEducation(ed);
   }
 
   @override
@@ -3225,23 +3353,24 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
-    return deleteUserEducation?.call(id);
+    return deleteUserEducation?.call(ed);
   }
 
   @override
@@ -3254,25 +3383,26 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (deleteUserEducation != null) {
-      return deleteUserEducation(id);
+      return deleteUserEducation(ed);
     }
     return orElse();
   }
@@ -3301,6 +3431,7 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return deleteUserEducation(this);
   }
@@ -3327,6 +3458,7 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return deleteUserEducation?.call(this);
   }
@@ -3353,6 +3485,7 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (deleteUserEducation != null) {
@@ -3363,10 +3496,10 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
 }
 
 abstract class DeleteUserEducation implements CreateDigitalProfileEvent {
-  const factory DeleteUserEducation(final String id) =
+  const factory DeleteUserEducation(final EducationModel ed) =
       _$DeleteUserEducationImpl;
 
-  String get id;
+  EducationModel get ed;
   @JsonKey(ignore: true)
   _$$DeleteUserEducationImplCopyWith<_$DeleteUserEducationImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -3465,22 +3598,25 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return updateUserEducation(id, educationModel);
   }
@@ -3495,21 +3631,22 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return updateUserEducation?.call(id, educationModel);
   }
@@ -3524,21 +3661,22 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (updateUserEducation != null) {
@@ -3571,6 +3709,7 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return updateUserEducation(this);
   }
@@ -3597,6 +3736,7 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return updateUserEducation?.call(this);
   }
@@ -3623,6 +3763,7 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (updateUserEducation != null) {
@@ -3691,22 +3832,25 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return getUserExperiences();
   }
@@ -3721,21 +3865,22 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return getUserExperiences?.call();
   }
@@ -3750,21 +3895,22 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -3797,6 +3943,7 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return getUserExperiences(this);
   }
@@ -3823,6 +3970,7 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return getUserExperiences?.call(this);
   }
@@ -3849,6 +3997,7 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -3947,22 +4096,25 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return addUserExperiences(experienceModel);
   }
@@ -3977,21 +4129,22 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return addUserExperiences?.call(experienceModel);
   }
@@ -4006,21 +4159,22 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (addUserExperiences != null) {
@@ -4053,6 +4207,7 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return addUserExperiences(this);
   }
@@ -4079,6 +4234,7 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return addUserExperiences?.call(this);
   }
@@ -4105,6 +4261,7 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (addUserExperiences != null) {
@@ -4198,22 +4355,25 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return getExperienceInfo(id);
   }
@@ -4228,21 +4388,22 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return getExperienceInfo?.call(id);
   }
@@ -4257,21 +4418,22 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getExperienceInfo != null) {
@@ -4304,6 +4466,7 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return getExperienceInfo(this);
   }
@@ -4330,6 +4493,7 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return getExperienceInfo?.call(this);
   }
@@ -4356,6 +4520,7 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (getExperienceInfo != null) {
@@ -4380,7 +4545,9 @@ abstract class _$$DeleteUserExperienceImplCopyWith<$Res> {
           $Res Function(_$DeleteUserExperienceImpl) then) =
       __$$DeleteUserExperienceImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String id});
+  $Res call({ExperienceModel experienceModel});
+
+  $ExperienceModelCopyWith<$Res> get experienceModel;
 }
 
 /// @nodoc
@@ -4395,28 +4562,36 @@ class __$$DeleteUserExperienceImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
+    Object? experienceModel = null,
   }) {
     return _then(_$DeleteUserExperienceImpl(
-      null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
+      null == experienceModel
+          ? _value.experienceModel
+          : experienceModel // ignore: cast_nullable_to_non_nullable
+              as ExperienceModel,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ExperienceModelCopyWith<$Res> get experienceModel {
+    return $ExperienceModelCopyWith<$Res>(_value.experienceModel, (value) {
+      return _then(_value.copyWith(experienceModel: value));
+    });
   }
 }
 
 /// @nodoc
 
 class _$DeleteUserExperienceImpl implements DeleteUserExperience {
-  const _$DeleteUserExperienceImpl(this.id);
+  const _$DeleteUserExperienceImpl(this.experienceModel);
 
   @override
-  final String id;
+  final ExperienceModel experienceModel;
 
   @override
   String toString() {
-    return 'CreateDigitalProfileEvent.deleteUserExperience(id: $id)';
+    return 'CreateDigitalProfileEvent.deleteUserExperience(experienceModel: $experienceModel)';
   }
 
   @override
@@ -4424,11 +4599,12 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeleteUserExperienceImpl &&
-            (identical(other.id, id) || other.id == id));
+            (identical(other.experienceModel, experienceModel) ||
+                other.experienceModel == experienceModel));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id);
+  int get hashCode => Object.hash(runtimeType, experienceModel);
 
   @JsonKey(ignore: true)
   @override
@@ -4449,24 +4625,27 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
-    return deleteUserExperience(id);
+    return deleteUserExperience(experienceModel);
   }
 
   @override
@@ -4479,23 +4658,24 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
-    return deleteUserExperience?.call(id);
+    return deleteUserExperience?.call(experienceModel);
   }
 
   @override
@@ -4508,25 +4688,26 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (deleteUserExperience != null) {
-      return deleteUserExperience(id);
+      return deleteUserExperience(experienceModel);
     }
     return orElse();
   }
@@ -4555,6 +4736,7 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return deleteUserExperience(this);
   }
@@ -4581,6 +4763,7 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return deleteUserExperience?.call(this);
   }
@@ -4607,6 +4790,7 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (deleteUserExperience != null) {
@@ -4617,10 +4801,10 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
 }
 
 abstract class DeleteUserExperience implements CreateDigitalProfileEvent {
-  const factory DeleteUserExperience(final String id) =
+  const factory DeleteUserExperience(final ExperienceModel experienceModel) =
       _$DeleteUserExperienceImpl;
 
-  String get id;
+  ExperienceModel get experienceModel;
   @JsonKey(ignore: true)
   _$$DeleteUserExperienceImplCopyWith<_$DeleteUserExperienceImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4720,22 +4904,25 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
     required TResult Function(String id) getCertificateInfo,
-    required TResult Function(String id) deleteUserCertificate,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
     required TResult Function(String id, CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function() getUserEducations,
     required TResult Function(EducationModel educationModel) addUserEducations,
     required TResult Function(String id) getEducationInfo,
-    required TResult Function(String id) deleteUserEducation,
+    required TResult Function(EducationModel ed) deleteUserEducation,
     required TResult Function(String id, EducationModel educationModel)
         updateUserEducation,
     required TResult Function() getUserExperiences,
     required TResult Function(ExperienceModel experienceModel)
         addUserExperiences,
     required TResult Function(String id) getExperienceInfo,
-    required TResult Function(String id) deleteUserExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
   }) {
     return updateUserExperience(id, experienceModel);
   }
@@ -4750,21 +4937,22 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
-    TResult? Function(String id)? deleteUserCertificate,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult? Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult? Function()? getUserEducations,
     TResult? Function(EducationModel educationModel)? addUserEducations,
     TResult? Function(String id)? getEducationInfo,
-    TResult? Function(String id)? deleteUserEducation,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
     TResult? Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult? Function()? getUserExperiences,
     TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult? Function(String id)? getExperienceInfo,
-    TResult? Function(String id)? deleteUserExperience,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
   }) {
     return updateUserExperience?.call(id, experienceModel);
   }
@@ -4779,21 +4967,22 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
-    TResult Function(String id)? deleteUserCertificate,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
     TResult Function(String id, CertificateModel certificateModel)?
         updateUserCertificate,
     TResult Function()? getUserEducations,
     TResult Function(EducationModel educationModel)? addUserEducations,
     TResult Function(String id)? getEducationInfo,
-    TResult Function(String id)? deleteUserEducation,
+    TResult Function(EducationModel ed)? deleteUserEducation,
     TResult Function(String id, EducationModel educationModel)?
         updateUserEducation,
     TResult Function()? getUserExperiences,
     TResult Function(ExperienceModel experienceModel)? addUserExperiences,
     TResult Function(String id)? getExperienceInfo,
-    TResult Function(String id)? deleteUserExperience,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (updateUserExperience != null) {
@@ -4826,6 +5015,7 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     required TResult Function(GetExperienceInfo value) getExperienceInfo,
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
   }) {
     return updateUserExperience(this);
   }
@@ -4852,6 +5042,7 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     TResult? Function(GetExperienceInfo value)? getExperienceInfo,
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
   }) {
     return updateUserExperience?.call(this);
   }
@@ -4878,6 +5069,7 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     TResult Function(GetExperienceInfo value)? getExperienceInfo,
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
     required TResult orElse(),
   }) {
     if (updateUserExperience != null) {
@@ -4900,6 +5092,232 @@ abstract class UpdateUserExperience implements CreateDigitalProfileEvent {
 }
 
 /// @nodoc
+abstract class _$$SaveUpdatedProfileImplCopyWith<$Res> {
+  factory _$$SaveUpdatedProfileImplCopyWith(_$SaveUpdatedProfileImpl value,
+          $Res Function(_$SaveUpdatedProfileImpl) then) =
+      __$$SaveUpdatedProfileImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SaveUpdatedProfileImplCopyWithImpl<$Res>
+    extends _$CreateDigitalProfileEventCopyWithImpl<$Res,
+        _$SaveUpdatedProfileImpl>
+    implements _$$SaveUpdatedProfileImplCopyWith<$Res> {
+  __$$SaveUpdatedProfileImplCopyWithImpl(_$SaveUpdatedProfileImpl _value,
+      $Res Function(_$SaveUpdatedProfileImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
+  const _$SaveUpdatedProfileImpl();
+
+  @override
+  String toString() {
+    return 'CreateDigitalProfileEvent.saveUpdatedProfile()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SaveUpdatedProfileImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function(UserInfoModel param) updateUserInfo,
+    required TResult Function() getUserInfo,
+    required TResult Function() getUserCertificates,
+    required TResult Function(CertificateModel certificateModel)
+        addUserCertificates,
+    required TResult Function(String id) getCertificateInfo,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
+    required TResult Function(String id, CertificateModel certificateModel)
+        updateUserCertificate,
+    required TResult Function() getUserEducations,
+    required TResult Function(EducationModel educationModel) addUserEducations,
+    required TResult Function(String id) getEducationInfo,
+    required TResult Function(EducationModel ed) deleteUserEducation,
+    required TResult Function(String id, EducationModel educationModel)
+        updateUserEducation,
+    required TResult Function() getUserExperiences,
+    required TResult Function(ExperienceModel experienceModel)
+        addUserExperiences,
+    required TResult Function(String id) getExperienceInfo,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
+    required TResult Function(String id, ExperienceModel experienceModel)
+        updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
+  }) {
+    return saveUpdatedProfile();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function(UserInfoModel param)? updateUserInfo,
+    TResult? Function()? getUserInfo,
+    TResult? Function()? getUserCertificates,
+    TResult? Function(CertificateModel certificateModel)? addUserCertificates,
+    TResult? Function(String id)? getCertificateInfo,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
+    TResult? Function(String id, CertificateModel certificateModel)?
+        updateUserCertificate,
+    TResult? Function()? getUserEducations,
+    TResult? Function(EducationModel educationModel)? addUserEducations,
+    TResult? Function(String id)? getEducationInfo,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
+    TResult? Function(String id, EducationModel educationModel)?
+        updateUserEducation,
+    TResult? Function()? getUserExperiences,
+    TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
+    TResult? Function(String id)? getExperienceInfo,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
+    TResult? Function(String id, ExperienceModel experienceModel)?
+        updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
+  }) {
+    return saveUpdatedProfile?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function(UserInfoModel param)? updateUserInfo,
+    TResult Function()? getUserInfo,
+    TResult Function()? getUserCertificates,
+    TResult Function(CertificateModel certificateModel)? addUserCertificates,
+    TResult Function(String id)? getCertificateInfo,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
+    TResult Function(String id, CertificateModel certificateModel)?
+        updateUserCertificate,
+    TResult Function()? getUserEducations,
+    TResult Function(EducationModel educationModel)? addUserEducations,
+    TResult Function(String id)? getEducationInfo,
+    TResult Function(EducationModel ed)? deleteUserEducation,
+    TResult Function(String id, EducationModel educationModel)?
+        updateUserEducation,
+    TResult Function()? getUserExperiences,
+    TResult Function(ExperienceModel experienceModel)? addUserExperiences,
+    TResult Function(String id)? getExperienceInfo,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
+    TResult Function(String id, ExperienceModel experienceModel)?
+        updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
+    required TResult orElse(),
+  }) {
+    if (saveUpdatedProfile != null) {
+      return saveUpdatedProfile();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ChangeCreationStep value) changeCreationStep,
+    required TResult Function(UpdateUserInfo value) updateUserInfo,
+    required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetUserCertificates value) getUserCertificates,
+    required TResult Function(AddUserCertificate value) addUserCertificates,
+    required TResult Function(GetCertificateInfo value) getCertificateInfo,
+    required TResult Function(DeleteUserCertificate value)
+        deleteUserCertificate,
+    required TResult Function(UpdateUserCertificate value)
+        updateUserCertificate,
+    required TResult Function(GetUserEducations value) getUserEducations,
+    required TResult Function(AddUserEducation value) addUserEducations,
+    required TResult Function(GetEducationInfo value) getEducationInfo,
+    required TResult Function(DeleteUserEducation value) deleteUserEducation,
+    required TResult Function(UpdateUserEducation value) updateUserEducation,
+    required TResult Function(GetUserExperiences value) getUserExperiences,
+    required TResult Function(AddUserExperience value) addUserExperiences,
+    required TResult Function(GetExperienceInfo value) getExperienceInfo,
+    required TResult Function(DeleteUserExperience value) deleteUserExperience,
+    required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+  }) {
+    return saveUpdatedProfile(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ChangeCreationStep value)? changeCreationStep,
+    TResult? Function(UpdateUserInfo value)? updateUserInfo,
+    TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetUserCertificates value)? getUserCertificates,
+    TResult? Function(AddUserCertificate value)? addUserCertificates,
+    TResult? Function(GetCertificateInfo value)? getCertificateInfo,
+    TResult? Function(DeleteUserCertificate value)? deleteUserCertificate,
+    TResult? Function(UpdateUserCertificate value)? updateUserCertificate,
+    TResult? Function(GetUserEducations value)? getUserEducations,
+    TResult? Function(AddUserEducation value)? addUserEducations,
+    TResult? Function(GetEducationInfo value)? getEducationInfo,
+    TResult? Function(DeleteUserEducation value)? deleteUserEducation,
+    TResult? Function(UpdateUserEducation value)? updateUserEducation,
+    TResult? Function(GetUserExperiences value)? getUserExperiences,
+    TResult? Function(AddUserExperience value)? addUserExperiences,
+    TResult? Function(GetExperienceInfo value)? getExperienceInfo,
+    TResult? Function(DeleteUserExperience value)? deleteUserExperience,
+    TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+  }) {
+    return saveUpdatedProfile?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ChangeCreationStep value)? changeCreationStep,
+    TResult Function(UpdateUserInfo value)? updateUserInfo,
+    TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetUserCertificates value)? getUserCertificates,
+    TResult Function(AddUserCertificate value)? addUserCertificates,
+    TResult Function(GetCertificateInfo value)? getCertificateInfo,
+    TResult Function(DeleteUserCertificate value)? deleteUserCertificate,
+    TResult Function(UpdateUserCertificate value)? updateUserCertificate,
+    TResult Function(GetUserEducations value)? getUserEducations,
+    TResult Function(AddUserEducation value)? addUserEducations,
+    TResult Function(GetEducationInfo value)? getEducationInfo,
+    TResult Function(DeleteUserEducation value)? deleteUserEducation,
+    TResult Function(UpdateUserEducation value)? updateUserEducation,
+    TResult Function(GetUserExperiences value)? getUserExperiences,
+    TResult Function(AddUserExperience value)? addUserExperiences,
+    TResult Function(GetExperienceInfo value)? getExperienceInfo,
+    TResult Function(DeleteUserExperience value)? deleteUserExperience,
+    TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    required TResult orElse(),
+  }) {
+    if (saveUpdatedProfile != null) {
+      return saveUpdatedProfile(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SaveUpdatedProfile implements CreateDigitalProfileEvent {
+  const factory SaveUpdatedProfile() = _$SaveUpdatedProfileImpl;
+}
+
+/// @nodoc
 mixin _$CreateDigitalProfileState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -4907,27 +5325,27 @@ mixin _$CreateDigitalProfileState {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -4936,23 +5354,25 @@ mixin _$CreateDigitalProfileState {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -4961,23 +5381,24 @@ mixin _$CreateDigitalProfileState {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -5021,6 +5442,8 @@ mixin _$CreateDigitalProfileState {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -5058,6 +5481,8 @@ mixin _$CreateDigitalProfileState {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -5094,6 +5519,8 @@ mixin _$CreateDigitalProfileState {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -5160,27 +5587,27 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return initial();
   }
@@ -5192,23 +5619,25 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return initial?.call();
   }
@@ -5220,23 +5649,24 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -5286,6 +5716,8 @@ class _$InitialImpl implements _Initial {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return initial(this);
   }
@@ -5326,6 +5758,8 @@ class _$InitialImpl implements _Initial {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return initial?.call(this);
   }
@@ -5365,6 +5799,8 @@ class _$InitialImpl implements _Initial {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -5424,27 +5860,27 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return loading();
   }
@@ -5456,23 +5892,25 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return loading?.call();
   }
@@ -5484,23 +5922,24 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -5550,6 +5989,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return loading(this);
   }
@@ -5590,6 +6031,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return loading?.call(this);
   }
@@ -5629,6 +6072,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -5733,27 +6178,27 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return error(message, title);
   }
@@ -5765,23 +6210,25 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -5793,23 +6240,24 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -5859,6 +6307,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return error(this);
   }
@@ -5899,6 +6349,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return error?.call(this);
   }
@@ -5938,6 +6390,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -6032,27 +6486,27 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return changeCreationStepSuccess(currentStep);
   }
@@ -6064,23 +6518,25 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return changeCreationStepSuccess?.call(currentStep);
   }
@@ -6092,23 +6548,24 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -6158,6 +6615,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return changeCreationStepSuccess(this);
   }
@@ -6198,6 +6657,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return changeCreationStepSuccess?.call(this);
   }
@@ -6237,6 +6698,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -6263,9 +6726,9 @@ abstract class _$$UpdateUserInfoSuccessImplCopyWith<$Res> {
           $Res Function(_$UpdateUserInfoSuccessImpl) then) =
       __$$UpdateUserInfoSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({BaseResponse response});
+  $Res call({BaseResponse? response});
 
-  $BaseResponseCopyWith<$Res> get response;
+  $BaseResponseCopyWith<$Res>? get response;
 }
 
 /// @nodoc
@@ -6280,20 +6743,24 @@ class __$$UpdateUserInfoSuccessImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? response = null,
+    Object? response = freezed,
   }) {
     return _then(_$UpdateUserInfoSuccessImpl(
-      null == response
+      response: freezed == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
-              as BaseResponse,
+              as BaseResponse?,
     ));
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $BaseResponseCopyWith<$Res> get response {
-    return $BaseResponseCopyWith<$Res>(_value.response, (value) {
+  $BaseResponseCopyWith<$Res>? get response {
+    if (_value.response == null) {
+      return null;
+    }
+
+    return $BaseResponseCopyWith<$Res>(_value.response!, (value) {
       return _then(_value.copyWith(response: value));
     });
   }
@@ -6302,10 +6769,10 @@ class __$$UpdateUserInfoSuccessImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
-  const _$UpdateUserInfoSuccessImpl(this.response);
+  const _$UpdateUserInfoSuccessImpl({this.response});
 
   @override
-  final BaseResponse response;
+  final BaseResponse? response;
 
   @override
   String toString() {
@@ -6338,27 +6805,27 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return updateUserInfoSuccess(response);
   }
@@ -6370,23 +6837,25 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return updateUserInfoSuccess?.call(response);
   }
@@ -6398,23 +6867,24 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserInfoSuccess != null) {
@@ -6464,6 +6934,8 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return updateUserInfoSuccess(this);
   }
@@ -6504,6 +6976,8 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return updateUserInfoSuccess?.call(this);
   }
@@ -6543,6 +7017,8 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserInfoSuccess != null) {
@@ -6553,10 +7029,10 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
 }
 
 abstract class UpdateUserInfoSuccess implements CreateDigitalProfileState {
-  const factory UpdateUserInfoSuccess(final BaseResponse response) =
+  const factory UpdateUserInfoSuccess({final BaseResponse? response}) =
       _$UpdateUserInfoSuccessImpl;
 
-  BaseResponse get response;
+  BaseResponse? get response;
   @JsonKey(ignore: true)
   _$$UpdateUserInfoSuccessImplCopyWith<_$UpdateUserInfoSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -6643,27 +7119,27 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return getUserInfoSuccess(response);
   }
@@ -6675,23 +7151,25 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return getUserInfoSuccess?.call(response);
   }
@@ -6703,23 +7181,24 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -6769,6 +7248,8 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return getUserInfoSuccess(this);
   }
@@ -6809,6 +7290,8 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return getUserInfoSuccess?.call(this);
   }
@@ -6848,6 +7331,8 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -6950,27 +7435,27 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return getUserCertificatesSuccess(response);
   }
@@ -6982,23 +7467,25 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return getUserCertificatesSuccess?.call(response);
   }
@@ -7010,23 +7497,24 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -7076,6 +7564,8 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return getUserCertificatesSuccess(this);
   }
@@ -7116,6 +7606,8 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return getUserCertificatesSuccess?.call(this);
   }
@@ -7155,6 +7647,8 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -7180,10 +7674,6 @@ abstract class _$$AddUserCertificateSuccessImplCopyWith<$Res> {
           _$AddUserCertificateSuccessImpl value,
           $Res Function(_$AddUserCertificateSuccessImpl) then) =
       __$$AddUserCertificateSuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({BaseResponse response});
-
-  $BaseResponseCopyWith<$Res> get response;
 }
 
 /// @nodoc
@@ -7195,60 +7685,27 @@ class __$$AddUserCertificateSuccessImplCopyWithImpl<$Res>
       _$AddUserCertificateSuccessImpl _value,
       $Res Function(_$AddUserCertificateSuccessImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? response = null,
-  }) {
-    return _then(_$AddUserCertificateSuccessImpl(
-      null == response
-          ? _value.response
-          : response // ignore: cast_nullable_to_non_nullable
-              as BaseResponse,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $BaseResponseCopyWith<$Res> get response {
-    return $BaseResponseCopyWith<$Res>(_value.response, (value) {
-      return _then(_value.copyWith(response: value));
-    });
-  }
 }
 
 /// @nodoc
 
 class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
-  const _$AddUserCertificateSuccessImpl(this.response);
-
-  @override
-  final BaseResponse response;
+  const _$AddUserCertificateSuccessImpl();
 
   @override
   String toString() {
-    return 'CreateDigitalProfileState.addUserCertificatesSuccess(response: $response)';
+    return 'CreateDigitalProfileState.addUserCertificatesSuccess()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddUserCertificateSuccessImpl &&
-            (identical(other.response, response) ||
-                other.response == response));
+            other is _$AddUserCertificateSuccessImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, response);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AddUserCertificateSuccessImplCopyWith<_$AddUserCertificateSuccessImpl>
-      get copyWith => __$$AddUserCertificateSuccessImplCopyWithImpl<
-          _$AddUserCertificateSuccessImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -7257,29 +7714,29 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
-    return addUserCertificatesSuccess(response);
+    return addUserCertificatesSuccess();
   }
 
   @override
@@ -7289,25 +7746,27 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
-    return addUserCertificatesSuccess?.call(response);
+    return addUserCertificatesSuccess?.call();
   }
 
   @override
@@ -7317,27 +7776,28 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (addUserCertificatesSuccess != null) {
-      return addUserCertificatesSuccess(response);
+      return addUserCertificatesSuccess();
     }
     return orElse();
   }
@@ -7383,6 +7843,8 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return addUserCertificatesSuccess(this);
   }
@@ -7423,6 +7885,8 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return addUserCertificatesSuccess?.call(this);
   }
@@ -7462,6 +7926,8 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (addUserCertificatesSuccess != null) {
@@ -7472,13 +7938,7 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
 }
 
 abstract class AddUserCertificateSuccess implements CreateDigitalProfileState {
-  const factory AddUserCertificateSuccess(final BaseResponse response) =
-      _$AddUserCertificateSuccessImpl;
-
-  BaseResponse get response;
-  @JsonKey(ignore: true)
-  _$$AddUserCertificateSuccessImplCopyWith<_$AddUserCertificateSuccessImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  const factory AddUserCertificateSuccess() = _$AddUserCertificateSuccessImpl;
 }
 
 /// @nodoc
@@ -7564,27 +8024,27 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return getCertificateInfoSuccess(response);
   }
@@ -7596,23 +8056,25 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return getCertificateInfoSuccess?.call(response);
   }
@@ -7624,23 +8086,24 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getCertificateInfoSuccess != null) {
@@ -7690,6 +8153,8 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return getCertificateInfoSuccess(this);
   }
@@ -7730,6 +8195,8 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return getCertificateInfoSuccess?.call(this);
   }
@@ -7769,6 +8236,8 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getCertificateInfoSuccess != null) {
@@ -7794,10 +8263,6 @@ abstract class _$$DeleteUserCertificateSuccessImplCopyWith<$Res> {
           _$DeleteUserCertificateSuccessImpl value,
           $Res Function(_$DeleteUserCertificateSuccessImpl) then) =
       __$$DeleteUserCertificateSuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({BaseResponse response});
-
-  $BaseResponseCopyWith<$Res> get response;
 }
 
 /// @nodoc
@@ -7809,62 +8274,28 @@ class __$$DeleteUserCertificateSuccessImplCopyWithImpl<$Res>
       _$DeleteUserCertificateSuccessImpl _value,
       $Res Function(_$DeleteUserCertificateSuccessImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? response = null,
-  }) {
-    return _then(_$DeleteUserCertificateSuccessImpl(
-      null == response
-          ? _value.response
-          : response // ignore: cast_nullable_to_non_nullable
-              as BaseResponse,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $BaseResponseCopyWith<$Res> get response {
-    return $BaseResponseCopyWith<$Res>(_value.response, (value) {
-      return _then(_value.copyWith(response: value));
-    });
-  }
 }
 
 /// @nodoc
 
 class _$DeleteUserCertificateSuccessImpl
     implements DeleteUserCertificateSuccess {
-  const _$DeleteUserCertificateSuccessImpl(this.response);
-
-  @override
-  final BaseResponse response;
+  const _$DeleteUserCertificateSuccessImpl();
 
   @override
   String toString() {
-    return 'CreateDigitalProfileState.deleteUserCertificateSuccess(response: $response)';
+    return 'CreateDigitalProfileState.deleteUserCertificateSuccess()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeleteUserCertificateSuccessImpl &&
-            (identical(other.response, response) ||
-                other.response == response));
+            other is _$DeleteUserCertificateSuccessImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, response);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DeleteUserCertificateSuccessImplCopyWith<
-          _$DeleteUserCertificateSuccessImpl>
-      get copyWith => __$$DeleteUserCertificateSuccessImplCopyWithImpl<
-          _$DeleteUserCertificateSuccessImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -7873,29 +8304,29 @@ class _$DeleteUserCertificateSuccessImpl
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
-    return deleteUserCertificateSuccess(response);
+    return deleteUserCertificateSuccess();
   }
 
   @override
@@ -7905,25 +8336,27 @@ class _$DeleteUserCertificateSuccessImpl
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
-    return deleteUserCertificateSuccess?.call(response);
+    return deleteUserCertificateSuccess?.call();
   }
 
   @override
@@ -7933,27 +8366,28 @@ class _$DeleteUserCertificateSuccessImpl
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (deleteUserCertificateSuccess != null) {
-      return deleteUserCertificateSuccess(response);
+      return deleteUserCertificateSuccess();
     }
     return orElse();
   }
@@ -7999,6 +8433,8 @@ class _$DeleteUserCertificateSuccessImpl
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return deleteUserCertificateSuccess(this);
   }
@@ -8039,6 +8475,8 @@ class _$DeleteUserCertificateSuccessImpl
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return deleteUserCertificateSuccess?.call(this);
   }
@@ -8078,6 +8516,8 @@ class _$DeleteUserCertificateSuccessImpl
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (deleteUserCertificateSuccess != null) {
@@ -8089,14 +8529,8 @@ class _$DeleteUserCertificateSuccessImpl
 
 abstract class DeleteUserCertificateSuccess
     implements CreateDigitalProfileState {
-  const factory DeleteUserCertificateSuccess(final BaseResponse response) =
+  const factory DeleteUserCertificateSuccess() =
       _$DeleteUserCertificateSuccessImpl;
-
-  BaseResponse get response;
-  @JsonKey(ignore: true)
-  _$$DeleteUserCertificateSuccessImplCopyWith<
-          _$DeleteUserCertificateSuccessImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -8184,27 +8618,27 @@ class _$UpdateUserCertificateSuccessImpl
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return updateUserCertificateSuccess(response);
   }
@@ -8216,23 +8650,25 @@ class _$UpdateUserCertificateSuccessImpl
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return updateUserCertificateSuccess?.call(response);
   }
@@ -8244,23 +8680,24 @@ class _$UpdateUserCertificateSuccessImpl
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserCertificateSuccess != null) {
@@ -8310,6 +8747,8 @@ class _$UpdateUserCertificateSuccessImpl
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return updateUserCertificateSuccess(this);
   }
@@ -8350,6 +8789,8 @@ class _$UpdateUserCertificateSuccessImpl
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return updateUserCertificateSuccess?.call(this);
   }
@@ -8389,6 +8830,8 @@ class _$UpdateUserCertificateSuccessImpl
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserCertificateSuccess != null) {
@@ -8417,9 +8860,7 @@ abstract class _$$GetUserEducationsSuccessImplCopyWith<$Res> {
           $Res Function(_$GetUserEducationsSuccessImpl) then) =
       __$$GetUserEducationsSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({BaseResponse response});
-
-  $BaseResponseCopyWith<$Res> get response;
+  $Res call({List<EducationModel> educations});
 }
 
 /// @nodoc
@@ -8435,36 +8876,34 @@ class __$$GetUserEducationsSuccessImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? response = null,
+    Object? educations = null,
   }) {
     return _then(_$GetUserEducationsSuccessImpl(
-      null == response
-          ? _value.response
-          : response // ignore: cast_nullable_to_non_nullable
-              as BaseResponse,
+      null == educations
+          ? _value._educations
+          : educations // ignore: cast_nullable_to_non_nullable
+              as List<EducationModel>,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $BaseResponseCopyWith<$Res> get response {
-    return $BaseResponseCopyWith<$Res>(_value.response, (value) {
-      return _then(_value.copyWith(response: value));
-    });
   }
 }
 
 /// @nodoc
 
 class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
-  const _$GetUserEducationsSuccessImpl(this.response);
+  const _$GetUserEducationsSuccessImpl(final List<EducationModel> educations)
+      : _educations = educations;
 
+  final List<EducationModel> _educations;
   @override
-  final BaseResponse response;
+  List<EducationModel> get educations {
+    if (_educations is EqualUnmodifiableListView) return _educations;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_educations);
+  }
 
   @override
   String toString() {
-    return 'CreateDigitalProfileState.getUserEducationsSuccess(response: $response)';
+    return 'CreateDigitalProfileState.getUserEducationsSuccess(educations: $educations)';
   }
 
   @override
@@ -8472,12 +8911,13 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetUserEducationsSuccessImpl &&
-            (identical(other.response, response) ||
-                other.response == response));
+            const DeepCollectionEquality()
+                .equals(other._educations, _educations));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, response);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_educations));
 
   @JsonKey(ignore: true)
   @override
@@ -8493,29 +8933,29 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
-    return getUserEducationsSuccess(response);
+    return getUserEducationsSuccess(educations);
   }
 
   @override
@@ -8525,25 +8965,27 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
-    return getUserEducationsSuccess?.call(response);
+    return getUserEducationsSuccess?.call(educations);
   }
 
   @override
@@ -8553,27 +8995,28 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
-      return getUserEducationsSuccess(response);
+      return getUserEducationsSuccess(educations);
     }
     return orElse();
   }
@@ -8619,6 +9062,8 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return getUserEducationsSuccess(this);
   }
@@ -8659,6 +9104,8 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return getUserEducationsSuccess?.call(this);
   }
@@ -8698,6 +9145,8 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -8708,10 +9157,10 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
 }
 
 abstract class GetUserEducationsSuccess implements CreateDigitalProfileState {
-  const factory GetUserEducationsSuccess(final BaseResponse response) =
-      _$GetUserEducationsSuccessImpl;
+  const factory GetUserEducationsSuccess(
+      final List<EducationModel> educations) = _$GetUserEducationsSuccessImpl;
 
-  BaseResponse get response;
+  List<EducationModel> get educations;
   @JsonKey(ignore: true)
   _$$GetUserEducationsSuccessImplCopyWith<_$GetUserEducationsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -8723,10 +9172,6 @@ abstract class _$$AddUserEducationSuccessImplCopyWith<$Res> {
           _$AddUserEducationSuccessImpl value,
           $Res Function(_$AddUserEducationSuccessImpl) then) =
       __$$AddUserEducationSuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({BaseResponse response});
-
-  $BaseResponseCopyWith<$Res> get response;
 }
 
 /// @nodoc
@@ -8738,60 +9183,27 @@ class __$$AddUserEducationSuccessImplCopyWithImpl<$Res>
       _$AddUserEducationSuccessImpl _value,
       $Res Function(_$AddUserEducationSuccessImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? response = null,
-  }) {
-    return _then(_$AddUserEducationSuccessImpl(
-      null == response
-          ? _value.response
-          : response // ignore: cast_nullable_to_non_nullable
-              as BaseResponse,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $BaseResponseCopyWith<$Res> get response {
-    return $BaseResponseCopyWith<$Res>(_value.response, (value) {
-      return _then(_value.copyWith(response: value));
-    });
-  }
 }
 
 /// @nodoc
 
 class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
-  const _$AddUserEducationSuccessImpl(this.response);
-
-  @override
-  final BaseResponse response;
+  const _$AddUserEducationSuccessImpl();
 
   @override
   String toString() {
-    return 'CreateDigitalProfileState.addUserEducationsSuccess(response: $response)';
+    return 'CreateDigitalProfileState.addUserEducationsSuccess()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddUserEducationSuccessImpl &&
-            (identical(other.response, response) ||
-                other.response == response));
+            other is _$AddUserEducationSuccessImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, response);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AddUserEducationSuccessImplCopyWith<_$AddUserEducationSuccessImpl>
-      get copyWith => __$$AddUserEducationSuccessImplCopyWithImpl<
-          _$AddUserEducationSuccessImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -8800,29 +9212,29 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
-    return addUserEducationsSuccess(response);
+    return addUserEducationsSuccess();
   }
 
   @override
@@ -8832,25 +9244,27 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
-    return addUserEducationsSuccess?.call(response);
+    return addUserEducationsSuccess?.call();
   }
 
   @override
@@ -8860,27 +9274,28 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (addUserEducationsSuccess != null) {
-      return addUserEducationsSuccess(response);
+      return addUserEducationsSuccess();
     }
     return orElse();
   }
@@ -8926,6 +9341,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return addUserEducationsSuccess(this);
   }
@@ -8966,6 +9383,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return addUserEducationsSuccess?.call(this);
   }
@@ -9005,6 +9424,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (addUserEducationsSuccess != null) {
@@ -9015,13 +9436,7 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
 }
 
 abstract class AddUserEducationSuccess implements CreateDigitalProfileState {
-  const factory AddUserEducationSuccess(final BaseResponse response) =
-      _$AddUserEducationSuccessImpl;
-
-  BaseResponse get response;
-  @JsonKey(ignore: true)
-  _$$AddUserEducationSuccessImplCopyWith<_$AddUserEducationSuccessImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  const factory AddUserEducationSuccess() = _$AddUserEducationSuccessImpl;
 }
 
 /// @nodoc
@@ -9107,27 +9522,27 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return getEducationInfoSuccess(response);
   }
@@ -9139,23 +9554,25 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return getEducationInfoSuccess?.call(response);
   }
@@ -9167,23 +9584,24 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getEducationInfoSuccess != null) {
@@ -9233,6 +9651,8 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return getEducationInfoSuccess(this);
   }
@@ -9273,6 +9693,8 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return getEducationInfoSuccess?.call(this);
   }
@@ -9312,6 +9734,8 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getEducationInfoSuccess != null) {
@@ -9337,10 +9761,6 @@ abstract class _$$DeleteUserEducationSuccessImplCopyWith<$Res> {
           _$DeleteUserEducationSuccessImpl value,
           $Res Function(_$DeleteUserEducationSuccessImpl) then) =
       __$$DeleteUserEducationSuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({BaseResponse response});
-
-  $BaseResponseCopyWith<$Res> get response;
 }
 
 /// @nodoc
@@ -9352,60 +9772,27 @@ class __$$DeleteUserEducationSuccessImplCopyWithImpl<$Res>
       _$DeleteUserEducationSuccessImpl _value,
       $Res Function(_$DeleteUserEducationSuccessImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? response = null,
-  }) {
-    return _then(_$DeleteUserEducationSuccessImpl(
-      null == response
-          ? _value.response
-          : response // ignore: cast_nullable_to_non_nullable
-              as BaseResponse,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $BaseResponseCopyWith<$Res> get response {
-    return $BaseResponseCopyWith<$Res>(_value.response, (value) {
-      return _then(_value.copyWith(response: value));
-    });
-  }
 }
 
 /// @nodoc
 
 class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
-  const _$DeleteUserEducationSuccessImpl(this.response);
-
-  @override
-  final BaseResponse response;
+  const _$DeleteUserEducationSuccessImpl();
 
   @override
   String toString() {
-    return 'CreateDigitalProfileState.deleteUserEducationSuccess(response: $response)';
+    return 'CreateDigitalProfileState.deleteUserEducationSuccess()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeleteUserEducationSuccessImpl &&
-            (identical(other.response, response) ||
-                other.response == response));
+            other is _$DeleteUserEducationSuccessImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, response);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DeleteUserEducationSuccessImplCopyWith<_$DeleteUserEducationSuccessImpl>
-      get copyWith => __$$DeleteUserEducationSuccessImplCopyWithImpl<
-          _$DeleteUserEducationSuccessImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -9414,29 +9801,29 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
-    return deleteUserEducationSuccess(response);
+    return deleteUserEducationSuccess();
   }
 
   @override
@@ -9446,25 +9833,27 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
-    return deleteUserEducationSuccess?.call(response);
+    return deleteUserEducationSuccess?.call();
   }
 
   @override
@@ -9474,27 +9863,28 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (deleteUserEducationSuccess != null) {
-      return deleteUserEducationSuccess(response);
+      return deleteUserEducationSuccess();
     }
     return orElse();
   }
@@ -9540,6 +9930,8 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return deleteUserEducationSuccess(this);
   }
@@ -9580,6 +9972,8 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return deleteUserEducationSuccess?.call(this);
   }
@@ -9619,6 +10013,8 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (deleteUserEducationSuccess != null) {
@@ -9629,13 +10025,7 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
 }
 
 abstract class DeleteUserEducationSuccess implements CreateDigitalProfileState {
-  const factory DeleteUserEducationSuccess(final BaseResponse response) =
-      _$DeleteUserEducationSuccessImpl;
-
-  BaseResponse get response;
-  @JsonKey(ignore: true)
-  _$$DeleteUserEducationSuccessImplCopyWith<_$DeleteUserEducationSuccessImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  const factory DeleteUserEducationSuccess() = _$DeleteUserEducationSuccessImpl;
 }
 
 /// @nodoc
@@ -9721,27 +10111,27 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return updateUserEducationSuccess(response);
   }
@@ -9753,23 +10143,25 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return updateUserEducationSuccess?.call(response);
   }
@@ -9781,23 +10173,24 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserEducationSuccess != null) {
@@ -9847,6 +10240,8 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return updateUserEducationSuccess(this);
   }
@@ -9887,6 +10282,8 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return updateUserEducationSuccess?.call(this);
   }
@@ -9926,6 +10323,8 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserEducationSuccess != null) {
@@ -10028,27 +10427,27 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return getUserExperiencesSuccess(response);
   }
@@ -10060,23 +10459,25 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return getUserExperiencesSuccess?.call(response);
   }
@@ -10088,23 +10489,24 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -10154,6 +10556,8 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return getUserExperiencesSuccess(this);
   }
@@ -10194,6 +10598,8 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return getUserExperiencesSuccess?.call(this);
   }
@@ -10233,6 +10639,8 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -10258,10 +10666,6 @@ abstract class _$$AddUserExperienceSuccessImplCopyWith<$Res> {
           _$AddUserExperienceSuccessImpl value,
           $Res Function(_$AddUserExperienceSuccessImpl) then) =
       __$$AddUserExperienceSuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({BaseResponse response});
-
-  $BaseResponseCopyWith<$Res> get response;
 }
 
 /// @nodoc
@@ -10273,60 +10677,27 @@ class __$$AddUserExperienceSuccessImplCopyWithImpl<$Res>
       _$AddUserExperienceSuccessImpl _value,
       $Res Function(_$AddUserExperienceSuccessImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? response = null,
-  }) {
-    return _then(_$AddUserExperienceSuccessImpl(
-      null == response
-          ? _value.response
-          : response // ignore: cast_nullable_to_non_nullable
-              as BaseResponse,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $BaseResponseCopyWith<$Res> get response {
-    return $BaseResponseCopyWith<$Res>(_value.response, (value) {
-      return _then(_value.copyWith(response: value));
-    });
-  }
 }
 
 /// @nodoc
 
 class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
-  const _$AddUserExperienceSuccessImpl(this.response);
-
-  @override
-  final BaseResponse response;
+  const _$AddUserExperienceSuccessImpl();
 
   @override
   String toString() {
-    return 'CreateDigitalProfileState.addUserExperiencesSuccess(response: $response)';
+    return 'CreateDigitalProfileState.addUserExperiencesSuccess()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AddUserExperienceSuccessImpl &&
-            (identical(other.response, response) ||
-                other.response == response));
+            other is _$AddUserExperienceSuccessImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, response);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AddUserExperienceSuccessImplCopyWith<_$AddUserExperienceSuccessImpl>
-      get copyWith => __$$AddUserExperienceSuccessImplCopyWithImpl<
-          _$AddUserExperienceSuccessImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -10335,29 +10706,29 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
-    return addUserExperiencesSuccess(response);
+    return addUserExperiencesSuccess();
   }
 
   @override
@@ -10367,25 +10738,27 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
-    return addUserExperiencesSuccess?.call(response);
+    return addUserExperiencesSuccess?.call();
   }
 
   @override
@@ -10395,27 +10768,28 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (addUserExperiencesSuccess != null) {
-      return addUserExperiencesSuccess(response);
+      return addUserExperiencesSuccess();
     }
     return orElse();
   }
@@ -10461,6 +10835,8 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return addUserExperiencesSuccess(this);
   }
@@ -10501,6 +10877,8 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return addUserExperiencesSuccess?.call(this);
   }
@@ -10540,6 +10918,8 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (addUserExperiencesSuccess != null) {
@@ -10550,13 +10930,7 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
 }
 
 abstract class AddUserExperienceSuccess implements CreateDigitalProfileState {
-  const factory AddUserExperienceSuccess(final BaseResponse response) =
-      _$AddUserExperienceSuccessImpl;
-
-  BaseResponse get response;
-  @JsonKey(ignore: true)
-  _$$AddUserExperienceSuccessImplCopyWith<_$AddUserExperienceSuccessImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  const factory AddUserExperienceSuccess() = _$AddUserExperienceSuccessImpl;
 }
 
 /// @nodoc
@@ -10642,27 +11016,27 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return getExperienceInfoSuccess(response);
   }
@@ -10674,23 +11048,25 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return getExperienceInfoSuccess?.call(response);
   }
@@ -10702,23 +11078,24 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getExperienceInfoSuccess != null) {
@@ -10768,6 +11145,8 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return getExperienceInfoSuccess(this);
   }
@@ -10808,6 +11187,8 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return getExperienceInfoSuccess?.call(this);
   }
@@ -10847,6 +11228,8 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (getExperienceInfoSuccess != null) {
@@ -10872,10 +11255,6 @@ abstract class _$$DeleteUserExperienceSuccessImplCopyWith<$Res> {
           _$DeleteUserExperienceSuccessImpl value,
           $Res Function(_$DeleteUserExperienceSuccessImpl) then) =
       __$$DeleteUserExperienceSuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({BaseResponse response});
-
-  $BaseResponseCopyWith<$Res> get response;
 }
 
 /// @nodoc
@@ -10887,60 +11266,27 @@ class __$$DeleteUserExperienceSuccessImplCopyWithImpl<$Res>
       _$DeleteUserExperienceSuccessImpl _value,
       $Res Function(_$DeleteUserExperienceSuccessImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? response = null,
-  }) {
-    return _then(_$DeleteUserExperienceSuccessImpl(
-      null == response
-          ? _value.response
-          : response // ignore: cast_nullable_to_non_nullable
-              as BaseResponse,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $BaseResponseCopyWith<$Res> get response {
-    return $BaseResponseCopyWith<$Res>(_value.response, (value) {
-      return _then(_value.copyWith(response: value));
-    });
-  }
 }
 
 /// @nodoc
 
 class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
-  const _$DeleteUserExperienceSuccessImpl(this.response);
-
-  @override
-  final BaseResponse response;
+  const _$DeleteUserExperienceSuccessImpl();
 
   @override
   String toString() {
-    return 'CreateDigitalProfileState.deleteUserExperienceSuccess(response: $response)';
+    return 'CreateDigitalProfileState.deleteUserExperienceSuccess()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeleteUserExperienceSuccessImpl &&
-            (identical(other.response, response) ||
-                other.response == response));
+            other is _$DeleteUserExperienceSuccessImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, response);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DeleteUserExperienceSuccessImplCopyWith<_$DeleteUserExperienceSuccessImpl>
-      get copyWith => __$$DeleteUserExperienceSuccessImplCopyWithImpl<
-          _$DeleteUserExperienceSuccessImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -10949,29 +11295,29 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
-    return deleteUserExperienceSuccess(response);
+    return deleteUserExperienceSuccess();
   }
 
   @override
@@ -10981,25 +11327,27 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
-    return deleteUserExperienceSuccess?.call(response);
+    return deleteUserExperienceSuccess?.call();
   }
 
   @override
@@ -11009,27 +11357,28 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (deleteUserExperienceSuccess != null) {
-      return deleteUserExperienceSuccess(response);
+      return deleteUserExperienceSuccess();
     }
     return orElse();
   }
@@ -11075,6 +11424,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return deleteUserExperienceSuccess(this);
   }
@@ -11115,6 +11466,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return deleteUserExperienceSuccess?.call(this);
   }
@@ -11154,6 +11507,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (deleteUserExperienceSuccess != null) {
@@ -11165,13 +11520,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
 
 abstract class DeleteUserExperienceSuccess
     implements CreateDigitalProfileState {
-  const factory DeleteUserExperienceSuccess(final BaseResponse response) =
+  const factory DeleteUserExperienceSuccess() =
       _$DeleteUserExperienceSuccessImpl;
-
-  BaseResponse get response;
-  @JsonKey(ignore: true)
-  _$$DeleteUserExperienceSuccessImplCopyWith<_$DeleteUserExperienceSuccessImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -11257,27 +11607,27 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
     required TResult Function() loading,
     required TResult Function(List<String> message, String? title) error,
     required TResult Function(int currentStep) changeCreationStepSuccess,
-    required TResult Function(BaseResponse response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserInfoSuccess,
     required TResult Function(BaseResponse response) getUserCertificatesSuccess,
-    required TResult Function(BaseResponse response) addUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
     required TResult Function(BaseResponse response) getCertificateInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserCertificateSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
     required TResult Function(BaseResponse response)
         updateUserCertificateSuccess,
-    required TResult Function(BaseResponse response) getUserEducationsSuccess,
-    required TResult Function(BaseResponse response) addUserEducationsSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
     required TResult Function(BaseResponse response) getEducationInfoSuccess,
-    required TResult Function(BaseResponse response) deleteUserEducationSuccess,
+    required TResult Function() deleteUserEducationSuccess,
     required TResult Function(BaseResponse response) updateUserEducationSuccess,
     required TResult Function(BaseResponse response) getUserExperiencesSuccess,
-    required TResult Function(BaseResponse response) addUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
     required TResult Function(BaseResponse response) getExperienceInfoSuccess,
-    required TResult Function(BaseResponse response)
-        deleteUserExperienceSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
   }) {
     return updateUserExperienceSuccess(response);
   }
@@ -11289,23 +11639,25 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
     TResult? Function()? loading,
     TResult? Function(List<String> message, String? title)? error,
     TResult? Function(int currentStep)? changeCreationStepSuccess,
-    TResult? Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserInfoSuccess,
     TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult? Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
     TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
     TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult? Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult? Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
     TResult? Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
     TResult? Function(BaseResponse response)? updateUserEducationSuccess,
     TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult? Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
     TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult? Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
   }) {
     return updateUserExperienceSuccess?.call(response);
   }
@@ -11317,23 +11669,24 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
     TResult Function()? loading,
     TResult Function(List<String> message, String? title)? error,
     TResult Function(int currentStep)? changeCreationStepSuccess,
-    TResult Function(BaseResponse response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserInfoSuccess,
     TResult Function(BaseResponse response)? getUserCertificatesSuccess,
-    TResult Function(BaseResponse response)? addUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
     TResult Function(BaseResponse response)? getCertificateInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserCertificateSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
     TResult Function(BaseResponse response)? updateUserCertificateSuccess,
-    TResult Function(BaseResponse response)? getUserEducationsSuccess,
-    TResult Function(BaseResponse response)? addUserEducationsSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
     TResult Function(BaseResponse response)? getEducationInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserEducationSuccess,
+    TResult Function()? deleteUserEducationSuccess,
     TResult Function(BaseResponse response)? updateUserEducationSuccess,
     TResult Function(BaseResponse response)? getUserExperiencesSuccess,
-    TResult Function(BaseResponse response)? addUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
     TResult Function(BaseResponse response)? getExperienceInfoSuccess,
-    TResult Function(BaseResponse response)? deleteUserExperienceSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserExperienceSuccess != null) {
@@ -11383,6 +11736,8 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
         deleteUserExperienceSuccess,
     required TResult Function(UpdateUserExperienceSuccess value)
         updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
   }) {
     return updateUserExperienceSuccess(this);
   }
@@ -11423,6 +11778,8 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
         deleteUserExperienceSuccess,
     TResult? Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
   }) {
     return updateUserExperienceSuccess?.call(this);
   }
@@ -11462,6 +11819,8 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
         deleteUserExperienceSuccess,
     TResult Function(UpdateUserExperienceSuccess value)?
         updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserExperienceSuccess != null) {
@@ -11480,4 +11839,277 @@ abstract class UpdateUserExperienceSuccess
   @JsonKey(ignore: true)
   _$$UpdateUserExperienceSuccessImplCopyWith<_$UpdateUserExperienceSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SaveUpdatedProfileSuccessImplCopyWith<$Res> {
+  factory _$$SaveUpdatedProfileSuccessImplCopyWith(
+          _$SaveUpdatedProfileSuccessImpl value,
+          $Res Function(_$SaveUpdatedProfileSuccessImpl) then) =
+      __$$SaveUpdatedProfileSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SaveUpdatedProfileSuccessImplCopyWithImpl<$Res>
+    extends _$CreateDigitalProfileStateCopyWithImpl<$Res,
+        _$SaveUpdatedProfileSuccessImpl>
+    implements _$$SaveUpdatedProfileSuccessImplCopyWith<$Res> {
+  __$$SaveUpdatedProfileSuccessImplCopyWithImpl(
+      _$SaveUpdatedProfileSuccessImpl _value,
+      $Res Function(_$SaveUpdatedProfileSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
+  const _$SaveUpdatedProfileSuccessImpl();
+
+  @override
+  String toString() {
+    return 'CreateDigitalProfileState.saveUpdatedProfileSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SaveUpdatedProfileSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
+    required TResult Function(BaseResponse response) getCertificateInfoSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
+    required TResult Function(BaseResponse response)
+        updateUserCertificateSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
+    required TResult Function(BaseResponse response) getEducationInfoSuccess,
+    required TResult Function() deleteUserEducationSuccess,
+    required TResult Function(BaseResponse response) updateUserEducationSuccess,
+    required TResult Function(BaseResponse response) getUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
+    required TResult Function(BaseResponse response) getExperienceInfoSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
+    required TResult Function(BaseResponse response)
+        updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
+  }) {
+    return saveUpdatedProfileSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
+    TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
+    TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
+    TResult? Function(BaseResponse response)? getEducationInfoSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
+    TResult? Function(BaseResponse response)? updateUserEducationSuccess,
+    TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
+    TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
+    TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
+  }) {
+    return saveUpdatedProfileSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
+    TResult Function(BaseResponse response)? getCertificateInfoSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
+    TResult Function(BaseResponse response)? updateUserCertificateSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
+    TResult Function(BaseResponse response)? getEducationInfoSuccess,
+    TResult Function()? deleteUserEducationSuccess,
+    TResult Function(BaseResponse response)? updateUserEducationSuccess,
+    TResult Function(BaseResponse response)? getUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
+    TResult Function(BaseResponse response)? getExperienceInfoSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
+    TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
+    required TResult orElse(),
+  }) {
+    if (saveUpdatedProfileSuccess != null) {
+      return saveUpdatedProfileSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(CreateDigitalProfileLoading value) loading,
+    required TResult Function(CreateDigitalProfileError value) error,
+    required TResult Function(ChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(UpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(GetUserInfoSuccess value) getUserInfoSuccess,
+    required TResult Function(GetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(AddUserCertificateSuccess value)
+        addUserCertificatesSuccess,
+    required TResult Function(GetCertificateInfoSuccess value)
+        getCertificateInfoSuccess,
+    required TResult Function(DeleteUserCertificateSuccess value)
+        deleteUserCertificateSuccess,
+    required TResult Function(UpdateUserCertificateSuccess value)
+        updateUserCertificateSuccess,
+    required TResult Function(GetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(AddUserEducationSuccess value)
+        addUserEducationsSuccess,
+    required TResult Function(GetEducationInfoSuccess value)
+        getEducationInfoSuccess,
+    required TResult Function(DeleteUserEducationSuccess value)
+        deleteUserEducationSuccess,
+    required TResult Function(UpdateUserEducationSuccess value)
+        updateUserEducationSuccess,
+    required TResult Function(GetUserExperiencesSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(AddUserExperienceSuccess value)
+        addUserExperiencesSuccess,
+    required TResult Function(GetExperienceInfoSuccess value)
+        getExperienceInfoSuccess,
+    required TResult Function(DeleteUserExperienceSuccess value)
+        deleteUserExperienceSuccess,
+    required TResult Function(UpdateUserExperienceSuccess value)
+        updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
+  }) {
+    return saveUpdatedProfileSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(CreateDigitalProfileLoading value)? loading,
+    TResult? Function(CreateDigitalProfileError value)? error,
+    TResult? Function(ChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult? Function(GetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(GetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(AddUserCertificateSuccess value)?
+        addUserCertificatesSuccess,
+    TResult? Function(GetCertificateInfoSuccess value)?
+        getCertificateInfoSuccess,
+    TResult? Function(DeleteUserCertificateSuccess value)?
+        deleteUserCertificateSuccess,
+    TResult? Function(UpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult? Function(GetUserEducationsSuccess value)? getUserEducationsSuccess,
+    TResult? Function(AddUserEducationSuccess value)? addUserEducationsSuccess,
+    TResult? Function(GetEducationInfoSuccess value)? getEducationInfoSuccess,
+    TResult? Function(DeleteUserEducationSuccess value)?
+        deleteUserEducationSuccess,
+    TResult? Function(UpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult? Function(GetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(AddUserExperienceSuccess value)?
+        addUserExperiencesSuccess,
+    TResult? Function(GetExperienceInfoSuccess value)? getExperienceInfoSuccess,
+    TResult? Function(DeleteUserExperienceSuccess value)?
+        deleteUserExperienceSuccess,
+    TResult? Function(UpdateUserExperienceSuccess value)?
+        updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
+  }) {
+    return saveUpdatedProfileSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(CreateDigitalProfileLoading value)? loading,
+    TResult Function(CreateDigitalProfileError value)? error,
+    TResult Function(ChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(GetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(GetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(AddUserCertificateSuccess value)?
+        addUserCertificatesSuccess,
+    TResult Function(GetCertificateInfoSuccess value)?
+        getCertificateInfoSuccess,
+    TResult Function(DeleteUserCertificateSuccess value)?
+        deleteUserCertificateSuccess,
+    TResult Function(UpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult Function(GetUserEducationsSuccess value)? getUserEducationsSuccess,
+    TResult Function(AddUserEducationSuccess value)? addUserEducationsSuccess,
+    TResult Function(GetEducationInfoSuccess value)? getEducationInfoSuccess,
+    TResult Function(DeleteUserEducationSuccess value)?
+        deleteUserEducationSuccess,
+    TResult Function(UpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult Function(GetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(AddUserExperienceSuccess value)? addUserExperiencesSuccess,
+    TResult Function(GetExperienceInfoSuccess value)? getExperienceInfoSuccess,
+    TResult Function(DeleteUserExperienceSuccess value)?
+        deleteUserExperienceSuccess,
+    TResult Function(UpdateUserExperienceSuccess value)?
+        updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
+    required TResult orElse(),
+  }) {
+    if (saveUpdatedProfileSuccess != null) {
+      return saveUpdatedProfileSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SaveUpdatedProfileSuccess implements CreateDigitalProfileState {
+  const factory SaveUpdatedProfileSuccess() = _$SaveUpdatedProfileSuccessImpl;
 }
