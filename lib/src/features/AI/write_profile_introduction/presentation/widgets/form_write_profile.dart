@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/AI/write_profile_introduction/data/models/profile_introduction_model.dart';
 import 'package:demo_dprofiles/src/features/AI/write_profile_introduction/presentation/bloc/write_profile_introduction_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
@@ -24,61 +25,65 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: _keyForm,
-      child: Column(
-        children: [
-          AuthField(
-              controller: _aboutYourSelfController,
-              title: 'ABOUT YOUR SELF',
-              keyboardType: TextInputType.emailAddress,
-              textInputAction: TextInputAction.next,
-              hint: 'Company name'),
-          Padding(
-            padding: context.padding(top: 32),
-            child: AuthField(
-              controller: _writeStyleController,
-              title: 'WRITE STYLE',
-              hint: 'Normal',
-              suffixIcon: const Icon(IconsaxOutline.arrow_down_1),
-            ),
+    return BlocBuilder<WriteProfileIntroductionBloc,
+        WriteProfileIntroductionState>(
+      builder: (context, state) {
+        return Form(
+          key: _keyForm,
+          child: Column(
+            children: [
+              AuthField(
+                  controller: _aboutYourSelfController,
+                  title: 'ABOUT YOUR SELF',
+                  keyboardType: TextInputType.emailAddress,
+                  textInputAction: TextInputAction.next,
+                  hint: 'Company name'),
+              Padding(
+                padding: context.padding(top: 32),
+                child: AuthField(
+                  controller: _writeStyleController,
+                  title: 'WRITE STYLE',
+                  hint: 'Normal',
+                  suffixIcon: const Icon(IconsaxOutline.arrow_down_1),
+                ),
+              ),
+              Padding(
+                padding: context.padding(top: 32),
+                child: AuthField(
+                  controller: _promptController,
+                  title: 'PROMPT',
+                  maxLines: 4,
+                  hint: 'Your require',
+                ),
+              ),
+              Padding(
+                padding: context.padding(vertical: 32),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: context.padding(right: 16),
+                      child: AppOutlineButton(context)
+                          .elevatedButton(onPressed: () {}, title: 'Clear all'),
+                    ),
+                    Expanded(
+                      child: AppFlatButton(context).elevatedButton(
+                        width: context.width,
+                        onPressed: () => _sendToAI(context),
+                        title: 'Send to AI',
+                        suffixIcon: _buildSuffixIconSendButton(),
+                        child: (state is WriteProfileIntroLoading)
+                            ? const MyLoading()
+                            : null,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
-          Padding(
-            padding: context.padding(top: 32),
-            child: AuthField(
-              controller: _promptController,
-              title: 'PROMPT',
-              maxLines: 4,
-              hint: 'Your require',
-            ),
-          ),
-          Padding(
-            padding: context.padding(vertical: 32),
-            child: _buildSendButtons(),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildSendButtons() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Padding(
-          padding: context.padding(right: 16),
-          child: AppOutlineButton(context)
-              .elevatedButton(onPressed: () {}, title: 'Clear all'),
-        ),
-        Expanded(
-          child: AppFlatButton(context).elevatedButton(
-            width: context.width,
-            onPressed: () => _sendToAI(context),
-            title: 'Send to AI',
-            suffixIcon: _buildSuffixIconSendButton(),
-          ),
-        ),
-      ],
+        );
+      },
     );
   }
 

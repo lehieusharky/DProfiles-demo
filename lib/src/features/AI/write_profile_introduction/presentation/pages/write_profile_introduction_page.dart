@@ -12,6 +12,8 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+import 'package:rounded_background_text/rounded_background_text.dart';
 
 @RoutePage()
 class WriteProfileIntroductionPage extends StatefulWidget {
@@ -27,10 +29,29 @@ class _WriteProfileIntroductionPageState
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
+  late FlutterTts flutterTts;
+
+  int? currentIndex;
+  int? endIndex;
+  String? currentText;
+
   @override
   void initState() {
     super.initState();
     _tabController = TabController(vsync: this, length: 2);
+    initTts();
+  }
+
+  dynamic initTts() {
+    flutterTts = FlutterTts();
+
+    flutterTts.setProgressHandler((text, start, end, word) {
+      setState(() {
+        currentIndex = start;
+        endIndex = end;
+        currentText = text;
+      });
+    });
   }
 
   String? _result;
@@ -44,6 +65,7 @@ class _WriteProfileIntroductionPageState
         listener: (context, state) {
           if (state is GenerateProfileIntroductionSuccess) {
             _result = state.response.data;
+            _speak();
           }
         },
         builder: (context, state) {
@@ -87,10 +109,38 @@ class _WriteProfileIntroductionPageState
                         ),
                         Padding(
                           padding: context.padding(top: 12),
-                          child: Text(
-                            _result!,
-                            style: AppFont().fontTheme(context).bodyLarge,
-                          ),
+                          child: RichText(
+                              text: TextSpan(children: [
+                            TextSpan(
+                              text: _result!.substring(0, currentIndex),
+                              style: AppFont()
+                                  .fontTheme(context,
+                                      height: context.sizeHeight(1.6),
+                                      color: currentIndex != null
+                                          ? colorScheme(context).outline
+                                          : colorScheme(context).onBackground)
+                                  .bodyLarge,
+                            ),
+                            if (currentIndex != null)
+                              RoundedBackgroundTextSpan(
+                                  textScaler: const TextScaler.linear(1.1),
+                                  text: currentText!
+                                      .substring(currentIndex!, endIndex),
+                                  backgroundColor: colorScheme(context).primary,
+                                  style: AppFont()
+                                      .fontTheme(context,
+                                          color: colorScheme(context).onTertiary)
+                                      .bodyLarge),
+                            if (currentIndex != null)
+                              TextSpan(
+                                text: currentText!.substring(endIndex!),
+                                style: AppFont()
+                                    .fontTheme(context,
+                                        height: context.sizeHeight(1.3),
+                                        color: colorScheme(context).onBackground)
+                                    .bodyLarge,
+                              )
+                          ])),
                         ),
                         Padding(
                           padding: context.padding(top: 12, bottom: 24),
@@ -120,5 +170,13 @@ class _WriteProfileIntroductionPageState
         },
       ),
     );
+  }
+
+  Future<void> _speak() async {
+    if (_result != null) {
+      if (_result!.isNotEmpty) {
+        await flutterTts.speak(_result!);
+      }
+    }
   }
 }

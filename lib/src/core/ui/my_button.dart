@@ -51,10 +51,10 @@ class MyButton extends StatelessWidget {
         textStyle: textStyle(context),
         shape: shape(context),
       ),
-      child: Padding(
-        padding: context.padding(vertical: 5),
-        child: child ??
-            Row(
+      child: child ??
+          Padding(
+            padding: context.padding(vertical: 5),
+            child: Row(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -68,7 +68,7 @@ class MyButton extends StatelessWidget {
                 suffixIcon ?? SizedBox.fromSize(),
               ],
             ),
-      ),
+          ),
     );
   }
 }

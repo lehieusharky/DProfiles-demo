@@ -28,7 +28,7 @@ class TabBarWriteProfile extends StatelessWidget {
           labelStyle:
               AppFont().fontTheme(context, weight: FontWeight.bold).bodyMedium,
           indicator: BubbleTabIndicator(
-            indicatorHeight: context.sizeHeight(32),
+            indicatorHeight: context.sizeHeight(35),
             insets: context.padding(horizontal: 0),
             indicatorColor: colorScheme(context).background,
             tabBarIndicatorSize: TabBarIndicatorSize.tab,
