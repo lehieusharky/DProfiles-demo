@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character_page.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 
 @AutoRouterConfig()
@@ -28,8 +29,11 @@ class AppRouter extends $AppRouter {
         AutoRoute(
             path: '/update_digital_profile_success',
             page: CreateDigitalProfileSuccessRoute.page),
-        AutoRoute(
-            path: '/ai_character', initial: true, page: AICharacterRoute.page),
+        AutoRoute(path: '/ai_character', page: AICharacterRoute.page),
         AutoRoute(path: '/write_profile', page: WriteProfileRoute.page),
+        AutoRoute(
+            path: '/my_ai_character',
+            initial: true,
+            page: MyAICharacterRoute.page),
       ];
 }

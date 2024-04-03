@@ -6,7 +6,7 @@ import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/data/models/experiance_model.dart';
-import 'package:demo_dprofiles/src/utils/domain/entities/ext_experience_entity.dart';
+import 'package:demo_dprofiles/src/utils/extensions/ext_models/ext_experience_model.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:flutter/material.dart';
@@ -40,9 +40,7 @@ class _FormExperienceState extends State<FormExperience> {
           _clearField();
         }
 
-        if(state is SaveUpdatedProfileSuccess) {
-
-        }
+        if (state is SaveUpdatedProfileSuccess) {}
       },
       builder: (context, state) {
         myLoading =
@@ -64,7 +62,7 @@ class _FormExperienceState extends State<FormExperience> {
                 Column(
                     children: educations
                         .map(
-                          (e) => e.toItem(
+                          (e) => e.toWidget(
                             context,
                             onDelete: () => context
                                 .read<CreateDigitalProfileBloc>()

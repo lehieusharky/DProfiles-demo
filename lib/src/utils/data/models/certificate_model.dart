@@ -1,11 +1,13 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'details_user.dart';
+
 part 'certificate_model.freezed.dart';
 
 part 'certificate_model.g.dart';
 
 @freezed
-class CertificateModel with _$CertificateModel {
+class CertificateModel with _$CertificateModel implements DetailOfUser {
   const factory CertificateModel({
     @Default(0) int? id,
     @JsonKey(name: 'user_id') @Default(0) int? userId,

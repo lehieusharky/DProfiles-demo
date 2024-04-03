@@ -7,6 +7,7 @@ import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
+import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pinput/pinput.dart';
@@ -67,13 +68,14 @@ class _FormBasicInfoState extends State<FormBasicInfo>
                   controller: _dobController,
                   title: appLocal(context).dob.toUpperCase(),
                   textInputAction: TextInputAction.next,
+                  suffixIcon: const Icon(IconsaxOutline.calendar_1),
                   hint: 'dd/mm/yyyy',
                 ),
               ),
               Padding(
                 padding: context.padding(top: 32),
                 child: AuthField(
-                  controller: _locationController,
+                  controller: _nationalityController,
                   title: appLocal(context).nationality.toUpperCase(),
                   textInputAction: TextInputAction.next,
                   hint: 'Vietnam',
@@ -83,9 +85,18 @@ class _FormBasicInfoState extends State<FormBasicInfo>
                 padding: context.padding(top: 32),
                 child: AuthField(
                   controller: _genderController,
-                  title: appLocal(context).idCardNumber.toUpperCase(),
+                  title: appLocal(context).gender.toUpperCase(),
                   textInputAction: TextInputAction.done,
-                  hint: 'Vietnam',
+                  hint: 'Male',
+                ),
+              ),
+              Padding(
+                padding: context.padding(top: 32),
+                child: AuthField(
+                  controller: _locationController,
+                  title: appLocal(context).yourLocation.toUpperCase(),
+                  textInputAction: TextInputAction.done,
+                  hint: 'HO CHI MINH CITY',
                 ),
               ),
               Padding(
@@ -94,9 +105,9 @@ class _FormBasicInfoState extends State<FormBasicInfo>
                   width: context.width,
                   onPressed: () => _continue(context),
                   title: appLocal(context).continueButton.toUpperCase(),
-                  child: (state is CreateDigitalProfileLoading)
-                      ? const MyLoading()
-                      : null,
+                  // child: (state is CreateDigitalProfileLoading)
+                  //     ? const MyLoading()
+                  //     : null,
                 ),
               ),
             ],
@@ -122,22 +133,16 @@ class _FormBasicInfoState extends State<FormBasicInfo>
       _userInfo = _userInfo.copyWith(birthDay: _dobController.text.trim());
     }
 
-    if (_locationController.text.isNotEmpty) {
-      _userInfo =
-          _userInfo.copyWith(nationality: _locationController.text.trim());
-    }
-
     if (_genderController.text.isNotEmpty) {
-      _userInfo =
-          _userInfo.copyWith(idCardNumber: _genderController.text.trim());
+      _userInfo = _userInfo.copyWith(genderId: 1);
     }
   }
 
   void _continue(BuildContext context) async {
     if (_keyForm.currentState?.validate() ?? false) {
-      await _userInfoValidation().whenComplete(() => context
-          .read<CreateDigitalProfileBloc>()
-          .add(UpdateUserInfo(_userInfo)));
+      // await _userInfoValidation().whenComplete(() => context
+      //     .read<CreateDigitalProfileBloc>()
+      //     .add(UpdateUserInfo(_userInfo)));
     }
   }
 
