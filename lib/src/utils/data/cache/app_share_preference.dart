@@ -7,7 +7,9 @@ AppSharePreference get sharePreference => injector.get<AppSharePreference>();
 abstract class AppSharePreference {
   bool isDarkMode();
 
-  Future<bool> isFirstTimeOpenApp();
+  bool isFirstTimeOpenApp();
+
+  Future<bool> setFirstTimeOpenApp();
 
   Future<bool> toggleDarkMode(bool status);
 
@@ -19,9 +21,9 @@ abstract class AppSharePreference {
 
   SupportedLanguage getLanguage();
 
-  Future<String> setAccessToken(String token);
+  Future<bool> setAccessToken(String token);
 
-  Future<String> setRefreshToken(String token);
+  Future<bool> setRefreshToken(String token);
 
   String? getAccessToken();
 

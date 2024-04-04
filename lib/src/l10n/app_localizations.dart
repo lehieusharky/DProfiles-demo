@@ -261,6 +261,24 @@ abstract class AppLocalizations {
   /// **'Description'**
   String get description;
 
+  /// No description provided for @descriptionOnboarding1.
+  ///
+  /// In en, this message translates to:
+  /// **'Create profile on Blockchain Network, job platform, and crypto payment tools.'**
+  String get descriptionOnboarding1;
+
+  /// No description provided for @descriptionOnboarding2.
+  ///
+  /// In en, this message translates to:
+  /// **'A lot of AI tools will help speed up the job application process and improve your chances of success.'**
+  String get descriptionOnboarding2;
+
+  /// No description provided for @descriptionOnboarding3.
+  ///
+  /// In en, this message translates to:
+  /// **'Users can find jobs and read helpful articles from KOLs or people that they followed.'**
+  String get descriptionOnboarding3;
+
   /// No description provided for @dob.
   ///
   /// In en, this message translates to:
@@ -471,6 +489,12 @@ abstract class AppLocalizations {
   /// **'Sexy'**
   String get sexy;
 
+  /// No description provided for @skip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skip;
+
   /// No description provided for @smart.
   ///
   /// In en, this message translates to:
@@ -506,6 +530,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Time'**
   String get time;
+
+  /// No description provided for @titleOnboarding1.
+  ///
+  /// In en, this message translates to:
+  /// **'A Web3 social network for jobs'**
+  String get titleOnboarding1;
+
+  /// No description provided for @titleOnboarding2.
+  ///
+  /// In en, this message translates to:
+  /// **'AI Tools to help you land your next job'**
+  String get titleOnboarding2;
+
+  /// No description provided for @titleOnboarding3.
+  ///
+  /// In en, this message translates to:
+  /// **'Job listing system & New Feeds'**
+  String get titleOnboarding3;
 
   /// No description provided for @to.
   ///

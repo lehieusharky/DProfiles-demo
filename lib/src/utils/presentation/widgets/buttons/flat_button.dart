@@ -2,6 +2,7 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/core/ui/my_icon_button.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
+import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:flutter/material.dart';
 
 import 'app_button.dart';
@@ -37,21 +38,27 @@ class AppFlatButton implements AbstractFactoryAppButton {
   }
 
   @override
-  IconButton iconButton(
-    IconData iconData, {
+  IconButton iconButton({
     VoidCallback? onPressed,
     double? iconSize,
     Color? iconColor,
     Color? backgroundColor,
+    Widget? icon,
+    IconData? iconData,
+    double? width,
+    double? height,
   }) {
     return MyIconButton(
+      width: width ?? context.sizeWidth(50),
+      height: height ?? context.sizeWidth(50),
       onPressed: onPressed,
       backgroundColor: backgroundColor ?? colorScheme(context).primary,
-      icon: Icon(
-        iconData,
-        color: iconColor ?? colorScheme(context).background,
-        size: context.sizeHeight(iconSize ?? 25),
-      ),
+      icon: icon ??
+          Icon(
+            iconData,
+            color: iconColor ?? MyColor.getWhite,
+            size: context.sizeHeight(iconSize ?? 25),
+          ),
     );
   }
 }

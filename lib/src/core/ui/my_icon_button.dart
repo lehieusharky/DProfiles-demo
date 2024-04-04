@@ -4,16 +4,22 @@ import 'package:flutter/material.dart';
 
 class MyIconButton extends IconButton {
   final Color? backgroundColor;
+  final double? width;
+  final double? height;
 
   const MyIconButton(
       {super.key,
       this.backgroundColor,
+      this.width,
+      this.height,
       required super.onPressed,
       required super.icon});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: width,
+      height: height,
       decoration: BoxDecoration(boxShadow: [
         BoxShadow(
           color: colorScheme(context).outlineVariant.withOpacity(0.3),
@@ -25,11 +31,10 @@ class MyIconButton extends IconButton {
       child: IconButton.filledTonal(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(
-            backgroundColor ?? colorScheme(context).primaryContainer,
-          ),
+              backgroundColor ?? colorScheme(context).primaryContainer),
         ),
         onPressed: onPressed,
-        padding: context.padding(all: 10),
+        padding: context.padding(all: 12),
         icon: icon,
       ),
     );

@@ -89,6 +89,15 @@ class AppLocalizationsVi extends AppLocalizations {
   String get description => 'Description';
 
   @override
+  String get descriptionOnboarding1 => 'Create profile on Blockchain Network, job platform, and crypto payment tools.';
+
+  @override
+  String get descriptionOnboarding2 => 'A lot of AI tools will help speed up the job application process and improve your chances of success.';
+
+  @override
+  String get descriptionOnboarding3 => 'Users can find jobs and read helpful articles from KOLs or people that they followed.';
+
+  @override
   String get dob => 'dob';
 
   @override
@@ -194,6 +203,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get sexy => 'Sexy';
 
   @override
+  String get skip => 'Skip';
+
+  @override
   String get smart => 'Smart';
 
   @override
@@ -210,6 +222,15 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get time => 'Time';
+
+  @override
+  String get titleOnboarding1 => 'A Web3 social network for jobs';
+
+  @override
+  String get titleOnboarding2 => 'AI Tools to help you land your next job';
+
+  @override
+  String get titleOnboarding3 => 'Job listing system & New Feeds';
 
   @override
   String get to => 'To';

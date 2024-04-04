@@ -117,7 +117,7 @@ class _HomeBannerState extends State<HomeBanner> {
         padding: context.padding(left: 20, bottom: 24),
         child: OnboardingPageIndicator(
           controller: _pageController,
-          countOfSubPage: pageCount,
+          sumSubPages: pageCount,
           bottom: 0,
           top: 0,
         ),
