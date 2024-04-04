@@ -3,7 +3,6 @@ import 'package:demo_dprofiles/src/utils/services/app_config.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
-
   await AppConfig.config();
 
   runApp(const MyAppPage());

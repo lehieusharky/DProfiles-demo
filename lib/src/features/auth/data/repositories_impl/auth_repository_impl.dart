@@ -23,7 +23,7 @@ class AuthRepositoryImpl implements AuthRepository {
       return Right(response);
     } on DioException catch (e) {
       return Left(
-          AuthFailure(response: AuthErrorResponse.fromJson(e.response!.data)));
+          AuthFailure(response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
 
@@ -35,7 +35,7 @@ class AuthRepositoryImpl implements AuthRepository {
       return Right(response);
     } on DioException catch (e) {
       return Left(
-          AuthFailure(response: AuthErrorResponse.fromJson(e.response!.data)));
+          AuthFailure(response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
 
@@ -47,7 +47,7 @@ class AuthRepositoryImpl implements AuthRepository {
       return Right(response);
     } on DioException catch (e) {
       return Left(
-          AuthFailure(response: AuthErrorResponse.fromJson(e.response!.data)));
+          AuthFailure(response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
 
@@ -59,7 +59,7 @@ class AuthRepositoryImpl implements AuthRepository {
       return Right(response);
     } on DioException catch (e) {
       return Left(
-          AuthFailure(response: AuthErrorResponse.fromJson(e.response!.data)));
+          AuthFailure(response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
 
@@ -71,7 +71,7 @@ class AuthRepositoryImpl implements AuthRepository {
       return Right(response);
     } on DioException catch (e) {
       return Left(
-          AuthFailure(response: AuthErrorResponse.fromJson(e.response!.data)));
+          AuthFailure(response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
 }

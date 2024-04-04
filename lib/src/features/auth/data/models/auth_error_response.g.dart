@@ -6,16 +6,16 @@ part of 'auth_error_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$AuthErrorResponseImpl _$$AuthErrorResponseImplFromJson(
+_$RegularErrorResponseImpl _$$RegularErrorResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$AuthErrorResponseImpl(
+    _$RegularErrorResponseImpl(
       message: json['message'] as String? ?? "",
       error: json['error'] as String?,
       statusCode: json['statusCode'] as int? ?? 400,
     );
 
-Map<String, dynamic> _$$AuthErrorResponseImplToJson(
-        _$AuthErrorResponseImpl instance) =>
+Map<String, dynamic> _$$RegularErrorResponseImplToJson(
+        _$RegularErrorResponseImpl instance) =>
     <String, dynamic>{
       'message': instance.message,
       'error': instance.error,

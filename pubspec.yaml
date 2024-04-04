@@ -50,6 +50,9 @@ dependencies:
   flutter_svg: ^2.0.10+1
   bubble_tab_indicator: ^0.1.6
   pinput: ^4.0.0
+  flutter_tts: ^4.0.2
+  rounded_background_text: ^0.5.0
+  simple_ripple_animation: ^0.0.9
 
   # https
   retrofit: ">=4.0.0 <5.0.0"

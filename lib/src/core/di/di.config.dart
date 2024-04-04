@@ -22,6 +22,16 @@ import '../../features/AI/create_digital_profile/domain/repositories/create_digi
     as _i14;
 import '../../features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart'
     as _i16;
+import '../../features/AI/write_profile_introduction/data/datasources/write_profile_intro_datasource.dart'
+    as _i25;
+import '../../features/AI/write_profile_introduction/data/datasources/write_profile_intro_datasource_impl.dart'
+    as _i26;
+import '../../features/AI/write_profile_introduction/data/repositories_impl/write_profile_intro_repository_impl.dart'
+    as _i28;
+import '../../features/AI/write_profile_introduction/domain/repositories/write_profile_intro_repository.dart'
+    as _i27;
+import '../../features/AI/write_profile_introduction/domain/usecases/write_profile_intro_usecase.dart'
+    as _i29;
 import '../../features/auth/data/datasources/auth_datasource.dart' as _i7;
 import '../../features/auth/data/datasources/auth_datasource_impl.dart' as _i8;
 import '../../features/auth/data/repositories_impl/auth_repository_impl.dart'
@@ -45,7 +55,7 @@ import '../../features/setting/domain/usecases/setting_usecase.dart' as _i23;
 import '../../utils/data/cache/app_share_preference.dart' as _i3;
 import '../../utils/data/cache/app_share_preference_impl.dart' as _i4;
 import '../../utils/https/dio/app_rest_client.dart' as _i18;
-import 'di.dart' as _i25;
+import 'di.dart' as _i30;
 
 // initializes the registration of main-scope dependencies inside of GetIt
 Future<_i1.GetIt> $initGetIt(
@@ -85,7 +95,15 @@ Future<_i1.GetIt> $initGetIt(
     () => appModule.sharedPreferences,
     preResolve: true,
   );
+  gh.factory<_i25.WriteProfileIntroDataSource>(
+      () => _i26.WriteProfileIntroDataSourceImpl());
+  gh.factory<_i27.WriteProfileIntroRepository>(() =>
+      _i28.WriteProfileIntroRepositoryImpl(
+          gh<_i25.WriteProfileIntroDataSource>()));
+  gh.factory<_i29.WriteProfileIntroductionUseCase>(() =>
+      _i29.WriteProfileIntroductionUseCaseImpl(
+          gh<_i27.WriteProfileIntroRepository>()));
   return getIt;
 }
 
-class _$AppModule extends _i25.AppModule {}
+class _$AppModule extends _i30.AppModule {}

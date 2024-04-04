@@ -11,6 +11,7 @@ import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentati
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/form/form_experience.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/header_create_digital.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/path_direction.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -57,6 +58,10 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
               title: state.title ?? 'Error',
               description: state.message.first,
             );
+          }
+
+          if (state is SaveUpdatedProfileSuccess) {
+            context.router.push(const CreateDigitalProfileSuccessRoute());
           }
         },
         builder: (context, state) => DefaultTabController(

@@ -95,6 +95,10 @@ class $AssetsImagesAiFeaturesGen {
   AssetGenImage get folder =>
       const AssetGenImage('assets/images/ai_features/Folder.png');
 
+  /// File path: assets/images/ai_features/chat_gpt.png
+  AssetGenImage get chatGpt =>
+      const AssetGenImage('assets/images/ai_features/chat_gpt.png');
+
   /// File path: assets/images/ai_features/create_ai_character_icon.png
   AssetGenImage get createAiCharacterIcon => const AssetGenImage(
       'assets/images/ai_features/create_ai_character_icon.png');
@@ -112,8 +116,14 @@ class $AssetsImagesAiFeaturesGen {
       const AssetGenImage('assets/images/ai_features/profile_introduction.png');
 
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [folder, createAiCharacterIcon, job, letter, profileIntroduction];
+  List<AssetGenImage> get values => [
+        folder,
+        chatGpt,
+        createAiCharacterIcon,
+        job,
+        letter,
+        profileIntroduction
+      ];
 }
 
 class $AssetsImagesAuthGen {

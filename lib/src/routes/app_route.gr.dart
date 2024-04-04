@@ -17,7 +17,7 @@ import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentati
     as _i5;
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/create_dprofile_success_page.dart'
     as _i6;
-import 'package:demo_dprofiles/src/features/AI/write_profile/pages/write_profile_page.dart'
+import 'package:demo_dprofiles/src/features/AI/write_profile_introduction/presentation/pages/write_profile_introduction_page.dart'
     as _i19;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/connect_wallet/presentation/connect_wallet_page.dart'
     as _i3;
@@ -170,10 +170,10 @@ abstract class $AppRouter extends _i20.RootStackRouter {
         ),
       );
     },
-    WriteProfileRoute.name: (routeData) {
+    WriteProfileIntroductionRoute.name: (routeData) {
       return _i20.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i19.WriteProfilePage(),
+        child: const _i19.WriteProfileIntroductionPage(),
       );
     },
   };
@@ -481,15 +481,15 @@ class VerifySignUpRouteArgs {
 }
 
 /// generated route for
-/// [_i19.WriteProfilePage]
-class WriteProfileRoute extends _i20.PageRouteInfo<void> {
-  const WriteProfileRoute({List<_i20.PageRouteInfo>? children})
+/// [_i19.WriteProfileIntroductionPage]
+class WriteProfileIntroductionRoute extends _i20.PageRouteInfo<void> {
+  const WriteProfileIntroductionRoute({List<_i20.PageRouteInfo>? children})
       : super(
-          WriteProfileRoute.name,
+          WriteProfileIntroductionRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'WriteProfileRoute';
+  static const String name = 'WriteProfileIntroductionRoute';
 
   static const _i20.PageInfo<void> page = _i20.PageInfo<void>(name);
 }
