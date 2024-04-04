@@ -5,13 +5,31 @@ class AppLocalizationsVi extends AppLocalizations {
   AppLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
+  String get about => 'About';
+
+  @override
+  String get active => 'Active';
+
+  @override
   String get add => 'Add';
 
   @override
   String get addBasicInformation => 'Add Basic Information';
 
   @override
+  String get addYourCharacter => 'Add your character';
+
+  @override
+  String get addYourProfile => 'Add Your Profile';
+
+  @override
+  String get aggressive => 'Aggessive';
+
+  @override
   String get aiFeature => 'Chức năng AI';
+
+  @override
+  String get archived => 'Archived';
 
   @override
   String get attachment => 'Attachment';
@@ -26,10 +44,22 @@ class AppLocalizationsVi extends AppLocalizations {
   String get certificate => 'Certificate';
 
   @override
+  String get certificates => 'Certificates';
+
+  @override
   String get change => 'Change';
 
   @override
   String get characters => 'Characters';
+
+  @override
+  String get chat => 'Chat';
+
+  @override
+  String get chatMore => 'Chat More';
+
+  @override
+  String get chatty => 'Chatty';
 
   @override
   String get company => 'Company';
@@ -38,10 +68,16 @@ class AppLocalizationsVi extends AppLocalizations {
   String get continueButton => 'Continue';
 
   @override
+  String get conversations => 'Conversations';
+
+  @override
   String get createDigitalProfileOnTheBlockchain => 'Create Digital Profile on the Blockchain';
 
   @override
   String get createNewDProfile => 'Create New dProfile';
+
+  @override
+  String get createYourAiCharacter => 'Create your AI character';
 
   @override
   String get degree => 'Degree';
@@ -65,16 +101,43 @@ class AppLocalizationsVi extends AppLocalizations {
   String get endDate => 'End Date';
 
   @override
+  String get energetic => 'Energetic';
+
+  @override
   String get experience => 'Experience';
+
+  @override
+  String get experiences => 'experiences';
 
   @override
   String get fieldOfStudy => 'Field Of Study';
 
   @override
+  String get flirty => 'Flirty';
+
+  @override
+  String get formal => 'Formal';
+
+  @override
+  String get friendly => 'Friendly';
+
+  @override
   String get from => 'From';
 
   @override
+  String get gender => 'Gender';
+
+  @override
+  String get helpful => 'Helpful';
+
+  @override
   String get home => 'Home';
+
+  @override
+  String get hourAgo => 'hour ago';
+
+  @override
+  String get humorous => 'Humorous';
 
   @override
   String get id => 'ID';
@@ -83,10 +146,19 @@ class AppLocalizationsVi extends AppLocalizations {
   String get idCardNumber => 'ID Card Number';
 
   @override
+  String get inspiring => 'Inspiring';
+
+  @override
   String get issuedBy => 'Issued by';
 
   @override
   String get jobPosition => 'Job Position';
+
+  @override
+  String get messages => 'Messages';
+
+  @override
+  String get myAiCharacter => 'My AI Character';
 
   @override
   String get name => 'name';
@@ -101,7 +173,16 @@ class AppLocalizationsVi extends AppLocalizations {
   String get number => 'Number';
 
   @override
+  String get others => 'Others';
+
+  @override
+  String get passive => 'Passive';
+
+  @override
   String get profile => 'Profile';
+
+  @override
+  String get profiles => 'Profiles';
 
   @override
   String get save => 'Save';
@@ -110,7 +191,19 @@ class AppLocalizationsVi extends AppLocalizations {
   String get school => 'School';
 
   @override
+  String get sexy => 'Sexy';
+
+  @override
+  String get smart => 'Smart';
+
+  @override
+  String get spiritual => 'Spiritual';
+
+  @override
   String get startDate => 'Start Date';
+
+  @override
+  String get supportive => 'Supportive';
 
   @override
   String get theme => 'Giao diện';
@@ -120,4 +213,16 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get to => 'To';
+
+  @override
+  String get viewChatHistory => 'View Chat History';
+
+  @override
+  String get violent => 'Violent';
+
+  @override
+  String get yourAiCharacters => 'Your AI Characters';
+
+  @override
+  String get yourLocation => 'Your Location';
 }

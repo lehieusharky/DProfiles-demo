@@ -11,7 +11,7 @@ class MyScaffold extends StatelessWidget {
   final List<Widget>? action;
   final Color? backgroundColor;
   final Widget? floatingButton;
-  final bool? isBack;
+  final bool? canBack;
   final Widget? titleWidget;
   final double? topPadding;
   final VoidCallback? onBack;
@@ -29,7 +29,7 @@ class MyScaffold extends StatelessWidget {
     this.action,
     this.backgroundColor,
     this.floatingButton,
-    this.isBack,
+    this.canBack,
     this.titleWidget,
     this.topPadding,
     this.onBack,
@@ -45,11 +45,11 @@ class MyScaffold extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       backgroundColor: backgroundColor,
       endDrawer: endDrawer,
-      appBar: useAppBar == true || isBack == true
+      appBar: useAppBar == true || canBack == true
           ? MyAppbar(
               title: appBarTitle,
               action: action,
-              isBack: isBack,
+              isBack: canBack,
               onBack: onBack,
               height: heightAppBar,
               titleWidget: titleWidget,

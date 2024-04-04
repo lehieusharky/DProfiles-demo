@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
   final VoidCallback? onPressed;
-  final String title;
+  final String? title;
   final Color? backgroundColor;
   final TextStyle? titleStyle;
   final Color? borderColor;
@@ -22,7 +22,7 @@ class MyButton extends StatelessWidget {
   const MyButton({
     Key? key,
     this.onPressed,
-    required this.title,
+    this.title,
     this.backgroundColor,
     this.titleStyle,
     this.borderColor,
@@ -63,7 +63,7 @@ class MyButton extends StatelessWidget {
                   padding: context.padding(
                       horizontal:
                           prefixIcon == null && suffixIcon == null ? 0 : 5),
-                  child: Text(title),
+                  child: Text(title!),
                 ),
                 suffixIcon ?? SizedBox.fromSize(),
               ],

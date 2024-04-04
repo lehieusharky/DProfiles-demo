@@ -16,7 +16,7 @@ class UpdateNewPasswordPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MyScaffold(
       horizontalMargin: 32,
-      isBack: true,
+      canBack: true,
       heightAppBar: 50,
       onBack: () {
         while (context.router.canPop()) {

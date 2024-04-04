@@ -45,5 +45,30 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+    <dict>
+       <key>NSAllowsArbitraryLoads</key><true/>
+    </dict>
+	<key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>metamask</string>
+      <string>trust</string>
+      <string>safe</string>
+      <string>rainbow</string>
+      <string>cbwallet</string>
+    </array>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>com.example.yourBundleId</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>flutterdapp</string> <!-- your own custom scheme -->
+        </array>
+      </dict>
+    </array>
 </dict>
 </plist>

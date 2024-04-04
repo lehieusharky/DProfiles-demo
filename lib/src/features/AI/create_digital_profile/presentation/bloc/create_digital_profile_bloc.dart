@@ -63,11 +63,11 @@ class CreateDigitalProfileBloc
 
     add(const GetUserInfo());
 
-    add(const GetUserEducations());
+    // add(const GetUserEducations());
 
     add(const GetUserCertificates());
 
-    add(const GetUserExperiences());
+    // add(const GetUserExperiences());
 
     add(const ChangeCreationStep(isNext: true));
   }

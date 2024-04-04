@@ -19,7 +19,7 @@ class ForgotPasswordPage extends StatelessWidget {
     return MyScaffold(
       horizontalMargin: 32,
       heightAppBar: 50,
-      isBack: true,
+      canBack: true,
       body: Column(
         children: [
           Padding(

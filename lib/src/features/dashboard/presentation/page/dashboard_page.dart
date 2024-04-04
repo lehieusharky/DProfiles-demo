@@ -7,6 +7,7 @@ import 'package:demo_dprofiles/src/features/my_wallet/presentation/pages/my_wall
 import 'package:demo_dprofiles/src/features/profile/presentation/page/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'package:web3modal_flutter/web3modal_flutter.dart';
 
 @RoutePage()
 class DashboardPage extends StatefulWidget {
