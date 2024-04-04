@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/pages/ext_home_page.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_banner.dart';
@@ -5,6 +7,8 @@ import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_disco
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_drawer.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:web3modal_flutter/web3modal_flutter.dart';
+import 'package:web3modal_flutter/widgets/text/w3m_address.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,6 +19,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  late W3MService _w3mService;
+
+  @override
+  void initState() {
+    super.initState();
+    initW3MService();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,16 +40,41 @@ class _HomePageState extends State<HomePage> {
           onAction3Pressed: () => _scaffoldKey.currentState!.openEndDrawer(),
         ),
         titleWidget: Assets.icons.logos.homeLogo.svg(),
-        body: const SingleChildScrollView(
+        body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              HomeBanner(),
-              HomeDiscover(),
+              const HomeBanner(),
+              W3MNetworkSelectButton(service: _w3mService),
+              W3MConnectWalletButton(service: _w3mService),
+              W3MAccountButton(service: _w3mService),
+              Text(_w3mService.session?.address ?? 'Null'),
+              const HomeDiscover(),
             ],
           ),
         ),
       ),
     );
+  }
+
+  void initW3MService() async {
+    _w3mService = W3MService(
+      projectId: 'c215a8fed9aa9f594f5d0c08fd511641',
+      metadata: const PairingMetadata(
+        name: 'dProfiles App',
+        description: "Let's connect with dProfiles",
+        url: 'https://www.dprofiles.xyz/',
+        icons: [
+          'https://www.dprofiles.xyz/_next/static/media/logo.e5ce3f74.svg'
+        ],
+        redirect: Redirect(
+          native: 'https://www.dprofiles.xyz',
+          universal: 'https://www.dprofiles.xyz',
+        ),
+      ),
+    );
+    await _w3mService.init();
+
+    log('add: ${_w3mService.session?.address}');
   }
 }
