@@ -1,11 +1,13 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'details_user.dart';
+
 part 'experiance_model.freezed.dart';
 
 part 'experiance_model.g.dart';
 
 @freezed
-class ExperienceModel with _$ExperienceModel {
+class ExperienceModel with _$ExperienceModel implements DetailOfUser {
   const factory ExperienceModel({
     int? id,
     int? userId,

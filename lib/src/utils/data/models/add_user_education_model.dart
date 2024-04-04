@@ -1,3 +1,5 @@
+import 'package:demo_dprofiles/src/utils/data/models/details_user.dart';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'add_user_education_model.freezed.dart';
@@ -5,7 +7,7 @@ part 'add_user_education_model.freezed.dart';
 part 'add_user_education_model.g.dart';
 
 @freezed
-class EducationModel with _$EducationModel {
+class EducationModel with _$EducationModel implements DetailOfUser {
   const factory EducationModel({
     @Default(0) int? id,
     @JsonKey(name: 'user_id') @Default(0) int? userID,

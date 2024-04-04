@@ -93,6 +93,18 @@ abstract class AppLocalizations {
     Locale('vi')
   ];
 
+  /// No description provided for @about.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get about;
+
+  /// No description provided for @active.
+  ///
+  /// In en, this message translates to:
+  /// **'Active'**
+  String get active;
+
   /// No description provided for @add.
   ///
   /// In en, this message translates to:
@@ -105,11 +117,35 @@ abstract class AppLocalizations {
   /// **'Add Basic Information'**
   String get addBasicInformation;
 
+  /// No description provided for @addYourCharacter.
+  ///
+  /// In en, this message translates to:
+  /// **'Add your character'**
+  String get addYourCharacter;
+
+  /// No description provided for @addYourProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Your Profile'**
+  String get addYourProfile;
+
+  /// No description provided for @aggressive.
+  ///
+  /// In en, this message translates to:
+  /// **'Aggessive'**
+  String get aggressive;
+
   /// No description provided for @aiFeature.
   ///
   /// In en, this message translates to:
   /// **'AI Features'**
   String get aiFeature;
+
+  /// No description provided for @archived.
+  ///
+  /// In en, this message translates to:
+  /// **'Archived'**
+  String get archived;
 
   /// No description provided for @attachment.
   ///
@@ -135,6 +171,12 @@ abstract class AppLocalizations {
   /// **'Certificate'**
   String get certificate;
 
+  /// No description provided for @certificates.
+  ///
+  /// In en, this message translates to:
+  /// **'Certificates'**
+  String get certificates;
+
   /// No description provided for @change.
   ///
   /// In en, this message translates to:
@@ -146,6 +188,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Characters'**
   String get characters;
+
+  /// No description provided for @chat.
+  ///
+  /// In en, this message translates to:
+  /// **'Chat'**
+  String get chat;
+
+  /// No description provided for @chatMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Chat More'**
+  String get chatMore;
+
+  /// No description provided for @chatty.
+  ///
+  /// In en, this message translates to:
+  /// **'Chatty'**
+  String get chatty;
 
   /// No description provided for @company.
   ///
@@ -159,6 +219,12 @@ abstract class AppLocalizations {
   /// **'Continue'**
   String get continueButton;
 
+  /// No description provided for @conversations.
+  ///
+  /// In en, this message translates to:
+  /// **'Conversations'**
+  String get conversations;
+
   /// No description provided for @createDigitalProfileOnTheBlockchain.
   ///
   /// In en, this message translates to:
@@ -170,6 +236,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Create New dProfile'**
   String get createNewDProfile;
+
+  /// No description provided for @createYourAiCharacter.
+  ///
+  /// In en, this message translates to:
+  /// **'Create your AI character'**
+  String get createYourAiCharacter;
 
   /// No description provided for @degree.
   ///
@@ -213,11 +285,23 @@ abstract class AppLocalizations {
   /// **'End Date'**
   String get endDate;
 
+  /// No description provided for @energetic.
+  ///
+  /// In en, this message translates to:
+  /// **'Energetic'**
+  String get energetic;
+
   /// No description provided for @experience.
   ///
   /// In en, this message translates to:
   /// **'Experience'**
   String get experience;
+
+  /// No description provided for @experiences.
+  ///
+  /// In en, this message translates to:
+  /// **'experiences'**
+  String get experiences;
 
   /// No description provided for @fieldOfStudy.
   ///
@@ -225,17 +309,59 @@ abstract class AppLocalizations {
   /// **'Field Of Study'**
   String get fieldOfStudy;
 
+  /// No description provided for @flirty.
+  ///
+  /// In en, this message translates to:
+  /// **'Flirty'**
+  String get flirty;
+
+  /// No description provided for @formal.
+  ///
+  /// In en, this message translates to:
+  /// **'Formal'**
+  String get formal;
+
+  /// No description provided for @friendly.
+  ///
+  /// In en, this message translates to:
+  /// **'Friendly'**
+  String get friendly;
+
   /// No description provided for @from.
   ///
   /// In en, this message translates to:
   /// **'From'**
   String get from;
 
+  /// No description provided for @gender.
+  ///
+  /// In en, this message translates to:
+  /// **'Gender'**
+  String get gender;
+
+  /// No description provided for @helpful.
+  ///
+  /// In en, this message translates to:
+  /// **'Helpful'**
+  String get helpful;
+
   /// No description provided for @home.
   ///
   /// In en, this message translates to:
   /// **'Home'**
   String get home;
+
+  /// No description provided for @hourAgo.
+  ///
+  /// In en, this message translates to:
+  /// **'hour ago'**
+  String get hourAgo;
+
+  /// No description provided for @humorous.
+  ///
+  /// In en, this message translates to:
+  /// **'Humorous'**
+  String get humorous;
 
   /// No description provided for @id.
   ///
@@ -249,6 +375,12 @@ abstract class AppLocalizations {
   /// **'ID Card Number'**
   String get idCardNumber;
 
+  /// No description provided for @inspiring.
+  ///
+  /// In en, this message translates to:
+  /// **'Inspiring'**
+  String get inspiring;
+
   /// No description provided for @issuedBy.
   ///
   /// In en, this message translates to:
@@ -260,6 +392,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Job Position'**
   String get jobPosition;
+
+  /// No description provided for @messages.
+  ///
+  /// In en, this message translates to:
+  /// **'Messages'**
+  String get messages;
+
+  /// No description provided for @myAiCharacter.
+  ///
+  /// In en, this message translates to:
+  /// **'My AI Character'**
+  String get myAiCharacter;
 
   /// No description provided for @name.
   ///
@@ -285,11 +429,29 @@ abstract class AppLocalizations {
   /// **'Number'**
   String get number;
 
+  /// No description provided for @others.
+  ///
+  /// In en, this message translates to:
+  /// **'Others'**
+  String get others;
+
+  /// No description provided for @passive.
+  ///
+  /// In en, this message translates to:
+  /// **'Passive'**
+  String get passive;
+
   /// No description provided for @profile.
   ///
   /// In en, this message translates to:
   /// **'Profile'**
   String get profile;
+
+  /// No description provided for @profiles.
+  ///
+  /// In en, this message translates to:
+  /// **'Profiles'**
+  String get profiles;
 
   /// No description provided for @save.
   ///
@@ -303,11 +465,35 @@ abstract class AppLocalizations {
   /// **'School'**
   String get school;
 
+  /// No description provided for @sexy.
+  ///
+  /// In en, this message translates to:
+  /// **'Sexy'**
+  String get sexy;
+
+  /// No description provided for @smart.
+  ///
+  /// In en, this message translates to:
+  /// **'Smart'**
+  String get smart;
+
+  /// No description provided for @spiritual.
+  ///
+  /// In en, this message translates to:
+  /// **'Spiritual'**
+  String get spiritual;
+
   /// No description provided for @startDate.
   ///
   /// In en, this message translates to:
   /// **'Start Date'**
   String get startDate;
+
+  /// No description provided for @supportive.
+  ///
+  /// In en, this message translates to:
+  /// **'Supportive'**
+  String get supportive;
 
   /// No description provided for @theme.
   ///
@@ -326,6 +512,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'To'**
   String get to;
+
+  /// No description provided for @viewChatHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'View Chat History'**
+  String get viewChatHistory;
+
+  /// No description provided for @violent.
+  ///
+  /// In en, this message translates to:
+  /// **'Violent'**
+  String get violent;
+
+  /// No description provided for @yourAiCharacters.
+  ///
+  /// In en, this message translates to:
+  /// **'Your AI Characters'**
+  String get yourAiCharacters;
+
+  /// No description provided for @yourLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Location'**
+  String get yourLocation;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -34,7 +34,7 @@ class AppOutlineButton implements AbstractFactoryAppButton {
   @override
   Widget elevatedButton({
     required VoidCallback onPressed,
-    required String title,
+     String? title,
     Widget? prefixIcon,
     Widget? suffixIcon,
     double? width,
