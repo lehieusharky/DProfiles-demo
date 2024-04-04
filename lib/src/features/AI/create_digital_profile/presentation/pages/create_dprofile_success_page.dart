@@ -1,8 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/header_create_digital.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/path_direction.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
