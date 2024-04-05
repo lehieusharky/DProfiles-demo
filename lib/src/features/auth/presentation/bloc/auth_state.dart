@@ -4,9 +4,10 @@ part of 'auth_bloc.dart';
 class AuthState with _$AuthState {
   const factory AuthState.initial() = _Initial;
   const factory AuthState.loading() = AuthLoading;
-  const factory AuthState.error({required String message, String? title}) =
-      AuthError;
-  const factory AuthState.sendSignUpEmailSuccess() = AuthSendSignUpEmailSuccess;
+  const factory AuthState.error(
+      {required String message, required String title}) = AuthError;
+  const factory AuthState.sendSignUpEmailSuccess(String email) =
+      AuthSendSignUpEmailSuccess;
   const factory AuthState.resendSignUpEmailSuccess() =
       AuthResendSignUpEmailSuccess;
   const factory AuthState.validateSignUpCodeSuccess() =

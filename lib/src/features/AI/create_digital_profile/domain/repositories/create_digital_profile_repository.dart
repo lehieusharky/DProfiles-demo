@@ -61,6 +61,10 @@ abstract class CreateDigitalProfileRepository {
 
   Future<Either<CreateDigitalProfileFailure, BaseResponse>> deleteExperience(
       String id);
+
+  Future<Either<CreateDigitalProfileFailure, void>> createDigitalProfile();
+
+  Future<Either<CreateDigitalProfileFailure, BaseResponse>> updateDigitalProfile();
 }
 
 class CreateDigitalProfileFailure extends AppFailure {

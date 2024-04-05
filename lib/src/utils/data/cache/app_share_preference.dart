@@ -23,6 +23,8 @@ abstract class AppSharePreference {
 
   Future<bool> setAccessToken(String token);
 
+  Future<bool> removeAccessToken();
+
   Future<bool> setRefreshToken(String token);
 
   String? getAccessToken();

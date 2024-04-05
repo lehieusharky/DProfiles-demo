@@ -20,7 +20,7 @@ class BottomNavigationText extends StatelessWidget {
       text: TextSpan(
         children: [
           TextSpan(
-            text: content1,
+            text: "$content1  ",
             style: AppFont()
                 .fontTheme(
                   context,

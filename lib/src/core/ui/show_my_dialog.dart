@@ -1,3 +1,4 @@
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
 
@@ -33,12 +34,15 @@ Future<void> showErrorDialog(
     builder: (BuildContext context) {
       return AlertDialog(
         title: Text(title, textAlign: TextAlign.center),
-        content: Text(description),
+        content: Text(
+          description,
+          textAlign: TextAlign.center,
+        ),
         actions: action ??
             [
               AppFlatButton(context).elevatedButton(
                   onPressed: onPressed ?? () => Navigator.pop(context),
-                  title: 'OK'),
+                  title: appLocal(context).ok),
             ],
       );
     },

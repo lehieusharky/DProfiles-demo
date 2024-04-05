@@ -7,6 +7,7 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/data/models/add_user_education_model.dart';
 import 'package:demo_dprofiles/src/utils/extensions/ext_models/ext_education_model.dart';
+import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:flutter/material.dart';
@@ -86,37 +87,47 @@ class _FormEducationInfoState extends State<FormEducationInfo> {
                             title: appLocal(context).school.toUpperCase(),
                             keyboardType: TextInputType.emailAddress,
                             textInputAction: TextInputAction.next,
-                            hint: 'School name'),
+                            hint: appLocal(context).schoolName),
                         Padding(
                           padding: context.padding(top: 32),
                           child: AuthField(
                             controller: _degreeController,
+                            textInputAction: TextInputAction.next,
                             title: appLocal(context).degree.toUpperCase(),
-                            hint: 'dd/mm/yyyy',
+                            hint: appLocal(context).dateTimeFormatddmmyyyyy,
+                            validator: (date) =>
+                                date.validationForDDMMYYYYY(context),
                           ),
                         ),
                         Padding(
                           padding: context.padding(top: 32),
                           child: AuthField(
                             controller: _fieldOfStudyController,
+                            textInputAction: TextInputAction.next,
                             title: appLocal(context).fieldOfStudy.toUpperCase(),
-                            hint: 'Vietnam',
+                            hint: appLocal(context).yourFieldOfStudy,
                           ),
                         ),
                         Padding(
                           padding: context.padding(top: 32),
                           child: AuthField(
                             controller: _startDateController,
+                            textInputAction: TextInputAction.next,
                             title: appLocal(context).startDate.toUpperCase(),
-                            hint: 'dd/mm/yyyy',
+                            hint: appLocal(context).dateTimeFormatddmmyyyyy,
+                            validator: (date) =>
+                                date.validationForDDMMYYYYY(context),
                           ),
                         ),
                         Padding(
                           padding: context.padding(top: 32),
                           child: AuthField(
                             controller: _endDateController,
+                            textInputAction: TextInputAction.next,
                             title: appLocal(context).endDate.toUpperCase(),
-                            hint: 'dd/mm/yyyy',
+                            hint: appLocal(context).dateTimeFormatddmmyyyyy,
+                            validator: (date) =>
+                                date.validationForDDMMYYYYY(context),
                           ),
                         ),
                         Padding(
@@ -186,14 +197,16 @@ class _FormEducationInfoState extends State<FormEducationInfo> {
     );
   }
 
-  void _delete(BuildContext context) {}
+  void _delete(BuildContext context) => _clearField();
 
   void _add(BuildContext context) {
     if (_keyForm.currentState?.validate() ?? false) {
       final newEducation = EducationModel(
         schoolName: _schoolNameController.text.trim(),
-        startDate: DateTime.now().toString(),
-        endDate: DateTime.now().toString(),
+        startDate: _startDateController.text.convertToIOSDateTimeFormat(),
+        endDate: _endDateController.text.convertToIOSDateTimeFormat(),
+        major: _degreeController.text.trim(),
+        description: _fieldOfStudyController.text.trim(),
       );
 
       context
@@ -202,13 +215,9 @@ class _FormEducationInfoState extends State<FormEducationInfo> {
     }
   }
 
-  void _back(BuildContext context) {
-    _changeStep(context, false);
-  }
+  void _back(BuildContext context) => _changeStep(context, false);
 
-  void _continue(BuildContext context) {
-    _changeStep(context, true);
-  }
+  void _continue(BuildContext context) => _changeStep(context, true);
 
   void _changeStep(BuildContext context, bool isNext) => context
       .read<CreateDigitalProfileBloc>()

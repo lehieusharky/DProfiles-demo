@@ -80,4 +80,8 @@ class AppSharePreferenceImpl implements AppSharePreference {
   @override
   Future<bool> setRefreshToken(String token) async =>
       await _prefs.setString(REFRESH_TOKEN, token).then((value) => value);
+
+  @override
+  Future<bool> removeAccessToken() async =>
+      _prefs.remove(ACCESS_TOKEN).then((value) => value);
 }

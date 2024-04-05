@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/data/datasources/create_digital_profile_datasource.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/repositories/create_digital_profile_repository.dart';
+import 'package:demo_dprofiles/src/features/auth/data/models/auth_error_response.dart';
 import 'package:demo_dprofiles/src/utils/data/models/add_user_education_model.dart';
 import 'package:demo_dprofiles/src/utils/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/utils/data/models/experiance_model.dart';
@@ -246,6 +247,32 @@ class CreateDigitalProfileRepositoryImpl
     } on DioException catch (e) {
       return Left(CreateDigitalProfileFailure(
           response: ErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<CreateDigitalProfileFailure, void>>
+      createDigitalProfile() async {
+    try {
+      final res = await _createDigitalProfileDataSource.createDigitalProfile();
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(CreateDigitalProfileFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<CreateDigitalProfileFailure, BaseResponse>>
+      updateDigitalProfile() async {
+    try {
+      final res = await _createDigitalProfileDataSource.updateDigitalProfile();
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(CreateDigitalProfileFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
 }

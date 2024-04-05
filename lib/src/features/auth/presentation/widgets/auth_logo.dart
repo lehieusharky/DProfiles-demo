@@ -1,9 +1,12 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:flutter/material.dart';
 
 class AuthLogo extends StatelessWidget {
-  const AuthLogo({Key? key}) : super(key: key);
+  AuthLogo({Key? key}) : super(key: key);
+
+  final _isDarkMode = sharePreference.isDarkMode();
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +17,9 @@ class AuthLogo extends StatelessWidget {
         children: [
           Assets.icons.logos.dWhitePWhite.svg(),
           context.sizedBox(width: 9),
-          Assets.icons.logos.dprofilesBlack.svg(),
+          _isDarkMode
+              ? Assets.icons.logos.dGreyProfileGreen.svg()
+              : Assets.icons.logos.dprofilesBlack.svg(),
         ],
       ),
     );

@@ -5,6 +5,7 @@ import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentati
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/data/models/user_info_model.dart';
+import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -59,14 +60,22 @@ class _FormAddBasicInfoState extends State<FormAddBasicInfo>
                   title: appLocal(context).name.toUpperCase(),
                   keyboardType: TextInputType.emailAddress,
                   textInputAction: TextInputAction.next,
-                  hint: 'Name'),
+                  validator: (name) {
+                    if (name == null || name.isEmpty) {
+                      return appLocal(context).userNameCannotBeEmpty;
+                    } else {
+                      return null;
+                    }
+                  },
+                  hint: appLocal(context).name),
               Padding(
                 padding: context.padding(top: 32),
                 child: AuthField(
                   controller: _dobController,
                   title: appLocal(context).dob.toUpperCase(),
                   textInputAction: TextInputAction.next,
-                  hint: 'dd/mm/yyyy',
+                  validator: (dob) => dob.dateTimeFormatValidation(context),
+                  hint: appLocal(context).dateTimeFormatddmmyyyyy,
                 ),
               ),
               Padding(
@@ -75,7 +84,7 @@ class _FormAddBasicInfoState extends State<FormAddBasicInfo>
                   controller: _nationalityController,
                   title: appLocal(context).nationality.toUpperCase(),
                   textInputAction: TextInputAction.next,
-                  hint: 'Vietnam',
+                  hint: appLocal(context).yourNationality,
                 ),
               ),
               Padding(
@@ -84,7 +93,7 @@ class _FormAddBasicInfoState extends State<FormAddBasicInfo>
                   controller: _idCardController,
                   title: appLocal(context).idCardNumber.toUpperCase(),
                   textInputAction: TextInputAction.done,
-                  hint: 'Vietnam',
+                  hint: appLocal(context).yourIdCard,
                 ),
               ),
               Padding(

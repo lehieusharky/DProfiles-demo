@@ -41,7 +41,7 @@ class CreateDigitalProfileDataSourceImpl
     try {
       final baseResponse = await MyHttp.rl().getUserCertificates();
       return baseResponse;
-    } on DioException catch(e) {
+    } on DioException catch (e) {
       rethrow;
     }
   }
@@ -190,6 +190,25 @@ class CreateDigitalProfileDataSourceImpl
   Future<BaseResponse> deleteExperience(String id) async {
     try {
       final baseResponse = await MyHttp.rl().deleteExperienceInfo(id);
+      return baseResponse;
+    } on DioException {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<void> createDigitalProfile() async {
+    try {
+      final baseResponse = await MyHttp.rl().createDigitalProfile();
+    } on DioException {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<BaseResponse> updateDigitalProfile() async {
+    try {
+      final baseResponse = await MyHttp.rl().updateDigitalProfile();
       return baseResponse;
     } on DioException {
       rethrow;

@@ -65,4 +65,10 @@ class CreateDigitalProfileEvent with _$CreateDigitalProfileEvent {
 
   const factory CreateDigitalProfileEvent.saveUpdatedProfile() =
       SaveUpdatedProfile;
+
+  const factory CreateDigitalProfileEvent.createDigitalProfile() =
+      CreateDigitalProfile;
+
+  const factory CreateDigitalProfileEvent.updateDigitalProfile() =
+      UpdateDigitalProfile;
 }

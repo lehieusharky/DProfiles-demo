@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_divider.dart';
-import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/page/ext_sign_in_page.dart';
@@ -24,29 +24,27 @@ class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AuthBloc(),
+      create: (context) => AuthBloc(context),
       child: BlocListener<AuthBloc, AuthState>(
         listener: (context, state) {
           widget.handleSignInState(state, context);
         },
         child: MyScaffold(
           horizontalMargin: 32,
-          body: Stack(
-            children: [
-              Column(
-                children: [
-                  const AuthLogo(),
-                  const AuthTitle(title: 'Login'),
-                  const MyDivider(),
-                  const SignInForm(),
-                  BottomNavigationText(
-                    content1: "Don’t have an account?  ",
-                    content2: 'SignUp',
-                    onPressed: () => context.router.push(const SignUpRoute()),
-                  ),
-                ],
-              ),
-            ],
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                AuthLogo(),
+                AuthTitle(title: appLocal(context).login),
+                const MyDivider(),
+                const SignInForm(),
+                BottomNavigationText(
+                  content1: appLocal(context).dontHaveAnAccount,
+                  content2: appLocal(context).signUp,
+                  onPressed: () => context.router.push(const SignUpRoute()),
+                ),
+              ],
+            ),
           ),
         ),
       ),

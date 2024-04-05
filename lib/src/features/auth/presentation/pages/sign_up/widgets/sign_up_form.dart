@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_button.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
+
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
@@ -9,15 +10,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignUpForm extends StatefulWidget {
-  final TextEditingController controller;
-
-  const SignUpForm({super.key, required this.controller});
+  const SignUpForm({super.key});
 
   @override
   State<SignUpForm> createState() => _SignUpFormState();
 }
 
 class _SignUpFormState extends State<SignUpForm> {
+  final _emailController = TextEditingController();
   final _keyForm = GlobalKey<FormState>();
 
   @override
@@ -31,18 +31,19 @@ class _SignUpFormState extends State<SignUpForm> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               AuthField(
-                controller: widget.controller,
-                title: 'EMAIL',
-                hint: 'Email address',
+                autoFocus: true,
+                controller: _emailController,
+                title: appLocal(context).email.toUpperCase(),
+                hint: appLocal(context).emailAddress,
                 keyboardType: TextInputType.emailAddress,
-                validator: (email) => email.emailValidation(),
+                validator: (email) => email.emailValidation(context),
               ),
               Padding(
                 padding: context.padding(vertical: 32),
                 child: AppFlatButton(context).elevatedButton(
                   width: context.width,
                   onPressed: () => _signUp(context),
-                  title: 'Next',
+                  title: appLocal(context).nextButton,
                   child: state is AuthLoading ? const MyLoading() : null,
                 ),
               ),
@@ -57,7 +58,7 @@ class _SignUpFormState extends State<SignUpForm> {
     if (_keyForm.currentState?.validate() ?? false) {
       context
           .read<AuthBloc>()
-          .add(AuthSendSignUpEmail(widget.controller.text.trim()));
+          .add(AuthSendSignUpEmail(_emailController.text.trim()));
     }
   }
 }

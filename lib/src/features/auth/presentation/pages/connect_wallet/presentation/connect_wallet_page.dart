@@ -1,13 +1,15 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/features/auth/data/mock/mock_auth.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_logo.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/bottom_navigation_text.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/utils/services/connect_wallet_service.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -20,17 +22,7 @@ class ConnectWalletPage extends StatelessWidget {
       horizontalMargin: 16,
       body: Column(
         children: [
-          Padding(
-            padding: context.padding(top: 40, bottom: 75),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Assets.icons.logos.dWhitePWhite.svg(),
-                context.sizedBox(width: 9),
-                Assets.icons.logos.dprofilesBlack.svg(),
-              ],
-            ),
-          ),
+          AuthLogo(),
           Assets.images.auth.connectWallet.image(
             fit: BoxFit.cover,
             width: context.sizeWidth(250),
@@ -39,7 +31,7 @@ class ConnectWalletPage extends StatelessWidget {
           Padding(
             padding: context.padding(bottom: 12, top: 28),
             child: Text(
-              MockAuth.connectWallet,
+              appLocal(context).connectYourWallet,
               textAlign: TextAlign.center,
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.w700)
@@ -49,7 +41,7 @@ class ConnectWalletPage extends StatelessWidget {
           Padding(
             padding: context.padding(horizontal: 12),
             child: Text(
-              MockAuth.descriptionConnetWallet,
+              appLocal(context).connectWalletDescription,
               textAlign: TextAlign.center,
               style: AppFont()
                   .fontTheme(context, color: colorScheme(context).outline)
@@ -60,13 +52,14 @@ class ConnectWalletPage extends StatelessWidget {
             padding: context.padding(vertical: 28),
             child: MyButton(
               width: context.width,
-              onPressed: () {},
-              title: 'Connect wallet',
+              onPressed: () async =>
+                  AppConnectWalletService().connectWallet(context),
+              title: appLocal(context).connectWallet,
             ),
           ),
           BottomNavigationText(
-              content1: 'Already have an account?  ',
-              content2: 'Login',
+              content1: "${appLocal(context).alreadyHaveAnAccount}  ",
+              content2: appLocal(context).login,
               onPressed: () => context.router.push(const SignInRoute())),
         ],
       ),

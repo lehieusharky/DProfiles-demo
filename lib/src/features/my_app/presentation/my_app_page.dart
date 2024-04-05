@@ -59,7 +59,7 @@ class _MyAppPageState extends State<MyAppPage> {
               routerConfig: _appRoute.config(),
               darkTheme: AppColorScheme.darkTheme,
               theme: AppColorScheme.lightTheme,
-              themeMode: ThemeMode.dark,
+              themeMode: ThemeMode.light,
               localizationsDelegates: const [
                 AppLocalizations.delegate,
                 GlobalMaterialLocalizations.delegate,

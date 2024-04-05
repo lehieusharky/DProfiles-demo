@@ -7,8 +7,11 @@ import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
 extension EducationModelExt on EducationModel {
-  Widget toWidget(BuildContext context,
-      {VoidCallback? onDelete, VoidCallback? onUpdate}) {
+  Widget toWidget(
+    BuildContext context, {
+    VoidCallback? onDelete,
+    VoidCallback? onUpdate,
+  }) {
     return Padding(
       padding: context.padding(top: 6),
       child: Container(
@@ -39,7 +42,7 @@ extension EducationModelExt on EducationModel {
                     Padding(
                       padding: context.padding(vertical: 5),
                       child: Text(
-                        'Jul 2019 - Mar 2024',
+                        '$startDate - $endDate',
                         style: AppFont()
                             .fontTheme(context,
                                 color: colorScheme(context).outline)

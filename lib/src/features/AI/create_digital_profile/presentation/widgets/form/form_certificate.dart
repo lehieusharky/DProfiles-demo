@@ -7,10 +7,12 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/utils/extensions/ext_models/ext_certificate_model.dart';
+import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pinput/pinput.dart';
 
 class FormCertificate extends StatefulWidget {
   const FormCertificate({super.key});
@@ -82,41 +84,57 @@ class _FormCertificateState extends State<FormCertificate> {
                   child: Column(
                     children: [
                       AuthField(
-                          controller: _nameController,
-                          title: 'NAME',
-                          keyboardType: TextInputType.emailAddress,
-                          textInputAction: TextInputAction.next,
-                          hint: 'School name'),
+                        controller: _nameController,
+                        title: appLocal(context).name.toUpperCase(),
+                        keyboardType: TextInputType.emailAddress,
+                        textInputAction: TextInputAction.next,
+                        validator: (name) {
+                          if (name == null || name.isEmpty) {
+                            return appLocal(context).userNameCannotBeEmpty;
+                          } else {
+                            return null;
+                          }
+                        },
+                        hint: appLocal(context).certificateName,
+                      ),
                       Padding(
                         padding: context.padding(top: 32),
                         child: AuthField(
                           controller: _numberController,
-                          title: 'NUMBER',
-                          hint: '123321',
+                          textInputAction: TextInputAction.next,
+                          title: appLocal(context).number.toUpperCase(),
+                          hint: appLocal(context).number,
                         ),
                       ),
                       Padding(
                         padding: context.padding(top: 32),
                         child: AuthField(
                           controller: _issuedByController,
-                          title: 'ISSUED BY',
-                          hint: 'School A',
+                          textInputAction: TextInputAction.next,
+                          title: appLocal(context).issuedBy,
+                          hint: appLocal(context).schoolName,
                         ),
                       ),
                       Padding(
                         padding: context.padding(top: 32),
                         child: AuthField(
                           controller: _fromController,
-                          title: 'FROM',
-                          hint: 'dd/mm/yyyy',
+                          textInputAction: TextInputAction.next,
+                          title: appLocal(context).from,
+                          hint: appLocal(context).dateTimeFormatddmmyyyyy,
+                          validator: (date) =>
+                              date.validationForDDMMYYYYY(context),
                         ),
                       ),
                       Padding(
                         padding: context.padding(top: 32),
                         child: AuthField(
                           controller: _toController,
-                          title: 'TO',
-                          hint: 'dd/mm/yyyy',
+                          textInputAction: TextInputAction.done,
+                          title: appLocal(context).to,
+                          hint: appLocal(context).dateTimeFormatddmmyyyyy,
+                          validator: (date) =>
+                              date.validationForDDMMYYYYY(context),
                         ),
                       ),
                       Padding(
@@ -177,32 +195,32 @@ class _FormCertificateState extends State<FormCertificate> {
     );
   }
 
-  void _delete(BuildContext context) {}
+  void _add(BuildContext context) {
+    if (_keyForm.currentState?.validate() ?? false) {
+      final newCertificate = CertificateModel(
+          date: _fromController.text.convertToIOSDateTimeFormat() +
+              _toController.text.convertToIOSDateTimeFormat(),
+          organization: _issuedByController.text,
+          name: _nameController.text);
 
-  void _back(BuildContext context) {
-    _changeStep(context, false);
+      context
+          .read<CreateDigitalProfileBloc>()
+          .add(AddUserCertificate(newCertificate));
+    }
   }
 
-  void _continue(BuildContext context) {
-    _changeStep(context, true);
-  }
+  void _delete(BuildContext context) => _clearField();
+
+  void _back(BuildContext context) => _changeStep(context, false);
+
+  void _continue(BuildContext context) => _changeStep(context, true);
 
   void _changeStep(BuildContext context, bool isNext) => context
       .read<CreateDigitalProfileBloc>()
       .add(ChangeCreationStep(isNext: isNext));
 
-  void _add(BuildContext context) {
-    if (_keyForm.currentState?.validate() ?? false) {
-      context
-          .read<CreateDigitalProfileBloc>()
-          .add(AddUserCertificate(CertificateModel(
-            name: _nameController.text.trim(),
-          )));
-    }
-  }
-
   void _clearField() {
-    _nameController.clear();
+    _nameController.setText("");
     _numberController.clear();
     _issuedByController.clear();
     _fromController.clear();

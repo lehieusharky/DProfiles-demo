@@ -261,27 +261,31 @@ class _ProfilePageState extends State<ProfilePage>
                           .fontTheme(context, weight: FontWeight.bold)
                           .bodyLarge,
                     ),
-                    Container(
-                      padding: context.padding(horizontal: 8, vertical: 8),
-                      decoration: BoxDecoration(
-                          color: colorScheme(context)
-                              .outlineVariant
-                              .withOpacity(0.3),
-                          borderRadius: BorderRadius.circular(8)),
-                      child: Row(
-                        children: [
-                          Text(
-                            'Create dProfile',
-                            style: AppFont()
-                                .fontTheme(context, weight: FontWeight.bold)
-                                .bodyMedium,
-                          ),
-                          context.sizedBox(width: 5),
-                          Icon(
-                            IconsaxBold.personalcard,
-                            color: colorScheme(context).primary,
-                          ),
-                        ],
+                    InkWell(
+                      onTap: () => context.router
+                          .push(const CreateDigitalProfileRoute()),
+                      child: Container(
+                        padding: context.padding(horizontal: 8, vertical: 8),
+                        decoration: BoxDecoration(
+                            color: colorScheme(context)
+                                .outlineVariant
+                                .withOpacity(0.3),
+                            borderRadius: BorderRadius.circular(8)),
+                        child: Row(
+                          children: [
+                            Text(
+                              'Create dProfile',
+                              style: AppFont()
+                                  .fontTheme(context, weight: FontWeight.bold)
+                                  .bodyMedium,
+                            ),
+                            context.sizedBox(width: 5),
+                            Icon(
+                              IconsaxBold.personalcard,
+                              color: colorScheme(context).primary,
+                            ),
+                          ],
+                        ),
                       ),
                     )
                   ],

@@ -1,11 +1,14 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/onboarding_page_indicator.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
+import 'package:demo_dprofiles/src/utils/services/connect_wallet_service.dart';
 import 'package:flutter/material.dart';
+import 'package:web3modal_flutter/web3modal_flutter.dart';
 
 class HomeBanner extends StatefulWidget {
   const HomeBanner({Key? key}) : super(key: key);
@@ -77,14 +80,14 @@ class _HomeBannerState extends State<HomeBanner> {
             children: [
               Padding(
                 padding: context.padding(bottom: 16),
-                child: Text('Invesment Opportunity',
+                child: Text(appLocal(context).investmentOpportunity,
                     style: AppFont()
                         .fontTheme(context,
                             weight: FontWeight.w400,
                             color: colorScheme(context).outline)
                         .bodyMedium),
               ),
-              Text('dProfiles opens sales of \$DP1 Tokens',
+              Text(appLocal(context).dProfilesOpensSales,
                   style: AppFont()
                       .fontTheme(context,
                           weight: FontWeight.w600,
@@ -93,15 +96,16 @@ class _HomeBannerState extends State<HomeBanner> {
                       .titleSmall),
               Padding(
                 padding: context.padding(top: 5, bottom: 10),
-                child: Text('in angel investor round ',
+                child: Text(appLocal(context).inAngelnvestorRound,
                     style: AppFont()
                         .fontTheme(context,
                             weight: FontWeight.w600, color: MyColor.getFFD166)
                         .bodyLarge),
               ),
               MyButton(
-                onPressed: () {},
-                title: 'Buy \$DP1',
+                onPressed: () =>
+                    AppConnectWalletService().connectWallet(context),
+                title: appLocal(context).connectWallet,
               ),
             ],
           ),

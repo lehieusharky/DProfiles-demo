@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/repositories/create_digital_profile_repository.dart';
+import 'package:demo_dprofiles/src/features/auth/data/models/auth_error_response.dart';
 import 'package:demo_dprofiles/src/utils/data/models/add_user_education_model.dart';
 import 'package:demo_dprofiles/src/utils/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/utils/data/models/experiance_model.dart';
@@ -60,6 +61,10 @@ abstract class CreateDigitalProfileUseCase {
       String id, ExperienceModel data);
 
   Future<Either<List<String>, BaseResponse>> deleteUserExperience(String id);
+
+  Future<Either<String, void>> createDigitalProfile();
+
+  Future<Either<String, BaseResponse>> updateDigitalProfile();
 }
 
 @Injectable(as: CreateDigitalProfileUseCase)
@@ -242,6 +247,24 @@ class CreateDigitalProfileUseCaseImpl implements CreateDigitalProfileUseCase {
         await _createDigitalProfileRepository.updateExperienceInfo(id, data);
     return result.fold(
       (l) => Left((l.response as ErrorResponse).message),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, void>> createDigitalProfile() async {
+    final result = await _createDigitalProfileRepository.createDigitalProfile();
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> updateDigitalProfile() async {
+    final result = await _createDigitalProfileRepository.updateDigitalProfile();
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),
     );
   }

@@ -19,13 +19,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  late W3MService _w3mService;
-
-  @override
-  void initState() {
-    super.initState();
-    initW3MService();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,41 +33,16 @@ class _HomePageState extends State<HomePage> {
           onAction3Pressed: () => _scaffoldKey.currentState!.openEndDrawer(),
         ),
         titleWidget: Assets.icons.logos.homeLogo.svg(),
-        body: SingleChildScrollView(
+        body: const SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const HomeBanner(),
-              W3MNetworkSelectButton(service: _w3mService),
-              W3MConnectWalletButton(service: _w3mService),
-              W3MAccountButton(service: _w3mService),
-              Text(_w3mService.session?.address ?? 'Null'),
-              const HomeDiscover(),
+              HomeBanner(),
+              HomeDiscover(),
             ],
           ),
         ),
       ),
     );
-  }
-
-  void initW3MService() async {
-    _w3mService = W3MService(
-      projectId: 'c215a8fed9aa9f594f5d0c08fd511641',
-      metadata: const PairingMetadata(
-        name: 'dProfiles App',
-        description: "Let's connect with dProfiles",
-        url: 'https://www.dprofiles.xyz/',
-        icons: [
-          'https://www.dprofiles.xyz/_next/static/media/logo.e5ce3f74.svg'
-        ],
-        redirect: Redirect(
-          native: 'https://www.dprofiles.xyz',
-          universal: 'https://www.dprofiles.xyz',
-        ),
-      ),
-    );
-    await _w3mService.init();
-
-    log('add: ${_w3mService.session?.address}');
   }
 }

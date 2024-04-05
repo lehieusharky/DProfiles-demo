@@ -1,12 +1,9 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_button.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/widgets/forgot_password_sign_in.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
-import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
-import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
-import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
@@ -33,29 +30,31 @@ class _SignInFormState extends State<SignInForm> {
           child: Column(
             children: [
               AuthField(
+                  autoFocus: true,
                   controller: _emailController,
-                  title: 'EMAIL',
+                  title: appLocal(context).email.toUpperCase(),
                   keyboardType: TextInputType.emailAddress,
                   textInputAction: TextInputAction.next,
-                  validator: (email) => email.emailValidation(),
-                  hint: 'Email address'),
+                  validator: (email) => email.emailValidation(context),
+                  hint: appLocal(context).emailAddress),
               Padding(
                 padding: context.padding(top: 32),
                 child: AuthField(
                   controller: _passwordController,
                   isPasswordField: true,
-                  title: 'PASSWORD',
-                  validator: (password) => password.passwordValidation(),
-                  hint: 'Password',
+                  title: appLocal(context).password.toUpperCase(),
+                  textInputAction: TextInputAction.done,
+                  validator: (password) => password.passwordValidation(context),
+                  hint: appLocal(context).password,
                 ),
               ),
-              _buildForgotPassword(),
+              const ForgotPasswordSignIn(),
               Padding(
                 padding: context.padding(vertical: 32),
                 child: AppFlatButton(context).elevatedButton(
                   width: context.width,
                   onPressed: () => _signIn(context),
-                  title: 'Login',
+                  title: appLocal(context).login,
                   child: state is AuthLoading ? const MyLoading() : null,
                 ),
               ),
@@ -73,33 +72,10 @@ class _SignInFormState extends State<SignInForm> {
     }
   }
 
-  Widget _buildForgotPassword() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          'Forgot your password?',
-          style: AppFont()
-              .fontTheme(
-                context,
-                weight: FontWeight.w700,
-                color: colorScheme(context).onBackground,
-              )
-              .bodyMedium,
-        ),
-        TextButton(
-            onPressed: () => context.router.push(const ForgotPasswordRoute()),
-            child: Text(
-              'Reset password',
-              style: AppFont()
-                  .fontTheme(
-                    context,
-                    weight: FontWeight.w700,
-                    color: colorScheme(context).primary,
-                  )
-                  .bodyMedium,
-            )),
-      ],
-    );
+  @override
+  void dispose() {
+    super.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
   }
 }

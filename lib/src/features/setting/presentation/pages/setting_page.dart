@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/setting/presentation/bloc/setting_bloc.dart';
 import 'package:demo_dprofiles/src/features/setting/presentation/pages/extension_setting_page.dart';
 import 'package:demo_dprofiles/src/features/setting/presentation/widgets/group_setting_button.dart';
 import 'package:demo_dprofiles/src/features/setting/presentation/widgets/setting_button.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/utils/constant/support_theme.dart';
 import 'package:demo_dprofiles/src/utils/constant/supported_language.dart';
@@ -61,8 +63,11 @@ class _SettingPageState extends State<SettingPage> {
                     buttons: [
                       SettingButton(
                         title: 'Sign out',
-                        onPressed: () async =>
-                            widget.showToggleLanguageBottomSheet(context),
+                        onPressed: () async {
+                          await sharePreference.removeAccessToken();
+
+                          context.router.replace(const SignInRoute());
+                        },
                         iconData: IconsaxOutline.logout,
                       ),
                     ],

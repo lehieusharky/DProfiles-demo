@@ -893,8 +893,8 @@ mixin _$AuthState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message, String? title) error,
-    required TResult Function() sendSignUpEmailSuccess,
+    required TResult Function(String message, String title) error,
+    required TResult Function(String email) sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
@@ -906,8 +906,8 @@ mixin _$AuthState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message, String? title)? error,
-    TResult? Function()? sendSignUpEmailSuccess,
+    TResult? Function(String message, String title)? error,
+    TResult? Function(String email)? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
@@ -919,8 +919,8 @@ mixin _$AuthState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message, String? title)? error,
-    TResult Function()? sendSignUpEmailSuccess,
+    TResult Function(String message, String title)? error,
+    TResult Function(String email)? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
@@ -1039,8 +1039,8 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message, String? title) error,
-    required TResult Function() sendSignUpEmailSuccess,
+    required TResult Function(String message, String title) error,
+    required TResult Function(String email) sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
@@ -1055,8 +1055,8 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message, String? title)? error,
-    TResult? Function()? sendSignUpEmailSuccess,
+    TResult? Function(String message, String title)? error,
+    TResult? Function(String email)? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
@@ -1071,8 +1071,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message, String? title)? error,
-    TResult Function()? sendSignUpEmailSuccess,
+    TResult Function(String message, String title)? error,
+    TResult Function(String email)? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
@@ -1194,8 +1194,8 @@ class _$AuthLoadingImpl implements AuthLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message, String? title) error,
-    required TResult Function() sendSignUpEmailSuccess,
+    required TResult Function(String message, String title) error,
+    required TResult Function(String email) sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
@@ -1210,8 +1210,8 @@ class _$AuthLoadingImpl implements AuthLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message, String? title)? error,
-    TResult? Function()? sendSignUpEmailSuccess,
+    TResult? Function(String message, String title)? error,
+    TResult? Function(String email)? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
@@ -1226,8 +1226,8 @@ class _$AuthLoadingImpl implements AuthLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message, String? title)? error,
-    TResult Function()? sendSignUpEmailSuccess,
+    TResult Function(String message, String title)? error,
+    TResult Function(String email)? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
@@ -1315,7 +1315,7 @@ abstract class _$$AuthErrorImplCopyWith<$Res> {
           _$AuthErrorImpl value, $Res Function(_$AuthErrorImpl) then) =
       __$$AuthErrorImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String message, String? title});
+  $Res call({String message, String title});
 }
 
 /// @nodoc
@@ -1330,17 +1330,17 @@ class __$$AuthErrorImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? message = null,
-    Object? title = freezed,
+    Object? title = null,
   }) {
     return _then(_$AuthErrorImpl(
       message: null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
               as String,
-      title: freezed == title
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
     ));
   }
 }
@@ -1348,12 +1348,12 @@ class __$$AuthErrorImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AuthErrorImpl implements AuthError {
-  const _$AuthErrorImpl({required this.message, this.title});
+  const _$AuthErrorImpl({required this.message, required this.title});
 
   @override
   final String message;
   @override
-  final String? title;
+  final String title;
 
   @override
   String toString() {
@@ -1383,8 +1383,8 @@ class _$AuthErrorImpl implements AuthError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message, String? title) error,
-    required TResult Function() sendSignUpEmailSuccess,
+    required TResult Function(String message, String title) error,
+    required TResult Function(String email) sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
@@ -1399,8 +1399,8 @@ class _$AuthErrorImpl implements AuthError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message, String? title)? error,
-    TResult? Function()? sendSignUpEmailSuccess,
+    TResult? Function(String message, String title)? error,
+    TResult? Function(String email)? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
@@ -1415,8 +1415,8 @@ class _$AuthErrorImpl implements AuthError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message, String? title)? error,
-    TResult Function()? sendSignUpEmailSuccess,
+    TResult Function(String message, String title)? error,
+    TResult Function(String email)? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
@@ -1496,10 +1496,11 @@ class _$AuthErrorImpl implements AuthError {
 
 abstract class AuthError implements AuthState {
   const factory AuthError(
-      {required final String message, final String? title}) = _$AuthErrorImpl;
+      {required final String message,
+      required final String title}) = _$AuthErrorImpl;
 
   String get message;
-  String? get title;
+  String get title;
   @JsonKey(ignore: true)
   _$$AuthErrorImplCopyWith<_$AuthErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1511,6 +1512,8 @@ abstract class _$$AuthSendSignUpEmailSuccessImplCopyWith<$Res> {
           _$AuthSendSignUpEmailSuccessImpl value,
           $Res Function(_$AuthSendSignUpEmailSuccessImpl) then) =
       __$$AuthSendSignUpEmailSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String email});
 }
 
 /// @nodoc
@@ -1521,42 +1524,66 @@ class __$$AuthSendSignUpEmailSuccessImplCopyWithImpl<$Res>
       _$AuthSendSignUpEmailSuccessImpl _value,
       $Res Function(_$AuthSendSignUpEmailSuccessImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? email = null,
+  }) {
+    return _then(_$AuthSendSignUpEmailSuccessImpl(
+      null == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$AuthSendSignUpEmailSuccessImpl implements AuthSendSignUpEmailSuccess {
-  const _$AuthSendSignUpEmailSuccessImpl();
+  const _$AuthSendSignUpEmailSuccessImpl(this.email);
+
+  @override
+  final String email;
 
   @override
   String toString() {
-    return 'AuthState.sendSignUpEmailSuccess()';
+    return 'AuthState.sendSignUpEmailSuccess(email: $email)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AuthSendSignUpEmailSuccessImpl);
+            other is _$AuthSendSignUpEmailSuccessImpl &&
+            (identical(other.email, email) || other.email == email));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, email);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AuthSendSignUpEmailSuccessImplCopyWith<_$AuthSendSignUpEmailSuccessImpl>
+      get copyWith => __$$AuthSendSignUpEmailSuccessImplCopyWithImpl<
+          _$AuthSendSignUpEmailSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message, String? title) error,
-    required TResult Function() sendSignUpEmailSuccess,
+    required TResult Function(String message, String title) error,
+    required TResult Function(String email) sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
     required TResult Function() createAnAccountSuccess,
     required TResult Function() signInSuccess,
   }) {
-    return sendSignUpEmailSuccess();
+    return sendSignUpEmailSuccess(email);
   }
 
   @override
@@ -1564,15 +1591,15 @@ class _$AuthSendSignUpEmailSuccessImpl implements AuthSendSignUpEmailSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message, String? title)? error,
-    TResult? Function()? sendSignUpEmailSuccess,
+    TResult? Function(String message, String title)? error,
+    TResult? Function(String email)? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
     TResult? Function()? createAnAccountSuccess,
     TResult? Function()? signInSuccess,
   }) {
-    return sendSignUpEmailSuccess?.call();
+    return sendSignUpEmailSuccess?.call(email);
   }
 
   @override
@@ -1580,8 +1607,8 @@ class _$AuthSendSignUpEmailSuccessImpl implements AuthSendSignUpEmailSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message, String? title)? error,
-    TResult Function()? sendSignUpEmailSuccess,
+    TResult Function(String message, String title)? error,
+    TResult Function(String email)? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
@@ -1590,7 +1617,7 @@ class _$AuthSendSignUpEmailSuccessImpl implements AuthSendSignUpEmailSuccess {
     required TResult orElse(),
   }) {
     if (sendSignUpEmailSuccess != null) {
-      return sendSignUpEmailSuccess();
+      return sendSignUpEmailSuccess(email);
     }
     return orElse();
   }
@@ -1660,7 +1687,13 @@ class _$AuthSendSignUpEmailSuccessImpl implements AuthSendSignUpEmailSuccess {
 }
 
 abstract class AuthSendSignUpEmailSuccess implements AuthState {
-  const factory AuthSendSignUpEmailSuccess() = _$AuthSendSignUpEmailSuccessImpl;
+  const factory AuthSendSignUpEmailSuccess(final String email) =
+      _$AuthSendSignUpEmailSuccessImpl;
+
+  String get email;
+  @JsonKey(ignore: true)
+  _$$AuthSendSignUpEmailSuccessImplCopyWith<_$AuthSendSignUpEmailSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1707,8 +1740,8 @@ class _$AuthResendSignUpEmailSuccessImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message, String? title) error,
-    required TResult Function() sendSignUpEmailSuccess,
+    required TResult Function(String message, String title) error,
+    required TResult Function(String email) sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
@@ -1723,8 +1756,8 @@ class _$AuthResendSignUpEmailSuccessImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message, String? title)? error,
-    TResult? Function()? sendSignUpEmailSuccess,
+    TResult? Function(String message, String title)? error,
+    TResult? Function(String email)? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
@@ -1739,8 +1772,8 @@ class _$AuthResendSignUpEmailSuccessImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message, String? title)? error,
-    TResult Function()? sendSignUpEmailSuccess,
+    TResult Function(String message, String title)? error,
+    TResult Function(String email)? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
@@ -1867,8 +1900,8 @@ class _$AuthValidateSignUpCodeSuccessImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message, String? title) error,
-    required TResult Function() sendSignUpEmailSuccess,
+    required TResult Function(String message, String title) error,
+    required TResult Function(String email) sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
@@ -1883,8 +1916,8 @@ class _$AuthValidateSignUpCodeSuccessImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message, String? title)? error,
-    TResult? Function()? sendSignUpEmailSuccess,
+    TResult? Function(String message, String title)? error,
+    TResult? Function(String email)? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
@@ -1899,8 +1932,8 @@ class _$AuthValidateSignUpCodeSuccessImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message, String? title)? error,
-    TResult Function()? sendSignUpEmailSuccess,
+    TResult Function(String message, String title)? error,
+    TResult Function(String email)? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
@@ -2054,8 +2087,8 @@ class _$AuthValidateSignUpCodeFailedImpl
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message, String? title) error,
-    required TResult Function() sendSignUpEmailSuccess,
+    required TResult Function(String message, String title) error,
+    required TResult Function(String email) sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
@@ -2070,8 +2103,8 @@ class _$AuthValidateSignUpCodeFailedImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message, String? title)? error,
-    TResult? Function()? sendSignUpEmailSuccess,
+    TResult? Function(String message, String title)? error,
+    TResult? Function(String email)? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
@@ -2086,8 +2119,8 @@ class _$AuthValidateSignUpCodeFailedImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message, String? title)? error,
-    TResult Function()? sendSignUpEmailSuccess,
+    TResult Function(String message, String title)? error,
+    TResult Function(String email)? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
@@ -2219,8 +2252,8 @@ class _$AuthCreateAnAccountSuccessImpl implements AuthCreateAnAccountSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message, String? title) error,
-    required TResult Function() sendSignUpEmailSuccess,
+    required TResult Function(String message, String title) error,
+    required TResult Function(String email) sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
@@ -2235,8 +2268,8 @@ class _$AuthCreateAnAccountSuccessImpl implements AuthCreateAnAccountSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message, String? title)? error,
-    TResult? Function()? sendSignUpEmailSuccess,
+    TResult? Function(String message, String title)? error,
+    TResult? Function(String email)? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
@@ -2251,8 +2284,8 @@ class _$AuthCreateAnAccountSuccessImpl implements AuthCreateAnAccountSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message, String? title)? error,
-    TResult Function()? sendSignUpEmailSuccess,
+    TResult Function(String message, String title)? error,
+    TResult Function(String email)? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
@@ -2374,8 +2407,8 @@ class _$AuthSignInSuccessImpl implements AuthSignInSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(String message, String? title) error,
-    required TResult Function() sendSignUpEmailSuccess,
+    required TResult Function(String message, String title) error,
+    required TResult Function(String email) sendSignUpEmailSuccess,
     required TResult Function() resendSignUpEmailSuccess,
     required TResult Function() validateSignUpCodeSuccess,
     required TResult Function(String message) validateSignUpCodeFailed,
@@ -2390,8 +2423,8 @@ class _$AuthSignInSuccessImpl implements AuthSignInSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(String message, String? title)? error,
-    TResult? Function()? sendSignUpEmailSuccess,
+    TResult? Function(String message, String title)? error,
+    TResult? Function(String email)? sendSignUpEmailSuccess,
     TResult? Function()? resendSignUpEmailSuccess,
     TResult? Function()? validateSignUpCodeSuccess,
     TResult? Function(String message)? validateSignUpCodeFailed,
@@ -2406,8 +2439,8 @@ class _$AuthSignInSuccessImpl implements AuthSignInSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(String message, String? title)? error,
-    TResult Function()? sendSignUpEmailSuccess,
+    TResult Function(String message, String title)? error,
+    TResult Function(String email)? sendSignUpEmailSuccess,
     TResult Function()? resendSignUpEmailSuccess,
     TResult Function()? validateSignUpCodeSuccess,
     TResult Function(String message)? validateSignUpCodeFailed,
