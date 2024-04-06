@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
@@ -37,8 +38,11 @@ class HeaderCreateDigitalProfile extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(IconsaxOutline.arrow_left,
-              color: MyColor.getWhite, size: 25),
+          InkWell(
+            onTap: () => Navigator.pop(context),
+            child: const Icon(IconsaxOutline.arrow_left,
+                color: MyColor.getWhite, size: 25),
+          ),
           Row(
             children: [
               Expanded(

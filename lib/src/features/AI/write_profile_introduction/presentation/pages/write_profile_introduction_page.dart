@@ -73,6 +73,7 @@ class _WriteProfileIntroductionPageState
             horizontalMargin: 20,
             useAppBar: true,
             heightAppBar: 70,
+            canBack: true,
             action: widget.actions(context),
             titleWidget: Assets.icons.logos.dWhitePWhite.svg(),
             body: SingleChildScrollView(
@@ -129,7 +130,8 @@ class _WriteProfileIntroductionPageState
                                   backgroundColor: colorScheme(context).primary,
                                   style: AppFont()
                                       .fontTheme(context,
-                                          color: colorScheme(context).onTertiary)
+                                          color:
+                                              colorScheme(context).onTertiary)
                                       .bodyLarge),
                             if (currentIndex != null)
                               TextSpan(
@@ -137,7 +139,8 @@ class _WriteProfileIntroductionPageState
                                 style: AppFont()
                                     .fontTheme(context,
                                         height: context.sizeHeight(1.3),
-                                        color: colorScheme(context).onBackground)
+                                        color:
+                                            colorScheme(context).onBackground)
                                     .bodyLarge,
                               )
                           ])),

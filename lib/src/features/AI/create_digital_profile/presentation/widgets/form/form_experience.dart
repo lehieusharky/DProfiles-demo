@@ -1,12 +1,15 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/bloc/create_digital_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/data/models/experiance_model.dart';
 import 'package:demo_dprofiles/src/utils/extensions/ext_models/ext_experience_model.dart';
+import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:flutter/material.dart';
@@ -30,47 +33,58 @@ class _FormExperienceState extends State<FormExperience> {
 
   MyLoading? myLoading;
 
-  List<ExperienceModel> educations = [];
+  List<ExperienceModel> experiences = [];
 
   @override
   Widget build(BuildContext context) {
+    experiences = context.watch<CreateDigitalProfileBloc>().experiences;
+
     return BlocConsumer<CreateDigitalProfileBloc, CreateDigitalProfileState>(
       listener: (context, state) {
         if (state is AddUserExperienceSuccess) {
           _clearField();
         }
 
-        if (state is SaveUpdatedProfileSuccess) {}
+        if (state is SaveUpdatedProfileSuccess) {
+          context
+              .read<CreateDigitalProfileBloc>()
+              .add(const CreateDigitalProfile());
+        }
+
+        if (state is UpdateDigitalProfileSuccess) {
+          context.router.push(const CreateDigitalProfileSuccessRoute());
+        }
       },
       builder: (context, state) {
         myLoading =
             (state is CreateDigitalProfileLoading) ? const MyLoading() : null;
-        return SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: context.padding(bottom: 24),
-                child: Text(
-                  appLocal(context).experience,
-                  style: AppFont()
-                      .fontTheme(context, weight: FontWeight.bold)
-                      .labelMedium,
-                ),
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: context.padding(bottom: 24),
+              child: Text(
+                appLocal(context).experience,
+                style: AppFont()
+                    .fontTheme(context, weight: FontWeight.bold)
+                    .labelMedium,
               ),
-              if (educations.isNotEmpty)
-                Column(
-                    children: educations
-                        .map(
-                          (e) => e.toWidget(
-                            context,
-                            onDelete: () => context
-                                .read<CreateDigitalProfileBloc>()
-                                .add(DeleteUserExperience(e)),
-                          ),
-                        )
-                        .toList()),
-              Container(
+            ),
+            if (experiences.isNotEmpty)
+              Column(
+                  children: experiences
+                      .map(
+                        (e) => e.toWidget(
+                          context,
+                          onDelete: () => context
+                              .read<CreateDigitalProfileBloc>()
+                              .add(DeleteUserExperience(e)),
+                        ),
+                      )
+                      .toList()),
+            Padding(
+              padding: context.padding(top: 12, bottom: 32),
+              child: Container(
                 padding: context.padding(all: 12),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
@@ -81,17 +95,26 @@ class _FormExperienceState extends State<FormExperience> {
                   child: Column(
                     children: [
                       AuthField(
-                          controller: _companyController,
-                          title: appLocal(context).company.toUpperCase(),
-                          keyboardType: TextInputType.emailAddress,
-                          textInputAction: TextInputAction.next,
-                          hint: 'Company name'),
+                        controller: _companyController,
+                        title: appLocal(context).company.toUpperCase(),
+                        keyboardType: TextInputType.emailAddress,
+                        textInputAction: TextInputAction.next,
+                        validator: (company) {
+                          if (company == null || company.isEmpty) {
+                            return appLocal(context).fieldCannotBeEmpty;
+                          } else {
+                            return null;
+                          }
+                        },
+                        hint: appLocal(context).companyName,
+                      ),
                       Padding(
                         padding: context.padding(top: 32),
                         child: AuthField(
                           controller: _jobPositionController,
                           title: appLocal(context).jobPosition.toUpperCase(),
-                          hint: 'Position',
+                          textInputAction: TextInputAction.next,
+                          hint: appLocal(context).position,
                         ),
                       ),
                       Padding(
@@ -99,23 +122,30 @@ class _FormExperienceState extends State<FormExperience> {
                         child: AuthField(
                           controller: _startDateController,
                           title: appLocal(context).startDate.toUpperCase(),
-                          hint: 'dd/mm/yyyy',
+                          textInputAction: TextInputAction.next,
+                          hint: appLocal(context).dateTimeFormatddmmyyyyy,
+                          validator: (date) =>
+                              date.validationForDDMMYYYYY(context),
                         ),
                       ),
                       Padding(
                         padding: context.padding(top: 32),
                         child: AuthField(
                           controller: _endDateController,
+                          textInputAction: TextInputAction.next,
                           title: appLocal(context).endDate.toUpperCase(),
-                          hint: 'dd/mm/yyyy',
+                          hint: appLocal(context).dateTimeFormatddmmyyyyy,
+                          validator: (date) =>
+                              date.validationForDDMMYYYYY(context),
                         ),
                       ),
                       Padding(
                         padding: context.padding(top: 32),
                         child: AuthField(
                           controller: _descrptionController,
+                          textInputAction: TextInputAction.done,
                           title: appLocal(context).description.toUpperCase(),
-                          hint: 'Description',
+                          hint: appLocal(context).description,
                           maxLines: 4,
                         ),
                       ),
@@ -127,9 +157,9 @@ class _FormExperienceState extends State<FormExperience> {
                   ),
                 ),
               ),
-              _buildNavigateButtons(),
-            ],
-          ),
+            ),
+            _buildNavigateButtons(),
+          ],
         );
       },
     );
@@ -161,8 +191,10 @@ class _FormExperienceState extends State<FormExperience> {
     if (_keyForm.currentState?.validate() ?? false) {
       final newExperience = ExperienceModel(
         companyName: _companyController.text.trim(),
-        startDate: DateTime.now().toString(),
-        endDate: DateTime.now().toString(),
+        startDate: _startDateController.text.convertToIOSDateTimeFormat(),
+        endDate: _endDateController.text.convertToIOSDateTimeFormat(),
+        description: _descrptionController.text,
+        jobTitle: _jobPositionController.text,
       );
 
       context
@@ -196,9 +228,7 @@ class _FormExperienceState extends State<FormExperience> {
     );
   }
 
-  void _back(BuildContext context) {
-    _changeStep(context, false);
-  }
+  void _back(BuildContext context) => _changeStep(context, false);
 
   void _continue(BuildContext context) {
     context.read<CreateDigitalProfileBloc>().add(const SaveUpdatedProfile());
@@ -207,6 +237,7 @@ class _FormExperienceState extends State<FormExperience> {
   void _changeStep(BuildContext context, bool isNext) => context
       .read<CreateDigitalProfileBloc>()
       .add(ChangeCreationStep(isNext: isNext));
+
   void _clearField() {
     _companyController.clear();
     _jobPositionController.clear();

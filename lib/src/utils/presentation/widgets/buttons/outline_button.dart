@@ -12,12 +12,13 @@ class AppOutlineButton implements AbstractFactoryAppButton {
   AppOutlineButton(this.context, {this.iconColor});
 
   @override
-  Widget iconButton(
-    IconData iconData, {
+  IconButton iconButton({
     VoidCallback? onPressed,
     double? iconSize,
     Color? iconColor,
     Color? backgroundColor,
+    Widget? icon,
+    IconData? iconData,
   }) {
     return IconButton(
       onPressed: onPressed,
@@ -34,7 +35,7 @@ class AppOutlineButton implements AbstractFactoryAppButton {
   @override
   Widget elevatedButton({
     required VoidCallback onPressed,
-     String? title,
+    String? title,
     Widget? prefixIcon,
     Widget? suffixIcon,
     double? width,

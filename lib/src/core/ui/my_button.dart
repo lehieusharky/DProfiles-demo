@@ -51,24 +51,25 @@ class MyButton extends StatelessWidget {
         textStyle: textStyle(context),
         shape: shape(context),
       ),
-      child: child ??
-          Padding(
-            padding: context.padding(vertical: 5),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                prefixIcon ?? SizedBox.fromSize(),
-                Padding(
-                  padding: context.padding(
-                      horizontal:
-                          prefixIcon == null && suffixIcon == null ? 0 : 5),
-                  child: Text(title!),
-                ),
-                suffixIcon ?? SizedBox.fromSize(),
-              ],
+      child: child != null
+          ? Padding(padding: context.padding(vertical: 3), child: child)
+          : Padding(
+              padding: context.padding(vertical: 5),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  prefixIcon ?? SizedBox.fromSize(),
+                  Padding(
+                    padding: context.padding(
+                        horizontal:
+                            prefixIcon == null && suffixIcon == null ? 0 : 5),
+                    child: Text(title!),
+                  ),
+                  suffixIcon ?? SizedBox.fromSize(),
+                ],
+              ),
             ),
-          ),
     );
   }
 }

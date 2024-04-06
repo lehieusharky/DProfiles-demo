@@ -14,7 +14,7 @@ extension SignInPageExt on SignInPage {
     if (state is AuthError) {
       showErrorDialog(
         context,
-        title: state.title ?? 'Sign in failed',
+        title: state.title,
         description: state.message,
       );
     }

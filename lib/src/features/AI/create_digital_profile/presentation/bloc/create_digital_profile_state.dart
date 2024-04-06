@@ -75,4 +75,10 @@ class CreateDigitalProfileState with _$CreateDigitalProfileState {
 
   const factory CreateDigitalProfileState.saveUpdatedProfileSuccess() =
       SaveUpdatedProfileSuccess;
+
+  const factory CreateDigitalProfileState.createDigitalProfileSuccess() =
+      CreateDigitalProfileSuccess;
+
+  const factory CreateDigitalProfileState.updateDigitalProfileSuccess() =
+      UpdateDigitalProfileSuccess;
 }

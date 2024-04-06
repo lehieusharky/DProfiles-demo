@@ -5,10 +5,14 @@ import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/body
 import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/onboarding_page_indicator.dart';
 import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/skip_button.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
+import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:ficonsax/ficonsax.dart';
 
 import 'package:flutter/material.dart';
+
+const int SUB_PAGES = 3;
 
 @RoutePage()
 class OnboardingPage extends StatefulWidget {
@@ -21,8 +25,6 @@ class OnboardingPage extends StatefulWidget {
 class _OnboardingPageState extends State<OnboardingPage> {
   late PageController _pageController;
   bool _isLastPage = false;
-
-  final countOfSubPage = 3;
 
   @override
   void initState() {
@@ -37,15 +39,13 @@ class _OnboardingPageState extends State<OnboardingPage> {
       horizontalMargin: 32,
       body: Column(
         children: [
-          SkipButton(
-            isLastPage: _isLastPage,
-            onSkip: () => _skip(),
-          ),
+          SkipButton(isLastPage: _isLastPage, onSkip: () => _skip()),
           Expanded(
-              child: BodyOnboardingPage(
-            onPageChanged: (page) => _onPageChanged(page),
-            controller: _pageController,
-          )),
+            child: BodyOnboardingPage(
+              onPageChanged: (page) => _onPageChanged(page),
+              controller: _pageController,
+            ),
+          ),
           Padding(
             padding: context.padding(bottom: 80),
             child: Row(
@@ -53,11 +53,12 @@ class _OnboardingPageState extends State<OnboardingPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 OnboardingPageIndicator(
-                  controller: _pageController,
-                  countOfSubPage: countOfSubPage,
-                ),
-                AppFlatButton(context).iconButton(IconsaxOutline.arrow_right_3,
-                    iconSize: 25, onPressed: _onButtonPressed),
+                    controller: _pageController, sumSubPages: SUB_PAGES),
+                AppFlatButton(context).iconButton(
+                    icon: Assets.icons.arrowLeft.svg(
+                        width: context.sizeWidth(18),
+                        height: context.sizeWidth(18)),
+                    onPressed: _onButtonPressed),
               ],
             ),
           ),
@@ -66,7 +67,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
     );
   }
 
-  void _skip() => _pageController.jumpToPage(countOfSubPage - 1);
+  void _skip() => _pageController.animateToPage(SUB_PAGES - 1,
+      duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
 
   void _onButtonPressed() {
     if (!_isLastPage) {
@@ -77,13 +79,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
     }
   }
 
-  String _titleButton() => _isLastPage ? 'Get Started' : 'Next';
-
-  void _onPageChanged(int page) {
-    setState(() {
-      _isLastPage = page == (countOfSubPage - 1) ? true : false;
-    });
-  }
+  void _onPageChanged(int page) =>
+      setState(() => _isLastPage = page == (SUB_PAGES - 1) ? true : false);
 
   @override
   void dispose() {

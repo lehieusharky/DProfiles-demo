@@ -1,18 +1,16 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/bloc/create_digital_profile_bloc.dart';
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/ext_create_digital_profile.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/form/form_add_basic_info.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/form/form_certificate.dart';
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/create_dprofile_success_page.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/form/form_education_info.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/form/form_experience.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/header_create_digital.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/path_direction.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -60,27 +58,22 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
             );
           }
 
-          if (state is SaveUpdatedProfileSuccess) {
-            context.router.push(const CreateDigitalProfileSuccessRoute());
-          }
+
         },
         builder: (context, state) => DefaultTabController(
           length: 3,
           child: MyScaffold(
-            useAppBar: true,
-            action: widget.actions(context),
-            titleWidget: Assets.icons.logos.homeLogo.svg(),
             body: SingleChildScrollView(
               child: Column(
                 children: [
                   PathDirection(
-                      currentPage: 'Create Digital Profile',
+                      currentPage: appLocal(context).createDigitalProfile,
                       padding: context.padding(bottom: 8, horizontal: 20)),
                   HeaderCreateDigitalProfile(controller: _tabController),
                   Padding(
                     padding: context.padding(vertical: 32, horizontal: 20),
                     child: SizedBox(
-                      height: context.height * 1.6,
+                      height: context.height * 1.3,
                       child: TabBarView(
                         controller: _tabController,
                         physics: const NeverScrollableScrollPhysics(),

@@ -43,4 +43,10 @@ abstract class CreateDigitalProfileDataSource {
   Future<BaseResponse> updateExperienceInfo(String id, ExperienceModel data);
 
   Future<BaseResponse> deleteExperience(String id);
+
+  // create digital profile
+
+  Future<void> createDigitalProfile();
+
+  Future<BaseResponse> updateDigitalProfile();
 }

@@ -55,7 +55,7 @@
       <string>trust</string>
       <string>safe</string>
       <string>rainbow</string>
-      <string>cbwallet</string>
+      <!-- <string>cbwallet</string> -->
     </array>
     <key>CFBundleURLTypes</key>
     <array>

@@ -8,6 +8,9 @@ class MyLoading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CircularProgressIndicator(color: MyColor.getWhite);
+    return const CircularProgressIndicator(
+      color: MyColor.getWhite,
+      strokeWidth: 3,
+    );
   }
 }

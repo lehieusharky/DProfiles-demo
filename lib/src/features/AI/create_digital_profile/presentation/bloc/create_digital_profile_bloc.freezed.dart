@@ -45,6 +45,8 @@ mixin _$CreateDigitalProfileEvent {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,6 +74,8 @@ mixin _$CreateDigitalProfileEvent {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,6 +103,8 @@ mixin _$CreateDigitalProfileEvent {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -126,6 +132,8 @@ mixin _$CreateDigitalProfileEvent {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -150,6 +158,8 @@ mixin _$CreateDigitalProfileEvent {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -174,6 +184,8 @@ mixin _$CreateDigitalProfileEvent {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -263,6 +275,8 @@ class _$StartedImpl implements _Started {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return started();
   }
@@ -293,6 +307,8 @@ class _$StartedImpl implements _Started {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return started?.call();
   }
@@ -323,6 +339,8 @@ class _$StartedImpl implements _Started {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -356,6 +374,8 @@ class _$StartedImpl implements _Started {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return started(this);
   }
@@ -383,6 +403,8 @@ class _$StartedImpl implements _Started {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return started?.call(this);
   }
@@ -410,6 +432,8 @@ class _$StartedImpl implements _Started {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -516,6 +540,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return changeCreationStep(isNext);
   }
@@ -546,6 +572,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return changeCreationStep?.call(isNext);
   }
@@ -576,6 +604,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (changeCreationStep != null) {
@@ -609,6 +639,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return changeCreationStep(this);
   }
@@ -636,6 +668,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return changeCreationStep?.call(this);
   }
@@ -663,6 +697,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (changeCreationStep != null) {
@@ -784,6 +820,8 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return updateUserInfo(param);
   }
@@ -814,6 +852,8 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return updateUserInfo?.call(param);
   }
@@ -844,6 +884,8 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (updateUserInfo != null) {
@@ -877,6 +919,8 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return updateUserInfo(this);
   }
@@ -904,6 +948,8 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return updateUserInfo?.call(this);
   }
@@ -931,6 +977,8 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (updateUserInfo != null) {
@@ -1015,6 +1063,8 @@ class _$GetUserInfoImpl implements GetUserInfo {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return getUserInfo();
   }
@@ -1045,6 +1095,8 @@ class _$GetUserInfoImpl implements GetUserInfo {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return getUserInfo?.call();
   }
@@ -1075,6 +1127,8 @@ class _$GetUserInfoImpl implements GetUserInfo {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -1108,6 +1162,8 @@ class _$GetUserInfoImpl implements GetUserInfo {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return getUserInfo(this);
   }
@@ -1135,6 +1191,8 @@ class _$GetUserInfoImpl implements GetUserInfo {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return getUserInfo?.call(this);
   }
@@ -1162,6 +1220,8 @@ class _$GetUserInfoImpl implements GetUserInfo {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -1242,6 +1302,8 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return getUserCertificates();
   }
@@ -1272,6 +1334,8 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return getUserCertificates?.call();
   }
@@ -1302,6 +1366,8 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -1335,6 +1401,8 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return getUserCertificates(this);
   }
@@ -1362,6 +1430,8 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return getUserCertificates?.call(this);
   }
@@ -1389,6 +1459,8 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -1506,6 +1578,8 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return addUserCertificates(certificateModel);
   }
@@ -1536,6 +1610,8 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return addUserCertificates?.call(certificateModel);
   }
@@ -1566,6 +1642,8 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (addUserCertificates != null) {
@@ -1599,6 +1677,8 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return addUserCertificates(this);
   }
@@ -1626,6 +1706,8 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return addUserCertificates?.call(this);
   }
@@ -1653,6 +1735,8 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (addUserCertificates != null) {
@@ -1765,6 +1849,8 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return getCertificateInfo(id);
   }
@@ -1795,6 +1881,8 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return getCertificateInfo?.call(id);
   }
@@ -1825,6 +1913,8 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getCertificateInfo != null) {
@@ -1858,6 +1948,8 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return getCertificateInfo(this);
   }
@@ -1885,6 +1977,8 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return getCertificateInfo?.call(this);
   }
@@ -1912,6 +2006,8 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getCertificateInfo != null) {
@@ -2035,6 +2131,8 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return deleteUserCertificate(certificateModel);
   }
@@ -2065,6 +2163,8 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return deleteUserCertificate?.call(certificateModel);
   }
@@ -2095,6 +2195,8 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (deleteUserCertificate != null) {
@@ -2128,6 +2230,8 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return deleteUserCertificate(this);
   }
@@ -2155,6 +2259,8 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return deleteUserCertificate?.call(this);
   }
@@ -2182,6 +2288,8 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (deleteUserCertificate != null) {
@@ -2314,6 +2422,8 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return updateUserCertificate(id, certificateModel);
   }
@@ -2344,6 +2454,8 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return updateUserCertificate?.call(id, certificateModel);
   }
@@ -2374,6 +2486,8 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (updateUserCertificate != null) {
@@ -2407,6 +2521,8 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return updateUserCertificate(this);
   }
@@ -2434,6 +2550,8 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return updateUserCertificate?.call(this);
   }
@@ -2461,6 +2579,8 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (updateUserCertificate != null) {
@@ -2548,6 +2668,8 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return getUserEducations();
   }
@@ -2578,6 +2700,8 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return getUserEducations?.call();
   }
@@ -2608,6 +2732,8 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -2641,6 +2767,8 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return getUserEducations(this);
   }
@@ -2668,6 +2796,8 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return getUserEducations?.call(this);
   }
@@ -2695,6 +2825,8 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -2812,6 +2944,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return addUserEducations(educationModel);
   }
@@ -2842,6 +2976,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return addUserEducations?.call(educationModel);
   }
@@ -2872,6 +3008,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (addUserEducations != null) {
@@ -2905,6 +3043,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return addUserEducations(this);
   }
@@ -2932,6 +3072,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return addUserEducations?.call(this);
   }
@@ -2959,6 +3101,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (addUserEducations != null) {
@@ -3071,6 +3215,8 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return getEducationInfo(id);
   }
@@ -3101,6 +3247,8 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return getEducationInfo?.call(id);
   }
@@ -3131,6 +3279,8 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getEducationInfo != null) {
@@ -3164,6 +3314,8 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return getEducationInfo(this);
   }
@@ -3191,6 +3343,8 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return getEducationInfo?.call(this);
   }
@@ -3218,6 +3372,8 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getEducationInfo != null) {
@@ -3339,6 +3495,8 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return deleteUserEducation(ed);
   }
@@ -3369,6 +3527,8 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return deleteUserEducation?.call(ed);
   }
@@ -3399,6 +3559,8 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (deleteUserEducation != null) {
@@ -3432,6 +3594,8 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return deleteUserEducation(this);
   }
@@ -3459,6 +3623,8 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return deleteUserEducation?.call(this);
   }
@@ -3486,6 +3652,8 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (deleteUserEducation != null) {
@@ -3617,6 +3785,8 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return updateUserEducation(id, educationModel);
   }
@@ -3647,6 +3817,8 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return updateUserEducation?.call(id, educationModel);
   }
@@ -3677,6 +3849,8 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (updateUserEducation != null) {
@@ -3710,6 +3884,8 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return updateUserEducation(this);
   }
@@ -3737,6 +3913,8 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return updateUserEducation?.call(this);
   }
@@ -3764,6 +3942,8 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (updateUserEducation != null) {
@@ -3851,6 +4031,8 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return getUserExperiences();
   }
@@ -3881,6 +4063,8 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return getUserExperiences?.call();
   }
@@ -3911,6 +4095,8 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -3944,6 +4130,8 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return getUserExperiences(this);
   }
@@ -3971,6 +4159,8 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return getUserExperiences?.call(this);
   }
@@ -3998,6 +4188,8 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -4115,6 +4307,8 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return addUserExperiences(experienceModel);
   }
@@ -4145,6 +4339,8 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return addUserExperiences?.call(experienceModel);
   }
@@ -4175,6 +4371,8 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (addUserExperiences != null) {
@@ -4208,6 +4406,8 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return addUserExperiences(this);
   }
@@ -4235,6 +4435,8 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return addUserExperiences?.call(this);
   }
@@ -4262,6 +4464,8 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (addUserExperiences != null) {
@@ -4374,6 +4578,8 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return getExperienceInfo(id);
   }
@@ -4404,6 +4610,8 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return getExperienceInfo?.call(id);
   }
@@ -4434,6 +4642,8 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getExperienceInfo != null) {
@@ -4467,6 +4677,8 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return getExperienceInfo(this);
   }
@@ -4494,6 +4706,8 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return getExperienceInfo?.call(this);
   }
@@ -4521,6 +4735,8 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (getExperienceInfo != null) {
@@ -4644,6 +4860,8 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return deleteUserExperience(experienceModel);
   }
@@ -4674,6 +4892,8 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return deleteUserExperience?.call(experienceModel);
   }
@@ -4704,6 +4924,8 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (deleteUserExperience != null) {
@@ -4737,6 +4959,8 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return deleteUserExperience(this);
   }
@@ -4764,6 +4988,8 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return deleteUserExperience?.call(this);
   }
@@ -4791,6 +5017,8 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (deleteUserExperience != null) {
@@ -4923,6 +5151,8 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return updateUserExperience(id, experienceModel);
   }
@@ -4953,6 +5183,8 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return updateUserExperience?.call(id, experienceModel);
   }
@@ -4983,6 +5215,8 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (updateUserExperience != null) {
@@ -5016,6 +5250,8 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return updateUserExperience(this);
   }
@@ -5043,6 +5279,8 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return updateUserExperience?.call(this);
   }
@@ -5070,6 +5308,8 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (updateUserExperience != null) {
@@ -5157,6 +5397,8 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
     required TResult Function(String id, ExperienceModel experienceModel)
         updateUserExperience,
     required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
   }) {
     return saveUpdatedProfile();
   }
@@ -5187,6 +5429,8 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
     TResult? Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
   }) {
     return saveUpdatedProfile?.call();
   }
@@ -5217,6 +5461,8 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
     TResult Function(String id, ExperienceModel experienceModel)?
         updateUserExperience,
     TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (saveUpdatedProfile != null) {
@@ -5250,6 +5496,8 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
     required TResult Function(DeleteUserExperience value) deleteUserExperience,
     required TResult Function(UpdateUserExperience value) updateUserExperience,
     required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
   }) {
     return saveUpdatedProfile(this);
   }
@@ -5277,6 +5525,8 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
     TResult? Function(DeleteUserExperience value)? deleteUserExperience,
     TResult? Function(UpdateUserExperience value)? updateUserExperience,
     TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
   }) {
     return saveUpdatedProfile?.call(this);
   }
@@ -5304,6 +5554,8 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
     TResult Function(DeleteUserExperience value)? deleteUserExperience,
     TResult Function(UpdateUserExperience value)? updateUserExperience,
     TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
     required TResult orElse(),
   }) {
     if (saveUpdatedProfile != null) {
@@ -5315,6 +5567,484 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
 
 abstract class SaveUpdatedProfile implements CreateDigitalProfileEvent {
   const factory SaveUpdatedProfile() = _$SaveUpdatedProfileImpl;
+}
+
+/// @nodoc
+abstract class _$$CreateDigitalProfileImplCopyWith<$Res> {
+  factory _$$CreateDigitalProfileImplCopyWith(_$CreateDigitalProfileImpl value,
+          $Res Function(_$CreateDigitalProfileImpl) then) =
+      __$$CreateDigitalProfileImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CreateDigitalProfileImplCopyWithImpl<$Res>
+    extends _$CreateDigitalProfileEventCopyWithImpl<$Res,
+        _$CreateDigitalProfileImpl>
+    implements _$$CreateDigitalProfileImplCopyWith<$Res> {
+  __$$CreateDigitalProfileImplCopyWithImpl(_$CreateDigitalProfileImpl _value,
+      $Res Function(_$CreateDigitalProfileImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CreateDigitalProfileImpl implements CreateDigitalProfile {
+  const _$CreateDigitalProfileImpl();
+
+  @override
+  String toString() {
+    return 'CreateDigitalProfileEvent.createDigitalProfile()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateDigitalProfileImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function(UserInfoModel param) updateUserInfo,
+    required TResult Function() getUserInfo,
+    required TResult Function() getUserCertificates,
+    required TResult Function(CertificateModel certificateModel)
+        addUserCertificates,
+    required TResult Function(String id) getCertificateInfo,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
+    required TResult Function(String id, CertificateModel certificateModel)
+        updateUserCertificate,
+    required TResult Function() getUserEducations,
+    required TResult Function(EducationModel educationModel) addUserEducations,
+    required TResult Function(String id) getEducationInfo,
+    required TResult Function(EducationModel ed) deleteUserEducation,
+    required TResult Function(String id, EducationModel educationModel)
+        updateUserEducation,
+    required TResult Function() getUserExperiences,
+    required TResult Function(ExperienceModel experienceModel)
+        addUserExperiences,
+    required TResult Function(String id) getExperienceInfo,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
+    required TResult Function(String id, ExperienceModel experienceModel)
+        updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
+  }) {
+    return createDigitalProfile();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function(UserInfoModel param)? updateUserInfo,
+    TResult? Function()? getUserInfo,
+    TResult? Function()? getUserCertificates,
+    TResult? Function(CertificateModel certificateModel)? addUserCertificates,
+    TResult? Function(String id)? getCertificateInfo,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
+    TResult? Function(String id, CertificateModel certificateModel)?
+        updateUserCertificate,
+    TResult? Function()? getUserEducations,
+    TResult? Function(EducationModel educationModel)? addUserEducations,
+    TResult? Function(String id)? getEducationInfo,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
+    TResult? Function(String id, EducationModel educationModel)?
+        updateUserEducation,
+    TResult? Function()? getUserExperiences,
+    TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
+    TResult? Function(String id)? getExperienceInfo,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
+    TResult? Function(String id, ExperienceModel experienceModel)?
+        updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
+  }) {
+    return createDigitalProfile?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function(UserInfoModel param)? updateUserInfo,
+    TResult Function()? getUserInfo,
+    TResult Function()? getUserCertificates,
+    TResult Function(CertificateModel certificateModel)? addUserCertificates,
+    TResult Function(String id)? getCertificateInfo,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
+    TResult Function(String id, CertificateModel certificateModel)?
+        updateUserCertificate,
+    TResult Function()? getUserEducations,
+    TResult Function(EducationModel educationModel)? addUserEducations,
+    TResult Function(String id)? getEducationInfo,
+    TResult Function(EducationModel ed)? deleteUserEducation,
+    TResult Function(String id, EducationModel educationModel)?
+        updateUserEducation,
+    TResult Function()? getUserExperiences,
+    TResult Function(ExperienceModel experienceModel)? addUserExperiences,
+    TResult Function(String id)? getExperienceInfo,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
+    TResult Function(String id, ExperienceModel experienceModel)?
+        updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
+    required TResult orElse(),
+  }) {
+    if (createDigitalProfile != null) {
+      return createDigitalProfile();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ChangeCreationStep value) changeCreationStep,
+    required TResult Function(UpdateUserInfo value) updateUserInfo,
+    required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetUserCertificates value) getUserCertificates,
+    required TResult Function(AddUserCertificate value) addUserCertificates,
+    required TResult Function(GetCertificateInfo value) getCertificateInfo,
+    required TResult Function(DeleteUserCertificate value)
+        deleteUserCertificate,
+    required TResult Function(UpdateUserCertificate value)
+        updateUserCertificate,
+    required TResult Function(GetUserEducations value) getUserEducations,
+    required TResult Function(AddUserEducation value) addUserEducations,
+    required TResult Function(GetEducationInfo value) getEducationInfo,
+    required TResult Function(DeleteUserEducation value) deleteUserEducation,
+    required TResult Function(UpdateUserEducation value) updateUserEducation,
+    required TResult Function(GetUserExperiences value) getUserExperiences,
+    required TResult Function(AddUserExperience value) addUserExperiences,
+    required TResult Function(GetExperienceInfo value) getExperienceInfo,
+    required TResult Function(DeleteUserExperience value) deleteUserExperience,
+    required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
+  }) {
+    return createDigitalProfile(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ChangeCreationStep value)? changeCreationStep,
+    TResult? Function(UpdateUserInfo value)? updateUserInfo,
+    TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetUserCertificates value)? getUserCertificates,
+    TResult? Function(AddUserCertificate value)? addUserCertificates,
+    TResult? Function(GetCertificateInfo value)? getCertificateInfo,
+    TResult? Function(DeleteUserCertificate value)? deleteUserCertificate,
+    TResult? Function(UpdateUserCertificate value)? updateUserCertificate,
+    TResult? Function(GetUserEducations value)? getUserEducations,
+    TResult? Function(AddUserEducation value)? addUserEducations,
+    TResult? Function(GetEducationInfo value)? getEducationInfo,
+    TResult? Function(DeleteUserEducation value)? deleteUserEducation,
+    TResult? Function(UpdateUserEducation value)? updateUserEducation,
+    TResult? Function(GetUserExperiences value)? getUserExperiences,
+    TResult? Function(AddUserExperience value)? addUserExperiences,
+    TResult? Function(GetExperienceInfo value)? getExperienceInfo,
+    TResult? Function(DeleteUserExperience value)? deleteUserExperience,
+    TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
+  }) {
+    return createDigitalProfile?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ChangeCreationStep value)? changeCreationStep,
+    TResult Function(UpdateUserInfo value)? updateUserInfo,
+    TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetUserCertificates value)? getUserCertificates,
+    TResult Function(AddUserCertificate value)? addUserCertificates,
+    TResult Function(GetCertificateInfo value)? getCertificateInfo,
+    TResult Function(DeleteUserCertificate value)? deleteUserCertificate,
+    TResult Function(UpdateUserCertificate value)? updateUserCertificate,
+    TResult Function(GetUserEducations value)? getUserEducations,
+    TResult Function(AddUserEducation value)? addUserEducations,
+    TResult Function(GetEducationInfo value)? getEducationInfo,
+    TResult Function(DeleteUserEducation value)? deleteUserEducation,
+    TResult Function(UpdateUserEducation value)? updateUserEducation,
+    TResult Function(GetUserExperiences value)? getUserExperiences,
+    TResult Function(AddUserExperience value)? addUserExperiences,
+    TResult Function(GetExperienceInfo value)? getExperienceInfo,
+    TResult Function(DeleteUserExperience value)? deleteUserExperience,
+    TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
+    required TResult orElse(),
+  }) {
+    if (createDigitalProfile != null) {
+      return createDigitalProfile(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateDigitalProfile implements CreateDigitalProfileEvent {
+  const factory CreateDigitalProfile() = _$CreateDigitalProfileImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdateDigitalProfileImplCopyWith<$Res> {
+  factory _$$UpdateDigitalProfileImplCopyWith(_$UpdateDigitalProfileImpl value,
+          $Res Function(_$UpdateDigitalProfileImpl) then) =
+      __$$UpdateDigitalProfileImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdateDigitalProfileImplCopyWithImpl<$Res>
+    extends _$CreateDigitalProfileEventCopyWithImpl<$Res,
+        _$UpdateDigitalProfileImpl>
+    implements _$$UpdateDigitalProfileImplCopyWith<$Res> {
+  __$$UpdateDigitalProfileImplCopyWithImpl(_$UpdateDigitalProfileImpl _value,
+      $Res Function(_$UpdateDigitalProfileImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UpdateDigitalProfileImpl implements UpdateDigitalProfile {
+  const _$UpdateDigitalProfileImpl();
+
+  @override
+  String toString() {
+    return 'CreateDigitalProfileEvent.updateDigitalProfile()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateDigitalProfileImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function(UserInfoModel param) updateUserInfo,
+    required TResult Function() getUserInfo,
+    required TResult Function() getUserCertificates,
+    required TResult Function(CertificateModel certificateModel)
+        addUserCertificates,
+    required TResult Function(String id) getCertificateInfo,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
+    required TResult Function(String id, CertificateModel certificateModel)
+        updateUserCertificate,
+    required TResult Function() getUserEducations,
+    required TResult Function(EducationModel educationModel) addUserEducations,
+    required TResult Function(String id) getEducationInfo,
+    required TResult Function(EducationModel ed) deleteUserEducation,
+    required TResult Function(String id, EducationModel educationModel)
+        updateUserEducation,
+    required TResult Function() getUserExperiences,
+    required TResult Function(ExperienceModel experienceModel)
+        addUserExperiences,
+    required TResult Function(String id) getExperienceInfo,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
+    required TResult Function(String id, ExperienceModel experienceModel)
+        updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
+  }) {
+    return updateDigitalProfile();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function(UserInfoModel param)? updateUserInfo,
+    TResult? Function()? getUserInfo,
+    TResult? Function()? getUserCertificates,
+    TResult? Function(CertificateModel certificateModel)? addUserCertificates,
+    TResult? Function(String id)? getCertificateInfo,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
+    TResult? Function(String id, CertificateModel certificateModel)?
+        updateUserCertificate,
+    TResult? Function()? getUserEducations,
+    TResult? Function(EducationModel educationModel)? addUserEducations,
+    TResult? Function(String id)? getEducationInfo,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
+    TResult? Function(String id, EducationModel educationModel)?
+        updateUserEducation,
+    TResult? Function()? getUserExperiences,
+    TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
+    TResult? Function(String id)? getExperienceInfo,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
+    TResult? Function(String id, ExperienceModel experienceModel)?
+        updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
+  }) {
+    return updateDigitalProfile?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function(UserInfoModel param)? updateUserInfo,
+    TResult Function()? getUserInfo,
+    TResult Function()? getUserCertificates,
+    TResult Function(CertificateModel certificateModel)? addUserCertificates,
+    TResult Function(String id)? getCertificateInfo,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
+    TResult Function(String id, CertificateModel certificateModel)?
+        updateUserCertificate,
+    TResult Function()? getUserEducations,
+    TResult Function(EducationModel educationModel)? addUserEducations,
+    TResult Function(String id)? getEducationInfo,
+    TResult Function(EducationModel ed)? deleteUserEducation,
+    TResult Function(String id, EducationModel educationModel)?
+        updateUserEducation,
+    TResult Function()? getUserExperiences,
+    TResult Function(ExperienceModel experienceModel)? addUserExperiences,
+    TResult Function(String id)? getExperienceInfo,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
+    TResult Function(String id, ExperienceModel experienceModel)?
+        updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
+    required TResult orElse(),
+  }) {
+    if (updateDigitalProfile != null) {
+      return updateDigitalProfile();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ChangeCreationStep value) changeCreationStep,
+    required TResult Function(UpdateUserInfo value) updateUserInfo,
+    required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetUserCertificates value) getUserCertificates,
+    required TResult Function(AddUserCertificate value) addUserCertificates,
+    required TResult Function(GetCertificateInfo value) getCertificateInfo,
+    required TResult Function(DeleteUserCertificate value)
+        deleteUserCertificate,
+    required TResult Function(UpdateUserCertificate value)
+        updateUserCertificate,
+    required TResult Function(GetUserEducations value) getUserEducations,
+    required TResult Function(AddUserEducation value) addUserEducations,
+    required TResult Function(GetEducationInfo value) getEducationInfo,
+    required TResult Function(DeleteUserEducation value) deleteUserEducation,
+    required TResult Function(UpdateUserEducation value) updateUserEducation,
+    required TResult Function(GetUserExperiences value) getUserExperiences,
+    required TResult Function(AddUserExperience value) addUserExperiences,
+    required TResult Function(GetExperienceInfo value) getExperienceInfo,
+    required TResult Function(DeleteUserExperience value) deleteUserExperience,
+    required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
+  }) {
+    return updateDigitalProfile(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ChangeCreationStep value)? changeCreationStep,
+    TResult? Function(UpdateUserInfo value)? updateUserInfo,
+    TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetUserCertificates value)? getUserCertificates,
+    TResult? Function(AddUserCertificate value)? addUserCertificates,
+    TResult? Function(GetCertificateInfo value)? getCertificateInfo,
+    TResult? Function(DeleteUserCertificate value)? deleteUserCertificate,
+    TResult? Function(UpdateUserCertificate value)? updateUserCertificate,
+    TResult? Function(GetUserEducations value)? getUserEducations,
+    TResult? Function(AddUserEducation value)? addUserEducations,
+    TResult? Function(GetEducationInfo value)? getEducationInfo,
+    TResult? Function(DeleteUserEducation value)? deleteUserEducation,
+    TResult? Function(UpdateUserEducation value)? updateUserEducation,
+    TResult? Function(GetUserExperiences value)? getUserExperiences,
+    TResult? Function(AddUserExperience value)? addUserExperiences,
+    TResult? Function(GetExperienceInfo value)? getExperienceInfo,
+    TResult? Function(DeleteUserExperience value)? deleteUserExperience,
+    TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
+  }) {
+    return updateDigitalProfile?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ChangeCreationStep value)? changeCreationStep,
+    TResult Function(UpdateUserInfo value)? updateUserInfo,
+    TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetUserCertificates value)? getUserCertificates,
+    TResult Function(AddUserCertificate value)? addUserCertificates,
+    TResult Function(GetCertificateInfo value)? getCertificateInfo,
+    TResult Function(DeleteUserCertificate value)? deleteUserCertificate,
+    TResult Function(UpdateUserCertificate value)? updateUserCertificate,
+    TResult Function(GetUserEducations value)? getUserEducations,
+    TResult Function(AddUserEducation value)? addUserEducations,
+    TResult Function(GetEducationInfo value)? getEducationInfo,
+    TResult Function(DeleteUserEducation value)? deleteUserEducation,
+    TResult Function(UpdateUserEducation value)? updateUserEducation,
+    TResult Function(GetUserExperiences value)? getUserExperiences,
+    TResult Function(AddUserExperience value)? addUserExperiences,
+    TResult Function(GetExperienceInfo value)? getExperienceInfo,
+    TResult Function(DeleteUserExperience value)? deleteUserExperience,
+    TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
+    required TResult orElse(),
+  }) {
+    if (updateDigitalProfile != null) {
+      return updateDigitalProfile(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateDigitalProfile implements CreateDigitalProfileEvent {
+  const factory UpdateDigitalProfile() = _$UpdateDigitalProfileImpl;
 }
 
 /// @nodoc
@@ -5346,6 +6076,8 @@ mixin _$CreateDigitalProfileState {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -5373,6 +6105,8 @@ mixin _$CreateDigitalProfileState {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -5399,6 +6133,8 @@ mixin _$CreateDigitalProfileState {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -5444,6 +6180,10 @@ mixin _$CreateDigitalProfileState {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -5483,6 +6223,10 @@ mixin _$CreateDigitalProfileState {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -5521,6 +6265,10 @@ mixin _$CreateDigitalProfileState {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -5608,6 +6356,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return initial();
   }
@@ -5638,6 +6388,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return initial?.call();
   }
@@ -5667,6 +6419,8 @@ class _$InitialImpl implements _Initial {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -5718,6 +6472,10 @@ class _$InitialImpl implements _Initial {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return initial(this);
   }
@@ -5760,6 +6518,10 @@ class _$InitialImpl implements _Initial {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return initial?.call(this);
   }
@@ -5801,6 +6563,10 @@ class _$InitialImpl implements _Initial {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -5881,6 +6647,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return loading();
   }
@@ -5911,6 +6679,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return loading?.call();
   }
@@ -5940,6 +6710,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -5991,6 +6763,10 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return loading(this);
   }
@@ -6033,6 +6809,10 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return loading?.call(this);
   }
@@ -6074,6 +6854,10 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -6199,6 +6983,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return error(message, title);
   }
@@ -6229,6 +7015,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -6258,6 +7046,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -6309,6 +7099,10 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return error(this);
   }
@@ -6351,6 +7145,10 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return error?.call(this);
   }
@@ -6392,6 +7190,10 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -6507,6 +7309,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return changeCreationStepSuccess(currentStep);
   }
@@ -6537,6 +7341,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return changeCreationStepSuccess?.call(currentStep);
   }
@@ -6566,6 +7372,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -6617,6 +7425,10 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return changeCreationStepSuccess(this);
   }
@@ -6659,6 +7471,10 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return changeCreationStepSuccess?.call(this);
   }
@@ -6700,6 +7516,10 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -6826,6 +7646,8 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return updateUserInfoSuccess(response);
   }
@@ -6856,6 +7678,8 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return updateUserInfoSuccess?.call(response);
   }
@@ -6885,6 +7709,8 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserInfoSuccess != null) {
@@ -6936,6 +7762,10 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return updateUserInfoSuccess(this);
   }
@@ -6978,6 +7808,10 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return updateUserInfoSuccess?.call(this);
   }
@@ -7019,6 +7853,10 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserInfoSuccess != null) {
@@ -7140,6 +7978,8 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return getUserInfoSuccess(response);
   }
@@ -7170,6 +8010,8 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return getUserInfoSuccess?.call(response);
   }
@@ -7199,6 +8041,8 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -7250,6 +8094,10 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return getUserInfoSuccess(this);
   }
@@ -7292,6 +8140,10 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return getUserInfoSuccess?.call(this);
   }
@@ -7333,6 +8185,10 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -7456,6 +8312,8 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return getUserCertificatesSuccess(response);
   }
@@ -7486,6 +8344,8 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return getUserCertificatesSuccess?.call(response);
   }
@@ -7515,6 +8375,8 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -7566,6 +8428,10 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return getUserCertificatesSuccess(this);
   }
@@ -7608,6 +8474,10 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return getUserCertificatesSuccess?.call(this);
   }
@@ -7649,6 +8519,10 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -7735,6 +8609,8 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return addUserCertificatesSuccess();
   }
@@ -7765,6 +8641,8 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return addUserCertificatesSuccess?.call();
   }
@@ -7794,6 +8672,8 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (addUserCertificatesSuccess != null) {
@@ -7845,6 +8725,10 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return addUserCertificatesSuccess(this);
   }
@@ -7887,6 +8771,10 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return addUserCertificatesSuccess?.call(this);
   }
@@ -7928,6 +8816,10 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (addUserCertificatesSuccess != null) {
@@ -8045,6 +8937,8 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return getCertificateInfoSuccess(response);
   }
@@ -8075,6 +8969,8 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return getCertificateInfoSuccess?.call(response);
   }
@@ -8104,6 +9000,8 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getCertificateInfoSuccess != null) {
@@ -8155,6 +9053,10 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return getCertificateInfoSuccess(this);
   }
@@ -8197,6 +9099,10 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return getCertificateInfoSuccess?.call(this);
   }
@@ -8238,6 +9144,10 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getCertificateInfoSuccess != null) {
@@ -8325,6 +9235,8 @@ class _$DeleteUserCertificateSuccessImpl
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return deleteUserCertificateSuccess();
   }
@@ -8355,6 +9267,8 @@ class _$DeleteUserCertificateSuccessImpl
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return deleteUserCertificateSuccess?.call();
   }
@@ -8384,6 +9298,8 @@ class _$DeleteUserCertificateSuccessImpl
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (deleteUserCertificateSuccess != null) {
@@ -8435,6 +9351,10 @@ class _$DeleteUserCertificateSuccessImpl
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return deleteUserCertificateSuccess(this);
   }
@@ -8477,6 +9397,10 @@ class _$DeleteUserCertificateSuccessImpl
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return deleteUserCertificateSuccess?.call(this);
   }
@@ -8518,6 +9442,10 @@ class _$DeleteUserCertificateSuccessImpl
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (deleteUserCertificateSuccess != null) {
@@ -8639,6 +9567,8 @@ class _$UpdateUserCertificateSuccessImpl
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return updateUserCertificateSuccess(response);
   }
@@ -8669,6 +9599,8 @@ class _$UpdateUserCertificateSuccessImpl
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return updateUserCertificateSuccess?.call(response);
   }
@@ -8698,6 +9630,8 @@ class _$UpdateUserCertificateSuccessImpl
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserCertificateSuccess != null) {
@@ -8749,6 +9683,10 @@ class _$UpdateUserCertificateSuccessImpl
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return updateUserCertificateSuccess(this);
   }
@@ -8791,6 +9729,10 @@ class _$UpdateUserCertificateSuccessImpl
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return updateUserCertificateSuccess?.call(this);
   }
@@ -8832,6 +9774,10 @@ class _$UpdateUserCertificateSuccessImpl
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserCertificateSuccess != null) {
@@ -8954,6 +9900,8 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return getUserEducationsSuccess(educations);
   }
@@ -8984,6 +9932,8 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return getUserEducationsSuccess?.call(educations);
   }
@@ -9013,6 +9963,8 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -9064,6 +10016,10 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return getUserEducationsSuccess(this);
   }
@@ -9106,6 +10062,10 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return getUserEducationsSuccess?.call(this);
   }
@@ -9147,6 +10107,10 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -9233,6 +10197,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return addUserEducationsSuccess();
   }
@@ -9263,6 +10229,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return addUserEducationsSuccess?.call();
   }
@@ -9292,6 +10260,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (addUserEducationsSuccess != null) {
@@ -9343,6 +10313,10 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return addUserEducationsSuccess(this);
   }
@@ -9385,6 +10359,10 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return addUserEducationsSuccess?.call(this);
   }
@@ -9426,6 +10404,10 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (addUserEducationsSuccess != null) {
@@ -9543,6 +10525,8 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return getEducationInfoSuccess(response);
   }
@@ -9573,6 +10557,8 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return getEducationInfoSuccess?.call(response);
   }
@@ -9602,6 +10588,8 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getEducationInfoSuccess != null) {
@@ -9653,6 +10641,10 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return getEducationInfoSuccess(this);
   }
@@ -9695,6 +10687,10 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return getEducationInfoSuccess?.call(this);
   }
@@ -9736,6 +10732,10 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getEducationInfoSuccess != null) {
@@ -9822,6 +10822,8 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return deleteUserEducationSuccess();
   }
@@ -9852,6 +10854,8 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return deleteUserEducationSuccess?.call();
   }
@@ -9881,6 +10885,8 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (deleteUserEducationSuccess != null) {
@@ -9932,6 +10938,10 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return deleteUserEducationSuccess(this);
   }
@@ -9974,6 +10984,10 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return deleteUserEducationSuccess?.call(this);
   }
@@ -10015,6 +11029,10 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (deleteUserEducationSuccess != null) {
@@ -10132,6 +11150,8 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return updateUserEducationSuccess(response);
   }
@@ -10162,6 +11182,8 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return updateUserEducationSuccess?.call(response);
   }
@@ -10191,6 +11213,8 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserEducationSuccess != null) {
@@ -10242,6 +11266,10 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return updateUserEducationSuccess(this);
   }
@@ -10284,6 +11312,10 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return updateUserEducationSuccess?.call(this);
   }
@@ -10325,6 +11357,10 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserEducationSuccess != null) {
@@ -10448,6 +11484,8 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return getUserExperiencesSuccess(response);
   }
@@ -10478,6 +11516,8 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return getUserExperiencesSuccess?.call(response);
   }
@@ -10507,6 +11547,8 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -10558,6 +11600,10 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return getUserExperiencesSuccess(this);
   }
@@ -10600,6 +11646,10 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return getUserExperiencesSuccess?.call(this);
   }
@@ -10641,6 +11691,10 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -10727,6 +11781,8 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return addUserExperiencesSuccess();
   }
@@ -10757,6 +11813,8 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return addUserExperiencesSuccess?.call();
   }
@@ -10786,6 +11844,8 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (addUserExperiencesSuccess != null) {
@@ -10837,6 +11897,10 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return addUserExperiencesSuccess(this);
   }
@@ -10879,6 +11943,10 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return addUserExperiencesSuccess?.call(this);
   }
@@ -10920,6 +11988,10 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (addUserExperiencesSuccess != null) {
@@ -11037,6 +12109,8 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return getExperienceInfoSuccess(response);
   }
@@ -11067,6 +12141,8 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return getExperienceInfoSuccess?.call(response);
   }
@@ -11096,6 +12172,8 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getExperienceInfoSuccess != null) {
@@ -11147,6 +12225,10 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return getExperienceInfoSuccess(this);
   }
@@ -11189,6 +12271,10 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return getExperienceInfoSuccess?.call(this);
   }
@@ -11230,6 +12316,10 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (getExperienceInfoSuccess != null) {
@@ -11316,6 +12406,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return deleteUserExperienceSuccess();
   }
@@ -11346,6 +12438,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return deleteUserExperienceSuccess?.call();
   }
@@ -11375,6 +12469,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (deleteUserExperienceSuccess != null) {
@@ -11426,6 +12522,10 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return deleteUserExperienceSuccess(this);
   }
@@ -11468,6 +12568,10 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return deleteUserExperienceSuccess?.call(this);
   }
@@ -11509,6 +12613,10 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (deleteUserExperienceSuccess != null) {
@@ -11628,6 +12736,8 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return updateUserExperienceSuccess(response);
   }
@@ -11658,6 +12768,8 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return updateUserExperienceSuccess?.call(response);
   }
@@ -11687,6 +12799,8 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserExperienceSuccess != null) {
@@ -11738,6 +12852,10 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return updateUserExperienceSuccess(this);
   }
@@ -11780,6 +12898,10 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return updateUserExperienceSuccess?.call(this);
   }
@@ -11821,6 +12943,10 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (updateUserExperienceSuccess != null) {
@@ -11908,6 +13034,8 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
     required TResult Function(BaseResponse response)
         updateUserExperienceSuccess,
     required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
   }) {
     return saveUpdatedProfileSuccess();
   }
@@ -11938,6 +13066,8 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
     TResult? Function()? deleteUserExperienceSuccess,
     TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
   }) {
     return saveUpdatedProfileSuccess?.call();
   }
@@ -11967,6 +13097,8 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
     TResult Function()? deleteUserExperienceSuccess,
     TResult Function(BaseResponse response)? updateUserExperienceSuccess,
     TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (saveUpdatedProfileSuccess != null) {
@@ -12018,6 +13150,10 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
         updateUserExperienceSuccess,
     required TResult Function(SaveUpdatedProfileSuccess value)
         saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
   }) {
     return saveUpdatedProfileSuccess(this);
   }
@@ -12060,6 +13196,10 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
         updateUserExperienceSuccess,
     TResult? Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
   }) {
     return saveUpdatedProfileSuccess?.call(this);
   }
@@ -12101,6 +13241,10 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
         updateUserExperienceSuccess,
     TResult Function(SaveUpdatedProfileSuccess value)?
         saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
     required TResult orElse(),
   }) {
     if (saveUpdatedProfileSuccess != null) {
@@ -12112,4 +13256,590 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
 
 abstract class SaveUpdatedProfileSuccess implements CreateDigitalProfileState {
   const factory SaveUpdatedProfileSuccess() = _$SaveUpdatedProfileSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$CreateDigitalProfileSuccessImplCopyWith<$Res> {
+  factory _$$CreateDigitalProfileSuccessImplCopyWith(
+          _$CreateDigitalProfileSuccessImpl value,
+          $Res Function(_$CreateDigitalProfileSuccessImpl) then) =
+      __$$CreateDigitalProfileSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$CreateDigitalProfileSuccessImplCopyWithImpl<$Res>
+    extends _$CreateDigitalProfileStateCopyWithImpl<$Res,
+        _$CreateDigitalProfileSuccessImpl>
+    implements _$$CreateDigitalProfileSuccessImplCopyWith<$Res> {
+  __$$CreateDigitalProfileSuccessImplCopyWithImpl(
+      _$CreateDigitalProfileSuccessImpl _value,
+      $Res Function(_$CreateDigitalProfileSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$CreateDigitalProfileSuccessImpl implements CreateDigitalProfileSuccess {
+  const _$CreateDigitalProfileSuccessImpl();
+
+  @override
+  String toString() {
+    return 'CreateDigitalProfileState.createDigitalProfileSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateDigitalProfileSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
+    required TResult Function(BaseResponse response) getCertificateInfoSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
+    required TResult Function(BaseResponse response)
+        updateUserCertificateSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
+    required TResult Function(BaseResponse response) getEducationInfoSuccess,
+    required TResult Function() deleteUserEducationSuccess,
+    required TResult Function(BaseResponse response) updateUserEducationSuccess,
+    required TResult Function(BaseResponse response) getUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
+    required TResult Function(BaseResponse response) getExperienceInfoSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
+    required TResult Function(BaseResponse response)
+        updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
+  }) {
+    return createDigitalProfileSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
+    TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
+    TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
+    TResult? Function(BaseResponse response)? getEducationInfoSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
+    TResult? Function(BaseResponse response)? updateUserEducationSuccess,
+    TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
+    TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
+    TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
+  }) {
+    return createDigitalProfileSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
+    TResult Function(BaseResponse response)? getCertificateInfoSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
+    TResult Function(BaseResponse response)? updateUserCertificateSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
+    TResult Function(BaseResponse response)? getEducationInfoSuccess,
+    TResult Function()? deleteUserEducationSuccess,
+    TResult Function(BaseResponse response)? updateUserEducationSuccess,
+    TResult Function(BaseResponse response)? getUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
+    TResult Function(BaseResponse response)? getExperienceInfoSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
+    TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
+    required TResult orElse(),
+  }) {
+    if (createDigitalProfileSuccess != null) {
+      return createDigitalProfileSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(CreateDigitalProfileLoading value) loading,
+    required TResult Function(CreateDigitalProfileError value) error,
+    required TResult Function(ChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(UpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(GetUserInfoSuccess value) getUserInfoSuccess,
+    required TResult Function(GetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(AddUserCertificateSuccess value)
+        addUserCertificatesSuccess,
+    required TResult Function(GetCertificateInfoSuccess value)
+        getCertificateInfoSuccess,
+    required TResult Function(DeleteUserCertificateSuccess value)
+        deleteUserCertificateSuccess,
+    required TResult Function(UpdateUserCertificateSuccess value)
+        updateUserCertificateSuccess,
+    required TResult Function(GetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(AddUserEducationSuccess value)
+        addUserEducationsSuccess,
+    required TResult Function(GetEducationInfoSuccess value)
+        getEducationInfoSuccess,
+    required TResult Function(DeleteUserEducationSuccess value)
+        deleteUserEducationSuccess,
+    required TResult Function(UpdateUserEducationSuccess value)
+        updateUserEducationSuccess,
+    required TResult Function(GetUserExperiencesSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(AddUserExperienceSuccess value)
+        addUserExperiencesSuccess,
+    required TResult Function(GetExperienceInfoSuccess value)
+        getExperienceInfoSuccess,
+    required TResult Function(DeleteUserExperienceSuccess value)
+        deleteUserExperienceSuccess,
+    required TResult Function(UpdateUserExperienceSuccess value)
+        updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
+  }) {
+    return createDigitalProfileSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(CreateDigitalProfileLoading value)? loading,
+    TResult? Function(CreateDigitalProfileError value)? error,
+    TResult? Function(ChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult? Function(GetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(GetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(AddUserCertificateSuccess value)?
+        addUserCertificatesSuccess,
+    TResult? Function(GetCertificateInfoSuccess value)?
+        getCertificateInfoSuccess,
+    TResult? Function(DeleteUserCertificateSuccess value)?
+        deleteUserCertificateSuccess,
+    TResult? Function(UpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult? Function(GetUserEducationsSuccess value)? getUserEducationsSuccess,
+    TResult? Function(AddUserEducationSuccess value)? addUserEducationsSuccess,
+    TResult? Function(GetEducationInfoSuccess value)? getEducationInfoSuccess,
+    TResult? Function(DeleteUserEducationSuccess value)?
+        deleteUserEducationSuccess,
+    TResult? Function(UpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult? Function(GetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(AddUserExperienceSuccess value)?
+        addUserExperiencesSuccess,
+    TResult? Function(GetExperienceInfoSuccess value)? getExperienceInfoSuccess,
+    TResult? Function(DeleteUserExperienceSuccess value)?
+        deleteUserExperienceSuccess,
+    TResult? Function(UpdateUserExperienceSuccess value)?
+        updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
+  }) {
+    return createDigitalProfileSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(CreateDigitalProfileLoading value)? loading,
+    TResult Function(CreateDigitalProfileError value)? error,
+    TResult Function(ChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(GetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(GetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(AddUserCertificateSuccess value)?
+        addUserCertificatesSuccess,
+    TResult Function(GetCertificateInfoSuccess value)?
+        getCertificateInfoSuccess,
+    TResult Function(DeleteUserCertificateSuccess value)?
+        deleteUserCertificateSuccess,
+    TResult Function(UpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult Function(GetUserEducationsSuccess value)? getUserEducationsSuccess,
+    TResult Function(AddUserEducationSuccess value)? addUserEducationsSuccess,
+    TResult Function(GetEducationInfoSuccess value)? getEducationInfoSuccess,
+    TResult Function(DeleteUserEducationSuccess value)?
+        deleteUserEducationSuccess,
+    TResult Function(UpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult Function(GetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(AddUserExperienceSuccess value)? addUserExperiencesSuccess,
+    TResult Function(GetExperienceInfoSuccess value)? getExperienceInfoSuccess,
+    TResult Function(DeleteUserExperienceSuccess value)?
+        deleteUserExperienceSuccess,
+    TResult Function(UpdateUserExperienceSuccess value)?
+        updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
+    required TResult orElse(),
+  }) {
+    if (createDigitalProfileSuccess != null) {
+      return createDigitalProfileSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class CreateDigitalProfileSuccess
+    implements CreateDigitalProfileState {
+  const factory CreateDigitalProfileSuccess() =
+      _$CreateDigitalProfileSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdateDigitalProfileSuccessImplCopyWith<$Res> {
+  factory _$$UpdateDigitalProfileSuccessImplCopyWith(
+          _$UpdateDigitalProfileSuccessImpl value,
+          $Res Function(_$UpdateDigitalProfileSuccessImpl) then) =
+      __$$UpdateDigitalProfileSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdateDigitalProfileSuccessImplCopyWithImpl<$Res>
+    extends _$CreateDigitalProfileStateCopyWithImpl<$Res,
+        _$UpdateDigitalProfileSuccessImpl>
+    implements _$$UpdateDigitalProfileSuccessImplCopyWith<$Res> {
+  __$$UpdateDigitalProfileSuccessImplCopyWithImpl(
+      _$UpdateDigitalProfileSuccessImpl _value,
+      $Res Function(_$UpdateDigitalProfileSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$UpdateDigitalProfileSuccessImpl implements UpdateDigitalProfileSuccess {
+  const _$UpdateDigitalProfileSuccessImpl();
+
+  @override
+  String toString() {
+    return 'CreateDigitalProfileState.updateDigitalProfileSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateDigitalProfileSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
+    required TResult Function(BaseResponse response) getCertificateInfoSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
+    required TResult Function(BaseResponse response)
+        updateUserCertificateSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
+    required TResult Function(BaseResponse response) getEducationInfoSuccess,
+    required TResult Function() deleteUserEducationSuccess,
+    required TResult Function(BaseResponse response) updateUserEducationSuccess,
+    required TResult Function(BaseResponse response) getUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
+    required TResult Function(BaseResponse response) getExperienceInfoSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
+    required TResult Function(BaseResponse response)
+        updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
+  }) {
+    return updateDigitalProfileSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
+    TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
+    TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
+    TResult? Function(BaseResponse response)? getEducationInfoSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
+    TResult? Function(BaseResponse response)? updateUserEducationSuccess,
+    TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
+    TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
+    TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
+  }) {
+    return updateDigitalProfileSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
+    TResult Function(BaseResponse response)? getCertificateInfoSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
+    TResult Function(BaseResponse response)? updateUserCertificateSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
+    TResult Function(BaseResponse response)? getEducationInfoSuccess,
+    TResult Function()? deleteUserEducationSuccess,
+    TResult Function(BaseResponse response)? updateUserEducationSuccess,
+    TResult Function(BaseResponse response)? getUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
+    TResult Function(BaseResponse response)? getExperienceInfoSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
+    TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateDigitalProfileSuccess != null) {
+      return updateDigitalProfileSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(CreateDigitalProfileLoading value) loading,
+    required TResult Function(CreateDigitalProfileError value) error,
+    required TResult Function(ChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(UpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(GetUserInfoSuccess value) getUserInfoSuccess,
+    required TResult Function(GetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(AddUserCertificateSuccess value)
+        addUserCertificatesSuccess,
+    required TResult Function(GetCertificateInfoSuccess value)
+        getCertificateInfoSuccess,
+    required TResult Function(DeleteUserCertificateSuccess value)
+        deleteUserCertificateSuccess,
+    required TResult Function(UpdateUserCertificateSuccess value)
+        updateUserCertificateSuccess,
+    required TResult Function(GetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(AddUserEducationSuccess value)
+        addUserEducationsSuccess,
+    required TResult Function(GetEducationInfoSuccess value)
+        getEducationInfoSuccess,
+    required TResult Function(DeleteUserEducationSuccess value)
+        deleteUserEducationSuccess,
+    required TResult Function(UpdateUserEducationSuccess value)
+        updateUserEducationSuccess,
+    required TResult Function(GetUserExperiencesSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(AddUserExperienceSuccess value)
+        addUserExperiencesSuccess,
+    required TResult Function(GetExperienceInfoSuccess value)
+        getExperienceInfoSuccess,
+    required TResult Function(DeleteUserExperienceSuccess value)
+        deleteUserExperienceSuccess,
+    required TResult Function(UpdateUserExperienceSuccess value)
+        updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
+  }) {
+    return updateDigitalProfileSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(CreateDigitalProfileLoading value)? loading,
+    TResult? Function(CreateDigitalProfileError value)? error,
+    TResult? Function(ChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult? Function(GetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(GetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(AddUserCertificateSuccess value)?
+        addUserCertificatesSuccess,
+    TResult? Function(GetCertificateInfoSuccess value)?
+        getCertificateInfoSuccess,
+    TResult? Function(DeleteUserCertificateSuccess value)?
+        deleteUserCertificateSuccess,
+    TResult? Function(UpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult? Function(GetUserEducationsSuccess value)? getUserEducationsSuccess,
+    TResult? Function(AddUserEducationSuccess value)? addUserEducationsSuccess,
+    TResult? Function(GetEducationInfoSuccess value)? getEducationInfoSuccess,
+    TResult? Function(DeleteUserEducationSuccess value)?
+        deleteUserEducationSuccess,
+    TResult? Function(UpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult? Function(GetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(AddUserExperienceSuccess value)?
+        addUserExperiencesSuccess,
+    TResult? Function(GetExperienceInfoSuccess value)? getExperienceInfoSuccess,
+    TResult? Function(DeleteUserExperienceSuccess value)?
+        deleteUserExperienceSuccess,
+    TResult? Function(UpdateUserExperienceSuccess value)?
+        updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
+  }) {
+    return updateDigitalProfileSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(CreateDigitalProfileLoading value)? loading,
+    TResult Function(CreateDigitalProfileError value)? error,
+    TResult Function(ChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(GetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(GetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(AddUserCertificateSuccess value)?
+        addUserCertificatesSuccess,
+    TResult Function(GetCertificateInfoSuccess value)?
+        getCertificateInfoSuccess,
+    TResult Function(DeleteUserCertificateSuccess value)?
+        deleteUserCertificateSuccess,
+    TResult Function(UpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult Function(GetUserEducationsSuccess value)? getUserEducationsSuccess,
+    TResult Function(AddUserEducationSuccess value)? addUserEducationsSuccess,
+    TResult Function(GetEducationInfoSuccess value)? getEducationInfoSuccess,
+    TResult Function(DeleteUserEducationSuccess value)?
+        deleteUserEducationSuccess,
+    TResult Function(UpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult Function(GetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(AddUserExperienceSuccess value)? addUserExperiencesSuccess,
+    TResult Function(GetExperienceInfoSuccess value)? getExperienceInfoSuccess,
+    TResult Function(DeleteUserExperienceSuccess value)?
+        deleteUserExperienceSuccess,
+    TResult Function(UpdateUserExperienceSuccess value)?
+        updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateDigitalProfileSuccess != null) {
+      return updateDigitalProfileSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateDigitalProfileSuccess
+    implements CreateDigitalProfileState {
+  const factory UpdateDigitalProfileSuccess() =
+      _$UpdateDigitalProfileSuccessImpl;
 }

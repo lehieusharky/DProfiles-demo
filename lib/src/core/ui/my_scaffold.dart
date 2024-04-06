@@ -35,14 +35,15 @@ class MyScaffold extends StatelessWidget {
     this.onBack,
     this.heightAppBar,
     this.isLoading,
-    this.endDrawer, this.sKey,
+    this.endDrawer,
+    this.sKey,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: sKey,
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       backgroundColor: backgroundColor,
       endDrawer: endDrawer,
       appBar: useAppBar == true || canBack == true

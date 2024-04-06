@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 abstract class AbstractFactoryAppButton {
-  Widget iconButton(
-    IconData iconData, {
+  IconButton iconButton({
     VoidCallback? onPressed,
     double? iconSize,
     Color? iconColor,
     Color? backgroundColor,
+    Widget? icon,
+    IconData? iconData,
   });
 
   Widget elevatedButton({

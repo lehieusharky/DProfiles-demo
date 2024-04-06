@@ -105,8 +105,6 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
       onFieldSubmitted: widget.onSubmit,
       validator: widget.validator,
       onEditingComplete: widget.onEditComplete,
-      // scrollPadding: EdgeInsets.only(
-      //     bottom: MediaQuery.of(context).viewInsets.bottom + 100 * 4),
       textInputAction: widget.textInputAction,
       style: AppFont().fontTheme(context).labelSmall,
       autovalidateMode: widget.autoValidateMode,
@@ -152,7 +150,7 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
         fillColor: widget.backgroundColor ?? Colors.transparent,
         filled: true,
         hintText: widget.hintText,
-        errorStyle: AppFont().fontTheme(context).bodyLarge,
+        errorStyle: AppFont().fontTheme(context).bodyMedium,
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(
               widget.borderRadius ?? context.sizeWidth(12)),

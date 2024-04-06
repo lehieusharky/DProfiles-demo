@@ -1,7 +1,5 @@
 import 'dart:async';
 import 'dart:developer';
-
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/data/models/digital_profile_model.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart';
 import 'package:demo_dprofiles/src/utils/data/models/add_user_education_model.dart';
 import 'package:demo_dprofiles/src/utils/data/models/certificate_model.dart';
@@ -34,6 +32,8 @@ class CreateDigitalProfileBloc
     on<ChangeCreationStep>(_changeCreateStep);
 
     on<SaveUpdatedProfile>(_saveUpdatedProfile);
+
+    on<CreateDigitalProfile>(_createDigitalProfile);
 
     // basic info
 
@@ -132,12 +132,15 @@ class CreateDigitalProfileBloc
       Emitter<CreateDigitalProfileState> emit) async {
     final result = await createDigitalProfileUseCase.getUserCertificates();
 
-    result.fold((l) => emit(CreateDigitalProfileError(message: l)), (r) {
-      certificates =
-          (r.data as List).map((e) => CertificateModel.fromJson(e)).toList();
+    result.fold(
+      (l) => emit(CreateDigitalProfileError(message: l)),
+      (r) {
+        certificates =
+            (r.data as List).map((e) => CertificateModel.fromJson(e)).toList();
 
-      emit(GetUserCertificatesSuccess(r));
-    });
+        emit(GetUserCertificatesSuccess(r));
+      },
+    );
   }
 
   FutureOr<void> _addUserCertificate(
@@ -266,7 +269,7 @@ class CreateDigitalProfileBloc
     final getCertificatesResult =
         await createDigitalProfileUseCase.getUserCertificates();
 
-    final getExperienesResult =
+    final getExperiencesResult =
         await createDigitalProfileUseCase.getUserExperiences();
 
     final updateUserInfoResult =
@@ -311,7 +314,7 @@ class CreateDigitalProfileBloc
       },
     );
 
-    getExperienesResult.fold(
+    getExperiencesResult.fold(
       (l) => emit(CreateDigitalProfileError(message: l)),
       (r) async {
         final userExperiences =
@@ -329,5 +332,25 @@ class CreateDigitalProfileBloc
     );
 
     emit(const SaveUpdatedProfileSuccess());
+  }
+
+  FutureOr<void> _createDigitalProfile(CreateDigitalProfile event,
+      Emitter<CreateDigitalProfileState> emit) async {
+    emit(const CreateDigitalProfileLoading());
+
+    try {
+      await createDigitalProfileUseCase.createDigitalProfile();
+
+      await createDigitalProfileUseCase.updateDigitalProfile().then(
+            (value) => value.fold(
+              (l) => emit(CreateDigitalProfileError(
+                  message: [l], title: 'Update digital profile failed')),
+              (r) => emit(const UpdateDigitalProfileSuccess()),
+            ),
+          );
+      emit(const UpdateDigitalProfileSuccess());
+    } catch (e) {
+      emit(const UpdateDigitalProfileSuccess());
+    }
   }
 }

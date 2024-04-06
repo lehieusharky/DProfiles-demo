@@ -15,6 +15,7 @@ class AuthField extends StatelessWidget {
   final String? Function(String?)? validator;
   final TextInputAction? textInputAction;
   final VoidCallback? onTap;
+  final bool? autoFocus;
 
   const AuthField(
       {Key? key,
@@ -27,7 +28,8 @@ class AuthField extends StatelessWidget {
       this.isPasswordField,
       this.validator,
       this.textInputAction,
-      this.onTap})
+      this.onTap,
+      this.autoFocus})
       : super(key: key);
 
   @override
@@ -48,6 +50,7 @@ class AuthField extends StatelessWidget {
           ),
         ),
         MyTextFormField(
+          autoFocus: autoFocus,
           controller: controller,
           hintText: hint,
           suffixIcon: suffixIcon,

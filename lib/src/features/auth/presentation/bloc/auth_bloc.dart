@@ -1,6 +1,8 @@
 import 'dart:async';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/create_account_model.dart';
 import 'package:demo_dprofiles/src/features/auth/domain/usecases/auth_usecase.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -9,7 +11,9 @@ part 'auth_state.dart';
 part 'auth_bloc.freezed.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  AuthBloc() : super(const AuthState.initial()) {
+  BuildContext context;
+
+  AuthBloc(this.context) : super(const AuthState.initial()) {
     on<AuthSendSignUpEmail>(_sendSignUpEmail);
     on<AuthResendSignUpEmail>(_resendSignUpEmail);
     on<AuthValidateSignUpCode>(_validateSignUpCode);
@@ -26,12 +30,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     final result = await authUseCase.sendSignUpEmail(event.email);
 
     result.fold(
-      (l) => emit(AuthError(message: l, title: 'Send failed')),
+      (l) => emit(AuthError(message: l, title: appLocal(context).sendFailed)),
       (r) {
         if (r.statusCode != 200) {
-          emit(AuthError(message: r.message, title: 'Send failed'));
+          emit(AuthError(
+              message: r.message, title: appLocal(context).sendFailed));
         } else {
-          emit(const AuthSendSignUpEmailSuccess());
+          emit(AuthSendSignUpEmailSuccess(event.email));
         }
       },
     );
@@ -44,10 +49,11 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     final result = await authUseCase.resendSignUpEmail(event.email);
 
     result.fold(
-      (l) => emit(AuthError(message: l, title: 'Resend failed')),
+      (l) => emit(AuthError(message: l, title: appLocal(context).resendFailed)),
       (r) {
         if (r.statusCode != 200) {
-          emit(AuthError(message: r.message, title: 'Resend failed'));
+          emit(AuthError(
+              message: r.message, title: appLocal(context).resendFailed));
         } else {
           emit(const AuthResendSignUpEmailSuccess());
         }
@@ -62,7 +68,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         await authUseCase.validateSignUpCode(event.email, event.code);
 
     result.fold(
-      (l) => emit(AuthError(message: l, title: 'Validate failed')),
+      (l) => emit(
+          AuthError(message: l, title: appLocal(context).validateCodeFailed)),
       (r) {
         if (r.statusCode != 200) {
           emit(AuthValidateSignUpCodeFailed(r.message));
@@ -79,11 +86,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     final result = await authUseCase.createAnAccount(event.model);
 
     result.fold(
-      (l) => emit(AuthError(message: l, title: 'Create an account failed')),
+      (l) => emit(AuthError(
+          message: l, title: appLocal(context).createAnAccountFailed)),
       (r) {
         if (r.statusCode != 200) {
-          emit(
-              AuthError(message: r.message, title: 'Create an account failed'));
+          emit(AuthError(
+              message: r.message,
+              title: appLocal(context).createAnAccountFailed));
         } else {
           emit(const AuthCreateAnAccountSuccess());
         }
@@ -93,19 +102,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   FutureOr<void> _signIn(AuthSignIn event, Emitter<AuthState> emit) async {
     emit(const AuthState.loading());
+
     final result = await authUseCase.signIn(event.email, event.password);
 
     result.fold(
-      (l) => emit(AuthError(message: l, title: 'Sign in failed')),
-      (r) {
-        if (r == null) {
-          emit(const AuthError(
-              message: 'Check your email or password again',
-              title: 'Sign in failed'));
-        } else {
-          emit(const AuthSignInSuccess());
-        }
-      },
+      (l) => emit(AuthError(message: l, title: appLocal(context).loginFailed)),
+      (r) => emit(const AuthSignInSuccess()),
     );
   }
 }
