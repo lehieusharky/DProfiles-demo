@@ -141,6 +141,12 @@ abstract class AppLocalizations {
   /// **'AI Features'**
   String get aiFeature;
 
+  /// No description provided for @aiFeatures.
+  ///
+  /// In en, this message translates to:
+  /// **'AI Features'**
+  String get aiFeatures;
+
   /// No description provided for @alreadyHaveAnAccount.
   ///
   /// In en, this message translates to:
@@ -729,6 +735,12 @@ abstract class AppLocalizations {
   /// **'Profiles'**
   String get profiles;
 
+  /// No description provided for @prompt.
+  ///
+  /// In en, this message translates to:
+  /// **'Prompt'**
+  String get prompt;
+
   /// No description provided for @requestNewCodeIn.
   ///
   /// In en, this message translates to:
@@ -861,6 +873,12 @@ abstract class AppLocalizations {
   /// **'To'**
   String get to;
 
+  /// No description provided for @topic.
+  ///
+  /// In en, this message translates to:
+  /// **'Topic'**
+  String get topic;
+
   /// No description provided for @userNameCannotBeEmpty.
   ///
   /// In en, this message translates to:
@@ -873,11 +891,23 @@ abstract class AppLocalizations {
   /// **'Validate code failed'**
   String get validateCodeFailed;
 
+  /// No description provided for @viewAll.
+  ///
+  /// In en, this message translates to:
+  /// **'View all'**
+  String get viewAll;
+
   /// No description provided for @viewChatHistory.
   ///
   /// In en, this message translates to:
   /// **'View Chat History'**
   String get viewChatHistory;
+
+  /// No description provided for @viewHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'View History'**
+  String get viewHistory;
 
   /// No description provided for @violent.
   ///

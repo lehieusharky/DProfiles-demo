@@ -69,7 +69,7 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
                     validator: (password) {
                       if (password == null || password.isEmpty) {
                         return appLocal(context).passwordCannotBeEmpty;
-                      } else if (_passwordController.text ==
+                      } else if (_passwordController.text !=
                           _confirmPasswordController.text) {
                         return appLocal(context).confirmPasswordIsNotMatch;
                       } else {

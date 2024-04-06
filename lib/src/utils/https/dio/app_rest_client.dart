@@ -88,7 +88,7 @@ abstract class RestClient {
   @DELETE('/api/v1/user-experience/{id}')
   Future<BaseResponse> deleteExperienceInfo(@Path() String id);
 
-  // generate profile introduction
+  // auto generate
 
   @POST('/api/v1/auto-generate/profile-introduction')
   Future<BaseResponse> generateProfileIntroduction(

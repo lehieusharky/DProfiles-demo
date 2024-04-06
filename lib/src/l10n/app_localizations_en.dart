@@ -29,6 +29,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get aiFeature => 'AI Features';
 
   @override
+  String get aiFeatures => 'AI Features';
+
+  @override
   String get alreadyHaveAnAccount => 'Already have an account?';
 
   @override
@@ -323,6 +326,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get profiles => 'Profiles';
 
   @override
+  String get prompt => 'Prompt';
+
+  @override
   String get requestNewCodeIn => 'Request new code in';
 
   @override
@@ -389,13 +395,22 @@ class AppLocalizationsEn extends AppLocalizations {
   String get to => 'To';
 
   @override
+  String get topic => 'Topic';
+
+  @override
   String get userNameCannotBeEmpty => 'Username cannot be empty';
 
   @override
   String get validateCodeFailed => 'Validate code failed';
 
   @override
+  String get viewAll => 'View all';
+
+  @override
   String get viewChatHistory => 'View Chat History';
+
+  @override
+  String get viewHistory => 'View History';
 
   @override
   String get violent => 'Violent';

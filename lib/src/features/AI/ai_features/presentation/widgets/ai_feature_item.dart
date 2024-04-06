@@ -3,13 +3,13 @@ import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:flutter/material.dart';
 
-class HeaderAiFeature extends StatelessWidget {
+class AIFeatureItem extends StatelessWidget {
   final Color color;
   final String title;
   final String iconPath;
   final VoidCallback? onPressed;
 
-  const HeaderAiFeature({
+  const AIFeatureItem({
     Key? key,
     required this.color,
     required this.title,

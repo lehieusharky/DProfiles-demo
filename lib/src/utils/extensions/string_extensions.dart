@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 extension StringExt on String? {
   String? emailValidation(BuildContext context) {
@@ -58,6 +59,18 @@ extension StringExt on String? {
       return null;
     } else {
       return null;
+    }
+  }
+
+  String convertToDDMMYYFormat() {
+    if (this == null || this!.isEmpty) {
+      return '';
+    } else {
+      DateTime dateTime = DateTime.parse(this!);
+
+      String formattedDate = DateFormat('dd/MM/yyyy').format(dateTime);
+
+      return formattedDate;
     }
   }
 }
