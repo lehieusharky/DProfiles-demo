@@ -32,7 +32,7 @@ class AIFeatureItem extends StatelessWidget {
             color: color,
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Image.asset(
                 iconPath,

@@ -5,8 +5,10 @@ import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
-class HeaderCoverLetter extends StatelessWidget {
-  const HeaderCoverLetter({super.key});
+class HeaderWriteProfile extends StatelessWidget {
+  const HeaderWriteProfile({super.key, required this.aiFeatureTitle});
+
+  final String aiFeatureTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,7 @@ class HeaderCoverLetter extends StatelessWidget {
         Padding(
           padding: context.padding(top: 8),
           child: Text(
-            'Write Cover Letter',
+            aiFeatureTitle,
             style: AppFont().fontTheme(context).bodyLarge,
           ),
         ),
