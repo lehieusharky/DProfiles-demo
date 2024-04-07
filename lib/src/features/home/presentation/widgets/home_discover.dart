@@ -1,5 +1,6 @@
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/features/blogs/blogs.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_feed_sub_page.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -66,7 +67,7 @@ class _HomeDiscoverState extends State<HomeDiscover>
                 controller: _tabController,
                 children: const [
                   HomeFeedSubPage(),
-                  HomeFeedSubPage(),
+                  BlogListPage(),
                 ],
               ),
             ),

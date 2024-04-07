@@ -64,6 +64,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
+  flutter_dotenv: ^5.1.0
 
 dev_dependencies:
   retrofit_generator: ">=7.0.0 <8.0.0"
@@ -103,3 +104,4 @@ flutter:
     - assets/images/ai_features/
     - assets/icons/
     - assets/icons/logos/
+    - .env
