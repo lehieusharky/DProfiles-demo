@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:ficonsax/ficonsax.dart';
@@ -27,14 +28,14 @@ class HeaderWriteProfile extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'AI Features',
+          appLocal(context).aiFeatures,
           style:
               AppFont().fontTheme(context, weight: FontWeight.bold).titleSmall,
         ),
         Padding(
           padding: context.padding(top: 8),
           child: Text(
-            'Write Your Profile Introduction',
+            appLocal(context).writeYourProfileIntroduction,
             style: AppFont().fontTheme(context).bodyLarge,
           ),
         ),

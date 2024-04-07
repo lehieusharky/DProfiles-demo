@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/ai_features_page.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/part_ai_features.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_extension.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/pages/home_page.dart';
 import 'package:demo_dprofiles/src/features/my_wallet/presentation/pages/my_wallet_page.dart';

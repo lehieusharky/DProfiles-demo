@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'profile_introduction_model.dart';
+part of 'write_profile_introduction_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,13 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-ProfileIntroductionModel _$ProfileIntroductionModelFromJson(
+WriteProfileIntroductionModel _$WriteProfileIntroductionModelFromJson(
     Map<String, dynamic> json) {
-  return _ProfileIntroductionModel.fromJson(json);
+  return _WriteProfileIntroductionModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ProfileIntroductionModel {
+mixin _$WriteProfileIntroductionModel {
   @JsonKey(name: 'max_token')
   int? get maxToken => throw _privateConstructorUsedError;
   String? get summary => throw _privateConstructorUsedError;
@@ -31,15 +31,17 @@ mixin _$ProfileIntroductionModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ProfileIntroductionModelCopyWith<ProfileIntroductionModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $WriteProfileIntroductionModelCopyWith<WriteProfileIntroductionModel>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ProfileIntroductionModelCopyWith<$Res> {
-  factory $ProfileIntroductionModelCopyWith(ProfileIntroductionModel value,
-          $Res Function(ProfileIntroductionModel) then) =
-      _$ProfileIntroductionModelCopyWithImpl<$Res, ProfileIntroductionModel>;
+abstract class $WriteProfileIntroductionModelCopyWith<$Res> {
+  factory $WriteProfileIntroductionModelCopyWith(
+          WriteProfileIntroductionModel value,
+          $Res Function(WriteProfileIntroductionModel) then) =
+      _$WriteProfileIntroductionModelCopyWithImpl<$Res,
+          WriteProfileIntroductionModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'max_token') int? maxToken,
@@ -50,10 +52,10 @@ abstract class $ProfileIntroductionModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ProfileIntroductionModelCopyWithImpl<$Res,
-        $Val extends ProfileIntroductionModel>
-    implements $ProfileIntroductionModelCopyWith<$Res> {
-  _$ProfileIntroductionModelCopyWithImpl(this._value, this._then);
+class _$WriteProfileIntroductionModelCopyWithImpl<$Res,
+        $Val extends WriteProfileIntroductionModel>
+    implements $WriteProfileIntroductionModelCopyWith<$Res> {
+  _$WriteProfileIntroductionModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -95,12 +97,12 @@ class _$ProfileIntroductionModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$ProfileIntroductionModelImplCopyWith<$Res>
-    implements $ProfileIntroductionModelCopyWith<$Res> {
-  factory _$$ProfileIntroductionModelImplCopyWith(
-          _$ProfileIntroductionModelImpl value,
-          $Res Function(_$ProfileIntroductionModelImpl) then) =
-      __$$ProfileIntroductionModelImplCopyWithImpl<$Res>;
+abstract class _$$WriteProfileIntroductionModelImplCopyWith<$Res>
+    implements $WriteProfileIntroductionModelCopyWith<$Res> {
+  factory _$$WriteProfileIntroductionModelImplCopyWith(
+          _$WriteProfileIntroductionModelImpl value,
+          $Res Function(_$WriteProfileIntroductionModelImpl) then) =
+      __$$WriteProfileIntroductionModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -112,13 +114,13 @@ abstract class _$$ProfileIntroductionModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ProfileIntroductionModelImplCopyWithImpl<$Res>
-    extends _$ProfileIntroductionModelCopyWithImpl<$Res,
-        _$ProfileIntroductionModelImpl>
-    implements _$$ProfileIntroductionModelImplCopyWith<$Res> {
-  __$$ProfileIntroductionModelImplCopyWithImpl(
-      _$ProfileIntroductionModelImpl _value,
-      $Res Function(_$ProfileIntroductionModelImpl) _then)
+class __$$WriteProfileIntroductionModelImplCopyWithImpl<$Res>
+    extends _$WriteProfileIntroductionModelCopyWithImpl<$Res,
+        _$WriteProfileIntroductionModelImpl>
+    implements _$$WriteProfileIntroductionModelImplCopyWith<$Res> {
+  __$$WriteProfileIntroductionModelImplCopyWithImpl(
+      _$WriteProfileIntroductionModelImpl _value,
+      $Res Function(_$WriteProfileIntroductionModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -130,7 +132,7 @@ class __$$ProfileIntroductionModelImplCopyWithImpl<$Res>
     Object? gptModel = freezed,
     Object? language = freezed,
   }) {
-    return _then(_$ProfileIntroductionModelImpl(
+    return _then(_$WriteProfileIntroductionModelImpl(
       maxToken: freezed == maxToken
           ? _value.maxToken
           : maxToken // ignore: cast_nullable_to_non_nullable
@@ -157,16 +159,18 @@ class __$$ProfileIntroductionModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ProfileIntroductionModelImpl implements _ProfileIntroductionModel {
-  const _$ProfileIntroductionModelImpl(
+class _$WriteProfileIntroductionModelImpl
+    implements _WriteProfileIntroductionModel {
+  const _$WriteProfileIntroductionModelImpl(
       {@JsonKey(name: 'max_token') this.maxToken = 0,
       this.summary,
       this.style,
       @JsonKey(name: 'gpt_model') this.gptModel = 3,
       this.language = 'en'});
 
-  factory _$ProfileIntroductionModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ProfileIntroductionModelImplFromJson(json);
+  factory _$WriteProfileIntroductionModelImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$WriteProfileIntroductionModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'max_token')
@@ -184,14 +188,14 @@ class _$ProfileIntroductionModelImpl implements _ProfileIntroductionModel {
 
   @override
   String toString() {
-    return 'ProfileIntroductionModel(maxToken: $maxToken, summary: $summary, style: $style, gptModel: $gptModel, language: $language)';
+    return 'WriteProfileIntroductionModel(maxToken: $maxToken, summary: $summary, style: $style, gptModel: $gptModel, language: $language)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ProfileIntroductionModelImpl &&
+            other is _$WriteProfileIntroductionModelImpl &&
             (identical(other.maxToken, maxToken) ||
                 other.maxToken == maxToken) &&
             (identical(other.summary, summary) || other.summary == summary) &&
@@ -210,28 +214,30 @@ class _$ProfileIntroductionModelImpl implements _ProfileIntroductionModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ProfileIntroductionModelImplCopyWith<_$ProfileIntroductionModelImpl>
-      get copyWith => __$$ProfileIntroductionModelImplCopyWithImpl<
-          _$ProfileIntroductionModelImpl>(this, _$identity);
+  _$$WriteProfileIntroductionModelImplCopyWith<
+          _$WriteProfileIntroductionModelImpl>
+      get copyWith => __$$WriteProfileIntroductionModelImplCopyWithImpl<
+          _$WriteProfileIntroductionModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ProfileIntroductionModelImplToJson(
+    return _$$WriteProfileIntroductionModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _ProfileIntroductionModel implements ProfileIntroductionModel {
-  const factory _ProfileIntroductionModel(
+abstract class _WriteProfileIntroductionModel
+    implements WriteProfileIntroductionModel {
+  const factory _WriteProfileIntroductionModel(
       {@JsonKey(name: 'max_token') final int? maxToken,
       final String? summary,
       final String? style,
       @JsonKey(name: 'gpt_model') final int? gptModel,
-      final String? language}) = _$ProfileIntroductionModelImpl;
+      final String? language}) = _$WriteProfileIntroductionModelImpl;
 
-  factory _ProfileIntroductionModel.fromJson(Map<String, dynamic> json) =
-      _$ProfileIntroductionModelImpl.fromJson;
+  factory _WriteProfileIntroductionModel.fromJson(Map<String, dynamic> json) =
+      _$WriteProfileIntroductionModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'max_token')
@@ -247,6 +253,7 @@ abstract class _ProfileIntroductionModel implements ProfileIntroductionModel {
   String? get language;
   @override
   @JsonKey(ignore: true)
-  _$$ProfileIntroductionModelImplCopyWith<_$ProfileIntroductionModelImpl>
+  _$$WriteProfileIntroductionModelImplCopyWith<
+          _$WriteProfileIntroductionModelImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

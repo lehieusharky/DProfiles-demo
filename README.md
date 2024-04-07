@@ -8,7 +8,7 @@
 
 [API Document](https://api.dev.dprofiles.xyz/api#)
 
-## Generate config file before run project [Step by step]
+## Generate config files before run project [Step by step]
 
 ### Step 1
 

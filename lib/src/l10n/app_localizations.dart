@@ -99,6 +99,12 @@ abstract class AppLocalizations {
   /// **'About'**
   String get about;
 
+  /// No description provided for @aboutYourSelf.
+  ///
+  /// In en, this message translates to:
+  /// **'About Your Self'**
+  String get aboutYourSelf;
+
   /// No description provided for @active.
   ///
   /// In en, this message translates to:
@@ -243,6 +249,12 @@ abstract class AppLocalizations {
   /// **'Check your email or password again'**
   String get checkYourEmailOrPasswordAgain;
 
+  /// No description provided for @clearAll.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear all'**
+  String get clearAll;
+
   /// No description provided for @company.
   ///
   /// In en, this message translates to:
@@ -296,6 +308,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Conversations'**
   String get conversations;
+
+  /// No description provided for @copy.
+  ///
+  /// In en, this message translates to:
+  /// **'Copy'**
+  String get copy;
 
   /// No description provided for @createAccount.
   ///
@@ -663,6 +681,12 @@ abstract class AppLocalizations {
   /// **'Next'**
   String get nextButton;
 
+  /// No description provided for @normal.
+  ///
+  /// In en, this message translates to:
+  /// **'Normal'**
+  String get normal;
+
   /// No description provided for @number.
   ///
   /// In en, this message translates to:
@@ -789,6 +813,12 @@ abstract class AppLocalizations {
   /// **'Send failed'**
   String get sendFailed;
 
+  /// No description provided for @sendToAI.
+  ///
+  /// In en, this message translates to:
+  /// **'Send to AI'**
+  String get sendToAI;
+
   /// No description provided for @sexy.
   ///
   /// In en, this message translates to:
@@ -836,6 +866,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Supportive'**
   String get supportive;
+
+  /// No description provided for @tellMeAboutYourSelf.
+  ///
+  /// In en, this message translates to:
+  /// **'Tell me about your self?'**
+  String get tellMeAboutYourSelf;
 
   /// No description provided for @theme.
   ///
@@ -915,11 +951,23 @@ abstract class AppLocalizations {
   /// **'Violent'**
   String get violent;
 
+  /// No description provided for @writeAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Write again'**
+  String get writeAgain;
+
   /// No description provided for @writeCoverLetter.
   ///
   /// In en, this message translates to:
   /// **'Write Cover Letter'**
   String get writeCoverLetter;
+
+  /// No description provided for @writeStyle.
+  ///
+  /// In en, this message translates to:
+  /// **'Write Style'**
+  String get writeStyle;
 
   /// No description provided for @writeYourProfileIntroduction.
   ///
@@ -956,6 +1004,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Your nationality'**
   String get yourNationality;
+
+  /// No description provided for @yourRequire.
+  ///
+  /// In en, this message translates to:
+  /// **'Your require'**
+  String get yourRequire;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

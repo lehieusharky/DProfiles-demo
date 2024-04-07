@@ -3,7 +3,7 @@ import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:tuple/tuple.dart';
 
-import 'ai_features_page.dart';
+import 'part_ai_features.dart';
 
 extension AIFeaturePageExt on AiFeaturesPage {
   List<Widget> actions(

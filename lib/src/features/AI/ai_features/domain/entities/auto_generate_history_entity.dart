@@ -81,6 +81,8 @@ extension AutoGenerateHistoryModelExt on AutoGenerateHistoryModel {
           if (result != null)
             Expanded(
               child: Text(result!,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: AppFont()
                       .fontTheme(context, color: colorScheme(context).outline)
                       .bodyMedium),

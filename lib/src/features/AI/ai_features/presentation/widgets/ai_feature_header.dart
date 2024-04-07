@@ -29,7 +29,7 @@ class AiFeatureHeader extends StatelessWidget {
               colorScheme(context).secondaryContainer,
               appLocal(context).writeCoverLetter,
               Assets.images.aiFeatures.letter.path,
-              () => context.router.push(const AICharacterRoute()),
+              () => context.router.push(const WriteCoverLetterRoute()),
             ),
           ]
               .map((e) => AIFeatureItem(
@@ -46,13 +46,13 @@ class AiFeatureHeader extends StatelessWidget {
               colorScheme(context).secondary,
               appLocal(context).skillsKnowledgeByJobTitle,
               Assets.images.aiFeatures.folder.path,
-              () {},
+              () => context.router.push(const WriteSkillKnowledgeRoute()),
             ),
             Tuple4(
               MyColor.get3772FF,
               appLocal(context).jobInterviewQA,
               Assets.images.aiFeatures.job.path,
-              () {},
+              () => context.router.push(const WriteInterviewQuestionRoute()),
             ),
           ]
               .map((e) => AIFeatureItem(

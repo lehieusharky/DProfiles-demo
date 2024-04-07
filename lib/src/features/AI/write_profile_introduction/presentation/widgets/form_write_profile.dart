@@ -1,7 +1,8 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
-import 'package:demo_dprofiles/src/features/AI/write_profile_introduction/data/models/profile_introduction_model.dart';
-import 'package:demo_dprofiles/src/features/AI/write_profile_introduction/presentation/bloc/write_profile_introduction_bloc.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_profile_introduction_model.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
@@ -25,8 +26,7 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<WriteProfileIntroductionBloc,
-        WriteProfileIntroductionState>(
+    return BlocBuilder<AiFeaturesBloc, AiFeaturesState>(
       builder: (context, state) {
         return Form(
           key: _keyForm,
@@ -34,16 +34,30 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
             children: [
               AuthField(
                   controller: _aboutYourSelfController,
-                  title: 'ABOUT YOUR SELF',
-                  keyboardType: TextInputType.emailAddress,
+                  title: appLocal(context).aboutYourSelf.toUpperCase(),
                   textInputAction: TextInputAction.next,
-                  hint: 'Company name'),
+                  validator: (about) {
+                    if (about == null || about.isEmpty) {
+                      return appLocal(context).fieldCannotBeEmpty;
+                    } else {
+                      return null;
+                    }
+                  },
+                  hint: appLocal(context).tellMeAboutYourSelf),
               Padding(
                 padding: context.padding(top: 32),
                 child: AuthField(
                   controller: _writeStyleController,
-                  title: 'WRITE STYLE',
-                  hint: 'Normal',
+                  title: appLocal(context).writeStyle.toUpperCase(),
+                  textInputAction: TextInputAction.next,
+                  hint: appLocal(context).normal,
+                  validator: (style) {
+                    if (style == null || style.isEmpty) {
+                      return appLocal(context).fieldCannotBeEmpty;
+                    } else {
+                      return null;
+                    }
+                  },
                   suffixIcon: const Icon(IconsaxOutline.arrow_down_1),
                 ),
               ),
@@ -51,9 +65,9 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
                 padding: context.padding(top: 32),
                 child: AuthField(
                   controller: _promptController,
-                  title: 'PROMPT',
-                  maxLines: 4,
-                  hint: 'Your require',
+                  title: appLocal(context).prompt.toUpperCase(),
+                  maxLines: 2,
+                  hint: appLocal(context).yourRequire,
                 ),
               ),
               Padding(
@@ -63,16 +77,17 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
                   children: [
                     Padding(
                       padding: context.padding(right: 16),
-                      child: AppOutlineButton(context)
-                          .elevatedButton(onPressed: () {}, title: 'Clear all'),
+                      child: AppOutlineButton(context).elevatedButton(
+                          onPressed: () => _clearAll(),
+                          title: appLocal(context).clearAll),
                     ),
                     Expanded(
                       child: AppFlatButton(context).elevatedButton(
                         width: context.width,
                         onPressed: () => _sendToAI(context),
-                        title: 'Send to AI',
+                        title: appLocal(context).sendToAI,
                         suffixIcon: _buildSuffixIconSendButton(),
-                        child: (state is WriteProfileIntroLoading)
+                        child: (state is AiFeaturesLoading)
                             ? const MyLoading()
                             : null,
                       ),
@@ -106,13 +121,29 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
 
   void _sendToAI(BuildContext context) {
     if (_keyForm.currentState?.validate() ?? false) {
-      final model = ProfileIntroductionModel(
-        summary: _writeStyleController.text.trim(),
+      final model = WriteProfileIntroductionModel(
+        summary: _aboutYourSelfController.text + _promptController.text,
         style: _writeStyleController.text.trim(),
+        gptModel: 3,
       );
       context
-          .read<WriteProfileIntroductionBloc>()
+          .read<AiFeaturesBloc>()
           .add(GenerateProfileIntroduction(model));
     }
+  }
+
+  _clearAll() {
+    _aboutYourSelfController.clear();
+    _writeStyleController.clear();
+    _promptController.clear();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+
+    _aboutYourSelfController.dispose();
+    _writeStyleController.dispose();
+    _promptController.dispose();
   }
 }

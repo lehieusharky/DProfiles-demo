@@ -12,4 +12,16 @@ class AiFeaturesState with _$AiFeaturesState {
   const factory AiFeaturesState.getAutoGenerateHistory(
           List<AutoGenerateHistoryModel> autoGenerateHistories) =
       GetAutoGenerateHistorySuccess;
+
+  const factory AiFeaturesState.generateProfileIntroductionSuccess(
+      String data) = GenerateProfileIntroductionSuccess;
+
+  const factory AiFeaturesState.generateInterviewQuestionSuccess(String data) =
+      GenerateInterviewQuestionSuccess;
+
+  const factory AiFeaturesState.generateSkillKnowledgeSuccess(String data) =
+      GenerateSkillKnowledgeSuccess;
+
+  const factory AiFeaturesState.generateCoverLetterSuccess(String data) =
+      GenerateCoverLetterSuccess;
 }

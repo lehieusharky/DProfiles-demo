@@ -8,6 +8,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get about => 'About';
 
   @override
+  String get aboutYourSelf => 'About Your Self';
+
+  @override
   String get active => 'Active';
 
   @override
@@ -80,6 +83,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get checkYourEmailOrPasswordAgain => 'Check your email or password again';
 
   @override
+  String get clearAll => 'Clear all';
+
+  @override
   String get company => 'Company';
 
   @override
@@ -105,6 +111,9 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get conversations => 'Conversations';
+
+  @override
+  String get copy => 'Copy';
 
   @override
   String get createAccount => 'Create Account';
@@ -290,6 +299,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get nextButton => 'Next';
 
   @override
+  String get normal => 'Normal';
+
+  @override
   String get number => 'Number';
 
   @override
@@ -353,6 +365,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get sendFailed => 'Send failed';
 
   @override
+  String get sendToAI => 'Send to AI';
+
+  @override
   String get sexy => 'Sexy';
 
   @override
@@ -375,6 +390,9 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get supportive => 'Supportive';
+
+  @override
+  String get tellMeAboutYourSelf => 'Tell me about your self?';
 
   @override
   String get theme => 'Giao diện';
@@ -416,7 +434,13 @@ class AppLocalizationsVi extends AppLocalizations {
   String get violent => 'Violent';
 
   @override
+  String get writeAgain => 'Write again';
+
+  @override
   String get writeCoverLetter => 'Write Cover Letter';
+
+  @override
+  String get writeStyle => 'Write Style';
 
   @override
   String get writeYourProfileIntroduction => 'Write your profile Introduction';
@@ -435,4 +459,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get yourNationality => 'Your nationality';
+
+  @override
+  String get yourRequire => 'Your require';
 }

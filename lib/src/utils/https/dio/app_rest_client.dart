@@ -94,6 +94,17 @@ abstract class RestClient {
   Future<BaseResponse> generateProfileIntroduction(
       @Body() Map<String, dynamic> body);
 
+  @POST('/api/v1/auto-generate/interview-question')
+  Future<BaseResponse> generateInterviewQuestion(
+      @Body() Map<String, dynamic> body);
+
+  @POST('/api/v1/auto-generate/skill-knowledge')
+  Future<BaseResponse> generateSkillKnowledge(
+      @Body() Map<String, dynamic> body);
+
+  @POST('/api/v1/auto-generate/cover-letter')
+  Future<BaseResponse> generateCoverLetter(@Body() Map<String, dynamic> body);
+
   @GET('/api/v1/auto-generate-history')
   Future<BaseResponse> getAutoGenerateHistory();
 
