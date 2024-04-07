@@ -14,6 +14,10 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
 
+  # animation
+  flutter_staggered_animations: ^1.1.1
+  lottie: ^3.1.0
+
   # wallet
   web3modal_flutter: ^3.1.2
 
@@ -101,5 +105,6 @@ flutter:
     - assets/images/profile/
     - assets/images/my_wallet/
     - assets/images/ai_features/
+    - assets/animations/
     - assets/icons/
     - assets/icons/logos/

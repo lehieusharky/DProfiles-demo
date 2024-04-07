@@ -32,6 +32,14 @@ class AppRouter extends $AppRouter {
         AutoRoute(
             path: '/write_profile_introduction',
             page: WriteProfileIntroductionRoute.page),
+        AutoRoute(
+            path: '/write_cover_letter', page: WriteCoverLetterRoute.page),
+        AutoRoute(
+            path: '/write_interview_question',
+            page: WriteInterviewQuestionRoute.page),
+        AutoRoute(
+            path: '/write_skill_knowledge',
+            page: WriteSkillKnowledgeRoute.page),
         AutoRoute(path: '/ai_character', page: AICharacterRoute.page),
         AutoRoute(path: '/my_ai_character', page: MyAICharacterRoute.page),
       ];
