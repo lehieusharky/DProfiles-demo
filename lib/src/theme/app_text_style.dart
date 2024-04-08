@@ -6,7 +6,7 @@ class AppFont {
   TextTheme fontTheme(
     BuildContext context, {
     Color? color,
-    FontWeight? weight = FontWeight.w500,
+    FontWeight? weight = FontWeight.w400,
     FontStyle? style,
     Color? backgroundColor,
     Paint? background,

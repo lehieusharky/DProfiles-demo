@@ -22,9 +22,7 @@ abstract class BlogModel with _$BlogModel {
     return BlogModel(
       id: json['id'] as int,
       title: json['attributes']['title'] as String,
-      thumbnail: json['attributes']['thumbnail']?['data']?['attributes']?['url']
-              as String? ??
-          '',
+      thumbnail: json['attributes']['thumbnail'] as String,
       summary: json['attributes']['summary'] as String,
       content: json['attributes']['content'] as String,
       createdAt: DateTime.parse(json['attributes']['createdAt'] as String),

@@ -34,7 +34,10 @@ class BlogBloc extends Bloc<BlogEvent, BlogState> {
       final result = await fetchAllBlogsUseCase.execute(++page);
       result.fold(
         (l) => refreshController.refreshFailed(),
-        (r) => emit(BlogState.loaded(r)),
+        (r) {
+          refreshController.refreshCompleted();
+          emit(BlogState.loaded(r));
+        },
       );
     });
   }
