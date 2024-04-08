@@ -23,45 +23,40 @@ class _SignInFormState extends State<SignInForm> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AuthBloc, AuthState>(
-      builder: (context, state) {
-        return Form(
-          key: _keyForm,
-          child: Column(
-            children: [
-              AuthField(
-                  autoFocus: true,
-                  controller: _emailController,
-                  title: appLocal(context).email.toUpperCase(),
-                  keyboardType: TextInputType.emailAddress,
-                  textInputAction: TextInputAction.next,
-                  validator: (email) => email.emailValidation(context),
-                  hint: appLocal(context).emailAddress),
-              Padding(
-                padding: context.padding(top: 32),
-                child: AuthField(
-                  controller: _passwordController,
-                  isPasswordField: true,
-                  title: appLocal(context).password.toUpperCase(),
-                  textInputAction: TextInputAction.done,
-                  validator: (password) => password.passwordValidation(context),
-                  hint: appLocal(context).password,
-                ),
-              ),
-              const ForgotPasswordSignIn(),
-              Padding(
-                padding: context.padding(vertical: 32),
-                child: AppFlatButton(context).elevatedButton(
-                  width: context.width,
-                  onPressed: () => _signIn(context),
-                  title: appLocal(context).login,
-                  child: state is AuthLoading ? const MyLoading() : null,
-                ),
-              ),
-            ],
+    return Form(
+      key: _keyForm,
+      child: Column(
+        children: [
+          AuthField(
+              autoFocus: true,
+              controller: _emailController,
+              title: appLocal(context).email.toUpperCase(),
+              keyboardType: TextInputType.emailAddress,
+              textInputAction: TextInputAction.next,
+              validator: (email) => email.emailValidation(context),
+              hint: appLocal(context).emailAddress),
+          Padding(
+            padding: context.padding(top: 32),
+            child: AuthField(
+              controller: _passwordController,
+              isPasswordField: true,
+              title: appLocal(context).password.toUpperCase(),
+              textInputAction: TextInputAction.done,
+              validator: (password) => password.passwordValidation(context),
+              hint: appLocal(context).password,
+            ),
           ),
-        );
-      },
+          const ForgotPasswordSignIn(),
+          Padding(
+            padding: context.padding(vertical: 32),
+            child: AppFlatButton(context).elevatedButton(
+              width: context.width,
+              onPressed: () => _signIn(context),
+              title: appLocal(context).login,
+            ),
+          ),
+        ],
+      ),
     );
   }
 

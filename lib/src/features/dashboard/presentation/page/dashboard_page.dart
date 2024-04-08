@@ -1,14 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/features/AI/ai_features/pages/ai_features_page.dart';
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/create_digital_profile_page.dart';
+import 'package:demo_dprofiles/src/core/ui/my_appbar.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_extension.dart';
-import 'package:demo_dprofiles/src/features/home/presentation/pages/home_page.dart';
-import 'package:demo_dprofiles/src/features/my_wallet/presentation/pages/my_wallet_page.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/page/profile_page.dart';
-import 'package:demo_dprofiles/src/features/setting/presentation/pages/setting_page.dart';
+import 'package:demo_dprofiles/src/features/dashboard/presentation/widgets/home_drawer.dart';
+import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
+import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 @RoutePage()
 class DashboardPage extends StatefulWidget {
@@ -19,62 +17,47 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-  late PersistentTabController _controller;
+  int _currentIndex = 0;
+
+  late PageController _pageController;
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
-    _controller = PersistentTabController(initialIndex: 0);
     super.initState();
-  }
-
-  List<Widget> _buildScreens() {
-    return [
-      const HomePage(),
-      const MyWalletPage(),
-      const AiFeaturesPage(),
-      const ProfilePage(),
-      const SettingPage(),
-    ];
+    _pageController = PageController();
   }
 
   @override
   Widget build(BuildContext context) {
-    return PersistentTabView(
-      context,
-      controller: _controller,
-      screens: _buildScreens(),
-      items: widget.items(context),
-      confineInSafeArea: true,
-      backgroundColor: Theme.of(context).colorScheme.background,
-      handleAndroidBackButtonPress: true,
-      resizeToAvoidBottomInset: true,
-      stateManagement: true,
-      navBarHeight: context.sizeHeight(65),
-      hideNavigationBarWhenKeyboardShows: true,
-      decoration: NavBarDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Theme.of(context).colorScheme.outline.withOpacity(0.3),
-            spreadRadius: 1,
-            blurRadius: 5,
-            offset: const Offset(0, 3), // changes position of shadow
-          ),
-        ],
-        borderRadius: BorderRadius.circular(context.sizeWidth(12)),
+    return Scaffold(
+      key: _scaffoldKey,
+      appBar: MyAppbar(
+        titleWidget: Assets.icons.logos.dWhitePWhite.svg(),
       ),
-      popAllScreensOnTapOfSelectedTab: true,
-      popActionScreens: PopActionScreensType.all,
-      itemAnimationProperties: const ItemAnimationProperties(
-        duration: Duration(milliseconds: 200),
-        curve: Curves.ease,
+      endDrawer: const DashboardEndDrawer(),
+      body: PageView(
+        onPageChanged: (index) => _onNavigate(index),
+        controller: _pageController,
+        children: widget.screens(),
       ),
-      hideNavigationBar: false,
-      screenTransitionAnimation: const ScreenTransitionAnimation(
-        animateTabTransition: true,
-        curve: Curves.ease,
-        duration: Duration(milliseconds: 200),
+      bottomNavigationBar: BottomNavigationBar(
+        items: widget.items(context, _currentIndex),
+        currentIndex: _currentIndex,
+        selectedItemColor: colorScheme(context).primary,
+        onTap: _onBottomNavigationBarTap,
+        unselectedItemColor: colorScheme(context).outline,
       ),
-      navBarStyle: NavBarStyle.style1,
     );
   }
+
+  void _onBottomNavigationBarTap(int index) {
+    _pageController.animateToPage(index,
+        duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+  }
+
+  void _onNavigate(int index) => setState(() {
+        _currentIndex = index;
+      });
 }

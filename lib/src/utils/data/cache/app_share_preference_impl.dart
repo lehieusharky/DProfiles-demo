@@ -1,6 +1,7 @@
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/utils/constant/string_constant.dart';
 import 'package:demo_dprofiles/src/utils/constant/support_theme.dart';
+import 'package:demo_dprofiles/src/utils/constant/supported_chat_gpt.dart';
 import 'package:demo_dprofiles/src/utils/constant/supported_language.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -13,6 +14,7 @@ const String REFRESH_TOKEN = 'refresh_token';
 const String IS_DARK_MODE = 'is_dark_mode';
 const String CURRENT_THEME = 'current_theme';
 const String CURRENT_LANGUAGE = 'current_language';
+const String CHAT_GPT_VERSION = 'chat_gpt_version';
 
 @Injectable(as: AppSharePreference)
 class AppSharePreferenceImpl implements AppSharePreference {
@@ -84,4 +86,20 @@ class AppSharePreferenceImpl implements AppSharePreference {
   @override
   Future<bool> removeAccessToken() async =>
       _prefs.remove(ACCESS_TOKEN).then((value) => value);
+
+  @override
+  SupportedChatGPT getChatGPTVersion() {
+    final chatGPTVersion = _prefs.getString(CHAT_GPT_VERSION);
+
+    return switch (chatGPTVersion) {
+      StrConts.gpt_3_5 => SupportedChatGPT.gpt_3_5,
+      StrConts.gpt_4 => SupportedChatGPT.gpt_4,
+      _ => SupportedChatGPT.gpt_3_5,
+    };
+  }
+
+  @override
+  Future<bool> setChatGPTVersion(SupportedChatGPT chatGPT) async => await _prefs
+      .setString(CHAT_GPT_VERSION, chatGPT.name)
+      .then((value) => value);
 }

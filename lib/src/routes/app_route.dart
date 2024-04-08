@@ -6,8 +6,9 @@ class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
         AutoRoute(path: '/auth_gate', page: AuthGateRoute.page),
-        AutoRoute(path: '/onboarding', page: OnboardingRoute.page),
-        AutoRoute(path: '/dashboard', initial: true, page: DashboardRoute.page),
+        AutoRoute(
+            path: '/onboarding', initial: true, page: OnboardingRoute.page),
+        AutoRoute(path: '/dashboard', page: DashboardRoute.page),
         AutoRoute(path: '/connect_wallet', page: ConnectWalletRoute.page),
         AutoRoute(path: '/sign_in', page: SignInRoute.page),
         AutoRoute(path: '/sign_up', page: SignUpRoute.page),
@@ -32,8 +33,19 @@ class AppRouter extends $AppRouter {
         AutoRoute(
             path: '/write_profile_introduction',
             page: WriteProfileIntroductionRoute.page),
-        AutoRoute(path: '/ai_character', page: AICharacterRoute.page),
+        AutoRoute(
+            path: '/write_cover_letter', page: WriteCoverLetterRoute.page),
+        AutoRoute(
+            path: '/write_interview_question',
+            page: WriteInterviewQuestionRoute.page),
+        AutoRoute(
+            path: '/write_skill_knowledge',
+            page: WriteSkillKnowledgeRoute.page),
+        AutoRoute(
+            path: '/create_ai_character', page: CreateAiCharacterRoute.page),
         AutoRoute(path: '/my_ai_character', page: MyAICharacterRoute.page),
         AutoRoute(path: '/blog_detail', page: BlogDetailRoute.page),
+        AutoRoute(
+            path: '/ai_features_history', page: AiFeaturesHistoryRoute.page),
       ];
 }

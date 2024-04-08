@@ -10,22 +10,54 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
+import 'package:lottie/lottie.dart';
+
+class $AssetsAnimationsGen {
+  const $AssetsAnimationsGen();
+
+  /// File path: assets/animations/loading.json
+  LottieGenImage get loading =>
+      const LottieGenImage('assets/animations/loading.json');
+
+  /// List of all assets
+  List<LottieGenImage> get values => [loading];
+}
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/ai_character.svg
+  SvgGenImage get aiCharacter =>
+      const SvgGenImage('assets/icons/ai_character.svg');
+
+  /// File path: assets/icons/ai_tools.svg
+  SvgGenImage get aiTools => const SvgGenImage('assets/icons/ai_tools.svg');
+
   /// File path: assets/icons/arrow_left.svg
   SvgGenImage get arrowLeft => const SvgGenImage('assets/icons/arrow_left.svg');
 
+  /// File path: assets/icons/home.svg
+  SvgGenImage get home => const SvgGenImage('assets/icons/home.svg');
+
+  /// File path: assets/icons/home_logo.png
+  AssetGenImage get homeLogo =>
+      const AssetGenImage('assets/icons/home_logo.png');
+
   $AssetsIconsLogosGen get logos => const $AssetsIconsLogosGen();
 
+  /// File path: assets/icons/profile.svg
+  SvgGenImage get profile => const SvgGenImage('assets/icons/profile.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [arrowLeft];
+  List<dynamic> get values =>
+      [aiCharacter, aiTools, arrowLeft, home, homeLogo, profile];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  $AssetsImagesAiCharacterGen get aiCharacter =>
+      const $AssetsImagesAiCharacterGen();
   $AssetsImagesAiFeaturesGen get aiFeatures =>
       const $AssetsImagesAiFeaturesGen();
   $AssetsImagesAuthGen get auth => const $AssetsImagesAuthGen();
@@ -92,6 +124,21 @@ class $AssetsIconsLogosGen {
         talentUpBlack,
         talentUpLogo
       ];
+}
+
+class $AssetsImagesAiCharacterGen {
+  const $AssetsImagesAiCharacterGen();
+
+  /// File path: assets/images/ai_character/avarta_ex.png
+  AssetGenImage get avartaEx =>
+      const AssetGenImage('assets/images/ai_character/avarta_ex.png');
+
+  /// File path: assets/images/ai_character/background_ex.png
+  AssetGenImage get backgroundEx =>
+      const AssetGenImage('assets/images/ai_character/background_ex.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [avartaEx, backgroundEx];
 }
 
 class $AssetsImagesAiFeaturesGen {
@@ -232,6 +279,7 @@ class $AssetsImagesProfileGen {
 class Assets {
   Assets._();
 
+  static const $AssetsAnimationsGen animations = $AssetsAnimationsGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
@@ -355,6 +403,65 @@ class SvgGenImage {
       colorBlendMode: colorBlendMode,
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,
+    );
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
+}
+
+class LottieGenImage {
+  const LottieGenImage(this._assetName);
+
+  final String _assetName;
+
+  LottieBuilder lottie({
+    Animation<double>? controller,
+    bool? animate,
+    FrameRate? frameRate,
+    bool? repeat,
+    bool? reverse,
+    LottieDelegates? delegates,
+    LottieOptions? options,
+    void Function(LottieComposition)? onLoaded,
+    LottieImageProviderFactory? imageProviderFactory,
+    Key? key,
+    AssetBundle? bundle,
+    Widget Function(BuildContext, Widget, LottieComposition?)? frameBuilder,
+    ImageErrorWidgetBuilder? errorBuilder,
+    double? width,
+    double? height,
+    BoxFit? fit,
+    AlignmentGeometry? alignment,
+    String? package,
+    bool? addRepaintBoundary,
+    FilterQuality? filterQuality,
+    void Function(String)? onWarning,
+  }) {
+    return Lottie.asset(
+      _assetName,
+      controller: controller,
+      animate: animate,
+      frameRate: frameRate,
+      repeat: repeat,
+      reverse: reverse,
+      delegates: delegates,
+      options: options,
+      onLoaded: onLoaded,
+      imageProviderFactory: imageProviderFactory,
+      key: key,
+      bundle: bundle,
+      frameBuilder: frameBuilder,
+      errorBuilder: errorBuilder,
+      width: width,
+      height: height,
+      fit: fit,
+      alignment: alignment,
+      package: package,
+      addRepaintBoundary: addRepaintBoundary,
+      filterQuality: filterQuality,
+      onWarning: onWarning,
     );
   }
 

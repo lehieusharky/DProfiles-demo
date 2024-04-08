@@ -8,10 +8,17 @@ import 'package:flutter/material.dart';
 extension SignInPageExt on SignInPage {
   void handleSignInState(AuthState state, BuildContext context) {
     if (state is AuthSignInSuccess) {
+      Navigator.pop(context);
+
       context.router.replace(const DashboardRoute());
     }
 
+    if (state is AuthLoading) {
+      showLoadingDialog(context);
+    }
+
     if (state is AuthError) {
+      Navigator.pop(context);
       showErrorDialog(
         context,
         title: state.title,

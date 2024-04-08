@@ -25,7 +25,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     AuthSendSignUpEmail event,
     Emitter<AuthState> emit,
   ) async {
-    emit(const AuthState.loading());
+    emit(const AuthLoading());
 
     final result = await authUseCase.sendSignUpEmail(event.email);
 
@@ -44,7 +44,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   FutureOr<void> _resendSignUpEmail(
       AuthResendSignUpEmail event, Emitter<AuthState> emit) async {
-    emit(const AuthState.loading());
+    emit(const AuthLoading());
 
     final result = await authUseCase.resendSignUpEmail(event.email);
 
@@ -63,7 +63,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   FutureOr<void> _validateSignUpCode(
       AuthValidateSignUpCode event, Emitter<AuthState> emit) async {
-    emit(const AuthState.loading());
+    emit(const AuthLoading());
     final result =
         await authUseCase.validateSignUpCode(event.email, event.code);
 
@@ -82,7 +82,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   FutureOr<void> _createAnAccount(
       AuthCreateAccount event, Emitter<AuthState> emit) async {
-    emit(const AuthState.loading());
+    emit(const AuthLoading());
     final result = await authUseCase.createAnAccount(event.model);
 
     result.fold(
@@ -101,7 +101,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   }
 
   FutureOr<void> _signIn(AuthSignIn event, Emitter<AuthState> emit) async {
-    emit(const AuthState.loading());
+    emit(const AuthLoading());
 
     final result = await authUseCase.signIn(event.email, event.password);
 

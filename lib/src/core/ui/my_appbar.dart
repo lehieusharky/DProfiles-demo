@@ -24,13 +24,14 @@ class MyAppbar extends StatefulWidget implements PreferredSizeWidget {
   State<MyAppbar> createState() => _MyAppbarState();
 
   @override
-  Size get preferredSize => Size.fromHeight(height ?? 70);
+  Size get preferredSize => Size.fromHeight(height ?? 60);
 }
 
 class _MyAppbarState extends State<MyAppbar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      automaticallyImplyLeading: false,
       leading: widget.isBack == true
           ? IconButton(
               onPressed: widget.onBack ?? () => Navigator.pop(context),

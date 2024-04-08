@@ -8,6 +8,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get about => 'About';
 
   @override
+  String get aboutYourSelf => 'About Your Self';
+
+  @override
   String get active => 'Active';
 
   @override
@@ -26,7 +29,16 @@ class AppLocalizationsVi extends AppLocalizations {
   String get aggressive => 'Aggessive';
 
   @override
+  String get aiCharacter => 'AI Character';
+
+  @override
   String get aiFeature => 'Chức năng AI';
+
+  @override
+  String get aiFeatures => 'AI Features';
+
+  @override
+  String get aiTools => 'AI Tools';
 
   @override
   String get alreadyHaveAnAccount => 'Already have an account?';
@@ -77,6 +89,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get checkYourEmailOrPasswordAgain => 'Check your email or password again';
 
   @override
+  String get clearAll => 'Clear all';
+
+  @override
   String get company => 'Company';
 
   @override
@@ -102,6 +117,9 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get conversations => 'Conversations';
+
+  @override
+  String get copy => 'Copy';
 
   @override
   String get createAccount => 'Create Account';
@@ -287,6 +305,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get nextButton => 'Next';
 
   @override
+  String get normal => 'Normal';
+
+  @override
   String get number => 'Number';
 
   @override
@@ -323,6 +344,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get profiles => 'Profiles';
 
   @override
+  String get prompt => 'Prompt';
+
+  @override
   String get requestNewCodeIn => 'Request new code in';
 
   @override
@@ -345,6 +369,9 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get sendFailed => 'Send failed';
+
+  @override
+  String get sendToAI => 'Send to AI';
 
   @override
   String get sexy => 'Sexy';
@@ -371,6 +398,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get supportive => 'Supportive';
 
   @override
+  String get tellMeAboutYourSelf => 'Tell me about your self?';
+
+  @override
   String get theme => 'Giao diện';
 
   @override
@@ -389,19 +419,34 @@ class AppLocalizationsVi extends AppLocalizations {
   String get to => 'To';
 
   @override
+  String get topic => 'Topic';
+
+  @override
   String get userNameCannotBeEmpty => 'Username cannot be empty';
 
   @override
   String get validateCodeFailed => 'Validate code failed';
 
   @override
+  String get viewAll => 'View all';
+
+  @override
   String get viewChatHistory => 'View Chat History';
+
+  @override
+  String get viewHistory => 'View History';
 
   @override
   String get violent => 'Violent';
 
   @override
+  String get writeAgain => 'Write again';
+
+  @override
   String get writeCoverLetter => 'Write Cover Letter';
+
+  @override
+  String get writeStyle => 'Write Style';
 
   @override
   String get writeYourProfileIntroduction => 'Write your profile Introduction';
@@ -420,4 +465,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get yourNationality => 'Your nationality';
+
+  @override
+  String get yourRequire => 'Your require';
 }
