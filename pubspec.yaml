@@ -18,6 +18,7 @@ dependencies:
   flutter_staggered_animations: ^1.1.1
   lottie: ^3.1.0
   animations: ^2.0.11
+  rename: ^3.0.2
 
   # wallet
   web3modal_flutter: ^3.1.2
@@ -59,7 +60,6 @@ dependencies:
   rounded_background_text: ^0.5.0
   simple_ripple_animation: ^0.0.9
 
-
   # https
   retrofit: ">=4.0.0 <5.0.0"
   dio: ^5.4.1
@@ -95,9 +95,7 @@ flutter_gen:
     rive: true
     lottie: true
 
-
 flutter_native_splash:
-
   color: "#58bd7d"
   #background_image: "assets/background.png"
 
@@ -214,7 +212,7 @@ flutter_native_splash:
   fullscreen: true
 
   info_plist_files:
-    - 'ios/Runner/Info.plist'
+    - "ios/Runner/Info.plist"
 
 flutter:
   generate: true
@@ -228,6 +226,7 @@ flutter:
     - assets/images/profile/
     - assets/images/my_wallet/
     - assets/images/ai_features/
+    - assets/images/ai_character/
     - assets/animations/
     - assets/icons/
     - assets/icons/logos/

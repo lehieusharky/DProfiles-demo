@@ -41,7 +41,7 @@ class UserInfoModel with _$UserInfoModel {
     @JsonKey(name: 'register_token') String? registerToken,
     @JsonKey(name: 'register_token_expires') String? registerTokenExpires,
     int? type,
-    @JsonKey(name: 'token_id') String? tokenId,
+    @JsonKey(name: 'token_id') @Default(0) int? tokenId,
     @JsonKey(name: 'id_card_number') String? idCardNumber,
     String? nationality,
     @JsonKey(name: 'job_open_status') int? jobOpenStatus,

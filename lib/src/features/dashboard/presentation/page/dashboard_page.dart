@@ -35,13 +35,6 @@ class _DashboardPageState extends State<DashboardPage> {
       key: _scaffoldKey,
       appBar: MyAppbar(
         titleWidget: Assets.icons.logos.dWhitePWhite.svg(),
-        // action: [
-        //   const Icon(IconsaxOutline.search_status),
-        //   Padding(
-        //     padding: context.padding(horizontal: 20),
-        //     child: const Icon(IconsaxOutline.notification),
-        //   ),
-        // ],
       ),
       endDrawer: const DashboardEndDrawer(),
       body: PageView(

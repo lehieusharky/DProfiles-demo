@@ -57,11 +57,18 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
 
             context.replaceRoute(const MyAICharacterRoute());
           }
+
+          if (state is AICharacterError) {
+            Navigator.pop(context);
+            showErrorDialog(context,
+                title: 'Generate failed', description: state.message[0]);
+          }
         },
         child: DefaultTabController(
           length: 3,
           child: MyScaffold(
             useAppBar: true,
+            canBack: true,
             titleWidget: const Text("Create your AI character "),
             body: SingleChildScrollView(
               child: Column(

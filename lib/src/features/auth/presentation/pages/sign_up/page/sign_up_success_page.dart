@@ -17,6 +17,7 @@ class SignUpSuccessPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MyScaffold(
       horizontalMargin: 32,
+      topPadding: 80,
       body: Column(
         children: [
           Padding(

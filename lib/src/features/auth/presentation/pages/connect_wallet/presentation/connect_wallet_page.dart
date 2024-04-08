@@ -20,6 +20,7 @@ class ConnectWalletPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MyScaffold(
       horizontalMargin: 16,
+      topPadding: 80,
       body: Column(
         children: [
           AuthLogo(),

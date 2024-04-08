@@ -29,6 +29,11 @@ class ListAutoGenerateHistory extends StatelessWidget {
               height: context.sizeWidth(200),
             ),
           );
+        } else if (state.isEmpty) {
+          return const Text(
+            '\n Image for empty history case\nList is empty',
+            textAlign: TextAlign.center,
+          );
         }
         return SizedBox(
           height: context.sizeHeight(500),

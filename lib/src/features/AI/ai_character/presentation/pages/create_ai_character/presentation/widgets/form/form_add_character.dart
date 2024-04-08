@@ -18,7 +18,7 @@ class FormAddCharacter extends StatelessWidget {
         Padding(
           padding: context.padding(bottom: 24),
           child: Text(
-            appLocal(context).addYourCharacter,
+            "${appLocal(context).addYourCharacter} (is developing)",
             style: AppFont()
                 .fontTheme(context, weight: FontWeight.bold)
                 .labelMedium,
@@ -37,7 +37,7 @@ class FormAddCharacter extends StatelessWidget {
           child: AppFlatButton(context).elevatedButton(
             width: context.width,
             onPressed: () => _save(context),
-            title: appLocal(context).save.toUpperCase(),
+            title: appLocal(context).nextButton.toUpperCase(),
           ),
         ),
       ],

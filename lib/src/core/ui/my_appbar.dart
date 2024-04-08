@@ -31,6 +31,7 @@ class _MyAppbarState extends State<MyAppbar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      automaticallyImplyLeading: false,
       leading: widget.isBack == true
           ? IconButton(
               onPressed: widget.onBack ?? () => Navigator.pop(context),
