@@ -5,8 +5,8 @@ import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
-class HeaderWriteProfile extends StatelessWidget {
-  const HeaderWriteProfile({super.key, required this.aiFeatureTitle});
+class HeaderAutoGenerate extends StatelessWidget {
+  const HeaderAutoGenerate({super.key, required this.aiFeatureTitle});
 
   final String aiFeatureTitle;
 

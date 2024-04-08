@@ -7,16 +7,19 @@ class AiFeaturesPage extends StatefulWidget {
   State<AiFeaturesPage> createState() => _AiFeaturesPageState();
 }
 
-class _AiFeaturesPageState extends State<AiFeaturesPage> {
+class _AiFeaturesPageState extends State<AiFeaturesPage>
+    with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocProvider(
-      create: (context) => AiFeaturesBloc(context),
+      create: (context) =>
+          injector.get<AiFeaturesBloc>()..add(const GetAutoGenerateHistory()),
       child: MyScaffold(
-        useAppBar: true,
+        // useAppBar: true,
         horizontalMargin: 20,
-        action: widget.actions(context),
-        titleWidget: Assets.icons.logos.homeLogo.svg(),
+        // action: widget.actions(context),
+        // titleWidget: Assets.icons.logos.homeLogo.svg(),
         body: SingleChildScrollView(
           child: Padding(
             padding: context.padding(bottom: 50),
@@ -24,7 +27,7 @@ class _AiFeaturesPageState extends State<AiFeaturesPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 TitleAiFeatures(),
-                AiFeatureHeader(),
+                HeaderAIFeatures(),
                 ViewHistoryTitle(),
                 ListAutoGenerateHistory(),
               ],
@@ -34,4 +37,7 @@ class _AiFeaturesPageState extends State<AiFeaturesPage> {
       ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

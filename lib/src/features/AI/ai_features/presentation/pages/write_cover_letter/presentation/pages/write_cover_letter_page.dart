@@ -1,10 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
-import 'package:demo_dprofiles/src/features/AI/write_cover_letter/presentation/widgets/cover_letter_result.dart';
-import 'package:demo_dprofiles/src/features/AI/write_cover_letter/presentation/widgets/form_write_cover_letter.dart';
-import 'package:demo_dprofiles/src/features/AI/write_cover_letter/presentation/widgets/header_cover_letter.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/write_cover_letter/presentation/widgets/cover_letter_generation.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/write_cover_letter/presentation/widgets/form_write_cover_letter.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/header_auto_gen.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/chat_gpt_selector.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,7 @@ class _WriteCoverLetterPageState extends State<WriteCoverLetterPage>
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AiFeaturesBloc(context),
+      create: (context) => injector.get<AiFeaturesBloc>(),
       child: MyScaffold(
         horizontalMargin: 20,
         useAppBar: true,
@@ -40,13 +41,15 @@ class _WriteCoverLetterPageState extends State<WriteCoverLetterPage>
         body: SingleChildScrollView(
           child: Column(
             children: [
-              const HeaderCoverLetter(),
+              HeaderAutoGenerate(
+                aiFeatureTitle: appLocal(context).writeCoverLetter,
+              ),
               ChatGPTSelector(controller: _tabController),
               Padding(
                 padding: context.padding(vertical: 16),
                 child: const FormCoverLetter(),
               ),
-              const CoverLetterResult(),
+              const CoverLetterGeneration(),
             ],
           ),
         ),

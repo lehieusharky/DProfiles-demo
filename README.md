@@ -45,3 +45,5 @@ flutter packages pub run build_runner watch
 ```bash
 fluttergen -c pubspec.yaml
 ```
+
+# usecase , repo cubit, stretch

@@ -3,10 +3,11 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
+import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:flutter/material.dart';
 
-class HomeDrawer extends StatelessWidget {
-  const HomeDrawer({Key? key}) : super(key: key);
+class DashboardEndDrawer extends StatelessWidget {
+  const DashboardEndDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -94,8 +95,11 @@ class HomeDrawer extends StatelessWidget {
                       .fontTheme(context, weight: FontWeight.bold)
                       .bodyLarge,
                 ),
-                onTap: () =>
-                    context.router.replace(const ConnectWalletRoute())),
+                onTap: () {
+                  sharePreference.removeAccessToken();
+
+                  context.router.replace(const SignInRoute());
+                }),
           ],
         ),
       ),

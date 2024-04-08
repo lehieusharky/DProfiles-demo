@@ -1,6 +1,7 @@
 import 'package:auto_route/annotations.dart';
-import 'package:demo_dprofiles/src/features/auth/presentation/pages/connect_wallet/presentation/connect_wallet_page.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/page/sign_in_page.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_page.dart';
+import 'package:demo_dprofiles/src/features/onboarding/presentation/page/onboarding_page.dart';
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:flutter/material.dart';
 
@@ -14,11 +15,10 @@ class AuthGatePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ConnectWalletPage();
     if (_isFirstTimeOpenApp == true) {
-
+      return const OnboardingPage();
     } else if (_accessToken == null) {
-      return const ConnectWalletPage();
+      return const SignInPage();
     } else {
       return const DashboardPage();
     }

@@ -76,7 +76,11 @@ extension AutoGenerateHistoryModelExt on AutoGenerateHistoryModel {
           SizedBox(
             width: context.sizeWidth(80),
             child: Text(appLocal(context).prompt,
-                style: AppFont().fontTheme(context).bodySmall),
+                style: AppFont()
+                    .fontTheme(context,
+                        weight: FontWeight.w600,
+                        color: colorScheme(context).outline)
+                    .bodySmall),
           ),
           if (result != null)
             Expanded(

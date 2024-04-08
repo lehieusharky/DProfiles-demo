@@ -141,6 +141,12 @@ abstract class AppLocalizations {
   /// **'Aggessive'**
   String get aggressive;
 
+  /// No description provided for @aiCharacter.
+  ///
+  /// In en, this message translates to:
+  /// **'AI Character'**
+  String get aiCharacter;
+
   /// No description provided for @aiFeature.
   ///
   /// In en, this message translates to:
@@ -152,6 +158,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'AI Features'**
   String get aiFeatures;
+
+  /// No description provided for @aiTools.
+  ///
+  /// In en, this message translates to:
+  /// **'AI Tools'**
+  String get aiTools;
 
   /// No description provided for @alreadyHaveAnAccount.
   ///

@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/utils/constant/support_theme.dart';
+import 'package:demo_dprofiles/src/utils/constant/supported_chat_gpt.dart';
 import 'package:demo_dprofiles/src/utils/constant/supported_language.dart';
 
 AppSharePreference get sharePreference => injector.get<AppSharePreference>();
@@ -30,4 +31,8 @@ abstract class AppSharePreference {
   String? getAccessToken();
 
   String? getRefreshToken();
+
+  Future<bool> setChatGPTVersion(SupportedChatGPT chatGPT);
+
+  SupportedChatGPT getChatGPTVersion();
 }

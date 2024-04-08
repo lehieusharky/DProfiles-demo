@@ -10,52 +10,70 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
-import 'package:shared_preferences/shared_preferences.dart' as _i29;
+import 'package:shared_preferences/shared_preferences.dart' as _i39;
 
-import '../../features/AI/ai_features/data/datasources/auto_generate_datasource.dart'
-    as _i12;
-import '../../features/AI/ai_features/data/datasources/auto_generate_datasource_impl.dart'
-    as _i13;
-import '../../features/AI/ai_features/data/repostories_impl/auto_generate_repository_impl.dart'
-    as _i15;
-import '../../features/AI/ai_features/domain/repositories/auto_generate_history_repository.dart'
-    as _i14;
-import '../../features/AI/ai_features/domain/usecases/auto_generate_usecase.dart'
-    as _i16;
-import '../../features/AI/create_digital_profile/data/datasources/create_digital_profile_datasource.dart'
-    as _i17;
-import '../../features/AI/create_digital_profile/data/datasources/create_digital_profile_datasource_impl.dart'
-    as _i18;
-import '../../features/AI/create_digital_profile/data/repositories_impl/create_digital_profile_repository_impl.dart'
-    as _i20;
-import '../../features/AI/create_digital_profile/domain/repositories/create_digital_profile_repository.dart'
-    as _i19;
-import '../../features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart'
-    as _i21;
-import '../../features/auth/data/datasources/auth_datasource.dart' as _i7;
-import '../../features/auth/data/datasources/auth_datasource_impl.dart' as _i8;
-import '../../features/auth/data/repositories_impl/auth_repository_impl.dart'
-    as _i10;
-import '../../features/auth/domain/repositories/auth_repository.dart' as _i9;
-import '../../features/auth/domain/usecases/auth_usecase.dart' as _i11;
-import '../../features/home/data/datasources/remote/auth_datasource.dart'
-    as _i5;
-import '../../features/home/data/datasources/remote/auth_datasource_impl.dart'
+import '../../features/AI/ai_character/data/datasources/ai_character_datasource.dart'
+    as _i3;
+import '../../features/AI/ai_character/data/datasources/ai_character_datasource_impl.dart'
+    as _i4;
+import '../../features/AI/ai_character/data/repositories_impl/ai_character_repository_impl.dart'
     as _i6;
-import '../../features/home/presentation/bloc/home_bloc.dart' as _i22;
-import '../../features/setting/data/datasources/setting_datasource.dart'
-    as _i24;
-import '../../features/setting/data/datasources/setting_datasource_impl.dart'
+import '../../features/AI/ai_character/domain/repostoties/ai_character_repository.dart'
+    as _i5;
+import '../../features/AI/ai_character/domain/usecase/ai_character_usecase.dart'
+    as _i7;
+import '../../features/AI/ai_features/data/datasources/auto_generate_datasource.dart'
+    as _i17;
+import '../../features/AI/ai_features/data/datasources/auto_generate_datasource_impl.dart'
+    as _i18;
+import '../../features/AI/ai_features/data/repostories_impl/auto_generate_repository_impl.dart'
+    as _i20;
+import '../../features/AI/ai_features/domain/repositories/auto_generate_history_repository.dart'
+    as _i19;
+import '../../features/AI/ai_features/domain/usecases/auto_generate_usecase.dart'
+    as _i21;
+import '../../features/AI/create_digital_profile/data/datasources/create_digital_profile_datasource.dart'
+    as _i22;
+import '../../features/AI/create_digital_profile/data/datasources/create_digital_profile_datasource_impl.dart'
+    as _i23;
+import '../../features/AI/create_digital_profile/data/repositories_impl/create_digital_profile_repository_impl.dart'
     as _i25;
-import '../../features/setting/data/repositories_impl/setting_repository_impl.dart'
-    as _i27;
-import '../../features/setting/domain/repositories/setting_repository.dart'
+import '../../features/AI/create_digital_profile/domain/repositories/create_digital_profile_repository.dart'
+    as _i24;
+import '../../features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart'
     as _i26;
-import '../../features/setting/domain/usecases/setting_usecase.dart' as _i28;
-import '../../utils/data/cache/app_share_preference.dart' as _i3;
-import '../../utils/data/cache/app_share_preference_impl.dart' as _i4;
-import '../../utils/https/dio/app_rest_client.dart' as _i23;
-import 'di.dart' as _i30;
+import '../../features/auth/data/datasources/auth_datasource.dart' as _i12;
+import '../../features/auth/data/datasources/auth_datasource_impl.dart' as _i13;
+import '../../features/auth/data/repositories_impl/auth_repository_impl.dart'
+    as _i15;
+import '../../features/auth/domain/repositories/auth_repository.dart' as _i14;
+import '../../features/auth/domain/usecases/auth_usecase.dart' as _i16;
+import '../../features/home/data/datasources/remote/auth_datasource.dart'
+    as _i10;
+import '../../features/home/data/datasources/remote/auth_datasource_impl.dart'
+    as _i11;
+import '../../features/home/presentation/bloc/home_bloc.dart' as _i27;
+import '../../features/profile/data/datasoures/profile_datasource.dart' as _i28;
+import '../../features/profile/data/datasoures/profile_datasource_impl.dart'
+    as _i29;
+import '../../features/profile/data/repositories_impl/profile_repository_impl.dart'
+    as _i31;
+import '../../features/profile/domain/repositories/profile_repository.dart'
+    as _i30;
+import '../../features/profile/domain/usecases/profile_usecase.dart' as _i32;
+import '../../features/setting/data/datasources/setting_datasource.dart'
+    as _i34;
+import '../../features/setting/data/datasources/setting_datasource_impl.dart'
+    as _i35;
+import '../../features/setting/data/repositories_impl/setting_repository_impl.dart'
+    as _i37;
+import '../../features/setting/domain/repositories/setting_repository.dart'
+    as _i36;
+import '../../features/setting/domain/usecases/setting_usecase.dart' as _i38;
+import '../../utils/data/cache/app_share_preference.dart' as _i8;
+import '../../utils/data/cache/app_share_preference_impl.dart' as _i9;
+import '../../utils/https/dio/app_rest_client.dart' as _i33;
+import 'di.dart' as _i40;
 
 // initializes the registration of main-scope dependencies inside of GetIt
 Future<_i1.GetIt> $initGetIt(
@@ -69,39 +87,49 @@ Future<_i1.GetIt> $initGetIt(
     environmentFilter,
   );
   final appModule = _$AppModule();
-  gh.factory<_i3.AppSharePreference>(() => _i4.AppSharePreferenceImpl());
-  gh.factory<_i5.AuthDataSource>(() => _i6.AuthDataSourceImpl());
-  gh.factory<_i7.AuthDataSource>(() => _i8.AuthDataSourceImpl());
-  gh.factory<_i9.AuthRepository>(
-      () => _i10.AuthRepositoryImpl(gh<_i7.AuthDataSource>()));
-  gh.factory<_i11.AuthUseCase>(
-      () => _i11.AuthUseCaseImpl(gh<_i9.AuthRepository>()));
-  gh.factory<_i12.AutoGenerateDataSource>(
-      () => _i13.AutoGenerateDataSourceImpl());
-  gh.factory<_i14.AutoGenerateRepository>(
-      () => _i15.AutoGenerateRepositoryImpl(gh<_i12.AutoGenerateDataSource>()));
-  gh.factory<_i16.AutoGenerateUseCase>(
-      () => _i16.AutoGenerateUseCaseImpl(gh<_i14.AutoGenerateRepository>()));
-  gh.factory<_i17.CreateDigitalProfileDataSource>(
-      () => _i18.CreateDigitalProfileDataSourceImpl());
-  gh.factory<_i19.CreateDigitalProfileRepository>(() =>
-      _i20.CreateDigitalProfileRepositoryImpl(
-          gh<_i17.CreateDigitalProfileDataSource>()));
-  gh.factory<_i21.CreateDigitalProfileUseCase>(() =>
-      _i21.CreateDigitalProfileUseCaseImpl(
-          gh<_i19.CreateDigitalProfileRepository>()));
-  gh.singleton<_i22.HomeBloc>(() => _i22.HomeBloc());
-  gh.factory<_i23.RestClient>(() => appModule.restClient);
-  gh.factory<_i24.SettingDataSource>(() => _i25.SettingDataSourceImpl());
-  gh.factory<_i26.SettingRepository>(
-      () => _i27.SettingRepositoryImpl(gh<_i24.SettingDataSource>()));
-  gh.factory<_i28.SettingUseCase>(
-      () => _i28.SettingUseCaseImpl(gh<_i26.SettingRepository>()));
-  await gh.factoryAsync<_i29.SharedPreferences>(
+  gh.factory<_i3.AICharacterDataSource>(() => _i4.AICharacterDataSourceImpl());
+  gh.factory<_i5.AICharacterRepository>(
+      () => _i6.AICharacterRepositoryImpl(gh<_i3.AICharacterDataSource>()));
+  gh.factory<_i7.AICharacterUseCase>(
+      () => _i7.AICharacterUseCaseImpl(gh<_i5.AICharacterRepository>()));
+  gh.factory<_i8.AppSharePreference>(() => _i9.AppSharePreferenceImpl());
+  gh.factory<_i10.AuthDataSource>(() => _i11.AuthDataSourceImpl());
+  gh.factory<_i12.AuthDataSource>(() => _i13.AuthDataSourceImpl());
+  gh.factory<_i14.AuthRepository>(
+      () => _i15.AuthRepositoryImpl(gh<_i12.AuthDataSource>()));
+  gh.factory<_i16.AuthUseCase>(
+      () => _i16.AuthUseCaseImpl(gh<_i14.AuthRepository>()));
+  gh.factory<_i17.AutoGenerateDataSource>(
+      () => _i18.AutoGenerateDataSourceImpl());
+  gh.factory<_i19.AutoGenerateRepository>(
+      () => _i20.AutoGenerateRepositoryImpl(gh<_i17.AutoGenerateDataSource>()));
+  gh.factory<_i21.AutoGenerateUseCase>(
+      () => _i21.AutoGenerateUseCaseImpl(gh<_i19.AutoGenerateRepository>()));
+  gh.factory<_i22.CreateDigitalProfileDataSource>(
+      () => _i23.CreateDigitalProfileDataSourceImpl());
+  gh.factory<_i24.CreateDigitalProfileRepository>(() =>
+      _i25.CreateDigitalProfileRepositoryImpl(
+          gh<_i22.CreateDigitalProfileDataSource>()));
+  gh.factory<_i26.CreateDigitalProfileUseCase>(() =>
+      _i26.CreateDigitalProfileUseCaseImpl(
+          gh<_i24.CreateDigitalProfileRepository>()));
+  gh.singleton<_i27.HomeBloc>(() => _i27.HomeBloc());
+  gh.factory<_i28.ProfileDataSource>(() => _i29.ProfileDataSourceImpl());
+  gh.factory<_i30.ProfileRepository>(
+      () => _i31.ProfileRepositoryImpl(gh<_i28.ProfileDataSource>()));
+  gh.factory<_i32.ProfileUseCase>(
+      () => _i32.ProfileUseCaseImpl(gh<_i30.ProfileRepository>()));
+  gh.factory<_i33.RestClient>(() => appModule.restClient);
+  gh.factory<_i34.SettingDataSource>(() => _i35.SettingDataSourceImpl());
+  gh.factory<_i36.SettingRepository>(
+      () => _i37.SettingRepositoryImpl(gh<_i34.SettingDataSource>()));
+  gh.factory<_i38.SettingUseCase>(
+      () => _i38.SettingUseCaseImpl(gh<_i36.SettingRepository>()));
+  await gh.factoryAsync<_i39.SharedPreferences>(
     () => appModule.sharedPreferences,
     preResolve: true,
   );
   return getIt;
 }
 
-class _$AppModule extends _i30.AppModule {}
+class _$AppModule extends _i40.AppModule {}

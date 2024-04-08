@@ -2,24 +2,9 @@ import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
+import 'package:demo_dprofiles/src/utils/constant/supported_chat_gpt.dart';
+import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:flutter/material.dart';
-
-enum ChatGPTTypes { gpt_3_5, gpt_4 }
-
-extension ChatGPTTypesExt on ChatGPTTypes {
-  String toTitle() {
-    return switch (this) {
-      ChatGPTTypes.gpt_3_5 => 'GPT-3.5',
-      ChatGPTTypes.gpt_4 => 'GPT-4',
-    };
-  }
-  int toIndex() {
-    return switch (this) {
-      ChatGPTTypes.gpt_3_5 => 0,
-      ChatGPTTypes.gpt_4 => 1,
-    };
-  }
-}
 
 class ChatGPTSelector extends StatelessWidget {
   final TabController controller;
@@ -45,24 +30,20 @@ class ChatGPTSelector extends StatelessWidget {
             labelStyle: AppFont()
                 .fontTheme(context, weight: FontWeight.bold)
                 .bodyMedium,
-            onTap: (index) {
-
-            },
+            onTap: (index) async => await sharePreference.setChatGPTVersion(
+                index == 0 ? SupportedChatGPT.gpt_3_5 : SupportedChatGPT.gpt_4),
             indicator: BubbleTabIndicator(
               indicatorHeight: context.sizeHeight(35),
               insets: context.padding(horizontal: 0),
               indicatorColor: colorScheme(context).background,
               tabBarIndicatorSize: TabBarIndicatorSize.tab,
             ),
-            tabs: [
-              ChatGPTTypes.gpt_3_5,
-              ChatGPTTypes.gpt_4,
-            ].map((e) => _buildTab(e)).toList()),
+            tabs: SupportedChatGPT.values.map((e) => _buildTab(e)).toList()),
       ),
     );
   }
 
-  Widget _buildTab(ChatGPTTypes type) {
+  Widget _buildTab(SupportedChatGPT type) {
     return Text(type.toTitle());
   }
 }

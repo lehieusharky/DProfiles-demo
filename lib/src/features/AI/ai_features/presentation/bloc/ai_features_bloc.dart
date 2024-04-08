@@ -5,7 +5,6 @@ import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_int
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_profile_introduction_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_skill_knowledge_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/domain/usecases/auto_generate_usecase.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -14,16 +13,15 @@ part 'ai_features_state.dart';
 part 'ai_features_bloc.freezed.dart';
 
 class AiFeaturesBloc extends Bloc<AiFeaturesEvent, AiFeaturesState> {
-  BuildContext context;
+  final AutoGenerateUseCase autoGenerateUseCase;
 
-  AiFeaturesBloc(this.context) : super(const AiFeaturesState.initial()) {
+  AiFeaturesBloc(this.autoGenerateUseCase)
+      : super(const AiFeaturesState.initial()) {
     on<GetAutoGenerateHistory>(_getAutoGenerateHistory);
     on<GenerateProfileIntroduction>(_generateProfileIntroduction);
     on<GenerateCoverLetter>(_generateCoverLetter);
     on<GenerateSkillKnowledge>(_generateSkillKnowledge);
     on<GenerateInterviewQuestion>(_generateInterviewQuestion);
-
-    add(const GetAutoGenerateHistory());
   }
 
   FutureOr<void> _getAutoGenerateHistory(
