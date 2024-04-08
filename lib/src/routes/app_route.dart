@@ -34,5 +34,6 @@ class AppRouter extends $AppRouter {
             page: WriteProfileIntroductionRoute.page),
         AutoRoute(path: '/ai_character', page: AICharacterRoute.page),
         AutoRoute(path: '/my_ai_character', page: MyAICharacterRoute.page),
+        AutoRoute(path: '/blog_detail', page: BlogDetailRoute.page),
       ];
 }

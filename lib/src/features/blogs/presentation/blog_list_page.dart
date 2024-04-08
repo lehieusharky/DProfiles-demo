@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/features/blogs/data/models/blog_model.dart';
 import 'package:demo_dprofiles/src/features/blogs/presentation/bloc/blog_bloc.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:flutter/material.dart';
@@ -59,42 +61,45 @@ class BlogListPage extends StatelessWidget {
   Widget _itemBuilder(BuildContext context, BlogModel data) {
     return Padding(
       padding: context.padding(bottom: 28),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          if (data.thumbnail.isNotEmpty) ...[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: AspectRatio(
-                aspectRatio: 16 / 9,
-                child: CachedNetworkImage(
-                  imageUrl: data.thumbnail,
-                  fit: BoxFit.cover,
+      child: InkWell(
+        onTap: () => context.router.push(BlogDetailRoute(blog: data)),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            if (data.thumbnail.isNotEmpty) ...[
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: CachedNetworkImage(
+                    imageUrl: data.thumbnail,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
+            ],
+            SizedBox(height: context.sizeHeight(8)),
+            Text(
+              data.title,
+              style: AppFont().fontTheme(context).titleSmall,
+            ),
+            SizedBox(height: context.sizeHeight(8)),
+            Text(
+              DateFormat('HH:mm dd MMM yyyy').format(data.createdAt),
+              style: AppFont()
+                  .fontTheme(context, color: MyColor.gray777E90)
+                  .bodyLarge,
+            ),
+            SizedBox(height: context.sizeHeight(20)),
+            Text(
+              data.summary,
+              style: AppFont()
+                  .fontTheme(context, color: MyColor.gray777E90)
+                  .bodyMedium,
             ),
           ],
-          SizedBox(height: context.sizeHeight(8)),
-          Text(
-            data.title,
-            style: AppFont().fontTheme(context).titleSmall,
-          ),
-          SizedBox(height: context.sizeHeight(8)),
-          Text(
-            DateFormat('HH:mm dd MMM yyyy').format(data.createdAt),
-            style: AppFont()
-                .fontTheme(context, color: MyColor.gray777E90)
-                .bodyLarge,
-          ),
-          SizedBox(height: context.sizeHeight(20)),
-          Text(
-            data.summary,
-            style: AppFont()
-                .fontTheme(context, color: MyColor.gray777E90)
-                .bodyMedium,
-          ),
-        ],
+        ),
       ),
     );
   }
