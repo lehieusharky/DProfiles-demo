@@ -11,8 +11,8 @@ class FetchAllBlogsUseCaseImpl implements FetchAllBlogsUseCase {
 
   FetchAllBlogsUseCaseImpl(this._repository);
   @override
-  Future<Either<String, List<BlogModel>>> execute() async {
-    final result = await _repository.getBlogs();
+  Future<Either<String, List<BlogModel>>> execute(int page) async {
+    final result = await _repository.getBlogs(page);
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message!),
       (r) => Right(r),

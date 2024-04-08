@@ -15,6 +15,6 @@ abstract class StrapiModule {
       "Content-Type": "application/json",
       "Authorization": "Bearer $accessToken"
     };
-    return dio;
+    return dio..interceptors.add(LogInterceptor(responseBody: true));
   }
 }

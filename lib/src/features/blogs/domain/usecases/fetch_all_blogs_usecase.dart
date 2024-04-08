@@ -6,5 +6,5 @@ FetchAllBlogsUseCase get fetchAllBlogsUseCase =>
     injector.get<FetchAllBlogsUseCase>();
 
 abstract class FetchAllBlogsUseCase {
-  Future<Either<String, List<BlogModel>>> execute();
+  Future<Either<String, List<BlogModel>>> execute(int page);
 }

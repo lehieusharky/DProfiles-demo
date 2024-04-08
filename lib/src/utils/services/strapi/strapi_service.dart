@@ -11,10 +11,16 @@ class StrapiService {
 
   StrapiService(@Named('strapi') this._dio);
 
-  Future<List<BlogModel>> getBlogs() async {
+  Future<List<BlogModel>> getBlogs(int page) async {
     try {
-      // TODO: Refactor to use common http client
-      var response = await _dio.get(dotenv.get('blogsEndpoint'));
+      var response = await _dio.get(
+        dotenv.get('blogsEndpoint'),
+        queryParameters: {
+          'populate': '*',
+          'pagination[page]': page,
+          'pagination[pageSize]': 10,
+        },
+      );
       if (response.statusCode == 200) {
         return _blogsFromJson(response.data['data']);
       } else {

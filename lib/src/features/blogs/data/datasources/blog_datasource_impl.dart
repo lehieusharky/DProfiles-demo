@@ -11,7 +11,7 @@ class BlogDataSourceImpl implements BlogDataSource {
   BlogDataSourceImpl(this.service);
 
   @override
-  Future<List<BlogModel>> getBlogs() async {
-    return service.getBlogs();
+  Future<List<BlogModel>> getBlogs(int page) async {
+    return service.getBlogs(page);
   }
 }

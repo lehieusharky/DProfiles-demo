@@ -13,9 +13,9 @@ class BlogRepositoryImpl implements BlogRepository {
   BlogRepositoryImpl(this._blogDataSource);
 
   @override
-  Future<Either<BlogFailure, List<BlogModel>>> getBlogs() async {
+  Future<Either<BlogFailure, List<BlogModel>>> getBlogs(int page) async {
     try {
-      final response = await _blogDataSource.getBlogs();
+      final response = await _blogDataSource.getBlogs(page);
       return Right(response);
     } on DioException catch (e) {
       return Left(BlogFailure(
