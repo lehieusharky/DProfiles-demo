@@ -1,68 +1,28 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:demo_dprofiles/src/core/di/di.dart';
-import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
-import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
-import 'package:demo_dprofiles/src/theme/my_color.dart';
+import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/utils/constant/ai_features_type.dart';
 import 'package:flutter/material.dart';
-import 'package:tuple/tuple.dart';
 
-import 'ai_feature_item.dart';
+import 'ai_feature_topic_item.dart';
 
-class AiFeatureHeader extends StatelessWidget {
-  const AiFeatureHeader({Key? key}) : super(key: key);
+class HeaderAIFeatures extends StatelessWidget {
+  const HeaderAIFeatures({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Tuple4(
-              colorScheme(context).primary,
-              appLocal(context).writeYourProfileIntroduction,
-              Assets.images.aiFeatures.profileIntroduction.path,
-              () => context.router.push(const WriteProfileIntroductionRoute()),
-            ),
-            Tuple4(
-              colorScheme(context).secondaryContainer,
-              appLocal(context).writeCoverLetter,
-              Assets.images.aiFeatures.letter.path,
-              () => context.router.push(const WriteCoverLetterRoute()),
-            ),
-          ]
-              .map((e) => AIFeatureItem(
-                  onPressed: e.item4,
-                  color: e.item1,
-                  title: e.item2,
-                  iconPath: e.item3))
-              .toList(),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Tuple4(
-              colorScheme(context).secondary,
-              appLocal(context).skillsKnowledgeByJobTitle,
-              Assets.images.aiFeatures.folder.path,
-              () => context.router.push(const WriteSkillKnowledgeRoute()),
-            ),
-            Tuple4(
-              MyColor.get3772FF,
-              appLocal(context).jobInterviewQA,
-              Assets.images.aiFeatures.job.path,
-              () => context.router.push(const WriteInterviewQuestionRoute()),
-            ),
-          ]
-              .map((e) => AIFeatureItem(
-                  onPressed: e.item4,
-                  color: e.item1,
-                  title: e.item2,
-                  iconPath: e.item3))
-              .toList(),
-        ),
-      ],
-    );
+    return GridView.count(
+        primary: false,
+        shrinkWrap: true,
+        childAspectRatio: 1.2,
+        crossAxisSpacing: context.sizeWidth(12),
+        mainAxisSpacing: context.sizeWidth(12),
+        crossAxisCount: 2,
+        children: AiFeatureTypes.values
+            .map((e) => AIFeatureTopicItem(
+                  color: e.getBackgroundColor(),
+                  title: e.getTitle(context),
+                  iconPath: e.getImageTopicPath(),
+                  route: e.getRoute(),
+                ))
+            .toList());
   }
 }

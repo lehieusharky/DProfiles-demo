@@ -26,13 +26,31 @@ class $AssetsAnimationsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/ai_character.svg
+  SvgGenImage get aiCharacter =>
+      const SvgGenImage('assets/icons/ai_character.svg');
+
+  /// File path: assets/icons/ai_tools.svg
+  SvgGenImage get aiTools => const SvgGenImage('assets/icons/ai_tools.svg');
+
   /// File path: assets/icons/arrow_left.svg
   SvgGenImage get arrowLeft => const SvgGenImage('assets/icons/arrow_left.svg');
 
+  /// File path: assets/icons/home.svg
+  SvgGenImage get home => const SvgGenImage('assets/icons/home.svg');
+
+  /// File path: assets/icons/home_logo.png
+  AssetGenImage get homeLogo =>
+      const AssetGenImage('assets/icons/home_logo.png');
+
   $AssetsIconsLogosGen get logos => const $AssetsIconsLogosGen();
 
+  /// File path: assets/icons/profile.svg
+  SvgGenImage get profile => const SvgGenImage('assets/icons/profile.svg');
+
   /// List of all assets
-  List<SvgGenImage> get values => [arrowLeft];
+  List<dynamic> get values =>
+      [aiCharacter, aiTools, arrowLeft, home, homeLogo, profile];
 }
 
 class $AssetsImagesGen {

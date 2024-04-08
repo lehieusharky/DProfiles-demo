@@ -1,34 +1,32 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
-import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
-import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:demo_dprofiles/src/utils/services/app_clipboard_service.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:rounded_background_text/rounded_background_text.dart';
 
-class InterviewQuestionResult extends StatefulWidget {
-  const InterviewQuestionResult({Key? key}) : super(key: key);
+class AutoGenerateTextToSpeech extends StatefulWidget {
+  final String? textGenerated;
+  final String? createAt;
+  const AutoGenerateTextToSpeech({Key? key, this.textGenerated, this.createAt})
+      : super(key: key);
 
   @override
-  State<InterviewQuestionResult> createState() =>
-      _InterviewQuestionResultState();
+  State<AutoGenerateTextToSpeech> createState() =>
+      _AutoGenerateTextToSpeechState();
 }
 
-class _InterviewQuestionResultState extends State<InterviewQuestionResult> {
+class _AutoGenerateTextToSpeechState extends State<AutoGenerateTextToSpeech> {
   late FlutterTts tts;
 
   int? currentIndex;
   int? endIndex;
   String? currentSpeech;
-  String? _introductionResult;
-  String createAt = '';
 
   @override
   void initState() {
@@ -50,28 +48,17 @@ class _InterviewQuestionResultState extends State<InterviewQuestionResult> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocSelector<AiFeaturesBloc, AiFeaturesState, String?>(
-        selector: (state) {
-      if (state is GenerateInterviewQuestionSuccess) {
-        _introductionResult = state.data;
-        createAt = DateTime.now().toString().convertToDDMMYYFormat();
-        _speak();
-      }
-
-      return _introductionResult;
-    }, builder: (context, state) {
-      return Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: (_introductionResult != null)
-            ? [
-                _buildTitle(),
-                _buildBody(),
-                _buildActionButton(),
-              ]
-            : [],
-      );
-    });
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: (widget.textGenerated != null)
+          ? [
+              _buildTitle(),
+              _buildBody(),
+              _buildActionButton(),
+            ]
+          : [],
+    );
   }
 
   Widget _buildTitle() {
@@ -80,15 +67,16 @@ class _InterviewQuestionResultState extends State<InterviewQuestionResult> {
       children: [
         Assets.images.aiFeatures.chatGpt.image(
             width: context.sizeWidth(30), height: context.sizeHeight(30)),
-        Padding(
-          padding: context.padding(left: 4),
-          child: Text(
-            createAt,
-            style: AppFont()
-                .fontTheme(context, color: colorScheme(context).outline)
-                .bodySmall,
+        if (widget.createAt != null)
+          Padding(
+            padding: context.padding(left: 4),
+            child: Text(
+              widget.createAt!,
+              style: AppFont()
+                  .fontTheme(context, color: colorScheme(context).outline)
+                  .bodySmall,
+            ),
           ),
-        ),
         const Spacer(),
         Padding(
           padding: context.padding(horizontal: 20),
@@ -107,7 +95,7 @@ class _InterviewQuestionResultState extends State<InterviewQuestionResult> {
         text: TextSpan(
           children: [
             TextSpan(
-              text: _introductionResult!.substring(0, currentIndex),
+              text: widget.textGenerated!.substring(0, currentIndex),
               style: AppFont()
                   .fontTheme(context,
                       height: context.sizeHeight(1.8),
@@ -118,7 +106,7 @@ class _InterviewQuestionResultState extends State<InterviewQuestionResult> {
             ),
             if (currentIndex != null)
               RoundedBackgroundTextSpan(
-                  textScaler: const TextScaler.linear(1.1),
+                  textScaler: const TextScaler.linear(1),
                   text: currentSpeech!.substring(currentIndex!, endIndex),
                   backgroundColor: colorScheme(context).primary,
                   style: AppFont()
@@ -147,7 +135,7 @@ class _InterviewQuestionResultState extends State<InterviewQuestionResult> {
         children: [
           AppOutlineButton(context).elevatedButton(
             onPressed: () async => await AppClipboardService()
-                .copyTextToClipboard(_introductionResult ?? ''),
+                .copyTextToClipboard(widget.textGenerated ?? ''),
             title: appLocal(context).writeAgain,
           ),
           Padding(
@@ -164,9 +152,9 @@ class _InterviewQuestionResultState extends State<InterviewQuestionResult> {
   }
 
   Future<void> _speak() async {
-    if (_introductionResult != null) {
-      if (_introductionResult!.isNotEmpty) {
-        await tts.speak(_introductionResult!);
+    if (widget.textGenerated != null) {
+      if (widget.textGenerated!.isNotEmpty) {
+        await tts.speak(widget.textGenerated!);
       }
     }
   }

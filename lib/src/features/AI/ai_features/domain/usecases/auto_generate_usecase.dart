@@ -9,8 +9,6 @@ import 'package:demo_dprofiles/src/features/auth/data/models/auth_error_response
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:injectable/injectable.dart';
 
-AutoGenerateUseCase get autoGenerateUseCase =>
-    injector.get<AutoGenerateUseCase>();
 
 abstract class AutoGenerateUseCase {
   Future<Either<String, BaseResponse>> getAutoGenerateHistory();

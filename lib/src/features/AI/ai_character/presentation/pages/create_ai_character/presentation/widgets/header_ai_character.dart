@@ -1,6 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
-import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets/navigation_step_create_a_i_character.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
@@ -8,10 +7,12 @@ import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
-class HeaderCreateAICharacter extends StatelessWidget {
+import 'navigation_step_create_a_i_character.dart';
+
+class HeaderAICharacter extends StatelessWidget {
   final TabController controller;
 
-  const HeaderCreateAICharacter({super.key, required this.controller});
+  const HeaderAICharacter({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class HeaderCreateAICharacter extends StatelessWidget {
       child: Column(
         children: [
           _buildTitle(context),
-          NavigationStepCreateAICharacter(controller: controller)
+          NavigationStepCreateAICharacter(controller: controller),
         ],
       ),
     );
@@ -36,8 +37,11 @@ class HeaderCreateAICharacter extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(IconsaxOutline.arrow_left,
-              color: MyColor.getWhite, size: 25),
+          InkWell(
+            onTap: () => Navigator.pop(context),
+            child: const Icon(IconsaxOutline.arrow_left,
+                color: MyColor.getWhite, size: 25),
+          ),
           Row(
             children: [
               Expanded(

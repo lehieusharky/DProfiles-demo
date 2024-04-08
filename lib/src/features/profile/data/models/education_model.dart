@@ -1,10 +1,10 @@
-import 'package:demo_dprofiles/src/utils/data/models/details_user.dart';
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'add_user_education_model.freezed.dart';
+import 'details_user.dart';
 
-part 'add_user_education_model.g.dart';
+part 'education_model.freezed.dart';
+
+part 'education_model.g.dart';
 
 @freezed
 class EducationModel with _$EducationModel implements DetailOfUser {

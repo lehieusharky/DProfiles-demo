@@ -115,4 +115,15 @@ abstract class RestClient {
 
   @PUT('/api/v1/dProfile/update')
   Future<BaseResponse> updateDigitalProfile();
+
+  // ai character
+
+  @POST('/generate-character-bot/')
+  Future<BaseResponse> generateCharacterBot(@Body() Map<String, dynamic> body);
+
+  @GET('/api/v1/character-chatbot')
+  Future<BaseResponse> getListCharacterBot();
+
+  @POST('/load-character-bot/')
+  Future<BaseResponse> loadCharacterBot(@Body() Map<String, dynamic> body);
 }

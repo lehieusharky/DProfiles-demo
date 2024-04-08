@@ -58,7 +58,7 @@ class MyScaffold extends StatelessWidget {
           : null,
       body: Padding(
         padding: context.padding(
-            top: useAppBar == true ? 0 : topPadding ?? 60,
+            top: useAppBar == true ? 0 : topPadding ?? 10,
             bottom: 20,
             horizontal: horizontalMargin ?? 0),
         child: Stack(

@@ -29,10 +29,16 @@ class AppLocalizationsVi extends AppLocalizations {
   String get aggressive => 'Aggessive';
 
   @override
+  String get aiCharacter => 'AI Character';
+
+  @override
   String get aiFeature => 'Chức năng AI';
 
   @override
   String get aiFeatures => 'AI Features';
+
+  @override
+  String get aiTools => 'AI Tools';
 
   @override
   String get alreadyHaveAnAccount => 'Already have an account?';

@@ -10,7 +10,6 @@ import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentati
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/form/form_experience.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/header_create_digital.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/path_direction.dart';
-import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -57,8 +56,6 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
               description: state.message.first,
             );
           }
-
-
         },
         builder: (context, state) => DefaultTabController(
           length: 3,
@@ -72,8 +69,7 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
                   HeaderCreateDigitalProfile(controller: _tabController),
                   Padding(
                     padding: context.padding(vertical: 32, horizontal: 20),
-                    child: SizedBox(
-                      height: context.height * 1.3,
+                    child: IntrinsicHeight(
                       child: TabBarView(
                         controller: _tabController,
                         physics: const NeverScrollableScrollPhysics(),

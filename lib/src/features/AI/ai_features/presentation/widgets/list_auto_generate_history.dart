@@ -12,7 +12,6 @@ class ListAutoGenerateHistory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double _w = MediaQuery.of(context).size.width;
     return BlocSelector<AiFeaturesBloc, AiFeaturesState,
         List<AutoGenerateHistoryModel>?>(
       selector: (state) {

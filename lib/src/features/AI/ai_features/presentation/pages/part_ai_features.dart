@@ -1,5 +1,7 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/domain/usecases/auto_generate_usecase.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/ext_ai_features_page.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/ai_feature_header.dart';
