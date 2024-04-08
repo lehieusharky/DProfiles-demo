@@ -56,6 +56,8 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  $AssetsImagesAiCharacterGen get aiCharacter =>
+      const $AssetsImagesAiCharacterGen();
   $AssetsImagesAiFeaturesGen get aiFeatures =>
       const $AssetsImagesAiFeaturesGen();
   $AssetsImagesAuthGen get auth => const $AssetsImagesAuthGen();
@@ -122,6 +124,21 @@ class $AssetsIconsLogosGen {
         talentUpBlack,
         talentUpLogo
       ];
+}
+
+class $AssetsImagesAiCharacterGen {
+  const $AssetsImagesAiCharacterGen();
+
+  /// File path: assets/images/ai_character/avarta_ex.png
+  AssetGenImage get avartaEx =>
+      const AssetGenImage('assets/images/ai_character/avarta_ex.png');
+
+  /// File path: assets/images/ai_character/background_ex.png
+  AssetGenImage get backgroundEx =>
+      const AssetGenImage('assets/images/ai_character/background_ex.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [avartaEx, backgroundEx];
 }
 
 class $AssetsImagesAiFeaturesGen {

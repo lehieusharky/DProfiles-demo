@@ -845,7 +845,7 @@ class _RestClient implements RestClient {
     )
             .compose(
               _dio.options,
-              '/generate-character-bot/',
+              'https://char.dev.dprofiles.xyz/generate-character-bot/',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -900,7 +900,7 @@ class _RestClient implements RestClient {
     )
             .compose(
               _dio.options,
-              '/load-character-bot/',
+              '/load-character-bot',
               queryParameters: queryParameters,
               data: _data,
             )

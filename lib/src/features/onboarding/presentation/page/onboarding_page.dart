@@ -75,7 +75,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       _pageController.nextPage(
           duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
     } else {
-      context.router.push(const ConnectWalletRoute());
+      context.router.replace(const ConnectWalletRoute());
     }
   }
 

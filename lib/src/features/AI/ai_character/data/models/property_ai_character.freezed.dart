@@ -343,21 +343,21 @@ class _$PropertyAICharacterModelImpl implements _PropertyAICharacterModel {
       {@JsonKey(name: 'session_id') this.sessionId = 0,
       this.summary,
       this.name,
-      this.avatar,
-      this.inspiring = 0,
+      this.avatar = "",
+      this.inspiring = 2,
       this.smart = 0,
       this.friendly = 0,
       this.supportive = 0,
-      this.helpful = 0,
+      this.helpful = 4,
       this.humorous = 0,
-      this.passive = 0,
+      this.passive = 1,
       this.aggressive = 0,
-      this.violent = 0,
+      this.violent = 1,
       this.formal = 0,
       this.spiritual = 0,
       this.chatty = 0,
       this.energetic = 0,
-      this.sexy = 0,
+      this.sexy = 3,
       this.flirty = 0});
 
   factory _$PropertyAICharacterModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -371,6 +371,7 @@ class _$PropertyAICharacterModelImpl implements _PropertyAICharacterModel {
   @override
   final String? name;
   @override
+  @JsonKey()
   final String? avatar;
   @override
   @JsonKey()

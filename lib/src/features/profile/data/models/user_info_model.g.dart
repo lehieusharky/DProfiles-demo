@@ -42,7 +42,7 @@ _$UserInfoModelImpl _$$UserInfoModelImplFromJson(Map<String, dynamic> json) =>
       registerToken: json['register_token'] as String?,
       registerTokenExpires: json['register_token_expires'] as String?,
       type: json['type'] as int?,
-      tokenId: json['token_id'] as String?,
+      tokenId: json['token_id'] as int? ?? 0,
       idCardNumber: json['id_card_number'] as String?,
       nationality: json['nationality'] as String?,
       jobOpenStatus: json['job_open_status'] as int?,

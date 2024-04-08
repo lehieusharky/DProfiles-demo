@@ -16,10 +16,7 @@ class _AiFeaturesPageState extends State<AiFeaturesPage>
       create: (context) =>
           injector.get<AiFeaturesBloc>()..add(const GetAutoGenerateHistory()),
       child: MyScaffold(
-        // useAppBar: true,
         horizontalMargin: 20,
-        // action: widget.actions(context),
-        // titleWidget: Assets.icons.logos.homeLogo.svg(),
         body: SingleChildScrollView(
           child: Padding(
             padding: context.padding(bottom: 50),

@@ -14,7 +14,7 @@ class AICharacterDataSourceImpl implements AICharacterDataSource {
       final baseResponse =
           await MyHttp.rl().generateCharacterBot(data.toJson());
       return baseResponse;
-    } on DioException {
+    } on DioException catch (e) {
       rethrow;
     }
   }

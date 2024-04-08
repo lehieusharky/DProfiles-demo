@@ -3,6 +3,7 @@ import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai
 import 'package:demo_dprofiles/src/features/AI/ai_features/domain/usecases/auto_generate_usecase.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 class BlocDI {
@@ -16,6 +17,10 @@ class BlocDI {
     injector.registerFactory<AiCharacterBloc>(
       () => AiCharacterBloc(
           injector.get<AICharacterUseCase>(), injector.get<ProfileUseCase>()),
+    );
+
+    injector.registerFactory<ProfileBloc>(
+      () => ProfileBloc(injector.get<ProfileUseCase>()),
     );
   }
 }

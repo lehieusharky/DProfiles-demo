@@ -12,10 +12,10 @@ extension SignInPageExt on SignInPage {
 
       context.router.replace(const DashboardRoute());
     }
-    //
-    // if (state is AuthLoading) {
-    //   showLoadingDialog(context);
-    // }
+
+    if (state is AuthLoading) {
+      showLoadingDialog(context);
+    }
 
     if (state is AuthError) {
       Navigator.pop(context);

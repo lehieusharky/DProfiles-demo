@@ -10,9 +10,11 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i25;
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/pages/create_ai_character_page.dart'
-    as _i4;
+    as _i5;
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/pages/my_ai_character_page.dart'
-    as _i11;
+    as _i12;
+import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/ai_features_history_page.dart'
+    as _i2;
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/write_cover_letter/presentation/pages/write_cover_letter_page.dart'
     as _i21;
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/write_interview_question/presentation/pages/write_interview_question_page.dart'
@@ -22,41 +24,39 @@ import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/wr
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/write_skill_knowledge/presentation/pages/write_skill_knowledge.dart'
     as _i24;
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/create_digital_profile_page.dart'
-    as _i6;
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/create_dprofile_success_page.dart'
     as _i7;
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/create_dprofile_success_page.dart'
+    as _i8;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/auth_gate/auth_gate_page.dart'
-    as _i2;
-import 'package:demo_dprofiles/src/features/auth/presentation/pages/connect_wallet/presentation/connect_wallet_page.dart'
     as _i3;
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/connect_wallet/presentation/connect_wallet_page.dart'
+    as _i4;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/pages/forgot_password_page.dart'
-    as _i10;
+    as _i11;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/pages/update_new_password_page.dart'
     as _i18;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/pages/verify_email_forgot_password.dart'
     as _i19;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/page/sign_in_page.dart'
-    as _i14;
-import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/create_an_account_page.dart'
-    as _i5;
-import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/sign_up_page.dart'
     as _i15;
-import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/sign_up_success_page.dart'
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/create_an_account_page.dart'
+    as _i6;
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/sign_up_page.dart'
     as _i16;
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/sign_up_success_page.dart'
+    as _i17;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/verify_sign_up_page.dart'
     as _i20;
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_page.dart'
-    as _i8;
+    as _i9;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/about_page.dart'
     as _i1;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/edit_profile_page.dart'
-    as _i9;
+    as _i10;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/open_to_work_page.dart'
-    as _i13;
+    as _i14;
 import 'package:demo_dprofiles/src/features/onboarding/presentation/page/onboarding_page.dart'
-    as _i12;
-import 'package:demo_dprofiles/src/features/splash/presentation/pages/splash_screen.dart'
-    as _i17;
+    as _i13;
 import 'package:flutter/material.dart' as _i26;
 
 abstract class $AppRouter extends _i25.RootStackRouter {
@@ -70,31 +70,37 @@ abstract class $AppRouter extends _i25.RootStackRouter {
         child: const _i1.AboutPage(),
       );
     },
+    AiFeaturesHistoryRoute.name: (routeData) {
+      return _i25.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i2.AiFeaturesHistoryPage(),
+      );
+    },
     AuthGateRoute.name: (routeData) {
       final args = routeData.argsAs<AuthGateRouteArgs>(
           orElse: () => const AuthGateRouteArgs());
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i2.AuthGatePage(key: args.key),
+        child: _i3.AuthGatePage(key: args.key),
       );
     },
     ConnectWalletRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.ConnectWalletPage(),
+        child: const _i4.ConnectWalletPage(),
       );
     },
     CreateAiCharacterRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i4.CreateAiCharacterPage(),
+        child: const _i5.CreateAiCharacterPage(),
       );
     },
     CreateAnAccountRoute.name: (routeData) {
       final args = routeData.argsAs<CreateAnAccountRouteArgs>();
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i5.CreateAnAccountPage(
+        child: _i6.CreateAnAccountPage(
           key: args.key,
           email: args.email,
         ),
@@ -103,73 +109,67 @@ abstract class $AppRouter extends _i25.RootStackRouter {
     CreateDigitalProfileRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.CreateDigitalProfilePage(),
+        child: const _i7.CreateDigitalProfilePage(),
       );
     },
     CreateDigitalProfileSuccessRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i7.CreateDigitalProfileSuccessPage(),
+        child: const _i8.CreateDigitalProfileSuccessPage(),
       );
     },
     DashboardRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i8.DashboardPage(),
+        child: const _i9.DashboardPage(),
       );
     },
     EditProfileRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i9.EditProfilePage(),
+        child: const _i10.EditProfilePage(),
       );
     },
     ForgotPasswordRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i10.ForgotPasswordPage(),
+        child: const _i11.ForgotPasswordPage(),
       );
     },
     MyAICharacterRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i11.MyAICharacterPage(),
+        child: const _i12.MyAICharacterPage(),
       );
     },
     OnboardingRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i12.OnboardingPage(),
+        child: const _i13.OnboardingPage(),
       );
     },
     OpenToWorkRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i13.OpenToWorkPage(),
+        child: const _i14.OpenToWorkPage(),
       );
     },
     SignInRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i14.SignInPage(),
+        child: const _i15.SignInPage(),
       );
     },
     SignUpRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i15.SignUpPage(),
+        child: const _i16.SignUpPage(),
       );
     },
     SignUpSuccessRoute.name: (routeData) {
       return _i25.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i16.SignUpSuccessPage(),
-      );
-    },
-    SplashRoute.name: (routeData) {
-      return _i25.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i17.SplashPage(),
+        child: const _i17.SignUpSuccessPage(),
       );
     },
     UpdateNewPasswordRoute.name: (routeData) {
@@ -236,7 +236,21 @@ class AboutRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.AuthGatePage]
+/// [_i2.AiFeaturesHistoryPage]
+class AiFeaturesHistoryRoute extends _i25.PageRouteInfo<void> {
+  const AiFeaturesHistoryRoute({List<_i25.PageRouteInfo>? children})
+      : super(
+          AiFeaturesHistoryRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AiFeaturesHistoryRoute';
+
+  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i3.AuthGatePage]
 class AuthGateRoute extends _i25.PageRouteInfo<AuthGateRouteArgs> {
   AuthGateRoute({
     _i26.Key? key,
@@ -265,7 +279,7 @@ class AuthGateRouteArgs {
 }
 
 /// generated route for
-/// [_i3.ConnectWalletPage]
+/// [_i4.ConnectWalletPage]
 class ConnectWalletRoute extends _i25.PageRouteInfo<void> {
   const ConnectWalletRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -279,7 +293,7 @@ class ConnectWalletRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i4.CreateAiCharacterPage]
+/// [_i5.CreateAiCharacterPage]
 class CreateAiCharacterRoute extends _i25.PageRouteInfo<void> {
   const CreateAiCharacterRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -293,7 +307,7 @@ class CreateAiCharacterRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i5.CreateAnAccountPage]
+/// [_i6.CreateAnAccountPage]
 class CreateAnAccountRoute
     extends _i25.PageRouteInfo<CreateAnAccountRouteArgs> {
   CreateAnAccountRoute({
@@ -332,7 +346,7 @@ class CreateAnAccountRouteArgs {
 }
 
 /// generated route for
-/// [_i6.CreateDigitalProfilePage]
+/// [_i7.CreateDigitalProfilePage]
 class CreateDigitalProfileRoute extends _i25.PageRouteInfo<void> {
   const CreateDigitalProfileRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -346,7 +360,7 @@ class CreateDigitalProfileRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i7.CreateDigitalProfileSuccessPage]
+/// [_i8.CreateDigitalProfileSuccessPage]
 class CreateDigitalProfileSuccessRoute extends _i25.PageRouteInfo<void> {
   const CreateDigitalProfileSuccessRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -360,7 +374,7 @@ class CreateDigitalProfileSuccessRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i8.DashboardPage]
+/// [_i9.DashboardPage]
 class DashboardRoute extends _i25.PageRouteInfo<void> {
   const DashboardRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -374,7 +388,7 @@ class DashboardRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i9.EditProfilePage]
+/// [_i10.EditProfilePage]
 class EditProfileRoute extends _i25.PageRouteInfo<void> {
   const EditProfileRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -388,7 +402,7 @@ class EditProfileRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i10.ForgotPasswordPage]
+/// [_i11.ForgotPasswordPage]
 class ForgotPasswordRoute extends _i25.PageRouteInfo<void> {
   const ForgotPasswordRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -402,7 +416,7 @@ class ForgotPasswordRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i11.MyAICharacterPage]
+/// [_i12.MyAICharacterPage]
 class MyAICharacterRoute extends _i25.PageRouteInfo<void> {
   const MyAICharacterRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -416,7 +430,7 @@ class MyAICharacterRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i12.OnboardingPage]
+/// [_i13.OnboardingPage]
 class OnboardingRoute extends _i25.PageRouteInfo<void> {
   const OnboardingRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -430,7 +444,7 @@ class OnboardingRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i13.OpenToWorkPage]
+/// [_i14.OpenToWorkPage]
 class OpenToWorkRoute extends _i25.PageRouteInfo<void> {
   const OpenToWorkRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -444,7 +458,7 @@ class OpenToWorkRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i14.SignInPage]
+/// [_i15.SignInPage]
 class SignInRoute extends _i25.PageRouteInfo<void> {
   const SignInRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -458,7 +472,7 @@ class SignInRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i15.SignUpPage]
+/// [_i16.SignUpPage]
 class SignUpRoute extends _i25.PageRouteInfo<void> {
   const SignUpRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -472,7 +486,7 @@ class SignUpRoute extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i16.SignUpSuccessPage]
+/// [_i17.SignUpSuccessPage]
 class SignUpSuccessRoute extends _i25.PageRouteInfo<void> {
   const SignUpSuccessRoute({List<_i25.PageRouteInfo>? children})
       : super(
@@ -481,20 +495,6 @@ class SignUpSuccessRoute extends _i25.PageRouteInfo<void> {
         );
 
   static const String name = 'SignUpSuccessRoute';
-
-  static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i17.SplashPage]
-class SplashRoute extends _i25.PageRouteInfo<void> {
-  const SplashRoute({List<_i25.PageRouteInfo>? children})
-      : super(
-          SplashRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'SplashRoute';
 
   static const _i25.PageInfo<void> page = _i25.PageInfo<void>(name);
 }

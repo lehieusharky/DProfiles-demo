@@ -79,7 +79,7 @@ mixin _$UserInfoModel {
   String? get registerTokenExpires => throw _privateConstructorUsedError;
   int? get type => throw _privateConstructorUsedError;
   @JsonKey(name: 'token_id')
-  String? get tokenId => throw _privateConstructorUsedError;
+  int? get tokenId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id_card_number')
   String? get idCardNumber => throw _privateConstructorUsedError;
   String? get nationality => throw _privateConstructorUsedError;
@@ -150,7 +150,7 @@ abstract class $UserInfoModelCopyWith<$Res> {
       @JsonKey(name: 'register_token') String? registerToken,
       @JsonKey(name: 'register_token_expires') String? registerTokenExpires,
       int? type,
-      @JsonKey(name: 'token_id') String? tokenId,
+      @JsonKey(name: 'token_id') int? tokenId,
       @JsonKey(name: 'id_card_number') String? idCardNumber,
       String? nationality,
       @JsonKey(name: 'job_open_status') int? jobOpenStatus,
@@ -366,7 +366,7 @@ class _$UserInfoModelCopyWithImpl<$Res, $Val extends UserInfoModel>
       tokenId: freezed == tokenId
           ? _value.tokenId
           : tokenId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       idCardNumber: freezed == idCardNumber
           ? _value.idCardNumber
           : idCardNumber // ignore: cast_nullable_to_non_nullable
@@ -462,7 +462,7 @@ abstract class _$$UserInfoModelImplCopyWith<$Res>
       @JsonKey(name: 'register_token') String? registerToken,
       @JsonKey(name: 'register_token_expires') String? registerTokenExpires,
       int? type,
-      @JsonKey(name: 'token_id') String? tokenId,
+      @JsonKey(name: 'token_id') int? tokenId,
       @JsonKey(name: 'id_card_number') String? idCardNumber,
       String? nationality,
       @JsonKey(name: 'job_open_status') int? jobOpenStatus,
@@ -676,7 +676,7 @@ class __$$UserInfoModelImplCopyWithImpl<$Res>
       tokenId: freezed == tokenId
           ? _value.tokenId
           : tokenId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       idCardNumber: freezed == idCardNumber
           ? _value.idCardNumber
           : idCardNumber // ignore: cast_nullable_to_non_nullable
@@ -767,7 +767,7 @@ class _$UserInfoModelImpl implements _UserInfoModel {
       @JsonKey(name: 'register_token') this.registerToken,
       @JsonKey(name: 'register_token_expires') this.registerTokenExpires,
       this.type,
-      @JsonKey(name: 'token_id') this.tokenId,
+      @JsonKey(name: 'token_id') this.tokenId = 0,
       @JsonKey(name: 'id_card_number') this.idCardNumber,
       this.nationality,
       @JsonKey(name: 'job_open_status') this.jobOpenStatus,
@@ -879,7 +879,7 @@ class _$UserInfoModelImpl implements _UserInfoModel {
   final int? type;
   @override
   @JsonKey(name: 'token_id')
-  final String? tokenId;
+  final int? tokenId;
   @override
   @JsonKey(name: 'id_card_number')
   final String? idCardNumber;
@@ -1114,7 +1114,7 @@ abstract class _UserInfoModel implements UserInfoModel {
       @JsonKey(name: 'register_token_expires')
       final String? registerTokenExpires,
       final int? type,
-      @JsonKey(name: 'token_id') final String? tokenId,
+      @JsonKey(name: 'token_id') final int? tokenId,
       @JsonKey(name: 'id_card_number') final String? idCardNumber,
       final String? nationality,
       @JsonKey(name: 'job_open_status') final int? jobOpenStatus,
@@ -1225,7 +1225,7 @@ abstract class _UserInfoModel implements UserInfoModel {
   int? get type;
   @override
   @JsonKey(name: 'token_id')
-  String? get tokenId;
+  int? get tokenId;
   @override
   @JsonKey(name: 'id_card_number')
   String? get idCardNumber;

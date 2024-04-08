@@ -71,16 +71,16 @@ Future<void> showLoadingDialog(BuildContext context) async {
                 width: context.sizeWidth(200),
                 height: context.sizeWidth(200),
               ),
-              Padding(
-                padding: context.padding(horizontal: 10, bottom: 5),
-                child: AppFlatButton(context).elevatedButton(
-                  backgroundColor: colorScheme(context).error,
-                  title: 'Cancel',
-                  titleColor: MyColor.getWhite,
-                  onPressed: () => Navigator.pop(context),
-                  width: context.sizeWidth(200),
-                ),
-              ),
+              // Padding(
+              //   padding: context.padding(horizontal: 10, bottom: 5),
+              //   child: AppFlatButton(context).elevatedButton(
+              //     backgroundColor: colorScheme(context).error,
+              //     title: 'Cancel',
+              //     titleColor: MyColor.getWhite,
+              //     onPressed: () => Navigator.pop(context),
+              //     width: context.sizeWidth(200),
+              //   ),
+              // ),
             ],
           ),
         ),
