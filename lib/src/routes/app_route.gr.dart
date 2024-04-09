@@ -9,9 +9,11 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i26;
+import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/create_character_bot_model.dart'
+    as _i29;
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/pages/create_ai_character_page.dart'
     as _i6;
-import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/pages/my_ai_character_page.dart'
+import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/presentation/pages/my_ai_character_page.dart'
     as _i13;
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/ai_features_history_page.dart'
     as _i2;
@@ -151,9 +153,13 @@ abstract class $AppRouter extends _i26.RootStackRouter {
       );
     },
     MyAICharacterRoute.name: (routeData) {
+      final args = routeData.argsAs<MyAICharacterRouteArgs>();
       return _i26.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i13.MyAICharacterPage(),
+        child: _i13.MyAICharacterPage(
+          key: args.key,
+          createdCharacterBot: args.createdCharacterBot,
+        ),
       );
     },
     OnboardingRoute.name: (routeData) {
@@ -469,16 +475,40 @@ class ForgotPasswordRoute extends _i26.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i13.MyAICharacterPage]
-class MyAICharacterRoute extends _i26.PageRouteInfo<void> {
-  const MyAICharacterRoute({List<_i26.PageRouteInfo>? children})
-      : super(
+class MyAICharacterRoute extends _i26.PageRouteInfo<MyAICharacterRouteArgs> {
+  MyAICharacterRoute({
+    _i27.Key? key,
+    required _i29.CreatedCharacterBotModel createdCharacterBot,
+    List<_i26.PageRouteInfo>? children,
+  }) : super(
           MyAICharacterRoute.name,
+          args: MyAICharacterRouteArgs(
+            key: key,
+            createdCharacterBot: createdCharacterBot,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'MyAICharacterRoute';
 
-  static const _i26.PageInfo<void> page = _i26.PageInfo<void>(name);
+  static const _i26.PageInfo<MyAICharacterRouteArgs> page =
+      _i26.PageInfo<MyAICharacterRouteArgs>(name);
+}
+
+class MyAICharacterRouteArgs {
+  const MyAICharacterRouteArgs({
+    this.key,
+    required this.createdCharacterBot,
+  });
+
+  final _i27.Key? key;
+
+  final _i29.CreatedCharacterBotModel createdCharacterBot;
+
+  @override
+  String toString() {
+    return 'MyAICharacterRouteArgs{key: $key, createdCharacterBot: $createdCharacterBot}';
+  }
 }
 
 /// generated route for

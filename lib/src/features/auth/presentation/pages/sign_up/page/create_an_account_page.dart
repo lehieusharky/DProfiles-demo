@@ -54,7 +54,6 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
         builder: (context, state) {
           return MyScaffold(
             horizontalMargin: 32,
-            topPadding: 80,
             body: SingleChildScrollView(
               child: Column(
                 children: [

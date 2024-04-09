@@ -20,7 +20,7 @@ BaseResponse _$BaseResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BaseResponse {
-  String get message => throw _privateConstructorUsedError;
+  String? get message => throw _privateConstructorUsedError;
   bool? get success => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
   int? get statusCode => throw _privateConstructorUsedError;
@@ -39,7 +39,7 @@ abstract class $BaseResponseCopyWith<$Res> {
       _$BaseResponseCopyWithImpl<$Res, BaseResponse>;
   @useResult
   $Res call(
-      {String message,
+      {String? message,
       bool? success,
       String? error,
       int? statusCode,
@@ -59,17 +59,17 @@ class _$BaseResponseCopyWithImpl<$Res, $Val extends BaseResponse>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = null,
+    Object? message = freezed,
     Object? success = freezed,
     Object? error = freezed,
     Object? statusCode = freezed,
     Object? data = freezed,
   }) {
     return _then(_value.copyWith(
-      message: null == message
+      message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       success: freezed == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
@@ -99,7 +99,7 @@ abstract class _$$BaseResponseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String message,
+      {String? message,
       bool? success,
       String? error,
       int? statusCode,
@@ -117,17 +117,17 @@ class __$$BaseResponseImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? message = null,
+    Object? message = freezed,
     Object? success = freezed,
     Object? error = freezed,
     Object? statusCode = freezed,
     Object? data = freezed,
   }) {
     return _then(_$BaseResponseImpl(
-      message: null == message
+      message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       success: freezed == success
           ? _value.success
           : success // ignore: cast_nullable_to_non_nullable
@@ -152,7 +152,7 @@ class __$$BaseResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$BaseResponseImpl implements _BaseResponse {
   const _$BaseResponseImpl(
-      {required this.message,
+      {this.message = "",
       this.success = false,
       this.error = null,
       this.statusCode = 200,
@@ -162,7 +162,8 @@ class _$BaseResponseImpl implements _BaseResponse {
       _$$BaseResponseImplFromJson(json);
 
   @override
-  final String message;
+  @JsonKey()
+  final String? message;
   @override
   @JsonKey()
   final bool? success;
@@ -214,7 +215,7 @@ class _$BaseResponseImpl implements _BaseResponse {
 
 abstract class _BaseResponse implements BaseResponse {
   const factory _BaseResponse(
-      {required final String message,
+      {final String? message,
       final bool? success,
       final String? error,
       final int? statusCode,
@@ -224,7 +225,7 @@ abstract class _BaseResponse implements BaseResponse {
       _$BaseResponseImpl.fromJson;
 
   @override
-  String get message;
+  String? get message;
   @override
   bool? get success;
   @override

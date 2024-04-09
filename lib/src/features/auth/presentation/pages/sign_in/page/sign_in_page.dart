@@ -31,7 +31,6 @@ class _SignInPageState extends State<SignInPage> {
         },
         child: MyScaffold(
           horizontalMargin: 32,
-          topPadding: 80,
           body: SingleChildScrollView(
             child: Column(
               children: [

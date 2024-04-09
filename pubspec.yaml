@@ -59,6 +59,7 @@ dependencies:
   flutter_tts: ^4.0.2
   rounded_background_text: ^0.5.0
   simple_ripple_animation: ^0.0.9
+  dotted_border: ^2.1.0
 
   # https
   retrofit: ">=4.0.0 <5.0.0"
@@ -97,6 +98,7 @@ flutter_gen:
     flare_flutter: true
     rive: true
     lottie: true
+
 
 flutter_native_splash:
   color: "#58bd7d"

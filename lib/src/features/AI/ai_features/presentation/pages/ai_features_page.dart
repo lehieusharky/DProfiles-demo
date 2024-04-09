@@ -17,6 +17,7 @@ class _AiFeaturesPageState extends State<AiFeaturesPage>
           injector.get<AiFeaturesBloc>()..add(const GetAutoGenerateHistory()),
       child: MyScaffold(
         horizontalMargin: 20,
+        topPadding: 10,
         body: SingleChildScrollView(
           child: Padding(
             padding: context.padding(bottom: 50),

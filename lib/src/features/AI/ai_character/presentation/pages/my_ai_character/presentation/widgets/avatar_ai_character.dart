@@ -5,12 +5,21 @@ import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
-import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
 class AvatarAICharacter extends StatefulWidget {
-  const AvatarAICharacter({super.key});
+  final String name;
+  final String shortDescription;
+  final String longDescription;
+  final String greeting;
+
+  const AvatarAICharacter(
+      {super.key,
+      required this.name,
+      required this.shortDescription,
+      required this.longDescription,
+      required this.greeting});
 
   @override
   State<AvatarAICharacter> createState() => _AvatarAICharacterState();
@@ -53,7 +62,7 @@ class _AvatarAICharacterState extends State<AvatarAICharacter> {
               Padding(
                 padding: context.padding(top: 14, bottom: 28),
                 child: Text(
-                  "Hey there, I'm Phong! Ready to tackle some backend challenges together?",
+                  widget.longDescription,
                   style: AppFont().fontTheme(context, height: 1.5).bodyMedium,
                   textAlign: TextAlign.center,
                 ),
@@ -108,7 +117,7 @@ class _AvatarAICharacterState extends State<AvatarAICharacter> {
                       Padding(
                         padding: context.padding(top: 8),
                         child: Text(
-                          'As Phong, I revel in backend development despite not being "classically" smart. I often grapple with simple problems and get lost in basic logic.',
+                          widget.shortDescription,
                           style: AppFont()
                               .fontTheme(context, height: 1.7)
                               .bodySmall,
@@ -164,14 +173,14 @@ class _AvatarAICharacterState extends State<AvatarAICharacter> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          'Stephen Tran',
+          widget.name,
           style:
               AppFont().fontTheme(context, weight: FontWeight.bold).labelMedium,
         ),
         Padding(
           padding: context.padding(top: 4),
           child: Text(
-            '@stephan_tranAI',
+            "@${widget.name}",
             style: AppFont()
                 .fontTheme(context, color: colorScheme(context).outline)
                 .bodySmall,

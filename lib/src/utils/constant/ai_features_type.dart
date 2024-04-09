@@ -36,10 +36,10 @@ extension AiFeatureTypesExt on AiFeatureTypes {
 
   Color getBackgroundColor() {
     return switch (this) {
-      AiFeatureTypes.profileIntroduction => MyColor.get58BD7D,
+      AiFeatureTypes.profileIntroduction => MyColor.green58BD7D,
       AiFeatureTypes.coverLetter => MyColor.get777E90,
       AiFeatureTypes.skillKnowledge => MyColor.get23262F,
-      AiFeatureTypes.interviewQuestion => MyColor.get3772FF,
+      AiFeatureTypes.interviewQuestion => MyColor.blue3772FF,
     };
   }
 

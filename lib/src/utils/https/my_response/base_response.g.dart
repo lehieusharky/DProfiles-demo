@@ -8,7 +8,7 @@ part of 'base_response.dart';
 
 _$BaseResponseImpl _$$BaseResponseImplFromJson(Map<String, dynamic> json) =>
     _$BaseResponseImpl(
-      message: json['message'] as String,
+      message: json['message'] as String? ?? "",
       success: json['success'] as bool? ?? false,
       error: json['error'] as String? ?? null,
       statusCode: json['statusCode'] as int? ?? 200,
