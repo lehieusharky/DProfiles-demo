@@ -21,12 +21,11 @@ CreatedCharacterBotModel _$CreatedCharacterBotModelFromJson(
 
 /// @nodoc
 mixin _$CreatedCharacterBotModel {
-  String? get name => throw _privateConstructorUsedError;
-  @JsonKey(name: 'short_description')
-  String? get shortDescription => throw _privateConstructorUsedError;
-  @JsonKey(name: 'long_description')
-  String? get longDescription => throw _privateConstructorUsedError;
-  String? get greeting => throw _privateConstructorUsedError;
+  @JsonKey(name: 'character_definition')
+  CharacterDefinition? get characterDefinition =>
+      throw _privateConstructorUsedError;
+  @JsonKey(name: 'chat_bot_id')
+  int? get chatBotId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,10 +40,11 @@ abstract class $CreatedCharacterBotModelCopyWith<$Res> {
       _$CreatedCharacterBotModelCopyWithImpl<$Res, CreatedCharacterBotModel>;
   @useResult
   $Res call(
-      {String? name,
-      @JsonKey(name: 'short_description') String? shortDescription,
-      @JsonKey(name: 'long_description') String? longDescription,
-      String? greeting});
+      {@JsonKey(name: 'character_definition')
+      CharacterDefinition? characterDefinition,
+      @JsonKey(name: 'chat_bot_id') int? chatBotId});
+
+  $CharacterDefinitionCopyWith<$Res>? get characterDefinition;
 }
 
 /// @nodoc
@@ -52,6 +52,201 @@ class _$CreatedCharacterBotModelCopyWithImpl<$Res,
         $Val extends CreatedCharacterBotModel>
     implements $CreatedCharacterBotModelCopyWith<$Res> {
   _$CreatedCharacterBotModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? characterDefinition = freezed,
+    Object? chatBotId = freezed,
+  }) {
+    return _then(_value.copyWith(
+      characterDefinition: freezed == characterDefinition
+          ? _value.characterDefinition
+          : characterDefinition // ignore: cast_nullable_to_non_nullable
+              as CharacterDefinition?,
+      chatBotId: freezed == chatBotId
+          ? _value.chatBotId
+          : chatBotId // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CharacterDefinitionCopyWith<$Res>? get characterDefinition {
+    if (_value.characterDefinition == null) {
+      return null;
+    }
+
+    return $CharacterDefinitionCopyWith<$Res>(_value.characterDefinition!,
+        (value) {
+      return _then(_value.copyWith(characterDefinition: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$CreateCharacterBotModelImplCopyWith<$Res>
+    implements $CreatedCharacterBotModelCopyWith<$Res> {
+  factory _$$CreateCharacterBotModelImplCopyWith(
+          _$CreateCharacterBotModelImpl value,
+          $Res Function(_$CreateCharacterBotModelImpl) then) =
+      __$$CreateCharacterBotModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'character_definition')
+      CharacterDefinition? characterDefinition,
+      @JsonKey(name: 'chat_bot_id') int? chatBotId});
+
+  @override
+  $CharacterDefinitionCopyWith<$Res>? get characterDefinition;
+}
+
+/// @nodoc
+class __$$CreateCharacterBotModelImplCopyWithImpl<$Res>
+    extends _$CreatedCharacterBotModelCopyWithImpl<$Res,
+        _$CreateCharacterBotModelImpl>
+    implements _$$CreateCharacterBotModelImplCopyWith<$Res> {
+  __$$CreateCharacterBotModelImplCopyWithImpl(
+      _$CreateCharacterBotModelImpl _value,
+      $Res Function(_$CreateCharacterBotModelImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? characterDefinition = freezed,
+    Object? chatBotId = freezed,
+  }) {
+    return _then(_$CreateCharacterBotModelImpl(
+      characterDefinition: freezed == characterDefinition
+          ? _value.characterDefinition
+          : characterDefinition // ignore: cast_nullable_to_non_nullable
+              as CharacterDefinition?,
+      chatBotId: freezed == chatBotId
+          ? _value.chatBotId
+          : chatBotId // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$CreateCharacterBotModelImpl implements _CreateCharacterBotModel {
+  const _$CreateCharacterBotModelImpl(
+      {@JsonKey(name: 'character_definition') this.characterDefinition,
+      @JsonKey(name: 'chat_bot_id') this.chatBotId = 0});
+
+  factory _$CreateCharacterBotModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CreateCharacterBotModelImplFromJson(json);
+
+  @override
+  @JsonKey(name: 'character_definition')
+  final CharacterDefinition? characterDefinition;
+  @override
+  @JsonKey(name: 'chat_bot_id')
+  final int? chatBotId;
+
+  @override
+  String toString() {
+    return 'CreatedCharacterBotModel(characterDefinition: $characterDefinition, chatBotId: $chatBotId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CreateCharacterBotModelImpl &&
+            (identical(other.characterDefinition, characterDefinition) ||
+                other.characterDefinition == characterDefinition) &&
+            (identical(other.chatBotId, chatBotId) ||
+                other.chatBotId == chatBotId));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, characterDefinition, chatBotId);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CreateCharacterBotModelImplCopyWith<_$CreateCharacterBotModelImpl>
+      get copyWith => __$$CreateCharacterBotModelImplCopyWithImpl<
+          _$CreateCharacterBotModelImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CreateCharacterBotModelImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _CreateCharacterBotModel implements CreatedCharacterBotModel {
+  const factory _CreateCharacterBotModel(
+          {@JsonKey(name: 'character_definition')
+          final CharacterDefinition? characterDefinition,
+          @JsonKey(name: 'chat_bot_id') final int? chatBotId}) =
+      _$CreateCharacterBotModelImpl;
+
+  factory _CreateCharacterBotModel.fromJson(Map<String, dynamic> json) =
+      _$CreateCharacterBotModelImpl.fromJson;
+
+  @override
+  @JsonKey(name: 'character_definition')
+  CharacterDefinition? get characterDefinition;
+  @override
+  @JsonKey(name: 'chat_bot_id')
+  int? get chatBotId;
+  @override
+  @JsonKey(ignore: true)
+  _$$CreateCharacterBotModelImplCopyWith<_$CreateCharacterBotModelImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+CharacterDefinition _$CharacterDefinitionFromJson(Map<String, dynamic> json) {
+  return _CharacterDefinition.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CharacterDefinition {
+  String? get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'short_description')
+  String? get shortDescription => throw _privateConstructorUsedError;
+  @JsonKey(name: 'long_description')
+  String? get longDescription => throw _privateConstructorUsedError;
+  String? get greeting => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CharacterDefinitionCopyWith<CharacterDefinition> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CharacterDefinitionCopyWith<$Res> {
+  factory $CharacterDefinitionCopyWith(
+          CharacterDefinition value, $Res Function(CharacterDefinition) then) =
+      _$CharacterDefinitionCopyWithImpl<$Res, CharacterDefinition>;
+  @useResult
+  $Res call(
+      {String? name,
+      @JsonKey(name: 'short_description') String? shortDescription,
+      @JsonKey(name: 'long_description') String? longDescription,
+      String? greeting});
+}
+
+/// @nodoc
+class _$CharacterDefinitionCopyWithImpl<$Res, $Val extends CharacterDefinition>
+    implements $CharacterDefinitionCopyWith<$Res> {
+  _$CharacterDefinitionCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -88,12 +283,11 @@ class _$CreatedCharacterBotModelCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$CreateCharacterBotModelImplCopyWith<$Res>
-    implements $CreatedCharacterBotModelCopyWith<$Res> {
-  factory _$$CreateCharacterBotModelImplCopyWith(
-          _$CreateCharacterBotModelImpl value,
-          $Res Function(_$CreateCharacterBotModelImpl) then) =
-      __$$CreateCharacterBotModelImplCopyWithImpl<$Res>;
+abstract class _$$CharacterDefinitionImplCopyWith<$Res>
+    implements $CharacterDefinitionCopyWith<$Res> {
+  factory _$$CharacterDefinitionImplCopyWith(_$CharacterDefinitionImpl value,
+          $Res Function(_$CharacterDefinitionImpl) then) =
+      __$$CharacterDefinitionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -104,13 +298,11 @@ abstract class _$$CreateCharacterBotModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CreateCharacterBotModelImplCopyWithImpl<$Res>
-    extends _$CreatedCharacterBotModelCopyWithImpl<$Res,
-        _$CreateCharacterBotModelImpl>
-    implements _$$CreateCharacterBotModelImplCopyWith<$Res> {
-  __$$CreateCharacterBotModelImplCopyWithImpl(
-      _$CreateCharacterBotModelImpl _value,
-      $Res Function(_$CreateCharacterBotModelImpl) _then)
+class __$$CharacterDefinitionImplCopyWithImpl<$Res>
+    extends _$CharacterDefinitionCopyWithImpl<$Res, _$CharacterDefinitionImpl>
+    implements _$$CharacterDefinitionImplCopyWith<$Res> {
+  __$$CharacterDefinitionImplCopyWithImpl(_$CharacterDefinitionImpl _value,
+      $Res Function(_$CharacterDefinitionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -121,7 +313,7 @@ class __$$CreateCharacterBotModelImplCopyWithImpl<$Res>
     Object? longDescription = freezed,
     Object? greeting = freezed,
   }) {
-    return _then(_$CreateCharacterBotModelImpl(
+    return _then(_$CharacterDefinitionImpl(
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -144,15 +336,15 @@ class __$$CreateCharacterBotModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$CreateCharacterBotModelImpl implements _CreateCharacterBotModel {
-  const _$CreateCharacterBotModelImpl(
+class _$CharacterDefinitionImpl implements _CharacterDefinition {
+  const _$CharacterDefinitionImpl(
       {this.name,
-      @JsonKey(name: 'short_description') this.shortDescription,
-      @JsonKey(name: 'long_description') this.longDescription,
-      this.greeting});
+      @JsonKey(name: 'short_description') this.shortDescription = "",
+      @JsonKey(name: 'long_description') this.longDescription = "",
+      this.greeting = ""});
 
-  factory _$CreateCharacterBotModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CreateCharacterBotModelImplFromJson(json);
+  factory _$CharacterDefinitionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CharacterDefinitionImplFromJson(json);
 
   @override
   final String? name;
@@ -163,18 +355,19 @@ class _$CreateCharacterBotModelImpl implements _CreateCharacterBotModel {
   @JsonKey(name: 'long_description')
   final String? longDescription;
   @override
+  @JsonKey()
   final String? greeting;
 
   @override
   String toString() {
-    return 'CreatedCharacterBotModel(name: $name, shortDescription: $shortDescription, longDescription: $longDescription, greeting: $greeting)';
+    return 'CharacterDefinition(name: $name, shortDescription: $shortDescription, longDescription: $longDescription, greeting: $greeting)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CreateCharacterBotModelImpl &&
+            other is _$CharacterDefinitionImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.shortDescription, shortDescription) ||
                 other.shortDescription == shortDescription) &&
@@ -192,27 +385,27 @@ class _$CreateCharacterBotModelImpl implements _CreateCharacterBotModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreateCharacterBotModelImplCopyWith<_$CreateCharacterBotModelImpl>
-      get copyWith => __$$CreateCharacterBotModelImplCopyWithImpl<
-          _$CreateCharacterBotModelImpl>(this, _$identity);
+  _$$CharacterDefinitionImplCopyWith<_$CharacterDefinitionImpl> get copyWith =>
+      __$$CharacterDefinitionImplCopyWithImpl<_$CharacterDefinitionImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CreateCharacterBotModelImplToJson(
+    return _$$CharacterDefinitionImplToJson(
       this,
     );
   }
 }
 
-abstract class _CreateCharacterBotModel implements CreatedCharacterBotModel {
-  const factory _CreateCharacterBotModel(
+abstract class _CharacterDefinition implements CharacterDefinition {
+  const factory _CharacterDefinition(
       {final String? name,
       @JsonKey(name: 'short_description') final String? shortDescription,
       @JsonKey(name: 'long_description') final String? longDescription,
-      final String? greeting}) = _$CreateCharacterBotModelImpl;
+      final String? greeting}) = _$CharacterDefinitionImpl;
 
-  factory _CreateCharacterBotModel.fromJson(Map<String, dynamic> json) =
-      _$CreateCharacterBotModelImpl.fromJson;
+  factory _CharacterDefinition.fromJson(Map<String, dynamic> json) =
+      _$CharacterDefinitionImpl.fromJson;
 
   @override
   String? get name;
@@ -226,6 +419,6 @@ abstract class _CreateCharacterBotModel implements CreatedCharacterBotModel {
   String? get greeting;
   @override
   @JsonKey(ignore: true)
-  _$$CreateCharacterBotModelImplCopyWith<_$CreateCharacterBotModelImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$CharacterDefinitionImplCopyWith<_$CharacterDefinitionImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

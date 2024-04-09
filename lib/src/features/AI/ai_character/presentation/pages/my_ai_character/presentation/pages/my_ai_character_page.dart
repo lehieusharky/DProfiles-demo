@@ -51,12 +51,16 @@ class _MyAICharacterPageState extends State<MyAICharacterPage>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AvatarAICharacter(
-              name: widget.createdCharacterBot.name ?? '',
-              shortDescription:
-                  widget.createdCharacterBot.longDescription ?? "",
-              longDescription:
-                  widget.createdCharacterBot.shortDescription ?? '',
-              greeting: widget.createdCharacterBot.greeting ?? '',
+              name: widget.createdCharacterBot.characterDefinition!.name ?? '',
+              shortDescription: widget.createdCharacterBot.characterDefinition!
+                      .longDescription ??
+                  "",
+              longDescription: widget.createdCharacterBot.characterDefinition!
+                      .shortDescription ??
+                  '',
+              greeting:
+                  widget.createdCharacterBot.characterDefinition!.greeting ??
+                      '',
             ),
             Padding(
               padding: context.padding(top: 36, horizontal: 20),

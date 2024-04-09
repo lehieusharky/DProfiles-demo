@@ -7,6 +7,7 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:ficonsax/ficonsax.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -36,11 +37,14 @@ class HeaderProfile extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    state.username ?? '',
-                    style: AppFont()
-                        .fontTheme(context, weight: FontWeight.w600)
-                        .titleSmall,
+                  Expanded(
+                    child: Text(
+                      state.username ?? '',
+                      overflow: TextOverflow.ellipsis,
+                      style: AppFont()
+                          .fontTheme(context, weight: FontWeight.w600)
+                          .titleSmall,
+                    ),
                   ),
                   IconButton(
                       onPressed: () =>

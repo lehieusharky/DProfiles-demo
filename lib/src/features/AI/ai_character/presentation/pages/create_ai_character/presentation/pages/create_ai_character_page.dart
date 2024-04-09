@@ -75,7 +75,7 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
           child: MyScaffold(
             useAppBar: true,
             canBack: true,
-            titleWidget: const Text("Create your AI character "),
+            titleWidget: const Text("Create your AI character"),
             body: SingleChildScrollView(
               child: Column(
                 children: [

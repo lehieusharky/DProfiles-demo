@@ -111,6 +111,9 @@ abstract class RestClient {
   @GET('/api/v1/auto-generate-history')
   Future<BaseResponse> getAutoGenerateHistory();
 
+  @GET('/api/v1/auto-generate-history/{id}')
+  Future<BaseResponse> getAutoGenerateHistoryItem(@Path() String id);
+
   // create digital profile
 
   @POST('/api/v1/dProfile/mint')

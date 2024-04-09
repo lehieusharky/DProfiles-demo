@@ -10,7 +10,6 @@ import 'package:demo_dprofiles/src/features/profile/presentation/widgets/profile
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

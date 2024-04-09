@@ -34,63 +34,67 @@ class _FormProfilesState extends State<FormProfiles> {
 
     return BlocBuilder<AiCharacterBloc, AiCharacterState>(
       builder: (context, state) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: context.padding(bottom: 24),
-              child: Text(
-                appLocal(context).addYourProfile,
-                style: AppFont()
-                    .fontTheme(context, weight: FontWeight.bold)
-                    .labelMedium,
+        return SizedBox(
+          height: 200,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Padding(
+                padding: context.padding(bottom: 24),
+                child: Text(
+                  appLocal(context).addYourProfile,
+                  style: AppFont()
+                      .fontTheme(context, weight: FontWeight.bold)
+                      .labelMedium,
+                ),
               ),
-            ),
-            Padding(
-              padding: context.padding(bottom: 15),
-              child: Text(
-                appLocal(context).education,
-                style: AppFont()
-                    .fontTheme(context, weight: FontWeight.bold)
-                    .bodyLarge,
+              Padding(
+                padding: context.padding(bottom: 15),
+                child: Text(
+                  appLocal(context).education,
+                  style: AppFont()
+                      .fontTheme(context, weight: FontWeight.bold)
+                      .bodyLarge,
+                ),
               ),
-            ),
-            Column(
-              children: educations.map((e) => e.toWidget(context)).toList(),
-            ),
-            Padding(
-              padding: context.padding(bottom: 15, top: 27),
-              child: Text(
-                appLocal(context).certificates,
-                style: AppFont()
-                    .fontTheme(context, weight: FontWeight.bold)
-                    .bodyLarge,
+              Column(
+                children: educations.map((e) => e.toWidget(context)).toList(),
               ),
-            ),
-            Column(
-              children: certificates.map((e) => e.toWidget(context)).toList(),
-            ),
-            Padding(
-              padding: context.padding(bottom: 15, top: 27),
-              child: Text(
-                appLocal(context).experiences,
-                style: AppFont()
-                    .fontTheme(context, weight: FontWeight.bold)
-                    .bodyLarge,
+              Padding(
+                padding: context.padding(bottom: 15, top: 27),
+                child: Text(
+                  appLocal(context).certificates,
+                  style: AppFont()
+                      .fontTheme(context, weight: FontWeight.bold)
+                      .bodyLarge,
+                ),
               ),
-            ),
-            Column(
-              children: experiences.map((e) => e.toWidget(context)).toList(),
-            ),
-            Padding(
-              padding: context.padding(vertical: 32),
-              child: AppFlatButton(context).elevatedButton(
-                width: context.width,
-                onPressed: () => _continue(context),
-                title: appLocal(context).continueButton.toUpperCase(),
+              Column(
+                children: certificates.map((e) => e.toWidget(context)).toList(),
               ),
-            ),
-          ],
+              Padding(
+                padding: context.padding(bottom: 15, top: 27),
+                child: Text(
+                  appLocal(context).experiences,
+                  style: AppFont()
+                      .fontTheme(context, weight: FontWeight.bold)
+                      .bodyLarge,
+                ),
+              ),
+              Column(
+                children: experiences.map((e) => e.toWidget(context)).toList(),
+              ),
+              Padding(
+                padding: context.padding(vertical: 32),
+                child: AppFlatButton(context).elevatedButton(
+                  width: context.width,
+                  onPressed: () => _continue(context),
+                  title: appLocal(context).continueButton.toUpperCase(),
+                ),
+              ),
+            ],
+          ),
         );
       },
     );
