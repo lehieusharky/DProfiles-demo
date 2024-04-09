@@ -8,6 +8,8 @@ abstract class AICharacterRepository {
       PropertyAICharacterModel data);
 
   Future<Either<AICharacterFailure, BaseResponse>> getListCharacterBot();
+
+  Future<Either<AICharacterFailure, BaseResponse>> getListPopularCharacterBot();
 }
 
 class AICharacterFailure extends AppFailure {

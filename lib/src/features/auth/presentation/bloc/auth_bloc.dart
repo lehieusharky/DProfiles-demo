@@ -106,7 +106,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     final result = await authUseCase.signIn(event.email, event.password);
 
     result.fold(
-      (l) => emit(AuthError(message: l, title: appLocal(context).loginFailed)),
+      (l) => emit(AuthError(
+          message: ' The username or password you entered is incorrect!',
+          title: appLocal(context).loginFailed)),
       (r) => emit(const AuthSignInSuccess()),
     );
   }

@@ -5,7 +5,6 @@ import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboar
 import 'package:demo_dprofiles/src/features/dashboard/presentation/widgets/home_drawer.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
-import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()

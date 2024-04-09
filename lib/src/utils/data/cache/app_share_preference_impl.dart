@@ -62,8 +62,14 @@ class AppSharePreferenceImpl implements AppSharePreference {
           .then((value) => value ? language : SupportedLanguage.system);
 
   @override
-  bool isFirstTimeOpenApp() =>
-      _prefs.getBool(FIRST_TIME_OPEN_APP) == null ? true : false;
+  bool isFirstTimeOpenApp() {
+    final result = _prefs.getBool(FIRST_TIME_OPEN_APP);
+    if (result == null) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   @override
   Future<bool> setFirstTimeOpenApp() async =>

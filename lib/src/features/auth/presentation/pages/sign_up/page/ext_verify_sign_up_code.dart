@@ -9,15 +9,22 @@ import 'package:flutter/material.dart';
 extension VefifySignUpCodePageExt on VerifySignUpPage {
   void handleVerifySignUpState(AuthState state, BuildContext context) {
     if (state is AuthResendSignUpEmailSuccess) {
+      Navigator.pop(context);
       showErrorDialog(context,
           title: 'Code was resend', description: 'Check your email again!');
     }
 
     if (state is AuthValidateSignUpCodeSuccess) {
+      Navigator.pop(context);
       context.router.replace(CreateAnAccountRoute(email: email));
     }
 
+    if (state is AuthLoading) {
+      showLoadingDialog(context);
+    }
+
     if (state is AuthValidateSignUpCodeFailed) {
+      Navigator.pop(context);
       showErrorDialog(
         context,
         title: appLocal(context).validateCodeFailed,
@@ -26,6 +33,7 @@ extension VefifySignUpCodePageExt on VerifySignUpPage {
     }
 
     if (state is AuthError) {
+      Navigator.pop(context);
       showErrorDialog(
         context,
         title: state.title,

@@ -34,6 +34,9 @@ abstract class RestClient {
   @PUT('/api/v1/user')
   Future<BaseResponse> updateUserInfo(@Body() Map<String, dynamic> body);
 
+  @DELETE('/api/v1/user')
+  Future<BaseResponse> deleteUser();
+
   // education
 
   @POST('/api/v1/user-education')
@@ -108,6 +111,9 @@ abstract class RestClient {
   @GET('/api/v1/auto-generate-history')
   Future<BaseResponse> getAutoGenerateHistory();
 
+  @GET('/api/v1/auto-generate-history/{id}')
+  Future<BaseResponse> getAutoGenerateHistoryItem(@Path() String id);
+
   // create digital profile
 
   @POST('/api/v1/dProfile/mint')
@@ -126,4 +132,7 @@ abstract class RestClient {
 
   @POST('/load-character-bot')
   Future<BaseResponse> loadCharacterBot(@Body() Map<String, dynamic> body);
+
+  @GET('/api/v1/character-chatbot/popular')
+  Future<BaseResponse> getListPopularCharacterBot();
 }

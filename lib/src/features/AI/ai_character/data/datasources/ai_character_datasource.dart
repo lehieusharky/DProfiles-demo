@@ -5,4 +5,6 @@ abstract class AICharacterDataSource {
   Future<BaseResponse> generateCharacterBot(PropertyAICharacterModel data);
 
   Future<BaseResponse> getListCharacterBot();
+
+  Future<BaseResponse> getListPopularCharacterBot();
 }

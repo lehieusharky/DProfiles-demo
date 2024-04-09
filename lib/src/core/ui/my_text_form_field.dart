@@ -86,6 +86,14 @@ class MyTextFormField extends StatefulWidget {
 class _MyTextFormFieldState extends State<MyTextFormField> {
   bool _obscuteText = false;
 
+  @override
+  initState() {
+    super.initState();
+    if (widget.isPasswordField == true) {
+      _obscuteText = true;
+    }
+  }
+
   _onChangeVisibility() {
     setState(() {
       _obscuteText = !_obscuteText;

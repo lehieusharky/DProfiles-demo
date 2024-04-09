@@ -10,6 +10,8 @@ abstract class AICharacterUseCase {
       PropertyAICharacterModel data);
 
   Future<Either<String, BaseResponse>> getListCharacterBot();
+
+  Future<Either<String, BaseResponse>> getListPopularCharacterBot();
 }
 
 @Injectable(as: AICharacterUseCase)
@@ -31,6 +33,15 @@ class AICharacterUseCaseImpl implements AICharacterUseCase {
   @override
   Future<Either<String, BaseResponse>> getListCharacterBot() async {
     final result = await _aiCharacterRepository.getListCharacterBot();
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> getListPopularCharacterBot() async {
+    final result = await _aiCharacterRepository.getListPopularCharacterBot();
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),

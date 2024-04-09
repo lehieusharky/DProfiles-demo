@@ -1,7 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
-
-import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
@@ -22,35 +20,30 @@ class _SignUpFormState extends State<SignUpForm> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AuthBloc, AuthState>(
-      builder: (context, state) {
-        return Form(
-          key: _keyForm,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              AuthField(
-                autoFocus: true,
-                controller: _emailController,
-                title: appLocal(context).email.toUpperCase(),
-                hint: appLocal(context).emailAddress,
-                keyboardType: TextInputType.emailAddress,
-                validator: (email) => email.emailValidation(context),
-              ),
-              Padding(
-                padding: context.padding(vertical: 32),
-                child: AppFlatButton(context).elevatedButton(
-                  width: context.width,
-                  onPressed: () => _signUp(context),
-                  title: appLocal(context).nextButton,
-                  child: state is AuthLoading ? const MyLoading() : null,
-                ),
-              ),
-            ],
+    return Form(
+      key: _keyForm,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          AuthField(
+            autoFocus: true,
+            controller: _emailController,
+            title: appLocal(context).email.toUpperCase(),
+            hint: appLocal(context).emailAddress,
+            keyboardType: TextInputType.emailAddress,
+            validator: (email) => email.emailValidation(context),
           ),
-        );
-      },
+          Padding(
+            padding: context.padding(vertical: 32),
+            child: AppFlatButton(context).elevatedButton(
+              width: context.width,
+              onPressed: () => _signUp(context),
+              title: appLocal(context).nextButton,
+            ),
+          ),
+        ],
+      ),
     );
   }
 

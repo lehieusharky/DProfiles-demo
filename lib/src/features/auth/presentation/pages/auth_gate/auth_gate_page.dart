@@ -1,4 +1,5 @@
 import 'package:auto_route/annotations.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/pages/local_auth/presentation/pages/local_auth_page.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/page/sign_in_page.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_page.dart';
 import 'package:demo_dprofiles/src/features/onboarding/presentation/page/onboarding_page.dart';
@@ -7,7 +8,7 @@ import 'package:flutter/material.dart';
 
 @RoutePage()
 class AuthGatePage extends StatefulWidget {
-  AuthGatePage({Key? key}) : super(key: key);
+  const AuthGatePage({Key? key}) : super(key: key);
 
   @override
   State<AuthGatePage> createState() => _AuthGatePageState();
@@ -20,12 +21,12 @@ class _AuthGatePageState extends State<AuthGatePage> {
 
   @override
   Widget build(BuildContext context) {
-    if (_accessToken != null) {
-      return const SignInPage();
+    if (_isFirstTimeOpenApp == true) {
+      return const OnboardingPage();
     } else if (_accessToken == null) {
       return const SignInPage();
     } else {
-      return const DashboardPage();
+      return const LocalAuthPage();
     }
   }
 

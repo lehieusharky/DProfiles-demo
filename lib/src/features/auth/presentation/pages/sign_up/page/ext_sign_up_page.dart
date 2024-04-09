@@ -8,10 +8,16 @@ import 'package:flutter/material.dart';
 extension SignUpPageExt on SignUpPage {
   void handleSignUpState(AuthState state, BuildContext context) {
     if (state is AuthSendSignUpEmailSuccess) {
+      Navigator.pop(context);
       context.router.push(VerifySignUpRoute(email: state.email));
     }
 
+    if (state is AuthLoading) {
+      showLoadingDialog(context);
+    }
+
     if (state is AuthError) {
+      Navigator.pop(context);
       showErrorDialog(
         context,
         title: state.title,

@@ -68,5 +68,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+	<key>NSFaceIDUsageDescription</key>
+    <string>dProfiles app need biometrics authentication</string>
 </dict>
 </plist>

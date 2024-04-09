@@ -22,10 +22,12 @@ dependencies:
 
   # wallet
   web3modal_flutter: ^3.1.2
+  url_launcher: ^6.2.5
 
   # support
   uuid: ^4.3.3
   flutter_native_splash: any
+  local_auth: ^2.2.0
 
   # route
   auto_route: ^7.9.0
