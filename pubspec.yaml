@@ -27,6 +27,7 @@ dependencies:
   # support
   uuid: ^4.3.3
   flutter_native_splash: any
+  local_auth: ^2.2.0
 
   # route
   auto_route: ^7.9.0
