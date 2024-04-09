@@ -3,6 +3,7 @@ import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/widgets/forgot_password_sign_in.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
+import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
@@ -16,9 +17,17 @@ class SignInForm extends StatefulWidget {
 }
 
 class _SignInFormState extends State<SignInForm> {
-  final _emailController = TextEditingController();
+  late TextEditingController _emailController;
   final _passwordController = TextEditingController();
   final _keyForm = GlobalKey<FormState>();
+
+  @override
+  void initState() {
+    super.initState();
+    final recentEmail = sharePreference.getRecentEmailSignIn();
+
+    _emailController = TextEditingController(text: recentEmail);
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -22,7 +22,6 @@ class LocalAuthPage extends StatefulWidget {
 class _LocalAuthPageState extends State<LocalAuthPage> {
   final LocalAuthentication auth = LocalAuthentication();
 
-  int _count = 3;
 
   @override
   void initState() {

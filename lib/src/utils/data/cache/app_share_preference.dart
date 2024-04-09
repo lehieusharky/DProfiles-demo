@@ -35,4 +35,8 @@ abstract class AppSharePreference {
   Future<bool> setChatGPTVersion(SupportedChatGPT chatGPT);
 
   SupportedChatGPT getChatGPTVersion();
+
+  Future<void> saveRecentEmailSignIn(String email);
+
+  String? getRecentEmailSignIn();
 }

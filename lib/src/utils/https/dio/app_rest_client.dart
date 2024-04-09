@@ -135,4 +135,11 @@ abstract class RestClient {
 
   @GET('/api/v1/character-chatbot/popular')
   Future<BaseResponse> getListPopularCharacterBot();
+
+  // community
+  @GET('/api/v1/post/newsFeed')
+  Future<BaseResponse> getNewsFeed(
+    @Query('page') int page,
+    @Query('limit') int limit,
+  );
 }
