@@ -32,74 +32,69 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AuthBloc, AuthState>(
-      builder: (context, state) {
-        return Form(
-          key: _keyForm,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              AuthField(
-                  title: appLocal(context).name.toUpperCase(),
-                  hint: appLocal(context).enterYourName,
-                  textInputAction: TextInputAction.next,
-                  validator: (name) => name != null && name.isNotEmpty
-                      ? null
-                      : appLocal(context).userNameCannotBeEmpty,
-                  controller: _usernameController),
-              Padding(
-                padding: context.padding(top: 32),
-                child: AuthField(
-                    title: appLocal(context).newPassword.toUpperCase(),
-                    hint: appLocal(context).password,
-                    textInputAction: TextInputAction.next,
-                    isPasswordField: true,
-                    validator: (password) =>
-                        password.passwordValidation(context),
-                    controller: _passwordController),
-              ),
-              Padding(
-                padding: context.padding(top: 32),
-                child: AuthField(
-                    title: appLocal(context).confirmPassword.toUpperCase(),
-                    hint: appLocal(context).password,
-                    isPasswordField: true,
-                    textInputAction: TextInputAction.done,
-                    validator: (password) {
-                      if (password == null || password.isEmpty) {
-                        return appLocal(context).passwordCannotBeEmpty;
-                      } else if (_passwordController.text !=
-                          _confirmPasswordController.text) {
-                        return appLocal(context).confirmPasswordIsNotMatch;
-                      } else {
-                        return null;
-                      }
-                    },
-                    controller: _confirmPasswordController),
-              ),
-              Padding(
-                  padding: context.padding(top: 32),
-                  child: PrivacyCreateAccount(
-                      isAgree: widget.isAgree, onChanged: widget.onChanged)),
-              Padding(
-                padding: context.padding(vertical: 32),
-                child: AppFlatButton(context).elevatedButton(
-                  backgroundColor: widget.isAgree
-                      ? colorScheme(context).primary
-                      : colorScheme(context).outlineVariant,
-                  titleColor: colorScheme(context).background,
-                  width: context.width,
-                  onPressed:
-                      !widget.isAgree ? null : () => _createAnAccount(context),
-                  title: appLocal(context).createAccount,
-                  child: (state is AuthLoading) ? const MyLoading() : null,
-                ),
-              ),
-            ],
+    return Form(
+      key: _keyForm,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          AuthField(
+              title: appLocal(context).name.toUpperCase(),
+              hint: appLocal(context).enterYourName,
+              autoFocus: true,
+              textInputAction: TextInputAction.next,
+              validator: (name) => name != null && name.isNotEmpty
+                  ? null
+                  : appLocal(context).userNameCannotBeEmpty,
+              controller: _usernameController),
+          Padding(
+            padding: context.padding(top: 32),
+            child: AuthField(
+                title: appLocal(context).newPassword.toUpperCase(),
+                hint: appLocal(context).password,
+                textInputAction: TextInputAction.next,
+                isPasswordField: true,
+                validator: (password) => password.passwordValidation(context),
+                controller: _passwordController),
           ),
-        );
-      },
+          Padding(
+            padding: context.padding(top: 32),
+            child: AuthField(
+                title: appLocal(context).confirmPassword.toUpperCase(),
+                hint: appLocal(context).password,
+                isPasswordField: true,
+                textInputAction: TextInputAction.done,
+                validator: (password) {
+                  if (password == null || password.isEmpty) {
+                    return appLocal(context).passwordCannotBeEmpty;
+                  } else if (_passwordController.text !=
+                      _confirmPasswordController.text) {
+                    return appLocal(context).confirmPasswordIsNotMatch;
+                  } else {
+                    return null;
+                  }
+                },
+                controller: _confirmPasswordController),
+          ),
+          Padding(
+              padding: context.padding(top: 32),
+              child: PrivacyCreateAccount(
+                  isAgree: widget.isAgree, onChanged: widget.onChanged)),
+          Padding(
+            padding: context.padding(vertical: 32),
+            child: AppFlatButton(context).elevatedButton(
+              backgroundColor: widget.isAgree
+                  ? colorScheme(context).primary
+                  : colorScheme(context).outlineVariant,
+              titleColor: colorScheme(context).background,
+              width: context.width,
+              onPressed:
+                  !widget.isAgree ? null : () => _createAnAccount(context),
+              title: appLocal(context).createAccount,
+            ),
+          ),
+        ],
+      ),
     );
   }
 

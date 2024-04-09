@@ -34,7 +34,12 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => injector.get<AiCharacterBloc>(),
+      create: (context) => injector.get<AiCharacterBloc>()
+        ..add(const AICharacterChangeCreationStep(isNext: true))
+        ..add(const AICharacterGetUserCertificates())
+        ..add(const AICharacterGetUserEducations())
+        ..add(const AICharacterGetUserExperiences()),
+
       child: BlocListener<AiCharacterBloc, AiCharacterState>(
         listener: (context, state) {
           if (state is AICharacterChangeCreationStepSuccess) {

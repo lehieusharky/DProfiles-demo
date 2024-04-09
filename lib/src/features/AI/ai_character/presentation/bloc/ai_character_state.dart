@@ -35,5 +35,6 @@ class AiCharacterState with _$AiCharacterState {
   const factory AiCharacterState.getListCharacterBotSuccess(
       List<AICharacterBotModel> bots) = GetListCharacterBotSuccess;
 
-
+  const factory AiCharacterState.getListPopularCharacterBotSuccess(
+      List<AICharacterBotModel> bots) = GetListPopularCharacterBotSuccess;
 }

@@ -16,7 +16,11 @@ class ListAutoGenerateHistory extends StatelessWidget {
         List<AutoGenerateHistoryModel>?>(
       selector: (state) {
         if (state is GetAutoGenerateHistorySuccess) {
-          return state.autoGenerateHistories.sublist(0, 3);
+          if (state.autoGenerateHistories.length > 3) {
+            return state.autoGenerateHistories.sublist(0, 3);
+          } else {
+            return state.autoGenerateHistories;
+          }
         }
 
         return null;
@@ -30,9 +34,11 @@ class ListAutoGenerateHistory extends StatelessWidget {
             ),
           );
         } else if (state.isEmpty) {
-          return const Text(
-            '\n Image for empty history case\nList is empty',
-            textAlign: TextAlign.center,
+          return const Center(
+            child: Text(
+              '\n Image for empty history case\nList is empty',
+              textAlign: TextAlign.center,
+            ),
           );
         }
         return SizedBox(

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 @RoutePage()
 class AuthGatePage extends StatefulWidget {
-  AuthGatePage({Key? key}) : super(key: key);
+  const AuthGatePage({Key? key}) : super(key: key);
 
   @override
   State<AuthGatePage> createState() => _AuthGatePageState();
@@ -20,8 +20,8 @@ class _AuthGatePageState extends State<AuthGatePage> {
 
   @override
   Widget build(BuildContext context) {
-    if (_accessToken != null) {
-      return const SignInPage();
+    if (_isFirstTimeOpenApp == true) {
+      return const OnboardingPage();
     } else if (_accessToken == null) {
       return const SignInPage();
     } else {

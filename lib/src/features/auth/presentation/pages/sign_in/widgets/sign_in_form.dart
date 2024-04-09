@@ -1,6 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
-import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/widgets/forgot_password_sign_in.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
@@ -36,7 +35,7 @@ class _SignInFormState extends State<SignInForm> {
               validator: (email) => email.emailValidation(context),
               hint: appLocal(context).emailAddress),
           Padding(
-            padding: context.padding(top: 32),
+            padding: context.padding(top: 32, bottom: 5),
             child: AuthField(
               controller: _passwordController,
               isPasswordField: true,

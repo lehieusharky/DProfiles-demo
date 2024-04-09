@@ -22,19 +22,11 @@ class _HomePageState extends State<HomePage> {
         sKey: _scaffoldKey,
         topPadding: 10,
         titleWidget: Assets.icons.logos.homeLogo.svg(),
-        body: NestedScrollView(
-          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-            return [
-              const SliverList(
-                delegate: SliverChildListDelegate.fixed([
-                  HomeBanner(),
-                ]),
-              ),
-            ];
-          },
-          body: const Column(
+        body: const SingleChildScrollView(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              HomeBanner(),
               HomeDiscover(),
             ],
           ),

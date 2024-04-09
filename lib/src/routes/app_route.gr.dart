@@ -83,11 +83,9 @@ abstract class $AppRouter extends _i26.RootStackRouter {
       );
     },
     AuthGateRoute.name: (routeData) {
-      final args = routeData.argsAs<AuthGateRouteArgs>(
-          orElse: () => const AuthGateRouteArgs());
       return _i26.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i3.AuthGatePage(key: args.key),
+        child: const _i3.AuthGatePage(),
       );
     },
     BlogDetailRoute.name: (routeData) {
@@ -271,31 +269,16 @@ class AiFeaturesHistoryRoute extends _i26.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.AuthGatePage]
-class AuthGateRoute extends _i26.PageRouteInfo<AuthGateRouteArgs> {
-  AuthGateRoute({
-    _i27.Key? key,
-    List<_i26.PageRouteInfo>? children,
-  }) : super(
+class AuthGateRoute extends _i26.PageRouteInfo<void> {
+  const AuthGateRoute({List<_i26.PageRouteInfo>? children})
+      : super(
           AuthGateRoute.name,
-          args: AuthGateRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'AuthGateRoute';
 
-  static const _i26.PageInfo<AuthGateRouteArgs> page =
-      _i26.PageInfo<AuthGateRouteArgs>(name);
-}
-
-class AuthGateRouteArgs {
-  const AuthGateRouteArgs({this.key});
-
-  final _i27.Key? key;
-
-  @override
-  String toString() {
-    return 'AuthGateRouteArgs{key: $key}';
-  }
+  static const _i26.PageInfo<void> page = _i26.PageInfo<void>(name);
 }
 
 /// generated route for

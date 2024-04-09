@@ -50,11 +50,7 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
 
     on<UpdatePropertiesOfCharacterBot>(_updatePropertiesOfBot);
 
-    add(const AICharacterChangeCreationStep(isNext: true));
-
-    add(const AICharacterGetUserCertificates());
-    add(const AICharacterGetUserEducations());
-    add(const AICharacterGetUserExperiences());
+    on<GetListPopularCharacterBot>(_getListPopularCharacterBot);
   }
 
   FutureOr<void> _changeCreateStep(
@@ -259,5 +255,22 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
       default:
         break;
     }
+  }
+
+  FutureOr<void> _getListPopularCharacterBot(
+      GetListPopularCharacterBot event, Emitter<AiCharacterState> emit) async {
+    final result = await aiCharacterUseCase.getListPopularCharacterBot();
+
+    result.fold(
+        (l) => emit(AICharacterError(
+            message: [l],
+            title: 'Get list popular character bot failed')), (r) {
+      final listData = r.data as List;
+
+      final characterBots =
+          listData.map((e) => AICharacterBotModel.fromJson(e)).toList();
+
+      emit(GetListPopularCharacterBotSuccess(characterBots));
+    });
   }
 }

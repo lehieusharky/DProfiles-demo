@@ -37,4 +37,17 @@ class AICharacterRepositoryImpl implements AICharacterRepository {
           response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
+
+  @override
+  Future<Either<AICharacterFailure, BaseResponse>>
+      getListPopularCharacterBot() async {
+    try {
+      final res = await _aiCharacterDataSource.getListPopularCharacterBot();
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(AICharacterFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
+    }
+  }
 }

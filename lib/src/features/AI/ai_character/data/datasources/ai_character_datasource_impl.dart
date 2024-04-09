@@ -28,4 +28,14 @@ class AICharacterDataSourceImpl implements AICharacterDataSource {
       rethrow;
     }
   }
+
+  @override
+  Future<BaseResponse> getListPopularCharacterBot() async {
+    try {
+      final baseResponse = await MyHttp.rl().getListPopularCharacterBot();
+      return baseResponse;
+    } on DioException {
+      rethrow;
+    }
+  }
 }

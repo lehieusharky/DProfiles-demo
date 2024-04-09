@@ -26,6 +26,9 @@ class AiCharacterEvent with _$AiCharacterEvent {
 
   const factory AiCharacterEvent.getListCharacterBot() = GetListCharacterBot;
 
+  const factory AiCharacterEvent.getListPopularCharacterBot() =
+      GetListPopularCharacterBot;
+
   const factory AiCharacterEvent.updatePropertiesOfCharacterBot(
           PropertiesOfCharacter property, int value) =
       UpdatePropertiesOfCharacterBot;

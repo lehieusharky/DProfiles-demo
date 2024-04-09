@@ -8,6 +8,7 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:demo_dprofiles/src/utils/services/connect_wallet_service.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeBanner extends StatefulWidget {
   const HomeBanner({Key? key}) : super(key: key);
@@ -102,14 +103,21 @@ class _HomeBannerState extends State<HomeBanner> {
                         .bodyLarge),
               ),
               MyButton(
-                onPressed: () =>
-                    AppConnectWalletService().connectWallet(context),
-                title: appLocal(context).connectWallet,
+                onPressed: () async => _launchUrl(),
+                title: 'Buy DP1',
               ),
             ],
           ),
         ),
       );
+
+  Future<void> _launchUrl() async {
+    final Uri _url = Uri.parse('https://www.dprofiles.xyz/investment');
+
+    if (!await launchUrl(_url)) {
+      throw Exception('Could not launch $_url');
+    }
+  }
 
   Widget _buildBannerBackground() => Assets.images.home.bannerBackground.image(
       width: context.sizeWidth(220),

@@ -6,9 +6,7 @@ import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/onbo
 import 'package:demo_dprofiles/src/features/onboarding/presentation/widgets/skip_button.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
-import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
-import 'package:ficonsax/ficonsax.dart';
 
 import 'package:flutter/material.dart';
 
@@ -75,7 +73,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       _pageController.nextPage(
           duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
     } else {
-      context.router.replace(const ConnectWalletRoute());
+      context.router.replace(const SignInRoute());
     }
   }
 
