@@ -55,7 +55,8 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
           if (state is GenerateCharacterBotSuccess) {
             Navigator.pop(context);
 
-            context.replaceRoute(const MyAICharacterRoute());
+            context.replaceRoute(MyAICharacterRoute(
+                createdCharacterBot: state.createCharacterBotModel));
           }
 
           if (state is AICharacterError) {

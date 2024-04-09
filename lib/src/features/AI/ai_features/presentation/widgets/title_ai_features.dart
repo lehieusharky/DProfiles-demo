@@ -10,10 +10,9 @@ class TitleAiFeatures extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: context.padding(bottom: 24),
-      child: Text(appLocal(context).aiFeatures,
-          style: AppFont()
-              .fontTheme(context, weight: FontWeight.bold)
-              .titleSmall),
+      child: Text('AI Tools',
+           style:
+              AppFont().fontTheme(context, weight: FontWeight.bold).titleSmall),
     );
   }
 }

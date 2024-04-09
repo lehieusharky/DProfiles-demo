@@ -53,7 +53,8 @@ Future<void> showErrorDialog(
   );
 }
 
-Future<void> showLoadingDialog(BuildContext context) async {
+Future<void> showLoadingDialog(BuildContext context,
+    {String? description, bool? useCancelButton}) async {
   return showDialog<void>(
     context: context,
     barrierDismissible: false,
@@ -71,6 +72,7 @@ Future<void> showLoadingDialog(BuildContext context) async {
                 width: context.sizeWidth(200),
                 height: context.sizeWidth(200),
               ),
+              if (description != null) Text(description)
               // Padding(
               //   padding: context.padding(horizontal: 10, bottom: 5),
               //   child: AppFlatButton(context).elevatedButton(

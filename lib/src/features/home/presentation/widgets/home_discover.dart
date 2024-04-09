@@ -67,7 +67,8 @@ class _HomeDiscoverState extends State<HomeDiscover>
                 controller: _tabController,
                 children: const [
                   HomeFeedSubPage(),
-                  BlogListPage(),
+                  Text('Blog'),
+                  // BlogListPage(),
                 ],
               ),
             ),

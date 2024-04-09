@@ -34,7 +34,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       (r) {
         if (r.statusCode != 200) {
           emit(AuthError(
-              message: r.message, title: appLocal(context).sendFailed));
+              message: r.message ?? '', title: appLocal(context).sendFailed));
         } else {
           emit(AuthSendSignUpEmailSuccess(event.email));
         }
@@ -53,7 +53,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       (r) {
         if (r.statusCode != 200) {
           emit(AuthError(
-              message: r.message, title: appLocal(context).resendFailed));
+              message: r.message ?? '', title: appLocal(context).resendFailed));
         } else {
           emit(const AuthResendSignUpEmailSuccess());
         }
@@ -72,7 +72,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
           AuthError(message: l, title: appLocal(context).validateCodeFailed)),
       (r) {
         if (r.statusCode != 200) {
-          emit(AuthValidateSignUpCodeFailed(r.message));
+          emit(AuthValidateSignUpCodeFailed(r.message ?? ''));
         } else {
           emit(const AuthValidateSignUpCodeSuccess());
         }
@@ -91,7 +91,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       (r) {
         if (r.statusCode != 200) {
           emit(AuthError(
-              message: r.message,
+              message: r.message ?? '',
               title: appLocal(context).createAnAccountFailed));
         } else {
           emit(const AuthCreateAnAccountSuccess());

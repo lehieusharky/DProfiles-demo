@@ -42,6 +42,7 @@ class _FormBasicInfoState extends State<FormBasicInfo>
           AuthField(
               controller: _nameController,
               title: appLocal(context).name.toUpperCase(),
+              autoFocus: true,
               textInputAction: TextInputAction.next,
               validator: (name) {
                 if (name == null || name.isEmpty) {

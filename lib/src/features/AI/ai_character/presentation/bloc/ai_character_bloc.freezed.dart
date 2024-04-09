@@ -28,6 +28,8 @@ mixin _$AiCharacterEvent {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +43,8 @@ mixin _$AiCharacterEvent {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -54,6 +58,8 @@ mixin _$AiCharacterEvent {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -73,6 +79,8 @@ mixin _$AiCharacterEvent {
         getUserExperiences,
     required TResult Function(GenerateCharacterBot value) generateCharacterBot,
     required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -88,6 +96,8 @@ mixin _$AiCharacterEvent {
     TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -102,6 +112,8 @@ mixin _$AiCharacterEvent {
     TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -173,6 +185,8 @@ class _$StartedImpl implements _Started {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
   }) {
     return started();
   }
@@ -189,6 +203,8 @@ class _$StartedImpl implements _Started {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return started?.call();
   }
@@ -205,6 +221,8 @@ class _$StartedImpl implements _Started {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -230,6 +248,8 @@ class _$StartedImpl implements _Started {
         getUserExperiences,
     required TResult Function(GenerateCharacterBot value) generateCharacterBot,
     required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
   }) {
     return started(this);
   }
@@ -248,6 +268,8 @@ class _$StartedImpl implements _Started {
     TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return started?.call(this);
   }
@@ -265,6 +287,8 @@ class _$StartedImpl implements _Started {
     TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -358,6 +382,8 @@ class _$AICharacterChangeCreationStepImpl
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
   }) {
     return changeCreationStep(isNext);
   }
@@ -374,6 +400,8 @@ class _$AICharacterChangeCreationStepImpl
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return changeCreationStep?.call(isNext);
   }
@@ -390,6 +418,8 @@ class _$AICharacterChangeCreationStepImpl
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (changeCreationStep != null) {
@@ -415,6 +445,8 @@ class _$AICharacterChangeCreationStepImpl
         getUserExperiences,
     required TResult Function(GenerateCharacterBot value) generateCharacterBot,
     required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
   }) {
     return changeCreationStep(this);
   }
@@ -433,6 +465,8 @@ class _$AICharacterChangeCreationStepImpl
     TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return changeCreationStep?.call(this);
   }
@@ -450,6 +484,8 @@ class _$AICharacterChangeCreationStepImpl
     TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (changeCreationStep != null) {
@@ -521,6 +557,8 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserInfo();
   }
@@ -537,6 +575,8 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserInfo?.call();
   }
@@ -553,6 +593,8 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -578,6 +620,8 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
         getUserExperiences,
     required TResult Function(GenerateCharacterBot value) generateCharacterBot,
     required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserInfo(this);
   }
@@ -596,6 +640,8 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserInfo?.call(this);
   }
@@ -613,6 +659,8 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -713,6 +761,8 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
   }) {
     return addBasicInfoOfCharacterBot(name, summary);
   }
@@ -729,6 +779,8 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return addBasicInfoOfCharacterBot?.call(name, summary);
   }
@@ -745,6 +797,8 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (addBasicInfoOfCharacterBot != null) {
@@ -770,6 +824,8 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
         getUserExperiences,
     required TResult Function(GenerateCharacterBot value) generateCharacterBot,
     required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
   }) {
     return addBasicInfoOfCharacterBot(this);
   }
@@ -788,6 +844,8 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return addBasicInfoOfCharacterBot?.call(this);
   }
@@ -805,6 +863,8 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (addBasicInfoOfCharacterBot != null) {
@@ -879,6 +939,8 @@ class _$AICharacterGetUserCertificatesImpl
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserCertificates();
   }
@@ -895,6 +957,8 @@ class _$AICharacterGetUserCertificatesImpl
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserCertificates?.call();
   }
@@ -911,6 +975,8 @@ class _$AICharacterGetUserCertificatesImpl
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -936,6 +1002,8 @@ class _$AICharacterGetUserCertificatesImpl
         getUserExperiences,
     required TResult Function(GenerateCharacterBot value) generateCharacterBot,
     required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserCertificates(this);
   }
@@ -954,6 +1022,8 @@ class _$AICharacterGetUserCertificatesImpl
     TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserCertificates?.call(this);
   }
@@ -971,6 +1041,8 @@ class _$AICharacterGetUserCertificatesImpl
     TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -1038,6 +1110,8 @@ class _$AICharacterGetUserEducationsImpl
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserEducations();
   }
@@ -1054,6 +1128,8 @@ class _$AICharacterGetUserEducationsImpl
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserEducations?.call();
   }
@@ -1070,6 +1146,8 @@ class _$AICharacterGetUserEducationsImpl
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -1095,6 +1173,8 @@ class _$AICharacterGetUserEducationsImpl
         getUserExperiences,
     required TResult Function(GenerateCharacterBot value) generateCharacterBot,
     required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserEducations(this);
   }
@@ -1113,6 +1193,8 @@ class _$AICharacterGetUserEducationsImpl
     TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserEducations?.call(this);
   }
@@ -1130,6 +1212,8 @@ class _$AICharacterGetUserEducationsImpl
     TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -1197,6 +1281,8 @@ class _$AICharacterGetUserExperiencesImpl
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserExperiences();
   }
@@ -1213,6 +1299,8 @@ class _$AICharacterGetUserExperiencesImpl
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserExperiences?.call();
   }
@@ -1229,6 +1317,8 @@ class _$AICharacterGetUserExperiencesImpl
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -1254,6 +1344,8 @@ class _$AICharacterGetUserExperiencesImpl
         getUserExperiences,
     required TResult Function(GenerateCharacterBot value) generateCharacterBot,
     required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserExperiences(this);
   }
@@ -1272,6 +1364,8 @@ class _$AICharacterGetUserExperiencesImpl
     TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return getUserExperiences?.call(this);
   }
@@ -1289,6 +1383,8 @@ class _$AICharacterGetUserExperiencesImpl
     TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -1352,6 +1448,8 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
   }) {
     return generateCharacterBot();
   }
@@ -1368,6 +1466,8 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return generateCharacterBot?.call();
   }
@@ -1384,6 +1484,8 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (generateCharacterBot != null) {
@@ -1409,6 +1511,8 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
         getUserExperiences,
     required TResult Function(GenerateCharacterBot value) generateCharacterBot,
     required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
   }) {
     return generateCharacterBot(this);
   }
@@ -1427,6 +1531,8 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return generateCharacterBot?.call(this);
   }
@@ -1444,6 +1550,8 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (generateCharacterBot != null) {
@@ -1506,6 +1614,8 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
   }) {
     return getListCharacterBot();
   }
@@ -1522,6 +1632,8 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return getListCharacterBot?.call();
   }
@@ -1538,6 +1650,8 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (getListCharacterBot != null) {
@@ -1563,6 +1677,8 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
         getUserExperiences,
     required TResult Function(GenerateCharacterBot value) generateCharacterBot,
     required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
   }) {
     return getListCharacterBot(this);
   }
@@ -1581,6 +1697,8 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
   }) {
     return getListCharacterBot?.call(this);
   }
@@ -1598,6 +1716,8 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
     TResult Function(GenerateCharacterBot value)? generateCharacterBot,
     TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
     required TResult orElse(),
   }) {
     if (getListCharacterBot != null) {
@@ -1609,6 +1729,221 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
 
 abstract class GetListCharacterBot implements AiCharacterEvent {
   const factory GetListCharacterBot() = _$GetListCharacterBotImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdatePropertiesOfCharacterBotImplCopyWith<$Res> {
+  factory _$$UpdatePropertiesOfCharacterBotImplCopyWith(
+          _$UpdatePropertiesOfCharacterBotImpl value,
+          $Res Function(_$UpdatePropertiesOfCharacterBotImpl) then) =
+      __$$UpdatePropertiesOfCharacterBotImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({PropertiesOfCharacter property, int value});
+}
+
+/// @nodoc
+class __$$UpdatePropertiesOfCharacterBotImplCopyWithImpl<$Res>
+    extends _$AiCharacterEventCopyWithImpl<$Res,
+        _$UpdatePropertiesOfCharacterBotImpl>
+    implements _$$UpdatePropertiesOfCharacterBotImplCopyWith<$Res> {
+  __$$UpdatePropertiesOfCharacterBotImplCopyWithImpl(
+      _$UpdatePropertiesOfCharacterBotImpl _value,
+      $Res Function(_$UpdatePropertiesOfCharacterBotImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? property = null,
+    Object? value = null,
+  }) {
+    return _then(_$UpdatePropertiesOfCharacterBotImpl(
+      null == property
+          ? _value.property
+          : property // ignore: cast_nullable_to_non_nullable
+              as PropertiesOfCharacter,
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdatePropertiesOfCharacterBotImpl
+    implements UpdatePropertiesOfCharacterBot {
+  const _$UpdatePropertiesOfCharacterBotImpl(this.property, this.value);
+
+  @override
+  final PropertiesOfCharacter property;
+  @override
+  final int value;
+
+  @override
+  String toString() {
+    return 'AiCharacterEvent.updatePropertiesOfCharacterBot(property: $property, value: $value)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdatePropertiesOfCharacterBotImpl &&
+            (identical(other.property, property) ||
+                other.property == property) &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, property, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdatePropertiesOfCharacterBotImplCopyWith<
+          _$UpdatePropertiesOfCharacterBotImpl>
+      get copyWith => __$$UpdatePropertiesOfCharacterBotImplCopyWithImpl<
+          _$UpdatePropertiesOfCharacterBotImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function() getUserInfo,
+    required TResult Function(String name, String summary)
+        addBasicInfoOfCharacterBot,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserExperiences,
+    required TResult Function() generateCharacterBot,
+    required TResult Function() getListCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
+  }) {
+    return updatePropertiesOfCharacterBot(property, value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function()? getUserInfo,
+    TResult? Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? generateCharacterBot,
+    TResult? Function()? getListCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+  }) {
+    return updatePropertiesOfCharacterBot?.call(property, value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function()? getUserInfo,
+    TResult Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserExperiences,
+    TResult Function()? generateCharacterBot,
+    TResult Function()? getListCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    required TResult orElse(),
+  }) {
+    if (updatePropertiesOfCharacterBot != null) {
+      return updatePropertiesOfCharacterBot(property, value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(AICharacterChangeCreationStep value)
+        changeCreationStep,
+    required TResult Function(AICharacterGetUserInfo value) getUserInfo,
+    required TResult Function(AddBasicInfoOfCharacterBot value)
+        addBasicInfoOfCharacterBot,
+    required TResult Function(AICharacterGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(AICharacterGetUserEducations value)
+        getUserEducations,
+    required TResult Function(AICharacterGetUserExperiences value)
+        getUserExperiences,
+    required TResult Function(GenerateCharacterBot value) generateCharacterBot,
+    required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
+  }) {
+    return updatePropertiesOfCharacterBot(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult? Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult? Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult? Function(AICharacterGetUserCertificates value)?
+        getUserCertificates,
+    TResult? Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+  }) {
+    return updatePropertiesOfCharacterBot?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult Function(AICharacterGetUserCertificates value)? getUserCertificates,
+    TResult Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    required TResult orElse(),
+  }) {
+    if (updatePropertiesOfCharacterBot != null) {
+      return updatePropertiesOfCharacterBot(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdatePropertiesOfCharacterBot implements AiCharacterEvent {
+  const factory UpdatePropertiesOfCharacterBot(
+          final PropertiesOfCharacter property, final int value) =
+      _$UpdatePropertiesOfCharacterBotImpl;
+
+  PropertiesOfCharacter get property;
+  int get value;
+  @JsonKey(ignore: true)
+  _$$UpdatePropertiesOfCharacterBotImplCopyWith<
+          _$UpdatePropertiesOfCharacterBotImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc

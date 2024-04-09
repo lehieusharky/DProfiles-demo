@@ -8,7 +8,6 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:demo_dprofiles/src/utils/services/connect_wallet_service.dart';
 import 'package:flutter/material.dart';
-import 'package:web3modal_flutter/web3modal_flutter.dart';
 
 class HomeBanner extends StatefulWidget {
   const HomeBanner({Key? key}) : super(key: key);

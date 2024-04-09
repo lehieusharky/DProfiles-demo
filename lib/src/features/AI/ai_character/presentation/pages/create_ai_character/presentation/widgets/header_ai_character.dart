@@ -19,6 +19,7 @@ class HeaderAICharacter extends StatelessWidget {
     return Container(
       height: context.sizeHeight(205),
       padding: context.padding(horizontal: 20, vertical: 16),
+
       decoration: BoxDecoration(color: colorScheme(context).secondary),
       child: Column(
         children: [
@@ -33,28 +34,20 @@ class HeaderAICharacter extends StatelessWidget {
       Assets.images.aiFeatures.createAiCharacterIcon
           .image(width: context.sizeWidth(85), fit: BoxFit.cover);
 
-  Widget _buildTitle(BuildContext context) => Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          InkWell(
-            onTap: () => Navigator.pop(context),
-            child: const Icon(IconsaxOutline.arrow_left,
-                color: MyColor.getWhite, size: 25),
-          ),
-          Row(
-            children: [
-              Expanded(
-                  child: Text(appLocal(context).createYourAiCharacter,
-                      style: AppFont()
-                          .fontTheme(context,
-                              weight: FontWeight.w600,
-                              height: 1.3,
-                              color: MyColor.getWhite)
-                          .titleSmall)),
-              _buildIcon(context),
-            ],
-          ),
-        ],
-      );
+  Widget _buildTitle(BuildContext context) => Padding(
+    padding: context.padding(top: 20),
+    child: Row(
+      children: [
+        Expanded(
+            child: Text(appLocal(context).createYourAiCharacter,
+                style: AppFont()
+                    .fontTheme(context,
+                        weight: FontWeight.w600,
+                        height: 1.3,
+                        color: MyColor.getWhite)
+                    .titleSmall)),
+        _buildIcon(context),
+      ],
+    ),
+  );
 }

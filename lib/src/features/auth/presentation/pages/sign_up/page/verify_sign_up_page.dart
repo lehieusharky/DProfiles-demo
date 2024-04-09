@@ -51,7 +51,6 @@ class _VerifySignUpPageState extends State<VerifySignUpPage> {
             horizontalMargin: 32,
             useAppBar: true,
             canBack: true,
-            topPadding: 80,
             body: Stack(
               children: [
                 Column(

@@ -6,7 +6,7 @@ part 'base_response.g.dart';
 @freezed
 class BaseResponse with _$BaseResponse implements AppResponse {
   const factory BaseResponse({
-    required String message,
+    @Default("") String? message,
     @Default(false) bool? success,
     @Default(null) String? error,
     @Default(200) int? statusCode,
