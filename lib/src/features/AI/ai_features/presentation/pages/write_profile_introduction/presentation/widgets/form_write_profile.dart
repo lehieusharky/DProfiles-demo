@@ -34,8 +34,6 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
         if (state is AiFeaturesLoading) {
           showLoadingDialog(context);
         }
-
-
       },
       builder: (context, state) {
         return Form(
@@ -43,6 +41,7 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
           child: Column(
             children: [
               AuthField(
+                  autoFocus: true,
                   controller: _aboutYourSelfController,
                   title: appLocal(context).aboutYourSelf.toUpperCase(),
                   textInputAction: TextInputAction.next,
@@ -131,7 +130,7 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
       final model = WriteProfileIntroductionModel(
         summary: _aboutYourSelfController.text + _promptController.text,
         style: _writeStyleController.text.trim(),
-        gptModel: sharePreference.getChatGPTVersion().toIndex(),
+        gptModel: sharePreference.getChatGPTVersion().toVersion(),
       );
       context.read<AiFeaturesBloc>().add(GenerateProfileIntroduction(model));
     }

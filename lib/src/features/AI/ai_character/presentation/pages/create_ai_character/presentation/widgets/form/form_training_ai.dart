@@ -1,13 +1,9 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai_character_bloc.dart';
-import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
-import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
-import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/cupertino.dart';

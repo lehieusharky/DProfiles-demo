@@ -4,7 +4,6 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
-import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
 import 'navigation_step_create_a_i_character.dart';

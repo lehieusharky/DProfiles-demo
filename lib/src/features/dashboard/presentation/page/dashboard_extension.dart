@@ -32,8 +32,8 @@ extension DashboardExtension on DashboardPage {
           )
           .toList();
 
-  List<Widget> screens() => [
-        const HomePage(),
+  List<Widget> screens(ScrollController scrollController) => [
+        HomePage(scrollController: scrollController),
         const AiFeaturesPage(),
         const AiCharacterPage(),
         const ProfilePage(),

@@ -9,7 +9,7 @@ class SettingDataSourceImpl implements SettingDataSource {
   @override
   Future<void> setInitialSettingInfo() async {
     try {
-      final isFirstTimeOpenApp = await sharePreference.isFirstTimeOpenApp();
+      final isFirstTimeOpenApp = sharePreference.isFirstTimeOpenApp();
 
       await _handleDarkMode(isFirstTimeOpenApp);
     } on Exception catch (e) {

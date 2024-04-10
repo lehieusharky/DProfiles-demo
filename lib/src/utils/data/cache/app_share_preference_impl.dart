@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/utils/constant/string_constant.dart';
 import 'package:demo_dprofiles/src/utils/constant/support_theme.dart';
@@ -16,6 +18,7 @@ const String CURRENT_THEME = 'current_theme';
 const String CURRENT_LANGUAGE = 'current_language';
 const String CHAT_GPT_VERSION = 'chat_gpt_version';
 const String RECENT_EMAIL_SIGN_IN = 'recent_email_sign_in';
+const String SESSION_ID = 'session_id';
 
 @Injectable(as: AppSharePreference)
 class AppSharePreferenceImpl implements AppSharePreference {
@@ -96,7 +99,8 @@ class AppSharePreferenceImpl implements AppSharePreference {
 
   @override
   SupportedChatGPT getChatGPTVersion() {
-    final chatGPTVersion = _prefs.getString(CHAT_GPT_VERSION);
+    final chatGPTVersion =
+        _prefs.getString(CHAT_GPT_VERSION) ?? SupportedChatGPT.gpt_3_5;
 
     return switch (chatGPTVersion) {
       StrConts.gpt_3_5 => SupportedChatGPT.gpt_3_5,
@@ -116,4 +120,20 @@ class AppSharePreferenceImpl implements AppSharePreference {
   @override
   Future<void> saveRecentEmailSignIn(String email) async =>
       await _prefs.setString(RECENT_EMAIL_SIGN_IN, email);
+
+  @override
+  Future<void> createSessionID() async {
+    var randomNumber = '';
+
+    for (var i = 0; i < 6; i++) {
+      var digit = Random().nextInt(10);
+      randomNumber += digit.toString();
+    }
+
+    final id = int.parse(randomNumber);
+    await _prefs.setInt(SESSION_ID, id);
+  }
+
+  @override
+  int? getSessionID() => _prefs.getInt(SESSION_ID);
 }

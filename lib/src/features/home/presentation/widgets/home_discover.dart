@@ -7,16 +7,13 @@ class HomeDiscover extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: context.padding(horizontal: 20),
-      child: const TabBarView(
-        physics: AlwaysScrollableScrollPhysics(),
-        children: [
-          NewsFeedHome(),
-          Text('Blog'),
-          // BlogListPage(),
-        ],
-      ),
+    return const TabBarView(
+      physics: AlwaysScrollableScrollPhysics(),
+      children: [
+        NewsFeedHome(),
+        Text('Blog'),
+        // BlogListPage(),
+      ],
     );
   }
 }

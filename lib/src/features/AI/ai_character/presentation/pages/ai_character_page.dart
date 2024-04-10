@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';

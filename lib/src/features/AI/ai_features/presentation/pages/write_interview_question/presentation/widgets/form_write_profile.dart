@@ -37,6 +37,7 @@ class _FormWriteInterviewQuestionState
           child: Column(
             children: [
               AuthField(
+                  autoFocus: true,
                   controller: _jobTitleController,
                   title: 'JOB TITLE',
                   textInputAction: TextInputAction.next,
@@ -118,7 +119,7 @@ class _FormWriteInterviewQuestionState
       final model = WriteInterviewQuestionModel(
         jobTitle: _jobTitleController.text,
         about: _interviewQuestionController.text.trim(),
-        gptModel: sharePreference.getChatGPTVersion().toIndex(),
+        gptModel: sharePreference.getChatGPTVersion().toVersion(),
       );
       context.read<AiFeaturesBloc>().add(GenerateInterviewQuestion(model));
     }

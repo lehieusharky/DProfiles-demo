@@ -11,11 +11,19 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  final ScrollController scrollController;
+  const HomePage({Key? key, required this.scrollController}) : super(key: key);
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage>
+    with AutomaticKeepAliveClientMixin {
+  @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocProvider(
       create: (context) =>
           injector.get<HomeBloc>()..add(const HomeGetFeeds(1, 5)),
@@ -25,20 +33,18 @@ class HomePage extends StatelessWidget {
         body: DefaultTabController(
           length: 2,
           child: NestedScrollView(
+            controller: widget.scrollController,
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => [
               const HomeAppbarChild(
                 height: 270,
                 child: HomeBanner(),
               ),
-              HomeAppbarChild(
-                height: 100,
-                margin: context.padding(),
-                child: const TitleHome(title: 'Discover'),
-              ),
             ],
             body: const Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                TitleHome(title: 'Discover'),
                 HomeTabBar(),
                 Expanded(child: HomeDiscover()),
               ],
@@ -48,4 +54,7 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
