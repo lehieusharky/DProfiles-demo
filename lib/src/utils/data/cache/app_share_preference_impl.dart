@@ -15,6 +15,7 @@ const String IS_DARK_MODE = 'is_dark_mode';
 const String CURRENT_THEME = 'current_theme';
 const String CURRENT_LANGUAGE = 'current_language';
 const String CHAT_GPT_VERSION = 'chat_gpt_version';
+const String RECENT_EMAIL_SIGN_IN = 'recent_email_sign_in';
 
 @Injectable(as: AppSharePreference)
 class AppSharePreferenceImpl implements AppSharePreference {
@@ -108,4 +109,11 @@ class AppSharePreferenceImpl implements AppSharePreference {
   Future<bool> setChatGPTVersion(SupportedChatGPT chatGPT) async => await _prefs
       .setString(CHAT_GPT_VERSION, chatGPT.name)
       .then((value) => value);
+
+  @override
+  String? getRecentEmailSignIn() => _prefs.getString(RECENT_EMAIL_SIGN_IN);
+
+  @override
+  Future<void> saveRecentEmailSignIn(String email) async =>
+      await _prefs.setString(RECENT_EMAIL_SIGN_IN, email);
 }

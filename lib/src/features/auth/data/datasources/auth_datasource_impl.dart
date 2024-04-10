@@ -67,17 +67,20 @@ class AuthDataSourceImpl implements AuthDataSource {
 
       final response = await MyHttp.rl().signIn(body);
 
-      _handleLocalDBWhenSignInSuccess(response);
+      _handleLocalDBWhenSignInSuccess(response, email);
 
       return response;
-    } on DioException catch(e) {
+    } on DioException catch (e) {
       rethrow;
     }
   }
 
-  void _handleLocalDBWhenSignInSuccess(SignInModel signInModel) async {
+  void _handleLocalDBWhenSignInSuccess(
+      SignInModel signInModel, String email) async {
     await sharePreference.setAccessToken(signInModel.accessToken);
 
     await sharePreference.setRefreshToken(signInModel.refreshToken);
+
+    await sharePreference.saveRecentEmailSignIn(email);
   }
 }
