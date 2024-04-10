@@ -13,9 +13,9 @@
         <package android:name="org.toshi"/>
     </queries>
     <application
-        android:label="dProfiles"
+        android:label="DProfiles"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
 
         <activity
             android:name=".MainActivity"
