@@ -39,4 +39,8 @@ abstract class AppSharePreference {
   Future<void> saveRecentEmailSignIn(String email);
 
   String? getRecentEmailSignIn();
+
+  int? getSessionID();
+
+  Future<void> createSessionID();
 }

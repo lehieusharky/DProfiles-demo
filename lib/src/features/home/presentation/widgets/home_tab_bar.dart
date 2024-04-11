@@ -11,7 +11,7 @@ class HomeTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.padding(left: 20, right: 180, bottom: 28),
+      padding: context.padding(left: 20, right: 180, bottom: 16),
       child: Container(
         height: context.sizeHeight(54),
         padding: context.padding(vertical: 12),

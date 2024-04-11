@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
+import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/write_skill_knowledge/presentation/widgets/skill_knowledge_generation.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/header_auto_gen.dart';
@@ -34,24 +35,33 @@ class _WriteSkillKnowledgePageState extends State<WriteSkillKnowledgePage>
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => injector.get<AiFeaturesBloc>(),
-      child: MyScaffold(
-        horizontalMargin: 20,
-        useAppBar: true,
-        canBack: true,
-        titleWidget: Assets.icons.logos.dWhitePWhite.svg(),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              HeaderAutoGenerate(
-                aiFeatureTitle: appLocal(context).skillsKnowledgeByJobTitle,
-              ),
-              ChatGPTSelector(controller: _tabController),
-              Padding(
-                padding: context.padding(vertical: 16),
-                child: const FormSkillKnowledge(),
-              ),
-              const SkillKnowledgeGeneration(),
-            ],
+      child: BlocListener<AiFeaturesBloc, AiFeaturesState>(
+        listener: (context, state) {
+          if (state is AiFeaturesError) {
+            Navigator.pop(context);
+            showErrorDialog(context,
+                title: 'Generate failed', description: state.message);
+          }
+        },
+        child: MyScaffold(
+          horizontalMargin: 20,
+          useAppBar: true,
+          canBack: true,
+          titleWidget: Assets.icons.logos.dWhitePWhite.svg(),
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                HeaderAutoGenerate(
+                  aiFeatureTitle: appLocal(context).skillsKnowledgeByJobTitle,
+                ),
+                ChatGPTSelector(controller: _tabController),
+                Padding(
+                  padding: context.padding(vertical: 16),
+                  child: const FormSkillKnowledge(),
+                ),
+                const SkillKnowledgeGeneration(),
+              ],
+            ),
           ),
         ),
       ),

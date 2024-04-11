@@ -33,6 +33,7 @@ class _FormSkillKnowledgeState extends State<FormSkillKnowledge> {
           child: Column(
             children: [
               AuthField(
+                autoFocus: true,
                 controller: _jobTitleController,
                 title: 'JOB TITLE',
                 textInputAction: TextInputAction.done,
@@ -98,7 +99,7 @@ class _FormSkillKnowledgeState extends State<FormSkillKnowledge> {
     if (_keyForm.currentState?.validate() ?? false) {
       final model = WriteSkillKnowledgeModel(
         jobTitle: _jobTitleController.text,
-        gptModel: sharePreference.getChatGPTVersion().toIndex(),
+        gptModel: sharePreference.getChatGPTVersion().toVersion(),
       );
       context.read<AiFeaturesBloc>().add(GenerateSkillKnowledge(model));
     }

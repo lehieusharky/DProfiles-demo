@@ -35,6 +35,7 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
           child: Column(
             children: [
               AuthField(
+                autoFocus: true,
                 controller: _jobTitleController,
                 title: 'JOB TITLE',
                 textInputAction: TextInputAction.next,
@@ -127,7 +128,7 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
       final model = WriteCoverLetterModel(
         jobTitle: _jobTitleController.text,
         summary: _aboutYourSelfController.text + _promptController.text,
-        gptModel: sharePreference.getChatGPTVersion().toIndex(),
+        gptModel: sharePreference.getChatGPTVersion().toVersion(),
       );
       context.read<AiFeaturesBloc>().add(GenerateCoverLetter(model));
     }

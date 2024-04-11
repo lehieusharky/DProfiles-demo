@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/ui/my_divider.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -11,72 +12,53 @@ import 'package:tuple/tuple.dart';
 extension NewFeedModelExt on NewFeedModel {
   Widget toWidget(BuildContext context) {
     return Padding(
-      padding: context.padding(bottom: 28),
+      padding: context.padding(horizontal: 20),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: context.padding(right: 12),
                 child: CircleAvatar(radius: context.sizeHeight(25)),
               ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        'dProfiles',
-                        style: AppFont()
-                            .fontTheme(context, weight: FontWeight.w600)
-                            .bodyLarge,
-                      ),
-                      Padding(
-                        padding: context.padding(left: 50),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            InkWell(
-                              onTap: () {},
-                              child: Container(
-                                padding:
-                                    context.padding(horizontal: 8, vertical: 3),
-                                decoration: BoxDecoration(
-                                    color: colorScheme(context).primary,
-                                    borderRadius: BorderRadius.circular(16)),
-                                child: Text(
-                                  'Following',
-                                  style: AppFont()
-                                      .fontTheme(context,
-                                          color:
-                                              colorScheme(context).background)
-                                      .bodyMedium,
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: context.padding(left: 10),
-                              child: const Icon(IconsaxOutline.more),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  Text(
-                    postCreatedTs.toString().convertToDDMMYYFormat(),
-                    style: AppFont()
-                        .fontTheme(context,
-                            weight: FontWeight.w400,
-                            color: colorScheme(context).outline)
-                        .bodySmall,
-                  )
-                ],
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'dProfiles',
+                      style: AppFont()
+                          .fontTheme(context, weight: FontWeight.w600)
+                          .bodyLarge,
+                    ),
+                    Text(
+                      postCreatedTs.toString().convertToDDMMYYFormat(),
+                      style: AppFont()
+                          .fontTheme(context,
+                              weight: FontWeight.w400,
+                              color: colorScheme(context).outline)
+                          .bodySmall,
+                    )
+                  ],
+                ),
               ),
+              SizedBox(
+                width: context.sizeWidth(120),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const _FollowingButton(),
+                    Padding(
+                      padding: context.padding(left: 10),
+                      child: const Icon(IconsaxOutline.more),
+                    )
+                  ],
+                ),
+              )
             ],
           ),
           if (postContent != null)
@@ -96,7 +78,31 @@ extension NewFeedModelExt on NewFeedModel {
             comments: noOfComment!,
             shares: noOfShare!,
           ),
+
         ],
+      ),
+    );
+  }
+}
+
+class _FollowingButton extends StatelessWidget {
+  const _FollowingButton();
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        padding: context.padding(horizontal: 10, vertical: 4),
+        decoration: BoxDecoration(
+            color: colorScheme(context).primary,
+            borderRadius: BorderRadius.circular(16)),
+        child: Text(
+          'Following',
+          style: AppFont()
+              .fontTheme(context, color: colorScheme(context).background)
+              .bodyMedium,
+        ),
       ),
     );
   }
