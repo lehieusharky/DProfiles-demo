@@ -47,8 +47,15 @@ class $AssetsIconsGen {
   AssetGenImage get homeLogo =>
       const AssetGenImage('assets/icons/home_logo.png');
 
+  /// File path: assets/icons/icon_arrow_right.svg
+  SvgGenImage get iconArrowRight =>
+      const SvgGenImage('assets/icons/icon_arrow_right.svg');
+
   /// File path: assets/icons/icon_bag.svg
   SvgGenImage get iconBag => const SvgGenImage('assets/icons/icon_bag.svg');
+
+  /// File path: assets/icons/icon_chat.svg
+  SvgGenImage get iconChat => const SvgGenImage('assets/icons/icon_chat.svg');
 
   /// File path: assets/icons/icon_comment.svg
   SvgGenImage get iconComment =>
@@ -93,7 +100,9 @@ class $AssetsIconsGen {
         arrowLeft,
         home,
         homeLogo,
+        iconArrowRight,
         iconBag,
+        iconChat,
         iconComment,
         iconEdit,
         iconHeart,
