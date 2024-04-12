@@ -53,7 +53,7 @@ class UserInfoModel with _$UserInfoModel {
     @JsonKey(name: 'whatsapp_url') String? whatsappUrl,
     @JsonKey(name: 'zalo_url') String? zaloUrl,
     @JsonKey(name: 'twitter_url') String? twitterUrl,
-    int? point,
+    @Default(0) int? point,
   }) = _UserInfoModel;
 
   factory UserInfoModel.fromJson(Map<String, Object?> json) =>

@@ -17,14 +17,15 @@ class BlogDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MyScaffold(
       useAppBar: true,
-      titleWidget: Assets.icons.logos.homeLogo.svg(),
-      appBarTitle: appLocal(context).myAiCharacter,
+      canBack: true,
+      // titleWidget: Assets.icons.logos.homeLogo.svg(),
+      appBarTitle: blog.title,
       body: Column(
         children: [
-          Text(
-            blog.title,
-            style: AppFont().fontTheme(context).titleSmall,
-          ),
+          // Text(
+          //   blog.title,
+          //   style: AppFont().fontTheme(context).titleSmall,
+          // ),
           Expanded(
             child: Markdown(
               selectable: true,

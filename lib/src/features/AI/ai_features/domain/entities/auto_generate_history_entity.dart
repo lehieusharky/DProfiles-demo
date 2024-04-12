@@ -1,8 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/auto_generate_history_model.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
+import 'package:demo_dprofiles/src/utils/constant/ai_features_type.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:flutter/material.dart';
 
@@ -15,21 +18,27 @@ extension AutoGenerateHistoryModelExt on AutoGenerateHistoryModel {
         children: [
           Padding(
             padding: context.padding(bottom: 4),
-            child: Container(
-              padding: context.padding(all: 12),
-              decoration: BoxDecoration(
-                color: colorScheme(context).outlineVariant.withOpacity(0.05),
-                border: Border.all(
-                    color:
-                        colorScheme(context).outlineVariant.withOpacity(0.3)),
-                borderRadius: BorderRadius.circular(8),
+            child: InkWell(
+              onTap: () => context.router.push(
+                AutoGenerationHistoryDetailRoute(
+                    type: _type(context), id: id ?? 0),
               ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  _buildTopic(context),
-                  _buildPrompt(context),
-                ],
+              child: Container(
+                padding: context.padding(all: 12),
+                decoration: BoxDecoration(
+                  color: colorScheme(context).outlineVariant.withOpacity(0.05),
+                  border: Border.all(
+                      color:
+                          colorScheme(context).outlineVariant.withOpacity(0.3)),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _buildTopic(context),
+                    _buildPrompt(context),
+                  ],
+                ),
               ),
             ),
           ),
@@ -58,7 +67,7 @@ extension AutoGenerateHistoryModelExt on AutoGenerateHistoryModel {
         ),
         if (historyType != null)
           Expanded(
-            child: Text(historyType!,
+            child: Text(_type(context).getTitle(context),
                 style: AppFont()
                     .fontTheme(context, color: colorScheme(context).primary)
                     .bodyLarge),
@@ -75,7 +84,7 @@ extension AutoGenerateHistoryModelExt on AutoGenerateHistoryModel {
         children: [
           SizedBox(
             width: context.sizeWidth(80),
-            child: Text(appLocal(context).prompt,
+            child: Text(_type(context).getPrompt(context),
                 style: AppFont()
                     .fontTheme(context,
                         weight: FontWeight.w600,
@@ -94,5 +103,15 @@ extension AutoGenerateHistoryModelExt on AutoGenerateHistoryModel {
         ],
       ),
     );
+  }
+
+  AiFeatureTypes _type(BuildContext context) {
+    return switch (historyType) {
+      'INTERVIEW_QUESTION' => AiFeatureTypes.interviewQuestion,
+      'INTRODUCTION' => AiFeatureTypes.profileIntroduction,
+      'COVER_LETTER' => AiFeatureTypes.coverLetter,
+      'SKILL_KNOWLEDGE' => AiFeatureTypes.skillKnowledge,
+      _ => AiFeatureTypes.profileIntroduction,
+    };
   }
 }

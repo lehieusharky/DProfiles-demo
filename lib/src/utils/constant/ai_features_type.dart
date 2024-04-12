@@ -52,4 +52,13 @@ extension AiFeatureTypesExt on AiFeatureTypes {
       AiFeatureTypes.interviewQuestion => const WriteInterviewQuestionRoute(),
     };
   }
+
+  String getPrompt(BuildContext context) {
+    return switch (this) {
+      AiFeatureTypes.profileIntroduction => 'About Yourself',
+      AiFeatureTypes.coverLetter => 'Job title',
+      AiFeatureTypes.skillKnowledge => 'Job title',
+      AiFeatureTypes.interviewQuestion => 'Interview Question',
+    };
+  }
 }

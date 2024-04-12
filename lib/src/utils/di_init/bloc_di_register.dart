@@ -13,7 +13,8 @@ class BlocDI {
 
   static Future<void> init(GetIt injector) async {
     injector.registerFactory<AiFeaturesBloc>(
-      () => AiFeaturesBloc(injector.get<AutoGenerateUseCase>()),
+      () => AiFeaturesBloc(
+          injector.get<AutoGenerateUseCase>(), injector.get<ProfileUseCase>()),
     );
 
     injector.registerFactory<AiCharacterBloc>(

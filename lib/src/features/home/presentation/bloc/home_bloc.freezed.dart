@@ -16,43 +16,49 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$HomeEvent {
-  int get page => throw _privateConstructorUsedError;
-  int get limit => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(int page, int limit) getFeeds,
+    required TResult Function() getFeeds,
+    required TResult Function() refreshNewsFeed,
+    required TResult Function() loadMoreNewsFeed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int page, int limit)? getFeeds,
+    TResult? Function()? getFeeds,
+    TResult? Function()? refreshNewsFeed,
+    TResult? Function()? loadMoreNewsFeed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int page, int limit)? getFeeds,
+    TResult Function()? getFeeds,
+    TResult Function()? refreshNewsFeed,
+    TResult Function()? loadMoreNewsFeed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(HomeGetFeeds value) getFeeds,
+    required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
+    required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(HomeGetFeeds value)? getFeeds,
+    TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
+    TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(HomeGetFeeds value)? getFeeds,
+    TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
+    TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $HomeEventCopyWith<HomeEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -60,8 +66,6 @@ mixin _$HomeEvent {
 abstract class $HomeEventCopyWith<$Res> {
   factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) =
       _$HomeEventCopyWithImpl<$Res, HomeEvent>;
-  @useResult
-  $Res call({int page, int limit});
 }
 
 /// @nodoc
@@ -73,35 +77,13 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? page = null,
-    Object? limit = null,
-  }) {
-    return _then(_value.copyWith(
-      page: null == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int,
-      limit: null == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$HomeGetFeedsImplCopyWith<$Res>
-    implements $HomeEventCopyWith<$Res> {
+abstract class _$$HomeGetFeedsImplCopyWith<$Res> {
   factory _$$HomeGetFeedsImplCopyWith(
           _$HomeGetFeedsImpl value, $Res Function(_$HomeGetFeedsImpl) then) =
       __$$HomeGetFeedsImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int page, int limit});
 }
 
 /// @nodoc
@@ -111,83 +93,57 @@ class __$$HomeGetFeedsImplCopyWithImpl<$Res>
   __$$HomeGetFeedsImplCopyWithImpl(
       _$HomeGetFeedsImpl _value, $Res Function(_$HomeGetFeedsImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? page = null,
-    Object? limit = null,
-  }) {
-    return _then(_$HomeGetFeedsImpl(
-      null == page
-          ? _value.page
-          : page // ignore: cast_nullable_to_non_nullable
-              as int,
-      null == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$HomeGetFeedsImpl implements HomeGetFeeds {
-  const _$HomeGetFeedsImpl(this.page, this.limit);
-
-  @override
-  final int page;
-  @override
-  final int limit;
+  const _$HomeGetFeedsImpl();
 
   @override
   String toString() {
-    return 'HomeEvent.getFeeds(page: $page, limit: $limit)';
+    return 'HomeEvent.getFeeds()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$HomeGetFeedsImpl &&
-            (identical(other.page, page) || other.page == page) &&
-            (identical(other.limit, limit) || other.limit == limit));
+        (other.runtimeType == runtimeType && other is _$HomeGetFeedsImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, page, limit);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$HomeGetFeedsImplCopyWith<_$HomeGetFeedsImpl> get copyWith =>
-      __$$HomeGetFeedsImplCopyWithImpl<_$HomeGetFeedsImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(int page, int limit) getFeeds,
+    required TResult Function() getFeeds,
+    required TResult Function() refreshNewsFeed,
+    required TResult Function() loadMoreNewsFeed,
   }) {
-    return getFeeds(page, limit);
+    return getFeeds();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int page, int limit)? getFeeds,
+    TResult? Function()? getFeeds,
+    TResult? Function()? refreshNewsFeed,
+    TResult? Function()? loadMoreNewsFeed,
   }) {
-    return getFeeds?.call(page, limit);
+    return getFeeds?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int page, int limit)? getFeeds,
+    TResult Function()? getFeeds,
+    TResult Function()? refreshNewsFeed,
+    TResult Function()? loadMoreNewsFeed,
     required TResult orElse(),
   }) {
     if (getFeeds != null) {
-      return getFeeds(page, limit);
+      return getFeeds();
     }
     return orElse();
   }
@@ -196,6 +152,8 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(HomeGetFeeds value) getFeeds,
+    required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
+    required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
   }) {
     return getFeeds(this);
   }
@@ -204,6 +162,8 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(HomeGetFeeds value)? getFeeds,
+    TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
+    TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
   }) {
     return getFeeds?.call(this);
   }
@@ -212,6 +172,8 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(HomeGetFeeds value)? getFeeds,
+    TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
+    TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
     required TResult orElse(),
   }) {
     if (getFeeds != null) {
@@ -222,17 +184,225 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
 }
 
 abstract class HomeGetFeeds implements HomeEvent {
-  const factory HomeGetFeeds(final int page, final int limit) =
-      _$HomeGetFeedsImpl;
+  const factory HomeGetFeeds() = _$HomeGetFeedsImpl;
+}
+
+/// @nodoc
+abstract class _$$HomeRefreshNewsFeedImplCopyWith<$Res> {
+  factory _$$HomeRefreshNewsFeedImplCopyWith(_$HomeRefreshNewsFeedImpl value,
+          $Res Function(_$HomeRefreshNewsFeedImpl) then) =
+      __$$HomeRefreshNewsFeedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$HomeRefreshNewsFeedImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$HomeRefreshNewsFeedImpl>
+    implements _$$HomeRefreshNewsFeedImplCopyWith<$Res> {
+  __$$HomeRefreshNewsFeedImplCopyWithImpl(_$HomeRefreshNewsFeedImpl _value,
+      $Res Function(_$HomeRefreshNewsFeedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
+  const _$HomeRefreshNewsFeedImpl();
 
   @override
-  int get page;
+  String toString() {
+    return 'HomeEvent.refreshNewsFeed()';
+  }
+
   @override
-  int get limit;
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeRefreshNewsFeedImpl);
+  }
+
   @override
-  @JsonKey(ignore: true)
-  _$$HomeGetFeedsImplCopyWith<_$HomeGetFeedsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getFeeds,
+    required TResult Function() refreshNewsFeed,
+    required TResult Function() loadMoreNewsFeed,
+  }) {
+    return refreshNewsFeed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getFeeds,
+    TResult? Function()? refreshNewsFeed,
+    TResult? Function()? loadMoreNewsFeed,
+  }) {
+    return refreshNewsFeed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getFeeds,
+    TResult Function()? refreshNewsFeed,
+    TResult Function()? loadMoreNewsFeed,
+    required TResult orElse(),
+  }) {
+    if (refreshNewsFeed != null) {
+      return refreshNewsFeed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeGetFeeds value) getFeeds,
+    required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
+    required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
+  }) {
+    return refreshNewsFeed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomeGetFeeds value)? getFeeds,
+    TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
+    TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+  }) {
+    return refreshNewsFeed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeGetFeeds value)? getFeeds,
+    TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
+    TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    required TResult orElse(),
+  }) {
+    if (refreshNewsFeed != null) {
+      return refreshNewsFeed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeRefreshNewsFeed implements HomeEvent {
+  const factory HomeRefreshNewsFeed() = _$HomeRefreshNewsFeedImpl;
+}
+
+/// @nodoc
+abstract class _$$HomeLoadMoreNewsFeedImplCopyWith<$Res> {
+  factory _$$HomeLoadMoreNewsFeedImplCopyWith(_$HomeLoadMoreNewsFeedImpl value,
+          $Res Function(_$HomeLoadMoreNewsFeedImpl) then) =
+      __$$HomeLoadMoreNewsFeedImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$HomeLoadMoreNewsFeedImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$HomeLoadMoreNewsFeedImpl>
+    implements _$$HomeLoadMoreNewsFeedImplCopyWith<$Res> {
+  __$$HomeLoadMoreNewsFeedImplCopyWithImpl(_$HomeLoadMoreNewsFeedImpl _value,
+      $Res Function(_$HomeLoadMoreNewsFeedImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
+  const _$HomeLoadMoreNewsFeedImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.loadMoreNewsFeed()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeLoadMoreNewsFeedImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getFeeds,
+    required TResult Function() refreshNewsFeed,
+    required TResult Function() loadMoreNewsFeed,
+  }) {
+    return loadMoreNewsFeed();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getFeeds,
+    TResult? Function()? refreshNewsFeed,
+    TResult? Function()? loadMoreNewsFeed,
+  }) {
+    return loadMoreNewsFeed?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getFeeds,
+    TResult Function()? refreshNewsFeed,
+    TResult Function()? loadMoreNewsFeed,
+    required TResult orElse(),
+  }) {
+    if (loadMoreNewsFeed != null) {
+      return loadMoreNewsFeed();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeGetFeeds value) getFeeds,
+    required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
+    required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
+  }) {
+    return loadMoreNewsFeed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomeGetFeeds value)? getFeeds,
+    TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
+    TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+  }) {
+    return loadMoreNewsFeed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeGetFeeds value)? getFeeds,
+    TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
+    TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    required TResult orElse(),
+  }) {
+    if (loadMoreNewsFeed != null) {
+      return loadMoreNewsFeed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeLoadMoreNewsFeed implements HomeEvent {
+  const factory HomeLoadMoreNewsFeed() = _$HomeLoadMoreNewsFeedImpl;
 }
 
 /// @nodoc

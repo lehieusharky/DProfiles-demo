@@ -13,7 +13,7 @@ class ChatGPTSelector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.padding(horizontal: 60, vertical: 8),
+      padding: context.padding(horizontal: 60, vertical: 8, top: 5),
       child: Container(
         height: context.sizeHeight(45),
         padding: context.padding(all: 6),

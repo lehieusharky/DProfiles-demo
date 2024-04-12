@@ -162,7 +162,7 @@ class __$$WriteProfileIntroductionModelImplCopyWithImpl<$Res>
 class _$WriteProfileIntroductionModelImpl
     implements _WriteProfileIntroductionModel {
   const _$WriteProfileIntroductionModelImpl(
-      {@JsonKey(name: 'max_token') this.maxToken = 0,
+      {@JsonKey(name: 'max_token') this.maxToken = 10,
       this.summary,
       this.style,
       @JsonKey(name: 'gpt_model') this.gptModel = 3,

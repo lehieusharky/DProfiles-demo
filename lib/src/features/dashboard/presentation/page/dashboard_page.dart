@@ -2,11 +2,13 @@ import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_appbar.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_extension.dart';
-import 'package:demo_dprofiles/src/features/dashboard/presentation/widgets/home_drawer.dart';
+import 'package:demo_dprofiles/src/features/dashboard/presentation/widgets/dashboard_end_drawer.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
+import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:hidable/hidable.dart';
+import 'package:sidebarx/sidebarx.dart';
 
 @RoutePage()
 class DashboardPage extends StatefulWidget {
@@ -36,8 +38,12 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: MyAppbar(titleWidget: Assets.icons.logos.dWhitePWhite.svg()),
-      endDrawer: const DashboardEndDrawer(),
+      appBar: MyAppbar(
+        titleWidget: Assets.icons.logos.dWhitePWhite.svg(),
+        height: 50,
+        action: [],
+      ),
+      // endDrawer: const DashboardEndDrawer(),
       body: PageView(
         onPageChanged: (index) => _onNavigate(index),
         controller: _pageController,
@@ -45,7 +51,7 @@ class _DashboardPageState extends State<DashboardPage> {
       ),
       bottomNavigationBar: Hidable(
         preferredWidgetSize: Size.fromHeight(context.sizeHeight(60)),
-        deltaFactor: 0.08,
+        deltaFactor: 0.1,
         controller: _scrollController,
         child: BottomNavigationBar(
           items: widget.items(context, _currentIndex),

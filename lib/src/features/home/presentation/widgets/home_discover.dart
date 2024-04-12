@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/features/blogs/blogs.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/news_feed_home.dart';
 import 'package:flutter/material.dart';
 
@@ -11,8 +12,8 @@ class HomeDiscover extends StatelessWidget {
       physics: AlwaysScrollableScrollPhysics(),
       children: [
         NewsFeedHome(),
-        Text('Blog'),
         // BlogListPage(),
+        Text('Blog')
       ],
     );
   }

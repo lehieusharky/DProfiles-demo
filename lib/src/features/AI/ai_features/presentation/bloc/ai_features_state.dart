@@ -24,4 +24,11 @@ class AiFeaturesState with _$AiFeaturesState {
 
   const factory AiFeaturesState.generateCoverLetterSuccess(String data) =
       GenerateCoverLetterSuccess;
+
+  const factory AiFeaturesState.getAutoGenerateHistoryDetailSuccess(
+          AutoGenerateHistoryModel autoGenerateHistoryDetail) =
+      GetAutoGenerateHistoryDetailSuccess;
+
+  const factory AiFeaturesState.getCurrentPointOfUserSuccess(int point) =
+  GetCurrentPointOfUserSuccess;
 }

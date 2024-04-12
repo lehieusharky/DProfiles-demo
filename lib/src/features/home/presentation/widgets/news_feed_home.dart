@@ -8,11 +8,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
-class NewsFeedHome extends StatelessWidget {
+class NewsFeedHome extends StatefulWidget {
   const NewsFeedHome({super.key});
 
   @override
+  State<NewsFeedHome> createState() => _NewsFeedHomeState();
+}
+
+class _NewsFeedHomeState extends State<NewsFeedHome>
+    with AutomaticKeepAliveClientMixin {
+  @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocSelector<HomeBloc, HomeState, List<NewFeedModel>?>(
       selector: (state) {
         if (state is HomeGetFeedsSuccess) {
@@ -26,32 +33,39 @@ class NewsFeedHome extends StatelessWidget {
           return const MyShimmer(count: 4, height: 200);
         }
 
-        return AnimationLimiter(
-          child: ListView.separated(
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: state.length,
-            itemBuilder: (BuildContext context, int index) {
-              return AnimationConfiguration.staggeredList(
-                position: index,
-                delay: const Duration(milliseconds: 100),
-                child: SlideAnimation(
-                  duration: const Duration(milliseconds: 2500),
-                  curve: Curves.fastLinearToSlowEaseIn,
-                  child: FadeInAnimation(
-                    curve: Curves.fastLinearToSlowEaseIn,
-                    duration: const Duration(milliseconds: 2500),
-                    child: state[index].toWidget(context),
-                  ),
-                ),
-              );
-            },
-            separatorBuilder: (BuildContext context, int index) => MyDivider(
-              thickness: 10,
-              color: colorScheme(context).outlineVariant.withOpacity(0.3),
-            ),
-          ),
-        );
+        return _buildBody(state);
       },
     );
   }
+
+  Widget _buildBody(List<NewFeedModel> state) {
+    return AnimationLimiter(
+      child: ListView.separated(
+        physics: const NeverScrollableScrollPhysics(),
+        itemCount: state.length,
+        itemBuilder: (BuildContext context, int index) {
+          return AnimationConfiguration.staggeredList(
+            position: index,
+            delay: const Duration(milliseconds: 100),
+            child: SlideAnimation(
+              duration: const Duration(milliseconds: 2500),
+              curve: Curves.fastLinearToSlowEaseIn,
+              child: FadeInAnimation(
+                curve: Curves.fastLinearToSlowEaseIn,
+                duration: const Duration(milliseconds: 2500),
+                child: state[index].toWidget(context),
+              ),
+            ),
+          );
+        },
+        separatorBuilder: (BuildContext context, int index) => MyDivider(
+          thickness: 10,
+          color: colorScheme(context).outlineVariant.withOpacity(0.3),
+        ),
+      ),
+    );
+  }
+
+  @override
+  bool get wantKeepAlive => true;
 }

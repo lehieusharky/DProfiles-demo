@@ -804,7 +804,7 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<BaseResponse> getAutoGenerateHistoryItem(String id) async {
+  Future<BaseResponse> getAutoGenerateHistoryItem(int id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

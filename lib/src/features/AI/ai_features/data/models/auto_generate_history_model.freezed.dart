@@ -404,6 +404,9 @@ Prompt _$PromptFromJson(Map<String, dynamic> json) {
 mixin _$Prompt {
   String? get summary => throw _privateConstructorUsedError;
   String? get style => throw _privateConstructorUsedError;
+  @JsonKey(name: 'job_title')
+  String? get jobTitle => throw _privateConstructorUsedError;
+  String? get about => throw _privateConstructorUsedError;
   @JsonKey(name: 'max_token')
   int? get maxToken => throw _privateConstructorUsedError;
 
@@ -420,6 +423,8 @@ abstract class $PromptCopyWith<$Res> {
   $Res call(
       {String? summary,
       String? style,
+      @JsonKey(name: 'job_title') String? jobTitle,
+      String? about,
       @JsonKey(name: 'max_token') int? maxToken});
 }
 
@@ -438,6 +443,8 @@ class _$PromptCopyWithImpl<$Res, $Val extends Prompt>
   $Res call({
     Object? summary = freezed,
     Object? style = freezed,
+    Object? jobTitle = freezed,
+    Object? about = freezed,
     Object? maxToken = freezed,
   }) {
     return _then(_value.copyWith(
@@ -448,6 +455,14 @@ class _$PromptCopyWithImpl<$Res, $Val extends Prompt>
       style: freezed == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
+              as String?,
+      jobTitle: freezed == jobTitle
+          ? _value.jobTitle
+          : jobTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      about: freezed == about
+          ? _value.about
+          : about // ignore: cast_nullable_to_non_nullable
               as String?,
       maxToken: freezed == maxToken
           ? _value.maxToken
@@ -467,6 +482,8 @@ abstract class _$$PromptImplCopyWith<$Res> implements $PromptCopyWith<$Res> {
   $Res call(
       {String? summary,
       String? style,
+      @JsonKey(name: 'job_title') String? jobTitle,
+      String? about,
       @JsonKey(name: 'max_token') int? maxToken});
 }
 
@@ -483,6 +500,8 @@ class __$$PromptImplCopyWithImpl<$Res>
   $Res call({
     Object? summary = freezed,
     Object? style = freezed,
+    Object? jobTitle = freezed,
+    Object? about = freezed,
     Object? maxToken = freezed,
   }) {
     return _then(_$PromptImpl(
@@ -493,6 +512,14 @@ class __$$PromptImplCopyWithImpl<$Res>
       style: freezed == style
           ? _value.style
           : style // ignore: cast_nullable_to_non_nullable
+              as String?,
+      jobTitle: freezed == jobTitle
+          ? _value.jobTitle
+          : jobTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      about: freezed == about
+          ? _value.about
+          : about // ignore: cast_nullable_to_non_nullable
               as String?,
       maxToken: freezed == maxToken
           ? _value.maxToken
@@ -506,7 +533,11 @@ class __$$PromptImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PromptImpl implements _Prompt {
   const _$PromptImpl(
-      {this.summary, this.style, @JsonKey(name: 'max_token') this.maxToken});
+      {this.summary,
+      this.style,
+      @JsonKey(name: 'job_title') this.jobTitle,
+      this.about,
+      @JsonKey(name: 'max_token') this.maxToken});
 
   factory _$PromptImpl.fromJson(Map<String, dynamic> json) =>
       _$$PromptImplFromJson(json);
@@ -516,12 +547,17 @@ class _$PromptImpl implements _Prompt {
   @override
   final String? style;
   @override
+  @JsonKey(name: 'job_title')
+  final String? jobTitle;
+  @override
+  final String? about;
+  @override
   @JsonKey(name: 'max_token')
   final int? maxToken;
 
   @override
   String toString() {
-    return 'Prompt(summary: $summary, style: $style, maxToken: $maxToken)';
+    return 'Prompt(summary: $summary, style: $style, jobTitle: $jobTitle, about: $about, maxToken: $maxToken)';
   }
 
   @override
@@ -531,13 +567,17 @@ class _$PromptImpl implements _Prompt {
             other is _$PromptImpl &&
             (identical(other.summary, summary) || other.summary == summary) &&
             (identical(other.style, style) || other.style == style) &&
+            (identical(other.jobTitle, jobTitle) ||
+                other.jobTitle == jobTitle) &&
+            (identical(other.about, about) || other.about == about) &&
             (identical(other.maxToken, maxToken) ||
                 other.maxToken == maxToken));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, summary, style, maxToken);
+  int get hashCode =>
+      Object.hash(runtimeType, summary, style, jobTitle, about, maxToken);
 
   @JsonKey(ignore: true)
   @override
@@ -557,6 +597,8 @@ abstract class _Prompt implements Prompt {
   const factory _Prompt(
       {final String? summary,
       final String? style,
+      @JsonKey(name: 'job_title') final String? jobTitle,
+      final String? about,
       @JsonKey(name: 'max_token') final int? maxToken}) = _$PromptImpl;
 
   factory _Prompt.fromJson(Map<String, dynamic> json) = _$PromptImpl.fromJson;
@@ -565,6 +607,11 @@ abstract class _Prompt implements Prompt {
   String? get summary;
   @override
   String? get style;
+  @override
+  @JsonKey(name: 'job_title')
+  String? get jobTitle;
+  @override
+  String? get about;
   @override
   @JsonKey(name: 'max_token')
   int? get maxToken;

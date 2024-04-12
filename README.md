@@ -46,4 +46,11 @@ flutter packages pub run build_runner watch
 fluttergen -c pubspec.yaml
 ```
 
-# usecase , repo cubit, stretch
+
+```agsl
+- before create dProfile have to connect wallet
+
+- point
+
+
+```

@@ -8,7 +8,7 @@ class AiFeaturesEvent with _$AiFeaturesEvent {
       GetAutoGenerateHistory;
 
   const factory AiFeaturesEvent.generateProfileIntroduction(
-      WriteProfileIntroductionModel profileIntroductionModel) =
+          WriteProfileIntroductionModel profileIntroductionModel) =
       GenerateProfileIntroduction;
 
   const factory AiFeaturesEvent.generateInterviewQuestion(
@@ -21,5 +21,8 @@ class AiFeaturesEvent with _$AiFeaturesEvent {
   const factory AiFeaturesEvent.generateCoverLetter(
       WriteCoverLetterModel coverLetterModel) = GenerateCoverLetter;
 
+  const factory AiFeaturesEvent.getAutoGenerateHistoryDetail(int id) =
+      GetAutoGenerateHistoryDetail;
 
+  const factory AiFeaturesEvent.getCurrentPointOfUser() = GetCurrentPointOfUser;
 }

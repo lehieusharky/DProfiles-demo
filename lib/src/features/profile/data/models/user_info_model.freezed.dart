@@ -779,7 +779,7 @@ class _$UserInfoModelImpl implements _UserInfoModel {
       @JsonKey(name: 'whatsapp_url') this.whatsappUrl,
       @JsonKey(name: 'zalo_url') this.zaloUrl,
       @JsonKey(name: 'twitter_url') this.twitterUrl,
-      this.point});
+      this.point = 0});
 
   factory _$UserInfoModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserInfoModelImplFromJson(json);
@@ -913,6 +913,7 @@ class _$UserInfoModelImpl implements _UserInfoModel {
   @JsonKey(name: 'twitter_url')
   final String? twitterUrl;
   @override
+  @JsonKey()
   final int? point;
 
   @override

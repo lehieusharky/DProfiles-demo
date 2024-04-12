@@ -33,6 +33,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ai_tools.svg
   SvgGenImage get aiTools => const SvgGenImage('assets/icons/ai_tools.svg');
 
+  /// File path: assets/icons/appstore.png
+  AssetGenImage get appstore =>
+      const AssetGenImage('assets/icons/appstore.png');
+
   /// File path: assets/icons/arrow_left.svg
   SvgGenImage get arrowLeft => const SvgGenImage('assets/icons/arrow_left.svg');
 
@@ -43,14 +47,51 @@ class $AssetsIconsGen {
   AssetGenImage get homeLogo =>
       const AssetGenImage('assets/icons/home_logo.png');
 
+  /// File path: assets/icons/icon_comment.svg
+  SvgGenImage get iconComment =>
+      const SvgGenImage('assets/icons/icon_comment.svg');
+
+  /// File path: assets/icons/icon_heart.svg
+  SvgGenImage get iconHeart => const SvgGenImage('assets/icons/icon_heart.svg');
+
+  /// File path: assets/icons/icon_menu.svg
+  SvgGenImage get iconMenu => const SvgGenImage('assets/icons/icon_menu.svg');
+
+  /// File path: assets/icons/icon_more.svg
+  SvgGenImage get iconMore => const SvgGenImage('assets/icons/icon_more.svg');
+
+  /// File path: assets/icons/icon_search.svg
+  SvgGenImage get iconSearch =>
+      const SvgGenImage('assets/icons/icon_search.svg');
+
+  /// File path: assets/icons/icon_share.svg
+  SvgGenImage get iconShare => const SvgGenImage('assets/icons/icon_share.svg');
+
   $AssetsIconsLogosGen get logos => const $AssetsIconsLogosGen();
 
   /// File path: assets/icons/profile.svg
   SvgGenImage get profile => const SvgGenImage('assets/icons/profile.svg');
 
+  /// File path: assets/icons/wallet.svg
+  SvgGenImage get wallet => const SvgGenImage('assets/icons/wallet.svg');
+
   /// List of all assets
-  List<dynamic> get values =>
-      [aiCharacter, aiTools, arrowLeft, home, homeLogo, profile];
+  List<dynamic> get values => [
+        aiCharacter,
+        aiTools,
+        appstore,
+        arrowLeft,
+        home,
+        homeLogo,
+        iconComment,
+        iconHeart,
+        iconMenu,
+        iconMore,
+        iconSearch,
+        iconShare,
+        profile,
+        wallet
+      ];
 }
 
 class $AssetsImagesGen {
@@ -91,6 +132,10 @@ class $AssetsIconsLogosGen {
   SvgGenImage get dWhitePWhite =>
       const SvgGenImage('assets/icons/logos/d_white_P_white.svg');
 
+  /// File path: assets/icons/logos/d_white_p_white_dprofile_green.png
+  AssetGenImage get dWhitePWhiteDprofileGreen => const AssetGenImage(
+      'assets/icons/logos/d_white_p_white_dprofile_green.png');
+
   /// File path: assets/icons/logos/dprofiles_black.svg
   SvgGenImage get dprofilesBlack =>
       const SvgGenImage('assets/icons/logos/dprofiles_black.svg');
@@ -112,12 +157,13 @@ class $AssetsIconsLogosGen {
       const SvgGenImage('assets/icons/logos/talent_up_logo.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [
+  List<dynamic> get values => [
         copyIcon,
         dGreyProfileGreen,
         dGreyProfileGreenLogo,
         dWhitePGreen,
         dWhitePWhite,
+        dWhitePWhiteDprofileGreen,
         dprofilesBlack,
         homeLogo,
         myWalletLogo,

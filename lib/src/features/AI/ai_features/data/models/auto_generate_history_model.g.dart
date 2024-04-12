@@ -43,6 +43,8 @@ Map<String, dynamic> _$$AutoGenerateHistoryModelImplToJson(
 _$PromptImpl _$$PromptImplFromJson(Map<String, dynamic> json) => _$PromptImpl(
       summary: json['summary'] as String?,
       style: json['style'] as String?,
+      jobTitle: json['job_title'] as String?,
+      about: json['about'] as String?,
       maxToken: json['max_token'] as int?,
     );
 
@@ -50,5 +52,7 @@ Map<String, dynamic> _$$PromptImplToJson(_$PromptImpl instance) =>
     <String, dynamic>{
       'summary': instance.summary,
       'style': instance.style,
+      'job_title': instance.jobTitle,
+      'about': instance.about,
       'max_token': instance.maxToken,
     };

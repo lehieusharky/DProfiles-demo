@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_cover_letter_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_interview_question_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_profile_introduction_model.dart';
@@ -9,9 +8,10 @@ import 'package:demo_dprofiles/src/features/auth/data/models/auth_error_response
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:injectable/injectable.dart';
 
-
 abstract class AutoGenerateUseCase {
   Future<Either<String, BaseResponse>> getAutoGenerateHistory();
+
+  Future<Either<String, BaseResponse>> getAutoGenerateHistoryDetail(int id);
 
   Future<Either<String, BaseResponse>> generateProfileIntroduction(
       WriteProfileIntroductionModel model);
@@ -81,6 +81,18 @@ class AutoGenerateUseCaseImpl implements AutoGenerateUseCase {
   Future<Either<String, BaseResponse>> generateSkillKnowledge(
       WriteSkillKnowledgeModel model) async {
     final result = await _autoGenerateRepository.generateSkillKnowledge(model);
+
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message!),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> getAutoGenerateHistoryDetail(
+      int id) async {
+    final result =
+        await _autoGenerateRepository.getAutoGenerateHistoryDetail(id);
 
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message!),

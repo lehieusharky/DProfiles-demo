@@ -54,7 +54,7 @@ _$UserInfoModelImpl _$$UserInfoModelImplFromJson(Map<String, dynamic> json) =>
       whatsappUrl: json['whatsapp_url'] as String?,
       zaloUrl: json['zalo_url'] as String?,
       twitterUrl: json['twitter_url'] as String?,
-      point: json['point'] as int?,
+      point: json['point'] as int? ?? 0,
     );
 
 Map<String, dynamic> _$$UserInfoModelImplToJson(_$UserInfoModelImpl instance) =>

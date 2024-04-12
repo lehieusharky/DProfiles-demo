@@ -19,6 +19,7 @@ class MyScaffold extends StatelessWidget {
   final bool? isLoading;
   final Widget? endDrawer;
   final GlobalKey<ScaffoldState>? sKey;
+  final bool? resizeToAvoidBottomInset;
 
   const MyScaffold({
     Key? key,
@@ -37,13 +38,14 @@ class MyScaffold extends StatelessWidget {
     this.isLoading,
     this.endDrawer,
     this.sKey,
+    this.resizeToAvoidBottomInset,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: sKey,
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: resizeToAvoidBottomInset ?? true,
       backgroundColor: backgroundColor,
       endDrawer: endDrawer,
       appBar: useAppBar == true || canBack == true

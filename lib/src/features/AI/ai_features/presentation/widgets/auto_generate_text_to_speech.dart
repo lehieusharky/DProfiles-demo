@@ -3,8 +3,10 @@ import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:demo_dprofiles/src/utils/services/app_clipboard_service.dart';
+import 'package:demo_dprofiles/src/utils/services/tts_service.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
@@ -35,7 +37,7 @@ class _AutoGenerateTextToSpeechState extends State<AutoGenerateTextToSpeech> {
   }
 
   dynamic initTts() {
-    tts = FlutterTts();
+    tts = TtsService().tts;
 
     tts.setProgressHandler((text, start, end, word) {
       setState(() {
@@ -55,7 +57,6 @@ class _AutoGenerateTextToSpeechState extends State<AutoGenerateTextToSpeech> {
           ? [
               _buildTitle(),
               _buildBody(),
-              _buildActionButton(),
             ]
           : [],
     );
@@ -66,7 +67,9 @@ class _AutoGenerateTextToSpeechState extends State<AutoGenerateTextToSpeech> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Assets.images.aiFeatures.chatGpt.image(
-            width: context.sizeWidth(30), height: context.sizeHeight(30)),
+          width: context.sizeWidth(30),
+          height: context.sizeHeight(30),
+        ),
         if (widget.createAt != null)
           Padding(
             padding: context.padding(left: 4),
@@ -128,34 +131,17 @@ class _AutoGenerateTextToSpeechState extends State<AutoGenerateTextToSpeech> {
     );
   }
 
-  Widget _buildActionButton() {
-    return Padding(
-      padding: context.padding(top: 12, bottom: 24),
-      child: Row(
-        children: [
-          AppOutlineButton(context).elevatedButton(
-            onPressed: () async => await AppClipboardService()
-                .copyTextToClipboard(widget.textGenerated ?? ''),
-            title: appLocal(context).writeAgain,
-          ),
-          Padding(
-            padding: context.padding(left: 4),
-            child: AppOutlineButton(context).elevatedButton(
-              width: context.sizeWidth(100),
-              onPressed: () {},
-              title: appLocal(context).copy,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
   Future<void> _speak() async {
     if (widget.textGenerated != null) {
       if (widget.textGenerated!.isNotEmpty) {
         await tts.speak(widget.textGenerated!);
       }
     }
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    tts.stop();
   }
 }
