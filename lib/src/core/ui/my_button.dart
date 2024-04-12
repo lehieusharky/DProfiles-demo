@@ -18,6 +18,7 @@ class MyButton extends StatelessWidget {
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final Widget? child;
+  final bool enabled;
 
   const MyButton({
     Key? key,
@@ -35,13 +36,14 @@ class MyButton extends StatelessWidget {
     this.prefixIcon,
     this.suffixIcon,
     this.child,
+    this.enabled = true,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: onPressed,
-      onLongPress: onLongPressed,
+      onPressed: enabled ? onPressed : null,
+      onLongPress: enabled ? onLongPressed : null,
       style: ElevatedButton.styleFrom(
         backgroundColor: backgroundColor ?? colorScheme(context).primary,
         foregroundColor: backgroundColor == null ? Colors.white : titleColor,
@@ -53,21 +55,29 @@ class MyButton extends StatelessWidget {
       ),
       child: child != null
           ? Padding(padding: context.padding(vertical: 3), child: child)
-          : Padding(
-              padding: context.padding(vertical: 5),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  prefixIcon ?? SizedBox.fromSize(),
-                  Padding(
-                    padding: context.padding(
-                        horizontal:
-                            prefixIcon == null && suffixIcon == null ? 0 : 5),
-                    child: Text(title!),
-                  ),
-                  suffixIcon ?? SizedBox.fromSize(),
-                ],
+          : Opacity(
+              opacity: enabled ? 1.0 : 0.5,
+              child: Padding(
+                padding: context.padding(vertical: 5),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    prefixIcon ?? SizedBox.fromSize(),
+                    Padding(
+                      padding: context.padding(
+                          horizontal:
+                              prefixIcon == null && suffixIcon == null ? 0 : 5),
+                      child: Text(
+                        title!,
+                        style: enabled
+                            ? titleStyle
+                            : titleStyle?.copyWith(color: Colors.grey),
+                      ),
+                    ),
+                    suffixIcon ?? SizedBox.fromSize(),
+                  ],
+                ),
               ),
             ),
     );
