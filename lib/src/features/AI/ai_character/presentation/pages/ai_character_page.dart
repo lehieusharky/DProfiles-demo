@@ -54,7 +54,7 @@ class _AiCharacterPageState extends State<AiCharacterPage>
                       onPressed: () =>
                           context.router.push(const CreateAiCharacterRoute())),
                   TabBarAICharacter(controller: _tabController),
-                  PopularCharacterBots(),
+                  const PopularCharacterBots(),
                 ],
               ),
             ),

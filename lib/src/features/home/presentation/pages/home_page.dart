@@ -8,7 +8,6 @@ import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_tab_b
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/title_home.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -42,7 +41,7 @@ class _HomePageState extends State<HomePage>
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 TitleHome(title: 'Discover'),
-                HomeTabBar(),
+                TabBarHome(),
                 Expanded(child: HomeDiscover()),
               ],
             ),

@@ -47,6 +47,7 @@ class MyShimmer extends StatelessWidget {
                         Tuple3((Random().nextInt(130) + 80), 15, ''),
                         Tuple3((Random().nextInt(130) + 80), 8, ''),
                         Tuple3((Random().nextInt(130) + 80), 15, ''),
+                        Tuple3((Random().nextInt(130) + 30), 15, ''),
                         Tuple3((Random().nextInt(130) + 80), 8, ''),
                       ]
                           .map(

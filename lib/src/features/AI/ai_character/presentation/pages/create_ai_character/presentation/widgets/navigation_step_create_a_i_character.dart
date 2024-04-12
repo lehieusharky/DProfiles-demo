@@ -50,11 +50,15 @@ class _ItemState extends State<_Item> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<AiCharacterBloc, AiCharacterState>(
-        listener: (context, state) {
+    return BlocSelector<AiCharacterBloc, AiCharacterState, int>(
+        selector: (state) {
       if (state is AICharacterChangeCreationStepSuccess) {
         _isSelected = state.currentStep == widget.step.position;
+
+        return state.currentStep;
       }
+
+      return 0;
     }, builder: (context, state) {
       return Row(
         children: [
@@ -64,7 +68,7 @@ class _ItemState extends State<_Item> {
             alignment: Alignment.center,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: _isSelected
+              color: _isSelected || (state > widget.step.position)
                   ? colorScheme(context).primary
                   : colorScheme(context).secondaryContainer,
             ),

@@ -5,13 +5,13 @@ import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:flutter/material.dart';
 
-class TabBarHome extends StatelessWidget {
-  const TabBarHome({super.key});
+class TabBarProfile extends StatelessWidget {
+  const TabBarProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.padding(left: 20, right: 180, bottom: 16),
+      padding: context.padding(top: 20),
       child: Container(
         height: context.sizeHeight(54),
         padding: context.padding(vertical: 12),
@@ -30,8 +30,9 @@ class TabBarHome extends StatelessWidget {
             tabBarIndicatorSize: TabBarIndicatorSize.tab,
           ),
           tabs: const [
-            Text('Feed'),
-            Text('Blog'),
+            Text('Profile'),
+            Text('Posts'),
+            Text('Transactions'),
           ],
         ),
       ),

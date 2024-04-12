@@ -100,6 +100,21 @@ class _FormProfilesState extends State<FormProfiles> {
     );
   }
 
+  Widget _buildTitle(String title, ) {
+    return Padding(
+      padding: context.padding(bottom: 15),
+      child: Row(
+        children: [
+          Text(
+            appLocal(context).education,
+            style: AppFont().fontTheme(context, weight: FontWeight.bold).bodyLarge,
+          ),
+          // Icon(icon)
+        ],
+      ),
+    );
+  }
+
   _continue(BuildContext context) {
     context
         .read<AiCharacterBloc>()
