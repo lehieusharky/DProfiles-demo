@@ -46,6 +46,8 @@ class MyShimmer extends StatelessWidget {
                       children: [
                         Tuple3((Random().nextInt(130) + 80), 15, ''),
                         Tuple3((Random().nextInt(130) + 80), 8, ''),
+                        Tuple3((Random().nextInt(130) + 80), 15, ''),
+                        Tuple3((Random().nextInt(130) + 80), 8, ''),
                       ]
                           .map(
                             (e) => Padding(

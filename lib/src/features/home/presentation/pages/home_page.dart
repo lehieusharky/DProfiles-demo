@@ -1,3 +1,4 @@
+import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/bloc/home_bloc.dart';
@@ -7,6 +8,7 @@ import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_tab_b
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/title_home.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,8 +26,7 @@ class _HomePageState extends State<HomePage>
   Widget build(BuildContext context) {
     super.build(context);
     return BlocProvider(
-      create: (context) =>
-          injector.get<HomeBloc>()..add(const HomeGetFeeds(1, 5)),
+      create: (context) => injector.get<HomeBloc>()..add(const HomeGetFeeds()),
       child: MyScaffold(
         topPadding: 20,
         titleWidget: Assets.icons.logos.homeLogo.svg(),

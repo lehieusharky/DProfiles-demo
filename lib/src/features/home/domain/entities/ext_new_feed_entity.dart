@@ -1,5 +1,7 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_divider.dart';
+import 'package:demo_dprofiles/src/core/ui/my_bottom_sheet.dart';
+import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
+import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -7,6 +9,8 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
+import 'package:photo_view/photo_view.dart';
+import 'package:photo_view/photo_view_gallery.dart';
 import 'package:tuple/tuple.dart';
 
 extension NewFeedModelExt on NewFeedModel {
@@ -15,14 +19,17 @@ extension NewFeedModelExt on NewFeedModel {
       padding: context.padding(horizontal: 20),
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: context.padding(right: 12),
-                child: CircleAvatar(radius: context.sizeHeight(25)),
+                child: CircleAvatar(
+                  radius: context.sizeHeight(20),
+                  child: Assets.icons.homeLogo.image(),
+                ),
               ),
               Expanded(
                 child: Column(
@@ -30,7 +37,7 @@ extension NewFeedModelExt on NewFeedModel {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'dProfiles',
+                      'DProfiles',
                       style: AppFont()
                           .fontTheme(context, weight: FontWeight.w600)
                           .bodyLarge,
@@ -53,9 +60,9 @@ extension NewFeedModelExt on NewFeedModel {
                   children: [
                     const _FollowingButton(),
                     Padding(
-                      padding: context.padding(left: 10),
-                      child: const Icon(IconsaxOutline.more),
-                    )
+                        padding: context.padding(left: 10),
+                        child: InkWell(
+                            onTap: () {}, child: Assets.icons.iconMore.svg()))
                   ],
                 ),
               )
@@ -66,23 +73,47 @@ extension NewFeedModelExt on NewFeedModel {
               padding: context.padding(top: 16),
               child: Text(
                 postContent!,
-                style: AppFont().fontTheme(context).bodyMedium,
+                style: AppFont()
+                    .fontTheme(context, height: 1.5, letterSpacing: 0.5)
+                    .bodyMedium,
               ),
             ),
           Padding(
-            padding: context.padding(vertical: 25),
-            child: Assets.images.home.live.image(),
-          ),
-          _Reactions(
+              padding: context.padding(vertical: 25),
+              child: MyCacheImage(
+                imageUrl: postImageUrl ?? '',
+                errorWidget: Assets.images.home.live.image(),
+              )),
+          ReactionPost(
             likes: noOfLike!,
             comments: noOfComment!,
             shares: noOfShare!,
           ),
-
         ],
       ),
     );
   }
+
+  // void _showPhotoView(BuildContext context) {
+  //   showMyBottomSheet(
+  //       context: context,
+  //       child: Container(
+  //         height: context.height,
+  //         child: PhotoViewGallery.builder(
+  //           scrollPhysics: const BouncingScrollPhysics(),
+  //           builder: (BuildContext context, int index) {
+  //             return PhotoViewGalleryPageOptions(
+  //               imageProvider: AssetImage(Assets.images.home.live.path),
+  //               initialScale: PhotoViewComputedScale.contained * 0.9,
+  //             );
+  //           },
+  //           itemCount: 1,
+  //           loadingBuilder: (context, event) => MyLoading(),
+  //           backgroundDecoration:
+  //               BoxDecoration(color: colorScheme(context).background),
+  //         ),
+  //       ));
+  // }
 }
 
 class _FollowingButton extends StatelessWidget {
@@ -93,7 +124,7 @@ class _FollowingButton extends StatelessWidget {
     return InkWell(
       onTap: () {},
       child: Container(
-        padding: context.padding(horizontal: 10, vertical: 4),
+        padding: context.padding(horizontal: 12, vertical: 5),
         decoration: BoxDecoration(
             color: colorScheme(context).primary,
             borderRadius: BorderRadius.circular(16)),
@@ -108,31 +139,32 @@ class _FollowingButton extends StatelessWidget {
   }
 }
 
-class _Reactions extends StatelessWidget {
+class ReactionPost extends StatelessWidget {
   final int likes;
   final int comments;
   final int shares;
 
-  const _Reactions(
-      {required this.likes, required this.comments, required this.shares});
+  const ReactionPost({
+    super.key,
+    required this.likes,
+    required this.comments,
+    required this.shares,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
         Tuple3(const Icon(IconsaxOutline.heart), likes, 0),
         Tuple3(const Icon(IconsaxOutline.message), comments, 1),
         Tuple3(const Icon(IconsaxOutline.cloud_sunny), shares, 2),
-        const Tuple3(Icon(IconsaxOutline.eye), 1124, 3),
-      ]
-          .map((e) =>
-              _buildAction(context, e.item1, e.item2, isLast: e.item3 == 3))
-          .toList(),
+      ].map((e) => _buildAction(context, e.item1, e.item2)).toList(),
     );
   }
 
-  Widget _buildAction(BuildContext context, Widget icon, int value,
-      {bool? isLast}) {
+  Widget _buildAction(BuildContext context, Widget icon, int value) {
     return Padding(
       padding: context.padding(right: 16),
       child: Row(

@@ -38,7 +38,7 @@ class _ProfilePageState extends State<ProfilePage>
           injector.get<ProfileBloc>()..add(const ProfileGetUserInfo()),
       child: MyScaffold(
           useAppBar: false,
-          topPadding: 40,
+          topPadding: 20,
           body: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

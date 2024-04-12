@@ -12,9 +12,8 @@ class HomeDiscover extends StatelessWidget {
       physics: AlwaysScrollableScrollPhysics(),
       children: [
         NewsFeedHome(),
-        // Text('Blog'),
-
-        BlogListPage(),
+        // BlogListPage(),
+        Text('Blog')
       ],
     );
   }
