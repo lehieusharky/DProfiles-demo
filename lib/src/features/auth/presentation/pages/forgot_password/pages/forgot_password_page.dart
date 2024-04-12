@@ -47,7 +47,6 @@ class ForgotPasswordPage extends StatelessWidget {
   }
 
   Widget _buildBody(BuildContext context) {
-    final cubit = context.read<ForgotPasswordCubit>();
     return MyScaffold(
       horizontalMargin: 32,
       heightAppBar: 50,
