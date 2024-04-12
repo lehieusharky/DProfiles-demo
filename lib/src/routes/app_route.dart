@@ -50,5 +50,14 @@ class AppRouter extends $AppRouter {
         AutoRoute(
             path: '/auto_generation_history_detail',
             page: AutoGenerationHistoryDetailRoute.page),
+        AutoRoute(path: '/add_new_education', page: AddNewEducationRoute.page),
+        AutoRoute(
+            path: '/add_new_certificate', page: AddNewCertificateRoute.page),
+        AutoRoute(
+            path: '/add_new_experience', page: AddNewExperienceRoute.page),
+        AutoRoute(path: '/list_education', page: ListEducationRoute.page),
+        AutoRoute(path: '/list_certificate', page: ListCertificateRoute.page),
+        AutoRoute(
+            path: '/list_experience', page: ListExperienceRoute.page),
       ];
 }

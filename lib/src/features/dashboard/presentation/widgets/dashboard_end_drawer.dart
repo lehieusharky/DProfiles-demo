@@ -73,7 +73,7 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
       },
       items: [
         SidebarXItem(
-          iconBuilder: (_, __) => Assets.icons.wallet.svg(),
+          iconBuilder: (_, __) => Assets.icons.iconWallet.svg(),
           label: 'My Wallet',
           onTap: () {},
         ),

@@ -47,9 +47,15 @@ class $AssetsIconsGen {
   AssetGenImage get homeLogo =>
       const AssetGenImage('assets/icons/home_logo.png');
 
+  /// File path: assets/icons/icon_bag.svg
+  SvgGenImage get iconBag => const SvgGenImage('assets/icons/icon_bag.svg');
+
   /// File path: assets/icons/icon_comment.svg
   SvgGenImage get iconComment =>
       const SvgGenImage('assets/icons/icon_comment.svg');
+
+  /// File path: assets/icons/icon_edit.svg
+  SvgGenImage get iconEdit => const SvgGenImage('assets/icons/icon_edit.svg');
 
   /// File path: assets/icons/icon_heart.svg
   SvgGenImage get iconHeart => const SvgGenImage('assets/icons/icon_heart.svg');
@@ -67,13 +73,14 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_share.svg
   SvgGenImage get iconShare => const SvgGenImage('assets/icons/icon_share.svg');
 
+  /// File path: assets/icons/icon_wallet.svg
+  SvgGenImage get iconWallet =>
+      const SvgGenImage('assets/icons/icon_wallet.svg');
+
   $AssetsIconsLogosGen get logos => const $AssetsIconsLogosGen();
 
   /// File path: assets/icons/profile.svg
   SvgGenImage get profile => const SvgGenImage('assets/icons/profile.svg');
-
-  /// File path: assets/icons/wallet.svg
-  SvgGenImage get wallet => const SvgGenImage('assets/icons/wallet.svg');
 
   /// List of all assets
   List<dynamic> get values => [
@@ -83,14 +90,16 @@ class $AssetsIconsGen {
         arrowLeft,
         home,
         homeLogo,
+        iconBag,
         iconComment,
+        iconEdit,
         iconHeart,
         iconMenu,
         iconMore,
         iconSearch,
         iconShare,
-        profile,
-        wallet
+        iconWallet,
+        profile
       ];
 }
 
