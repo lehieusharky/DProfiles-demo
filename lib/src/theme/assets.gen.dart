@@ -33,6 +33,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ai_tools.svg
   SvgGenImage get aiTools => const SvgGenImage('assets/icons/ai_tools.svg');
 
+  /// File path: assets/icons/appstore.png
+  AssetGenImage get appstore =>
+      const AssetGenImage('assets/icons/appstore.png');
+
   /// File path: assets/icons/arrow_left.svg
   SvgGenImage get arrowLeft => const SvgGenImage('assets/icons/arrow_left.svg');
 
@@ -48,9 +52,20 @@ class $AssetsIconsGen {
   /// File path: assets/icons/profile.svg
   SvgGenImage get profile => const SvgGenImage('assets/icons/profile.svg');
 
+  /// File path: assets/icons/wallet.svg
+  SvgGenImage get wallet => const SvgGenImage('assets/icons/wallet.svg');
+
   /// List of all assets
-  List<dynamic> get values =>
-      [aiCharacter, aiTools, arrowLeft, home, homeLogo, profile];
+  List<dynamic> get values => [
+        aiCharacter,
+        aiTools,
+        appstore,
+        arrowLeft,
+        home,
+        homeLogo,
+        profile,
+        wallet
+      ];
 }
 
 class $AssetsImagesGen {

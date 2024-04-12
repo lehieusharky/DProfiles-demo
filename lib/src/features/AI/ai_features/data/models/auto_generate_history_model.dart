@@ -29,6 +29,8 @@ class Prompt with _$Prompt {
   const factory Prompt({
     String? summary,
     String? style,
+    @JsonKey(name: 'job_title') String? jobTitle,
+    String? about,
     @JsonKey(name: 'max_token') int? maxToken,
   }) = _Prompt;
 

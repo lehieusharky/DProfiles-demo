@@ -5,8 +5,11 @@ import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_int
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_profile_introduction_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_skill_knowledge_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/domain/usecases/auto_generate_usecase.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
+import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
 part 'ai_features_event.dart';
 part 'ai_features_state.dart';
@@ -14,14 +17,17 @@ part 'ai_features_bloc.freezed.dart';
 
 class AiFeaturesBloc extends Bloc<AiFeaturesEvent, AiFeaturesState> {
   final AutoGenerateUseCase autoGenerateUseCase;
+  final ProfileUseCase profileUseCase;
 
-  AiFeaturesBloc(this.autoGenerateUseCase)
+  AiFeaturesBloc(this.autoGenerateUseCase, this.profileUseCase)
       : super(const AiFeaturesState.initial()) {
     on<GetAutoGenerateHistory>(_getAutoGenerateHistory);
+    on<GetAutoGenerateHistoryDetail>(_getAutoGenerateHistoryDetail);
     on<GenerateProfileIntroduction>(_generateProfileIntroduction);
     on<GenerateCoverLetter>(_generateCoverLetter);
     on<GenerateSkillKnowledge>(_generateSkillKnowledge);
     on<GenerateInterviewQuestion>(_generateInterviewQuestion);
+    on<GetCurrentPointOfUser>(_getCurrentPointOfUser);
   }
 
   FutureOr<void> _getAutoGenerateHistory(
@@ -107,4 +113,40 @@ class AiFeaturesBloc extends Bloc<AiFeaturesEvent, AiFeaturesState> {
       },
     );
   }
+
+  FutureOr<void> _getAutoGenerateHistoryDetail(
+      GetAutoGenerateHistoryDetail event, Emitter<AiFeaturesState> emit) async {
+    emit(const AiFeaturesLoading());
+
+    final result =
+        await autoGenerateUseCase.getAutoGenerateHistoryDetail(event.id);
+
+    result.fold(
+      (l) => emit(AiFeaturesError(
+          message: l, title: 'Get auto generation detail failed')),
+      (r) {
+        emit(GetAutoGenerateHistoryDetailSuccess(
+            AutoGenerateHistoryModel.fromJson(r.data)));
+      },
+    );
+  }
+
+  FutureOr<void> _getCurrentPointOfUser(
+      GetCurrentPointOfUser event, Emitter<AiFeaturesState> emit) async {
+    emit(const AiFeaturesState.initial());
+
+    final result = await profileUseCase.getUserInfo();
+
+    result.fold(
+      (l) => emit(const AiFeaturesError(
+          message: 'Get point failed',
+          title: 'Get auto generation detail failed')),
+      (r) {
+        emit(GetCurrentPointOfUserSuccess(
+            UserInfoModel.fromJson(r.data).point ?? 0));
+      },
+    );
+  }
+
+  final refreshController = RefreshController();
 }

@@ -21,6 +21,8 @@ dependencies:
   rename: ^3.0.2
   flutter_animate: ^4.5.0
   hidable: ^1.0.6
+  cached_network_image: ^3.3.1
+  sidebarx: ^0.17.1
 
   # wallet
   web3modal_flutter: ^3.1.2

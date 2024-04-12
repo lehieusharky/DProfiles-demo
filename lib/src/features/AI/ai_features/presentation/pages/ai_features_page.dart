@@ -18,10 +18,14 @@ class _AiFeaturesPageState extends State<AiFeaturesPage>
       child: MyScaffold(
         horizontalMargin: 20,
         topPadding: 10,
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: context.padding(bottom: 50),
-            child: const Column(
+        body: SmartRefresher(
+          enablePullDown: true,
+          // enablePullUp: true,
+          onRefresh: () {},
+          onLoading: () {},
+          controller: injector.get<AiFeaturesBloc>().refreshController,
+          child: const SingleChildScrollView(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 TitleAiFeatures(),

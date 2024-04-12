@@ -1,4 +1,5 @@
-import 'package:demo_dprofiles/src/theme/my_color.dart';
+import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class MyLoading extends StatelessWidget {
@@ -6,9 +7,11 @@ class MyLoading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CircularProgressIndicator(
-      color: MyColor.getWhite,
-      strokeWidth: 3,
+    return Center(
+      child: Assets.animations.loading.lottie(
+        width: context.sizeWidth(200),
+        height: context.sizeWidth(200),
+      ),
     );
   }
 }

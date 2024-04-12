@@ -7,7 +7,7 @@ part 'write_profile_introduction_model.g.dart';
 @freezed
 class WriteProfileIntroductionModel with _$WriteProfileIntroductionModel {
   const factory WriteProfileIntroductionModel({
-    @JsonKey(name: 'max_token') @Default(0) int? maxToken,
+    @JsonKey(name: 'max_token') @Default(10) int? maxToken,
     String? summary,
     String? style,
     @JsonKey(name: 'gpt_model') @Default(3) int? gptModel,

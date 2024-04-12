@@ -21,6 +21,7 @@ WriteCoverLetterModel _$WriteCoverLetterModelFromJson(
 
 /// @nodoc
 mixin _$WriteCoverLetterModel {
+  @JsonKey(name: 'max_token')
   int? get maxToken => throw _privateConstructorUsedError;
   @JsonKey(name: 'job_title')
   String? get jobTitle => throw _privateConstructorUsedError;
@@ -42,7 +43,7 @@ abstract class $WriteCoverLetterModelCopyWith<$Res> {
       _$WriteCoverLetterModelCopyWithImpl<$Res, WriteCoverLetterModel>;
   @useResult
   $Res call(
-      {int? maxToken,
+      {@JsonKey(name: 'max_token') int? maxToken,
       @JsonKey(name: 'job_title') String? jobTitle,
       String? summary,
       @JsonKey(name: 'gpt_model') int? gptModel,
@@ -104,7 +105,7 @@ abstract class _$$WriteCoverLetterModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int? maxToken,
+      {@JsonKey(name: 'max_token') int? maxToken,
       @JsonKey(name: 'job_title') String? jobTitle,
       String? summary,
       @JsonKey(name: 'gpt_model') int? gptModel,
@@ -158,7 +159,7 @@ class __$$WriteCoverLetterModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$WriteCoverLetterModelImpl implements _WriteCoverLetterModel {
   const _$WriteCoverLetterModelImpl(
-      {this.maxToken,
+      {@JsonKey(name: 'max_token') this.maxToken = 10,
       @JsonKey(name: 'job_title') this.jobTitle,
       this.summary,
       @JsonKey(name: 'gpt_model') this.gptModel = 3,
@@ -168,6 +169,7 @@ class _$WriteCoverLetterModelImpl implements _WriteCoverLetterModel {
       _$$WriteCoverLetterModelImplFromJson(json);
 
   @override
+  @JsonKey(name: 'max_token')
   final int? maxToken;
   @override
   @JsonKey(name: 'job_title')
@@ -224,7 +226,7 @@ class _$WriteCoverLetterModelImpl implements _WriteCoverLetterModel {
 
 abstract class _WriteCoverLetterModel implements WriteCoverLetterModel {
   const factory _WriteCoverLetterModel(
-      {final int? maxToken,
+      {@JsonKey(name: 'max_token') final int? maxToken,
       @JsonKey(name: 'job_title') final String? jobTitle,
       final String? summary,
       @JsonKey(name: 'gpt_model') final int? gptModel,
@@ -234,6 +236,7 @@ abstract class _WriteCoverLetterModel implements WriteCoverLetterModel {
       _$WriteCoverLetterModelImpl.fromJson;
 
   @override
+  @JsonKey(name: 'max_token')
   int? get maxToken;
   @override
   @JsonKey(name: 'job_title')

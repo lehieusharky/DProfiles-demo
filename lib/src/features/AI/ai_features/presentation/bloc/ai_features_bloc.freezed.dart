@@ -30,6 +30,8 @@ mixin _$AiFeaturesEvent {
         generateSkillKnowledge,
     required TResult Function(WriteCoverLetterModel coverLetterModel)
         generateCoverLetter,
+    required TResult Function(int id) getAutoGenerateHistoryDetail,
+    required TResult Function() getCurrentPointOfUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +46,8 @@ mixin _$AiFeaturesEvent {
         generateSkillKnowledge,
     TResult? Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult? Function(int id)? getAutoGenerateHistoryDetail,
+    TResult? Function()? getCurrentPointOfUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +62,8 @@ mixin _$AiFeaturesEvent {
         generateSkillKnowledge,
     TResult Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult Function(int id)? getAutoGenerateHistoryDetail,
+    TResult Function()? getCurrentPointOfUser,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -73,6 +79,10 @@ mixin _$AiFeaturesEvent {
     required TResult Function(GenerateSkillKnowledge value)
         generateSkillKnowledge,
     required TResult Function(GenerateCoverLetter value) generateCoverLetter,
+    required TResult Function(GetAutoGenerateHistoryDetail value)
+        getAutoGenerateHistoryDetail,
+    required TResult Function(GetCurrentPointOfUser value)
+        getCurrentPointOfUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -85,6 +95,9 @@ mixin _$AiFeaturesEvent {
         generateInterviewQuestion,
     TResult? Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult? Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult? Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -97,6 +110,9 @@ mixin _$AiFeaturesEvent {
         generateInterviewQuestion,
     TResult Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -170,6 +186,8 @@ class _$StartedImpl implements _Started {
         generateSkillKnowledge,
     required TResult Function(WriteCoverLetterModel coverLetterModel)
         generateCoverLetter,
+    required TResult Function(int id) getAutoGenerateHistoryDetail,
+    required TResult Function() getCurrentPointOfUser,
   }) {
     return started();
   }
@@ -187,6 +205,8 @@ class _$StartedImpl implements _Started {
         generateSkillKnowledge,
     TResult? Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult? Function(int id)? getAutoGenerateHistoryDetail,
+    TResult? Function()? getCurrentPointOfUser,
   }) {
     return started?.call();
   }
@@ -204,6 +224,8 @@ class _$StartedImpl implements _Started {
         generateSkillKnowledge,
     TResult Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult Function(int id)? getAutoGenerateHistoryDetail,
+    TResult Function()? getCurrentPointOfUser,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -225,6 +247,10 @@ class _$StartedImpl implements _Started {
     required TResult Function(GenerateSkillKnowledge value)
         generateSkillKnowledge,
     required TResult Function(GenerateCoverLetter value) generateCoverLetter,
+    required TResult Function(GetAutoGenerateHistoryDetail value)
+        getAutoGenerateHistoryDetail,
+    required TResult Function(GetCurrentPointOfUser value)
+        getCurrentPointOfUser,
   }) {
     return started(this);
   }
@@ -240,6 +266,9 @@ class _$StartedImpl implements _Started {
         generateInterviewQuestion,
     TResult? Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult? Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult? Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
   }) {
     return started?.call(this);
   }
@@ -255,6 +284,9 @@ class _$StartedImpl implements _Started {
         generateInterviewQuestion,
     TResult Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -321,6 +353,8 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
         generateSkillKnowledge,
     required TResult Function(WriteCoverLetterModel coverLetterModel)
         generateCoverLetter,
+    required TResult Function(int id) getAutoGenerateHistoryDetail,
+    required TResult Function() getCurrentPointOfUser,
   }) {
     return getAutoGenerateHistory();
   }
@@ -338,6 +372,8 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
         generateSkillKnowledge,
     TResult? Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult? Function(int id)? getAutoGenerateHistoryDetail,
+    TResult? Function()? getCurrentPointOfUser,
   }) {
     return getAutoGenerateHistory?.call();
   }
@@ -355,6 +391,8 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
         generateSkillKnowledge,
     TResult Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult Function(int id)? getAutoGenerateHistoryDetail,
+    TResult Function()? getCurrentPointOfUser,
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistory != null) {
@@ -376,6 +414,10 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
     required TResult Function(GenerateSkillKnowledge value)
         generateSkillKnowledge,
     required TResult Function(GenerateCoverLetter value) generateCoverLetter,
+    required TResult Function(GetAutoGenerateHistoryDetail value)
+        getAutoGenerateHistoryDetail,
+    required TResult Function(GetCurrentPointOfUser value)
+        getCurrentPointOfUser,
   }) {
     return getAutoGenerateHistory(this);
   }
@@ -391,6 +433,9 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
         generateInterviewQuestion,
     TResult? Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult? Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult? Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
   }) {
     return getAutoGenerateHistory?.call(this);
   }
@@ -406,6 +451,9 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
         generateInterviewQuestion,
     TResult Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistory != null) {
@@ -512,6 +560,8 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
         generateSkillKnowledge,
     required TResult Function(WriteCoverLetterModel coverLetterModel)
         generateCoverLetter,
+    required TResult Function(int id) getAutoGenerateHistoryDetail,
+    required TResult Function() getCurrentPointOfUser,
   }) {
     return generateProfileIntroduction(profileIntroductionModel);
   }
@@ -529,6 +579,8 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
         generateSkillKnowledge,
     TResult? Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult? Function(int id)? getAutoGenerateHistoryDetail,
+    TResult? Function()? getCurrentPointOfUser,
   }) {
     return generateProfileIntroduction?.call(profileIntroductionModel);
   }
@@ -546,6 +598,8 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
         generateSkillKnowledge,
     TResult Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult Function(int id)? getAutoGenerateHistoryDetail,
+    TResult Function()? getCurrentPointOfUser,
     required TResult orElse(),
   }) {
     if (generateProfileIntroduction != null) {
@@ -567,6 +621,10 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
     required TResult Function(GenerateSkillKnowledge value)
         generateSkillKnowledge,
     required TResult Function(GenerateCoverLetter value) generateCoverLetter,
+    required TResult Function(GetAutoGenerateHistoryDetail value)
+        getAutoGenerateHistoryDetail,
+    required TResult Function(GetCurrentPointOfUser value)
+        getCurrentPointOfUser,
   }) {
     return generateProfileIntroduction(this);
   }
@@ -582,6 +640,9 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
         generateInterviewQuestion,
     TResult? Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult? Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult? Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
   }) {
     return generateProfileIntroduction?.call(this);
   }
@@ -597,6 +658,9 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
         generateInterviewQuestion,
     TResult Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
     required TResult orElse(),
   }) {
     if (generateProfileIntroduction != null) {
@@ -708,6 +772,8 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
         generateSkillKnowledge,
     required TResult Function(WriteCoverLetterModel coverLetterModel)
         generateCoverLetter,
+    required TResult Function(int id) getAutoGenerateHistoryDetail,
+    required TResult Function() getCurrentPointOfUser,
   }) {
     return generateInterviewQuestion(interviewQuestionModel);
   }
@@ -725,6 +791,8 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
         generateSkillKnowledge,
     TResult? Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult? Function(int id)? getAutoGenerateHistoryDetail,
+    TResult? Function()? getCurrentPointOfUser,
   }) {
     return generateInterviewQuestion?.call(interviewQuestionModel);
   }
@@ -742,6 +810,8 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
         generateSkillKnowledge,
     TResult Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult Function(int id)? getAutoGenerateHistoryDetail,
+    TResult Function()? getCurrentPointOfUser,
     required TResult orElse(),
   }) {
     if (generateInterviewQuestion != null) {
@@ -763,6 +833,10 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
     required TResult Function(GenerateSkillKnowledge value)
         generateSkillKnowledge,
     required TResult Function(GenerateCoverLetter value) generateCoverLetter,
+    required TResult Function(GetAutoGenerateHistoryDetail value)
+        getAutoGenerateHistoryDetail,
+    required TResult Function(GetCurrentPointOfUser value)
+        getCurrentPointOfUser,
   }) {
     return generateInterviewQuestion(this);
   }
@@ -778,6 +852,9 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
         generateInterviewQuestion,
     TResult? Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult? Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult? Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
   }) {
     return generateInterviewQuestion?.call(this);
   }
@@ -793,6 +870,9 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
         generateInterviewQuestion,
     TResult Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
     required TResult orElse(),
   }) {
     if (generateInterviewQuestion != null) {
@@ -904,6 +984,8 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
         generateSkillKnowledge,
     required TResult Function(WriteCoverLetterModel coverLetterModel)
         generateCoverLetter,
+    required TResult Function(int id) getAutoGenerateHistoryDetail,
+    required TResult Function() getCurrentPointOfUser,
   }) {
     return generateSkillKnowledge(skillKnowledgeModel);
   }
@@ -921,6 +1003,8 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
         generateSkillKnowledge,
     TResult? Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult? Function(int id)? getAutoGenerateHistoryDetail,
+    TResult? Function()? getCurrentPointOfUser,
   }) {
     return generateSkillKnowledge?.call(skillKnowledgeModel);
   }
@@ -938,6 +1022,8 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
         generateSkillKnowledge,
     TResult Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult Function(int id)? getAutoGenerateHistoryDetail,
+    TResult Function()? getCurrentPointOfUser,
     required TResult orElse(),
   }) {
     if (generateSkillKnowledge != null) {
@@ -959,6 +1045,10 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
     required TResult Function(GenerateSkillKnowledge value)
         generateSkillKnowledge,
     required TResult Function(GenerateCoverLetter value) generateCoverLetter,
+    required TResult Function(GetAutoGenerateHistoryDetail value)
+        getAutoGenerateHistoryDetail,
+    required TResult Function(GetCurrentPointOfUser value)
+        getCurrentPointOfUser,
   }) {
     return generateSkillKnowledge(this);
   }
@@ -974,6 +1064,9 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
         generateInterviewQuestion,
     TResult? Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult? Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult? Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
   }) {
     return generateSkillKnowledge?.call(this);
   }
@@ -989,6 +1082,9 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
         generateInterviewQuestion,
     TResult Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
     required TResult orElse(),
   }) {
     if (generateSkillKnowledge != null) {
@@ -1098,6 +1194,8 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
         generateSkillKnowledge,
     required TResult Function(WriteCoverLetterModel coverLetterModel)
         generateCoverLetter,
+    required TResult Function(int id) getAutoGenerateHistoryDetail,
+    required TResult Function() getCurrentPointOfUser,
   }) {
     return generateCoverLetter(coverLetterModel);
   }
@@ -1115,6 +1213,8 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
         generateSkillKnowledge,
     TResult? Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult? Function(int id)? getAutoGenerateHistoryDetail,
+    TResult? Function()? getCurrentPointOfUser,
   }) {
     return generateCoverLetter?.call(coverLetterModel);
   }
@@ -1132,6 +1232,8 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
         generateSkillKnowledge,
     TResult Function(WriteCoverLetterModel coverLetterModel)?
         generateCoverLetter,
+    TResult Function(int id)? getAutoGenerateHistoryDetail,
+    TResult Function()? getCurrentPointOfUser,
     required TResult orElse(),
   }) {
     if (generateCoverLetter != null) {
@@ -1153,6 +1255,10 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
     required TResult Function(GenerateSkillKnowledge value)
         generateSkillKnowledge,
     required TResult Function(GenerateCoverLetter value) generateCoverLetter,
+    required TResult Function(GetAutoGenerateHistoryDetail value)
+        getAutoGenerateHistoryDetail,
+    required TResult Function(GetCurrentPointOfUser value)
+        getCurrentPointOfUser,
   }) {
     return generateCoverLetter(this);
   }
@@ -1168,6 +1274,9 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
         generateInterviewQuestion,
     TResult? Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult? Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult? Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
   }) {
     return generateCoverLetter?.call(this);
   }
@@ -1183,6 +1292,9 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
         generateInterviewQuestion,
     TResult Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
     TResult Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
     required TResult orElse(),
   }) {
     if (generateCoverLetter != null) {
@@ -1203,6 +1315,375 @@ abstract class GenerateCoverLetter implements AiFeaturesEvent {
 }
 
 /// @nodoc
+abstract class _$$GetAutoGenerateHistoryDetailImplCopyWith<$Res> {
+  factory _$$GetAutoGenerateHistoryDetailImplCopyWith(
+          _$GetAutoGenerateHistoryDetailImpl value,
+          $Res Function(_$GetAutoGenerateHistoryDetailImpl) then) =
+      __$$GetAutoGenerateHistoryDetailImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id});
+}
+
+/// @nodoc
+class __$$GetAutoGenerateHistoryDetailImplCopyWithImpl<$Res>
+    extends _$AiFeaturesEventCopyWithImpl<$Res,
+        _$GetAutoGenerateHistoryDetailImpl>
+    implements _$$GetAutoGenerateHistoryDetailImplCopyWith<$Res> {
+  __$$GetAutoGenerateHistoryDetailImplCopyWithImpl(
+      _$GetAutoGenerateHistoryDetailImpl _value,
+      $Res Function(_$GetAutoGenerateHistoryDetailImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$GetAutoGenerateHistoryDetailImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetAutoGenerateHistoryDetailImpl
+    implements GetAutoGenerateHistoryDetail {
+  const _$GetAutoGenerateHistoryDetailImpl(this.id);
+
+  @override
+  final int id;
+
+  @override
+  String toString() {
+    return 'AiFeaturesEvent.getAutoGenerateHistoryDetail(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAutoGenerateHistoryDetailImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetAutoGenerateHistoryDetailImplCopyWith<
+          _$GetAutoGenerateHistoryDetailImpl>
+      get copyWith => __$$GetAutoGenerateHistoryDetailImplCopyWithImpl<
+          _$GetAutoGenerateHistoryDetailImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(
+            WriteProfileIntroductionModel profileIntroductionModel)
+        generateProfileIntroduction,
+    required TResult Function(
+            WriteInterviewQuestionModel interviewQuestionModel)
+        generateInterviewQuestion,
+    required TResult Function(WriteSkillKnowledgeModel skillKnowledgeModel)
+        generateSkillKnowledge,
+    required TResult Function(WriteCoverLetterModel coverLetterModel)
+        generateCoverLetter,
+    required TResult Function(int id) getAutoGenerateHistoryDetail,
+    required TResult Function() getCurrentPointOfUser,
+  }) {
+    return getAutoGenerateHistoryDetail(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
+        generateProfileIntroduction,
+    TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
+        generateInterviewQuestion,
+    TResult? Function(WriteSkillKnowledgeModel skillKnowledgeModel)?
+        generateSkillKnowledge,
+    TResult? Function(WriteCoverLetterModel coverLetterModel)?
+        generateCoverLetter,
+    TResult? Function(int id)? getAutoGenerateHistoryDetail,
+    TResult? Function()? getCurrentPointOfUser,
+  }) {
+    return getAutoGenerateHistoryDetail?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getAutoGenerateHistory,
+    TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
+        generateProfileIntroduction,
+    TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
+        generateInterviewQuestion,
+    TResult Function(WriteSkillKnowledgeModel skillKnowledgeModel)?
+        generateSkillKnowledge,
+    TResult Function(WriteCoverLetterModel coverLetterModel)?
+        generateCoverLetter,
+    TResult Function(int id)? getAutoGenerateHistoryDetail,
+    TResult Function()? getCurrentPointOfUser,
+    required TResult orElse(),
+  }) {
+    if (getAutoGenerateHistoryDetail != null) {
+      return getAutoGenerateHistoryDetail(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(GetAutoGenerateHistory value)
+        getAutoGenerateHistory,
+    required TResult Function(GenerateProfileIntroduction value)
+        generateProfileIntroduction,
+    required TResult Function(GenerateInterviewQuestion value)
+        generateInterviewQuestion,
+    required TResult Function(GenerateSkillKnowledge value)
+        generateSkillKnowledge,
+    required TResult Function(GenerateCoverLetter value) generateCoverLetter,
+    required TResult Function(GetAutoGenerateHistoryDetail value)
+        getAutoGenerateHistoryDetail,
+    required TResult Function(GetCurrentPointOfUser value)
+        getCurrentPointOfUser,
+  }) {
+    return getAutoGenerateHistoryDetail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(GetAutoGenerateHistory value)? getAutoGenerateHistory,
+    TResult? Function(GenerateProfileIntroduction value)?
+        generateProfileIntroduction,
+    TResult? Function(GenerateInterviewQuestion value)?
+        generateInterviewQuestion,
+    TResult? Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
+    TResult? Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult? Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+  }) {
+    return getAutoGenerateHistoryDetail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(GetAutoGenerateHistory value)? getAutoGenerateHistory,
+    TResult Function(GenerateProfileIntroduction value)?
+        generateProfileIntroduction,
+    TResult Function(GenerateInterviewQuestion value)?
+        generateInterviewQuestion,
+    TResult Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
+    TResult Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    required TResult orElse(),
+  }) {
+    if (getAutoGenerateHistoryDetail != null) {
+      return getAutoGenerateHistoryDetail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetAutoGenerateHistoryDetail implements AiFeaturesEvent {
+  const factory GetAutoGenerateHistoryDetail(final int id) =
+      _$GetAutoGenerateHistoryDetailImpl;
+
+  int get id;
+  @JsonKey(ignore: true)
+  _$$GetAutoGenerateHistoryDetailImplCopyWith<
+          _$GetAutoGenerateHistoryDetailImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetCurrentPointOfUserImplCopyWith<$Res> {
+  factory _$$GetCurrentPointOfUserImplCopyWith(
+          _$GetCurrentPointOfUserImpl value,
+          $Res Function(_$GetCurrentPointOfUserImpl) then) =
+      __$$GetCurrentPointOfUserImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetCurrentPointOfUserImplCopyWithImpl<$Res>
+    extends _$AiFeaturesEventCopyWithImpl<$Res, _$GetCurrentPointOfUserImpl>
+    implements _$$GetCurrentPointOfUserImplCopyWith<$Res> {
+  __$$GetCurrentPointOfUserImplCopyWithImpl(_$GetCurrentPointOfUserImpl _value,
+      $Res Function(_$GetCurrentPointOfUserImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetCurrentPointOfUserImpl implements GetCurrentPointOfUser {
+  const _$GetCurrentPointOfUserImpl();
+
+  @override
+  String toString() {
+    return 'AiFeaturesEvent.getCurrentPointOfUser()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCurrentPointOfUserImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(
+            WriteProfileIntroductionModel profileIntroductionModel)
+        generateProfileIntroduction,
+    required TResult Function(
+            WriteInterviewQuestionModel interviewQuestionModel)
+        generateInterviewQuestion,
+    required TResult Function(WriteSkillKnowledgeModel skillKnowledgeModel)
+        generateSkillKnowledge,
+    required TResult Function(WriteCoverLetterModel coverLetterModel)
+        generateCoverLetter,
+    required TResult Function(int id) getAutoGenerateHistoryDetail,
+    required TResult Function() getCurrentPointOfUser,
+  }) {
+    return getCurrentPointOfUser();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
+        generateProfileIntroduction,
+    TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
+        generateInterviewQuestion,
+    TResult? Function(WriteSkillKnowledgeModel skillKnowledgeModel)?
+        generateSkillKnowledge,
+    TResult? Function(WriteCoverLetterModel coverLetterModel)?
+        generateCoverLetter,
+    TResult? Function(int id)? getAutoGenerateHistoryDetail,
+    TResult? Function()? getCurrentPointOfUser,
+  }) {
+    return getCurrentPointOfUser?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getAutoGenerateHistory,
+    TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
+        generateProfileIntroduction,
+    TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
+        generateInterviewQuestion,
+    TResult Function(WriteSkillKnowledgeModel skillKnowledgeModel)?
+        generateSkillKnowledge,
+    TResult Function(WriteCoverLetterModel coverLetterModel)?
+        generateCoverLetter,
+    TResult Function(int id)? getAutoGenerateHistoryDetail,
+    TResult Function()? getCurrentPointOfUser,
+    required TResult orElse(),
+  }) {
+    if (getCurrentPointOfUser != null) {
+      return getCurrentPointOfUser();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(GetAutoGenerateHistory value)
+        getAutoGenerateHistory,
+    required TResult Function(GenerateProfileIntroduction value)
+        generateProfileIntroduction,
+    required TResult Function(GenerateInterviewQuestion value)
+        generateInterviewQuestion,
+    required TResult Function(GenerateSkillKnowledge value)
+        generateSkillKnowledge,
+    required TResult Function(GenerateCoverLetter value) generateCoverLetter,
+    required TResult Function(GetAutoGenerateHistoryDetail value)
+        getAutoGenerateHistoryDetail,
+    required TResult Function(GetCurrentPointOfUser value)
+        getCurrentPointOfUser,
+  }) {
+    return getCurrentPointOfUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(GetAutoGenerateHistory value)? getAutoGenerateHistory,
+    TResult? Function(GenerateProfileIntroduction value)?
+        generateProfileIntroduction,
+    TResult? Function(GenerateInterviewQuestion value)?
+        generateInterviewQuestion,
+    TResult? Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
+    TResult? Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult? Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+  }) {
+    return getCurrentPointOfUser?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(GetAutoGenerateHistory value)? getAutoGenerateHistory,
+    TResult Function(GenerateProfileIntroduction value)?
+        generateProfileIntroduction,
+    TResult Function(GenerateInterviewQuestion value)?
+        generateInterviewQuestion,
+    TResult Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
+    TResult Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    required TResult orElse(),
+  }) {
+    if (getCurrentPointOfUser != null) {
+      return getCurrentPointOfUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCurrentPointOfUser implements AiFeaturesEvent {
+  const factory GetCurrentPointOfUser() = _$GetCurrentPointOfUserImpl;
+}
+
+/// @nodoc
 mixin _$AiFeaturesState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -1216,6 +1697,10 @@ mixin _$AiFeaturesState {
     required TResult Function(String data) generateInterviewQuestionSuccess,
     required TResult Function(String data) generateSkillKnowledgeSuccess,
     required TResult Function(String data) generateCoverLetterSuccess,
+    required TResult Function(
+            AutoGenerateHistoryModel autoGenerateHistoryDetail)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(int point) getCurrentPointOfUserSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1229,6 +1714,9 @@ mixin _$AiFeaturesState {
     TResult? Function(String data)? generateInterviewQuestionSuccess,
     TResult? Function(String data)? generateSkillKnowledgeSuccess,
     TResult? Function(String data)? generateCoverLetterSuccess,
+    TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(int point)? getCurrentPointOfUserSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1242,6 +1730,9 @@ mixin _$AiFeaturesState {
     TResult Function(String data)? generateInterviewQuestionSuccess,
     TResult Function(String data)? generateSkillKnowledgeSuccess,
     TResult Function(String data)? generateCoverLetterSuccess,
+    TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(int point)? getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1260,6 +1751,10 @@ mixin _$AiFeaturesState {
         generateSkillKnowledgeSuccess,
     required TResult Function(GenerateCoverLetterSuccess value)
         generateCoverLetterSuccess,
+    required TResult Function(GetAutoGenerateHistoryDetailSuccess value)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(GetCurrentPointOfUserSuccess value)
+        getCurrentPointOfUserSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1277,6 +1772,10 @@ mixin _$AiFeaturesState {
         generateSkillKnowledgeSuccess,
     TResult? Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult? Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1294,6 +1793,10 @@ mixin _$AiFeaturesState {
         generateSkillKnowledgeSuccess,
     TResult Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1365,6 +1868,10 @@ class _$InitialImpl implements _Initial {
     required TResult Function(String data) generateInterviewQuestionSuccess,
     required TResult Function(String data) generateSkillKnowledgeSuccess,
     required TResult Function(String data) generateCoverLetterSuccess,
+    required TResult Function(
+            AutoGenerateHistoryModel autoGenerateHistoryDetail)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(int point) getCurrentPointOfUserSuccess,
   }) {
     return initial();
   }
@@ -1381,6 +1888,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(String data)? generateInterviewQuestionSuccess,
     TResult? Function(String data)? generateSkillKnowledgeSuccess,
     TResult? Function(String data)? generateCoverLetterSuccess,
+    TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(int point)? getCurrentPointOfUserSuccess,
   }) {
     return initial?.call();
   }
@@ -1397,6 +1907,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(String data)? generateInterviewQuestionSuccess,
     TResult Function(String data)? generateSkillKnowledgeSuccess,
     TResult Function(String data)? generateCoverLetterSuccess,
+    TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(int point)? getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1421,6 +1934,10 @@ class _$InitialImpl implements _Initial {
         generateSkillKnowledgeSuccess,
     required TResult Function(GenerateCoverLetterSuccess value)
         generateCoverLetterSuccess,
+    required TResult Function(GetAutoGenerateHistoryDetailSuccess value)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(GetCurrentPointOfUserSuccess value)
+        getCurrentPointOfUserSuccess,
   }) {
     return initial(this);
   }
@@ -1441,6 +1958,10 @@ class _$InitialImpl implements _Initial {
         generateSkillKnowledgeSuccess,
     TResult? Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult? Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
   }) {
     return initial?.call(this);
   }
@@ -1461,6 +1982,10 @@ class _$InitialImpl implements _Initial {
         generateSkillKnowledgeSuccess,
     TResult Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1557,6 +2082,10 @@ class _$AiFeaturesErrorImpl implements AiFeaturesError {
     required TResult Function(String data) generateInterviewQuestionSuccess,
     required TResult Function(String data) generateSkillKnowledgeSuccess,
     required TResult Function(String data) generateCoverLetterSuccess,
+    required TResult Function(
+            AutoGenerateHistoryModel autoGenerateHistoryDetail)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(int point) getCurrentPointOfUserSuccess,
   }) {
     return error(message, title);
   }
@@ -1573,6 +2102,9 @@ class _$AiFeaturesErrorImpl implements AiFeaturesError {
     TResult? Function(String data)? generateInterviewQuestionSuccess,
     TResult? Function(String data)? generateSkillKnowledgeSuccess,
     TResult? Function(String data)? generateCoverLetterSuccess,
+    TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(int point)? getCurrentPointOfUserSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -1589,6 +2121,9 @@ class _$AiFeaturesErrorImpl implements AiFeaturesError {
     TResult Function(String data)? generateInterviewQuestionSuccess,
     TResult Function(String data)? generateSkillKnowledgeSuccess,
     TResult Function(String data)? generateCoverLetterSuccess,
+    TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(int point)? getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1613,6 +2148,10 @@ class _$AiFeaturesErrorImpl implements AiFeaturesError {
         generateSkillKnowledgeSuccess,
     required TResult Function(GenerateCoverLetterSuccess value)
         generateCoverLetterSuccess,
+    required TResult Function(GetAutoGenerateHistoryDetailSuccess value)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(GetCurrentPointOfUserSuccess value)
+        getCurrentPointOfUserSuccess,
   }) {
     return error(this);
   }
@@ -1633,6 +2172,10 @@ class _$AiFeaturesErrorImpl implements AiFeaturesError {
         generateSkillKnowledgeSuccess,
     TResult? Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult? Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
   }) {
     return error?.call(this);
   }
@@ -1653,6 +2196,10 @@ class _$AiFeaturesErrorImpl implements AiFeaturesError {
         generateSkillKnowledgeSuccess,
     TResult Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1722,6 +2269,10 @@ class _$AiFeaturesLoadingImpl implements AiFeaturesLoading {
     required TResult Function(String data) generateInterviewQuestionSuccess,
     required TResult Function(String data) generateSkillKnowledgeSuccess,
     required TResult Function(String data) generateCoverLetterSuccess,
+    required TResult Function(
+            AutoGenerateHistoryModel autoGenerateHistoryDetail)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(int point) getCurrentPointOfUserSuccess,
   }) {
     return loading();
   }
@@ -1738,6 +2289,9 @@ class _$AiFeaturesLoadingImpl implements AiFeaturesLoading {
     TResult? Function(String data)? generateInterviewQuestionSuccess,
     TResult? Function(String data)? generateSkillKnowledgeSuccess,
     TResult? Function(String data)? generateCoverLetterSuccess,
+    TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(int point)? getCurrentPointOfUserSuccess,
   }) {
     return loading?.call();
   }
@@ -1754,6 +2308,9 @@ class _$AiFeaturesLoadingImpl implements AiFeaturesLoading {
     TResult Function(String data)? generateInterviewQuestionSuccess,
     TResult Function(String data)? generateSkillKnowledgeSuccess,
     TResult Function(String data)? generateCoverLetterSuccess,
+    TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(int point)? getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1778,6 +2335,10 @@ class _$AiFeaturesLoadingImpl implements AiFeaturesLoading {
         generateSkillKnowledgeSuccess,
     required TResult Function(GenerateCoverLetterSuccess value)
         generateCoverLetterSuccess,
+    required TResult Function(GetAutoGenerateHistoryDetailSuccess value)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(GetCurrentPointOfUserSuccess value)
+        getCurrentPointOfUserSuccess,
   }) {
     return loading(this);
   }
@@ -1798,6 +2359,10 @@ class _$AiFeaturesLoadingImpl implements AiFeaturesLoading {
         generateSkillKnowledgeSuccess,
     TResult? Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult? Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
   }) {
     return loading?.call(this);
   }
@@ -1818,6 +2383,10 @@ class _$AiFeaturesLoadingImpl implements AiFeaturesLoading {
         generateSkillKnowledgeSuccess,
     TResult Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1921,6 +2490,10 @@ class _$GetAutoGenerateHistorySuccessImpl
     required TResult Function(String data) generateInterviewQuestionSuccess,
     required TResult Function(String data) generateSkillKnowledgeSuccess,
     required TResult Function(String data) generateCoverLetterSuccess,
+    required TResult Function(
+            AutoGenerateHistoryModel autoGenerateHistoryDetail)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(int point) getCurrentPointOfUserSuccess,
   }) {
     return getAutoGenerateHistory(autoGenerateHistories);
   }
@@ -1937,6 +2510,9 @@ class _$GetAutoGenerateHistorySuccessImpl
     TResult? Function(String data)? generateInterviewQuestionSuccess,
     TResult? Function(String data)? generateSkillKnowledgeSuccess,
     TResult? Function(String data)? generateCoverLetterSuccess,
+    TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(int point)? getCurrentPointOfUserSuccess,
   }) {
     return getAutoGenerateHistory?.call(autoGenerateHistories);
   }
@@ -1953,6 +2529,9 @@ class _$GetAutoGenerateHistorySuccessImpl
     TResult Function(String data)? generateInterviewQuestionSuccess,
     TResult Function(String data)? generateSkillKnowledgeSuccess,
     TResult Function(String data)? generateCoverLetterSuccess,
+    TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(int point)? getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistory != null) {
@@ -1977,6 +2556,10 @@ class _$GetAutoGenerateHistorySuccessImpl
         generateSkillKnowledgeSuccess,
     required TResult Function(GenerateCoverLetterSuccess value)
         generateCoverLetterSuccess,
+    required TResult Function(GetAutoGenerateHistoryDetailSuccess value)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(GetCurrentPointOfUserSuccess value)
+        getCurrentPointOfUserSuccess,
   }) {
     return getAutoGenerateHistory(this);
   }
@@ -1997,6 +2580,10 @@ class _$GetAutoGenerateHistorySuccessImpl
         generateSkillKnowledgeSuccess,
     TResult? Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult? Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
   }) {
     return getAutoGenerateHistory?.call(this);
   }
@@ -2017,6 +2604,10 @@ class _$GetAutoGenerateHistorySuccessImpl
         generateSkillKnowledgeSuccess,
     TResult Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistory != null) {
@@ -2118,6 +2709,10 @@ class _$GenerateProfileIntroductionSuccessImpl
     required TResult Function(String data) generateInterviewQuestionSuccess,
     required TResult Function(String data) generateSkillKnowledgeSuccess,
     required TResult Function(String data) generateCoverLetterSuccess,
+    required TResult Function(
+            AutoGenerateHistoryModel autoGenerateHistoryDetail)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(int point) getCurrentPointOfUserSuccess,
   }) {
     return generateProfileIntroductionSuccess(data);
   }
@@ -2134,6 +2729,9 @@ class _$GenerateProfileIntroductionSuccessImpl
     TResult? Function(String data)? generateInterviewQuestionSuccess,
     TResult? Function(String data)? generateSkillKnowledgeSuccess,
     TResult? Function(String data)? generateCoverLetterSuccess,
+    TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(int point)? getCurrentPointOfUserSuccess,
   }) {
     return generateProfileIntroductionSuccess?.call(data);
   }
@@ -2150,6 +2748,9 @@ class _$GenerateProfileIntroductionSuccessImpl
     TResult Function(String data)? generateInterviewQuestionSuccess,
     TResult Function(String data)? generateSkillKnowledgeSuccess,
     TResult Function(String data)? generateCoverLetterSuccess,
+    TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(int point)? getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (generateProfileIntroductionSuccess != null) {
@@ -2174,6 +2775,10 @@ class _$GenerateProfileIntroductionSuccessImpl
         generateSkillKnowledgeSuccess,
     required TResult Function(GenerateCoverLetterSuccess value)
         generateCoverLetterSuccess,
+    required TResult Function(GetAutoGenerateHistoryDetailSuccess value)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(GetCurrentPointOfUserSuccess value)
+        getCurrentPointOfUserSuccess,
   }) {
     return generateProfileIntroductionSuccess(this);
   }
@@ -2194,6 +2799,10 @@ class _$GenerateProfileIntroductionSuccessImpl
         generateSkillKnowledgeSuccess,
     TResult? Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult? Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
   }) {
     return generateProfileIntroductionSuccess?.call(this);
   }
@@ -2214,6 +2823,10 @@ class _$GenerateProfileIntroductionSuccessImpl
         generateSkillKnowledgeSuccess,
     TResult Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (generateProfileIntroductionSuccess != null) {
@@ -2314,6 +2927,10 @@ class _$GenerateInterviewQuestionSuccessImpl
     required TResult Function(String data) generateInterviewQuestionSuccess,
     required TResult Function(String data) generateSkillKnowledgeSuccess,
     required TResult Function(String data) generateCoverLetterSuccess,
+    required TResult Function(
+            AutoGenerateHistoryModel autoGenerateHistoryDetail)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(int point) getCurrentPointOfUserSuccess,
   }) {
     return generateInterviewQuestionSuccess(data);
   }
@@ -2330,6 +2947,9 @@ class _$GenerateInterviewQuestionSuccessImpl
     TResult? Function(String data)? generateInterviewQuestionSuccess,
     TResult? Function(String data)? generateSkillKnowledgeSuccess,
     TResult? Function(String data)? generateCoverLetterSuccess,
+    TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(int point)? getCurrentPointOfUserSuccess,
   }) {
     return generateInterviewQuestionSuccess?.call(data);
   }
@@ -2346,6 +2966,9 @@ class _$GenerateInterviewQuestionSuccessImpl
     TResult Function(String data)? generateInterviewQuestionSuccess,
     TResult Function(String data)? generateSkillKnowledgeSuccess,
     TResult Function(String data)? generateCoverLetterSuccess,
+    TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(int point)? getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (generateInterviewQuestionSuccess != null) {
@@ -2370,6 +2993,10 @@ class _$GenerateInterviewQuestionSuccessImpl
         generateSkillKnowledgeSuccess,
     required TResult Function(GenerateCoverLetterSuccess value)
         generateCoverLetterSuccess,
+    required TResult Function(GetAutoGenerateHistoryDetailSuccess value)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(GetCurrentPointOfUserSuccess value)
+        getCurrentPointOfUserSuccess,
   }) {
     return generateInterviewQuestionSuccess(this);
   }
@@ -2390,6 +3017,10 @@ class _$GenerateInterviewQuestionSuccessImpl
         generateSkillKnowledgeSuccess,
     TResult? Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult? Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
   }) {
     return generateInterviewQuestionSuccess?.call(this);
   }
@@ -2410,6 +3041,10 @@ class _$GenerateInterviewQuestionSuccessImpl
         generateSkillKnowledgeSuccess,
     TResult Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (generateInterviewQuestionSuccess != null) {
@@ -2510,6 +3145,10 @@ class _$GenerateSkillKnowledgeSuccessImpl
     required TResult Function(String data) generateInterviewQuestionSuccess,
     required TResult Function(String data) generateSkillKnowledgeSuccess,
     required TResult Function(String data) generateCoverLetterSuccess,
+    required TResult Function(
+            AutoGenerateHistoryModel autoGenerateHistoryDetail)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(int point) getCurrentPointOfUserSuccess,
   }) {
     return generateSkillKnowledgeSuccess(data);
   }
@@ -2526,6 +3165,9 @@ class _$GenerateSkillKnowledgeSuccessImpl
     TResult? Function(String data)? generateInterviewQuestionSuccess,
     TResult? Function(String data)? generateSkillKnowledgeSuccess,
     TResult? Function(String data)? generateCoverLetterSuccess,
+    TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(int point)? getCurrentPointOfUserSuccess,
   }) {
     return generateSkillKnowledgeSuccess?.call(data);
   }
@@ -2542,6 +3184,9 @@ class _$GenerateSkillKnowledgeSuccessImpl
     TResult Function(String data)? generateInterviewQuestionSuccess,
     TResult Function(String data)? generateSkillKnowledgeSuccess,
     TResult Function(String data)? generateCoverLetterSuccess,
+    TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(int point)? getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (generateSkillKnowledgeSuccess != null) {
@@ -2566,6 +3211,10 @@ class _$GenerateSkillKnowledgeSuccessImpl
         generateSkillKnowledgeSuccess,
     required TResult Function(GenerateCoverLetterSuccess value)
         generateCoverLetterSuccess,
+    required TResult Function(GetAutoGenerateHistoryDetailSuccess value)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(GetCurrentPointOfUserSuccess value)
+        getCurrentPointOfUserSuccess,
   }) {
     return generateSkillKnowledgeSuccess(this);
   }
@@ -2586,6 +3235,10 @@ class _$GenerateSkillKnowledgeSuccessImpl
         generateSkillKnowledgeSuccess,
     TResult? Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult? Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
   }) {
     return generateSkillKnowledgeSuccess?.call(this);
   }
@@ -2606,6 +3259,10 @@ class _$GenerateSkillKnowledgeSuccessImpl
         generateSkillKnowledgeSuccess,
     TResult Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (generateSkillKnowledgeSuccess != null) {
@@ -2704,6 +3361,10 @@ class _$GenerateCoverLetterSuccessImpl implements GenerateCoverLetterSuccess {
     required TResult Function(String data) generateInterviewQuestionSuccess,
     required TResult Function(String data) generateSkillKnowledgeSuccess,
     required TResult Function(String data) generateCoverLetterSuccess,
+    required TResult Function(
+            AutoGenerateHistoryModel autoGenerateHistoryDetail)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(int point) getCurrentPointOfUserSuccess,
   }) {
     return generateCoverLetterSuccess(data);
   }
@@ -2720,6 +3381,9 @@ class _$GenerateCoverLetterSuccessImpl implements GenerateCoverLetterSuccess {
     TResult? Function(String data)? generateInterviewQuestionSuccess,
     TResult? Function(String data)? generateSkillKnowledgeSuccess,
     TResult? Function(String data)? generateCoverLetterSuccess,
+    TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(int point)? getCurrentPointOfUserSuccess,
   }) {
     return generateCoverLetterSuccess?.call(data);
   }
@@ -2736,6 +3400,9 @@ class _$GenerateCoverLetterSuccessImpl implements GenerateCoverLetterSuccess {
     TResult Function(String data)? generateInterviewQuestionSuccess,
     TResult Function(String data)? generateSkillKnowledgeSuccess,
     TResult Function(String data)? generateCoverLetterSuccess,
+    TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(int point)? getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (generateCoverLetterSuccess != null) {
@@ -2760,6 +3427,10 @@ class _$GenerateCoverLetterSuccessImpl implements GenerateCoverLetterSuccess {
         generateSkillKnowledgeSuccess,
     required TResult Function(GenerateCoverLetterSuccess value)
         generateCoverLetterSuccess,
+    required TResult Function(GetAutoGenerateHistoryDetailSuccess value)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(GetCurrentPointOfUserSuccess value)
+        getCurrentPointOfUserSuccess,
   }) {
     return generateCoverLetterSuccess(this);
   }
@@ -2780,6 +3451,10 @@ class _$GenerateCoverLetterSuccessImpl implements GenerateCoverLetterSuccess {
         generateSkillKnowledgeSuccess,
     TResult? Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult? Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
   }) {
     return generateCoverLetterSuccess?.call(this);
   }
@@ -2800,6 +3475,10 @@ class _$GenerateCoverLetterSuccessImpl implements GenerateCoverLetterSuccess {
         generateSkillKnowledgeSuccess,
     TResult Function(GenerateCoverLetterSuccess value)?
         generateCoverLetterSuccess,
+    TResult Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
     required TResult orElse(),
   }) {
     if (generateCoverLetterSuccess != null) {
@@ -2816,5 +3495,456 @@ abstract class GenerateCoverLetterSuccess implements AiFeaturesState {
   String get data;
   @JsonKey(ignore: true)
   _$$GenerateCoverLetterSuccessImplCopyWith<_$GenerateCoverLetterSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetAutoGenerateHistoryDetailSuccessImplCopyWith<$Res> {
+  factory _$$GetAutoGenerateHistoryDetailSuccessImplCopyWith(
+          _$GetAutoGenerateHistoryDetailSuccessImpl value,
+          $Res Function(_$GetAutoGenerateHistoryDetailSuccessImpl) then) =
+      __$$GetAutoGenerateHistoryDetailSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AutoGenerateHistoryModel autoGenerateHistoryDetail});
+
+  $AutoGenerateHistoryModelCopyWith<$Res> get autoGenerateHistoryDetail;
+}
+
+/// @nodoc
+class __$$GetAutoGenerateHistoryDetailSuccessImplCopyWithImpl<$Res>
+    extends _$AiFeaturesStateCopyWithImpl<$Res,
+        _$GetAutoGenerateHistoryDetailSuccessImpl>
+    implements _$$GetAutoGenerateHistoryDetailSuccessImplCopyWith<$Res> {
+  __$$GetAutoGenerateHistoryDetailSuccessImplCopyWithImpl(
+      _$GetAutoGenerateHistoryDetailSuccessImpl _value,
+      $Res Function(_$GetAutoGenerateHistoryDetailSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? autoGenerateHistoryDetail = null,
+  }) {
+    return _then(_$GetAutoGenerateHistoryDetailSuccessImpl(
+      null == autoGenerateHistoryDetail
+          ? _value.autoGenerateHistoryDetail
+          : autoGenerateHistoryDetail // ignore: cast_nullable_to_non_nullable
+              as AutoGenerateHistoryModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AutoGenerateHistoryModelCopyWith<$Res> get autoGenerateHistoryDetail {
+    return $AutoGenerateHistoryModelCopyWith<$Res>(
+        _value.autoGenerateHistoryDetail, (value) {
+      return _then(_value.copyWith(autoGenerateHistoryDetail: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$GetAutoGenerateHistoryDetailSuccessImpl
+    implements GetAutoGenerateHistoryDetailSuccess {
+  const _$GetAutoGenerateHistoryDetailSuccessImpl(
+      this.autoGenerateHistoryDetail);
+
+  @override
+  final AutoGenerateHistoryModel autoGenerateHistoryDetail;
+
+  @override
+  String toString() {
+    return 'AiFeaturesState.getAutoGenerateHistoryDetailSuccess(autoGenerateHistoryDetail: $autoGenerateHistoryDetail)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAutoGenerateHistoryDetailSuccessImpl &&
+            (identical(other.autoGenerateHistoryDetail,
+                    autoGenerateHistoryDetail) ||
+                other.autoGenerateHistoryDetail == autoGenerateHistoryDetail));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, autoGenerateHistoryDetail);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetAutoGenerateHistoryDetailSuccessImplCopyWith<
+          _$GetAutoGenerateHistoryDetailSuccessImpl>
+      get copyWith => __$$GetAutoGenerateHistoryDetailSuccessImplCopyWithImpl<
+          _$GetAutoGenerateHistoryDetailSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(
+            List<AutoGenerateHistoryModel> autoGenerateHistories)
+        getAutoGenerateHistory,
+    required TResult Function(String data) generateProfileIntroductionSuccess,
+    required TResult Function(String data) generateInterviewQuestionSuccess,
+    required TResult Function(String data) generateSkillKnowledgeSuccess,
+    required TResult Function(String data) generateCoverLetterSuccess,
+    required TResult Function(
+            AutoGenerateHistoryModel autoGenerateHistoryDetail)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(int point) getCurrentPointOfUserSuccess,
+  }) {
+    return getAutoGenerateHistoryDetailSuccess(autoGenerateHistoryDetail);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(List<AutoGenerateHistoryModel> autoGenerateHistories)?
+        getAutoGenerateHistory,
+    TResult? Function(String data)? generateProfileIntroductionSuccess,
+    TResult? Function(String data)? generateInterviewQuestionSuccess,
+    TResult? Function(String data)? generateSkillKnowledgeSuccess,
+    TResult? Function(String data)? generateCoverLetterSuccess,
+    TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(int point)? getCurrentPointOfUserSuccess,
+  }) {
+    return getAutoGenerateHistoryDetailSuccess?.call(autoGenerateHistoryDetail);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(List<AutoGenerateHistoryModel> autoGenerateHistories)?
+        getAutoGenerateHistory,
+    TResult Function(String data)? generateProfileIntroductionSuccess,
+    TResult Function(String data)? generateInterviewQuestionSuccess,
+    TResult Function(String data)? generateSkillKnowledgeSuccess,
+    TResult Function(String data)? generateCoverLetterSuccess,
+    TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(int point)? getCurrentPointOfUserSuccess,
+    required TResult orElse(),
+  }) {
+    if (getAutoGenerateHistoryDetailSuccess != null) {
+      return getAutoGenerateHistoryDetailSuccess(autoGenerateHistoryDetail);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AiFeaturesError value) error,
+    required TResult Function(AiFeaturesLoading value) loading,
+    required TResult Function(GetAutoGenerateHistorySuccess value)
+        getAutoGenerateHistory,
+    required TResult Function(GenerateProfileIntroductionSuccess value)
+        generateProfileIntroductionSuccess,
+    required TResult Function(GenerateInterviewQuestionSuccess value)
+        generateInterviewQuestionSuccess,
+    required TResult Function(GenerateSkillKnowledgeSuccess value)
+        generateSkillKnowledgeSuccess,
+    required TResult Function(GenerateCoverLetterSuccess value)
+        generateCoverLetterSuccess,
+    required TResult Function(GetAutoGenerateHistoryDetailSuccess value)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(GetCurrentPointOfUserSuccess value)
+        getCurrentPointOfUserSuccess,
+  }) {
+    return getAutoGenerateHistoryDetailSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AiFeaturesError value)? error,
+    TResult? Function(AiFeaturesLoading value)? loading,
+    TResult? Function(GetAutoGenerateHistorySuccess value)?
+        getAutoGenerateHistory,
+    TResult? Function(GenerateProfileIntroductionSuccess value)?
+        generateProfileIntroductionSuccess,
+    TResult? Function(GenerateInterviewQuestionSuccess value)?
+        generateInterviewQuestionSuccess,
+    TResult? Function(GenerateSkillKnowledgeSuccess value)?
+        generateSkillKnowledgeSuccess,
+    TResult? Function(GenerateCoverLetterSuccess value)?
+        generateCoverLetterSuccess,
+    TResult? Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
+  }) {
+    return getAutoGenerateHistoryDetailSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AiFeaturesError value)? error,
+    TResult Function(AiFeaturesLoading value)? loading,
+    TResult Function(GetAutoGenerateHistorySuccess value)?
+        getAutoGenerateHistory,
+    TResult Function(GenerateProfileIntroductionSuccess value)?
+        generateProfileIntroductionSuccess,
+    TResult Function(GenerateInterviewQuestionSuccess value)?
+        generateInterviewQuestionSuccess,
+    TResult Function(GenerateSkillKnowledgeSuccess value)?
+        generateSkillKnowledgeSuccess,
+    TResult Function(GenerateCoverLetterSuccess value)?
+        generateCoverLetterSuccess,
+    TResult Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
+    required TResult orElse(),
+  }) {
+    if (getAutoGenerateHistoryDetailSuccess != null) {
+      return getAutoGenerateHistoryDetailSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetAutoGenerateHistoryDetailSuccess implements AiFeaturesState {
+  const factory GetAutoGenerateHistoryDetailSuccess(
+          final AutoGenerateHistoryModel autoGenerateHistoryDetail) =
+      _$GetAutoGenerateHistoryDetailSuccessImpl;
+
+  AutoGenerateHistoryModel get autoGenerateHistoryDetail;
+  @JsonKey(ignore: true)
+  _$$GetAutoGenerateHistoryDetailSuccessImplCopyWith<
+          _$GetAutoGenerateHistoryDetailSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetCurrentPointOfUserSuccessImplCopyWith<$Res> {
+  factory _$$GetCurrentPointOfUserSuccessImplCopyWith(
+          _$GetCurrentPointOfUserSuccessImpl value,
+          $Res Function(_$GetCurrentPointOfUserSuccessImpl) then) =
+      __$$GetCurrentPointOfUserSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int point});
+}
+
+/// @nodoc
+class __$$GetCurrentPointOfUserSuccessImplCopyWithImpl<$Res>
+    extends _$AiFeaturesStateCopyWithImpl<$Res,
+        _$GetCurrentPointOfUserSuccessImpl>
+    implements _$$GetCurrentPointOfUserSuccessImplCopyWith<$Res> {
+  __$$GetCurrentPointOfUserSuccessImplCopyWithImpl(
+      _$GetCurrentPointOfUserSuccessImpl _value,
+      $Res Function(_$GetCurrentPointOfUserSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? point = null,
+  }) {
+    return _then(_$GetCurrentPointOfUserSuccessImpl(
+      null == point
+          ? _value.point
+          : point // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetCurrentPointOfUserSuccessImpl
+    implements GetCurrentPointOfUserSuccess {
+  const _$GetCurrentPointOfUserSuccessImpl(this.point);
+
+  @override
+  final int point;
+
+  @override
+  String toString() {
+    return 'AiFeaturesState.getCurrentPointOfUserSuccess(point: $point)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetCurrentPointOfUserSuccessImpl &&
+            (identical(other.point, point) || other.point == point));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, point);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetCurrentPointOfUserSuccessImplCopyWith<
+          _$GetCurrentPointOfUserSuccessImpl>
+      get copyWith => __$$GetCurrentPointOfUserSuccessImplCopyWithImpl<
+          _$GetCurrentPointOfUserSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(
+            List<AutoGenerateHistoryModel> autoGenerateHistories)
+        getAutoGenerateHistory,
+    required TResult Function(String data) generateProfileIntroductionSuccess,
+    required TResult Function(String data) generateInterviewQuestionSuccess,
+    required TResult Function(String data) generateSkillKnowledgeSuccess,
+    required TResult Function(String data) generateCoverLetterSuccess,
+    required TResult Function(
+            AutoGenerateHistoryModel autoGenerateHistoryDetail)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(int point) getCurrentPointOfUserSuccess,
+  }) {
+    return getCurrentPointOfUserSuccess(point);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(List<AutoGenerateHistoryModel> autoGenerateHistories)?
+        getAutoGenerateHistory,
+    TResult? Function(String data)? generateProfileIntroductionSuccess,
+    TResult? Function(String data)? generateInterviewQuestionSuccess,
+    TResult? Function(String data)? generateSkillKnowledgeSuccess,
+    TResult? Function(String data)? generateCoverLetterSuccess,
+    TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(int point)? getCurrentPointOfUserSuccess,
+  }) {
+    return getCurrentPointOfUserSuccess?.call(point);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(List<AutoGenerateHistoryModel> autoGenerateHistories)?
+        getAutoGenerateHistory,
+    TResult Function(String data)? generateProfileIntroductionSuccess,
+    TResult Function(String data)? generateInterviewQuestionSuccess,
+    TResult Function(String data)? generateSkillKnowledgeSuccess,
+    TResult Function(String data)? generateCoverLetterSuccess,
+    TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(int point)? getCurrentPointOfUserSuccess,
+    required TResult orElse(),
+  }) {
+    if (getCurrentPointOfUserSuccess != null) {
+      return getCurrentPointOfUserSuccess(point);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AiFeaturesError value) error,
+    required TResult Function(AiFeaturesLoading value) loading,
+    required TResult Function(GetAutoGenerateHistorySuccess value)
+        getAutoGenerateHistory,
+    required TResult Function(GenerateProfileIntroductionSuccess value)
+        generateProfileIntroductionSuccess,
+    required TResult Function(GenerateInterviewQuestionSuccess value)
+        generateInterviewQuestionSuccess,
+    required TResult Function(GenerateSkillKnowledgeSuccess value)
+        generateSkillKnowledgeSuccess,
+    required TResult Function(GenerateCoverLetterSuccess value)
+        generateCoverLetterSuccess,
+    required TResult Function(GetAutoGenerateHistoryDetailSuccess value)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(GetCurrentPointOfUserSuccess value)
+        getCurrentPointOfUserSuccess,
+  }) {
+    return getCurrentPointOfUserSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AiFeaturesError value)? error,
+    TResult? Function(AiFeaturesLoading value)? loading,
+    TResult? Function(GetAutoGenerateHistorySuccess value)?
+        getAutoGenerateHistory,
+    TResult? Function(GenerateProfileIntroductionSuccess value)?
+        generateProfileIntroductionSuccess,
+    TResult? Function(GenerateInterviewQuestionSuccess value)?
+        generateInterviewQuestionSuccess,
+    TResult? Function(GenerateSkillKnowledgeSuccess value)?
+        generateSkillKnowledgeSuccess,
+    TResult? Function(GenerateCoverLetterSuccess value)?
+        generateCoverLetterSuccess,
+    TResult? Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
+  }) {
+    return getCurrentPointOfUserSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AiFeaturesError value)? error,
+    TResult Function(AiFeaturesLoading value)? loading,
+    TResult Function(GetAutoGenerateHistorySuccess value)?
+        getAutoGenerateHistory,
+    TResult Function(GenerateProfileIntroductionSuccess value)?
+        generateProfileIntroductionSuccess,
+    TResult Function(GenerateInterviewQuestionSuccess value)?
+        generateInterviewQuestionSuccess,
+    TResult Function(GenerateSkillKnowledgeSuccess value)?
+        generateSkillKnowledgeSuccess,
+    TResult Function(GenerateCoverLetterSuccess value)?
+        generateCoverLetterSuccess,
+    TResult Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
+    required TResult orElse(),
+  }) {
+    if (getCurrentPointOfUserSuccess != null) {
+      return getCurrentPointOfUserSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetCurrentPointOfUserSuccess implements AiFeaturesState {
+  const factory GetCurrentPointOfUserSuccess(final int point) =
+      _$GetCurrentPointOfUserSuccessImpl;
+
+  int get point;
+  @JsonKey(ignore: true)
+  _$$GetCurrentPointOfUserSuccessImplCopyWith<
+          _$GetCurrentPointOfUserSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -22,7 +22,7 @@ class MyShimmer extends StatelessWidget {
           itemCount: count ?? 5,
           separatorBuilder: (_, __) => context.sizedBox(height: 15),
           itemBuilder: (_, i) {
-            final delay = (i * 400);
+            final delay = (i * 100);
             return Container(
               decoration: BoxDecoration(
                   color: sharePreference.isDarkMode()

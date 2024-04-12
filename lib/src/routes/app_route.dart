@@ -47,5 +47,8 @@ class AppRouter extends $AppRouter {
         AutoRoute(path: '/blog_detail', page: BlogDetailRoute.page),
         AutoRoute(
             path: '/ai_features_history', page: AiFeaturesHistoryRoute.page),
+        AutoRoute(
+            path: '/auto_generation_history_detail',
+            page: AutoGenerationHistoryDetailRoute.page),
       ];
 }

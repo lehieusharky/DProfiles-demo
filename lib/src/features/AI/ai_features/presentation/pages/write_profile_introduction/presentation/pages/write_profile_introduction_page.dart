@@ -2,12 +2,13 @@ import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
+import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/write_profile_introduction/presentation/widgets/form_write_profile.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/header_auto_gen.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/write_profile_introduction/presentation/widgets/profile_introduction_generation.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/chat_gpt_selector.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,6 +24,7 @@ class WriteProfileIntroductionPage extends StatefulWidget {
 class _WriteProfileIntroductionPageState
     extends State<WriteProfileIntroductionPage>
     with SingleTickerProviderStateMixin {
+
   late TabController _tabController;
   late ScrollController _scrollController;
 
@@ -37,7 +39,7 @@ class _WriteProfileIntroductionPageState
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
-          injector.get<AiFeaturesBloc>(),
+          injector.get<AiFeaturesBloc>()..add(const GetCurrentPointOfUser()),
       child: BlocListener<AiFeaturesBloc, AiFeaturesState>(
         listener: (context, state) {
           if (state is GenerateProfileIntroductionSuccess) {
@@ -48,27 +50,36 @@ class _WriteProfileIntroductionPageState
               curve: Curves.easeOut,
             );
           }
+
+          if (state is AiFeaturesError) {
+            Navigator.pop(context);
+            showErrorDialog(context,
+                title: 'Generate failed', description: state.message);
+          }
         },
         child: MyScaffold(
           horizontalMargin: 20,
           useAppBar: true,
           canBack: true,
-          titleWidget: Assets.icons.logos.dWhitePWhite.svg(),
-          body: SingleChildScrollView(
-            controller: _scrollController,
-            child: Padding(
-              padding: context.padding(bottom: 20),
+          resizeToAvoidBottomInset: false,
+          appBarTitle: 'Write profile introduction',
+          body: NestedScrollView(
+            headerSliverBuilder:
+                (BuildContext context, bool innerBoxIsScrolled) => [
+              const MySliverAppBar(
+                height: 130,
+                child: HeaderAutoGenerate(
+                    aiFeatureTitle:
+                        'Impress the employer with your profile introduction.'),
+              ),
+            ],
+            body: SingleChildScrollView(
               child: Column(
                 children: [
-                  HeaderAutoGenerate(
-                    aiFeatureTitle:
-                        appLocal(context).writeYourProfileIntroduction,
-                  ),
                   ChatGPTSelector(controller: _tabController),
                   Padding(
-                    padding: context.padding(vertical: 16),
-                    child: const FormWriteProfile(),
-                  ),
+                      padding: context.padding(vertical: 16),
+                      child: const FormWriteProfile()),
                   const ProfileIntroductionGeneration(),
                 ],
               ),

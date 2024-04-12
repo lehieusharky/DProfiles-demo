@@ -9,7 +9,7 @@ part of 'write_profile_introduction_model.dart';
 _$WriteProfileIntroductionModelImpl
     _$$WriteProfileIntroductionModelImplFromJson(Map<String, dynamic> json) =>
         _$WriteProfileIntroductionModelImpl(
-          maxToken: json['max_token'] as int? ?? 0,
+          maxToken: json['max_token'] as int? ?? 10,
           summary: json['summary'] as String?,
           style: json['style'] as String?,
           gptModel: json['gpt_model'] as int? ?? 3,

@@ -52,6 +52,13 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
         builder: (context, state) {
           return MyScaffold(
             horizontalMargin: 32,
+            canBack: true,
+            useAppBar: true,
+            onBack: () {
+              while (context.router.canPop()) {
+                Navigator.pop(context);
+              }
+            },
             body: SingleChildScrollView(
               child: Column(
                 children: [

@@ -131,6 +131,7 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
         summary: _aboutYourSelfController.text + _promptController.text,
         style: _writeStyleController.text.trim(),
         gptModel: sharePreference.getChatGPTVersion().toVersion(),
+        maxToken: 10,
       );
       context.read<AiFeaturesBloc>().add(GenerateProfileIntroduction(model));
     }

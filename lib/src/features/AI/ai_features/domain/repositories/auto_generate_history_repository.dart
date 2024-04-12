@@ -9,6 +9,9 @@ import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 abstract class AutoGenerateRepository {
   Future<Either<AutoGenerateFailure, BaseResponse>> getAutoGenerateHistory();
 
+  Future<Either<AutoGenerateFailure, BaseResponse>>
+      getAutoGenerateHistoryDetail(int id);
+
   Future<Either<AutoGenerateFailure, BaseResponse>> generateProfileIntroduction(
       WriteProfileIntroductionModel model);
 
