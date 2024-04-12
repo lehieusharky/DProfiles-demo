@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
@@ -54,6 +55,7 @@ class _AiCharacterPageState extends State<AiCharacterPage>
                       onPressed: () =>
                           context.router.push(const CreateAiCharacterRoute())),
                   TabBarAICharacter(controller: _tabController),
+                  SizedBox(height: context.sizeHeight(16)),
                   const PopularCharacterBots(),
                 ],
               ),
