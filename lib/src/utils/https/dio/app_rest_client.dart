@@ -142,4 +142,17 @@ abstract class RestClient {
     @Query('page') int page,
     @Query('limit') int limit,
   );
+
+  // forgot password
+  @POST('/reset-password')
+  Future<BaseResponse> resetPassword(@Body() Map<String, dynamic> body);
+
+  @GET('/reset-password')
+  Future<BaseResponse> getResetPassword();
+
+  @POST('/request-password-reset')
+  Future<BaseResponse> requestResetPassword(@Body() Map<String, dynamic> body);
+
+  @POST('/update-password')
+  Future<BaseResponse> updatePassword(@Body() Map<String, dynamic> body);
 }
