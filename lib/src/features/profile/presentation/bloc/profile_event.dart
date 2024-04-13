@@ -14,4 +14,13 @@ class ProfileEvent with _$ProfileEvent {
 
   const factory ProfileEvent.addNewCertificate(
       CertificateModel certificateModel) = ProfileAddNewCertificate;
+
+  const factory ProfileEvent.updateUserInfo(UserInfoModel userInfoModel) =
+      ProfileUpdateUserInfo;
+
+  const factory ProfileEvent.getUserExperiences() = ProfileGetUserExperience;
+
+  const factory ProfileEvent.getUserEducations() = ProfileGetUserEducations;
+
+  const factory ProfileEvent.getUserCertificates() = ProfileGetUserCertificates;
 }

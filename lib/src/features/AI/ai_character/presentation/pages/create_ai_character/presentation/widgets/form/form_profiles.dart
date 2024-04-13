@@ -34,8 +34,7 @@ class _FormProfilesState extends State<FormProfiles> {
 
     return BlocBuilder<AiCharacterBloc, AiCharacterState>(
       builder: (context, state) {
-        return SizedBox(
-          height: 200,
+        return SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,

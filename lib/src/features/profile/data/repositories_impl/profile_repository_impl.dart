@@ -3,6 +3,7 @@ import 'package:demo_dprofiles/src/features/profile/data/datasoures/profile_data
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/repositories/profile_repository.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/error_response.dart';
@@ -94,6 +95,19 @@ class ProfileRepositoryImpl implements ProfileRepository {
       ExperienceModel data) async {
     try {
       final res = await _profileDataSource.addNewExperience(data);
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(
+          ProfileFailure(response: ErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<ProfileFailure, BaseResponse>> updateUserInfo(
+      UserInfoModel data) async {
+    try {
+      final res = await _profileDataSource.updateUserInfo(data);
 
       return Right(res);
     } on DioException catch (e) {

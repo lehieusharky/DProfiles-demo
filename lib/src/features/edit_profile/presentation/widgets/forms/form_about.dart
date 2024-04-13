@@ -5,35 +5,27 @@ import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
-import 'package:demo_dprofiles/src/features/profile/domain/entities/ext_user_info_entity.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
-import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
-import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
-import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class OpenToWorkForm extends StatefulWidget {
-  const OpenToWorkForm({Key? key}) : super(key: key);
+class FormAbout extends StatefulWidget {
+  const FormAbout({Key? key}) : super(key: key);
 
   @override
-  State<OpenToWorkForm> createState() => _OpenToWorkFormState();
+  State<FormAbout> createState() => _FormAboutState();
 }
 
-class _OpenToWorkFormState extends State<OpenToWorkForm> {
-  late TextEditingController _payController;
-  late TextEditingController _salaryController;
+class _FormAboutState extends State<FormAbout> {
+  late TextEditingController _aboutController;
   final keyForm = GlobalKey<FormState>();
-
-  bool openToWork = false;
 
   @override
   void initState() {
     super.initState();
 
-    _payController = TextEditingController();
-    _salaryController = TextEditingController();
+    _aboutController = TextEditingController();
   }
 
   @override
@@ -41,13 +33,8 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
     return BlocSelector<ProfileBloc, ProfileState, UserInfoModel?>(
       selector: (state) {
         if (state is ProfileGetUserInfoSuccess) {
-          _payController = TextEditingController(
-              text: state.userInfoModel.getSalaryPayType());
-
-          _salaryController =
-              TextEditingController(text: state.userInfoModel.getSalary());
-
-          openToWork = state.userInfoModel.jobOpenStatus == 1 ? true : false;
+          _aboutController =
+              TextEditingController(text: state.userInfoModel.summary);
 
           return state.userInfoModel;
         }
@@ -72,32 +59,16 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
           child: Form(
             key: keyForm,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                _buildOpenToWork(),
                 Padding(
                   padding: context.padding(top: 32),
                   child: AuthField(
-                      title: 'PAY',
-                      hint: 'Pay per job',
-                      autoFocus: true,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return appLocal(context).fieldCannotBeEmpty;
-                        } else {
-                          return null;
-                        }
-                      },
-                      textInputAction: TextInputAction.next,
-                      suffixIcon: const Icon(IconsaxOutline.arrow_down_1),
-                      controller: _payController),
-                ),
-                Padding(
-                  padding: context.padding(top: 32),
-                  child: AuthField(
-                    controller: _salaryController,
-                    title: 'SALARY',
-                    keyboardType: TextInputType.number,
-                    hint: '\$10,000',
+                    title: 'ABOUT',
+                    hint: 'Describe your self',
+                    maxLines: 7,
+                    keyboardType: TextInputType.multiline,
+                    autoFocus: true,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return appLocal(context).fieldCannotBeEmpty;
@@ -105,8 +76,7 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
                         return null;
                       }
                     },
-                    textInputAction: TextInputAction.done,
-                    suffixIcon: _buildSalarySuffixIcon(),
+                    controller: _aboutController,
                   ),
                 ),
                 Padding(
@@ -138,44 +108,9 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
     );
   }
 
-  Widget _buildSalarySuffixIcon() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          '/hour',
-          style: AppFont()
-              .fontTheme(context, color: colorScheme(context).outline)
-              .bodyMedium,
-        ),
-      ],
-    );
-  }
-
-  Widget _buildOpenToWork() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          'Open to work',
-          style: AppFont().fontTheme(context).bodyLarge,
-        ),
-        Switch.adaptive(
-          value: openToWork,
-          onChanged: (value) => setState(() {
-            openToWork = value;
-          }),
-        )
-      ],
-    );
-  }
-
   void _save(UserInfoModel userInfo) {
     if (keyForm.currentState?.validate() ?? false) {
-      userInfo = userInfo.copyWith(
-          jobOpenStatus: openToWork ? 1 : 0,
-          salaryPayType: _payController.text.contains('job') ? 0 : 1,
-          salary: int.parse(_salaryController.text));
+      userInfo = userInfo.copyWith(summary: _aboutController.text);
 
       context.read<ProfileBloc>().add(ProfileUpdateUserInfo(userInfo));
     }

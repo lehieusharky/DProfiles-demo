@@ -20,6 +20,11 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<ProfileAddNewEducation>(_addNewEducation);
     on<ProfileAddNewCertificate>(_addNewCertificate);
     on<ProfileAddNewExperience>(_addNewExperience);
+    on<ProfileUpdateUserInfo>(_updateUserInfo);
+
+    on<ProfileGetUserCertificates>(_getUserCertificates);
+    on<ProfileGetUserEducations>(_getUserEducations);
+    on<ProfileGetUserExperience>(_getUserExperiences);
 
     add(const ProfileGetUserInfo());
   }
@@ -76,5 +81,69 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       (r) => emit(
           ProfileAddNewExperienceSuccess(ExperienceModel.fromJson(r.data))),
     );
+  }
+
+  FutureOr<void> _updateUserInfo(
+      ProfileUpdateUserInfo event, Emitter<ProfileState> emit) async {
+    emit(const ProfileLoading());
+    final result = await profileUseCase.updateUserInfo(event.userInfoModel);
+
+    result.fold(
+      (l) => emit(ProfileError(
+          message: l.map((e) => e).toString(),
+          title: 'Update user info  failed')),
+      (r) => emit(const ProfileUpdateUserInfoSuccess()),
+    );
+  }
+
+  FutureOr<void> _getUserCertificates(
+      ProfileGetUserCertificates event, Emitter<ProfileState> emit) async {
+    emit(const ProfileLoading());
+    final result = await profileUseCase.getUserCertificates();
+
+    result.fold(
+        (l) => emit(ProfileError(
+            message: l.map((e) => e).toString(),
+            title: 'Get user certificates  failed')), (r) {
+      final data = r.data as List;
+
+      final certificates =
+          data.map((e) => CertificateModel.fromJson(e)).toList();
+
+      emit(ProfileGetUserCertificatesSuccess(certificates));
+    });
+  }
+
+  FutureOr<void> _getUserEducations(
+      ProfileGetUserEducations event, Emitter<ProfileState> emit) async {
+    emit(const ProfileLoading());
+    final result = await profileUseCase.getUserEducations();
+
+    result.fold(
+        (l) => emit(ProfileError(
+            message: l.map((e) => e).toString(),
+            title: 'Get user education  failed')), (r) {
+      final data = r.data as List;
+
+      final educations = data.map((e) => EducationModel.fromJson(e)).toList();
+
+      emit(ProfileGetUserEducationsSuccess(educations));
+    });
+  }
+
+  FutureOr<void> _getUserExperiences(
+      ProfileGetUserExperience event, Emitter<ProfileState> emit) async {
+    emit(const ProfileLoading());
+    final result = await profileUseCase.getUserExperiences();
+    result.fold(
+        (l) => emit(ProfileError(
+            message: l.map((e) => e).toString(),
+            title: 'Get user experience  failed')), (r) {
+      final data = r.data as List;
+
+      final experiences = data.map((e) => ExperienceModel.fromJson(e)).toList();
+
+      emit(ProfileGetUserExperienceSuccess(experiences));
+    });
   }
 }

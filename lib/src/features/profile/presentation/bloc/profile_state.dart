@@ -20,4 +20,16 @@ class ProfileState with _$ProfileState {
 
   const factory ProfileState.addNewCertificateSuccess(
       CertificateModel certificateModel) = ProfileAddNewCertificateSuccess;
+
+  const factory ProfileState.updateUserInfoSuccess() =
+      ProfileUpdateUserInfoSuccess;
+
+  const factory ProfileState.getUserExperiencesSuccess(
+      List<ExperienceModel> experiences) = ProfileGetUserExperienceSuccess;
+
+  const factory ProfileState.getUserEducationsSuccess(
+      List<EducationModel> educations) = ProfileGetUserEducationsSuccess;
+
+  const factory ProfileState.getUserCertificatesSuccess(
+      List<CertificateModel> certificates) = ProfileGetUserCertificatesSuccess;
 }

@@ -1,20 +1,41 @@
+import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_feed_page.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/sub_profile_page.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_transactions_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BodyProfile extends StatelessWidget {
   const BodyProfile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const TabBarView(
-      physics: AlwaysScrollableScrollPhysics(),
-      children: [
-        SubProfilePage(),
-        SubFeedPage(),
-        SubTransactionsPage(),
-      ],
-    );
+    return BlocSelector<ProfileBloc, ProfileState, UserInfoModel?>(
+        selector: (state) {
+      if (state is ProfileGetUserInfoSuccess) {
+        return state.userInfoModel;
+      }
+
+      if (state is ProfileUpdateUserInfoSuccess) {
+        context.read<ProfileBloc>().add(const ProfileGetUserInfo());
+      }
+
+      return null;
+    }, builder: (context, state) {
+      if (state == null) {
+        return const MyLoading();
+      } else {
+        return TabBarView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          children: [
+            SubProfilePage(userInfo: state),
+            SubFeedPage(userInfo: state),
+            SubTransactionsPage(userInfo: state),
+          ],
+        );
+      }
+    });
   }
 }

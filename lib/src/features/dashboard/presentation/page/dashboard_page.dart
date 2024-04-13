@@ -49,17 +49,12 @@ class _DashboardPageState extends State<DashboardPage> {
         controller: _pageController,
         children: widget.screens(_scrollController),
       ),
-      bottomNavigationBar: Hidable(
-        preferredWidgetSize: Size.fromHeight(context.sizeHeight(60)),
-        deltaFactor: 0.1,
-        controller: _scrollController,
-        child: BottomNavigationBar(
-          items: widget.items(context, _currentIndex),
-          currentIndex: _currentIndex,
-          selectedItemColor: colorScheme(context).primary,
-          onTap: _onBottomNavigationBarTap,
-          unselectedItemColor: colorScheme(context).outline,
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: widget.items(context, _currentIndex),
+        currentIndex: _currentIndex,
+        selectedItemColor: colorScheme(context).primary,
+        onTap: _onBottomNavigationBarTap,
+        unselectedItemColor: colorScheme(context).outline,
       ),
     );
   }

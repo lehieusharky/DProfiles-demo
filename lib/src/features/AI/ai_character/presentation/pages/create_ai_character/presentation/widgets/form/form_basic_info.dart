@@ -26,39 +26,25 @@ class _FormBasicInfoState extends State<FormBasicInfo>
     super.build(context);
     return Form(
       key: _keyForm,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Padding(
-            padding: context.padding(bottom: 24),
-            child: Text(
-              appLocal(context).addBasicInformation,
-              style: AppFont()
-                  .fontTheme(context, weight: FontWeight.bold)
-                  .labelMedium,
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Padding(
+              padding: context.padding(bottom: 24),
+              child: Text(
+                appLocal(context).addBasicInformation,
+                style: AppFont()
+                    .fontTheme(context, weight: FontWeight.bold)
+                    .labelMedium,
+              ),
             ),
-          ),
-          AuthField(
-              controller: _nameController,
-              title: appLocal(context).name.toUpperCase(),
-              autoFocus: true,
-              textInputAction: TextInputAction.next,
-              validator: (name) {
-                if (name == null || name.isEmpty) {
-                  return appLocal(context).fieldCannotBeEmpty;
-                } else {
-                  return null;
-                }
-              },
-              hint: appLocal(context).name),
-          Padding(
-            padding: context.padding(top: 32),
-            child: AuthField(
-                controller: _summaryController,
-                title: 'SUMMARY',
-                textInputAction: TextInputAction.done,
-                maxLines: 4,
+            AuthField(
+                controller: _nameController,
+                title: appLocal(context).name.toUpperCase(),
+                autoFocus: true,
+                textInputAction: TextInputAction.next,
                 validator: (name) {
                   if (name == null || name.isEmpty) {
                     return appLocal(context).fieldCannotBeEmpty;
@@ -66,27 +52,44 @@ class _FormBasicInfoState extends State<FormBasicInfo>
                     return null;
                   }
                 },
-                hint: 'Describe something about your bot'),
-          ),
-          Padding(
-            padding: context.padding(vertical: 32),
-            child: AppFlatButton(context).elevatedButton(
-              width: context.width,
-              onPressed: () => _continue(context),
-              title: appLocal(context).continueButton.toUpperCase(),
+                hint: appLocal(context).name),
+            Padding(
+              padding: context.padding(top: 32),
+              child: AuthField(
+                  controller: _summaryController,
+                  title: 'SUMMARY',
+                  textInputAction: TextInputAction.done,
+                  maxLines: 4,
+                  validator: (name) {
+                    if (name == null || name.isEmpty) {
+                      return appLocal(context).fieldCannotBeEmpty;
+                    } else {
+                      return null;
+                    }
+                  },
+                  hint: 'Describe something about your bot'),
             ),
-          ),
-        ],
+            Padding(
+              padding: context.padding(vertical: 32),
+              child: AppFlatButton(context).elevatedButton(
+                width: context.width,
+                onPressed: () => _continue(context),
+                title: appLocal(context).continueButton.toUpperCase(),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 
   void _continue(BuildContext context) async {
     if (_keyForm.currentState?.validate() ?? false) {
-      context.read<AiCharacterBloc>().add(AddBasicInfoOfCharacterBot(
-            name: _nameController.text,
-            summary: _summaryController.text,
-          ));
+      final data = AddBasicInfoOfCharacterBot(
+        name: _nameController.text,
+        summary: _summaryController.text,
+      );
+      context.read<AiCharacterBloc>().add(data);
     }
   }
 

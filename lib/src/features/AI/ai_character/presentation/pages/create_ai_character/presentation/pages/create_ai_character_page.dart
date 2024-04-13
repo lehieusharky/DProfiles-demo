@@ -10,6 +10,7 @@ import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/c
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/widgets/form/form_training_ai.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/widgets/header_ai_character.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -39,7 +40,6 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
         ..add(const AICharacterGetUserCertificates())
         ..add(const AICharacterGetUserEducations())
         ..add(const AICharacterGetUserExperiences()),
-
       child: BlocListener<AiCharacterBloc, AiCharacterState>(
         listener: (context, state) {
           if (state is AICharacterChangeCreationStepSuccess) {
@@ -76,18 +76,20 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
             useAppBar: true,
             canBack: true,
             titleWidget: const Text("Create your AI character"),
-            body: SingleChildScrollView(
-              child: Column(
+            body: NestedScrollView(
+              headerSliverBuilder:
+                  (BuildContext context, bool innerBoxIsScrolled) => [
+                MySliverAppBar(
+                    height: 270,
+                    child: HeaderAICharacter(controller: _tabController)),
+              ],
+              body: Column(
                 children: [
-                  HeaderAICharacter(controller: _tabController),
-                  Padding(
-                    padding: context.padding(vertical: 32, horizontal: 20),
-                    child: SizedBox(
-                      height: context.height * 1.2,
-                      child: TabBarView(
-                        controller: _tabController,
-                        physics: const NeverScrollableScrollPhysics(),
-                        children: const [
+                  Expanded(
+                    child: Padding(
+                      padding: context.padding(horizontal: 20, top: 32),
+                      child: const TabBarView(
+                        children: [
                           FormBasicInfo(),
                           FormProfiles(),
                           FormAddCharacter(),
@@ -95,7 +97,7 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

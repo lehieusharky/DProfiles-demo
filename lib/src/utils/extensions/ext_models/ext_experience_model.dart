@@ -39,7 +39,7 @@ extension ExperienceModelExt on ExperienceModel {
                     Padding(
                       padding: context.padding(vertical: 5),
                       child: Text(
-                        'Jul 2019 - Mar 2024',
+                        startDate ?? '',
                         style: AppFont()
                             .fontTheme(context,
                                 color: colorScheme(context).outline)

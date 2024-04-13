@@ -142,4 +142,15 @@ abstract class RestClient {
     @Query('page') int page,
     @Query('limit') int limit,
   );
+
+  // skill
+
+  @GET('/api/v1/user-skill')
+  Future<BaseResponse> getUserSkills();
+
+  @POST('/api/v1/user-skill')
+  Future<BaseResponse> addNewUseSkill(@Body() Map<String, dynamic> body);
+
+  @DELETE('/api/v1/user-skill')
+  Future<BaseResponse> deleteUserSkill(@Path() String id);
 }

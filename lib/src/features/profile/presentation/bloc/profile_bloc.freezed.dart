@@ -24,6 +24,10 @@ mixin _$ProfileEvent {
     required TResult Function(ExperienceModel experienceModel) addNewExperience,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -33,6 +37,10 @@ mixin _$ProfileEvent {
     TResult? Function(EducationModel educationModel)? addNewEducation,
     TResult? Function(ExperienceModel experienceModel)? addNewExperience,
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +50,10 @@ mixin _$ProfileEvent {
     TResult Function(EducationModel educationModel)? addNewEducation,
     TResult Function(ExperienceModel experienceModel)? addNewExperience,
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -52,6 +64,12 @@ mixin _$ProfileEvent {
     required TResult Function(ProfileAddNewEducation value) addNewEducation,
     required TResult Function(ProfileAddNewExperience value) addNewExperience,
     required TResult Function(ProfileAddNewCertificate value) addNewCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -61,6 +79,10 @@ mixin _$ProfileEvent {
     TResult? Function(ProfileAddNewEducation value)? addNewEducation,
     TResult? Function(ProfileAddNewExperience value)? addNewExperience,
     TResult? Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +92,10 @@ mixin _$ProfileEvent {
     TResult Function(ProfileAddNewEducation value)? addNewEducation,
     TResult Function(ProfileAddNewExperience value)? addNewExperience,
     TResult Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -137,6 +163,10 @@ class _$StartedImpl implements _Started {
     required TResult Function(ExperienceModel experienceModel) addNewExperience,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
   }) {
     return started();
   }
@@ -149,6 +179,10 @@ class _$StartedImpl implements _Started {
     TResult? Function(EducationModel educationModel)? addNewEducation,
     TResult? Function(ExperienceModel experienceModel)? addNewExperience,
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
   }) {
     return started?.call();
   }
@@ -161,6 +195,10 @@ class _$StartedImpl implements _Started {
     TResult Function(EducationModel educationModel)? addNewEducation,
     TResult Function(ExperienceModel experienceModel)? addNewExperience,
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -177,6 +215,12 @@ class _$StartedImpl implements _Started {
     required TResult Function(ProfileAddNewEducation value) addNewEducation,
     required TResult Function(ProfileAddNewExperience value) addNewExperience,
     required TResult Function(ProfileAddNewCertificate value) addNewCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
   }) {
     return started(this);
   }
@@ -189,6 +233,10 @@ class _$StartedImpl implements _Started {
     TResult? Function(ProfileAddNewEducation value)? addNewEducation,
     TResult? Function(ProfileAddNewExperience value)? addNewExperience,
     TResult? Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
   }) {
     return started?.call(this);
   }
@@ -201,6 +249,10 @@ class _$StartedImpl implements _Started {
     TResult Function(ProfileAddNewEducation value)? addNewEducation,
     TResult Function(ProfileAddNewExperience value)? addNewExperience,
     TResult Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -258,6 +310,10 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     required TResult Function(ExperienceModel experienceModel) addNewExperience,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
   }) {
     return getUserinfo();
   }
@@ -270,6 +326,10 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function(EducationModel educationModel)? addNewEducation,
     TResult? Function(ExperienceModel experienceModel)? addNewExperience,
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
   }) {
     return getUserinfo?.call();
   }
@@ -282,6 +342,10 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function(EducationModel educationModel)? addNewEducation,
     TResult Function(ExperienceModel experienceModel)? addNewExperience,
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -298,6 +362,12 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     required TResult Function(ProfileAddNewEducation value) addNewEducation,
     required TResult Function(ProfileAddNewExperience value) addNewExperience,
     required TResult Function(ProfileAddNewCertificate value) addNewCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
   }) {
     return getUserinfo(this);
   }
@@ -310,6 +380,10 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function(ProfileAddNewEducation value)? addNewEducation,
     TResult? Function(ProfileAddNewExperience value)? addNewExperience,
     TResult? Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
   }) {
     return getUserinfo?.call(this);
   }
@@ -322,6 +396,10 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function(ProfileAddNewEducation value)? addNewEducation,
     TResult Function(ProfileAddNewExperience value)? addNewExperience,
     TResult Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -419,6 +497,10 @@ class _$ProfileAddNewEducationImpl implements ProfileAddNewEducation {
     required TResult Function(ExperienceModel experienceModel) addNewExperience,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
   }) {
     return addNewEducation(educationModel);
   }
@@ -431,6 +513,10 @@ class _$ProfileAddNewEducationImpl implements ProfileAddNewEducation {
     TResult? Function(EducationModel educationModel)? addNewEducation,
     TResult? Function(ExperienceModel experienceModel)? addNewExperience,
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
   }) {
     return addNewEducation?.call(educationModel);
   }
@@ -443,6 +529,10 @@ class _$ProfileAddNewEducationImpl implements ProfileAddNewEducation {
     TResult Function(EducationModel educationModel)? addNewEducation,
     TResult Function(ExperienceModel experienceModel)? addNewExperience,
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
     required TResult orElse(),
   }) {
     if (addNewEducation != null) {
@@ -459,6 +549,12 @@ class _$ProfileAddNewEducationImpl implements ProfileAddNewEducation {
     required TResult Function(ProfileAddNewEducation value) addNewEducation,
     required TResult Function(ProfileAddNewExperience value) addNewExperience,
     required TResult Function(ProfileAddNewCertificate value) addNewCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
   }) {
     return addNewEducation(this);
   }
@@ -471,6 +567,10 @@ class _$ProfileAddNewEducationImpl implements ProfileAddNewEducation {
     TResult? Function(ProfileAddNewEducation value)? addNewEducation,
     TResult? Function(ProfileAddNewExperience value)? addNewExperience,
     TResult? Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
   }) {
     return addNewEducation?.call(this);
   }
@@ -483,6 +583,10 @@ class _$ProfileAddNewEducationImpl implements ProfileAddNewEducation {
     TResult Function(ProfileAddNewEducation value)? addNewEducation,
     TResult Function(ProfileAddNewExperience value)? addNewExperience,
     TResult Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     required TResult orElse(),
   }) {
     if (addNewEducation != null) {
@@ -586,6 +690,10 @@ class _$ProfileAddNewExperienceImpl implements ProfileAddNewExperience {
     required TResult Function(ExperienceModel experienceModel) addNewExperience,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
   }) {
     return addNewExperience(experienceModel);
   }
@@ -598,6 +706,10 @@ class _$ProfileAddNewExperienceImpl implements ProfileAddNewExperience {
     TResult? Function(EducationModel educationModel)? addNewEducation,
     TResult? Function(ExperienceModel experienceModel)? addNewExperience,
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
   }) {
     return addNewExperience?.call(experienceModel);
   }
@@ -610,6 +722,10 @@ class _$ProfileAddNewExperienceImpl implements ProfileAddNewExperience {
     TResult Function(EducationModel educationModel)? addNewEducation,
     TResult Function(ExperienceModel experienceModel)? addNewExperience,
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
     required TResult orElse(),
   }) {
     if (addNewExperience != null) {
@@ -626,6 +742,12 @@ class _$ProfileAddNewExperienceImpl implements ProfileAddNewExperience {
     required TResult Function(ProfileAddNewEducation value) addNewEducation,
     required TResult Function(ProfileAddNewExperience value) addNewExperience,
     required TResult Function(ProfileAddNewCertificate value) addNewCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
   }) {
     return addNewExperience(this);
   }
@@ -638,6 +760,10 @@ class _$ProfileAddNewExperienceImpl implements ProfileAddNewExperience {
     TResult? Function(ProfileAddNewEducation value)? addNewEducation,
     TResult? Function(ProfileAddNewExperience value)? addNewExperience,
     TResult? Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
   }) {
     return addNewExperience?.call(this);
   }
@@ -650,6 +776,10 @@ class _$ProfileAddNewExperienceImpl implements ProfileAddNewExperience {
     TResult Function(ProfileAddNewEducation value)? addNewEducation,
     TResult Function(ProfileAddNewExperience value)? addNewExperience,
     TResult Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     required TResult orElse(),
   }) {
     if (addNewExperience != null) {
@@ -753,6 +883,10 @@ class _$ProfileAddNewCertificateImpl implements ProfileAddNewCertificate {
     required TResult Function(ExperienceModel experienceModel) addNewExperience,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
   }) {
     return addNewCertificate(certificateModel);
   }
@@ -765,6 +899,10 @@ class _$ProfileAddNewCertificateImpl implements ProfileAddNewCertificate {
     TResult? Function(EducationModel educationModel)? addNewEducation,
     TResult? Function(ExperienceModel experienceModel)? addNewExperience,
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
   }) {
     return addNewCertificate?.call(certificateModel);
   }
@@ -777,6 +915,10 @@ class _$ProfileAddNewCertificateImpl implements ProfileAddNewCertificate {
     TResult Function(EducationModel educationModel)? addNewEducation,
     TResult Function(ExperienceModel experienceModel)? addNewExperience,
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
     required TResult orElse(),
   }) {
     if (addNewCertificate != null) {
@@ -793,6 +935,12 @@ class _$ProfileAddNewCertificateImpl implements ProfileAddNewCertificate {
     required TResult Function(ProfileAddNewEducation value) addNewEducation,
     required TResult Function(ProfileAddNewExperience value) addNewExperience,
     required TResult Function(ProfileAddNewCertificate value) addNewCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
   }) {
     return addNewCertificate(this);
   }
@@ -805,6 +953,10 @@ class _$ProfileAddNewCertificateImpl implements ProfileAddNewCertificate {
     TResult? Function(ProfileAddNewEducation value)? addNewEducation,
     TResult? Function(ProfileAddNewExperience value)? addNewExperience,
     TResult? Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
   }) {
     return addNewCertificate?.call(this);
   }
@@ -817,6 +969,10 @@ class _$ProfileAddNewCertificateImpl implements ProfileAddNewCertificate {
     TResult Function(ProfileAddNewEducation value)? addNewEducation,
     TResult Function(ProfileAddNewExperience value)? addNewExperience,
     TResult Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     required TResult orElse(),
   }) {
     if (addNewCertificate != null) {
@@ -837,6 +993,648 @@ abstract class ProfileAddNewCertificate implements ProfileEvent {
 }
 
 /// @nodoc
+abstract class _$$ProfileUpdateUserInfoImplCopyWith<$Res> {
+  factory _$$ProfileUpdateUserInfoImplCopyWith(
+          _$ProfileUpdateUserInfoImpl value,
+          $Res Function(_$ProfileUpdateUserInfoImpl) then) =
+      __$$ProfileUpdateUserInfoImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserInfoModel userInfoModel});
+
+  $UserInfoModelCopyWith<$Res> get userInfoModel;
+}
+
+/// @nodoc
+class __$$ProfileUpdateUserInfoImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileUpdateUserInfoImpl>
+    implements _$$ProfileUpdateUserInfoImplCopyWith<$Res> {
+  __$$ProfileUpdateUserInfoImplCopyWithImpl(_$ProfileUpdateUserInfoImpl _value,
+      $Res Function(_$ProfileUpdateUserInfoImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userInfoModel = null,
+  }) {
+    return _then(_$ProfileUpdateUserInfoImpl(
+      null == userInfoModel
+          ? _value.userInfoModel
+          : userInfoModel // ignore: cast_nullable_to_non_nullable
+              as UserInfoModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserInfoModelCopyWith<$Res> get userInfoModel {
+    return $UserInfoModelCopyWith<$Res>(_value.userInfoModel, (value) {
+      return _then(_value.copyWith(userInfoModel: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
+  const _$ProfileUpdateUserInfoImpl(this.userInfoModel);
+
+  @override
+  final UserInfoModel userInfoModel;
+
+  @override
+  String toString() {
+    return 'ProfileEvent.updateUserInfo(userInfoModel: $userInfoModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileUpdateUserInfoImpl &&
+            (identical(other.userInfoModel, userInfoModel) ||
+                other.userInfoModel == userInfoModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, userInfoModel);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileUpdateUserInfoImplCopyWith<_$ProfileUpdateUserInfoImpl>
+      get copyWith => __$$ProfileUpdateUserInfoImplCopyWithImpl<
+          _$ProfileUpdateUserInfoImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function(EducationModel educationModel) addNewEducation,
+    required TResult Function(ExperienceModel experienceModel) addNewExperience,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+  }) {
+    return updateUserInfo(userInfoModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function(EducationModel educationModel)? addNewEducation,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+  }) {
+    return updateUserInfo?.call(userInfoModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function(EducationModel educationModel)? addNewEducation,
+    TResult Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    required TResult orElse(),
+  }) {
+    if (updateUserInfo != null) {
+      return updateUserInfo(userInfoModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileAddNewEducation value) addNewEducation,
+    required TResult Function(ProfileAddNewExperience value) addNewExperience,
+    required TResult Function(ProfileAddNewCertificate value) addNewCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+  }) {
+    return updateUserInfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileAddNewEducation value)? addNewEducation,
+    TResult? Function(ProfileAddNewExperience value)? addNewExperience,
+    TResult? Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+  }) {
+    return updateUserInfo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileAddNewEducation value)? addNewEducation,
+    TResult Function(ProfileAddNewExperience value)? addNewExperience,
+    TResult Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    required TResult orElse(),
+  }) {
+    if (updateUserInfo != null) {
+      return updateUserInfo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileUpdateUserInfo implements ProfileEvent {
+  const factory ProfileUpdateUserInfo(final UserInfoModel userInfoModel) =
+      _$ProfileUpdateUserInfoImpl;
+
+  UserInfoModel get userInfoModel;
+  @JsonKey(ignore: true)
+  _$$ProfileUpdateUserInfoImplCopyWith<_$ProfileUpdateUserInfoImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileGetUserExperienceImplCopyWith<$Res> {
+  factory _$$ProfileGetUserExperienceImplCopyWith(
+          _$ProfileGetUserExperienceImpl value,
+          $Res Function(_$ProfileGetUserExperienceImpl) then) =
+      __$$ProfileGetUserExperienceImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ProfileGetUserExperienceImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileGetUserExperienceImpl>
+    implements _$$ProfileGetUserExperienceImplCopyWith<$Res> {
+  __$$ProfileGetUserExperienceImplCopyWithImpl(
+      _$ProfileGetUserExperienceImpl _value,
+      $Res Function(_$ProfileGetUserExperienceImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
+  const _$ProfileGetUserExperienceImpl();
+
+  @override
+  String toString() {
+    return 'ProfileEvent.getUserExperiences()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileGetUserExperienceImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function(EducationModel educationModel) addNewEducation,
+    required TResult Function(ExperienceModel experienceModel) addNewExperience,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+  }) {
+    return getUserExperiences();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function(EducationModel educationModel)? addNewEducation,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+  }) {
+    return getUserExperiences?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function(EducationModel educationModel)? addNewEducation,
+    TResult Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    required TResult orElse(),
+  }) {
+    if (getUserExperiences != null) {
+      return getUserExperiences();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileAddNewEducation value) addNewEducation,
+    required TResult Function(ProfileAddNewExperience value) addNewExperience,
+    required TResult Function(ProfileAddNewCertificate value) addNewCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+  }) {
+    return getUserExperiences(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileAddNewEducation value)? addNewEducation,
+    TResult? Function(ProfileAddNewExperience value)? addNewExperience,
+    TResult? Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+  }) {
+    return getUserExperiences?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileAddNewEducation value)? addNewEducation,
+    TResult Function(ProfileAddNewExperience value)? addNewExperience,
+    TResult Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    required TResult orElse(),
+  }) {
+    if (getUserExperiences != null) {
+      return getUserExperiences(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileGetUserExperience implements ProfileEvent {
+  const factory ProfileGetUserExperience() = _$ProfileGetUserExperienceImpl;
+}
+
+/// @nodoc
+abstract class _$$ProfileGetUserEducationsImplCopyWith<$Res> {
+  factory _$$ProfileGetUserEducationsImplCopyWith(
+          _$ProfileGetUserEducationsImpl value,
+          $Res Function(_$ProfileGetUserEducationsImpl) then) =
+      __$$ProfileGetUserEducationsImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ProfileGetUserEducationsImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileGetUserEducationsImpl>
+    implements _$$ProfileGetUserEducationsImplCopyWith<$Res> {
+  __$$ProfileGetUserEducationsImplCopyWithImpl(
+      _$ProfileGetUserEducationsImpl _value,
+      $Res Function(_$ProfileGetUserEducationsImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
+  const _$ProfileGetUserEducationsImpl();
+
+  @override
+  String toString() {
+    return 'ProfileEvent.getUserEducations()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileGetUserEducationsImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function(EducationModel educationModel) addNewEducation,
+    required TResult Function(ExperienceModel experienceModel) addNewExperience,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+  }) {
+    return getUserEducations();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function(EducationModel educationModel)? addNewEducation,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+  }) {
+    return getUserEducations?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function(EducationModel educationModel)? addNewEducation,
+    TResult Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    required TResult orElse(),
+  }) {
+    if (getUserEducations != null) {
+      return getUserEducations();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileAddNewEducation value) addNewEducation,
+    required TResult Function(ProfileAddNewExperience value) addNewExperience,
+    required TResult Function(ProfileAddNewCertificate value) addNewCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+  }) {
+    return getUserEducations(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileAddNewEducation value)? addNewEducation,
+    TResult? Function(ProfileAddNewExperience value)? addNewExperience,
+    TResult? Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+  }) {
+    return getUserEducations?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileAddNewEducation value)? addNewEducation,
+    TResult Function(ProfileAddNewExperience value)? addNewExperience,
+    TResult Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    required TResult orElse(),
+  }) {
+    if (getUserEducations != null) {
+      return getUserEducations(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileGetUserEducations implements ProfileEvent {
+  const factory ProfileGetUserEducations() = _$ProfileGetUserEducationsImpl;
+}
+
+/// @nodoc
+abstract class _$$ProfileGetUserCertificatesImplCopyWith<$Res> {
+  factory _$$ProfileGetUserCertificatesImplCopyWith(
+          _$ProfileGetUserCertificatesImpl value,
+          $Res Function(_$ProfileGetUserCertificatesImpl) then) =
+      __$$ProfileGetUserCertificatesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ProfileGetUserCertificatesImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileGetUserCertificatesImpl>
+    implements _$$ProfileGetUserCertificatesImplCopyWith<$Res> {
+  __$$ProfileGetUserCertificatesImplCopyWithImpl(
+      _$ProfileGetUserCertificatesImpl _value,
+      $Res Function(_$ProfileGetUserCertificatesImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
+  const _$ProfileGetUserCertificatesImpl();
+
+  @override
+  String toString() {
+    return 'ProfileEvent.getUserCertificates()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileGetUserCertificatesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function(EducationModel educationModel) addNewEducation,
+    required TResult Function(ExperienceModel experienceModel) addNewExperience,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+  }) {
+    return getUserCertificates();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function(EducationModel educationModel)? addNewEducation,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+  }) {
+    return getUserCertificates?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function(EducationModel educationModel)? addNewEducation,
+    TResult Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    required TResult orElse(),
+  }) {
+    if (getUserCertificates != null) {
+      return getUserCertificates();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileAddNewEducation value) addNewEducation,
+    required TResult Function(ProfileAddNewExperience value) addNewExperience,
+    required TResult Function(ProfileAddNewCertificate value) addNewCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+  }) {
+    return getUserCertificates(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileAddNewEducation value)? addNewEducation,
+    TResult? Function(ProfileAddNewExperience value)? addNewExperience,
+    TResult? Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+  }) {
+    return getUserCertificates?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileAddNewEducation value)? addNewEducation,
+    TResult Function(ProfileAddNewExperience value)? addNewExperience,
+    TResult Function(ProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    required TResult orElse(),
+  }) {
+    if (getUserCertificates != null) {
+      return getUserCertificates(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileGetUserCertificates implements ProfileEvent {
+  const factory ProfileGetUserCertificates() = _$ProfileGetUserCertificatesImpl;
+}
+
+/// @nodoc
 mixin _$ProfileState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -850,6 +1648,13 @@ mixin _$ProfileState {
         addNewExperienceSuccess,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -862,6 +1667,13 @@ mixin _$ProfileState {
     TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -874,6 +1686,12 @@ mixin _$ProfileState {
     TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -890,6 +1708,14 @@ mixin _$ProfileState {
         addNewExperienceSuccess,
     required TResult Function(ProfileAddNewCertificateSuccess value)
         addNewCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -904,6 +1730,14 @@ mixin _$ProfileState {
         addNewExperienceSuccess,
     TResult? Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -918,6 +1752,13 @@ mixin _$ProfileState {
         addNewExperienceSuccess,
     TResult Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -989,6 +1830,13 @@ class _$InitialImpl implements _Initial {
         addNewExperienceSuccess,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
   }) {
     return initial();
   }
@@ -1004,6 +1852,13 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
   }) {
     return initial?.call();
   }
@@ -1019,6 +1874,12 @@ class _$InitialImpl implements _Initial {
     TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1041,6 +1902,14 @@ class _$InitialImpl implements _Initial {
         addNewExperienceSuccess,
     required TResult Function(ProfileAddNewCertificateSuccess value)
         addNewCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
   }) {
     return initial(this);
   }
@@ -1058,6 +1927,14 @@ class _$InitialImpl implements _Initial {
         addNewExperienceSuccess,
     TResult? Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
   }) {
     return initial?.call(this);
   }
@@ -1075,6 +1952,13 @@ class _$InitialImpl implements _Initial {
         addNewExperienceSuccess,
     TResult Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1170,6 +2054,13 @@ class _$ProfileErrorImpl implements ProfileError {
         addNewExperienceSuccess,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
   }) {
     return error(message, title);
   }
@@ -1185,6 +2076,13 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -1200,6 +2098,12 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1222,6 +2126,14 @@ class _$ProfileErrorImpl implements ProfileError {
         addNewExperienceSuccess,
     required TResult Function(ProfileAddNewCertificateSuccess value)
         addNewCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
   }) {
     return error(this);
   }
@@ -1239,6 +2151,14 @@ class _$ProfileErrorImpl implements ProfileError {
         addNewExperienceSuccess,
     TResult? Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
   }) {
     return error?.call(this);
   }
@@ -1256,6 +2176,13 @@ class _$ProfileErrorImpl implements ProfileError {
         addNewExperienceSuccess,
     TResult Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1325,6 +2252,13 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         addNewExperienceSuccess,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
   }) {
     return loading();
   }
@@ -1340,6 +2274,13 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
   }) {
     return loading?.call();
   }
@@ -1355,6 +2296,12 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1377,6 +2324,14 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         addNewExperienceSuccess,
     required TResult Function(ProfileAddNewCertificateSuccess value)
         addNewCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
   }) {
     return loading(this);
   }
@@ -1394,6 +2349,14 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         addNewExperienceSuccess,
     TResult? Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
   }) {
     return loading?.call(this);
   }
@@ -1411,6 +2374,13 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         addNewExperienceSuccess,
     TResult Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1512,6 +2482,13 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         addNewExperienceSuccess,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
   }) {
     return getUserInfoSuccess(userInfoModel);
   }
@@ -1527,6 +2504,13 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
   }) {
     return getUserInfoSuccess?.call(userInfoModel);
   }
@@ -1542,6 +2526,12 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -1564,6 +2554,14 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         addNewExperienceSuccess,
     required TResult Function(ProfileAddNewCertificateSuccess value)
         addNewCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
   }) {
     return getUserInfoSuccess(this);
   }
@@ -1581,6 +2579,14 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         addNewExperienceSuccess,
     TResult? Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
   }) {
     return getUserInfoSuccess?.call(this);
   }
@@ -1598,6 +2604,13 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         addNewExperienceSuccess,
     TResult Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -1708,6 +2721,13 @@ class _$ProfileAddNewEducationSuccessImpl
         addNewExperienceSuccess,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
   }) {
     return addNewEducationSuccess(educationModel);
   }
@@ -1723,6 +2743,13 @@ class _$ProfileAddNewEducationSuccessImpl
     TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
   }) {
     return addNewEducationSuccess?.call(educationModel);
   }
@@ -1738,6 +2765,12 @@ class _$ProfileAddNewEducationSuccessImpl
     TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (addNewEducationSuccess != null) {
@@ -1760,6 +2793,14 @@ class _$ProfileAddNewEducationSuccessImpl
         addNewExperienceSuccess,
     required TResult Function(ProfileAddNewCertificateSuccess value)
         addNewCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
   }) {
     return addNewEducationSuccess(this);
   }
@@ -1777,6 +2818,14 @@ class _$ProfileAddNewEducationSuccessImpl
         addNewExperienceSuccess,
     TResult? Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
   }) {
     return addNewEducationSuccess?.call(this);
   }
@@ -1794,6 +2843,13 @@ class _$ProfileAddNewEducationSuccessImpl
         addNewExperienceSuccess,
     TResult Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (addNewEducationSuccess != null) {
@@ -1906,6 +2962,13 @@ class _$ProfileAddNewExperienceSuccessImpl
         addNewExperienceSuccess,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
   }) {
     return addNewExperienceSuccess(experienceModel);
   }
@@ -1921,6 +2984,13 @@ class _$ProfileAddNewExperienceSuccessImpl
     TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
   }) {
     return addNewExperienceSuccess?.call(experienceModel);
   }
@@ -1936,6 +3006,12 @@ class _$ProfileAddNewExperienceSuccessImpl
     TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (addNewExperienceSuccess != null) {
@@ -1958,6 +3034,14 @@ class _$ProfileAddNewExperienceSuccessImpl
         addNewExperienceSuccess,
     required TResult Function(ProfileAddNewCertificateSuccess value)
         addNewCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
   }) {
     return addNewExperienceSuccess(this);
   }
@@ -1975,6 +3059,14 @@ class _$ProfileAddNewExperienceSuccessImpl
         addNewExperienceSuccess,
     TResult? Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
   }) {
     return addNewExperienceSuccess?.call(this);
   }
@@ -1992,6 +3084,13 @@ class _$ProfileAddNewExperienceSuccessImpl
         addNewExperienceSuccess,
     TResult Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (addNewExperienceSuccess != null) {
@@ -2104,6 +3203,13 @@ class _$ProfileAddNewCertificateSuccessImpl
         addNewExperienceSuccess,
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
   }) {
     return addNewCertificateSuccess(certificateModel);
   }
@@ -2119,6 +3225,13 @@ class _$ProfileAddNewCertificateSuccessImpl
     TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
   }) {
     return addNewCertificateSuccess?.call(certificateModel);
   }
@@ -2134,6 +3247,12 @@ class _$ProfileAddNewCertificateSuccessImpl
     TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (addNewCertificateSuccess != null) {
@@ -2156,6 +3275,14 @@ class _$ProfileAddNewCertificateSuccessImpl
         addNewExperienceSuccess,
     required TResult Function(ProfileAddNewCertificateSuccess value)
         addNewCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
   }) {
     return addNewCertificateSuccess(this);
   }
@@ -2173,6 +3300,14 @@ class _$ProfileAddNewCertificateSuccessImpl
         addNewExperienceSuccess,
     TResult? Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
   }) {
     return addNewCertificateSuccess?.call(this);
   }
@@ -2190,6 +3325,13 @@ class _$ProfileAddNewCertificateSuccessImpl
         addNewExperienceSuccess,
     TResult Function(ProfileAddNewCertificateSuccess value)?
         addNewCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
     required TResult orElse(),
   }) {
     if (addNewCertificateSuccess != null) {
@@ -2208,5 +3350,917 @@ abstract class ProfileAddNewCertificateSuccess implements ProfileState {
   @JsonKey(ignore: true)
   _$$ProfileAddNewCertificateSuccessImplCopyWith<
           _$ProfileAddNewCertificateSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileUpdateUserInfoSuccessImplCopyWith<$Res> {
+  factory _$$ProfileUpdateUserInfoSuccessImplCopyWith(
+          _$ProfileUpdateUserInfoSuccessImpl value,
+          $Res Function(_$ProfileUpdateUserInfoSuccessImpl) then) =
+      __$$ProfileUpdateUserInfoSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ProfileUpdateUserInfoSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$ProfileUpdateUserInfoSuccessImpl>
+    implements _$$ProfileUpdateUserInfoSuccessImplCopyWith<$Res> {
+  __$$ProfileUpdateUserInfoSuccessImplCopyWithImpl(
+      _$ProfileUpdateUserInfoSuccessImpl _value,
+      $Res Function(_$ProfileUpdateUserInfoSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ProfileUpdateUserInfoSuccessImpl
+    implements ProfileUpdateUserInfoSuccess {
+  const _$ProfileUpdateUserInfoSuccessImpl();
+
+  @override
+  String toString() {
+    return 'ProfileState.updateUserInfoSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileUpdateUserInfoSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(EducationModel educationModel)
+        addNewEducationSuccess,
+    required TResult Function(ExperienceModel experienceModel)
+        addNewExperienceSuccess,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+  }) {
+    return updateUserInfoSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult? Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+  }) {
+    return updateUserInfoSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateUserInfoSuccess != null) {
+      return updateUserInfoSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileAddNewEducationSuccess value)
+        addNewEducationSuccess,
+    required TResult Function(ProfileAddNewExperienceSuccess value)
+        addNewExperienceSuccess,
+    required TResult Function(ProfileAddNewCertificateSuccess value)
+        addNewCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+  }) {
+    return updateUserInfoSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult? Function(ProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult? Function(ProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+  }) {
+    return updateUserInfoSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult Function(ProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult Function(ProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateUserInfoSuccess != null) {
+      return updateUserInfoSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileUpdateUserInfoSuccess implements ProfileState {
+  const factory ProfileUpdateUserInfoSuccess() =
+      _$ProfileUpdateUserInfoSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$ProfileGetUserExperienceSuccessImplCopyWith<$Res> {
+  factory _$$ProfileGetUserExperienceSuccessImplCopyWith(
+          _$ProfileGetUserExperienceSuccessImpl value,
+          $Res Function(_$ProfileGetUserExperienceSuccessImpl) then) =
+      __$$ProfileGetUserExperienceSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<ExperienceModel> experiences});
+}
+
+/// @nodoc
+class __$$ProfileGetUserExperienceSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res,
+        _$ProfileGetUserExperienceSuccessImpl>
+    implements _$$ProfileGetUserExperienceSuccessImplCopyWith<$Res> {
+  __$$ProfileGetUserExperienceSuccessImplCopyWithImpl(
+      _$ProfileGetUserExperienceSuccessImpl _value,
+      $Res Function(_$ProfileGetUserExperienceSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? experiences = null,
+  }) {
+    return _then(_$ProfileGetUserExperienceSuccessImpl(
+      null == experiences
+          ? _value._experiences
+          : experiences // ignore: cast_nullable_to_non_nullable
+              as List<ExperienceModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileGetUserExperienceSuccessImpl
+    implements ProfileGetUserExperienceSuccess {
+  const _$ProfileGetUserExperienceSuccessImpl(
+      final List<ExperienceModel> experiences)
+      : _experiences = experiences;
+
+  final List<ExperienceModel> _experiences;
+  @override
+  List<ExperienceModel> get experiences {
+    if (_experiences is EqualUnmodifiableListView) return _experiences;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_experiences);
+  }
+
+  @override
+  String toString() {
+    return 'ProfileState.getUserExperiencesSuccess(experiences: $experiences)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileGetUserExperienceSuccessImpl &&
+            const DeepCollectionEquality()
+                .equals(other._experiences, _experiences));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_experiences));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileGetUserExperienceSuccessImplCopyWith<
+          _$ProfileGetUserExperienceSuccessImpl>
+      get copyWith => __$$ProfileGetUserExperienceSuccessImplCopyWithImpl<
+          _$ProfileGetUserExperienceSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(EducationModel educationModel)
+        addNewEducationSuccess,
+    required TResult Function(ExperienceModel experienceModel)
+        addNewExperienceSuccess,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+  }) {
+    return getUserExperiencesSuccess(experiences);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult? Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+  }) {
+    return getUserExperiencesSuccess?.call(experiences);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    required TResult orElse(),
+  }) {
+    if (getUserExperiencesSuccess != null) {
+      return getUserExperiencesSuccess(experiences);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileAddNewEducationSuccess value)
+        addNewEducationSuccess,
+    required TResult Function(ProfileAddNewExperienceSuccess value)
+        addNewExperienceSuccess,
+    required TResult Function(ProfileAddNewCertificateSuccess value)
+        addNewCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+  }) {
+    return getUserExperiencesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult? Function(ProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult? Function(ProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+  }) {
+    return getUserExperiencesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult Function(ProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult Function(ProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    required TResult orElse(),
+  }) {
+    if (getUserExperiencesSuccess != null) {
+      return getUserExperiencesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileGetUserExperienceSuccess implements ProfileState {
+  const factory ProfileGetUserExperienceSuccess(
+          final List<ExperienceModel> experiences) =
+      _$ProfileGetUserExperienceSuccessImpl;
+
+  List<ExperienceModel> get experiences;
+  @JsonKey(ignore: true)
+  _$$ProfileGetUserExperienceSuccessImplCopyWith<
+          _$ProfileGetUserExperienceSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileGetUserEducationsSuccessImplCopyWith<$Res> {
+  factory _$$ProfileGetUserEducationsSuccessImplCopyWith(
+          _$ProfileGetUserEducationsSuccessImpl value,
+          $Res Function(_$ProfileGetUserEducationsSuccessImpl) then) =
+      __$$ProfileGetUserEducationsSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<EducationModel> educations});
+}
+
+/// @nodoc
+class __$$ProfileGetUserEducationsSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res,
+        _$ProfileGetUserEducationsSuccessImpl>
+    implements _$$ProfileGetUserEducationsSuccessImplCopyWith<$Res> {
+  __$$ProfileGetUserEducationsSuccessImplCopyWithImpl(
+      _$ProfileGetUserEducationsSuccessImpl _value,
+      $Res Function(_$ProfileGetUserEducationsSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? educations = null,
+  }) {
+    return _then(_$ProfileGetUserEducationsSuccessImpl(
+      null == educations
+          ? _value._educations
+          : educations // ignore: cast_nullable_to_non_nullable
+              as List<EducationModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileGetUserEducationsSuccessImpl
+    implements ProfileGetUserEducationsSuccess {
+  const _$ProfileGetUserEducationsSuccessImpl(
+      final List<EducationModel> educations)
+      : _educations = educations;
+
+  final List<EducationModel> _educations;
+  @override
+  List<EducationModel> get educations {
+    if (_educations is EqualUnmodifiableListView) return _educations;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_educations);
+  }
+
+  @override
+  String toString() {
+    return 'ProfileState.getUserEducationsSuccess(educations: $educations)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileGetUserEducationsSuccessImpl &&
+            const DeepCollectionEquality()
+                .equals(other._educations, _educations));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_educations));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileGetUserEducationsSuccessImplCopyWith<
+          _$ProfileGetUserEducationsSuccessImpl>
+      get copyWith => __$$ProfileGetUserEducationsSuccessImplCopyWithImpl<
+          _$ProfileGetUserEducationsSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(EducationModel educationModel)
+        addNewEducationSuccess,
+    required TResult Function(ExperienceModel experienceModel)
+        addNewExperienceSuccess,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+  }) {
+    return getUserEducationsSuccess(educations);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult? Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+  }) {
+    return getUserEducationsSuccess?.call(educations);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    required TResult orElse(),
+  }) {
+    if (getUserEducationsSuccess != null) {
+      return getUserEducationsSuccess(educations);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileAddNewEducationSuccess value)
+        addNewEducationSuccess,
+    required TResult Function(ProfileAddNewExperienceSuccess value)
+        addNewExperienceSuccess,
+    required TResult Function(ProfileAddNewCertificateSuccess value)
+        addNewCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+  }) {
+    return getUserEducationsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult? Function(ProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult? Function(ProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+  }) {
+    return getUserEducationsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult Function(ProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult Function(ProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    required TResult orElse(),
+  }) {
+    if (getUserEducationsSuccess != null) {
+      return getUserEducationsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileGetUserEducationsSuccess implements ProfileState {
+  const factory ProfileGetUserEducationsSuccess(
+          final List<EducationModel> educations) =
+      _$ProfileGetUserEducationsSuccessImpl;
+
+  List<EducationModel> get educations;
+  @JsonKey(ignore: true)
+  _$$ProfileGetUserEducationsSuccessImplCopyWith<
+          _$ProfileGetUserEducationsSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileGetUserCertificatesSuccessImplCopyWith<$Res> {
+  factory _$$ProfileGetUserCertificatesSuccessImplCopyWith(
+          _$ProfileGetUserCertificatesSuccessImpl value,
+          $Res Function(_$ProfileGetUserCertificatesSuccessImpl) then) =
+      __$$ProfileGetUserCertificatesSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<CertificateModel> certificates});
+}
+
+/// @nodoc
+class __$$ProfileGetUserCertificatesSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res,
+        _$ProfileGetUserCertificatesSuccessImpl>
+    implements _$$ProfileGetUserCertificatesSuccessImplCopyWith<$Res> {
+  __$$ProfileGetUserCertificatesSuccessImplCopyWithImpl(
+      _$ProfileGetUserCertificatesSuccessImpl _value,
+      $Res Function(_$ProfileGetUserCertificatesSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? certificates = null,
+  }) {
+    return _then(_$ProfileGetUserCertificatesSuccessImpl(
+      null == certificates
+          ? _value._certificates
+          : certificates // ignore: cast_nullable_to_non_nullable
+              as List<CertificateModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileGetUserCertificatesSuccessImpl
+    implements ProfileGetUserCertificatesSuccess {
+  const _$ProfileGetUserCertificatesSuccessImpl(
+      final List<CertificateModel> certificates)
+      : _certificates = certificates;
+
+  final List<CertificateModel> _certificates;
+  @override
+  List<CertificateModel> get certificates {
+    if (_certificates is EqualUnmodifiableListView) return _certificates;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_certificates);
+  }
+
+  @override
+  String toString() {
+    return 'ProfileState.getUserCertificatesSuccess(certificates: $certificates)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileGetUserCertificatesSuccessImpl &&
+            const DeepCollectionEquality()
+                .equals(other._certificates, _certificates));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_certificates));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileGetUserCertificatesSuccessImplCopyWith<
+          _$ProfileGetUserCertificatesSuccessImpl>
+      get copyWith => __$$ProfileGetUserCertificatesSuccessImplCopyWithImpl<
+          _$ProfileGetUserCertificatesSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(EducationModel educationModel)
+        addNewEducationSuccess,
+    required TResult Function(ExperienceModel experienceModel)
+        addNewExperienceSuccess,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+  }) {
+    return getUserCertificatesSuccess(certificates);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult? Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+  }) {
+    return getUserCertificatesSuccess?.call(certificates);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    required TResult orElse(),
+  }) {
+    if (getUserCertificatesSuccess != null) {
+      return getUserCertificatesSuccess(certificates);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileAddNewEducationSuccess value)
+        addNewEducationSuccess,
+    required TResult Function(ProfileAddNewExperienceSuccess value)
+        addNewExperienceSuccess,
+    required TResult Function(ProfileAddNewCertificateSuccess value)
+        addNewCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+  }) {
+    return getUserCertificatesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult? Function(ProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult? Function(ProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+  }) {
+    return getUserCertificatesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult Function(ProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult Function(ProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    required TResult orElse(),
+  }) {
+    if (getUserCertificatesSuccess != null) {
+      return getUserCertificatesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileGetUserCertificatesSuccess implements ProfileState {
+  const factory ProfileGetUserCertificatesSuccess(
+          final List<CertificateModel> certificates) =
+      _$ProfileGetUserCertificatesSuccessImpl;
+
+  List<CertificateModel> get certificates;
+  @JsonKey(ignore: true)
+  _$$ProfileGetUserCertificatesSuccessImplCopyWith<
+          _$ProfileGetUserCertificatesSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
