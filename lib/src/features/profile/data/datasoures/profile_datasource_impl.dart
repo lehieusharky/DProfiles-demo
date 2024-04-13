@@ -65,7 +65,7 @@ class ProfileDataSourceImpl implements ProfileDataSource {
     try {
       final baseResponse = await MyHttp.rl().addUserCertificate(data.toJson());
       return baseResponse;
-    } on DioException {
+    } on DioException catch (e) {
       rethrow;
     }
   }
@@ -75,7 +75,7 @@ class ProfileDataSourceImpl implements ProfileDataSource {
     try {
       final baseResponse = await MyHttp.rl().addUserExperience(data.toJson());
       return baseResponse;
-    } on DioException {
+    } on DioException catch (e) {
       rethrow;
     }
   }

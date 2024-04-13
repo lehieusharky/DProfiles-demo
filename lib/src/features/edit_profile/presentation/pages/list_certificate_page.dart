@@ -51,7 +51,11 @@ class _ListCertificatePageState extends State<ListCertificatePage> {
                             width: context.width,
                             title: 'Add new education',
                             onPressed: () => context.router
-                                .push(const AddNewEducationRoute())),
+                                .push(const AddNewCertificateRoute())
+                                .then((value) => setState(() {
+                                      certificates
+                                          .add(value as CertificateModel);
+                                    }))),
                       ),
                       Expanded(
                           child: ListView.builder(
