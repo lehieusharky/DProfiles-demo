@@ -9,7 +9,7 @@ class TitleHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: context.padding(horizontal: 20, vertical: 16),
+      padding: context.padding(horizontal: 20, bottom: 16),
       margin: context.padding(top: 32),
       child: Text(
         title,

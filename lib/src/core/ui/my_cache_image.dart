@@ -27,7 +27,9 @@ class MyCacheImage extends StatelessWidget {
         fit: BoxFit.cover,
         width: width,
         height: height,
-        imageUrl: imageUrl,
+        imageUrl: imageUrl.isNotEmpty
+            ? imageUrl
+            : 'https://www.dprofiles.xyz/_next/static/media/logo.e5ce3f74.svg',
         imageBuilder: (context, imageProvider) => Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(borderRadius ?? 5),

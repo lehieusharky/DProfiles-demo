@@ -10,6 +10,8 @@ import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentati
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/form/form_experience.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/header_create_digital.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/path_direction.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -60,16 +62,19 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
         builder: (context, state) => DefaultTabController(
           length: 3,
           child: MyScaffold(
-            body: SingleChildScrollView(
-              child: Column(
+            body: NestedScrollView(
+              headerSliverBuilder:
+                  (BuildContext context, bool innerBoxIsScrolled) => [
+                MySliverAppBar(
+                  height: 205,
+                  child: HeaderCreateDigitalProfile(controller: _tabController),
+                )
+              ],
+              body: Column(
                 children: [
-                  PathDirection(
-                      currentPage: appLocal(context).createDigitalProfile,
-                      padding: context.padding(bottom: 8, horizontal: 20)),
-                  HeaderCreateDigitalProfile(controller: _tabController),
-                  Padding(
-                    padding: context.padding(vertical: 32, horizontal: 20),
-                    child: IntrinsicHeight(
+                  Expanded(
+                    child: Padding(
+                      padding: context.padding(horizontal: 20, top: 32),
                       child: TabBarView(
                         controller: _tabController,
                         physics: const NeverScrollableScrollPhysics(),

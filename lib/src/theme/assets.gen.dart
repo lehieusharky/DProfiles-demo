@@ -80,6 +80,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_share.svg
   SvgGenImage get iconShare => const SvgGenImage('assets/icons/icon_share.svg');
 
+  /// File path: assets/icons/icon_speaker.svg
+  SvgGenImage get iconSpeaker =>
+      const SvgGenImage('assets/icons/icon_speaker.svg');
+
   /// File path: assets/icons/icon_wallet.svg
   SvgGenImage get iconWallet =>
       const SvgGenImage('assets/icons/icon_wallet.svg');
@@ -110,6 +114,7 @@ class $AssetsIconsGen {
         iconMore,
         iconSearch,
         iconShare,
+        iconSpeaker,
         iconWallet,
         profile,
         wallet

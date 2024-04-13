@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
@@ -114,9 +115,7 @@ extension AICharacterBotModelExt on AICharacterBotModel {
 
   Widget _buildChatButton(BuildContext context) {
     return InkWell(
-      onTap: () {
-        // TODO: Open chat
-      },
+      onTap: () => context.router.push(ChatWithAiRoute(botId: id!)),
       child: Container(
         padding: EdgeInsets.symmetric(vertical: context.sizeWidth(4)),
         decoration: BoxDecoration(

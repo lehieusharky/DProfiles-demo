@@ -40,74 +40,76 @@ class _FormAddBasicInfoState extends State<FormAddBasicInfo>
         }
       },
       builder: (context, state) {
-        return Form(
-          key: _keyForm,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Padding(
-                padding: context.padding(bottom: 24),
-                child: Text(
-                  appLocal(context).aiFeature,
-                  style: AppFont()
-                      .fontTheme(context, weight: FontWeight.bold)
-                      .labelMedium,
+        return SingleChildScrollView(
+          child: Form(
+            key: _keyForm,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
+                  padding: context.padding(bottom: 24),
+                  child: Text(
+                    'Add Basic Info',
+                    style: AppFont()
+                        .fontTheme(context, weight: FontWeight.bold)
+                        .labelMedium,
+                  ),
                 ),
-              ),
-              AuthField(
-                  controller: _nameController,
-                  title: appLocal(context).name.toUpperCase(),
-                  keyboardType: TextInputType.emailAddress,
-                  textInputAction: TextInputAction.next,
-                  validator: (name) {
-                    if (name == null || name.isEmpty) {
-                      return appLocal(context).userNameCannotBeEmpty;
-                    } else {
-                      return null;
-                    }
-                  },
-                  hint: appLocal(context).name),
-              Padding(
-                padding: context.padding(top: 32),
-                child: AuthField(
-                  controller: _dobController,
-                  title: appLocal(context).dob.toUpperCase(),
-                  textInputAction: TextInputAction.next,
-                  validator: (dob) => dob.dateTimeFormatValidation(context),
-                  hint: appLocal(context).dateTimeFormatddmmyyyyy,
+                AuthField(
+                    controller: _nameController,
+                    title: appLocal(context).name.toUpperCase(),
+                    keyboardType: TextInputType.emailAddress,
+                    textInputAction: TextInputAction.next,
+                    validator: (name) {
+                      if (name == null || name.isEmpty) {
+                        return appLocal(context).userNameCannotBeEmpty;
+                      } else {
+                        return null;
+                      }
+                    },
+                    hint: appLocal(context).name),
+                Padding(
+                  padding: context.padding(top: 32),
+                  child: AuthField(
+                    controller: _dobController,
+                    title: appLocal(context).dob.toUpperCase(),
+                    textInputAction: TextInputAction.next,
+                    validator: (dob) => dob.dateTimeFormatValidation(context),
+                    hint: appLocal(context).dateTimeFormatddmmyyyyy,
+                  ),
                 ),
-              ),
-              Padding(
-                padding: context.padding(top: 32),
-                child: AuthField(
-                  controller: _nationalityController,
-                  title: appLocal(context).nationality.toUpperCase(),
-                  textInputAction: TextInputAction.next,
-                  hint: appLocal(context).yourNationality,
+                Padding(
+                  padding: context.padding(top: 32),
+                  child: AuthField(
+                    controller: _nationalityController,
+                    title: appLocal(context).nationality.toUpperCase(),
+                    textInputAction: TextInputAction.next,
+                    hint: appLocal(context).yourNationality,
+                  ),
                 ),
-              ),
-              Padding(
-                padding: context.padding(top: 32),
-                child: AuthField(
-                  controller: _idCardController,
-                  title: appLocal(context).idCardNumber.toUpperCase(),
-                  textInputAction: TextInputAction.done,
-                  hint: appLocal(context).yourIdCard,
+                Padding(
+                  padding: context.padding(top: 32),
+                  child: AuthField(
+                    controller: _idCardController,
+                    title: appLocal(context).idCardNumber.toUpperCase(),
+                    textInputAction: TextInputAction.done,
+                    hint: appLocal(context).yourIdCard,
+                  ),
                 ),
-              ),
-              Padding(
-                padding: context.padding(vertical: 32),
-                child: AppFlatButton(context).elevatedButton(
-                  width: context.width,
-                  onPressed: () => _continue(context),
-                  title: appLocal(context).continueButton.toUpperCase(),
-                  child: (state is CreateDigitalProfileLoading)
-                      ? const MyLoading()
-                      : null,
+                Padding(
+                  padding: context.padding(vertical: 32),
+                  child: AppFlatButton(context).elevatedButton(
+                    width: context.width,
+                    onPressed: () => _continue(context),
+                    title: appLocal(context).continueButton.toUpperCase(),
+                    child: (state is CreateDigitalProfileLoading)
+                        ? const MyLoading()
+                        : null,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         );
       },

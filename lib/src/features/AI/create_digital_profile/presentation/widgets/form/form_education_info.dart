@@ -91,13 +91,17 @@ class _FormEducationInfoState extends State<FormEducationInfo> {
                         Padding(
                           padding: context.padding(top: 32),
                           child: AuthField(
-                            controller: _degreeController,
-                            textInputAction: TextInputAction.next,
-                            title: appLocal(context).degree.toUpperCase(),
-                            hint: appLocal(context).dateTimeFormatddmmyyyyy,
-                            validator: (date) =>
-                                date.validationForDDMMYYYYY(context),
-                          ),
+                              controller: _degreeController,
+                              textInputAction: TextInputAction.next,
+                              title: appLocal(context).degree.toUpperCase(),
+                              hint: 'Degree',
+                              validator: (data) {
+                                if (data == null || data.isEmpty) {
+                                  return appLocal(context).fieldCannotBeEmpty;
+                                } else {
+                                  return null;
+                                }
+                              }),
                         ),
                         Padding(
                           padding: context.padding(top: 32),

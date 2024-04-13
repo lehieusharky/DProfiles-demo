@@ -1,12 +1,11 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/di/di.dart';
+
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/my_point_user.dart';
-import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -29,7 +28,7 @@ class _HeaderAutoGenerateState extends State<HeaderAutoGenerate> {
     super.initState();
   }
 
-  int _currentPoint = 0;
+  int _currentPoint = 100;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +42,10 @@ class _HeaderAutoGenerateState extends State<HeaderAutoGenerate> {
           }
         }
 
-        if (state is GenerateProfileIntroductionSuccess) {
+        if (state is GenerateProfileIntroductionSuccess ||
+            state is GenerateCoverLetterSuccess ||
+            state is GenerateInterviewQuestionSuccess ||
+            state is GenerateSkillKnowledgeSuccess) {
           if (_currentPoint == 0) {
             showErrorDialog(context,
                 title: 'Generate failed',

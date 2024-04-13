@@ -8,6 +8,7 @@ import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/wr
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/header_auto_gen.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/chat_gpt_selector.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -33,25 +34,42 @@ class _WriteInterviewQuestionPageState extends State<WriteInterviewQuestionPage>
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => injector.get<AiFeaturesBloc>(),
-      child: MyScaffold(
-        horizontalMargin: 20,
-        useAppBar: true,
-        canBack: true,
-        titleWidget: Assets.icons.logos.dWhitePWhite.svg(),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              HeaderAutoGenerate(
-                aiFeatureTitle: appLocal(context).jobInterviewQA,
+      create: (context) =>
+          injector.get<AiFeaturesBloc>()..add(const GetCurrentPointOfUser()),
+      child: BlocListener<AiFeaturesBloc, AiFeaturesState>(
+        listener: (context, state) {
+          if (state is GenerateInterviewQuestionSuccess) {
+            Navigator.pop(context);
+          }
+        },
+        child: MyScaffold(
+          horizontalMargin: 20,
+          useAppBar: true,
+          canBack: true,
+          resizeToAvoidBottomInset: false,
+          appBarTitle: 'Write Interview Question',
+          body: NestedScrollView(
+            headerSliverBuilder:
+                (BuildContext context, bool innerBoxIsScrolled) => [
+              const MySliverAppBar(
+                height: 130,
+                child: HeaderAutoGenerate(
+                    aiFeatureTitle:
+                        'We will help you answer interview questions.'),
               ),
-              ChatGPTSelector(controller: _tabController),
-              Padding(
-                padding: context.padding(vertical: 16),
-                child: const FormWriteInterviewQuestion(),
-              ),
-              const InterviewQuestionGeneration(),
             ],
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  ChatGPTSelector(controller: _tabController),
+                  Padding(
+                    padding: context.padding(vertical: 16),
+                    child: const FormWriteInterviewQuestion(),
+                  ),
+                  const InterviewQuestionGeneration(),
+                ],
+              ),
+            ),
           ),
         ),
       ),
