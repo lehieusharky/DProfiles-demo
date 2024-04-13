@@ -5,9 +5,10 @@ import 'package:demo_dprofiles/src/features/home/domain/usecases/home_usecase.da
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
+
+part 'home_bloc.freezed.dart';
 part 'home_event.dart';
 part 'home_state.dart';
-part 'home_bloc.freezed.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final HomeUseCase homeUseCase;
@@ -46,27 +47,23 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   FutureOr<void> _loadMoreNewsFeed(
       HomeLoadMoreNewsFeed event, Emitter<HomeState> emit) async {
     refreshController.requestLoading();
+    final List<NewFeedModel> currentNewsFeed = state is HomeGetFeedsSuccess
+        ? (state as HomeGetFeedsSuccess).newsFeed
+        : [];
 
-    refreshController.loadComplete();
+    final result = await homeUseCase.getNewsFeed(++page, limitPage);
 
-    // final List<NewFeedModel> currentNewsFeed = state is HomeGetFeedsSuccess
-    //     ? (state as HomeGetFeedsSuccess).newsFeed
-    //     : [];
-    //
-    // final result = await homeUseCase.getNewsFeed(++page, limitPage);
-    //
-    // result.fold(
-    //   (l) => refreshController.loadFailed(),
-    //   (r) {
-    //     refreshController.loadComplete();
-    //     final data = r.data as List;
-    //
-    //     final newsFeed = data.map((e) => NewFeedModel.fromJson(e)).toList();
-    //     refreshController.loadComplete();
-    //
-    //     emit(HomeGetFeedsSuccess(currentNewsFeed + newsFeed));
-    //   },
-    // );
+    result.fold(
+      (l) => refreshController.loadFailed(),
+      (r) {
+        refreshController.loadComplete();
+        final data = r.data as List;
+        final newsFeed = data.map((e) => NewFeedModel.fromJson(e)).toList();
+        refreshController.loadComplete();
+
+        emit(HomeGetFeedsSuccess(currentNewsFeed + newsFeed));
+      },
+    );
   }
 
   FutureOr<void> _refreshNewsFeed(
@@ -74,19 +71,17 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     refreshController.requestRefresh();
 
     page = 0;
-    refreshController.refreshCompleted();
 
-    // final result = await homeUseCase.getNewsFeed(page, limitPage);
-    // result.fold(
-    //   (l) => refreshController.refreshFailed(),
-    // (r) {
-    //
-    // final data = r.data as List;
-    //
-    // final newsFeed = data.map((e) => NewFeedModel.fromJson(e)).toList();
-    //
-    // emit(HomeGetFeedsSuccess(newsFeed));
-    // },
-    // );
+    final result = await homeUseCase.getNewsFeed(page, limitPage);
+    result.fold(
+      (l) => refreshController.refreshFailed(),
+      (r) {
+        final data = r.data as List;
+
+        final newsFeed = data.map((e) => NewFeedModel.fromJson(e)).toList();
+
+        emit(HomeGetFeedsSuccess(newsFeed));
+      },
+    );
   }
 }
