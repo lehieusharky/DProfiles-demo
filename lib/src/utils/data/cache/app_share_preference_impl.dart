@@ -125,7 +125,7 @@ class AppSharePreferenceImpl implements AppSharePreference {
   Future<void> createSessionID() async {
     var randomNumber = '';
 
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < 3; i++) {
       var digit = Random().nextInt(10);
       randomNumber += digit.toString();
     }

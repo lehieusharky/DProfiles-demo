@@ -28,6 +28,14 @@ _$PropertyAICharacterModelImpl _$$PropertyAICharacterModelImplFromJson(
       energetic: json['energetic'] as int? ?? 0,
       sexy: json['sexy'] as int? ?? 3,
       flirty: json['flirty'] as int? ?? 0,
+      educations: (json['educations'] as List<dynamic>?)
+              ?.map((e) => EducationModel.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
+      experiences: (json['experiences'] as List<dynamic>?)
+              ?.map((e) => ExperienceModel.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$PropertyAICharacterModelImplToJson(
@@ -52,4 +60,6 @@ Map<String, dynamic> _$$PropertyAICharacterModelImplToJson(
       'energetic': instance.energetic,
       'sexy': instance.sexy,
       'flirty': instance.flirty,
+      'educations': instance.educations,
+      'experiences': instance.experiences,
     };

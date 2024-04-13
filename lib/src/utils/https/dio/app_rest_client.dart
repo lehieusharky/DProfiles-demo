@@ -128,9 +128,12 @@ abstract class RestClient {
   Future<BaseResponse> generateCharacterBot(@Body() Map<String, dynamic> body);
 
   @GET('/api/v1/character-chatbot')
-  Future<BaseResponse> getListCharacterBot();
+  Future<BaseResponse> getListCreatedCharacterBot();
 
-  @POST('/load-character-bot')
+  @GET('/api/v1/character-chatbot/{id}')
+  Future<BaseResponse> getCharacterBotDetail(@Path() int id);
+
+  @POST('https://char.dev.dprofiles.xyz/load-character-bot/')
   Future<BaseResponse> loadCharacterBot(@Body() Map<String, dynamic> body);
 
   @GET('/api/v1/character-chatbot/popular')
@@ -143,6 +146,21 @@ abstract class RestClient {
     @Query('limit') int limit,
   );
 
+  // skill
+
+  @GET('/api/v1/user-skill')
+  Future<BaseResponse> getUserSkills();
+
+  @POST('/api/v1/user-skill')
+  Future<BaseResponse> addNewUseSkill(@Body() Map<String, dynamic> body);
+
+  @DELETE('/api/v1/user-skill')
+  Future<BaseResponse> deleteUserSkill(@Path() String id);
+
+  // chat with ai
+
+  @POST('https://char.dev.dprofiles.xyz/chat/')
+  Future<BaseResponse> chatWithBotAI(@Body() Map<String, dynamic> body);
   // forgot password
   @POST('/reset-password')
   Future<BaseResponse> resetPassword(@Body() Map<String, dynamic> body);

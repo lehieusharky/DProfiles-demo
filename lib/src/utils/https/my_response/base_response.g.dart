@@ -13,6 +13,7 @@ _$BaseResponseImpl _$$BaseResponseImplFromJson(Map<String, dynamic> json) =>
       error: json['error'] as String? ?? null,
       statusCode: json['statusCode'] as int? ?? 200,
       data: json['data'],
+      response: json['response'],
     );
 
 Map<String, dynamic> _$$BaseResponseImplToJson(_$BaseResponseImpl instance) =>
@@ -22,4 +23,5 @@ Map<String, dynamic> _$$BaseResponseImplToJson(_$BaseResponseImpl instance) =>
       'error': instance.error,
       'statusCode': instance.statusCode,
       'data': instance.data,
+      'response': instance.response,
     };

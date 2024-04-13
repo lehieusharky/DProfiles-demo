@@ -14,7 +14,6 @@ class AICharacterDataSourceImpl implements AICharacterDataSource {
       final baseResponse =
           await MyHttp.rl().generateCharacterBot(data.toJson());
       return baseResponse;
-
     } on DioException catch (e) {
       rethrow;
     }
@@ -23,7 +22,7 @@ class AICharacterDataSourceImpl implements AICharacterDataSource {
   @override
   Future<BaseResponse> getListCharacterBot() async {
     try {
-      final baseResponse = await MyHttp.rl().getListCharacterBot();
+      final baseResponse = await MyHttp.rl().getListCreatedCharacterBot();
       return baseResponse;
     } on DioException {
       rethrow;

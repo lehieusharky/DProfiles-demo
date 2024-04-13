@@ -56,13 +56,13 @@ extension CertificateModelExt on CertificateModel {
               ),
             ),
             const Spacer(),
-            Padding(
-              padding: context.padding(horizontal: 15),
-              child: const Icon(IconsaxOutline.edit, size: 20),
-            ),
-            InkWell(
-                onTap: onDelete,
-                child: const Icon(IconsaxOutline.trash, size: 20)),
+            // Padding(
+            //   padding: context.padding(horizontal: 15),
+            //   child: const Icon(IconsaxOutline.edit, size: 20),
+            // ),
+            // InkWell(
+            //     onTap: onDelete,
+            //     child: const Icon(IconsaxOutline.trash, size: 20)),
           ],
         ),
       ),

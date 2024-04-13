@@ -31,6 +31,7 @@ class _TitleWalletFollowerProfileState
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         _buildTitle(),
         _buildWallet(),
@@ -104,7 +105,7 @@ class _TitleWalletFollowerProfileState
                     .bodyMedium,
               ),
               context.sizedBox(width: 5),
-              Assets.icons.wallet.svg(),
+              Assets.icons.iconWallet.svg(),
             ],
           ),
         )

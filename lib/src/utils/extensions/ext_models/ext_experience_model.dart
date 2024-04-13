@@ -39,7 +39,7 @@ extension ExperienceModelExt on ExperienceModel {
                     Padding(
                       padding: context.padding(vertical: 5),
                       child: Text(
-                        'Jul 2019 - Mar 2024',
+                        startDate ?? '',
                         style: AppFont()
                             .fontTheme(context,
                                 color: colorScheme(context).outline)
@@ -57,13 +57,13 @@ extension ExperienceModelExt on ExperienceModel {
               ),
             ),
             const Spacer(),
-            Padding(
-              padding: context.padding(horizontal: 15),
-              child: const Icon(IconsaxOutline.edit, size: 20),
-            ),
-            InkWell(
-                onTap: onDelete,
-                child: const Icon(IconsaxOutline.trash, size: 20)),
+            // Padding(
+            //   padding: context.padding(horizontal: 15),
+            //   child: const Icon(IconsaxOutline.edit, size: 20),
+            // ),
+            // InkWell(
+            //     onTap: onDelete,
+            //     child: const Icon(IconsaxOutline.trash, size: 20)),
           ],
         ),
       ),

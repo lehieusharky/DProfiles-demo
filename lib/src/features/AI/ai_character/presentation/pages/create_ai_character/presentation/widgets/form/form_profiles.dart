@@ -34,8 +34,7 @@ class _FormProfilesState extends State<FormProfiles> {
 
     return BlocBuilder<AiCharacterBloc, AiCharacterState>(
       builder: (context, state) {
-        return SizedBox(
-          height: 200,
+        return SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
@@ -97,21 +96,6 @@ class _FormProfilesState extends State<FormProfiles> {
           ),
         );
       },
-    );
-  }
-
-  Widget _buildTitle(String title, ) {
-    return Padding(
-      padding: context.padding(bottom: 15),
-      child: Row(
-        children: [
-          Text(
-            appLocal(context).education,
-            style: AppFont().fontTheme(context, weight: FontWeight.bold).bodyLarge,
-          ),
-          // Icon(icon)
-        ],
-      ),
     );
   }
 

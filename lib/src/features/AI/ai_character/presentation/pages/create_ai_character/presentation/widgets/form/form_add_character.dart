@@ -13,33 +13,35 @@ class FormAddCharacter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: context.padding(bottom: 24),
-          child: Text(
-            appLocal(context).addYourCharacter,
-            style: AppFont()
-                .fontTheme(context, weight: FontWeight.bold)
-                .labelMedium,
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: context.padding(bottom: 24),
+            child: Text(
+              appLocal(context).addYourCharacter,
+              style: AppFont()
+                  .fontTheme(context, weight: FontWeight.bold)
+                  .labelMedium,
+            ),
           ),
-        ),
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          children: PropertiesOfCharacter.values
-              .map((e) => SliderSetPropertyCharacter(property: e))
-              .toList(),
-        ),
-        Padding(
-          padding: context.padding(vertical: 32),
-          child: AppFlatButton(context).elevatedButton(
-            width: context.width,
-            onPressed: () => _save(context),
-            title: appLocal(context).nextButton.toUpperCase(),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: PropertiesOfCharacter.values
+                .map((e) => SliderSetPropertyCharacter(property: e))
+                .toList(),
           ),
-        ),
-      ],
+          Padding(
+            padding: context.padding(vertical: 32),
+            child: AppFlatButton(context).elevatedButton(
+              width: context.width,
+              onPressed: () => _save(context),
+              title: appLocal(context).nextButton.toUpperCase(),
+            ),
+          ),
+        ],
+      ),
     );
   }
 

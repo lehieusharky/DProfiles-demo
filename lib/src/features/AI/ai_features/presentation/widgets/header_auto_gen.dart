@@ -124,7 +124,7 @@ class _HeaderAutoGenerateState extends State<HeaderAutoGenerate> {
                       )),
             ),
             context.sizedBox(width: 5),
-            Assets.icons.wallet.svg(),
+            Assets.icons.iconWallet.svg(),
           ],
         ),
       ),

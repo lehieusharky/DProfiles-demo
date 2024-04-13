@@ -4,11 +4,14 @@ import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_pro
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
-import 'package:ficonsax/ficonsax.dart';
+import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class OpenToComponent extends StatelessWidget {
-  const OpenToComponent({Key? key}) : super(key: key);
+  final String salaryPayType;
+  final int? salary;
+  const OpenToComponent({Key? key, required this.salaryPayType, this.salary})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,43 +19,43 @@ class OpenToComponent extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         const TitleSubPage(title: 'Open to', route: OpenToWorkRoute()),
-        Padding(
-          padding: context.padding(vertical: 8),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Pay',
-                style: AppFont()
-                    .fontTheme(context,
-                        color: colorScheme(context).outline,
-                        weight: FontWeight.bold)
-                    .bodyLarge,
-              ),
-              // PartComponent(title: 'Pay per job', icon: ,),
-              Container(
-                padding: context.padding(horizontal: 8, vertical: 8),
-                decoration: BoxDecoration(
-                    color: colorScheme(context).outlineVariant.withOpacity(0.3),
-                    borderRadius: BorderRadius.circular(8)),
-                child: Row(
-                  children: [
-                    Text(
-                      'Pay per job',
-                      style: AppFont()
-                          .fontTheme(context, weight: FontWeight.bold)
-                          .bodyMedium,
-                    ),
-                    context.sizedBox(width: 5),
-                    Icon(IconsaxBold.shop,
-                        color: colorScheme(context).outlineVariant),
-                  ],
-                ),
-              )
-            ],
-          ),
-        ),
+        _buildOpenField(context,
+            title: 'Pay',
+            type: salaryPayType,
+            icon: Assets.icons.iconBag.svg()),
+        _buildOpenField(context,
+            title: 'Salary',
+            type: salary == null ? '' : salary.toString(),
+            icon: Assets.icons.iconWallet.svg()),
       ],
+    );
+  }
+
+  Widget _buildOpenField(
+    BuildContext context, {
+    required String title,
+    required String type,
+    required Widget icon,
+  }) {
+    return Padding(
+      padding: context.padding(vertical: 8),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: AppFont()
+                .fontTheme(context,
+                    color: colorScheme(context).outline,
+                    weight: FontWeight.bold)
+                .bodyLarge,
+          ),
+          PartComponent(
+            title: type,
+            icon: icon,
+          ),
+        ],
+      ),
     );
   }
 }
