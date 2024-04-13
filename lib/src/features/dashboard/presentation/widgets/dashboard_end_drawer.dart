@@ -4,6 +4,7 @@ import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
 
@@ -20,7 +21,7 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
   @override
   void initState() {
     super.initState();
-    _drawerController = SidebarXController(selectedIndex: 0);
+    _drawerController = SidebarXController(selectedIndex: 0, extended: true);
   }
 
   @override
@@ -28,6 +29,7 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
     return SidebarX(
       animationDuration: const Duration(milliseconds: 200),
       controller: _drawerController,
+      showToggleButton: false,
       theme: SidebarXTheme(
         margin: context.padding(vertical: 10),
         decoration: BoxDecoration(
@@ -75,35 +77,46 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
         SidebarXItem(
           iconBuilder: (_, __) => Assets.icons.iconWallet.svg(),
           label: 'My Wallet',
-          onTap: () {},
+          onTap: () {
+            // context.pushRoute(MyWalletRoute())
+          },
         ),
         const SidebarXItem(
           icon: Icons.search,
           label: 'Digital Profile',
         ),
-        const SidebarXItem(
+        SidebarXItem(
           icon: Icons.people,
           label: 'Edit Profile',
+          onTap: () {
+            context.pushRoute(const EditProfileRoute());
+          },
         ),
         const SidebarXItem(
-          icon: Icons.favorite,
+          icon: Icons.settings,
           label: 'Account Setting',
         ),
         const SidebarXItem(
-          icon: Icons.favorite,
+          icon: Icons.account_box,
           label: 'Become Influencer',
         ),
         const SidebarXItem(
-          icon: Icons.favorite,
+          icon: Icons.language,
           label: 'Language',
         ),
         const SidebarXItem(
           icon: Icons.favorite,
           label: 'Privacy & Policy',
         ),
-        const SidebarXItem(
-          icon: Icons.favorite,
+        SidebarXItem(
+          icon: Icons.logout,
           label: 'Log out',
+          onTap: () async {
+            await sharePreference.removeAccessToken();
+            if (context.mounted) {
+              context.router.replace(const SignInRoute());
+            }
+          },
         ),
       ],
     );
