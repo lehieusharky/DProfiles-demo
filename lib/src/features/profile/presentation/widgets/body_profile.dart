@@ -31,8 +31,8 @@ class BodyProfile extends StatelessWidget {
           physics: const AlwaysScrollableScrollPhysics(),
           children: [
             SubProfilePage(userInfo: state),
-            SubFeedPage(userInfo: state),
-            SubTransactionsPage(userInfo: state),
+            SubProfilePage(userInfo: state),
+            SubProfilePage(userInfo: state),
           ],
         );
       }

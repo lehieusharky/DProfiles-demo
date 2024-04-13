@@ -133,6 +133,9 @@ abstract class RestClient {
   @GET('/api/v1/character-chatbot/{id}')
   Future<BaseResponse> getCharacterBotDetail(@Path() int id);
 
+  @GET('/api/v1/character-chatbot/popular/{id}')
+  Future<BaseResponse> getPopularCharacterBotDetail(@Path() int id);
+
   @POST('https://char.dev.dprofiles.xyz/load-character-bot/')
   Future<BaseResponse> loadCharacterBot(@Body() Map<String, dynamic> body);
 

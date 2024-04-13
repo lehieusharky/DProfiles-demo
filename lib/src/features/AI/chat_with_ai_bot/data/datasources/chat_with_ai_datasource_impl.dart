@@ -34,7 +34,7 @@ class ChatWithAIDataSourceImpl implements ChatWithAIDataSource {
   }
 
   @override
-  Future<BaseResponse> getChatBotDetail(int chatBotID) async {
+  Future<BaseResponse> getChatBotDetail(int chatBotID, ) async {
     try {
       final baseResponse = await MyHttp.rl().getCharacterBotDetail(chatBotID);
       return baseResponse;
