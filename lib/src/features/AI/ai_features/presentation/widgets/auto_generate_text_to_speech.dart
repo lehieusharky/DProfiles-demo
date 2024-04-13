@@ -1,11 +1,7 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
-import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
-import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
-import 'package:demo_dprofiles/src/utils/services/app_clipboard_service.dart';
 import 'package:demo_dprofiles/src/utils/services/tts_service.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
@@ -85,7 +81,7 @@ class _AutoGenerateTextToSpeechState extends State<AutoGenerateTextToSpeech> {
           padding: context.padding(horizontal: 20),
           child: InkWell(
               onTap: () => _speak(),
-              child: const Icon(IconsaxOutline.play_cricle)),
+              child: const Icon(IconsaxOutline.timer_start)),
         )
       ],
     );

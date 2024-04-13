@@ -1,6 +1,6 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
-import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
+import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_interview_question_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
@@ -30,7 +30,12 @@ class _FormWriteInterviewQuestionState
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<AiFeaturesBloc, AiFeaturesState>(
+    return BlocConsumer<AiFeaturesBloc, AiFeaturesState>(
+      listener: (context, state) {
+        if (state is AiFeaturesLoading) {
+          showLoadingDialog(context);
+        }
+      },
       builder: (context, state) {
         return Form(
           key: _keyForm,
@@ -82,9 +87,6 @@ class _FormWriteInterviewQuestionState
                         onPressed: () => _sendToAI(context),
                         title: appLocal(context).sendToAI,
                         suffixIcon: _buildSuffixIconSendButton(),
-                        child: (state is AiFeaturesLoading)
-                            ? const MyLoading()
-                            : null,
                       ),
                     ),
                   ],

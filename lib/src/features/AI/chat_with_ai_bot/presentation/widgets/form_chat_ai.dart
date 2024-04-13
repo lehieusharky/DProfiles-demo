@@ -23,6 +23,8 @@ class _FormChatAiState extends State<FormChatAi> {
 
   final _chatController = TextEditingController();
 
+  final ScrollController _scrollController = ScrollController();
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<ChatWithAiBloc, ChatWithAiState>(
@@ -33,6 +35,11 @@ class _FormChatAiState extends State<FormChatAi> {
               isUser: false,
               dateTime:
                   DateFormat('yyyy-MM-dd HH:mm:ss').format(DateTime.now())));
+
+          _scrollController.animateTo(
+              _scrollController.position.maxScrollExtent,
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.ease);
         }
       },
       builder: (context, state) {
@@ -42,6 +49,7 @@ class _FormChatAiState extends State<FormChatAi> {
               child: Padding(
                   padding: context.padding(horizontal: 20),
                   child: ListView.builder(
+                    controller: _scrollController,
                     itemCount: chats.length,
                     itemBuilder: (BuildContext context, int index) {
                       return MyMessage(messageModel: chats[index]);

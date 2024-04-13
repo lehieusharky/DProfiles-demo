@@ -186,9 +186,9 @@ class _CreateDigitalProfileSuccessPageState
               mainAxisSize: MainAxisSize.min,
               children: [
                 Tuple2('Name', userInfo.username),
-                Tuple2('DOB', userInfo.birthDay),
-                Tuple2('Nationality', userInfo.nationality),
-                Tuple2('ID Card Number', userInfo.idCardNumber),
+                Tuple2('DOB', userInfo.birthDay ?? ''),
+                Tuple2('Nationality', userInfo.nationality ?? ''),
+                Tuple2('ID Card Number', userInfo.idCardNumber ?? ''),
               ]
                   .map((e) => Padding(
                         padding: context.padding(top: 8),

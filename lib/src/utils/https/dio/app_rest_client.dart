@@ -161,7 +161,9 @@ abstract class RestClient {
 
   @POST('https://char.dev.dprofiles.xyz/chat/')
   Future<BaseResponse> chatWithBotAI(@Body() Map<String, dynamic> body);
+
   // forgot password
+
   @POST('/reset-password')
   Future<BaseResponse> resetPassword(@Body() Map<String, dynamic> body);
 

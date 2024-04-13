@@ -58,108 +58,110 @@ class _FormExperienceState extends State<FormExperience> {
       builder: (context, state) {
         myLoading =
             (state is CreateDigitalProfileLoading) ? const MyLoading() : null;
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: context.padding(bottom: 24),
-              child: Text(
-                appLocal(context).experience,
-                style: AppFont()
-                    .fontTheme(context, weight: FontWeight.bold)
-                    .labelMedium,
-              ),
-            ),
-            if (experiences.isNotEmpty)
-              Column(
-                  children: experiences
-                      .map(
-                        (e) => e.toWidget(
-                          context,
-                          onDelete: () => context
-                              .read<CreateDigitalProfileBloc>()
-                              .add(DeleteUserExperience(e)),
-                        ),
-                      )
-                      .toList()),
-            Padding(
-              padding: context.padding(top: 12, bottom: 32),
-              child: Container(
-                padding: context.padding(all: 12),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: colorScheme(context).primary),
+        return SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: context.padding(bottom: 24),
+                child: Text(
+                  appLocal(context).experience,
+                  style: AppFont()
+                      .fontTheme(context, weight: FontWeight.bold)
+                      .labelMedium,
                 ),
-                child: Form(
-                  key: _keyForm,
-                  child: Column(
-                    children: [
-                      AuthField(
-                        controller: _companyController,
-                        title: appLocal(context).company.toUpperCase(),
-                        keyboardType: TextInputType.emailAddress,
-                        textInputAction: TextInputAction.next,
-                        validator: (company) {
-                          if (company == null || company.isEmpty) {
-                            return appLocal(context).fieldCannotBeEmpty;
-                          } else {
-                            return null;
-                          }
-                        },
-                        hint: appLocal(context).companyName,
-                      ),
-                      Padding(
-                        padding: context.padding(top: 32),
-                        child: AuthField(
-                          controller: _jobPositionController,
-                          title: appLocal(context).jobPosition.toUpperCase(),
+              ),
+              if (experiences.isNotEmpty)
+                Column(
+                    children: experiences
+                        .map(
+                          (e) => e.toWidget(
+                            context,
+                            onDelete: () => context
+                                .read<CreateDigitalProfileBloc>()
+                                .add(DeleteUserExperience(e)),
+                          ),
+                        )
+                        .toList()),
+              Padding(
+                padding: context.padding(top: 12, bottom: 32),
+                child: Container(
+                  padding: context.padding(all: 12),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: colorScheme(context).primary),
+                  ),
+                  child: Form(
+                    key: _keyForm,
+                    child: Column(
+                      children: [
+                        AuthField(
+                          controller: _companyController,
+                          title: appLocal(context).company.toUpperCase(),
+                          keyboardType: TextInputType.emailAddress,
                           textInputAction: TextInputAction.next,
-                          hint: appLocal(context).position,
+                          validator: (company) {
+                            if (company == null || company.isEmpty) {
+                              return appLocal(context).fieldCannotBeEmpty;
+                            } else {
+                              return null;
+                            }
+                          },
+                          hint: appLocal(context).companyName,
                         ),
-                      ),
-                      Padding(
-                        padding: context.padding(top: 32),
-                        child: AuthField(
-                          controller: _startDateController,
-                          title: appLocal(context).startDate.toUpperCase(),
-                          textInputAction: TextInputAction.next,
-                          hint: appLocal(context).dateTimeFormatddmmyyyyy,
-                          validator: (date) =>
-                              date.validationForDDMMYYYYY(context),
+                        Padding(
+                          padding: context.padding(top: 32),
+                          child: AuthField(
+                            controller: _jobPositionController,
+                            title: appLocal(context).jobPosition.toUpperCase(),
+                            textInputAction: TextInputAction.next,
+                            hint: appLocal(context).position,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: context.padding(top: 32),
-                        child: AuthField(
-                          controller: _endDateController,
-                          textInputAction: TextInputAction.next,
-                          title: appLocal(context).endDate.toUpperCase(),
-                          hint: appLocal(context).dateTimeFormatddmmyyyyy,
-                          validator: (date) =>
-                              date.validationForDDMMYYYYY(context),
+                        Padding(
+                          padding: context.padding(top: 32),
+                          child: AuthField(
+                            controller: _startDateController,
+                            title: appLocal(context).startDate.toUpperCase(),
+                            textInputAction: TextInputAction.next,
+                            hint: appLocal(context).dateTimeFormatddmmyyyyy,
+                            validator: (date) =>
+                                date.validationForDDMMYYYYY(context),
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: context.padding(top: 32),
-                        child: AuthField(
-                          controller: _descrptionController,
-                          textInputAction: TextInputAction.done,
-                          title: appLocal(context).description.toUpperCase(),
-                          hint: appLocal(context).description,
-                          maxLines: 4,
+                        Padding(
+                          padding: context.padding(top: 32),
+                          child: AuthField(
+                            controller: _endDateController,
+                            textInputAction: TextInputAction.next,
+                            title: appLocal(context).endDate.toUpperCase(),
+                            hint: appLocal(context).dateTimeFormatddmmyyyyy,
+                            validator: (date) =>
+                                date.validationForDDMMYYYYY(context),
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: context.padding(top: 24),
-                        child: _buildUpdateButtons(),
-                      ),
-                    ],
+                        Padding(
+                          padding: context.padding(top: 32),
+                          child: AuthField(
+                            controller: _descrptionController,
+                            textInputAction: TextInputAction.done,
+                            title: appLocal(context).description.toUpperCase(),
+                            hint: appLocal(context).description,
+                            maxLines: 4,
+                          ),
+                        ),
+                        Padding(
+                          padding: context.padding(top: 24),
+                          child: _buildUpdateButtons(),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-            _buildNavigateButtons(),
-          ],
+              _buildNavigateButtons(),
+            ],
+          ),
         );
       },
     );

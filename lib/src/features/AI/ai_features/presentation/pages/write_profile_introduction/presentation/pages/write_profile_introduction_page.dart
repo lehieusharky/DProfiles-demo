@@ -24,7 +24,6 @@ class WriteProfileIntroductionPage extends StatefulWidget {
 class _WriteProfileIntroductionPageState
     extends State<WriteProfileIntroductionPage>
     with SingleTickerProviderStateMixin {
-
   late TabController _tabController;
   late ScrollController _scrollController;
 
@@ -62,7 +61,7 @@ class _WriteProfileIntroductionPageState
           useAppBar: true,
           canBack: true,
           resizeToAvoidBottomInset: false,
-          appBarTitle: 'Write profile introduction',
+          appBarTitle: 'Write Profile Introduction',
           body: NestedScrollView(
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => [

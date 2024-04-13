@@ -9,6 +9,7 @@ import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/write_skill_knowledge/presentation/widgets/form_skill_knowledge.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/chat_gpt_selector.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -34,9 +35,13 @@ class _WriteSkillKnowledgePageState extends State<WriteSkillKnowledgePage>
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => injector.get<AiFeaturesBloc>(),
+      create: (context) =>
+          injector.get<AiFeaturesBloc>()..add(const GetCurrentPointOfUser()),
       child: BlocListener<AiFeaturesBloc, AiFeaturesState>(
         listener: (context, state) {
+          if (state is GenerateSkillKnowledgeSuccess) {
+            Navigator.pop(context);
+          }
           if (state is AiFeaturesError) {
             Navigator.pop(context);
             showErrorDialog(context,
@@ -47,20 +52,28 @@ class _WriteSkillKnowledgePageState extends State<WriteSkillKnowledgePage>
           horizontalMargin: 20,
           useAppBar: true,
           canBack: true,
-          titleWidget: Assets.icons.logos.dWhitePWhite.svg(),
-          body: SingleChildScrollView(
-            child: Column(
-              children: [
-                HeaderAutoGenerate(
-                  aiFeatureTitle: appLocal(context).skillsKnowledgeByJobTitle,
+          appBarTitle: 'Skill & Knowledge by Job Title',
+          body: NestedScrollView(
+            headerSliverBuilder:
+                (BuildContext context, bool innerBoxIsScrolled) => [
+              const MySliverAppBar(
+                height: 130,
+                child: HeaderAutoGenerate(
+                  aiFeatureTitle: 'Improve your skills with AI tools.',
                 ),
-                ChatGPTSelector(controller: _tabController),
-                Padding(
-                  padding: context.padding(vertical: 16),
-                  child: const FormSkillKnowledge(),
-                ),
-                const SkillKnowledgeGeneration(),
-              ],
+              ),
+            ],
+            body: SingleChildScrollView(
+              child: Column(
+                children: [
+                  ChatGPTSelector(controller: _tabController),
+                  Padding(
+                    padding: context.padding(vertical: 16),
+                    child: const FormSkillKnowledge(),
+                  ),
+                  const SkillKnowledgeGeneration(),
+                ],
+              ),
             ),
           ),
         ),
