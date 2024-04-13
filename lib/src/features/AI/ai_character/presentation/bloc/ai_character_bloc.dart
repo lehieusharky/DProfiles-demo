@@ -13,9 +13,9 @@ import 'package:demo_dprofiles/src/utils/constant/ai_character_bot_properties.da
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'ai_character_bloc.freezed.dart';
 part 'ai_character_event.dart';
 part 'ai_character_state.dart';
-part 'ai_character_bloc.freezed.dart';
 
 class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
   final AICharacterUseCase aiCharacterUseCase;
@@ -101,7 +101,6 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
       final listData = r.data as List;
       final characterBots =
           listData.map((e) => AICharacterBotModel.fromJson(e)).toList();
-
       emit(GetListCharacterBotSuccess(characterBots));
     });
   }

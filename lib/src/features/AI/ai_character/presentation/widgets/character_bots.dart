@@ -6,8 +6,8 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class PopularCharacterBots extends StatelessWidget {
-  const PopularCharacterBots({Key? key}) : super(key: key);
+class CharacterBots extends StatelessWidget {
+  const CharacterBots({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +16,9 @@ class PopularCharacterBots extends StatelessWidget {
       selector: (state) {
         if (state is GetListPopularCharacterBotSuccess) {
           return state.bots;
+        } else if (state is GetListCharacterBotSuccess) {
+          return state.bots;
         }
-
         return null;
       },
       builder: (context, state) {
