@@ -11,6 +11,7 @@ class BaseResponse with _$BaseResponse implements AppResponse {
     @Default(null) String? error,
     @Default(200) int? statusCode,
     dynamic data,
+    dynamic response,
   }) = _BaseResponse;
 
   factory BaseResponse.fromJson(Map<String, Object?> json) =>

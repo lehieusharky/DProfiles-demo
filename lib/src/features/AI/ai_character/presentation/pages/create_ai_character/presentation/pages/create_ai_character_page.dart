@@ -80,7 +80,7 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
               headerSliverBuilder:
                   (BuildContext context, bool innerBoxIsScrolled) => [
                 MySliverAppBar(
-                    height: 270,
+                    height: 205,
                     child: HeaderAICharacter(controller: _tabController)),
               ],
               body: Column(
@@ -88,8 +88,10 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
                   Expanded(
                     child: Padding(
                       padding: context.padding(horizontal: 20, top: 32),
-                      child: const TabBarView(
-                        children: [
+                      child: TabBarView(
+                        controller: _tabController,
+                        physics: const NeverScrollableScrollPhysics(),
+                        children: const [
                           FormBasicInfo(),
                           FormProfiles(),
                           FormAddCharacter(),

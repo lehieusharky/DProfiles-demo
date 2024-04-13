@@ -1,3 +1,5 @@
+import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'property_ai_character.freezed.dart';
@@ -26,6 +28,8 @@ class PropertyAICharacterModel with _$PropertyAICharacterModel {
     @Default(0) int? energetic,
     @Default(3) int? sexy,
     @Default(0) int? flirty,
+    @Default([]) List<EducationModel> educations,
+    @Default([]) List<ExperienceModel> experiences,
   }) = _PropertyAICharacterModel;
 
   factory PropertyAICharacterModel.fromJson(Map<String, Object?> json) =>

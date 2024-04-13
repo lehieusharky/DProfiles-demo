@@ -41,6 +41,8 @@ mixin _$PropertyAICharacterModel {
   int? get energetic => throw _privateConstructorUsedError;
   int? get sexy => throw _privateConstructorUsedError;
   int? get flirty => throw _privateConstructorUsedError;
+  List<EducationModel> get educations => throw _privateConstructorUsedError;
+  List<ExperienceModel> get experiences => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -73,7 +75,9 @@ abstract class $PropertyAICharacterModelCopyWith<$Res> {
       int? chatty,
       int? energetic,
       int? sexy,
-      int? flirty});
+      int? flirty,
+      List<EducationModel> educations,
+      List<ExperienceModel> experiences});
 }
 
 /// @nodoc
@@ -109,6 +113,8 @@ class _$PropertyAICharacterModelCopyWithImpl<$Res,
     Object? energetic = freezed,
     Object? sexy = freezed,
     Object? flirty = freezed,
+    Object? educations = null,
+    Object? experiences = null,
   }) {
     return _then(_value.copyWith(
       sessionId: freezed == sessionId
@@ -187,6 +193,14 @@ class _$PropertyAICharacterModelCopyWithImpl<$Res,
           ? _value.flirty
           : flirty // ignore: cast_nullable_to_non_nullable
               as int?,
+      educations: null == educations
+          ? _value.educations
+          : educations // ignore: cast_nullable_to_non_nullable
+              as List<EducationModel>,
+      experiences: null == experiences
+          ? _value.experiences
+          : experiences // ignore: cast_nullable_to_non_nullable
+              as List<ExperienceModel>,
     ) as $Val);
   }
 }
@@ -219,7 +233,9 @@ abstract class _$$PropertyAICharacterModelImplCopyWith<$Res>
       int? chatty,
       int? energetic,
       int? sexy,
-      int? flirty});
+      int? flirty,
+      List<EducationModel> educations,
+      List<ExperienceModel> experiences});
 }
 
 /// @nodoc
@@ -254,6 +270,8 @@ class __$$PropertyAICharacterModelImplCopyWithImpl<$Res>
     Object? energetic = freezed,
     Object? sexy = freezed,
     Object? flirty = freezed,
+    Object? educations = null,
+    Object? experiences = null,
   }) {
     return _then(_$PropertyAICharacterModelImpl(
       sessionId: freezed == sessionId
@@ -332,6 +350,14 @@ class __$$PropertyAICharacterModelImplCopyWithImpl<$Res>
           ? _value.flirty
           : flirty // ignore: cast_nullable_to_non_nullable
               as int?,
+      educations: null == educations
+          ? _value._educations
+          : educations // ignore: cast_nullable_to_non_nullable
+              as List<EducationModel>,
+      experiences: null == experiences
+          ? _value._experiences
+          : experiences // ignore: cast_nullable_to_non_nullable
+              as List<ExperienceModel>,
     ));
   }
 }
@@ -358,7 +384,11 @@ class _$PropertyAICharacterModelImpl implements _PropertyAICharacterModel {
       this.chatty = 0,
       this.energetic = 0,
       this.sexy = 3,
-      this.flirty = 0});
+      this.flirty = 0,
+      final List<EducationModel> educations = const [],
+      final List<ExperienceModel> experiences = const []})
+      : _educations = educations,
+        _experiences = experiences;
 
   factory _$PropertyAICharacterModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$PropertyAICharacterModelImplFromJson(json);
@@ -418,10 +448,27 @@ class _$PropertyAICharacterModelImpl implements _PropertyAICharacterModel {
   @override
   @JsonKey()
   final int? flirty;
+  final List<EducationModel> _educations;
+  @override
+  @JsonKey()
+  List<EducationModel> get educations {
+    if (_educations is EqualUnmodifiableListView) return _educations;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_educations);
+  }
+
+  final List<ExperienceModel> _experiences;
+  @override
+  @JsonKey()
+  List<ExperienceModel> get experiences {
+    if (_experiences is EqualUnmodifiableListView) return _experiences;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_experiences);
+  }
 
   @override
   String toString() {
-    return 'PropertyAICharacterModel(sessionId: $sessionId, summary: $summary, name: $name, avatar: $avatar, inspiring: $inspiring, smart: $smart, friendly: $friendly, supportive: $supportive, helpful: $helpful, humorous: $humorous, passive: $passive, aggressive: $aggressive, violent: $violent, formal: $formal, spiritual: $spiritual, chatty: $chatty, energetic: $energetic, sexy: $sexy, flirty: $flirty)';
+    return 'PropertyAICharacterModel(sessionId: $sessionId, summary: $summary, name: $name, avatar: $avatar, inspiring: $inspiring, smart: $smart, friendly: $friendly, supportive: $supportive, helpful: $helpful, humorous: $humorous, passive: $passive, aggressive: $aggressive, violent: $violent, formal: $formal, spiritual: $spiritual, chatty: $chatty, energetic: $energetic, sexy: $sexy, flirty: $flirty, educations: $educations, experiences: $experiences)';
   }
 
   @override
@@ -455,7 +502,11 @@ class _$PropertyAICharacterModelImpl implements _PropertyAICharacterModel {
             (identical(other.energetic, energetic) ||
                 other.energetic == energetic) &&
             (identical(other.sexy, sexy) || other.sexy == sexy) &&
-            (identical(other.flirty, flirty) || other.flirty == flirty));
+            (identical(other.flirty, flirty) || other.flirty == flirty) &&
+            const DeepCollectionEquality()
+                .equals(other._educations, _educations) &&
+            const DeepCollectionEquality()
+                .equals(other._experiences, _experiences));
   }
 
   @JsonKey(ignore: true)
@@ -480,7 +531,9 @@ class _$PropertyAICharacterModelImpl implements _PropertyAICharacterModel {
         chatty,
         energetic,
         sexy,
-        flirty
+        flirty,
+        const DeepCollectionEquality().hash(_educations),
+        const DeepCollectionEquality().hash(_experiences)
       ]);
 
   @JsonKey(ignore: true)
@@ -500,25 +553,28 @@ class _$PropertyAICharacterModelImpl implements _PropertyAICharacterModel {
 
 abstract class _PropertyAICharacterModel implements PropertyAICharacterModel {
   const factory _PropertyAICharacterModel(
-      {@JsonKey(name: 'session_id') final int? sessionId,
-      final String? summary,
-      final String? name,
-      final String? avatar,
-      final int? inspiring,
-      final int? smart,
-      final int? friendly,
-      final int? supportive,
-      final int? helpful,
-      final int? humorous,
-      final int? passive,
-      final int? aggressive,
-      final int? violent,
-      final int? formal,
-      final int? spiritual,
-      final int? chatty,
-      final int? energetic,
-      final int? sexy,
-      final int? flirty}) = _$PropertyAICharacterModelImpl;
+          {@JsonKey(name: 'session_id') final int? sessionId,
+          final String? summary,
+          final String? name,
+          final String? avatar,
+          final int? inspiring,
+          final int? smart,
+          final int? friendly,
+          final int? supportive,
+          final int? helpful,
+          final int? humorous,
+          final int? passive,
+          final int? aggressive,
+          final int? violent,
+          final int? formal,
+          final int? spiritual,
+          final int? chatty,
+          final int? energetic,
+          final int? sexy,
+          final int? flirty,
+          final List<EducationModel> educations,
+          final List<ExperienceModel> experiences}) =
+      _$PropertyAICharacterModelImpl;
 
   factory _PropertyAICharacterModel.fromJson(Map<String, dynamic> json) =
       _$PropertyAICharacterModelImpl.fromJson;
@@ -562,6 +618,10 @@ abstract class _PropertyAICharacterModel implements PropertyAICharacterModel {
   int? get sexy;
   @override
   int? get flirty;
+  @override
+  List<EducationModel> get educations;
+  @override
+  List<ExperienceModel> get experiences;
   @override
   @JsonKey(ignore: true)
   _$$PropertyAICharacterModelImplCopyWith<_$PropertyAICharacterModelImpl>

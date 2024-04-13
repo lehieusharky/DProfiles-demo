@@ -10,6 +10,7 @@ import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
 import 'package:demo_dprofiles/src/utils/constant/ai_character_bot_properties.dart';
+import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -78,6 +79,16 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
   FutureOr<void> _generateCharacterBot(
       GenerateCharacterBot event, Emitter<AiCharacterState> emit) async {
     emit(const AICharacterLoading());
+
+    //
+    // propertyAICharacterModel = propertyAICharacterModel.copyWith(
+    //   educations: educations.map((e) => e).toList(),
+    //   experiences: experiences.map((e) => e).toList(),
+    // );
+
+    propertyAICharacterModel = propertyAICharacterModel.copyWith(
+        sessionId: sharePreference.getSessionID());
+
     final result =
         await aiCharacterUseCase.generateCharacterBot(propertyAICharacterModel);
 

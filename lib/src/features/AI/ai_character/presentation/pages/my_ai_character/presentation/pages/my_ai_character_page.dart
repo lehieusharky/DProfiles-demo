@@ -61,52 +61,53 @@ class _MyAICharacterPageState extends State<MyAICharacterPage>
               greeting:
                   widget.createdCharacterBot.characterDefinition!.greeting ??
                       '',
+              id: widget.createdCharacterBot.chatBotId,
             ),
-            Padding(
-              padding: context.padding(top: 36, horizontal: 20),
-              child: const ViewChatHistory(),
-            ),
-            Padding(
-              padding: context.padding(left: 20, right: 70, top: 32),
-              child: Container(
-                height: context.sizeHeight(54),
-                padding: context.padding(vertical: 12),
-                child: TabBar(
-                  controller: _tabController,
-                  dividerColor: Colors.transparent,
-                  indicatorSize: TabBarIndicatorSize.tab,
-                  labelColor: MyColor.getWhite,
-                  unselectedLabelStyle: AppFont()
-                      .fontTheme(context,
-                          color: colorScheme(context).onTertiary)
-                      .bodyMedium,
-                  labelStyle: AppFont().fontTheme(context).bodyMedium,
-                  indicator: BubbleTabIndicator(
-                    indicatorHeight: context.sizeHeight(35),
-                    insets: context.padding(horizontal: 0),
-                    indicatorColor: colorScheme(context).primary,
-                    tabBarIndicatorSize: TabBarIndicatorSize.tab,
-                  ),
-                  tabs: const [
-                    Text('Your AI Character'),
-                    Text('Others'),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: context.padding(horizontal: 20, top: 20),
-              child: SizedBox(
-                height: context.sizeHeight(200),
-                child: TabBarView(
-                  controller: _tabController,
-                  children: const [
-                    Text('Chat with AI Character'),
-                    Text('Others'),
-                  ],
-                ),
-              ),
-            ),
+            // Padding(
+            //   padding: context.padding(top: 36, horizontal: 20),
+            //   child: const ViewChatHistory(),
+            // ),
+            // Padding(
+            //   padding: context.padding(left: 20, right: 70, top: 32),
+            //   child: Container(
+            //     height: context.sizeHeight(54),
+            //     padding: context.padding(vertical: 12),
+            //     child: TabBar(
+            //       controller: _tabController,
+            //       dividerColor: Colors.transparent,
+            //       indicatorSize: TabBarIndicatorSize.tab,
+            //       labelColor: MyColor.getWhite,
+            //       unselectedLabelStyle: AppFont()
+            //           .fontTheme(context,
+            //               color: colorScheme(context).onTertiary)
+            //           .bodyMedium,
+            //       labelStyle: AppFont().fontTheme(context).bodyMedium,
+            //       indicator: BubbleTabIndicator(
+            //         indicatorHeight: context.sizeHeight(35),
+            //         insets: context.padding(horizontal: 0),
+            //         indicatorColor: colorScheme(context).primary,
+            //         tabBarIndicatorSize: TabBarIndicatorSize.tab,
+            //       ),
+            //       tabs: const [
+            //         Text('Your AI Character'),
+            //         Text('Others'),
+            //       ],
+            //     ),
+            //   ),
+            // ),
+            // Padding(
+            //   padding: context.padding(horizontal: 20, top: 20),
+            //   child: SizedBox(
+            //     height: context.sizeHeight(200),
+            //     child: TabBarView(
+            //       controller: _tabController,
+            //       children: const [
+            //         Text('Chat with AI Character'),
+            //         Text('Others'),
+            //       ],
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),

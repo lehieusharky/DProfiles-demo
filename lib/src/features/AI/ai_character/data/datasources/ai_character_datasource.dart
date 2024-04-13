@@ -7,4 +7,5 @@ abstract class AICharacterDataSource {
   Future<BaseResponse> getListCharacterBot();
 
   Future<BaseResponse> getListPopularCharacterBot();
+
 }

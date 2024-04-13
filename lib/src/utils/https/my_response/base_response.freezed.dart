@@ -25,6 +25,7 @@ mixin _$BaseResponse {
   String? get error => throw _privateConstructorUsedError;
   int? get statusCode => throw _privateConstructorUsedError;
   dynamic get data => throw _privateConstructorUsedError;
+  dynamic get response => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,7 +44,8 @@ abstract class $BaseResponseCopyWith<$Res> {
       bool? success,
       String? error,
       int? statusCode,
-      dynamic data});
+      dynamic data,
+      dynamic response});
 }
 
 /// @nodoc
@@ -64,6 +66,7 @@ class _$BaseResponseCopyWithImpl<$Res, $Val extends BaseResponse>
     Object? error = freezed,
     Object? statusCode = freezed,
     Object? data = freezed,
+    Object? response = freezed,
   }) {
     return _then(_value.copyWith(
       message: freezed == message
@@ -86,6 +89,10 @@ class _$BaseResponseCopyWithImpl<$Res, $Val extends BaseResponse>
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as dynamic,
+      response: freezed == response
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as dynamic,
     ) as $Val);
   }
 }
@@ -103,7 +110,8 @@ abstract class _$$BaseResponseImplCopyWith<$Res>
       bool? success,
       String? error,
       int? statusCode,
-      dynamic data});
+      dynamic data,
+      dynamic response});
 }
 
 /// @nodoc
@@ -122,6 +130,7 @@ class __$$BaseResponseImplCopyWithImpl<$Res>
     Object? error = freezed,
     Object? statusCode = freezed,
     Object? data = freezed,
+    Object? response = freezed,
   }) {
     return _then(_$BaseResponseImpl(
       message: freezed == message
@@ -144,6 +153,10 @@ class __$$BaseResponseImplCopyWithImpl<$Res>
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as dynamic,
+      response: freezed == response
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as dynamic,
     ));
   }
 }
@@ -156,7 +169,8 @@ class _$BaseResponseImpl implements _BaseResponse {
       this.success = false,
       this.error = null,
       this.statusCode = 200,
-      this.data});
+      this.data,
+      this.response});
 
   factory _$BaseResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$BaseResponseImplFromJson(json);
@@ -175,10 +189,12 @@ class _$BaseResponseImpl implements _BaseResponse {
   final int? statusCode;
   @override
   final dynamic data;
+  @override
+  final dynamic response;
 
   @override
   String toString() {
-    return 'BaseResponse(message: $message, success: $success, error: $error, statusCode: $statusCode, data: $data)';
+    return 'BaseResponse(message: $message, success: $success, error: $error, statusCode: $statusCode, data: $data, response: $response)';
   }
 
   @override
@@ -191,13 +207,20 @@ class _$BaseResponseImpl implements _BaseResponse {
             (identical(other.error, error) || other.error == error) &&
             (identical(other.statusCode, statusCode) ||
                 other.statusCode == statusCode) &&
-            const DeepCollectionEquality().equals(other.data, data));
+            const DeepCollectionEquality().equals(other.data, data) &&
+            const DeepCollectionEquality().equals(other.response, response));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, message, success, error,
-      statusCode, const DeepCollectionEquality().hash(data));
+  int get hashCode => Object.hash(
+      runtimeType,
+      message,
+      success,
+      error,
+      statusCode,
+      const DeepCollectionEquality().hash(data),
+      const DeepCollectionEquality().hash(response));
 
   @JsonKey(ignore: true)
   @override
@@ -219,7 +242,8 @@ abstract class _BaseResponse implements BaseResponse {
       final bool? success,
       final String? error,
       final int? statusCode,
-      final dynamic data}) = _$BaseResponseImpl;
+      final dynamic data,
+      final dynamic response}) = _$BaseResponseImpl;
 
   factory _BaseResponse.fromJson(Map<String, dynamic> json) =
       _$BaseResponseImpl.fromJson;
@@ -234,6 +258,8 @@ abstract class _BaseResponse implements BaseResponse {
   int? get statusCode;
   @override
   dynamic get data;
+  @override
+  dynamic get response;
   @override
   @JsonKey(ignore: true)
   _$$BaseResponseImplCopyWith<_$BaseResponseImpl> get copyWith =>

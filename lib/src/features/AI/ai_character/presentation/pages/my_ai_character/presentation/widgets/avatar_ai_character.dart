@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
@@ -13,13 +15,15 @@ class AvatarAICharacter extends StatefulWidget {
   final String shortDescription;
   final String longDescription;
   final String greeting;
+  final int? id;
 
   const AvatarAICharacter(
       {super.key,
       required this.name,
       required this.shortDescription,
       required this.longDescription,
-      required this.greeting});
+      required this.greeting,
+      required this.id});
 
   @override
   State<AvatarAICharacter> createState() => _AvatarAICharacterState();
@@ -73,7 +77,10 @@ class _AvatarAICharacterState extends State<AvatarAICharacter> {
                     child: AppFlatButton(context).elevatedButton(
                         width: context.width,
                         title: appLocal(context).chat,
-                        onPressed: () {}),
+                        onPressed: widget.id == null
+                            ? null
+                            : () => context.router
+                                .push(ChatWithAiRoute(botId: widget.id!))),
                   ),
                   context.sizedBox(width: 12),
                   IconButton.outlined(
