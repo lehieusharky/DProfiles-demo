@@ -59,5 +59,6 @@ class AppRouter extends $AppRouter {
         AutoRoute(path: '/list_certificate', page: ListCertificateRoute.page),
         AutoRoute(path: '/list_experience', page: ListExperienceRoute.page),
         AutoRoute(path: '/chat_with_ai_bot', page: ChatWithAiRoute.page),
+        AutoRoute(path: '/feed_detail', page: FeedDetailRoute.page),
       ];
 }

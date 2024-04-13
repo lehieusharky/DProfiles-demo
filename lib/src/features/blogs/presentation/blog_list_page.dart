@@ -54,6 +54,7 @@ class _BlogListPageState extends State<BlogListPage>
     return Padding(
       padding: context.padding(horizontal: 20),
       child: ListView.separated(
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: blogs.length,
         itemBuilder: (_, index) => _itemBuilder(context, blogs[index]),
         separatorBuilder: (_, __) => const Divider(),
