@@ -1,6 +1,8 @@
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:dio/dio.dart';
+
 import 'app_rest_client.dart';
+import 'curl_log_interceptor.dart';
 import 'dio_interceptor.dart';
 
 class MyHttp {
@@ -16,7 +18,8 @@ class MyHttp {
       };
     }
 
-    dio.interceptors.add(DioInterceptor());
+    dio.interceptors.addAll(
+        [DioInterceptor(), CurlLoggerDioInterceptor(printOnSuccess: true)]);
 
     return dio;
   }

@@ -1,7 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_bottom_sheet.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
-import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -9,8 +7,6 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
-import 'package:photo_view/photo_view.dart';
-import 'package:photo_view/photo_view_gallery.dart';
 import 'package:tuple/tuple.dart';
 
 extension NewFeedModelExt on NewFeedModel {
