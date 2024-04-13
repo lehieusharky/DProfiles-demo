@@ -19,7 +19,7 @@ class BlocDI {
           injector.get<AutoGenerateUseCase>(), injector.get<ProfileUseCase>()),
     );
 
-    injector.registerFactory<AiCharacterBloc>(
+    injector.registerLazySingleton<AiCharacterBloc>(
       () => AiCharacterBloc(
           injector.get<AICharacterUseCase>(), injector.get<ProfileUseCase>()),
     );

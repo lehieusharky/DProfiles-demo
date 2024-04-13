@@ -4,7 +4,7 @@ import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai_character_bloc.dart';
-import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets/popular_character_bots.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets/character_bots.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets/tabbar_ai_character.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
@@ -26,6 +26,9 @@ class _AiCharacterPageState extends State<AiCharacterPage>
   void initState() {
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
+    _tabController.addListener(() {
+      _onTabChange(_tabController.index);
+    });
   }
 
   @override
@@ -56,7 +59,7 @@ class _AiCharacterPageState extends State<AiCharacterPage>
                           context.router.push(const CreateAiCharacterRoute())),
                   TabBarAICharacter(controller: _tabController),
                   SizedBox(height: context.sizeHeight(16)),
-                  const PopularCharacterBots(),
+                  const CharacterBots(),
                 ],
               ),
             ),
@@ -64,6 +67,18 @@ class _AiCharacterPageState extends State<AiCharacterPage>
         ),
       ),
     );
+  }
+
+  void _onTabChange(int index) {
+    final bloc = injector.get<AiCharacterBloc>();
+    switch (index) {
+      case 0:
+        bloc.add(const GetListPopularCharacterBot());
+        break;
+      case 1:
+        bloc.add(const GetListCharacterBot());
+        break;
+    }
   }
 
   @override
