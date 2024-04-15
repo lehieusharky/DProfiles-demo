@@ -38,7 +38,7 @@ class TabBarAICharacter extends StatelessWidget {
             indicatorColor: colorScheme(context).primary,
             tabBarIndicatorSize: TabBarIndicatorSize.tab,
           ),
-          tabs: ['Explore', 'Created'].map((e) => _buildTab(e)).toList(),
+          tabs: ['Explore', 'Following'].map((e) => _buildTab(e)).toList(),
         ),
       ),
     );

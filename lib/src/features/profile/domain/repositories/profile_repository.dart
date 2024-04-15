@@ -15,16 +15,9 @@ abstract class ProfileRepository {
 
   Future<Either<ProfileFailure, BaseResponse>> getUserExperiences();
 
-  Future<Either<ProfileFailure, BaseResponse>> addNewEducation(
-      EducationModel data);
+  Future<Either<ProfileFailure, BaseResponse>> getUserSkills();
 
-  Future<Either<ProfileFailure, BaseResponse>> addNewExperience(
-      ExperienceModel data);
-
-  Future<Either<ProfileFailure, BaseResponse>> addNewCertificate(
-      CertificateModel data);
-
-  Future<Either<ProfileFailure, BaseResponse>> updateUserInfo(UserInfoModel data);
+  Future<Either<ProfileFailure, BaseResponse>> getUserLanguage();
 }
 
 class ProfileFailure extends AppFailure {

@@ -16,6 +16,7 @@ class AvatarAICharacter extends StatefulWidget {
   final String longDescription;
   final String greeting;
   final int? id;
+  final bool isPopularBot;
 
   const AvatarAICharacter(
       {super.key,
@@ -23,7 +24,8 @@ class AvatarAICharacter extends StatefulWidget {
       required this.shortDescription,
       required this.longDescription,
       required this.greeting,
-      required this.id});
+      required this.id,
+      required this.isPopularBot});
 
   @override
   State<AvatarAICharacter> createState() => _AvatarAICharacterState();
@@ -79,8 +81,9 @@ class _AvatarAICharacterState extends State<AvatarAICharacter> {
                         title: appLocal(context).chat,
                         onPressed: widget.id == null
                             ? null
-                            : () => context.router
-                                .push(ChatWithAiRoute(botId: widget.id!))),
+                            : () => context.router.push(ChatWithAiRoute(
+                                botId: widget.id!,
+                                isPopularBot: widget.isPopularBot))),
                   ),
                   context.sizedBox(width: 12),
                   IconButton.outlined(

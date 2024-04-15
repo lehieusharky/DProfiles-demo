@@ -4,8 +4,8 @@ import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/bloc/edit_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -30,20 +30,20 @@ class _FormAboutState extends State<FormAbout> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocSelector<ProfileBloc, ProfileState, UserInfoModel?>(
+    return BlocSelector<EditProfileBloc, EditProfileState, UserInfoModel?>(
       selector: (state) {
-        if (state is ProfileGetUserInfoSuccess) {
+        if (state is EditProfileGetUserInfoSuccess) {
           _aboutController =
               TextEditingController(text: state.userInfoModel.summary);
 
           return state.userInfoModel;
         }
 
-        if (state is ProfileLoading) {
+        if (state is EditProfileLoading) {
           showLoadingDialog(context);
         }
 
-        if (state is ProfileUpdateUserInfoSuccess) {
+        if (state is EditProfileUpdateUserInfoSuccess) {
           Navigator.pop(context);
           Navigator.pop(context);
         }
@@ -112,7 +112,7 @@ class _FormAboutState extends State<FormAbout> {
     if (keyForm.currentState?.validate() ?? false) {
       userInfo = userInfo.copyWith(summary: _aboutController.text);
 
-      context.read<ProfileBloc>().add(ProfileUpdateUserInfo(userInfo));
+      context.read<EditProfileBloc>().add(EditProfileUpdateUserInfo(userInfo));
     }
   }
 }

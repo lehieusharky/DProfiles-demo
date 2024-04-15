@@ -61,7 +61,8 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
             Navigator.pop(context);
 
             context.replaceRoute(MyAICharacterRoute(
-                createdCharacterBot: state.createCharacterBotModel));
+                chatBotID: state.createCharacterBotModel.chatBotId!,
+                isPopularBot: false));
           }
 
           if (state is AICharacterError) {

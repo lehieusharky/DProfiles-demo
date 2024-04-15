@@ -37,4 +37,8 @@ class AiCharacterState with _$AiCharacterState {
 
   const factory AiCharacterState.getListPopularCharacterBotSuccess(
       List<AICharacterBotModel> bots) = GetListPopularCharacterBotSuccess;
+
+  const factory AiCharacterState.getChatBotDetailSuccess(
+          AICharacterBotModel characterBotDetail) =
+      AICharacterGetChatBotDetailSuccess;
 }

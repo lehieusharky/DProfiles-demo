@@ -32,4 +32,7 @@ class AiCharacterEvent with _$AiCharacterEvent {
   const factory AiCharacterEvent.updatePropertiesOfCharacterBot(
           PropertiesOfCharacter property, int value) =
       UpdatePropertiesOfCharacterBot;
+
+  const factory AiCharacterEvent.getChatBotDetail(int id, bool isPopularBot) =
+      AICharacterGetChatBotDetail;
 }

@@ -9,7 +9,9 @@ import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_pro
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/certificate_component.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/education_component.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/experience_component.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/language_component.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/open_to_component.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/skill_component.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/title_sub_page.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:flutter/material.dart';
@@ -37,62 +39,16 @@ class SubProfilePage extends StatelessWidget {
             ),
             const MyDivider(verticalMargin: 8),
             AboutComponent(about: userInfo.summary),
-            Padding(
-                padding: context.padding(vertical: 8), child: const Divider()),
+            const MyDivider(verticalMargin: 8),
             const ExperienceComponent(),
             const MyDivider(verticalMargin: 8),
-            const TitleSubPage(title: 'Skills', route: OpenToWorkRoute()),
-            Padding(
-              padding: context.padding(top: 8),
-              child: SizedBox(
-                height: context.sizeHeight(100),
-                child: const Column(
-                  children: [
-                    Row(
-                      children: [
-                        SkillItem(title: 'UX/UI'),
-                        SkillItem(title: 'Content'),
-                        SkillItem(title: 'Google Ads'),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SkillItem(title: 'Marketing'),
-                        SkillItem(title: 'Content'),
-                        SkillItem(title: 'Content'),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ),
+            const SkillComponent(),
+            const MyDivider(verticalMargin: 8),
             const EducationComponent(),
             const MyDivider(verticalMargin: 8),
             const CertificateComponent(),
             const MyDivider(verticalMargin: 8),
-            const TitleSubPage(title: 'Language', route: OpenToWorkRoute()),
-            Padding(
-              padding: context.padding(top: 8),
-              child: SizedBox(
-                height: context.sizeHeight(100),
-                child: const Column(
-                  children: [
-                    Row(
-                      children: [
-                        SkillItem(title: 'English'),
-                        SkillItem(title: 'Korean'),
-                        SkillItem(title: 'Vietnamese'),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        SkillItem(title: 'Chinese'),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ),
+            const LanguageComponent(),
             context.sizedBox(height: 50),
           ],
         ),

@@ -6,8 +6,15 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CharacterBots extends StatelessWidget {
+class CharacterBots extends StatefulWidget {
   const CharacterBots({Key? key}) : super(key: key);
+
+  @override
+  State<CharacterBots> createState() => _CharacterBotsState();
+}
+
+class _CharacterBotsState extends State<CharacterBots> {
+  bool isPopularBot = true;
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +22,10 @@ class CharacterBots extends StatelessWidget {
         List<AICharacterBotModel>?>(
       selector: (state) {
         if (state is GetListPopularCharacterBotSuccess) {
+          isPopularBot = true;
           return state.bots;
         } else if (state is GetListCharacterBotSuccess) {
+          isPopularBot = false;
           return state.bots;
         }
         return null;
@@ -38,7 +47,8 @@ class CharacterBots extends StatelessWidget {
           childAspectRatio: 0.7,
           mainAxisSpacing: context.sizeWidth(16),
           crossAxisCount: 2,
-          children: state.map((e) => e.toPopularBot(context)).toList(),
+          children:
+              state.map((e) => e.toPopularBot(context, isPopularBot)).toList(),
         );
       },
     );

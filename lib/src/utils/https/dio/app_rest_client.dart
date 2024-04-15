@@ -157,8 +157,33 @@ abstract class RestClient {
   @POST('/api/v1/user-skill')
   Future<BaseResponse> addNewUseSkill(@Body() Map<String, dynamic> body);
 
-  @DELETE('/api/v1/user-skill')
+  @GET('/api/v1/user-skill/{id}')
+  Future<BaseResponse> getUserSkillDetail(@Path() String id);
+
+  @DELETE('/api/v1/user-skill/{id}')
   Future<BaseResponse> deleteUserSkill(@Path() String id);
+
+  @PUT('/api/v1/user-skill/{id}')
+  Future<BaseResponse> updateUserSkill(
+      @Path() String id, @Body() Map<String, dynamic> body);
+
+  // language
+
+  @GET('/api/v1/user-language')
+  Future<BaseResponse> getUserLanguages();
+
+  @POST('/api/v1/user-language')
+  Future<BaseResponse> addNewUseLanguage(@Body() Map<String, dynamic> body);
+
+  @GET('/api/v1/user-language/{id}')
+  Future<BaseResponse> getUserLanguageDetail(@Path() String id);
+
+  @DELETE('/api/v1/user-language/{id}')
+  Future<BaseResponse> deleteUserLanguage(@Path() String id);
+
+  @PUT('/api/v1/user-language/{id}')
+  Future<BaseResponse> updateUserLanguage(
+      @Path() String id, @Body() Map<String, dynamic> body);
 
   // chat with ai
 

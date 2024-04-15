@@ -19,25 +19,26 @@ mixin _$ChatWithAiEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ChatWIthAIModel data) sendMessage,
+    required TResult Function(SendMessageToBotAIModel data) sendMessage,
     required TResult Function(int chatBotID) loadBotAI,
-    required TResult Function(int chatBotID) getChatBotDetail,
+    required TResult Function(int chatBotID, bool isPopularBot)
+        getChatBotDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ChatWIthAIModel data)? sendMessage,
+    TResult? Function(SendMessageToBotAIModel data)? sendMessage,
     TResult? Function(int chatBotID)? loadBotAI,
-    TResult? Function(int chatBotID)? getChatBotDetail,
+    TResult? Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ChatWIthAIModel data)? sendMessage,
+    TResult Function(SendMessageToBotAIModel data)? sendMessage,
     TResult Function(int chatBotID)? loadBotAI,
-    TResult Function(int chatBotID)? getChatBotDetail,
+    TResult Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -126,9 +127,10 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ChatWIthAIModel data) sendMessage,
+    required TResult Function(SendMessageToBotAIModel data) sendMessage,
     required TResult Function(int chatBotID) loadBotAI,
-    required TResult Function(int chatBotID) getChatBotDetail,
+    required TResult Function(int chatBotID, bool isPopularBot)
+        getChatBotDetail,
   }) {
     return started();
   }
@@ -137,9 +139,9 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ChatWIthAIModel data)? sendMessage,
+    TResult? Function(SendMessageToBotAIModel data)? sendMessage,
     TResult? Function(int chatBotID)? loadBotAI,
-    TResult? Function(int chatBotID)? getChatBotDetail,
+    TResult? Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
   }) {
     return started?.call();
   }
@@ -148,9 +150,9 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ChatWIthAIModel data)? sendMessage,
+    TResult Function(SendMessageToBotAIModel data)? sendMessage,
     TResult Function(int chatBotID)? loadBotAI,
-    TResult Function(int chatBotID)? getChatBotDetail,
+    TResult Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -209,9 +211,9 @@ abstract class _$$ChatWithAISendMessageImplCopyWith<$Res> {
           $Res Function(_$ChatWithAISendMessageImpl) then) =
       __$$ChatWithAISendMessageImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ChatWIthAIModel data});
+  $Res call({SendMessageToBotAIModel data});
 
-  $ChatWIthAIModelCopyWith<$Res> get data;
+  $SendMessageToBotAIModelCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -231,14 +233,14 @@ class __$$ChatWithAISendMessageImplCopyWithImpl<$Res>
       null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as ChatWIthAIModel,
+              as SendMessageToBotAIModel,
     ));
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ChatWIthAIModelCopyWith<$Res> get data {
-    return $ChatWIthAIModelCopyWith<$Res>(_value.data, (value) {
+  $SendMessageToBotAIModelCopyWith<$Res> get data {
+    return $SendMessageToBotAIModelCopyWith<$Res>(_value.data, (value) {
       return _then(_value.copyWith(data: value));
     });
   }
@@ -250,7 +252,7 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
   const _$ChatWithAISendMessageImpl(this.data);
 
   @override
-  final ChatWIthAIModel data;
+  final SendMessageToBotAIModel data;
 
   @override
   String toString() {
@@ -279,9 +281,10 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ChatWIthAIModel data) sendMessage,
+    required TResult Function(SendMessageToBotAIModel data) sendMessage,
     required TResult Function(int chatBotID) loadBotAI,
-    required TResult Function(int chatBotID) getChatBotDetail,
+    required TResult Function(int chatBotID, bool isPopularBot)
+        getChatBotDetail,
   }) {
     return sendMessage(data);
   }
@@ -290,9 +293,9 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ChatWIthAIModel data)? sendMessage,
+    TResult? Function(SendMessageToBotAIModel data)? sendMessage,
     TResult? Function(int chatBotID)? loadBotAI,
-    TResult? Function(int chatBotID)? getChatBotDetail,
+    TResult? Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
   }) {
     return sendMessage?.call(data);
   }
@@ -301,9 +304,9 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ChatWIthAIModel data)? sendMessage,
+    TResult Function(SendMessageToBotAIModel data)? sendMessage,
     TResult Function(int chatBotID)? loadBotAI,
-    TResult Function(int chatBotID)? getChatBotDetail,
+    TResult Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (sendMessage != null) {
@@ -352,10 +355,10 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
 }
 
 abstract class ChatWithAISendMessage implements ChatWithAiEvent {
-  const factory ChatWithAISendMessage(final ChatWIthAIModel data) =
+  const factory ChatWithAISendMessage(final SendMessageToBotAIModel data) =
       _$ChatWithAISendMessageImpl;
 
-  ChatWIthAIModel get data;
+  SendMessageToBotAIModel get data;
   @JsonKey(ignore: true)
   _$$ChatWithAISendMessageImplCopyWith<_$ChatWithAISendMessageImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -428,9 +431,10 @@ class _$ChatWithAILoadBotAIImpl implements ChatWithAILoadBotAI {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ChatWIthAIModel data) sendMessage,
+    required TResult Function(SendMessageToBotAIModel data) sendMessage,
     required TResult Function(int chatBotID) loadBotAI,
-    required TResult Function(int chatBotID) getChatBotDetail,
+    required TResult Function(int chatBotID, bool isPopularBot)
+        getChatBotDetail,
   }) {
     return loadBotAI(chatBotID);
   }
@@ -439,9 +443,9 @@ class _$ChatWithAILoadBotAIImpl implements ChatWithAILoadBotAI {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ChatWIthAIModel data)? sendMessage,
+    TResult? Function(SendMessageToBotAIModel data)? sendMessage,
     TResult? Function(int chatBotID)? loadBotAI,
-    TResult? Function(int chatBotID)? getChatBotDetail,
+    TResult? Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
   }) {
     return loadBotAI?.call(chatBotID);
   }
@@ -450,9 +454,9 @@ class _$ChatWithAILoadBotAIImpl implements ChatWithAILoadBotAI {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ChatWIthAIModel data)? sendMessage,
+    TResult Function(SendMessageToBotAIModel data)? sendMessage,
     TResult Function(int chatBotID)? loadBotAI,
-    TResult Function(int chatBotID)? getChatBotDetail,
+    TResult Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (loadBotAI != null) {
@@ -517,7 +521,7 @@ abstract class _$$ChatWithAIGetChatBotDetailImplCopyWith<$Res> {
           $Res Function(_$ChatWithAIGetChatBotDetailImpl) then) =
       __$$ChatWithAIGetChatBotDetailImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int chatBotID});
+  $Res call({int chatBotID, bool isPopularBot});
 }
 
 /// @nodoc
@@ -534,12 +538,17 @@ class __$$ChatWithAIGetChatBotDetailImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? chatBotID = null,
+    Object? isPopularBot = null,
   }) {
     return _then(_$ChatWithAIGetChatBotDetailImpl(
       null == chatBotID
           ? _value.chatBotID
           : chatBotID // ignore: cast_nullable_to_non_nullable
               as int,
+      null == isPopularBot
+          ? _value.isPopularBot
+          : isPopularBot // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -547,14 +556,16 @@ class __$$ChatWithAIGetChatBotDetailImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ChatWithAIGetChatBotDetailImpl implements ChatWithAIGetChatBotDetail {
-  const _$ChatWithAIGetChatBotDetailImpl(this.chatBotID);
+  const _$ChatWithAIGetChatBotDetailImpl(this.chatBotID, this.isPopularBot);
 
   @override
   final int chatBotID;
+  @override
+  final bool isPopularBot;
 
   @override
   String toString() {
-    return 'ChatWithAiEvent.getChatBotDetail(chatBotID: $chatBotID)';
+    return 'ChatWithAiEvent.getChatBotDetail(chatBotID: $chatBotID, isPopularBot: $isPopularBot)';
   }
 
   @override
@@ -563,11 +574,13 @@ class _$ChatWithAIGetChatBotDetailImpl implements ChatWithAIGetChatBotDetail {
         (other.runtimeType == runtimeType &&
             other is _$ChatWithAIGetChatBotDetailImpl &&
             (identical(other.chatBotID, chatBotID) ||
-                other.chatBotID == chatBotID));
+                other.chatBotID == chatBotID) &&
+            (identical(other.isPopularBot, isPopularBot) ||
+                other.isPopularBot == isPopularBot));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, chatBotID);
+  int get hashCode => Object.hash(runtimeType, chatBotID, isPopularBot);
 
   @JsonKey(ignore: true)
   @override
@@ -580,35 +593,36 @@ class _$ChatWithAIGetChatBotDetailImpl implements ChatWithAIGetChatBotDetail {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ChatWIthAIModel data) sendMessage,
+    required TResult Function(SendMessageToBotAIModel data) sendMessage,
     required TResult Function(int chatBotID) loadBotAI,
-    required TResult Function(int chatBotID) getChatBotDetail,
+    required TResult Function(int chatBotID, bool isPopularBot)
+        getChatBotDetail,
   }) {
-    return getChatBotDetail(chatBotID);
+    return getChatBotDetail(chatBotID, isPopularBot);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ChatWIthAIModel data)? sendMessage,
+    TResult? Function(SendMessageToBotAIModel data)? sendMessage,
     TResult? Function(int chatBotID)? loadBotAI,
-    TResult? Function(int chatBotID)? getChatBotDetail,
+    TResult? Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
   }) {
-    return getChatBotDetail?.call(chatBotID);
+    return getChatBotDetail?.call(chatBotID, isPopularBot);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ChatWIthAIModel data)? sendMessage,
+    TResult Function(SendMessageToBotAIModel data)? sendMessage,
     TResult Function(int chatBotID)? loadBotAI,
-    TResult Function(int chatBotID)? getChatBotDetail,
+    TResult Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getChatBotDetail != null) {
-      return getChatBotDetail(chatBotID);
+      return getChatBotDetail(chatBotID, isPopularBot);
     }
     return orElse();
   }
@@ -653,10 +667,12 @@ class _$ChatWithAIGetChatBotDetailImpl implements ChatWithAIGetChatBotDetail {
 }
 
 abstract class ChatWithAIGetChatBotDetail implements ChatWithAiEvent {
-  const factory ChatWithAIGetChatBotDetail(final int chatBotID) =
+  const factory ChatWithAIGetChatBotDetail(
+          final int chatBotID, final bool isPopularBot) =
       _$ChatWithAIGetChatBotDetailImpl;
 
   int get chatBotID;
+  bool get isPopularBot;
   @JsonKey(ignore: true)
   _$$ChatWithAIGetChatBotDetailImplCopyWith<_$ChatWithAIGetChatBotDetailImpl>
       get copyWith => throw _privateConstructorUsedError;

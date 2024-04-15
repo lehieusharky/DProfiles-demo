@@ -31,6 +31,7 @@ mixin _$AiCharacterEvent {
     required TResult Function() getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +48,7 @@ mixin _$AiCharacterEvent {
     TResult? Function()? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +65,7 @@ mixin _$AiCharacterEvent {
     TResult Function()? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -86,6 +89,8 @@ mixin _$AiCharacterEvent {
         getListPopularCharacterBot,
     required TResult Function(UpdatePropertiesOfCharacterBot value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -105,6 +110,7 @@ mixin _$AiCharacterEvent {
         getListPopularCharacterBot,
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -123,6 +129,7 @@ mixin _$AiCharacterEvent {
         getListPopularCharacterBot,
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -197,6 +204,7 @@ class _$StartedImpl implements _Started {
     required TResult Function() getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
   }) {
     return started();
   }
@@ -216,6 +224,7 @@ class _$StartedImpl implements _Started {
     TResult? Function()? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
   }) {
     return started?.call();
   }
@@ -235,6 +244,7 @@ class _$StartedImpl implements _Started {
     TResult Function()? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -264,6 +274,8 @@ class _$StartedImpl implements _Started {
         getListPopularCharacterBot,
     required TResult Function(UpdatePropertiesOfCharacterBot value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
   }) {
     return started(this);
   }
@@ -286,6 +298,7 @@ class _$StartedImpl implements _Started {
         getListPopularCharacterBot,
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
   }) {
     return started?.call(this);
   }
@@ -307,6 +320,7 @@ class _$StartedImpl implements _Started {
         getListPopularCharacterBot,
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -403,6 +417,7 @@ class _$AICharacterChangeCreationStepImpl
     required TResult Function() getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
   }) {
     return changeCreationStep(isNext);
   }
@@ -422,6 +437,7 @@ class _$AICharacterChangeCreationStepImpl
     TResult? Function()? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
   }) {
     return changeCreationStep?.call(isNext);
   }
@@ -441,6 +457,7 @@ class _$AICharacterChangeCreationStepImpl
     TResult Function()? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (changeCreationStep != null) {
@@ -470,6 +487,8 @@ class _$AICharacterChangeCreationStepImpl
         getListPopularCharacterBot,
     required TResult Function(UpdatePropertiesOfCharacterBot value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
   }) {
     return changeCreationStep(this);
   }
@@ -492,6 +511,7 @@ class _$AICharacterChangeCreationStepImpl
         getListPopularCharacterBot,
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
   }) {
     return changeCreationStep?.call(this);
   }
@@ -513,6 +533,7 @@ class _$AICharacterChangeCreationStepImpl
         getListPopularCharacterBot,
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (changeCreationStep != null) {
@@ -587,6 +608,7 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     required TResult Function() getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
   }) {
     return getUserInfo();
   }
@@ -606,6 +628,7 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     TResult? Function()? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
   }) {
     return getUserInfo?.call();
   }
@@ -625,6 +648,7 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     TResult Function()? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -654,6 +678,8 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
         getListPopularCharacterBot,
     required TResult Function(UpdatePropertiesOfCharacterBot value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
   }) {
     return getUserInfo(this);
   }
@@ -676,6 +702,7 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
         getListPopularCharacterBot,
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
   }) {
     return getUserInfo?.call(this);
   }
@@ -697,6 +724,7 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
         getListPopularCharacterBot,
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -800,6 +828,7 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     required TResult Function() getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
   }) {
     return addBasicInfoOfCharacterBot(name, summary);
   }
@@ -819,6 +848,7 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     TResult? Function()? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
   }) {
     return addBasicInfoOfCharacterBot?.call(name, summary);
   }
@@ -838,6 +868,7 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     TResult Function()? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (addBasicInfoOfCharacterBot != null) {
@@ -867,6 +898,8 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
         getListPopularCharacterBot,
     required TResult Function(UpdatePropertiesOfCharacterBot value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
   }) {
     return addBasicInfoOfCharacterBot(this);
   }
@@ -889,6 +922,7 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
         getListPopularCharacterBot,
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
   }) {
     return addBasicInfoOfCharacterBot?.call(this);
   }
@@ -910,6 +944,7 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
         getListPopularCharacterBot,
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (addBasicInfoOfCharacterBot != null) {
@@ -987,6 +1022,7 @@ class _$AICharacterGetUserCertificatesImpl
     required TResult Function() getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
   }) {
     return getUserCertificates();
   }
@@ -1006,6 +1042,7 @@ class _$AICharacterGetUserCertificatesImpl
     TResult? Function()? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
   }) {
     return getUserCertificates?.call();
   }
@@ -1025,6 +1062,7 @@ class _$AICharacterGetUserCertificatesImpl
     TResult Function()? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -1054,6 +1092,8 @@ class _$AICharacterGetUserCertificatesImpl
         getListPopularCharacterBot,
     required TResult Function(UpdatePropertiesOfCharacterBot value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
   }) {
     return getUserCertificates(this);
   }
@@ -1076,6 +1116,7 @@ class _$AICharacterGetUserCertificatesImpl
         getListPopularCharacterBot,
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
   }) {
     return getUserCertificates?.call(this);
   }
@@ -1097,6 +1138,7 @@ class _$AICharacterGetUserCertificatesImpl
         getListPopularCharacterBot,
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -1167,6 +1209,7 @@ class _$AICharacterGetUserEducationsImpl
     required TResult Function() getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
   }) {
     return getUserEducations();
   }
@@ -1186,6 +1229,7 @@ class _$AICharacterGetUserEducationsImpl
     TResult? Function()? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
   }) {
     return getUserEducations?.call();
   }
@@ -1205,6 +1249,7 @@ class _$AICharacterGetUserEducationsImpl
     TResult Function()? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -1234,6 +1279,8 @@ class _$AICharacterGetUserEducationsImpl
         getListPopularCharacterBot,
     required TResult Function(UpdatePropertiesOfCharacterBot value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
   }) {
     return getUserEducations(this);
   }
@@ -1256,6 +1303,7 @@ class _$AICharacterGetUserEducationsImpl
         getListPopularCharacterBot,
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
   }) {
     return getUserEducations?.call(this);
   }
@@ -1277,6 +1325,7 @@ class _$AICharacterGetUserEducationsImpl
         getListPopularCharacterBot,
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -1347,6 +1396,7 @@ class _$AICharacterGetUserExperiencesImpl
     required TResult Function() getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
   }) {
     return getUserExperiences();
   }
@@ -1366,6 +1416,7 @@ class _$AICharacterGetUserExperiencesImpl
     TResult? Function()? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
   }) {
     return getUserExperiences?.call();
   }
@@ -1385,6 +1436,7 @@ class _$AICharacterGetUserExperiencesImpl
     TResult Function()? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -1414,6 +1466,8 @@ class _$AICharacterGetUserExperiencesImpl
         getListPopularCharacterBot,
     required TResult Function(UpdatePropertiesOfCharacterBot value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
   }) {
     return getUserExperiences(this);
   }
@@ -1436,6 +1490,7 @@ class _$AICharacterGetUserExperiencesImpl
         getListPopularCharacterBot,
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
   }) {
     return getUserExperiences?.call(this);
   }
@@ -1457,6 +1512,7 @@ class _$AICharacterGetUserExperiencesImpl
         getListPopularCharacterBot,
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -1523,6 +1579,7 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     required TResult Function() getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
   }) {
     return generateCharacterBot();
   }
@@ -1542,6 +1599,7 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     TResult? Function()? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
   }) {
     return generateCharacterBot?.call();
   }
@@ -1561,6 +1619,7 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     TResult Function()? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (generateCharacterBot != null) {
@@ -1590,6 +1649,8 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
         getListPopularCharacterBot,
     required TResult Function(UpdatePropertiesOfCharacterBot value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
   }) {
     return generateCharacterBot(this);
   }
@@ -1612,6 +1673,7 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
         getListPopularCharacterBot,
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
   }) {
     return generateCharacterBot?.call(this);
   }
@@ -1633,6 +1695,7 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
         getListPopularCharacterBot,
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (generateCharacterBot != null) {
@@ -1698,6 +1761,7 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     required TResult Function() getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
   }) {
     return getListCharacterBot();
   }
@@ -1717,6 +1781,7 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     TResult? Function()? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
   }) {
     return getListCharacterBot?.call();
   }
@@ -1736,6 +1801,7 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     TResult Function()? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getListCharacterBot != null) {
@@ -1765,6 +1831,8 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
         getListPopularCharacterBot,
     required TResult Function(UpdatePropertiesOfCharacterBot value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
   }) {
     return getListCharacterBot(this);
   }
@@ -1787,6 +1855,7 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
         getListPopularCharacterBot,
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
   }) {
     return getListCharacterBot?.call(this);
   }
@@ -1808,6 +1877,7 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
         getListPopularCharacterBot,
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getListCharacterBot != null) {
@@ -1876,6 +1946,7 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
     required TResult Function() getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
   }) {
     return getListPopularCharacterBot();
   }
@@ -1895,6 +1966,7 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
     TResult? Function()? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
   }) {
     return getListPopularCharacterBot?.call();
   }
@@ -1914,6 +1986,7 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
     TResult Function()? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getListPopularCharacterBot != null) {
@@ -1943,6 +2016,8 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
         getListPopularCharacterBot,
     required TResult Function(UpdatePropertiesOfCharacterBot value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
   }) {
     return getListPopularCharacterBot(this);
   }
@@ -1965,6 +2040,7 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
         getListPopularCharacterBot,
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
   }) {
     return getListPopularCharacterBot?.call(this);
   }
@@ -1986,6 +2062,7 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
         getListPopularCharacterBot,
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (getListPopularCharacterBot != null) {
@@ -2091,6 +2168,7 @@ class _$UpdatePropertiesOfCharacterBotImpl
     required TResult Function() getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
   }) {
     return updatePropertiesOfCharacterBot(property, value);
   }
@@ -2110,6 +2188,7 @@ class _$UpdatePropertiesOfCharacterBotImpl
     TResult? Function()? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
   }) {
     return updatePropertiesOfCharacterBot?.call(property, value);
   }
@@ -2129,6 +2208,7 @@ class _$UpdatePropertiesOfCharacterBotImpl
     TResult Function()? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (updatePropertiesOfCharacterBot != null) {
@@ -2158,6 +2238,8 @@ class _$UpdatePropertiesOfCharacterBotImpl
         getListPopularCharacterBot,
     required TResult Function(UpdatePropertiesOfCharacterBot value)
         updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
   }) {
     return updatePropertiesOfCharacterBot(this);
   }
@@ -2180,6 +2262,7 @@ class _$UpdatePropertiesOfCharacterBotImpl
         getListPopularCharacterBot,
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
   }) {
     return updatePropertiesOfCharacterBot?.call(this);
   }
@@ -2201,6 +2284,7 @@ class _$UpdatePropertiesOfCharacterBotImpl
         getListPopularCharacterBot,
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
     required TResult orElse(),
   }) {
     if (updatePropertiesOfCharacterBot != null) {
@@ -2220,6 +2304,234 @@ abstract class UpdatePropertiesOfCharacterBot implements AiCharacterEvent {
   @JsonKey(ignore: true)
   _$$UpdatePropertiesOfCharacterBotImplCopyWith<
           _$UpdatePropertiesOfCharacterBotImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AICharacterGetChatBotDetailImplCopyWith<$Res> {
+  factory _$$AICharacterGetChatBotDetailImplCopyWith(
+          _$AICharacterGetChatBotDetailImpl value,
+          $Res Function(_$AICharacterGetChatBotDetailImpl) then) =
+      __$$AICharacterGetChatBotDetailImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id, bool isPopularBot});
+}
+
+/// @nodoc
+class __$$AICharacterGetChatBotDetailImplCopyWithImpl<$Res>
+    extends _$AiCharacterEventCopyWithImpl<$Res,
+        _$AICharacterGetChatBotDetailImpl>
+    implements _$$AICharacterGetChatBotDetailImplCopyWith<$Res> {
+  __$$AICharacterGetChatBotDetailImplCopyWithImpl(
+      _$AICharacterGetChatBotDetailImpl _value,
+      $Res Function(_$AICharacterGetChatBotDetailImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? isPopularBot = null,
+  }) {
+    return _then(_$AICharacterGetChatBotDetailImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == isPopularBot
+          ? _value.isPopularBot
+          : isPopularBot // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AICharacterGetChatBotDetailImpl implements AICharacterGetChatBotDetail {
+  const _$AICharacterGetChatBotDetailImpl(this.id, this.isPopularBot);
+
+  @override
+  final int id;
+  @override
+  final bool isPopularBot;
+
+  @override
+  String toString() {
+    return 'AiCharacterEvent.getChatBotDetail(id: $id, isPopularBot: $isPopularBot)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterGetChatBotDetailImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.isPopularBot, isPopularBot) ||
+                other.isPopularBot == isPopularBot));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id, isPopularBot);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AICharacterGetChatBotDetailImplCopyWith<_$AICharacterGetChatBotDetailImpl>
+      get copyWith => __$$AICharacterGetChatBotDetailImplCopyWithImpl<
+          _$AICharacterGetChatBotDetailImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function() getUserInfo,
+    required TResult Function(String name, String summary)
+        addBasicInfoOfCharacterBot,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserExperiences,
+    required TResult Function() generateCharacterBot,
+    required TResult Function() getListCharacterBot,
+    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+  }) {
+    return getChatBotDetail(id, isPopularBot);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function()? getUserInfo,
+    TResult? Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? generateCharacterBot,
+    TResult? Function()? getListCharacterBot,
+    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+  }) {
+    return getChatBotDetail?.call(id, isPopularBot);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function()? getUserInfo,
+    TResult Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserExperiences,
+    TResult Function()? generateCharacterBot,
+    TResult Function()? getListCharacterBot,
+    TResult Function()? getListPopularCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    required TResult orElse(),
+  }) {
+    if (getChatBotDetail != null) {
+      return getChatBotDetail(id, isPopularBot);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(AICharacterChangeCreationStep value)
+        changeCreationStep,
+    required TResult Function(AICharacterGetUserInfo value) getUserInfo,
+    required TResult Function(AddBasicInfoOfCharacterBot value)
+        addBasicInfoOfCharacterBot,
+    required TResult Function(AICharacterGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(AICharacterGetUserEducations value)
+        getUserEducations,
+    required TResult Function(AICharacterGetUserExperiences value)
+        getUserExperiences,
+    required TResult Function(GenerateCharacterBot value) generateCharacterBot,
+    required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(GetListPopularCharacterBot value)
+        getListPopularCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
+  }) {
+    return getChatBotDetail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult? Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult? Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult? Function(AICharacterGetUserCertificates value)?
+        getUserCertificates,
+    TResult? Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+  }) {
+    return getChatBotDetail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult Function(AICharacterGetUserCertificates value)? getUserCertificates,
+    TResult Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    required TResult orElse(),
+  }) {
+    if (getChatBotDetail != null) {
+      return getChatBotDetail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterGetChatBotDetail implements AiCharacterEvent {
+  const factory AICharacterGetChatBotDetail(
+          final int id, final bool isPopularBot) =
+      _$AICharacterGetChatBotDetailImpl;
+
+  int get id;
+  bool get isPopularBot;
+  @JsonKey(ignore: true)
+  _$$AICharacterGetChatBotDetailImplCopyWith<_$AICharacterGetChatBotDetailImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2245,6 +2557,8 @@ mixin _$AiCharacterState {
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2267,6 +2581,8 @@ mixin _$AiCharacterState {
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2288,6 +2604,8 @@ mixin _$AiCharacterState {
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -2313,6 +2631,8 @@ mixin _$AiCharacterState {
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2337,6 +2657,8 @@ mixin _$AiCharacterState {
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2361,6 +2683,8 @@ mixin _$AiCharacterState {
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -2440,6 +2764,8 @@ class _$InitialImpl implements _Initial {
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) {
     return initial();
   }
@@ -2465,6 +2791,8 @@ class _$InitialImpl implements _Initial {
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) {
     return initial?.call();
   }
@@ -2489,6 +2817,8 @@ class _$InitialImpl implements _Initial {
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -2520,6 +2850,8 @@ class _$InitialImpl implements _Initial {
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) {
     return initial(this);
   }
@@ -2547,6 +2879,8 @@ class _$InitialImpl implements _Initial {
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) {
     return initial?.call(this);
   }
@@ -2574,6 +2908,8 @@ class _$InitialImpl implements _Initial {
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -2643,6 +2979,8 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) {
     return loading();
   }
@@ -2668,6 +3006,8 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) {
     return loading?.call();
   }
@@ -2692,6 +3032,8 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -2723,6 +3065,8 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) {
     return loading(this);
   }
@@ -2750,6 +3094,8 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) {
     return loading?.call(this);
   }
@@ -2777,6 +3123,8 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -2890,6 +3238,8 @@ class _$AICharacterErrorImpl implements AICharacterError {
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) {
     return error(message, title);
   }
@@ -2915,6 +3265,8 @@ class _$AICharacterErrorImpl implements AICharacterError {
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -2939,6 +3291,8 @@ class _$AICharacterErrorImpl implements AICharacterError {
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -2970,6 +3324,8 @@ class _$AICharacterErrorImpl implements AICharacterError {
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) {
     return error(this);
   }
@@ -2997,6 +3353,8 @@ class _$AICharacterErrorImpl implements AICharacterError {
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) {
     return error?.call(this);
   }
@@ -3024,6 +3382,8 @@ class _$AICharacterErrorImpl implements AICharacterError {
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -3134,6 +3494,8 @@ class _$AICharacterChangeCreationStepSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) {
     return changeCreationStepSuccess(currentStep);
   }
@@ -3159,6 +3521,8 @@ class _$AICharacterChangeCreationStepSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) {
     return changeCreationStepSuccess?.call(currentStep);
   }
@@ -3183,6 +3547,8 @@ class _$AICharacterChangeCreationStepSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -3214,6 +3580,8 @@ class _$AICharacterChangeCreationStepSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) {
     return changeCreationStepSuccess(this);
   }
@@ -3241,6 +3609,8 @@ class _$AICharacterChangeCreationStepSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) {
     return changeCreationStepSuccess?.call(this);
   }
@@ -3268,6 +3638,8 @@ class _$AICharacterChangeCreationStepSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -3350,6 +3722,8 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) {
     return addBasicInfoOfCharacterBotSuccess();
   }
@@ -3375,6 +3749,8 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) {
     return addBasicInfoOfCharacterBotSuccess?.call();
   }
@@ -3399,6 +3775,8 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (addBasicInfoOfCharacterBotSuccess != null) {
@@ -3430,6 +3808,8 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) {
     return addBasicInfoOfCharacterBotSuccess(this);
   }
@@ -3457,6 +3837,8 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) {
     return addBasicInfoOfCharacterBotSuccess?.call(this);
   }
@@ -3484,6 +3866,8 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (addBasicInfoOfCharacterBotSuccess != null) {
@@ -3597,6 +3981,8 @@ class _$AICharacterGetUserInfoSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) {
     return getUserInfo(userInfoModel);
   }
@@ -3622,6 +4008,8 @@ class _$AICharacterGetUserInfoSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) {
     return getUserInfo?.call(userInfoModel);
   }
@@ -3646,6 +4034,8 @@ class _$AICharacterGetUserInfoSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -3677,6 +4067,8 @@ class _$AICharacterGetUserInfoSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) {
     return getUserInfo(this);
   }
@@ -3704,6 +4096,8 @@ class _$AICharacterGetUserInfoSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) {
     return getUserInfo?.call(this);
   }
@@ -3731,6 +4125,8 @@ class _$AICharacterGetUserInfoSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -3848,6 +4244,8 @@ class _$AICharacterGetUserCertificatesSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) {
     return getUserCertificatesSuccess(certificates);
   }
@@ -3873,6 +4271,8 @@ class _$AICharacterGetUserCertificatesSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) {
     return getUserCertificatesSuccess?.call(certificates);
   }
@@ -3897,6 +4297,8 @@ class _$AICharacterGetUserCertificatesSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -3928,6 +4330,8 @@ class _$AICharacterGetUserCertificatesSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) {
     return getUserCertificatesSuccess(this);
   }
@@ -3955,6 +4359,8 @@ class _$AICharacterGetUserCertificatesSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) {
     return getUserCertificatesSuccess?.call(this);
   }
@@ -3982,6 +4388,8 @@ class _$AICharacterGetUserCertificatesSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -4101,6 +4509,8 @@ class _$AICharacterGetUserEducationsSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) {
     return getUserEducationsSuccess(educations);
   }
@@ -4126,6 +4536,8 @@ class _$AICharacterGetUserEducationsSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) {
     return getUserEducationsSuccess?.call(educations);
   }
@@ -4150,6 +4562,8 @@ class _$AICharacterGetUserEducationsSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -4181,6 +4595,8 @@ class _$AICharacterGetUserEducationsSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) {
     return getUserEducationsSuccess(this);
   }
@@ -4208,6 +4624,8 @@ class _$AICharacterGetUserEducationsSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) {
     return getUserEducationsSuccess?.call(this);
   }
@@ -4235,6 +4653,8 @@ class _$AICharacterGetUserEducationsSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -4353,6 +4773,8 @@ class _$AICharacterGetUserExperiencesSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) {
     return getUserExperiencesSuccess(experiences);
   }
@@ -4378,6 +4800,8 @@ class _$AICharacterGetUserExperiencesSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) {
     return getUserExperiencesSuccess?.call(experiences);
   }
@@ -4402,6 +4826,8 @@ class _$AICharacterGetUserExperiencesSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -4433,6 +4859,8 @@ class _$AICharacterGetUserExperiencesSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) {
     return getUserExperiencesSuccess(this);
   }
@@ -4460,6 +4888,8 @@ class _$AICharacterGetUserExperiencesSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) {
     return getUserExperiencesSuccess?.call(this);
   }
@@ -4487,6 +4917,8 @@ class _$AICharacterGetUserExperiencesSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -4608,6 +5040,8 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) {
     return generateCharacterBotSuccess(createCharacterBotModel);
   }
@@ -4633,6 +5067,8 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) {
     return generateCharacterBotSuccess?.call(createCharacterBotModel);
   }
@@ -4657,6 +5093,8 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (generateCharacterBotSuccess != null) {
@@ -4688,6 +5126,8 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) {
     return generateCharacterBotSuccess(this);
   }
@@ -4715,6 +5155,8 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) {
     return generateCharacterBotSuccess?.call(this);
   }
@@ -4742,6 +5184,8 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (generateCharacterBotSuccess != null) {
@@ -4855,6 +5299,8 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) {
     return getListCharacterBotSuccess(bots);
   }
@@ -4880,6 +5326,8 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) {
     return getListCharacterBotSuccess?.call(bots);
   }
@@ -4904,6 +5352,8 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (getListCharacterBotSuccess != null) {
@@ -4935,6 +5385,8 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) {
     return getListCharacterBotSuccess(this);
   }
@@ -4962,6 +5414,8 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) {
     return getListCharacterBotSuccess?.call(this);
   }
@@ -4989,6 +5443,8 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (getListCharacterBotSuccess != null) {
@@ -5104,6 +5560,8 @@ class _$GetListPopularCharacterBotSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(List<AICharacterBotModel> bots)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
   }) {
     return getListPopularCharacterBotSuccess(bots);
   }
@@ -5129,6 +5587,8 @@ class _$GetListPopularCharacterBotSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
   }) {
     return getListPopularCharacterBotSuccess?.call(bots);
   }
@@ -5153,6 +5613,8 @@ class _$GetListPopularCharacterBotSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(List<AICharacterBotModel> bots)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (getListPopularCharacterBotSuccess != null) {
@@ -5184,6 +5646,8 @@ class _$GetListPopularCharacterBotSuccessImpl
         getListCharacterBotSuccess,
     required TResult Function(GetListPopularCharacterBotSuccess value)
         getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
   }) {
     return getListPopularCharacterBotSuccess(this);
   }
@@ -5211,6 +5675,8 @@ class _$GetListPopularCharacterBotSuccessImpl
         getListCharacterBotSuccess,
     TResult? Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
   }) {
     return getListPopularCharacterBotSuccess?.call(this);
   }
@@ -5238,6 +5704,8 @@ class _$GetListPopularCharacterBotSuccessImpl
         getListCharacterBotSuccess,
     TResult Function(GetListPopularCharacterBotSuccess value)?
         getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
     required TResult orElse(),
   }) {
     if (getListPopularCharacterBotSuccess != null) {
@@ -5256,5 +5724,272 @@ abstract class GetListPopularCharacterBotSuccess implements AiCharacterState {
   @JsonKey(ignore: true)
   _$$GetListPopularCharacterBotSuccessImplCopyWith<
           _$GetListPopularCharacterBotSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AICharacterGetChatBotDetailSuccessImplCopyWith<$Res> {
+  factory _$$AICharacterGetChatBotDetailSuccessImplCopyWith(
+          _$AICharacterGetChatBotDetailSuccessImpl value,
+          $Res Function(_$AICharacterGetChatBotDetailSuccessImpl) then) =
+      __$$AICharacterGetChatBotDetailSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AICharacterBotModel characterBotDetail});
+
+  $AICharacterBotModelCopyWith<$Res> get characterBotDetail;
+}
+
+/// @nodoc
+class __$$AICharacterGetChatBotDetailSuccessImplCopyWithImpl<$Res>
+    extends _$AiCharacterStateCopyWithImpl<$Res,
+        _$AICharacterGetChatBotDetailSuccessImpl>
+    implements _$$AICharacterGetChatBotDetailSuccessImplCopyWith<$Res> {
+  __$$AICharacterGetChatBotDetailSuccessImplCopyWithImpl(
+      _$AICharacterGetChatBotDetailSuccessImpl _value,
+      $Res Function(_$AICharacterGetChatBotDetailSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? characterBotDetail = null,
+  }) {
+    return _then(_$AICharacterGetChatBotDetailSuccessImpl(
+      null == characterBotDetail
+          ? _value.characterBotDetail
+          : characterBotDetail // ignore: cast_nullable_to_non_nullable
+              as AICharacterBotModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AICharacterBotModelCopyWith<$Res> get characterBotDetail {
+    return $AICharacterBotModelCopyWith<$Res>(_value.characterBotDetail,
+        (value) {
+      return _then(_value.copyWith(characterBotDetail: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AICharacterGetChatBotDetailSuccessImpl
+    implements AICharacterGetChatBotDetailSuccess {
+  const _$AICharacterGetChatBotDetailSuccessImpl(this.characterBotDetail);
+
+  @override
+  final AICharacterBotModel characterBotDetail;
+
+  @override
+  String toString() {
+    return 'AiCharacterState.getChatBotDetailSuccess(characterBotDetail: $characterBotDetail)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterGetChatBotDetailSuccessImpl &&
+            (identical(other.characterBotDetail, characterBotDetail) ||
+                other.characterBotDetail == characterBotDetail));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, characterBotDetail);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AICharacterGetChatBotDetailSuccessImplCopyWith<
+          _$AICharacterGetChatBotDetailSuccessImpl>
+      get copyWith => __$$AICharacterGetChatBotDetailSuccessImplCopyWithImpl<
+          _$AICharacterGetChatBotDetailSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function() addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfo,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(CreatedCharacterBotModel createCharacterBotModel)
+        generateCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
+  }) {
+    return getChatBotDetailSuccess(characterBotDetail);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+  }) {
+    return getChatBotDetailSuccess?.call(characterBotDetail);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    required TResult orElse(),
+  }) {
+    if (getChatBotDetailSuccess != null) {
+      return getChatBotDetailSuccess(characterBotDetail);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AICharacterLoading value) loading,
+    required TResult Function(AICharacterError value) error,
+    required TResult Function(AICharacterChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(AddBasicInfoOfCharacterBotSuccess value)
+        addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(AICharacterGetUserInfoSuccess value) getUserInfo,
+    required TResult Function(AICharacterGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(AICharacterGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(AICharacterGetUserExperiencesSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(GenerateCharacterBotSuccess value)
+        generateCharacterBotSuccess,
+    required TResult Function(GetListCharacterBotSuccess value)
+        getListCharacterBotSuccess,
+    required TResult Function(GetListPopularCharacterBotSuccess value)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
+  }) {
+    return getChatBotDetailSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AICharacterLoading value)? loading,
+    TResult? Function(AICharacterError value)? error,
+    TResult? Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult? Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult? Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult? Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+  }) {
+    return getChatBotDetailSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AICharacterLoading value)? loading,
+    TResult Function(AICharacterError value)? error,
+    TResult Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    required TResult orElse(),
+  }) {
+    if (getChatBotDetailSuccess != null) {
+      return getChatBotDetailSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterGetChatBotDetailSuccess implements AiCharacterState {
+  const factory AICharacterGetChatBotDetailSuccess(
+          final AICharacterBotModel characterBotDetail) =
+      _$AICharacterGetChatBotDetailSuccessImpl;
+
+  AICharacterBotModel get characterBotDetail;
+  @JsonKey(ignore: true)
+  _$$AICharacterGetChatBotDetailSuccessImplCopyWith<
+          _$AICharacterGetChatBotDetailSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

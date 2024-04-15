@@ -1,5 +1,5 @@
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/datasources/chat_with_ai_datasource.dart';
-import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/chat_with_ai_model.dart';
+import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/send_message_to_bot_ai_model.dart';
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:demo_dprofiles/src/utils/https/dio/http_util.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
@@ -9,7 +9,7 @@ import 'package:injectable/injectable.dart';
 @Injectable(as: ChatWithAIDataSource)
 class ChatWithAIDataSourceImpl implements ChatWithAIDataSource {
   @override
-  Future<String> chatWithAI(ChatWIthAIModel data) async {
+  Future<String> chatWithAI(SendMessageToBotAIModel data) async {
     try {
       final baseResponse = await MyHttp.rl().chatWithBotAI(data.toJson());
       return baseResponse.response as String;
@@ -34,9 +34,18 @@ class ChatWithAIDataSourceImpl implements ChatWithAIDataSource {
   }
 
   @override
-  Future<BaseResponse> getChatBotDetail(int chatBotID, ) async {
+  Future<BaseResponse> getChatBotDetail(
+      int chatBotID, bool isPopularBot) async {
     try {
-      final baseResponse = await MyHttp.rl().getCharacterBotDetail(chatBotID);
+      late BaseResponse baseResponse;
+
+      if (isPopularBot) {
+        baseResponse =
+            await MyHttp.rl().getPopularCharacterBotDetail(chatBotID);
+      } else {
+        baseResponse = await MyHttp.rl().getCharacterBotDetail(chatBotID);
+      }
+
       return baseResponse;
     } on DioException catch (e) {
       rethrow;

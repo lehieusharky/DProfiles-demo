@@ -1,21 +1,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'chat_with_ai_model.dart';
+part of 'send_message_to_bot_ai_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ChatWIthAIModelImpl _$$ChatWIthAIModelImplFromJson(
+_$SendMessageToBotAIModelImpl _$$SendMessageToBotAIModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$ChatWIthAIModelImpl(
+    _$SendMessageToBotAIModelImpl(
       sessionId: json['session_id'] as int?,
       chatBotId: json['chat_bot_id'] as int?,
       message: json['message'] as String?,
     );
 
-Map<String, dynamic> _$$ChatWIthAIModelImplToJson(
-        _$ChatWIthAIModelImpl instance) =>
+Map<String, dynamic> _$$SendMessageToBotAIModelImplToJson(
+        _$SendMessageToBotAIModelImpl instance) =>
     <String, dynamic>{
       'session_id': instance.sessionId,
       'chat_bot_id': instance.chatBotId,

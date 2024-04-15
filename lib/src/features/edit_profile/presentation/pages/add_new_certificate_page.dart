@@ -4,8 +4,8 @@ import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/bloc/edit_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
@@ -37,14 +37,14 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => injector.get<ProfileBloc>(),
-      child: BlocConsumer<ProfileBloc, ProfileState>(
+      create: (context) => injector.get<EditProfileBloc>(),
+      child: BlocConsumer<EditProfileBloc, EditProfileState>(
         listener: (context, state) {
-          if (state is ProfileLoading) {
+          if (state is EditProfileLoading) {
             showLoadingDialog(context);
           }
 
-          if (state is ProfileAddNewCertificateSuccess) {
+          if (state is EditProfileAddNewCertificateSuccess) {
             Navigator.pop(context);
             showMyDialog(context,
                 title: const Text('Add success'),
@@ -182,7 +182,9 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
           credentialId: _credentialIDController.text,
           link: _linkController.text);
 
-      context.read<ProfileBloc>().add(ProfileAddNewCertificate(newData));
+      context
+          .read<EditProfileBloc>()
+          .add(EditProfileAddNewCertificate(newData));
     }
   }
 }

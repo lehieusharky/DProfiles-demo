@@ -4,6 +4,7 @@ import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_chara
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/create_character_bot_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/property_ai_character.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/domain/usecase/ai_character_usecase.dart';
+import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/domain/usecases/chat_with_ai_usecase.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
@@ -21,6 +22,7 @@ part 'ai_character_state.dart';
 class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
   final AICharacterUseCase aiCharacterUseCase;
   final ProfileUseCase profileUseCase;
+  final ChatWithAIUseCase chatWithAiUseCase;
 
   int _currentStep = 0;
 
@@ -35,7 +37,8 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
   PropertyAICharacterModel propertyAICharacterModel =
       const PropertyAICharacterModel();
 
-  AiCharacterBloc(this.aiCharacterUseCase, this.profileUseCase)
+  AiCharacterBloc(
+      this.aiCharacterUseCase, this.profileUseCase, this.chatWithAiUseCase)
       : super(const AiCharacterState.initial()) {
     on<AICharacterChangeCreationStep>(_changeCreateStep);
 
@@ -52,6 +55,8 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
     on<UpdatePropertiesOfCharacterBot>(_updatePropertiesOfBot);
 
     on<GetListPopularCharacterBot>(_getListPopularCharacterBot);
+
+    on<AICharacterGetChatBotDetail>(_getChatBotDetail);
   }
 
   FutureOr<void> _changeCreateStep(
@@ -281,6 +286,21 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
           listData.map((e) => AICharacterBotModel.fromJson(e)).toList();
 
       emit(GetListPopularCharacterBotSuccess(characterBots));
+    });
+  }
+
+  FutureOr<void> _getChatBotDetail(
+      AICharacterGetChatBotDetail event, Emitter<AiCharacterState> emit) async {
+    emit(const AICharacterLoading());
+
+    final result =
+        await chatWithAiUseCase.getChatBotDetail(event.id, event.isPopularBot);
+
+    result.fold(
+        (l) => emit(AICharacterError(
+            message: [l], title: 'Get chat bot detail  failed')), (r) {
+      emit(AICharacterGetChatBotDetailSuccess(
+          AICharacterBotModel.fromJson(r.data)));
     });
   }
 }

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
-import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/chat_with_ai_model.dart';
+import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/send_message_to_bot_ai_model.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/domain/usecases/chat_with_ai_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -33,7 +33,8 @@ class ChatWithAiBloc extends Bloc<ChatWithAiEvent, ChatWithAiState> {
 
   FutureOr<void> _getChatBotDetail(
       ChatWithAIGetChatBotDetail event, Emitter<ChatWithAiState> emit) async {
-    final result = await chatWithAIUseCase.getChatBotDetail(event.chatBotID);
+    final result = await chatWithAIUseCase.getChatBotDetail(
+        event.chatBotID, event.isPopularBot);
 
     result.fold(
       (l) => emit(const ChatWithAIError(
