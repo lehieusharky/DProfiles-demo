@@ -7,12 +7,15 @@ class PartComponent extends StatelessWidget {
   final String title;
   final Widget icon;
   final TextStyle? titleStyle;
+  final Color? titleColor;
+  final Color? backgroundColor;
 
   const PartComponent({
     Key? key,
     required this.title,
     required this.icon,
     this.titleStyle,
+    this.titleColor, this.backgroundColor,
   }) : super(key: key);
 
   @override
@@ -20,7 +23,7 @@ class PartComponent extends StatelessWidget {
     return Container(
       padding: context.padding(horizontal: 8, vertical: 8),
       decoration: BoxDecoration(
-          color: colorScheme(context).outlineVariant.withOpacity(0.3),
+          color: backgroundColor ??  colorScheme(context).outlineVariant.withOpacity(0.3),
           borderRadius: BorderRadius.circular(8)),
       child: Row(
         children: [
@@ -28,7 +31,8 @@ class PartComponent extends StatelessWidget {
             title,
             style: titleStyle ??
                 AppFont()
-                    .fontTheme(context, weight: FontWeight.bold)
+                    .fontTheme(context,
+                        color: titleColor, weight: FontWeight.bold)
                     .bodyMedium,
           ),
           context.sizedBox(width: 5),
