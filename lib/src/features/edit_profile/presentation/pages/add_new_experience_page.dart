@@ -26,7 +26,7 @@ class _AddNewExperiencePageState extends State<AddNewExperiencePage> {
 
   final _endDateController = TextEditingController();
 
-  final _locationController = TextEditingController();
+  // final _locationController = TextEditingController();
 
   final _startDateController = TextEditingController();
 
@@ -98,22 +98,22 @@ class _AddNewExperiencePageState extends State<AddNewExperiencePage> {
                           },
                         ),
                       ),
-                      Padding(
-                        padding: context.padding(top: 32),
-                        child: AuthField(
-                          controller: _locationController,
-                          textInputAction: TextInputAction.next,
-                          title: 'Location'.toUpperCase(),
-                          hint: 'Location',
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return appLocal(context).fieldCannotBeEmpty;
-                            } else {
-                              return null;
-                            }
-                          },
-                        ),
-                      ),
+                      // Padding(
+                      //   padding: context.padding(top: 32),
+                      //   child: AuthField(
+                      //     controller: _locationController,
+                      //     textInputAction: TextInputAction.next,
+                      //     title: 'Location'.toUpperCase(),
+                      //     hint: 'Location',
+                      //     validator: (value) {
+                      //       if (value == null || value.isEmpty) {
+                      //         return appLocal(context).fieldCannotBeEmpty;
+                      //       } else {
+                      //         return null;
+                      //       }
+                      //     },
+                      //   ),
+                      // ),
                       Padding(
                         padding: context.padding(top: 32),
                         child: AuthField(

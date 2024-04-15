@@ -54,11 +54,25 @@ class _FormChatAiState extends State<FormChatAi> {
         padding: context.padding(vertical: 10),
         child: Row(
           children: [
-            Expanded(child: MyTextFormField(controller: _chatController)),
+            AppOutlineButton(context).iconButton(
+              iconData: IconsaxOutline.image,
+              onPressed: () {},
+            ),
+            Expanded(
+              child: MyTextFormField(
+                controller: _chatController,
+                minLines: 1,
+                maxLines: 10,
+                suffixIcon: AppOutlineButton(context).iconButton(
+                  iconData: IconsaxOutline.send_2,
+                  onPressed: () => _sendMessage(context),
+                ),
+              ),
+            ),
             context.sizedBox(width: 10),
             AppOutlineButton(context).iconButton(
-              iconData: IconsaxOutline.send_2,
-              onPressed: () => _sendMessage(context),
+              iconData: IconsaxOutline.microphone_2,
+              onPressed: () {},
             ),
           ],
         ),

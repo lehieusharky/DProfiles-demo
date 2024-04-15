@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/domain/entities/ext_ai_character_bot_entity.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai_character_bloc.dart';
@@ -32,12 +33,7 @@ class _CharacterBotsState extends State<CharacterBots> {
       },
       builder: (context, state) {
         if (state == null) {
-          return Center(
-            child: Assets.animations.loading.lottie(
-              width: context.sizeWidth(200),
-              height: context.sizeWidth(200),
-            ),
-          );
+          return const MyLoading();
         }
 
         return GridView.count(

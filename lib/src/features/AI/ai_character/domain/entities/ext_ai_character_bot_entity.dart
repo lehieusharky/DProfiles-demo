@@ -7,6 +7,7 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
+import 'package:demo_dprofiles/src/utils/presentation/animation_background.dart';
 import 'package:flutter/material.dart';
 
 extension AICharacterBotModelExt on AICharacterBotModel {
@@ -15,14 +16,7 @@ extension AICharacterBotModelExt on AICharacterBotModel {
       children: [
         ClipRRect(
             borderRadius: BorderRadius.circular(12),
-            child: Container(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                colorScheme(context).primary.withOpacity(0.8),
-                colorScheme(context).primary.withOpacity(0.5),
-                colorScheme(context).primary.withOpacity(0.5),
-              ])),
-            )),
+            child: const AnimationBackground()),
         Column(
           children: [
             if (definition != null && definition!.shortDescription != null)
@@ -62,9 +56,10 @@ extension AICharacterBotModelExt on AICharacterBotModel {
                     Padding(
                       padding: context.padding(right: 15),
                       child: CircleAvatar(
-                        foregroundImage: (avatar != null)
-                            ? CachedNetworkImageProvider(avatar!)
-                            : null,
+                        // TODO avatar of bot
+                        // foregroundImage: (avatar != null)
+                        //     ? CachedNetworkImageProvider(avatar!)
+                        //     : null,
                         radius: context.sizeWidth(25),
                       ),
                     ),

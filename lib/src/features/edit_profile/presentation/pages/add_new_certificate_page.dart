@@ -26,9 +26,7 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
 
   final _credentialIDController = TextEditingController();
 
-  final _startDateController = TextEditingController();
-
-  final _endDateController = TextEditingController();
+  final _dateController = TextEditingController();
 
   final _linkController = TextEditingController();
 
@@ -101,20 +99,9 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
                       Padding(
                         padding: context.padding(top: 32),
                         child: AuthField(
-                          controller: _startDateController,
+                          controller: _dateController,
                           textInputAction: TextInputAction.next,
-                          title: appLocal(context).startDate.toUpperCase(),
-                          hint: appLocal(context).dateTimeFormatddmmyyyyy,
-                          validator: (date) =>
-                              date.validationForDDMMYYYYY(context),
-                        ),
-                      ),
-                      Padding(
-                        padding: context.padding(top: 32),
-                        child: AuthField(
-                          controller: _endDateController,
-                          textInputAction: TextInputAction.next,
-                          title: appLocal(context).endDate.toUpperCase(),
+                          title: 'Date'.toUpperCase(),
                           hint: appLocal(context).dateTimeFormatddmmyyyyy,
                           validator: (date) =>
                               date.validationForDDMMYYYYY(context),
@@ -178,7 +165,7 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
       final newData = CertificateModel(
           name: _nameController.text,
           organization: _organizationController.text,
-          date: _startDateController.text.convertToIOSDateTimeFormat(),
+          date: _dateController.text.convertToIOSDateTimeFormat(),
           credentialId: _credentialIDController.text,
           link: _linkController.text);
 

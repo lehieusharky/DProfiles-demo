@@ -155,11 +155,12 @@ class _AddNewEducationPageState extends State<AddNewEducationPage> {
   void _save(BuildContext context) {
     if (_keyForm.currentState?.validate() ?? false) {
       final newData = EducationModel(
-          schoolName: _nameController.text,
-          description: _descritptionController.text,
-          degreeID: int.parse(_degreeController.text),
-          startDate: _startDateController.text.convertToIOSDateTimeFormat(),
-          endDate: _endDateController.text.convertToIOSDateTimeFormat());
+        schoolName: _nameController.text,
+        description: _descritptionController.text,
+        degreeID: int.parse(_degreeController.text),
+        startDate: _startDateController.text.convertToIOSDateTimeFormat(),
+        // endDate: _endDateController.text.convertToIOSDateTimeFormat(),
+      );
 
       context.read<EditProfileBloc>().add(EditProfileAddNewEducation(newData));
     }

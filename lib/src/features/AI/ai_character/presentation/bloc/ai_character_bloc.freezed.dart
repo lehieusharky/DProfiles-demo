@@ -32,6 +32,16 @@ mixin _$AiCharacterEvent {
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -49,6 +59,14 @@ mixin _$AiCharacterEvent {
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,6 +84,14 @@ mixin _$AiCharacterEvent {
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -91,6 +117,14 @@ mixin _$AiCharacterEvent {
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -111,6 +145,12 @@ mixin _$AiCharacterEvent {
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -130,6 +170,12 @@ mixin _$AiCharacterEvent {
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -205,6 +251,16 @@ class _$StartedImpl implements _Started {
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) {
     return started();
   }
@@ -225,6 +281,14 @@ class _$StartedImpl implements _Started {
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) {
     return started?.call();
   }
@@ -245,6 +309,14 @@ class _$StartedImpl implements _Started {
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -276,6 +348,14 @@ class _$StartedImpl implements _Started {
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) {
     return started(this);
   }
@@ -299,6 +379,12 @@ class _$StartedImpl implements _Started {
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) {
     return started?.call(this);
   }
@@ -321,6 +407,12 @@ class _$StartedImpl implements _Started {
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -418,6 +510,16 @@ class _$AICharacterChangeCreationStepImpl
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) {
     return changeCreationStep(isNext);
   }
@@ -438,6 +540,14 @@ class _$AICharacterChangeCreationStepImpl
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) {
     return changeCreationStep?.call(isNext);
   }
@@ -458,6 +568,14 @@ class _$AICharacterChangeCreationStepImpl
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) {
     if (changeCreationStep != null) {
@@ -489,6 +607,14 @@ class _$AICharacterChangeCreationStepImpl
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) {
     return changeCreationStep(this);
   }
@@ -512,6 +638,12 @@ class _$AICharacterChangeCreationStepImpl
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) {
     return changeCreationStep?.call(this);
   }
@@ -534,6 +666,12 @@ class _$AICharacterChangeCreationStepImpl
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) {
     if (changeCreationStep != null) {
@@ -609,6 +747,16 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) {
     return getUserInfo();
   }
@@ -629,6 +777,14 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) {
     return getUserInfo?.call();
   }
@@ -649,6 +805,14 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -680,6 +844,14 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) {
     return getUserInfo(this);
   }
@@ -703,6 +875,12 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) {
     return getUserInfo?.call(this);
   }
@@ -725,6 +903,12 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -829,6 +1013,16 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) {
     return addBasicInfoOfCharacterBot(name, summary);
   }
@@ -849,6 +1043,14 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) {
     return addBasicInfoOfCharacterBot?.call(name, summary);
   }
@@ -869,6 +1071,14 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) {
     if (addBasicInfoOfCharacterBot != null) {
@@ -900,6 +1110,14 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) {
     return addBasicInfoOfCharacterBot(this);
   }
@@ -923,6 +1141,12 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) {
     return addBasicInfoOfCharacterBot?.call(this);
   }
@@ -945,6 +1169,12 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) {
     if (addBasicInfoOfCharacterBot != null) {
@@ -1023,6 +1253,16 @@ class _$AICharacterGetUserCertificatesImpl
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) {
     return getUserCertificates();
   }
@@ -1043,6 +1283,14 @@ class _$AICharacterGetUserCertificatesImpl
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) {
     return getUserCertificates?.call();
   }
@@ -1063,6 +1311,14 @@ class _$AICharacterGetUserCertificatesImpl
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -1094,6 +1350,14 @@ class _$AICharacterGetUserCertificatesImpl
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) {
     return getUserCertificates(this);
   }
@@ -1117,6 +1381,12 @@ class _$AICharacterGetUserCertificatesImpl
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) {
     return getUserCertificates?.call(this);
   }
@@ -1139,6 +1409,12 @@ class _$AICharacterGetUserCertificatesImpl
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -1210,6 +1486,16 @@ class _$AICharacterGetUserEducationsImpl
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) {
     return getUserEducations();
   }
@@ -1230,6 +1516,14 @@ class _$AICharacterGetUserEducationsImpl
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) {
     return getUserEducations?.call();
   }
@@ -1250,6 +1544,14 @@ class _$AICharacterGetUserEducationsImpl
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -1281,6 +1583,14 @@ class _$AICharacterGetUserEducationsImpl
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) {
     return getUserEducations(this);
   }
@@ -1304,6 +1614,12 @@ class _$AICharacterGetUserEducationsImpl
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) {
     return getUserEducations?.call(this);
   }
@@ -1326,6 +1642,12 @@ class _$AICharacterGetUserEducationsImpl
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -1397,6 +1719,16 @@ class _$AICharacterGetUserExperiencesImpl
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) {
     return getUserExperiences();
   }
@@ -1417,6 +1749,14 @@ class _$AICharacterGetUserExperiencesImpl
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) {
     return getUserExperiences?.call();
   }
@@ -1437,6 +1777,14 @@ class _$AICharacterGetUserExperiencesImpl
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -1468,6 +1816,14 @@ class _$AICharacterGetUserExperiencesImpl
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) {
     return getUserExperiences(this);
   }
@@ -1491,6 +1847,12 @@ class _$AICharacterGetUserExperiencesImpl
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) {
     return getUserExperiences?.call(this);
   }
@@ -1513,6 +1875,12 @@ class _$AICharacterGetUserExperiencesImpl
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -1580,6 +1948,16 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) {
     return generateCharacterBot();
   }
@@ -1600,6 +1978,14 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) {
     return generateCharacterBot?.call();
   }
@@ -1620,6 +2006,14 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) {
     if (generateCharacterBot != null) {
@@ -1651,6 +2045,14 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) {
     return generateCharacterBot(this);
   }
@@ -1674,6 +2076,12 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) {
     return generateCharacterBot?.call(this);
   }
@@ -1696,6 +2104,12 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) {
     if (generateCharacterBot != null) {
@@ -1762,6 +2176,16 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) {
     return getListCharacterBot();
   }
@@ -1782,6 +2206,14 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) {
     return getListCharacterBot?.call();
   }
@@ -1802,6 +2234,14 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) {
     if (getListCharacterBot != null) {
@@ -1833,6 +2273,14 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) {
     return getListCharacterBot(this);
   }
@@ -1856,6 +2304,12 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) {
     return getListCharacterBot?.call(this);
   }
@@ -1878,6 +2332,12 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) {
     if (getListCharacterBot != null) {
@@ -1947,6 +2407,16 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) {
     return getListPopularCharacterBot();
   }
@@ -1967,6 +2437,14 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) {
     return getListPopularCharacterBot?.call();
   }
@@ -1987,6 +2465,14 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) {
     if (getListPopularCharacterBot != null) {
@@ -2018,6 +2504,14 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) {
     return getListPopularCharacterBot(this);
   }
@@ -2041,6 +2535,12 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) {
     return getListPopularCharacterBot?.call(this);
   }
@@ -2063,6 +2563,12 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) {
     if (getListPopularCharacterBot != null) {
@@ -2169,6 +2675,16 @@ class _$UpdatePropertiesOfCharacterBotImpl
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) {
     return updatePropertiesOfCharacterBot(property, value);
   }
@@ -2189,6 +2705,14 @@ class _$UpdatePropertiesOfCharacterBotImpl
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) {
     return updatePropertiesOfCharacterBot?.call(property, value);
   }
@@ -2209,6 +2733,14 @@ class _$UpdatePropertiesOfCharacterBotImpl
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) {
     if (updatePropertiesOfCharacterBot != null) {
@@ -2240,6 +2772,14 @@ class _$UpdatePropertiesOfCharacterBotImpl
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) {
     return updatePropertiesOfCharacterBot(this);
   }
@@ -2263,6 +2803,12 @@ class _$UpdatePropertiesOfCharacterBotImpl
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) {
     return updatePropertiesOfCharacterBot?.call(this);
   }
@@ -2285,6 +2831,12 @@ class _$UpdatePropertiesOfCharacterBotImpl
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) {
     if (updatePropertiesOfCharacterBot != null) {
@@ -2398,6 +2950,16 @@ class _$AICharacterGetChatBotDetailImpl implements AICharacterGetChatBotDetail {
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
   }) {
     return getChatBotDetail(id, isPopularBot);
   }
@@ -2418,6 +2980,14 @@ class _$AICharacterGetChatBotDetailImpl implements AICharacterGetChatBotDetail {
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
   }) {
     return getChatBotDetail?.call(id, isPopularBot);
   }
@@ -2438,6 +3008,14 @@ class _$AICharacterGetChatBotDetailImpl implements AICharacterGetChatBotDetail {
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
     required TResult orElse(),
   }) {
     if (getChatBotDetail != null) {
@@ -2469,6 +3047,14 @@ class _$AICharacterGetChatBotDetailImpl implements AICharacterGetChatBotDetail {
         updatePropertiesOfCharacterBot,
     required TResult Function(AICharacterGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
   }) {
     return getChatBotDetail(this);
   }
@@ -2492,6 +3078,12 @@ class _$AICharacterGetChatBotDetailImpl implements AICharacterGetChatBotDetail {
     TResult? Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
   }) {
     return getChatBotDetail?.call(this);
   }
@@ -2514,6 +3106,12 @@ class _$AICharacterGetChatBotDetailImpl implements AICharacterGetChatBotDetail {
     TResult Function(UpdatePropertiesOfCharacterBot value)?
         updatePropertiesOfCharacterBot,
     TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
     required TResult orElse(),
   }) {
     if (getChatBotDetail != null) {
@@ -2532,6 +3130,1684 @@ abstract class AICharacterGetChatBotDetail implements AiCharacterEvent {
   bool get isPopularBot;
   @JsonKey(ignore: true)
   _$$AICharacterGetChatBotDetailImplCopyWith<_$AICharacterGetChatBotDetailImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AICharacterRemoveCertificateImplCopyWith<$Res> {
+  factory _$$AICharacterRemoveCertificateImplCopyWith(
+          _$AICharacterRemoveCertificateImpl value,
+          $Res Function(_$AICharacterRemoveCertificateImpl) then) =
+      __$$AICharacterRemoveCertificateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({CertificateModel certificateModel});
+
+  $CertificateModelCopyWith<$Res> get certificateModel;
+}
+
+/// @nodoc
+class __$$AICharacterRemoveCertificateImplCopyWithImpl<$Res>
+    extends _$AiCharacterEventCopyWithImpl<$Res,
+        _$AICharacterRemoveCertificateImpl>
+    implements _$$AICharacterRemoveCertificateImplCopyWith<$Res> {
+  __$$AICharacterRemoveCertificateImplCopyWithImpl(
+      _$AICharacterRemoveCertificateImpl _value,
+      $Res Function(_$AICharacterRemoveCertificateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? certificateModel = null,
+  }) {
+    return _then(_$AICharacterRemoveCertificateImpl(
+      null == certificateModel
+          ? _value.certificateModel
+          : certificateModel // ignore: cast_nullable_to_non_nullable
+              as CertificateModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CertificateModelCopyWith<$Res> get certificateModel {
+    return $CertificateModelCopyWith<$Res>(_value.certificateModel, (value) {
+      return _then(_value.copyWith(certificateModel: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AICharacterRemoveCertificateImpl
+    implements AICharacterRemoveCertificate {
+  const _$AICharacterRemoveCertificateImpl(this.certificateModel);
+
+  @override
+  final CertificateModel certificateModel;
+
+  @override
+  String toString() {
+    return 'AiCharacterEvent.removeCertificate(certificateModel: $certificateModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterRemoveCertificateImpl &&
+            (identical(other.certificateModel, certificateModel) ||
+                other.certificateModel == certificateModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, certificateModel);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AICharacterRemoveCertificateImplCopyWith<
+          _$AICharacterRemoveCertificateImpl>
+      get copyWith => __$$AICharacterRemoveCertificateImplCopyWithImpl<
+          _$AICharacterRemoveCertificateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function() getUserInfo,
+    required TResult Function(String name, String summary)
+        addBasicInfoOfCharacterBot,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserExperiences,
+    required TResult Function() generateCharacterBot,
+    required TResult Function() getListCharacterBot,
+    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
+  }) {
+    return removeCertificate(certificateModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function()? getUserInfo,
+    TResult? Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? generateCharacterBot,
+    TResult? Function()? getListCharacterBot,
+    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
+  }) {
+    return removeCertificate?.call(certificateModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function()? getUserInfo,
+    TResult Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserExperiences,
+    TResult Function()? generateCharacterBot,
+    TResult Function()? getListCharacterBot,
+    TResult Function()? getListPopularCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
+    required TResult orElse(),
+  }) {
+    if (removeCertificate != null) {
+      return removeCertificate(certificateModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(AICharacterChangeCreationStep value)
+        changeCreationStep,
+    required TResult Function(AICharacterGetUserInfo value) getUserInfo,
+    required TResult Function(AddBasicInfoOfCharacterBot value)
+        addBasicInfoOfCharacterBot,
+    required TResult Function(AICharacterGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(AICharacterGetUserEducations value)
+        getUserEducations,
+    required TResult Function(AICharacterGetUserExperiences value)
+        getUserExperiences,
+    required TResult Function(GenerateCharacterBot value) generateCharacterBot,
+    required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(GetListPopularCharacterBot value)
+        getListPopularCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
+  }) {
+    return removeCertificate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult? Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult? Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult? Function(AICharacterGetUserCertificates value)?
+        getUserCertificates,
+    TResult? Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
+  }) {
+    return removeCertificate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult Function(AICharacterGetUserCertificates value)? getUserCertificates,
+    TResult Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
+    required TResult orElse(),
+  }) {
+    if (removeCertificate != null) {
+      return removeCertificate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterRemoveCertificate implements AiCharacterEvent {
+  const factory AICharacterRemoveCertificate(
+          final CertificateModel certificateModel) =
+      _$AICharacterRemoveCertificateImpl;
+
+  CertificateModel get certificateModel;
+  @JsonKey(ignore: true)
+  _$$AICharacterRemoveCertificateImplCopyWith<
+          _$AICharacterRemoveCertificateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AICharacterRemoveEducationImplCopyWith<$Res> {
+  factory _$$AICharacterRemoveEducationImplCopyWith(
+          _$AICharacterRemoveEducationImpl value,
+          $Res Function(_$AICharacterRemoveEducationImpl) then) =
+      __$$AICharacterRemoveEducationImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({EducationModel educationModel});
+
+  $EducationModelCopyWith<$Res> get educationModel;
+}
+
+/// @nodoc
+class __$$AICharacterRemoveEducationImplCopyWithImpl<$Res>
+    extends _$AiCharacterEventCopyWithImpl<$Res,
+        _$AICharacterRemoveEducationImpl>
+    implements _$$AICharacterRemoveEducationImplCopyWith<$Res> {
+  __$$AICharacterRemoveEducationImplCopyWithImpl(
+      _$AICharacterRemoveEducationImpl _value,
+      $Res Function(_$AICharacterRemoveEducationImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? educationModel = null,
+  }) {
+    return _then(_$AICharacterRemoveEducationImpl(
+      null == educationModel
+          ? _value.educationModel
+          : educationModel // ignore: cast_nullable_to_non_nullable
+              as EducationModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EducationModelCopyWith<$Res> get educationModel {
+    return $EducationModelCopyWith<$Res>(_value.educationModel, (value) {
+      return _then(_value.copyWith(educationModel: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AICharacterRemoveEducationImpl implements AICharacterRemoveEducation {
+  const _$AICharacterRemoveEducationImpl(this.educationModel);
+
+  @override
+  final EducationModel educationModel;
+
+  @override
+  String toString() {
+    return 'AiCharacterEvent.removeEducation(educationModel: $educationModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterRemoveEducationImpl &&
+            (identical(other.educationModel, educationModel) ||
+                other.educationModel == educationModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, educationModel);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AICharacterRemoveEducationImplCopyWith<_$AICharacterRemoveEducationImpl>
+      get copyWith => __$$AICharacterRemoveEducationImplCopyWithImpl<
+          _$AICharacterRemoveEducationImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function() getUserInfo,
+    required TResult Function(String name, String summary)
+        addBasicInfoOfCharacterBot,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserExperiences,
+    required TResult Function() generateCharacterBot,
+    required TResult Function() getListCharacterBot,
+    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
+  }) {
+    return removeEducation(educationModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function()? getUserInfo,
+    TResult? Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? generateCharacterBot,
+    TResult? Function()? getListCharacterBot,
+    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
+  }) {
+    return removeEducation?.call(educationModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function()? getUserInfo,
+    TResult Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserExperiences,
+    TResult Function()? generateCharacterBot,
+    TResult Function()? getListCharacterBot,
+    TResult Function()? getListPopularCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
+    required TResult orElse(),
+  }) {
+    if (removeEducation != null) {
+      return removeEducation(educationModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(AICharacterChangeCreationStep value)
+        changeCreationStep,
+    required TResult Function(AICharacterGetUserInfo value) getUserInfo,
+    required TResult Function(AddBasicInfoOfCharacterBot value)
+        addBasicInfoOfCharacterBot,
+    required TResult Function(AICharacterGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(AICharacterGetUserEducations value)
+        getUserEducations,
+    required TResult Function(AICharacterGetUserExperiences value)
+        getUserExperiences,
+    required TResult Function(GenerateCharacterBot value) generateCharacterBot,
+    required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(GetListPopularCharacterBot value)
+        getListPopularCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
+  }) {
+    return removeEducation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult? Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult? Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult? Function(AICharacterGetUserCertificates value)?
+        getUserCertificates,
+    TResult? Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
+  }) {
+    return removeEducation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult Function(AICharacterGetUserCertificates value)? getUserCertificates,
+    TResult Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
+    required TResult orElse(),
+  }) {
+    if (removeEducation != null) {
+      return removeEducation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterRemoveEducation implements AiCharacterEvent {
+  const factory AICharacterRemoveEducation(
+      final EducationModel educationModel) = _$AICharacterRemoveEducationImpl;
+
+  EducationModel get educationModel;
+  @JsonKey(ignore: true)
+  _$$AICharacterRemoveEducationImplCopyWith<_$AICharacterRemoveEducationImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AICharacterRemoveExperienceImplCopyWith<$Res> {
+  factory _$$AICharacterRemoveExperienceImplCopyWith(
+          _$AICharacterRemoveExperienceImpl value,
+          $Res Function(_$AICharacterRemoveExperienceImpl) then) =
+      __$$AICharacterRemoveExperienceImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ExperienceModel experienceModel});
+
+  $ExperienceModelCopyWith<$Res> get experienceModel;
+}
+
+/// @nodoc
+class __$$AICharacterRemoveExperienceImplCopyWithImpl<$Res>
+    extends _$AiCharacterEventCopyWithImpl<$Res,
+        _$AICharacterRemoveExperienceImpl>
+    implements _$$AICharacterRemoveExperienceImplCopyWith<$Res> {
+  __$$AICharacterRemoveExperienceImplCopyWithImpl(
+      _$AICharacterRemoveExperienceImpl _value,
+      $Res Function(_$AICharacterRemoveExperienceImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? experienceModel = null,
+  }) {
+    return _then(_$AICharacterRemoveExperienceImpl(
+      null == experienceModel
+          ? _value.experienceModel
+          : experienceModel // ignore: cast_nullable_to_non_nullable
+              as ExperienceModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ExperienceModelCopyWith<$Res> get experienceModel {
+    return $ExperienceModelCopyWith<$Res>(_value.experienceModel, (value) {
+      return _then(_value.copyWith(experienceModel: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AICharacterRemoveExperienceImpl implements AICharacterRemoveExperience {
+  const _$AICharacterRemoveExperienceImpl(this.experienceModel);
+
+  @override
+  final ExperienceModel experienceModel;
+
+  @override
+  String toString() {
+    return 'AiCharacterEvent.removeExperience(experienceModel: $experienceModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterRemoveExperienceImpl &&
+            (identical(other.experienceModel, experienceModel) ||
+                other.experienceModel == experienceModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, experienceModel);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AICharacterRemoveExperienceImplCopyWith<_$AICharacterRemoveExperienceImpl>
+      get copyWith => __$$AICharacterRemoveExperienceImplCopyWithImpl<
+          _$AICharacterRemoveExperienceImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function() getUserInfo,
+    required TResult Function(String name, String summary)
+        addBasicInfoOfCharacterBot,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserExperiences,
+    required TResult Function() generateCharacterBot,
+    required TResult Function() getListCharacterBot,
+    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
+  }) {
+    return removeExperience(experienceModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function()? getUserInfo,
+    TResult? Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? generateCharacterBot,
+    TResult? Function()? getListCharacterBot,
+    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
+  }) {
+    return removeExperience?.call(experienceModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function()? getUserInfo,
+    TResult Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserExperiences,
+    TResult Function()? generateCharacterBot,
+    TResult Function()? getListCharacterBot,
+    TResult Function()? getListPopularCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
+    required TResult orElse(),
+  }) {
+    if (removeExperience != null) {
+      return removeExperience(experienceModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(AICharacterChangeCreationStep value)
+        changeCreationStep,
+    required TResult Function(AICharacterGetUserInfo value) getUserInfo,
+    required TResult Function(AddBasicInfoOfCharacterBot value)
+        addBasicInfoOfCharacterBot,
+    required TResult Function(AICharacterGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(AICharacterGetUserEducations value)
+        getUserEducations,
+    required TResult Function(AICharacterGetUserExperiences value)
+        getUserExperiences,
+    required TResult Function(GenerateCharacterBot value) generateCharacterBot,
+    required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(GetListPopularCharacterBot value)
+        getListPopularCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
+  }) {
+    return removeExperience(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult? Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult? Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult? Function(AICharacterGetUserCertificates value)?
+        getUserCertificates,
+    TResult? Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
+  }) {
+    return removeExperience?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult Function(AICharacterGetUserCertificates value)? getUserCertificates,
+    TResult Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
+    required TResult orElse(),
+  }) {
+    if (removeExperience != null) {
+      return removeExperience(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterRemoveExperience implements AiCharacterEvent {
+  const factory AICharacterRemoveExperience(
+          final ExperienceModel experienceModel) =
+      _$AICharacterRemoveExperienceImpl;
+
+  ExperienceModel get experienceModel;
+  @JsonKey(ignore: true)
+  _$$AICharacterRemoveExperienceImplCopyWith<_$AICharacterRemoveExperienceImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AICharacterEditCertificateImplCopyWith<$Res> {
+  factory _$$AICharacterEditCertificateImplCopyWith(
+          _$AICharacterEditCertificateImpl value,
+          $Res Function(_$AICharacterEditCertificateImpl) then) =
+      __$$AICharacterEditCertificateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index, CertificateModel certificateModel});
+
+  $CertificateModelCopyWith<$Res> get certificateModel;
+}
+
+/// @nodoc
+class __$$AICharacterEditCertificateImplCopyWithImpl<$Res>
+    extends _$AiCharacterEventCopyWithImpl<$Res,
+        _$AICharacterEditCertificateImpl>
+    implements _$$AICharacterEditCertificateImplCopyWith<$Res> {
+  __$$AICharacterEditCertificateImplCopyWithImpl(
+      _$AICharacterEditCertificateImpl _value,
+      $Res Function(_$AICharacterEditCertificateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+    Object? certificateModel = null,
+  }) {
+    return _then(_$AICharacterEditCertificateImpl(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == certificateModel
+          ? _value.certificateModel
+          : certificateModel // ignore: cast_nullable_to_non_nullable
+              as CertificateModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CertificateModelCopyWith<$Res> get certificateModel {
+    return $CertificateModelCopyWith<$Res>(_value.certificateModel, (value) {
+      return _then(_value.copyWith(certificateModel: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AICharacterEditCertificateImpl implements AICharacterEditCertificate {
+  const _$AICharacterEditCertificateImpl(this.index, this.certificateModel);
+
+  @override
+  final int index;
+  @override
+  final CertificateModel certificateModel;
+
+  @override
+  String toString() {
+    return 'AiCharacterEvent.editCertificate(index: $index, certificateModel: $certificateModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterEditCertificateImpl &&
+            (identical(other.index, index) || other.index == index) &&
+            (identical(other.certificateModel, certificateModel) ||
+                other.certificateModel == certificateModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index, certificateModel);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AICharacterEditCertificateImplCopyWith<_$AICharacterEditCertificateImpl>
+      get copyWith => __$$AICharacterEditCertificateImplCopyWithImpl<
+          _$AICharacterEditCertificateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function() getUserInfo,
+    required TResult Function(String name, String summary)
+        addBasicInfoOfCharacterBot,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserExperiences,
+    required TResult Function() generateCharacterBot,
+    required TResult Function() getListCharacterBot,
+    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
+  }) {
+    return editCertificate(index, certificateModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function()? getUserInfo,
+    TResult? Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? generateCharacterBot,
+    TResult? Function()? getListCharacterBot,
+    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
+  }) {
+    return editCertificate?.call(index, certificateModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function()? getUserInfo,
+    TResult Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserExperiences,
+    TResult Function()? generateCharacterBot,
+    TResult Function()? getListCharacterBot,
+    TResult Function()? getListPopularCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
+    required TResult orElse(),
+  }) {
+    if (editCertificate != null) {
+      return editCertificate(index, certificateModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(AICharacterChangeCreationStep value)
+        changeCreationStep,
+    required TResult Function(AICharacterGetUserInfo value) getUserInfo,
+    required TResult Function(AddBasicInfoOfCharacterBot value)
+        addBasicInfoOfCharacterBot,
+    required TResult Function(AICharacterGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(AICharacterGetUserEducations value)
+        getUserEducations,
+    required TResult Function(AICharacterGetUserExperiences value)
+        getUserExperiences,
+    required TResult Function(GenerateCharacterBot value) generateCharacterBot,
+    required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(GetListPopularCharacterBot value)
+        getListPopularCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
+  }) {
+    return editCertificate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult? Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult? Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult? Function(AICharacterGetUserCertificates value)?
+        getUserCertificates,
+    TResult? Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
+  }) {
+    return editCertificate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult Function(AICharacterGetUserCertificates value)? getUserCertificates,
+    TResult Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
+    required TResult orElse(),
+  }) {
+    if (editCertificate != null) {
+      return editCertificate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterEditCertificate implements AiCharacterEvent {
+  const factory AICharacterEditCertificate(
+          final int index, final CertificateModel certificateModel) =
+      _$AICharacterEditCertificateImpl;
+
+  int get index;
+  CertificateModel get certificateModel;
+  @JsonKey(ignore: true)
+  _$$AICharacterEditCertificateImplCopyWith<_$AICharacterEditCertificateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AICharacterEditEducationImplCopyWith<$Res> {
+  factory _$$AICharacterEditEducationImplCopyWith(
+          _$AICharacterEditEducationImpl value,
+          $Res Function(_$AICharacterEditEducationImpl) then) =
+      __$$AICharacterEditEducationImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index, EducationModel educationModel});
+
+  $EducationModelCopyWith<$Res> get educationModel;
+}
+
+/// @nodoc
+class __$$AICharacterEditEducationImplCopyWithImpl<$Res>
+    extends _$AiCharacterEventCopyWithImpl<$Res, _$AICharacterEditEducationImpl>
+    implements _$$AICharacterEditEducationImplCopyWith<$Res> {
+  __$$AICharacterEditEducationImplCopyWithImpl(
+      _$AICharacterEditEducationImpl _value,
+      $Res Function(_$AICharacterEditEducationImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+    Object? educationModel = null,
+  }) {
+    return _then(_$AICharacterEditEducationImpl(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == educationModel
+          ? _value.educationModel
+          : educationModel // ignore: cast_nullable_to_non_nullable
+              as EducationModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EducationModelCopyWith<$Res> get educationModel {
+    return $EducationModelCopyWith<$Res>(_value.educationModel, (value) {
+      return _then(_value.copyWith(educationModel: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AICharacterEditEducationImpl implements AICharacterEditEducation {
+  const _$AICharacterEditEducationImpl(this.index, this.educationModel);
+
+  @override
+  final int index;
+  @override
+  final EducationModel educationModel;
+
+  @override
+  String toString() {
+    return 'AiCharacterEvent.editEducation(index: $index, educationModel: $educationModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterEditEducationImpl &&
+            (identical(other.index, index) || other.index == index) &&
+            (identical(other.educationModel, educationModel) ||
+                other.educationModel == educationModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index, educationModel);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AICharacterEditEducationImplCopyWith<_$AICharacterEditEducationImpl>
+      get copyWith => __$$AICharacterEditEducationImplCopyWithImpl<
+          _$AICharacterEditEducationImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function() getUserInfo,
+    required TResult Function(String name, String summary)
+        addBasicInfoOfCharacterBot,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserExperiences,
+    required TResult Function() generateCharacterBot,
+    required TResult Function() getListCharacterBot,
+    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
+  }) {
+    return editEducation(index, educationModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function()? getUserInfo,
+    TResult? Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? generateCharacterBot,
+    TResult? Function()? getListCharacterBot,
+    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
+  }) {
+    return editEducation?.call(index, educationModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function()? getUserInfo,
+    TResult Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserExperiences,
+    TResult Function()? generateCharacterBot,
+    TResult Function()? getListCharacterBot,
+    TResult Function()? getListPopularCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
+    required TResult orElse(),
+  }) {
+    if (editEducation != null) {
+      return editEducation(index, educationModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(AICharacterChangeCreationStep value)
+        changeCreationStep,
+    required TResult Function(AICharacterGetUserInfo value) getUserInfo,
+    required TResult Function(AddBasicInfoOfCharacterBot value)
+        addBasicInfoOfCharacterBot,
+    required TResult Function(AICharacterGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(AICharacterGetUserEducations value)
+        getUserEducations,
+    required TResult Function(AICharacterGetUserExperiences value)
+        getUserExperiences,
+    required TResult Function(GenerateCharacterBot value) generateCharacterBot,
+    required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(GetListPopularCharacterBot value)
+        getListPopularCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
+  }) {
+    return editEducation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult? Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult? Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult? Function(AICharacterGetUserCertificates value)?
+        getUserCertificates,
+    TResult? Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
+  }) {
+    return editEducation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult Function(AICharacterGetUserCertificates value)? getUserCertificates,
+    TResult Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
+    required TResult orElse(),
+  }) {
+    if (editEducation != null) {
+      return editEducation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterEditEducation implements AiCharacterEvent {
+  const factory AICharacterEditEducation(
+          final int index, final EducationModel educationModel) =
+      _$AICharacterEditEducationImpl;
+
+  int get index;
+  EducationModel get educationModel;
+  @JsonKey(ignore: true)
+  _$$AICharacterEditEducationImplCopyWith<_$AICharacterEditEducationImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AICharacterEditExperienceImplCopyWith<$Res> {
+  factory _$$AICharacterEditExperienceImplCopyWith(
+          _$AICharacterEditExperienceImpl value,
+          $Res Function(_$AICharacterEditExperienceImpl) then) =
+      __$$AICharacterEditExperienceImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int index, ExperienceModel experienceModel});
+
+  $ExperienceModelCopyWith<$Res> get experienceModel;
+}
+
+/// @nodoc
+class __$$AICharacterEditExperienceImplCopyWithImpl<$Res>
+    extends _$AiCharacterEventCopyWithImpl<$Res,
+        _$AICharacterEditExperienceImpl>
+    implements _$$AICharacterEditExperienceImplCopyWith<$Res> {
+  __$$AICharacterEditExperienceImplCopyWithImpl(
+      _$AICharacterEditExperienceImpl _value,
+      $Res Function(_$AICharacterEditExperienceImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? index = null,
+    Object? experienceModel = null,
+  }) {
+    return _then(_$AICharacterEditExperienceImpl(
+      null == index
+          ? _value.index
+          : index // ignore: cast_nullable_to_non_nullable
+              as int,
+      null == experienceModel
+          ? _value.experienceModel
+          : experienceModel // ignore: cast_nullable_to_non_nullable
+              as ExperienceModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ExperienceModelCopyWith<$Res> get experienceModel {
+    return $ExperienceModelCopyWith<$Res>(_value.experienceModel, (value) {
+      return _then(_value.copyWith(experienceModel: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$AICharacterEditExperienceImpl implements AICharacterEditExperience {
+  const _$AICharacterEditExperienceImpl(this.index, this.experienceModel);
+
+  @override
+  final int index;
+  @override
+  final ExperienceModel experienceModel;
+
+  @override
+  String toString() {
+    return 'AiCharacterEvent.editExperience(index: $index, experienceModel: $experienceModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterEditExperienceImpl &&
+            (identical(other.index, index) || other.index == index) &&
+            (identical(other.experienceModel, experienceModel) ||
+                other.experienceModel == experienceModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, index, experienceModel);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AICharacterEditExperienceImplCopyWith<_$AICharacterEditExperienceImpl>
+      get copyWith => __$$AICharacterEditExperienceImplCopyWithImpl<
+          _$AICharacterEditExperienceImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function() getUserInfo,
+    required TResult Function(String name, String summary)
+        addBasicInfoOfCharacterBot,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserExperiences,
+    required TResult Function() generateCharacterBot,
+    required TResult Function() getListCharacterBot,
+    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(PropertiesOfCharacter property, int value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(CertificateModel certificateModel)
+        removeCertificate,
+    required TResult Function(EducationModel educationModel) removeEducation,
+    required TResult Function(ExperienceModel experienceModel) removeExperience,
+    required TResult Function(int index, CertificateModel certificateModel)
+        editCertificate,
+    required TResult Function(int index, EducationModel educationModel)
+        editEducation,
+    required TResult Function(int index, ExperienceModel experienceModel)
+        editExperience,
+  }) {
+    return editExperience(index, experienceModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function()? getUserInfo,
+    TResult? Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? generateCharacterBot,
+    TResult? Function()? getListCharacterBot,
+    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(CertificateModel certificateModel)? removeCertificate,
+    TResult? Function(EducationModel educationModel)? removeEducation,
+    TResult? Function(ExperienceModel experienceModel)? removeExperience,
+    TResult? Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult? Function(int index, EducationModel educationModel)? editEducation,
+    TResult? Function(int index, ExperienceModel experienceModel)?
+        editExperience,
+  }) {
+    return editExperience?.call(index, experienceModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function()? getUserInfo,
+    TResult Function(String name, String summary)? addBasicInfoOfCharacterBot,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserExperiences,
+    TResult Function()? generateCharacterBot,
+    TResult Function()? getListCharacterBot,
+    TResult Function()? getListPopularCharacterBot,
+    TResult Function(PropertiesOfCharacter property, int value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(CertificateModel certificateModel)? removeCertificate,
+    TResult Function(EducationModel educationModel)? removeEducation,
+    TResult Function(ExperienceModel experienceModel)? removeExperience,
+    TResult Function(int index, CertificateModel certificateModel)?
+        editCertificate,
+    TResult Function(int index, EducationModel educationModel)? editEducation,
+    TResult Function(int index, ExperienceModel experienceModel)?
+        editExperience,
+    required TResult orElse(),
+  }) {
+    if (editExperience != null) {
+      return editExperience(index, experienceModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(AICharacterChangeCreationStep value)
+        changeCreationStep,
+    required TResult Function(AICharacterGetUserInfo value) getUserInfo,
+    required TResult Function(AddBasicInfoOfCharacterBot value)
+        addBasicInfoOfCharacterBot,
+    required TResult Function(AICharacterGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(AICharacterGetUserEducations value)
+        getUserEducations,
+    required TResult Function(AICharacterGetUserExperiences value)
+        getUserExperiences,
+    required TResult Function(GenerateCharacterBot value) generateCharacterBot,
+    required TResult Function(GetListCharacterBot value) getListCharacterBot,
+    required TResult Function(GetListPopularCharacterBot value)
+        getListPopularCharacterBot,
+    required TResult Function(UpdatePropertiesOfCharacterBot value)
+        updatePropertiesOfCharacterBot,
+    required TResult Function(AICharacterGetChatBotDetail value)
+        getChatBotDetail,
+    required TResult Function(AICharacterRemoveCertificate value)
+        removeCertificate,
+    required TResult Function(AICharacterRemoveEducation value) removeEducation,
+    required TResult Function(AICharacterRemoveExperience value)
+        removeExperience,
+    required TResult Function(AICharacterEditCertificate value) editCertificate,
+    required TResult Function(AICharacterEditEducation value) editEducation,
+    required TResult Function(AICharacterEditExperience value) editExperience,
+  }) {
+    return editExperience(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult? Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult? Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult? Function(AICharacterGetUserCertificates value)?
+        getUserCertificates,
+    TResult? Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult? Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult? Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult? Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult? Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult? Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult? Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult? Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult? Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult? Function(AICharacterEditCertificate value)? editCertificate,
+    TResult? Function(AICharacterEditEducation value)? editEducation,
+    TResult? Function(AICharacterEditExperience value)? editExperience,
+  }) {
+    return editExperience?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(AICharacterChangeCreationStep value)? changeCreationStep,
+    TResult Function(AICharacterGetUserInfo value)? getUserInfo,
+    TResult Function(AddBasicInfoOfCharacterBot value)?
+        addBasicInfoOfCharacterBot,
+    TResult Function(AICharacterGetUserCertificates value)? getUserCertificates,
+    TResult Function(AICharacterGetUserEducations value)? getUserEducations,
+    TResult Function(AICharacterGetUserExperiences value)? getUserExperiences,
+    TResult Function(GenerateCharacterBot value)? generateCharacterBot,
+    TResult Function(GetListCharacterBot value)? getListCharacterBot,
+    TResult Function(GetListPopularCharacterBot value)?
+        getListPopularCharacterBot,
+    TResult Function(UpdatePropertiesOfCharacterBot value)?
+        updatePropertiesOfCharacterBot,
+    TResult Function(AICharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(AICharacterRemoveCertificate value)? removeCertificate,
+    TResult Function(AICharacterRemoveEducation value)? removeEducation,
+    TResult Function(AICharacterRemoveExperience value)? removeExperience,
+    TResult Function(AICharacterEditCertificate value)? editCertificate,
+    TResult Function(AICharacterEditEducation value)? editEducation,
+    TResult Function(AICharacterEditExperience value)? editExperience,
+    required TResult orElse(),
+  }) {
+    if (editExperience != null) {
+      return editExperience(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterEditExperience implements AiCharacterEvent {
+  const factory AICharacterEditExperience(
+          final int index, final ExperienceModel experienceModel) =
+      _$AICharacterEditExperienceImpl;
+
+  int get index;
+  ExperienceModel get experienceModel;
+  @JsonKey(ignore: true)
+  _$$AICharacterEditExperienceImplCopyWith<_$AICharacterEditExperienceImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2559,6 +4835,12 @@ mixin _$AiCharacterState {
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2583,6 +4865,12 @@ mixin _$AiCharacterState {
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2606,6 +4894,12 @@ mixin _$AiCharacterState {
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -2633,6 +4927,18 @@ mixin _$AiCharacterState {
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2659,6 +4965,17 @@ mixin _$AiCharacterState {
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2685,6 +5002,17 @@ mixin _$AiCharacterState {
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -2766,6 +5094,12 @@ class _$InitialImpl implements _Initial {
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return initial();
   }
@@ -2793,6 +5127,12 @@ class _$InitialImpl implements _Initial {
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return initial?.call();
   }
@@ -2819,6 +5159,12 @@ class _$InitialImpl implements _Initial {
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -2852,6 +5198,18 @@ class _$InitialImpl implements _Initial {
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return initial(this);
   }
@@ -2881,6 +5239,17 @@ class _$InitialImpl implements _Initial {
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return initial?.call(this);
   }
@@ -2910,6 +5279,17 @@ class _$InitialImpl implements _Initial {
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -2981,6 +5361,12 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return loading();
   }
@@ -3008,6 +5394,12 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return loading?.call();
   }
@@ -3034,6 +5426,12 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -3067,6 +5465,18 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return loading(this);
   }
@@ -3096,6 +5506,17 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return loading?.call(this);
   }
@@ -3125,6 +5546,17 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -3240,6 +5672,12 @@ class _$AICharacterErrorImpl implements AICharacterError {
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return error(message, title);
   }
@@ -3267,6 +5705,12 @@ class _$AICharacterErrorImpl implements AICharacterError {
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return error?.call(message, title);
   }
@@ -3293,6 +5737,12 @@ class _$AICharacterErrorImpl implements AICharacterError {
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -3326,6 +5776,18 @@ class _$AICharacterErrorImpl implements AICharacterError {
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return error(this);
   }
@@ -3355,6 +5817,17 @@ class _$AICharacterErrorImpl implements AICharacterError {
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return error?.call(this);
   }
@@ -3384,6 +5857,17 @@ class _$AICharacterErrorImpl implements AICharacterError {
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -3496,6 +5980,12 @@ class _$AICharacterChangeCreationStepSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return changeCreationStepSuccess(currentStep);
   }
@@ -3523,6 +6013,12 @@ class _$AICharacterChangeCreationStepSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return changeCreationStepSuccess?.call(currentStep);
   }
@@ -3549,6 +6045,12 @@ class _$AICharacterChangeCreationStepSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -3582,6 +6084,18 @@ class _$AICharacterChangeCreationStepSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return changeCreationStepSuccess(this);
   }
@@ -3611,6 +6125,17 @@ class _$AICharacterChangeCreationStepSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return changeCreationStepSuccess?.call(this);
   }
@@ -3640,6 +6165,17 @@ class _$AICharacterChangeCreationStepSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -3724,6 +6260,12 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return addBasicInfoOfCharacterBotSuccess();
   }
@@ -3751,6 +6293,12 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return addBasicInfoOfCharacterBotSuccess?.call();
   }
@@ -3777,6 +6325,12 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (addBasicInfoOfCharacterBotSuccess != null) {
@@ -3810,6 +6364,18 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return addBasicInfoOfCharacterBotSuccess(this);
   }
@@ -3839,6 +6405,17 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return addBasicInfoOfCharacterBotSuccess?.call(this);
   }
@@ -3868,6 +6445,17 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (addBasicInfoOfCharacterBotSuccess != null) {
@@ -3983,6 +6571,12 @@ class _$AICharacterGetUserInfoSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return getUserInfo(userInfoModel);
   }
@@ -4010,6 +6604,12 @@ class _$AICharacterGetUserInfoSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return getUserInfo?.call(userInfoModel);
   }
@@ -4036,6 +6636,12 @@ class _$AICharacterGetUserInfoSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -4069,6 +6675,18 @@ class _$AICharacterGetUserInfoSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return getUserInfo(this);
   }
@@ -4098,6 +6716,17 @@ class _$AICharacterGetUserInfoSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return getUserInfo?.call(this);
   }
@@ -4127,6 +6756,17 @@ class _$AICharacterGetUserInfoSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -4246,6 +6886,12 @@ class _$AICharacterGetUserCertificatesSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return getUserCertificatesSuccess(certificates);
   }
@@ -4273,6 +6919,12 @@ class _$AICharacterGetUserCertificatesSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return getUserCertificatesSuccess?.call(certificates);
   }
@@ -4299,6 +6951,12 @@ class _$AICharacterGetUserCertificatesSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -4332,6 +6990,18 @@ class _$AICharacterGetUserCertificatesSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return getUserCertificatesSuccess(this);
   }
@@ -4361,6 +7031,17 @@ class _$AICharacterGetUserCertificatesSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return getUserCertificatesSuccess?.call(this);
   }
@@ -4390,6 +7071,17 @@ class _$AICharacterGetUserCertificatesSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -4511,6 +7203,12 @@ class _$AICharacterGetUserEducationsSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return getUserEducationsSuccess(educations);
   }
@@ -4538,6 +7236,12 @@ class _$AICharacterGetUserEducationsSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return getUserEducationsSuccess?.call(educations);
   }
@@ -4564,6 +7268,12 @@ class _$AICharacterGetUserEducationsSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -4597,6 +7307,18 @@ class _$AICharacterGetUserEducationsSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return getUserEducationsSuccess(this);
   }
@@ -4626,6 +7348,17 @@ class _$AICharacterGetUserEducationsSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return getUserEducationsSuccess?.call(this);
   }
@@ -4655,6 +7388,17 @@ class _$AICharacterGetUserEducationsSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -4775,6 +7519,12 @@ class _$AICharacterGetUserExperiencesSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return getUserExperiencesSuccess(experiences);
   }
@@ -4802,6 +7552,12 @@ class _$AICharacterGetUserExperiencesSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return getUserExperiencesSuccess?.call(experiences);
   }
@@ -4828,6 +7584,12 @@ class _$AICharacterGetUserExperiencesSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -4861,6 +7623,18 @@ class _$AICharacterGetUserExperiencesSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return getUserExperiencesSuccess(this);
   }
@@ -4890,6 +7664,17 @@ class _$AICharacterGetUserExperiencesSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return getUserExperiencesSuccess?.call(this);
   }
@@ -4919,6 +7704,17 @@ class _$AICharacterGetUserExperiencesSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -5042,6 +7838,12 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return generateCharacterBotSuccess(createCharacterBotModel);
   }
@@ -5069,6 +7871,12 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return generateCharacterBotSuccess?.call(createCharacterBotModel);
   }
@@ -5095,6 +7903,12 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (generateCharacterBotSuccess != null) {
@@ -5128,6 +7942,18 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return generateCharacterBotSuccess(this);
   }
@@ -5157,6 +7983,17 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return generateCharacterBotSuccess?.call(this);
   }
@@ -5186,6 +8023,17 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (generateCharacterBotSuccess != null) {
@@ -5301,6 +8149,12 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return getListCharacterBotSuccess(bots);
   }
@@ -5328,6 +8182,12 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return getListCharacterBotSuccess?.call(bots);
   }
@@ -5354,6 +8214,12 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (getListCharacterBotSuccess != null) {
@@ -5387,6 +8253,18 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return getListCharacterBotSuccess(this);
   }
@@ -5416,6 +8294,17 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return getListCharacterBotSuccess?.call(this);
   }
@@ -5445,6 +8334,17 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (getListCharacterBotSuccess != null) {
@@ -5562,6 +8462,12 @@ class _$GetListPopularCharacterBotSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return getListPopularCharacterBotSuccess(bots);
   }
@@ -5589,6 +8495,12 @@ class _$GetListPopularCharacterBotSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return getListPopularCharacterBotSuccess?.call(bots);
   }
@@ -5615,6 +8527,12 @@ class _$GetListPopularCharacterBotSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (getListPopularCharacterBotSuccess != null) {
@@ -5648,6 +8566,18 @@ class _$GetListPopularCharacterBotSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return getListPopularCharacterBotSuccess(this);
   }
@@ -5677,6 +8607,17 @@ class _$GetListPopularCharacterBotSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return getListPopularCharacterBotSuccess?.call(this);
   }
@@ -5706,6 +8647,17 @@ class _$GetListPopularCharacterBotSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (getListPopularCharacterBotSuccess != null) {
@@ -5829,6 +8781,12 @@ class _$AICharacterGetChatBotDetailSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterBotModel characterBotDetail)
         getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
   }) {
     return getChatBotDetailSuccess(characterBotDetail);
   }
@@ -5856,6 +8814,12 @@ class _$AICharacterGetChatBotDetailSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
   }) {
     return getChatBotDetailSuccess?.call(characterBotDetail);
   }
@@ -5882,6 +8846,12 @@ class _$AICharacterGetChatBotDetailSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterBotModel characterBotDetail)?
         getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
     required TResult orElse(),
   }) {
     if (getChatBotDetailSuccess != null) {
@@ -5915,6 +8885,18 @@ class _$AICharacterGetChatBotDetailSuccessImpl
         getListPopularCharacterBotSuccess,
     required TResult Function(AICharacterGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
   }) {
     return getChatBotDetailSuccess(this);
   }
@@ -5944,6 +8926,17 @@ class _$AICharacterGetChatBotDetailSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult? Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
   }) {
     return getChatBotDetailSuccess?.call(this);
   }
@@ -5973,6 +8966,17 @@ class _$AICharacterGetChatBotDetailSuccessImpl
         getListPopularCharacterBotSuccess,
     TResult Function(AICharacterGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
     required TResult orElse(),
   }) {
     if (getChatBotDetailSuccess != null) {
@@ -5992,4 +8996,1642 @@ abstract class AICharacterGetChatBotDetailSuccess implements AiCharacterState {
   _$$AICharacterGetChatBotDetailSuccessImplCopyWith<
           _$AICharacterGetChatBotDetailSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AICharacterRemoveCertificateSuccessImplCopyWith<$Res> {
+  factory _$$AICharacterRemoveCertificateSuccessImplCopyWith(
+          _$AICharacterRemoveCertificateSuccessImpl value,
+          $Res Function(_$AICharacterRemoveCertificateSuccessImpl) then) =
+      __$$AICharacterRemoveCertificateSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AICharacterRemoveCertificateSuccessImplCopyWithImpl<$Res>
+    extends _$AiCharacterStateCopyWithImpl<$Res,
+        _$AICharacterRemoveCertificateSuccessImpl>
+    implements _$$AICharacterRemoveCertificateSuccessImplCopyWith<$Res> {
+  __$$AICharacterRemoveCertificateSuccessImplCopyWithImpl(
+      _$AICharacterRemoveCertificateSuccessImpl _value,
+      $Res Function(_$AICharacterRemoveCertificateSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AICharacterRemoveCertificateSuccessImpl
+    implements AICharacterRemoveCertificateSuccess {
+  const _$AICharacterRemoveCertificateSuccessImpl();
+
+  @override
+  String toString() {
+    return 'AiCharacterState.removeCertificateSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterRemoveCertificateSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function() addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfo,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(CreatedCharacterBotModel createCharacterBotModel)
+        generateCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
+  }) {
+    return removeCertificateSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
+  }) {
+    return removeCertificateSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
+    required TResult orElse(),
+  }) {
+    if (removeCertificateSuccess != null) {
+      return removeCertificateSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AICharacterLoading value) loading,
+    required TResult Function(AICharacterError value) error,
+    required TResult Function(AICharacterChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(AddBasicInfoOfCharacterBotSuccess value)
+        addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(AICharacterGetUserInfoSuccess value) getUserInfo,
+    required TResult Function(AICharacterGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(AICharacterGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(AICharacterGetUserExperiencesSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(GenerateCharacterBotSuccess value)
+        generateCharacterBotSuccess,
+    required TResult Function(GetListCharacterBotSuccess value)
+        getListCharacterBotSuccess,
+    required TResult Function(GetListPopularCharacterBotSuccess value)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
+  }) {
+    return removeCertificateSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AICharacterLoading value)? loading,
+    TResult? Function(AICharacterError value)? error,
+    TResult? Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult? Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult? Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult? Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
+  }) {
+    return removeCertificateSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AICharacterLoading value)? loading,
+    TResult Function(AICharacterError value)? error,
+    TResult Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
+    required TResult orElse(),
+  }) {
+    if (removeCertificateSuccess != null) {
+      return removeCertificateSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterRemoveCertificateSuccess implements AiCharacterState {
+  const factory AICharacterRemoveCertificateSuccess() =
+      _$AICharacterRemoveCertificateSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$AICharacterRemoveEducationSuccessImplCopyWith<$Res> {
+  factory _$$AICharacterRemoveEducationSuccessImplCopyWith(
+          _$AICharacterRemoveEducationSuccessImpl value,
+          $Res Function(_$AICharacterRemoveEducationSuccessImpl) then) =
+      __$$AICharacterRemoveEducationSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AICharacterRemoveEducationSuccessImplCopyWithImpl<$Res>
+    extends _$AiCharacterStateCopyWithImpl<$Res,
+        _$AICharacterRemoveEducationSuccessImpl>
+    implements _$$AICharacterRemoveEducationSuccessImplCopyWith<$Res> {
+  __$$AICharacterRemoveEducationSuccessImplCopyWithImpl(
+      _$AICharacterRemoveEducationSuccessImpl _value,
+      $Res Function(_$AICharacterRemoveEducationSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AICharacterRemoveEducationSuccessImpl
+    implements AICharacterRemoveEducationSuccess {
+  const _$AICharacterRemoveEducationSuccessImpl();
+
+  @override
+  String toString() {
+    return 'AiCharacterState.removeEducationSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterRemoveEducationSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function() addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfo,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(CreatedCharacterBotModel createCharacterBotModel)
+        generateCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
+  }) {
+    return removeEducationSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
+  }) {
+    return removeEducationSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
+    required TResult orElse(),
+  }) {
+    if (removeEducationSuccess != null) {
+      return removeEducationSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AICharacterLoading value) loading,
+    required TResult Function(AICharacterError value) error,
+    required TResult Function(AICharacterChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(AddBasicInfoOfCharacterBotSuccess value)
+        addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(AICharacterGetUserInfoSuccess value) getUserInfo,
+    required TResult Function(AICharacterGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(AICharacterGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(AICharacterGetUserExperiencesSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(GenerateCharacterBotSuccess value)
+        generateCharacterBotSuccess,
+    required TResult Function(GetListCharacterBotSuccess value)
+        getListCharacterBotSuccess,
+    required TResult Function(GetListPopularCharacterBotSuccess value)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
+  }) {
+    return removeEducationSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AICharacterLoading value)? loading,
+    TResult? Function(AICharacterError value)? error,
+    TResult? Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult? Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult? Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult? Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
+  }) {
+    return removeEducationSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AICharacterLoading value)? loading,
+    TResult Function(AICharacterError value)? error,
+    TResult Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
+    required TResult orElse(),
+  }) {
+    if (removeEducationSuccess != null) {
+      return removeEducationSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterRemoveEducationSuccess implements AiCharacterState {
+  const factory AICharacterRemoveEducationSuccess() =
+      _$AICharacterRemoveEducationSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$AICharacterRemoveExperienceSuccessImplCopyWith<$Res> {
+  factory _$$AICharacterRemoveExperienceSuccessImplCopyWith(
+          _$AICharacterRemoveExperienceSuccessImpl value,
+          $Res Function(_$AICharacterRemoveExperienceSuccessImpl) then) =
+      __$$AICharacterRemoveExperienceSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AICharacterRemoveExperienceSuccessImplCopyWithImpl<$Res>
+    extends _$AiCharacterStateCopyWithImpl<$Res,
+        _$AICharacterRemoveExperienceSuccessImpl>
+    implements _$$AICharacterRemoveExperienceSuccessImplCopyWith<$Res> {
+  __$$AICharacterRemoveExperienceSuccessImplCopyWithImpl(
+      _$AICharacterRemoveExperienceSuccessImpl _value,
+      $Res Function(_$AICharacterRemoveExperienceSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AICharacterRemoveExperienceSuccessImpl
+    implements AICharacterRemoveExperienceSuccess {
+  const _$AICharacterRemoveExperienceSuccessImpl();
+
+  @override
+  String toString() {
+    return 'AiCharacterState.removeExperienceSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterRemoveExperienceSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function() addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfo,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(CreatedCharacterBotModel createCharacterBotModel)
+        generateCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
+  }) {
+    return removeExperienceSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
+  }) {
+    return removeExperienceSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
+    required TResult orElse(),
+  }) {
+    if (removeExperienceSuccess != null) {
+      return removeExperienceSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AICharacterLoading value) loading,
+    required TResult Function(AICharacterError value) error,
+    required TResult Function(AICharacterChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(AddBasicInfoOfCharacterBotSuccess value)
+        addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(AICharacterGetUserInfoSuccess value) getUserInfo,
+    required TResult Function(AICharacterGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(AICharacterGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(AICharacterGetUserExperiencesSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(GenerateCharacterBotSuccess value)
+        generateCharacterBotSuccess,
+    required TResult Function(GetListCharacterBotSuccess value)
+        getListCharacterBotSuccess,
+    required TResult Function(GetListPopularCharacterBotSuccess value)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
+  }) {
+    return removeExperienceSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AICharacterLoading value)? loading,
+    TResult? Function(AICharacterError value)? error,
+    TResult? Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult? Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult? Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult? Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
+  }) {
+    return removeExperienceSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AICharacterLoading value)? loading,
+    TResult Function(AICharacterError value)? error,
+    TResult Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
+    required TResult orElse(),
+  }) {
+    if (removeExperienceSuccess != null) {
+      return removeExperienceSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterRemoveExperienceSuccess implements AiCharacterState {
+  const factory AICharacterRemoveExperienceSuccess() =
+      _$AICharacterRemoveExperienceSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$AICharacterEditCertificateSuccessImplCopyWith<$Res> {
+  factory _$$AICharacterEditCertificateSuccessImplCopyWith(
+          _$AICharacterEditCertificateSuccessImpl value,
+          $Res Function(_$AICharacterEditCertificateSuccessImpl) then) =
+      __$$AICharacterEditCertificateSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AICharacterEditCertificateSuccessImplCopyWithImpl<$Res>
+    extends _$AiCharacterStateCopyWithImpl<$Res,
+        _$AICharacterEditCertificateSuccessImpl>
+    implements _$$AICharacterEditCertificateSuccessImplCopyWith<$Res> {
+  __$$AICharacterEditCertificateSuccessImplCopyWithImpl(
+      _$AICharacterEditCertificateSuccessImpl _value,
+      $Res Function(_$AICharacterEditCertificateSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AICharacterEditCertificateSuccessImpl
+    implements AICharacterEditCertificateSuccess {
+  const _$AICharacterEditCertificateSuccessImpl();
+
+  @override
+  String toString() {
+    return 'AiCharacterState.editCertificateSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterEditCertificateSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function() addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfo,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(CreatedCharacterBotModel createCharacterBotModel)
+        generateCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
+  }) {
+    return editCertificateSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
+  }) {
+    return editCertificateSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
+    required TResult orElse(),
+  }) {
+    if (editCertificateSuccess != null) {
+      return editCertificateSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AICharacterLoading value) loading,
+    required TResult Function(AICharacterError value) error,
+    required TResult Function(AICharacterChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(AddBasicInfoOfCharacterBotSuccess value)
+        addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(AICharacterGetUserInfoSuccess value) getUserInfo,
+    required TResult Function(AICharacterGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(AICharacterGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(AICharacterGetUserExperiencesSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(GenerateCharacterBotSuccess value)
+        generateCharacterBotSuccess,
+    required TResult Function(GetListCharacterBotSuccess value)
+        getListCharacterBotSuccess,
+    required TResult Function(GetListPopularCharacterBotSuccess value)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
+  }) {
+    return editCertificateSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AICharacterLoading value)? loading,
+    TResult? Function(AICharacterError value)? error,
+    TResult? Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult? Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult? Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult? Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
+  }) {
+    return editCertificateSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AICharacterLoading value)? loading,
+    TResult Function(AICharacterError value)? error,
+    TResult Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
+    required TResult orElse(),
+  }) {
+    if (editCertificateSuccess != null) {
+      return editCertificateSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterEditCertificateSuccess implements AiCharacterState {
+  const factory AICharacterEditCertificateSuccess() =
+      _$AICharacterEditCertificateSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$AICharacterEditEducationSuccessImplCopyWith<$Res> {
+  factory _$$AICharacterEditEducationSuccessImplCopyWith(
+          _$AICharacterEditEducationSuccessImpl value,
+          $Res Function(_$AICharacterEditEducationSuccessImpl) then) =
+      __$$AICharacterEditEducationSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AICharacterEditEducationSuccessImplCopyWithImpl<$Res>
+    extends _$AiCharacterStateCopyWithImpl<$Res,
+        _$AICharacterEditEducationSuccessImpl>
+    implements _$$AICharacterEditEducationSuccessImplCopyWith<$Res> {
+  __$$AICharacterEditEducationSuccessImplCopyWithImpl(
+      _$AICharacterEditEducationSuccessImpl _value,
+      $Res Function(_$AICharacterEditEducationSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AICharacterEditEducationSuccessImpl
+    implements AICharacterEditEducationSuccess {
+  const _$AICharacterEditEducationSuccessImpl();
+
+  @override
+  String toString() {
+    return 'AiCharacterState.editEducationSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterEditEducationSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function() addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfo,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(CreatedCharacterBotModel createCharacterBotModel)
+        generateCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
+  }) {
+    return editEducationSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
+  }) {
+    return editEducationSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
+    required TResult orElse(),
+  }) {
+    if (editEducationSuccess != null) {
+      return editEducationSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AICharacterLoading value) loading,
+    required TResult Function(AICharacterError value) error,
+    required TResult Function(AICharacterChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(AddBasicInfoOfCharacterBotSuccess value)
+        addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(AICharacterGetUserInfoSuccess value) getUserInfo,
+    required TResult Function(AICharacterGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(AICharacterGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(AICharacterGetUserExperiencesSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(GenerateCharacterBotSuccess value)
+        generateCharacterBotSuccess,
+    required TResult Function(GetListCharacterBotSuccess value)
+        getListCharacterBotSuccess,
+    required TResult Function(GetListPopularCharacterBotSuccess value)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
+  }) {
+    return editEducationSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AICharacterLoading value)? loading,
+    TResult? Function(AICharacterError value)? error,
+    TResult? Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult? Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult? Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult? Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
+  }) {
+    return editEducationSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AICharacterLoading value)? loading,
+    TResult Function(AICharacterError value)? error,
+    TResult Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
+    required TResult orElse(),
+  }) {
+    if (editEducationSuccess != null) {
+      return editEducationSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterEditEducationSuccess implements AiCharacterState {
+  const factory AICharacterEditEducationSuccess() =
+      _$AICharacterEditEducationSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$AICharacterEditExperienceSuccessImplCopyWith<$Res> {
+  factory _$$AICharacterEditExperienceSuccessImplCopyWith(
+          _$AICharacterEditExperienceSuccessImpl value,
+          $Res Function(_$AICharacterEditExperienceSuccessImpl) then) =
+      __$$AICharacterEditExperienceSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AICharacterEditExperienceSuccessImplCopyWithImpl<$Res>
+    extends _$AiCharacterStateCopyWithImpl<$Res,
+        _$AICharacterEditExperienceSuccessImpl>
+    implements _$$AICharacterEditExperienceSuccessImplCopyWith<$Res> {
+  __$$AICharacterEditExperienceSuccessImplCopyWithImpl(
+      _$AICharacterEditExperienceSuccessImpl _value,
+      $Res Function(_$AICharacterEditExperienceSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$AICharacterEditExperienceSuccessImpl
+    implements AICharacterEditExperienceSuccess {
+  const _$AICharacterEditExperienceSuccessImpl();
+
+  @override
+  String toString() {
+    return 'AiCharacterState.editExperience()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterEditExperienceSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function() addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfo,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(CreatedCharacterBotModel createCharacterBotModel)
+        generateCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListCharacterBotSuccess,
+    required TResult Function(List<AICharacterBotModel> bots)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterBotModel characterBotDetail)
+        getChatBotDetailSuccess,
+    required TResult Function() removeCertificateSuccess,
+    required TResult Function() removeEducationSuccess,
+    required TResult Function() removeExperienceSuccess,
+    required TResult Function() editCertificateSuccess,
+    required TResult Function() editEducationSuccess,
+    required TResult Function() editExperience,
+  }) {
+    return editExperience();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult? Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    TResult? Function()? removeCertificateSuccess,
+    TResult? Function()? removeEducationSuccess,
+    TResult? Function()? removeExperienceSuccess,
+    TResult? Function()? editCertificateSuccess,
+    TResult? Function()? editEducationSuccess,
+    TResult? Function()? editExperience,
+  }) {
+    return editExperience?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function()? addBasicInfoOfCharacterBotSuccess,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfo,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(CreatedCharacterBotModel createCharacterBotModel)?
+        generateCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListCharacterBotSuccess,
+    TResult Function(List<AICharacterBotModel> bots)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterBotModel characterBotDetail)?
+        getChatBotDetailSuccess,
+    TResult Function()? removeCertificateSuccess,
+    TResult Function()? removeEducationSuccess,
+    TResult Function()? removeExperienceSuccess,
+    TResult Function()? editCertificateSuccess,
+    TResult Function()? editEducationSuccess,
+    TResult Function()? editExperience,
+    required TResult orElse(),
+  }) {
+    if (editExperience != null) {
+      return editExperience();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AICharacterLoading value) loading,
+    required TResult Function(AICharacterError value) error,
+    required TResult Function(AICharacterChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(AddBasicInfoOfCharacterBotSuccess value)
+        addBasicInfoOfCharacterBotSuccess,
+    required TResult Function(AICharacterGetUserInfoSuccess value) getUserInfo,
+    required TResult Function(AICharacterGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(AICharacterGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(AICharacterGetUserExperiencesSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(GenerateCharacterBotSuccess value)
+        generateCharacterBotSuccess,
+    required TResult Function(GetListCharacterBotSuccess value)
+        getListCharacterBotSuccess,
+    required TResult Function(GetListPopularCharacterBotSuccess value)
+        getListPopularCharacterBotSuccess,
+    required TResult Function(AICharacterGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
+    required TResult Function(AICharacterRemoveCertificateSuccess value)
+        removeCertificateSuccess,
+    required TResult Function(AICharacterRemoveEducationSuccess value)
+        removeEducationSuccess,
+    required TResult Function(AICharacterRemoveExperienceSuccess value)
+        removeExperienceSuccess,
+    required TResult Function(AICharacterEditCertificateSuccess value)
+        editCertificateSuccess,
+    required TResult Function(AICharacterEditEducationSuccess value)
+        editEducationSuccess,
+    required TResult Function(AICharacterEditExperienceSuccess value)
+        editExperience,
+  }) {
+    return editExperience(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AICharacterLoading value)? loading,
+    TResult? Function(AICharacterError value)? error,
+    TResult? Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult? Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult? Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult? Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult? Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult? Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult? Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult? Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult? Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult? Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult? Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult? Function(AICharacterEditExperienceSuccess value)? editExperience,
+  }) {
+    return editExperience?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AICharacterLoading value)? loading,
+    TResult Function(AICharacterError value)? error,
+    TResult Function(AICharacterChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(AddBasicInfoOfCharacterBotSuccess value)?
+        addBasicInfoOfCharacterBotSuccess,
+    TResult Function(AICharacterGetUserInfoSuccess value)? getUserInfo,
+    TResult Function(AICharacterGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(AICharacterGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(AICharacterGetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(GenerateCharacterBotSuccess value)?
+        generateCharacterBotSuccess,
+    TResult Function(GetListCharacterBotSuccess value)?
+        getListCharacterBotSuccess,
+    TResult Function(GetListPopularCharacterBotSuccess value)?
+        getListPopularCharacterBotSuccess,
+    TResult Function(AICharacterGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult Function(AICharacterRemoveCertificateSuccess value)?
+        removeCertificateSuccess,
+    TResult Function(AICharacterRemoveEducationSuccess value)?
+        removeEducationSuccess,
+    TResult Function(AICharacterRemoveExperienceSuccess value)?
+        removeExperienceSuccess,
+    TResult Function(AICharacterEditCertificateSuccess value)?
+        editCertificateSuccess,
+    TResult Function(AICharacterEditEducationSuccess value)?
+        editEducationSuccess,
+    TResult Function(AICharacterEditExperienceSuccess value)? editExperience,
+    required TResult orElse(),
+  }) {
+    if (editExperience != null) {
+      return editExperience(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterEditExperienceSuccess implements AiCharacterState {
+  const factory AICharacterEditExperienceSuccess() =
+      _$AICharacterEditExperienceSuccessImpl;
 }

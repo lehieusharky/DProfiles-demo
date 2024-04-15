@@ -57,6 +57,14 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
     on<GetListPopularCharacterBot>(_getListPopularCharacterBot);
 
     on<AICharacterGetChatBotDetail>(_getChatBotDetail);
+
+    on<AICharacterRemoveCertificate>(_removeCertificate);
+    on<AICharacterRemoveEducation>(_removeEducation);
+    on<AICharacterRemoveExperience>(_removeExperience);
+
+    on<AICharacterEditCertificate>(_editCertificate);
+    on<AICharacterEditEducation>(_editEducation);
+    on<AICharacterEditExperience>(_editExperience);
   }
 
   FutureOr<void> _changeCreateStep(
@@ -302,5 +310,92 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
       emit(AICharacterGetChatBotDetailSuccess(
           AICharacterBotModel.fromJson(r.data)));
     });
+  }
+
+  FutureOr<void> _removeCertificate(AICharacterRemoveCertificate event,
+      Emitter<AiCharacterState> emit) async {
+    emit(const AiCharacterState.initial());
+
+    try {
+      certificates.remove(event.certificateModel);
+
+      emit(const AICharacterRemoveCertificateSuccess());
+    } catch (e) {
+      emit(AICharacterError(
+          message: [e.toString()], title: 'Delete education failed'));
+    }
+  }
+
+  FutureOr<void> _removeEducation(
+      AICharacterRemoveEducation event, Emitter<AiCharacterState> emit) async {
+    emit(const AiCharacterState.initial());
+
+    try {
+      educations.remove(event.educationModel);
+
+      emit(const AICharacterRemoveEducationSuccess());
+    } catch (e) {
+      emit(AICharacterError(
+          message: [e.toString()], title: 'Delete education failed'));
+    }
+  }
+
+  FutureOr<void> _removeExperience(
+      AICharacterRemoveExperience event, Emitter<AiCharacterState> emit) async {
+    emit(const AiCharacterState.initial());
+
+    try {
+      experiences.remove(event.experienceModel);
+
+      emit(const AICharacterRemoveEducationSuccess());
+    } catch (e) {
+      emit(AICharacterError(
+          message: [e.toString()], title: 'Delete education failed'));
+    }
+  }
+
+  FutureOr<void> _editCertificate(
+      AICharacterEditCertificate event, Emitter<AiCharacterState> emit) async {
+    emit(const AiCharacterState.initial());
+
+    try {
+      certificates.removeAt(event.index);
+      certificates.insert(event.index, event.certificateModel);
+
+      emit(const AICharacterEditCertificateSuccess());
+    } catch (e) {
+      emit(AICharacterError(
+          message: [e.toString()], title: 'Delete education failed'));
+    }
+  }
+
+  FutureOr<void> _editEducation(
+      AICharacterEditEducation event, Emitter<AiCharacterState> emit) async {
+    emit(const AiCharacterState.initial());
+
+    try {
+      educations.removeAt(event.index);
+      educations.insert(event.index, event.educationModel);
+
+      emit(const AICharacterEditEducationSuccess());
+    } catch (e) {
+      emit(AICharacterError(
+          message: [e.toString()], title: 'Delete education failed'));
+    }
+  }
+
+  FutureOr<void> _editExperience(
+      AICharacterEditExperience event, Emitter<AiCharacterState> emit) async {
+    emit(const AiCharacterState.initial());
+
+    try {
+      experiences.removeAt(event.index);
+      experiences.insert(event.index, event.experienceModel);
+
+      emit(const AICharacterEditEducationSuccess());
+    } catch (e) {
+      emit(AICharacterError(
+          message: [e.toString()], title: 'Delete education failed'));
+    }
   }
 }

@@ -8,6 +8,7 @@ import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets/tabbar_ai_character.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -50,17 +51,25 @@ class _AiCharacterPageState extends State<AiCharacterPage>
             useAppBar: true,
             horizontalMargin: 20,
             topPadding: 20,
-            body: SingleChildScrollView(
-              child: Column(
-                children: [
-                  AppFlatButton(context).elevatedButton(
+            body: NestedScrollView(
+              headerSliverBuilder:
+                  (BuildContext context, bool innerBoxIsScrolled) => [
+                MySliverAppBar(
+                  height: 50,
+                  child: AppFlatButton(context).elevatedButton(
                       title: 'Create AI Character',
                       onPressed: () =>
                           context.router.push(const CreateAiCharacterRoute())),
-                  TabBarAICharacter(controller: _tabController),
-                  SizedBox(height: context.sizeHeight(16)),
-                  const CharacterBots(),
-                ],
+                ),
+              ],
+              body: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    TabBarAICharacter(controller: _tabController),
+                    SizedBox(height: context.sizeHeight(16)),
+                    const CharacterBots(),
+                  ],
+                ),
               ),
             ),
           ),

@@ -35,4 +35,23 @@ class AiCharacterEvent with _$AiCharacterEvent {
 
   const factory AiCharacterEvent.getChatBotDetail(int id, bool isPopularBot) =
       AICharacterGetChatBotDetail;
+
+  const factory AiCharacterEvent.removeCertificate(
+      CertificateModel certificateModel) = AICharacterRemoveCertificate;
+
+  const factory AiCharacterEvent.removeEducation(
+      EducationModel educationModel) = AICharacterRemoveEducation;
+
+  const factory AiCharacterEvent.removeExperience(
+      ExperienceModel experienceModel) = AICharacterRemoveExperience;
+
+  const factory AiCharacterEvent.editCertificate(
+          int index, CertificateModel certificateModel) =
+      AICharacterEditCertificate;
+
+  const factory AiCharacterEvent.editEducation(
+      int index, EducationModel educationModel) = AICharacterEditEducation;
+
+  const factory AiCharacterEvent.editExperience(
+      int index, ExperienceModel experienceModel) = AICharacterEditExperience;
 }
