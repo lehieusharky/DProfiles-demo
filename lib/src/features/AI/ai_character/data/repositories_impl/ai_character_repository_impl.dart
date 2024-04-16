@@ -50,4 +50,31 @@ class AICharacterRepositoryImpl implements AICharacterRepository {
           response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
+
+  @override
+  Future<Either<AICharacterFailure, BaseResponse>> followCharacterBot(
+      int botID) async {
+    try {
+      final res = await _aiCharacterDataSource.followCharacterBot(botID);
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(AICharacterFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<AICharacterFailure, BaseResponse>> getChatBotFollowedByUser(
+      String? search, int page, int limit) async {
+    try {
+      final res = await _aiCharacterDataSource.getChatBotFollowedByUser(
+          search, page, limit);
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(AICharacterFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
+    }
+  }
 }

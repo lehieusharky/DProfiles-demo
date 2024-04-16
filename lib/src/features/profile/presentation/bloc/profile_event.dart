@@ -12,8 +12,7 @@ class ProfileEvent with _$ProfileEvent {
 
   const factory ProfileEvent.getUserCertificates() = ProfileGetUserCertificates;
 
-  const factory ProfileEvent.getUserSkills(String name) = ProfileGetUserSkills;
+  const factory ProfileEvent.getUserSkills() = ProfileGetUserSkills;
 
-  const factory ProfileEvent.getUserLanguages(int languageId) =
-      ProfileGetUserLanguages;
+  const factory ProfileEvent.getUserLanguages() = ProfileGetUserLanguages;
 }

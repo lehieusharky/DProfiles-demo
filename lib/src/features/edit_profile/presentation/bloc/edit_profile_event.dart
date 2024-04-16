@@ -13,4 +13,6 @@ class EditProfileEvent with _$EditProfileEvent {
 
   const factory EditProfileEvent.updateUserInfo(UserInfoModel userInfoModel) =
       EditProfileUpdateUserInfo;
+
+  const factory EditProfileEvent.getUserinfo() = EditProfileGetUserInfo;
 }

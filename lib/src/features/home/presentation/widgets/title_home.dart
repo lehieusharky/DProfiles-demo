@@ -10,7 +10,6 @@ class TitleHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: context.padding(horizontal: 20, bottom: 16),
-      margin: context.padding(top: 32),
       child: Text(
         title,
         style: AppFont().fontTheme(context, weight: FontWeight.w600).titleSmall,

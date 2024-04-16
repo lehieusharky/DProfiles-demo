@@ -67,5 +67,7 @@ class AppRouter extends $AppRouter {
         AutoRoute(
             path: '/form_edit_certificate',
             page: FormEditCertificateRoute.page),
+        AutoRoute(path: '/add_new_skill', page: AddSkillRoute.page),
+        AutoRoute(path: '/add_new_language', page: AddLanguageRoute.page),
       ];
 }

@@ -8,4 +8,8 @@ abstract class AICharacterDataSource {
 
   Future<BaseResponse> getListPopularCharacterBot();
 
+  Future<BaseResponse> followCharacterBot(int botID);
+
+  Future<BaseResponse> getChatBotFollowedByUser(
+      String? search, int page, int limit);
 }

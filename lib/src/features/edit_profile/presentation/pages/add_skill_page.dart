@@ -1,28 +1,25 @@
-import 'package:auto_route/auto_route.dart';
+import 'package:auto_route/annotations.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/bloc/edit_profile_bloc.dart';
-import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/forms/open_to_work_form.dart';
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/forms/form_skill.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
-class OpenToWorkPage extends StatelessWidget {
-  const OpenToWorkPage({Key? key}) : super(key: key);
+class AddSkillPage extends StatelessWidget {
+  const AddSkillPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider<EditProfileBloc>(
-      create: (context) =>
-          injector.get<EditProfileBloc>()..add(const EditProfileGetUserInfo()),
+      create: (context) => injector.get<EditProfileBloc>(),
       child: const MyScaffold(
         horizontalMargin: 20,
-        canBack: true,
         useAppBar: true,
-        appBarTitle: 'Open to work',
-        body: SingleChildScrollView(
-          child: OpenToWorkForm(),
-        ),
+        canBack: true,
+        appBarTitle: 'Skill',
+        body: SingleChildScrollView(child: FormSkill()),
       ),
     );
   }

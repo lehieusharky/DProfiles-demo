@@ -12,7 +12,6 @@ class HomeDiscover extends StatelessWidget {
       children: [
         NewsFeedHome(),
         BlogListPage(),
-        // Text('Blog')
       ],
     );
   }

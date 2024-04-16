@@ -1,5 +1,4 @@
 import 'package:demo_dprofiles/src/features/profile/data/datasoures/profile_datasource.dart';
-import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 
 import 'package:demo_dprofiles/src/utils/https/dio/http_util.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';

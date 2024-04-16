@@ -23,6 +23,7 @@ mixin _$EditProfileEvent {
     required TResult Function(CertificateModel certificateModel)
         addNewCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserinfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,6 +32,7 @@ mixin _$EditProfileEvent {
     TResult? Function(ExperienceModel experienceModel)? addNewExperience,
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserinfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -39,6 +41,7 @@ mixin _$EditProfileEvent {
     TResult Function(ExperienceModel experienceModel)? addNewExperience,
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserinfo,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -50,6 +53,7 @@ mixin _$EditProfileEvent {
     required TResult Function(EditProfileAddNewCertificate value)
         addNewCertificate,
     required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(EditProfileGetUserInfo value) getUserinfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +62,7 @@ mixin _$EditProfileEvent {
     TResult? Function(EditProfileAddNewExperience value)? addNewExperience,
     TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -66,6 +71,7 @@ mixin _$EditProfileEvent {
     TResult Function(EditProfileAddNewExperience value)? addNewExperience,
     TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -173,6 +179,7 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     required TResult Function(CertificateModel certificateModel)
         addNewCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserinfo,
   }) {
     return addNewEducation(educationModel);
   }
@@ -184,6 +191,7 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     TResult? Function(ExperienceModel experienceModel)? addNewExperience,
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserinfo,
   }) {
     return addNewEducation?.call(educationModel);
   }
@@ -195,6 +203,7 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     TResult Function(ExperienceModel experienceModel)? addNewExperience,
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserinfo,
     required TResult orElse(),
   }) {
     if (addNewEducation != null) {
@@ -212,6 +221,7 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     required TResult Function(EditProfileAddNewCertificate value)
         addNewCertificate,
     required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(EditProfileGetUserInfo value) getUserinfo,
   }) {
     return addNewEducation(this);
   }
@@ -223,6 +233,7 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     TResult? Function(EditProfileAddNewExperience value)? addNewExperience,
     TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
   }) {
     return addNewEducation?.call(this);
   }
@@ -234,6 +245,7 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     TResult Function(EditProfileAddNewExperience value)? addNewExperience,
     TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     required TResult orElse(),
   }) {
     if (addNewEducation != null) {
@@ -337,6 +349,7 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     required TResult Function(CertificateModel certificateModel)
         addNewCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserinfo,
   }) {
     return addNewExperience(experienceModel);
   }
@@ -348,6 +361,7 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     TResult? Function(ExperienceModel experienceModel)? addNewExperience,
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserinfo,
   }) {
     return addNewExperience?.call(experienceModel);
   }
@@ -359,6 +373,7 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     TResult Function(ExperienceModel experienceModel)? addNewExperience,
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserinfo,
     required TResult orElse(),
   }) {
     if (addNewExperience != null) {
@@ -376,6 +391,7 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     required TResult Function(EditProfileAddNewCertificate value)
         addNewCertificate,
     required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(EditProfileGetUserInfo value) getUserinfo,
   }) {
     return addNewExperience(this);
   }
@@ -387,6 +403,7 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     TResult? Function(EditProfileAddNewExperience value)? addNewExperience,
     TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
   }) {
     return addNewExperience?.call(this);
   }
@@ -398,6 +415,7 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     TResult Function(EditProfileAddNewExperience value)? addNewExperience,
     TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     required TResult orElse(),
   }) {
     if (addNewExperience != null) {
@@ -504,6 +522,7 @@ class _$EditProfileAddNewCertificateImpl
     required TResult Function(CertificateModel certificateModel)
         addNewCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserinfo,
   }) {
     return addNewCertificate(certificateModel);
   }
@@ -515,6 +534,7 @@ class _$EditProfileAddNewCertificateImpl
     TResult? Function(ExperienceModel experienceModel)? addNewExperience,
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserinfo,
   }) {
     return addNewCertificate?.call(certificateModel);
   }
@@ -526,6 +546,7 @@ class _$EditProfileAddNewCertificateImpl
     TResult Function(ExperienceModel experienceModel)? addNewExperience,
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserinfo,
     required TResult orElse(),
   }) {
     if (addNewCertificate != null) {
@@ -543,6 +564,7 @@ class _$EditProfileAddNewCertificateImpl
     required TResult Function(EditProfileAddNewCertificate value)
         addNewCertificate,
     required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(EditProfileGetUserInfo value) getUserinfo,
   }) {
     return addNewCertificate(this);
   }
@@ -554,6 +576,7 @@ class _$EditProfileAddNewCertificateImpl
     TResult? Function(EditProfileAddNewExperience value)? addNewExperience,
     TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
   }) {
     return addNewCertificate?.call(this);
   }
@@ -565,6 +588,7 @@ class _$EditProfileAddNewCertificateImpl
     TResult Function(EditProfileAddNewExperience value)? addNewExperience,
     TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     required TResult orElse(),
   }) {
     if (addNewCertificate != null) {
@@ -670,6 +694,7 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     required TResult Function(CertificateModel certificateModel)
         addNewCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserinfo,
   }) {
     return updateUserInfo(userInfoModel);
   }
@@ -681,6 +706,7 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     TResult? Function(ExperienceModel experienceModel)? addNewExperience,
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserinfo,
   }) {
     return updateUserInfo?.call(userInfoModel);
   }
@@ -692,6 +718,7 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     TResult Function(ExperienceModel experienceModel)? addNewExperience,
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserinfo,
     required TResult orElse(),
   }) {
     if (updateUserInfo != null) {
@@ -709,6 +736,7 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     required TResult Function(EditProfileAddNewCertificate value)
         addNewCertificate,
     required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(EditProfileGetUserInfo value) getUserinfo,
   }) {
     return updateUserInfo(this);
   }
@@ -720,6 +748,7 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     TResult? Function(EditProfileAddNewExperience value)? addNewExperience,
     TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
   }) {
     return updateUserInfo?.call(this);
   }
@@ -731,6 +760,7 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     TResult Function(EditProfileAddNewExperience value)? addNewExperience,
     TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     required TResult orElse(),
   }) {
     if (updateUserInfo != null) {
@@ -748,6 +778,132 @@ abstract class EditProfileUpdateUserInfo implements EditProfileEvent {
   @JsonKey(ignore: true)
   _$$EditProfileUpdateUserInfoImplCopyWith<_$EditProfileUpdateUserInfoImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EditProfileGetUserInfoImplCopyWith<$Res> {
+  factory _$$EditProfileGetUserInfoImplCopyWith(
+          _$EditProfileGetUserInfoImpl value,
+          $Res Function(_$EditProfileGetUserInfoImpl) then) =
+      __$$EditProfileGetUserInfoImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$EditProfileGetUserInfoImplCopyWithImpl<$Res>
+    extends _$EditProfileEventCopyWithImpl<$Res, _$EditProfileGetUserInfoImpl>
+    implements _$$EditProfileGetUserInfoImplCopyWith<$Res> {
+  __$$EditProfileGetUserInfoImplCopyWithImpl(
+      _$EditProfileGetUserInfoImpl _value,
+      $Res Function(_$EditProfileGetUserInfoImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
+  const _$EditProfileGetUserInfoImpl();
+
+  @override
+  String toString() {
+    return 'EditProfileEvent.getUserinfo()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditProfileGetUserInfoImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(EducationModel educationModel) addNewEducation,
+    required TResult Function(ExperienceModel experienceModel) addNewExperience,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserinfo,
+  }) {
+    return getUserinfo();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(EducationModel educationModel)? addNewEducation,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserinfo,
+  }) {
+    return getUserinfo?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(EducationModel educationModel)? addNewEducation,
+    TResult Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserinfo,
+    required TResult orElse(),
+  }) {
+    if (getUserinfo != null) {
+      return getUserinfo();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EditProfileAddNewEducation value) addNewEducation,
+    required TResult Function(EditProfileAddNewExperience value)
+        addNewExperience,
+    required TResult Function(EditProfileAddNewCertificate value)
+        addNewCertificate,
+    required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(EditProfileGetUserInfo value) getUserinfo,
+  }) {
+    return getUserinfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EditProfileAddNewEducation value)? addNewEducation,
+    TResult? Function(EditProfileAddNewExperience value)? addNewExperience,
+    TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
+  }) {
+    return getUserinfo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EditProfileAddNewEducation value)? addNewEducation,
+    TResult Function(EditProfileAddNewExperience value)? addNewExperience,
+    TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(EditProfileGetUserInfo value)? getUserinfo,
+    required TResult orElse(),
+  }) {
+    if (getUserinfo != null) {
+      return getUserinfo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditProfileGetUserInfo implements EditProfileEvent {
+  const factory EditProfileGetUserInfo() = _$EditProfileGetUserInfoImpl;
 }
 
 /// @nodoc

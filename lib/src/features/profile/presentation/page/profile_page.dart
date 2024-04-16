@@ -32,7 +32,7 @@ class _ProfilePageState extends State<ProfilePage>
       child: MyScaffold(
         topPadding: 20,
         body: DefaultTabController(
-          length: 3,
+          length: 2,
           child: NestedScrollView(
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => [

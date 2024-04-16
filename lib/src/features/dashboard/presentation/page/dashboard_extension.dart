@@ -12,25 +12,7 @@ import 'package:tuple/tuple.dart';
 import 'dashboard_page.dart';
 
 extension DashboardExtension on DashboardPage {
-  List<BottomNavigationBarItem> items(BuildContext context, int currentIndex) =>
-      [
-        Tuple3(Assets.icons.home.path, appLocal(context).home, 0),
-        Tuple3(Assets.icons.aiTools.path, appLocal(context).aiTools, 1),
-        Tuple3(Assets.icons.aiCharacter.path, appLocal(context).aiCharacter, 2),
-        Tuple3(Assets.icons.profile.path, appLocal(context).profile, 3),
-      ]
-          .map(
-            (e) => BottomNavigationBarItem(
-              icon: SvgPicture.asset(e.item1,
-                  colorFilter: ColorFilter.mode(
-                      currentIndex == e.item3
-                          ? colorScheme(context).primary
-                          : colorScheme(context).outline,
-                      BlendMode.srcIn)),
-              label: e.item2,
-            ),
-          )
-          .toList();
+
 
   List<Widget> screens(ScrollController scrollController) => [
         HomePage(scrollController: scrollController),

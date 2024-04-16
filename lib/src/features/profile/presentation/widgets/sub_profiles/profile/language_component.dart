@@ -1,7 +1,8 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/skill_item.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/title_sub_page.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/widgets/title_sub_page.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
+import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
+import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class LanguageComponent extends StatelessWidget {
@@ -12,7 +13,7 @@ class LanguageComponent extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        const TitleSubPage(title: 'Language', route: AboutRoute()),
+        const TitleSubPage(title: 'Language', route: AddLanguageRoute()),
         Padding(
           padding: context.padding(top: 8),
           child: SizedBox(
@@ -36,6 +37,30 @@ class LanguageComponent extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class SkillItem extends StatelessWidget {
+  final String title;
+  const SkillItem({super.key, required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: context.padding(right: 8, bottom: 8),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(50),
+          color: colorScheme(context).outlineVariant.withOpacity(0.2),
+        ),
+        padding: context.padding(horizontal: 12, vertical: 8),
+        child: Text(
+          title,
+          style:
+              AppFont().fontTheme(context, weight: FontWeight.bold).bodyMedium,
+        ),
+      ),
     );
   }
 }

@@ -10,6 +10,12 @@ abstract class AICharacterRepository {
   Future<Either<AICharacterFailure, BaseResponse>> getListCharacterBot();
 
   Future<Either<AICharacterFailure, BaseResponse>> getListPopularCharacterBot();
+
+  Future<Either<AICharacterFailure, BaseResponse>> followCharacterBot(
+      int botID);
+
+  Future<Either<AICharacterFailure, BaseResponse>> getChatBotFollowedByUser(
+      String? search, int page, int limit);
 }
 
 class AICharacterFailure extends AppFailure {

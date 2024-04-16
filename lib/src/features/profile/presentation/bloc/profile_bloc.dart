@@ -4,6 +4,7 @@ import 'package:demo_dprofiles/src/features/profile/data/models/certificate_mode
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/user_language_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_skill_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,7 +23,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<ProfileGetUserCertificates>(_getUserCertificates);
     on<ProfileGetUserEducations>(_getUserEducations);
     on<ProfileGetUserExperience>(_getUserExperiences);
-
+    on<ProfileGetUserLanguages>(_getLanguages);
+    on<ProfileGetUserSkills>(_getSkills);
   }
 
   Future<void> _getUserInfo(
@@ -84,6 +86,40 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       final experiences = data.map((e) => ExperienceModel.fromJson(e)).toList();
 
       emit(ProfileGetUserExperienceSuccess(experiences));
+    });
+  }
+
+  FutureOr<void> _getLanguages(
+      ProfileGetUserLanguages event, Emitter<ProfileState> emit) async {
+    emit(const ProfileLoading());
+    final result = await profileUseCase.getUserLanguage();
+
+    result.fold(
+        (l) => emit(
+            ProfileError(message: l, title: 'Get user experience  failed')),
+        (r) {
+      final data = r.data as List;
+
+      final languages = data.map((e) => UserLanguageModel.fromJson(e)).toList();
+
+      emit(ProfileGetUserLanguagesSuccess(languages));
+    });
+  }
+
+  FutureOr<void> _getSkills(
+      ProfileGetUserSkills event, Emitter<ProfileState> emit) async {
+    emit(const ProfileLoading());
+    final result = await profileUseCase.getUserSkills();
+
+    result.fold(
+        (l) => emit(
+            ProfileError(message: l, title: 'Get user experience  failed')),
+        (r) {
+      final data = r.data as List;
+
+      final skills = data.map((e) => UserSkillModel.fromJson(e)).toList();
+
+      emit(ProfileGetUserSkillsSuccess(skills));
     });
   }
 }

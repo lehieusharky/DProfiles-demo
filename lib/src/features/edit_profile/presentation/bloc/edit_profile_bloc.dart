@@ -24,6 +24,7 @@ class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
     on<EditProfileAddNewCertificate>(_addNewCertificate);
     on<EditProfileAddNewExperience>(_addNewExperience);
     on<EditProfileUpdateUserInfo>(_updateUserInfo);
+    on<EditProfileGetUserInfo>(_getUserInfo);
   }
 
   FutureOr<void> _addNewEducation(
@@ -81,6 +82,18 @@ class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
           message: l.map((e) => e).toString(),
           title: 'Update user info  failed')),
       (r) => emit(const EditProfileUpdateUserInfoSuccess()),
+    );
+  }
+
+  FutureOr<void> _getUserInfo(
+      EditProfileGetUserInfo event, Emitter<EditProfileState> emit) async {
+    final result = await profileUseCase.getUserInfo();
+
+    result.fold(
+      (l) => emit(EditProfileError(
+          message: l.map((e) => e).toString(), title: 'Get user info failed')),
+      (r) =>
+          emit(EditProfileGetUserInfoSuccess(UserInfoModel.fromJson(r.data))),
     );
   }
 }

@@ -10,15 +10,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class AboutPage extends StatefulWidget {
   const AboutPage({Key? key}) : super(key: key);
 
-@override
-State<AboutPage> createState() => _AboutPageState();
+  @override
+  State<AboutPage> createState() => _AboutPageState();
 }
 
 class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<EditProfileBloc>(
-      create: (context) => injector.get<EditProfileBloc>(),
+      create: (context) =>
+          injector.get<EditProfileBloc>()..add(const EditProfileGetUserInfo()),
       child: const MyScaffold(
         horizontalMargin: 20,
         useAppBar: true,

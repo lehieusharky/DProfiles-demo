@@ -29,38 +29,41 @@ class _HomeBannerState extends State<HomeBanner> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.bottomLeft,
-      children: [
-        SizedBox(
-          height: context.sizeHeight(270),
-          child: PageView.builder(
-            controller: _pageController,
-            itemCount: pageCount,
-            itemBuilder: (BuildContext context, int index) {
-              return Container(
-                height: context.sizeHeight(270),
-                decoration:
-                    BoxDecoration(color: colorScheme(context).secondary),
-                child: Stack(
-                  alignment: Alignment.topRight,
-                  children: [
-                    _buildBannerBackground(),
-                    Stack(
-                      alignment: Alignment.topLeft,
-                      children: [
-                        _buildWalletIcon(),
-                        _buildContent(),
-                      ],
-                    ),
-                  ],
-                ),
-              );
-            },
+    return Padding(
+      padding: context.padding(bottom: 10),
+      child: Stack(
+        alignment: Alignment.bottomLeft,
+        children: [
+          SizedBox(
+            height: context.sizeHeight(270),
+            child: PageView.builder(
+              controller: _pageController,
+              itemCount: pageCount,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  height: context.sizeHeight(270),
+                  decoration:
+                      BoxDecoration(color: colorScheme(context).secondary),
+                  child: Stack(
+                    alignment: Alignment.topRight,
+                    children: [
+                      _buildBannerBackground(),
+                      Stack(
+                        alignment: Alignment.topLeft,
+                        children: [
+                          _buildWalletIcon(),
+                          _buildContent(),
+                        ],
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
           ),
-        ),
-        _buildIndicator(),
-      ],
+          _buildIndicator(),
+        ],
+      ),
     );
   }
 
