@@ -1,8 +1,10 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_appbar.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_extension.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/widgets/dashboard_end_drawer.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
+import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +39,6 @@ class _DashboardPageState extends State<DashboardPage> {
       appBar: MyAppbar(
         titleWidget: Assets.icons.logos.dWhitePWhite.svg(),
         height: 50,
-        action: [],
       ),
       endDrawer: const DashboardEndDrawer(),
       body: PageView(
@@ -45,13 +46,17 @@ class _DashboardPageState extends State<DashboardPage> {
         controller: _pageController,
         children: widget.screens(_scrollController),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: widget.items(context, _currentIndex),
-        currentIndex: _currentIndex,
-        selectedItemColor: colorScheme(context).primary,
-        onTap: _onBottomNavigationBarTap,
-
-        unselectedItemColor: colorScheme(context).outline,
+      bottomNavigationBar: SafeArea(
+        child: BottomNavigationBar(
+          items: widget.items(context, _currentIndex),
+          currentIndex: _currentIndex,
+          selectedItemColor: colorScheme(context).primary,
+          onTap: _onBottomNavigationBarTap,
+          unselectedItemColor: colorScheme(context).outline,
+          selectedLabelStyle: AppFont().fontTheme(context).bodySmall,
+          unselectedLabelStyle: AppFont().fontTheme(context).bodySmall,
+          type: BottomNavigationBarType.fixed,
+        ),
       ),
     );
   }
