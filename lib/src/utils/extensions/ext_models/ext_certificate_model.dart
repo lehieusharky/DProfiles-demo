@@ -46,23 +46,25 @@ extension CertificateModelExt on CertificateModel {
                             .bodySmall,
                       ),
                     ),
-                    Text(
-                      "Digital/Multimedia and information Design",
-                      maxLines: 3,
-                      style: AppFont().fontTheme(context).bodyMedium,
-                    ),
+                    if (organization != null)
+                      Text(
+                        organization!,
+                        maxLines: 3,
+                        style: AppFont().fontTheme(context).bodyMedium,
+                      ),
                   ],
                 ),
               ),
             ),
             const Spacer(),
-            // Padding(
-            //   padding: context.padding(horizontal: 15),
-            //   child: const Icon(IconsaxOutline.edit, size: 20),
-            // ),
-            // InkWell(
-            //     onTap: onDelete,
-            //     child: const Icon(IconsaxOutline.trash, size: 20)),
+            Padding(
+              padding: context.padding(horizontal: 15),
+              child:
+                  InkWell(onTap: onUpdate, child: Assets.icons.iconEdit.svg()),
+            ),
+            InkWell(
+                onTap: onDelete,
+                child: const Icon(IconsaxOutline.trash, size: 20)),
           ],
         ),
       ),

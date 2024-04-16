@@ -11,4 +11,6 @@ class HomeState with _$HomeState {
 
   const factory HomeState.getFeedsSuccess(List<NewFeedModel> newsFeed) =
       HomeGetFeedsSuccess;
+
+  const factory HomeState.getUserInfoSuccess() = HomeGetUserInfoSuccess;
 }

@@ -21,6 +21,7 @@ mixin _$HomeEvent {
     required TResult Function() getFeeds,
     required TResult Function() refreshNewsFeed,
     required TResult Function() loadMoreNewsFeed,
+    required TResult Function() getUserInfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$HomeEvent {
     TResult? Function()? getFeeds,
     TResult? Function()? refreshNewsFeed,
     TResult? Function()? loadMoreNewsFeed,
+    TResult? Function()? getUserInfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$HomeEvent {
     TResult Function()? getFeeds,
     TResult Function()? refreshNewsFeed,
     TResult Function()? loadMoreNewsFeed,
+    TResult Function()? getUserInfo,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$HomeEvent {
     required TResult Function(HomeGetFeeds value) getFeeds,
     required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
     required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
+    required TResult Function(HomeGetUserInfo value) getUserInfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$HomeEvent {
     TResult? Function(HomeGetFeeds value)? getFeeds,
     TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    TResult? Function(HomeGetUserInfo value)? getUserInfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$HomeEvent {
     TResult Function(HomeGetFeeds value)? getFeeds,
     TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    TResult Function(HomeGetUserInfo value)? getUserInfo,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,6 +126,7 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
     required TResult Function() getFeeds,
     required TResult Function() refreshNewsFeed,
     required TResult Function() loadMoreNewsFeed,
+    required TResult Function() getUserInfo,
   }) {
     return getFeeds();
   }
@@ -130,6 +137,7 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
     TResult? Function()? getFeeds,
     TResult? Function()? refreshNewsFeed,
     TResult? Function()? loadMoreNewsFeed,
+    TResult? Function()? getUserInfo,
   }) {
     return getFeeds?.call();
   }
@@ -140,6 +148,7 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
     TResult Function()? getFeeds,
     TResult Function()? refreshNewsFeed,
     TResult Function()? loadMoreNewsFeed,
+    TResult Function()? getUserInfo,
     required TResult orElse(),
   }) {
     if (getFeeds != null) {
@@ -154,6 +163,7 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
     required TResult Function(HomeGetFeeds value) getFeeds,
     required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
     required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
+    required TResult Function(HomeGetUserInfo value) getUserInfo,
   }) {
     return getFeeds(this);
   }
@@ -164,6 +174,7 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
     TResult? Function(HomeGetFeeds value)? getFeeds,
     TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    TResult? Function(HomeGetUserInfo value)? getUserInfo,
   }) {
     return getFeeds?.call(this);
   }
@@ -174,6 +185,7 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
     TResult Function(HomeGetFeeds value)? getFeeds,
     TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    TResult Function(HomeGetUserInfo value)? getUserInfo,
     required TResult orElse(),
   }) {
     if (getFeeds != null) {
@@ -229,6 +241,7 @@ class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
     required TResult Function() getFeeds,
     required TResult Function() refreshNewsFeed,
     required TResult Function() loadMoreNewsFeed,
+    required TResult Function() getUserInfo,
   }) {
     return refreshNewsFeed();
   }
@@ -239,6 +252,7 @@ class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
     TResult? Function()? getFeeds,
     TResult? Function()? refreshNewsFeed,
     TResult? Function()? loadMoreNewsFeed,
+    TResult? Function()? getUserInfo,
   }) {
     return refreshNewsFeed?.call();
   }
@@ -249,6 +263,7 @@ class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
     TResult Function()? getFeeds,
     TResult Function()? refreshNewsFeed,
     TResult Function()? loadMoreNewsFeed,
+    TResult Function()? getUserInfo,
     required TResult orElse(),
   }) {
     if (refreshNewsFeed != null) {
@@ -263,6 +278,7 @@ class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
     required TResult Function(HomeGetFeeds value) getFeeds,
     required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
     required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
+    required TResult Function(HomeGetUserInfo value) getUserInfo,
   }) {
     return refreshNewsFeed(this);
   }
@@ -273,6 +289,7 @@ class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
     TResult? Function(HomeGetFeeds value)? getFeeds,
     TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    TResult? Function(HomeGetUserInfo value)? getUserInfo,
   }) {
     return refreshNewsFeed?.call(this);
   }
@@ -283,6 +300,7 @@ class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
     TResult Function(HomeGetFeeds value)? getFeeds,
     TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    TResult Function(HomeGetUserInfo value)? getUserInfo,
     required TResult orElse(),
   }) {
     if (refreshNewsFeed != null) {
@@ -338,6 +356,7 @@ class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
     required TResult Function() getFeeds,
     required TResult Function() refreshNewsFeed,
     required TResult Function() loadMoreNewsFeed,
+    required TResult Function() getUserInfo,
   }) {
     return loadMoreNewsFeed();
   }
@@ -348,6 +367,7 @@ class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
     TResult? Function()? getFeeds,
     TResult? Function()? refreshNewsFeed,
     TResult? Function()? loadMoreNewsFeed,
+    TResult? Function()? getUserInfo,
   }) {
     return loadMoreNewsFeed?.call();
   }
@@ -358,6 +378,7 @@ class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
     TResult Function()? getFeeds,
     TResult Function()? refreshNewsFeed,
     TResult Function()? loadMoreNewsFeed,
+    TResult Function()? getUserInfo,
     required TResult orElse(),
   }) {
     if (loadMoreNewsFeed != null) {
@@ -372,6 +393,7 @@ class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
     required TResult Function(HomeGetFeeds value) getFeeds,
     required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
     required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
+    required TResult Function(HomeGetUserInfo value) getUserInfo,
   }) {
     return loadMoreNewsFeed(this);
   }
@@ -382,6 +404,7 @@ class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
     TResult? Function(HomeGetFeeds value)? getFeeds,
     TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    TResult? Function(HomeGetUserInfo value)? getUserInfo,
   }) {
     return loadMoreNewsFeed?.call(this);
   }
@@ -392,6 +415,7 @@ class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
     TResult Function(HomeGetFeeds value)? getFeeds,
     TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    TResult Function(HomeGetUserInfo value)? getUserInfo,
     required TResult orElse(),
   }) {
     if (loadMoreNewsFeed != null) {
@@ -406,6 +430,120 @@ abstract class HomeLoadMoreNewsFeed implements HomeEvent {
 }
 
 /// @nodoc
+abstract class _$$HomeGetUserInfoImplCopyWith<$Res> {
+  factory _$$HomeGetUserInfoImplCopyWith(_$HomeGetUserInfoImpl value,
+          $Res Function(_$HomeGetUserInfoImpl) then) =
+      __$$HomeGetUserInfoImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$HomeGetUserInfoImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$HomeGetUserInfoImpl>
+    implements _$$HomeGetUserInfoImplCopyWith<$Res> {
+  __$$HomeGetUserInfoImplCopyWithImpl(
+      _$HomeGetUserInfoImpl _value, $Res Function(_$HomeGetUserInfoImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$HomeGetUserInfoImpl implements HomeGetUserInfo {
+  const _$HomeGetUserInfoImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.getUserInfo()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$HomeGetUserInfoImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getFeeds,
+    required TResult Function() refreshNewsFeed,
+    required TResult Function() loadMoreNewsFeed,
+    required TResult Function() getUserInfo,
+  }) {
+    return getUserInfo();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getFeeds,
+    TResult? Function()? refreshNewsFeed,
+    TResult? Function()? loadMoreNewsFeed,
+    TResult? Function()? getUserInfo,
+  }) {
+    return getUserInfo?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getFeeds,
+    TResult Function()? refreshNewsFeed,
+    TResult Function()? loadMoreNewsFeed,
+    TResult Function()? getUserInfo,
+    required TResult orElse(),
+  }) {
+    if (getUserInfo != null) {
+      return getUserInfo();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeGetFeeds value) getFeeds,
+    required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
+    required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
+    required TResult Function(HomeGetUserInfo value) getUserInfo,
+  }) {
+    return getUserInfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomeGetFeeds value)? getFeeds,
+    TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
+    TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    TResult? Function(HomeGetUserInfo value)? getUserInfo,
+  }) {
+    return getUserInfo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeGetFeeds value)? getFeeds,
+    TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
+    TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    TResult Function(HomeGetUserInfo value)? getUserInfo,
+    required TResult orElse(),
+  }) {
+    if (getUserInfo != null) {
+      return getUserInfo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeGetUserInfo implements HomeEvent {
+  const factory HomeGetUserInfo() = _$HomeGetUserInfoImpl;
+}
+
+/// @nodoc
 mixin _$HomeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -413,6 +551,7 @@ mixin _$HomeState {
     required TResult Function() loading,
     required TResult Function(String message, String title) error,
     required TResult Function(List<NewFeedModel> newsFeed) getFeedsSuccess,
+    required TResult Function() getUserInfoSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -421,6 +560,7 @@ mixin _$HomeState {
     TResult? Function()? loading,
     TResult? Function(String message, String title)? error,
     TResult? Function(List<NewFeedModel> newsFeed)? getFeedsSuccess,
+    TResult? Function()? getUserInfoSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -429,6 +569,7 @@ mixin _$HomeState {
     TResult Function()? loading,
     TResult Function(String message, String title)? error,
     TResult Function(List<NewFeedModel> newsFeed)? getFeedsSuccess,
+    TResult Function()? getUserInfoSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -438,6 +579,7 @@ mixin _$HomeState {
     required TResult Function(HomeLoading value) loading,
     required TResult Function(HomeError value) error,
     required TResult Function(HomeGetFeedsSuccess value) getFeedsSuccess,
+    required TResult Function(HomeGetUserInfoSuccess value) getUserInfoSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -446,6 +588,7 @@ mixin _$HomeState {
     TResult? Function(HomeLoading value)? loading,
     TResult? Function(HomeError value)? error,
     TResult? Function(HomeGetFeedsSuccess value)? getFeedsSuccess,
+    TResult? Function(HomeGetUserInfoSuccess value)? getUserInfoSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -454,6 +597,7 @@ mixin _$HomeState {
     TResult Function(HomeLoading value)? loading,
     TResult Function(HomeError value)? error,
     TResult Function(HomeGetFeedsSuccess value)? getFeedsSuccess,
+    TResult Function(HomeGetUserInfoSuccess value)? getUserInfoSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -518,6 +662,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(String message, String title) error,
     required TResult Function(List<NewFeedModel> newsFeed) getFeedsSuccess,
+    required TResult Function() getUserInfoSuccess,
   }) {
     return initial();
   }
@@ -529,6 +674,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(String message, String title)? error,
     TResult? Function(List<NewFeedModel> newsFeed)? getFeedsSuccess,
+    TResult? Function()? getUserInfoSuccess,
   }) {
     return initial?.call();
   }
@@ -540,6 +686,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(String message, String title)? error,
     TResult Function(List<NewFeedModel> newsFeed)? getFeedsSuccess,
+    TResult Function()? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -555,6 +702,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(HomeLoading value) loading,
     required TResult Function(HomeError value) error,
     required TResult Function(HomeGetFeedsSuccess value) getFeedsSuccess,
+    required TResult Function(HomeGetUserInfoSuccess value) getUserInfoSuccess,
   }) {
     return initial(this);
   }
@@ -566,6 +714,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(HomeLoading value)? loading,
     TResult? Function(HomeError value)? error,
     TResult? Function(HomeGetFeedsSuccess value)? getFeedsSuccess,
+    TResult? Function(HomeGetUserInfoSuccess value)? getUserInfoSuccess,
   }) {
     return initial?.call(this);
   }
@@ -577,6 +726,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(HomeLoading value)? loading,
     TResult Function(HomeError value)? error,
     TResult Function(HomeGetFeedsSuccess value)? getFeedsSuccess,
+    TResult Function(HomeGetUserInfoSuccess value)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -632,6 +782,7 @@ class _$HomeLoadingImpl implements HomeLoading {
     required TResult Function() loading,
     required TResult Function(String message, String title) error,
     required TResult Function(List<NewFeedModel> newsFeed) getFeedsSuccess,
+    required TResult Function() getUserInfoSuccess,
   }) {
     return loading();
   }
@@ -643,6 +794,7 @@ class _$HomeLoadingImpl implements HomeLoading {
     TResult? Function()? loading,
     TResult? Function(String message, String title)? error,
     TResult? Function(List<NewFeedModel> newsFeed)? getFeedsSuccess,
+    TResult? Function()? getUserInfoSuccess,
   }) {
     return loading?.call();
   }
@@ -654,6 +806,7 @@ class _$HomeLoadingImpl implements HomeLoading {
     TResult Function()? loading,
     TResult Function(String message, String title)? error,
     TResult Function(List<NewFeedModel> newsFeed)? getFeedsSuccess,
+    TResult Function()? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -669,6 +822,7 @@ class _$HomeLoadingImpl implements HomeLoading {
     required TResult Function(HomeLoading value) loading,
     required TResult Function(HomeError value) error,
     required TResult Function(HomeGetFeedsSuccess value) getFeedsSuccess,
+    required TResult Function(HomeGetUserInfoSuccess value) getUserInfoSuccess,
   }) {
     return loading(this);
   }
@@ -680,6 +834,7 @@ class _$HomeLoadingImpl implements HomeLoading {
     TResult? Function(HomeLoading value)? loading,
     TResult? Function(HomeError value)? error,
     TResult? Function(HomeGetFeedsSuccess value)? getFeedsSuccess,
+    TResult? Function(HomeGetUserInfoSuccess value)? getUserInfoSuccess,
   }) {
     return loading?.call(this);
   }
@@ -691,6 +846,7 @@ class _$HomeLoadingImpl implements HomeLoading {
     TResult Function(HomeLoading value)? loading,
     TResult Function(HomeError value)? error,
     TResult Function(HomeGetFeedsSuccess value)? getFeedsSuccess,
+    TResult Function(HomeGetUserInfoSuccess value)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -780,6 +936,7 @@ class _$HomeErrorImpl implements HomeError {
     required TResult Function() loading,
     required TResult Function(String message, String title) error,
     required TResult Function(List<NewFeedModel> newsFeed) getFeedsSuccess,
+    required TResult Function() getUserInfoSuccess,
   }) {
     return error(message, title);
   }
@@ -791,6 +948,7 @@ class _$HomeErrorImpl implements HomeError {
     TResult? Function()? loading,
     TResult? Function(String message, String title)? error,
     TResult? Function(List<NewFeedModel> newsFeed)? getFeedsSuccess,
+    TResult? Function()? getUserInfoSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -802,6 +960,7 @@ class _$HomeErrorImpl implements HomeError {
     TResult Function()? loading,
     TResult Function(String message, String title)? error,
     TResult Function(List<NewFeedModel> newsFeed)? getFeedsSuccess,
+    TResult Function()? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -817,6 +976,7 @@ class _$HomeErrorImpl implements HomeError {
     required TResult Function(HomeLoading value) loading,
     required TResult Function(HomeError value) error,
     required TResult Function(HomeGetFeedsSuccess value) getFeedsSuccess,
+    required TResult Function(HomeGetUserInfoSuccess value) getUserInfoSuccess,
   }) {
     return error(this);
   }
@@ -828,6 +988,7 @@ class _$HomeErrorImpl implements HomeError {
     TResult? Function(HomeLoading value)? loading,
     TResult? Function(HomeError value)? error,
     TResult? Function(HomeGetFeedsSuccess value)? getFeedsSuccess,
+    TResult? Function(HomeGetUserInfoSuccess value)? getUserInfoSuccess,
   }) {
     return error?.call(this);
   }
@@ -839,6 +1000,7 @@ class _$HomeErrorImpl implements HomeError {
     TResult Function(HomeLoading value)? loading,
     TResult Function(HomeError value)? error,
     TResult Function(HomeGetFeedsSuccess value)? getFeedsSuccess,
+    TResult Function(HomeGetUserInfoSuccess value)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -936,6 +1098,7 @@ class _$HomeGetFeedsSuccessImpl implements HomeGetFeedsSuccess {
     required TResult Function() loading,
     required TResult Function(String message, String title) error,
     required TResult Function(List<NewFeedModel> newsFeed) getFeedsSuccess,
+    required TResult Function() getUserInfoSuccess,
   }) {
     return getFeedsSuccess(newsFeed);
   }
@@ -947,6 +1110,7 @@ class _$HomeGetFeedsSuccessImpl implements HomeGetFeedsSuccess {
     TResult? Function()? loading,
     TResult? Function(String message, String title)? error,
     TResult? Function(List<NewFeedModel> newsFeed)? getFeedsSuccess,
+    TResult? Function()? getUserInfoSuccess,
   }) {
     return getFeedsSuccess?.call(newsFeed);
   }
@@ -958,6 +1122,7 @@ class _$HomeGetFeedsSuccessImpl implements HomeGetFeedsSuccess {
     TResult Function()? loading,
     TResult Function(String message, String title)? error,
     TResult Function(List<NewFeedModel> newsFeed)? getFeedsSuccess,
+    TResult Function()? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (getFeedsSuccess != null) {
@@ -973,6 +1138,7 @@ class _$HomeGetFeedsSuccessImpl implements HomeGetFeedsSuccess {
     required TResult Function(HomeLoading value) loading,
     required TResult Function(HomeError value) error,
     required TResult Function(HomeGetFeedsSuccess value) getFeedsSuccess,
+    required TResult Function(HomeGetUserInfoSuccess value) getUserInfoSuccess,
   }) {
     return getFeedsSuccess(this);
   }
@@ -984,6 +1150,7 @@ class _$HomeGetFeedsSuccessImpl implements HomeGetFeedsSuccess {
     TResult? Function(HomeLoading value)? loading,
     TResult? Function(HomeError value)? error,
     TResult? Function(HomeGetFeedsSuccess value)? getFeedsSuccess,
+    TResult? Function(HomeGetUserInfoSuccess value)? getUserInfoSuccess,
   }) {
     return getFeedsSuccess?.call(this);
   }
@@ -995,6 +1162,7 @@ class _$HomeGetFeedsSuccessImpl implements HomeGetFeedsSuccess {
     TResult Function(HomeLoading value)? loading,
     TResult Function(HomeError value)? error,
     TResult Function(HomeGetFeedsSuccess value)? getFeedsSuccess,
+    TResult Function(HomeGetUserInfoSuccess value)? getUserInfoSuccess,
     required TResult orElse(),
   }) {
     if (getFeedsSuccess != null) {
@@ -1012,4 +1180,127 @@ abstract class HomeGetFeedsSuccess implements HomeState {
   @JsonKey(ignore: true)
   _$$HomeGetFeedsSuccessImplCopyWith<_$HomeGetFeedsSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$HomeGetUserInfoSuccessImplCopyWith<$Res> {
+  factory _$$HomeGetUserInfoSuccessImplCopyWith(
+          _$HomeGetUserInfoSuccessImpl value,
+          $Res Function(_$HomeGetUserInfoSuccessImpl) then) =
+      __$$HomeGetUserInfoSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$HomeGetUserInfoSuccessImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$HomeGetUserInfoSuccessImpl>
+    implements _$$HomeGetUserInfoSuccessImplCopyWith<$Res> {
+  __$$HomeGetUserInfoSuccessImplCopyWithImpl(
+      _$HomeGetUserInfoSuccessImpl _value,
+      $Res Function(_$HomeGetUserInfoSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$HomeGetUserInfoSuccessImpl implements HomeGetUserInfoSuccess {
+  const _$HomeGetUserInfoSuccessImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.getUserInfoSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeGetUserInfoSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String message, String title) error,
+    required TResult Function(List<NewFeedModel> newsFeed) getFeedsSuccess,
+    required TResult Function() getUserInfoSuccess,
+  }) {
+    return getUserInfoSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String message, String title)? error,
+    TResult? Function(List<NewFeedModel> newsFeed)? getFeedsSuccess,
+    TResult? Function()? getUserInfoSuccess,
+  }) {
+    return getUserInfoSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String message, String title)? error,
+    TResult Function(List<NewFeedModel> newsFeed)? getFeedsSuccess,
+    TResult Function()? getUserInfoSuccess,
+    required TResult orElse(),
+  }) {
+    if (getUserInfoSuccess != null) {
+      return getUserInfoSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(HomeLoading value) loading,
+    required TResult Function(HomeError value) error,
+    required TResult Function(HomeGetFeedsSuccess value) getFeedsSuccess,
+    required TResult Function(HomeGetUserInfoSuccess value) getUserInfoSuccess,
+  }) {
+    return getUserInfoSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(HomeLoading value)? loading,
+    TResult? Function(HomeError value)? error,
+    TResult? Function(HomeGetFeedsSuccess value)? getFeedsSuccess,
+    TResult? Function(HomeGetUserInfoSuccess value)? getUserInfoSuccess,
+  }) {
+    return getUserInfoSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(HomeLoading value)? loading,
+    TResult Function(HomeError value)? error,
+    TResult Function(HomeGetFeedsSuccess value)? getFeedsSuccess,
+    TResult Function(HomeGetUserInfoSuccess value)? getUserInfoSuccess,
+    required TResult orElse(),
+  }) {
+    if (getUserInfoSuccess != null) {
+      return getUserInfoSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeGetUserInfoSuccess implements HomeState {
+  const factory HomeGetUserInfoSuccess() = _$HomeGetUserInfoSuccessImpl;
 }

@@ -16,4 +16,8 @@ class ChatWithAiState with _$ChatWithAiState {
 
   const factory ChatWithAiState.getChatBotDetailSuccess(
       AICharacterBotModel aiCharacterBot) = ChatWithAIGetChatBotDetailSuccess;
+
+  const factory ChatWithAiState.getChatWithBotHistorySuccess(
+          List<ChatBotMessageHistoryModel> messagesHistory) =
+      ChatWithAIGetChatWithBotHistorySuccess;
 }

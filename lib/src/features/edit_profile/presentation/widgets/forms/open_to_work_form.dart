@@ -4,9 +4,9 @@ import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/bloc/edit_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/entities/ext_user_info_entity.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
@@ -38,9 +38,9 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocSelector<ProfileBloc, ProfileState, UserInfoModel?>(
+    return BlocSelector<EditProfileBloc, EditProfileState, UserInfoModel?>(
       selector: (state) {
-        if (state is ProfileGetUserInfoSuccess) {
+        if (state is EditProfileGetUserInfoSuccess) {
           _payController = TextEditingController(
               text: state.userInfoModel.getSalaryPayType());
 
@@ -52,11 +52,11 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
           return state.userInfoModel;
         }
 
-        if (state is ProfileLoading) {
+        if (state is EditProfileLoading) {
           showLoadingDialog(context);
         }
 
-        if (state is ProfileUpdateUserInfoSuccess) {
+        if (state is EditProfileUpdateUserInfoSuccess) {
           Navigator.pop(context);
           Navigator.pop(context);
         }
@@ -177,7 +177,7 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
           salaryPayType: _payController.text.contains('job') ? 0 : 1,
           salary: int.parse(_salaryController.text));
 
-      context.read<ProfileBloc>().add(ProfileUpdateUserInfo(userInfo));
+      context.read<EditProfileBloc>().add(EditProfileUpdateUserInfo(userInfo));
     }
   }
 }

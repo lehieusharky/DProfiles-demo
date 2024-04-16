@@ -4,6 +4,8 @@ import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_chara
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/create_character_bot_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/property_ai_character.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/domain/usecase/ai_character_usecase.dart';
+import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/chat_bot_message_history_model.dart';
+import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/domain/usecases/chat_with_ai_usecase.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
@@ -21,6 +23,7 @@ part 'ai_character_state.dart';
 class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
   final AICharacterUseCase aiCharacterUseCase;
   final ProfileUseCase profileUseCase;
+  final ChatWithAIUseCase chatWithAiUseCase;
 
   int _currentStep = 0;
 
@@ -35,23 +38,27 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
   PropertyAICharacterModel propertyAICharacterModel =
       const PropertyAICharacterModel();
 
-  AiCharacterBloc(this.aiCharacterUseCase, this.profileUseCase)
+  AiCharacterBloc(
+      this.aiCharacterUseCase, this.profileUseCase, this.chatWithAiUseCase)
       : super(const AiCharacterState.initial()) {
     on<AICharacterChangeCreationStep>(_changeCreateStep);
-
     on<AddBasicInfoOfCharacterBot>(_addBasicInfoOfBot);
-
     on<AICharacterGetUserInfo>(_getUserInfo);
     on<AICharacterGetUserCertificates>(_getCertificates);
     on<AICharacterGetUserEducations>(_getEducations);
     on<AICharacterGetUserExperiences>(_getExperiences);
-
     on<GenerateCharacterBot>(_generateCharacterBot);
     on<GetListCharacterBot>(_getListCharacterBot);
-
     on<UpdatePropertiesOfCharacterBot>(_updatePropertiesOfBot);
-
     on<GetListPopularCharacterBot>(_getListPopularCharacterBot);
+    on<AICharacterGetChatBotDetail>(_getChatBotDetail);
+    on<AICharacterRemoveCertificate>(_removeCertificate);
+    on<AICharacterRemoveEducation>(_removeEducation);
+    on<AICharacterRemoveExperience>(_removeExperience);
+    on<AICharacterEditCertificate>(_editCertificate);
+    on<AICharacterEditEducation>(_editEducation);
+    on<AICharacterEditExperience>(_editExperience);
+    on<AICharacterGetChatWithBotHistory>(_getChatWithBotHistory);
   }
 
   FutureOr<void> _changeCreateStep(
@@ -104,6 +111,8 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
 
   FutureOr<void> _getListCharacterBot(
       GetListCharacterBot event, Emitter<AiCharacterState> emit) async {
+    emit(const AICharacterLoading());
+
     final result = await aiCharacterUseCase.getListCharacterBot();
 
     result.fold(
@@ -269,6 +278,8 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
 
   FutureOr<void> _getListPopularCharacterBot(
       GetListPopularCharacterBot event, Emitter<AiCharacterState> emit) async {
+    emit(const AICharacterLoading());
+
     final result = await aiCharacterUseCase.getListPopularCharacterBot();
 
     result.fold(
@@ -282,5 +293,131 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
 
       emit(GetListPopularCharacterBotSuccess(characterBots));
     });
+  }
+
+  FutureOr<void> _getChatBotDetail(
+      AICharacterGetChatBotDetail event, Emitter<AiCharacterState> emit) async {
+    emit(const AICharacterLoading());
+
+    final result =
+        await chatWithAiUseCase.getChatBotDetail(event.id, event.isPopularBot);
+
+    result.fold(
+        (l) => emit(AICharacterError(
+            message: [l], title: 'Get chat bot detail  failed')), (r) {
+      emit(AICharacterGetChatBotDetailSuccess(
+          AICharacterBotModel.fromJson(r.data)));
+    });
+  }
+
+  FutureOr<void> _removeCertificate(AICharacterRemoveCertificate event,
+      Emitter<AiCharacterState> emit) async {
+    emit(const AiCharacterState.initial());
+
+    try {
+      certificates.remove(event.certificateModel);
+
+      emit(const AICharacterRemoveCertificateSuccess());
+    } catch (e) {
+      emit(AICharacterError(
+          message: [e.toString()], title: 'Delete education failed'));
+    }
+  }
+
+  FutureOr<void> _removeEducation(
+      AICharacterRemoveEducation event, Emitter<AiCharacterState> emit) async {
+    emit(const AiCharacterState.initial());
+
+    try {
+      educations.remove(event.educationModel);
+
+      emit(const AICharacterRemoveEducationSuccess());
+    } catch (e) {
+      emit(AICharacterError(
+          message: [e.toString()], title: 'Delete education failed'));
+    }
+  }
+
+  FutureOr<void> _removeExperience(
+      AICharacterRemoveExperience event, Emitter<AiCharacterState> emit) async {
+    emit(const AiCharacterState.initial());
+
+    try {
+      experiences.remove(event.experienceModel);
+
+      emit(const AICharacterRemoveEducationSuccess());
+    } catch (e) {
+      emit(AICharacterError(
+          message: [e.toString()], title: 'Delete education failed'));
+    }
+  }
+
+  FutureOr<void> _editCertificate(
+      AICharacterEditCertificate event, Emitter<AiCharacterState> emit) async {
+    emit(const AiCharacterState.initial());
+
+    try {
+      certificates.removeAt(event.index);
+      certificates.insert(event.index, event.certificateModel);
+
+      emit(const AICharacterEditCertificateSuccess());
+    } catch (e) {
+      emit(AICharacterError(
+          message: [e.toString()], title: 'Delete education failed'));
+    }
+  }
+
+  FutureOr<void> _editEducation(
+      AICharacterEditEducation event, Emitter<AiCharacterState> emit) async {
+    emit(const AiCharacterState.initial());
+
+    try {
+      educations.removeAt(event.index);
+      educations.insert(event.index, event.educationModel);
+
+      emit(const AICharacterEditEducationSuccess());
+    } catch (e) {
+      emit(AICharacterError(
+          message: [e.toString()], title: 'Delete education failed'));
+    }
+  }
+
+  FutureOr<void> _editExperience(
+      AICharacterEditExperience event, Emitter<AiCharacterState> emit) async {
+    emit(const AiCharacterState.initial());
+
+    try {
+      experiences.removeAt(event.index);
+      experiences.insert(event.index, event.experienceModel);
+
+      emit(const AICharacterEditEducationSuccess());
+    } catch (e) {
+      emit(AICharacterError(
+          message: [e.toString()], title: 'Delete education failed'));
+    }
+  }
+
+  FutureOr<void> _getChatWithBotHistory(AICharacterGetChatWithBotHistory event,
+      Emitter<AiCharacterState> emit) async {
+    emit(const AICharacterLoading());
+
+    final result = await chatWithAiUseCase.getChatBotMessageHistory(
+        chatBotID: event.chatBotID,
+        page: event.page,
+        limit: event.limit,
+        search: event.search);
+
+    result.fold(
+      (l) => emit(
+          AICharacterError(message: [l], title: 'Get chat bot detail  failed')),
+      (r) {
+        final data = r.data as List;
+
+        final messages =
+            data.map((e) => ChatBotMessageHistoryModel.fromJson(e)).toList();
+
+        emit(AICharacterGetChatWithBotHistorySuccess(messages));
+      },
+    );
   }
 }

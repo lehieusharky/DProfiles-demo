@@ -19,25 +19,32 @@ mixin _$ChatWithAiEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ChatWIthAIModel data) sendMessage,
+    required TResult Function(SendMessageToBotAIModel data) sendMessage,
     required TResult Function(int chatBotID) loadBotAI,
-    required TResult Function(int chatBotID) getChatBotDetail,
+    required TResult Function(int chatBotID, bool isPopularBot)
+        getChatBotDetail,
+    required TResult Function(int chatBotID, int page, int limit, String search)
+        getChatWithBotHistory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ChatWIthAIModel data)? sendMessage,
+    TResult? Function(SendMessageToBotAIModel data)? sendMessage,
     TResult? Function(int chatBotID)? loadBotAI,
-    TResult? Function(int chatBotID)? getChatBotDetail,
+    TResult? Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ChatWIthAIModel data)? sendMessage,
+    TResult Function(SendMessageToBotAIModel data)? sendMessage,
     TResult Function(int chatBotID)? loadBotAI,
-    TResult Function(int chatBotID)? getChatBotDetail,
+    TResult Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
+    TResult Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -48,6 +55,8 @@ mixin _$ChatWithAiEvent {
     required TResult Function(ChatWithAILoadBotAI value) loadBotAI,
     required TResult Function(ChatWithAIGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(ChatWithAIGetChatWithBotHistory value)
+        getChatWithBotHistory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +65,8 @@ mixin _$ChatWithAiEvent {
     TResult? Function(ChatWithAISendMessage value)? sendMessage,
     TResult? Function(ChatWithAILoadBotAI value)? loadBotAI,
     TResult? Function(ChatWithAIGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(ChatWithAIGetChatWithBotHistory value)?
+        getChatWithBotHistory,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,6 +75,8 @@ mixin _$ChatWithAiEvent {
     TResult Function(ChatWithAISendMessage value)? sendMessage,
     TResult Function(ChatWithAILoadBotAI value)? loadBotAI,
     TResult Function(ChatWithAIGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(ChatWithAIGetChatWithBotHistory value)?
+        getChatWithBotHistory,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -126,9 +139,12 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ChatWIthAIModel data) sendMessage,
+    required TResult Function(SendMessageToBotAIModel data) sendMessage,
     required TResult Function(int chatBotID) loadBotAI,
-    required TResult Function(int chatBotID) getChatBotDetail,
+    required TResult Function(int chatBotID, bool isPopularBot)
+        getChatBotDetail,
+    required TResult Function(int chatBotID, int page, int limit, String search)
+        getChatWithBotHistory,
   }) {
     return started();
   }
@@ -137,9 +153,11 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ChatWIthAIModel data)? sendMessage,
+    TResult? Function(SendMessageToBotAIModel data)? sendMessage,
     TResult? Function(int chatBotID)? loadBotAI,
-    TResult? Function(int chatBotID)? getChatBotDetail,
+    TResult? Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
   }) {
     return started?.call();
   }
@@ -148,9 +166,11 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ChatWIthAIModel data)? sendMessage,
+    TResult Function(SendMessageToBotAIModel data)? sendMessage,
     TResult Function(int chatBotID)? loadBotAI,
-    TResult Function(int chatBotID)? getChatBotDetail,
+    TResult Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
+    TResult Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -167,6 +187,8 @@ class _$StartedImpl implements _Started {
     required TResult Function(ChatWithAILoadBotAI value) loadBotAI,
     required TResult Function(ChatWithAIGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(ChatWithAIGetChatWithBotHistory value)
+        getChatWithBotHistory,
   }) {
     return started(this);
   }
@@ -178,6 +200,8 @@ class _$StartedImpl implements _Started {
     TResult? Function(ChatWithAISendMessage value)? sendMessage,
     TResult? Function(ChatWithAILoadBotAI value)? loadBotAI,
     TResult? Function(ChatWithAIGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(ChatWithAIGetChatWithBotHistory value)?
+        getChatWithBotHistory,
   }) {
     return started?.call(this);
   }
@@ -189,6 +213,8 @@ class _$StartedImpl implements _Started {
     TResult Function(ChatWithAISendMessage value)? sendMessage,
     TResult Function(ChatWithAILoadBotAI value)? loadBotAI,
     TResult Function(ChatWithAIGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(ChatWithAIGetChatWithBotHistory value)?
+        getChatWithBotHistory,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -209,9 +235,9 @@ abstract class _$$ChatWithAISendMessageImplCopyWith<$Res> {
           $Res Function(_$ChatWithAISendMessageImpl) then) =
       __$$ChatWithAISendMessageImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ChatWIthAIModel data});
+  $Res call({SendMessageToBotAIModel data});
 
-  $ChatWIthAIModelCopyWith<$Res> get data;
+  $SendMessageToBotAIModelCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -231,14 +257,14 @@ class __$$ChatWithAISendMessageImplCopyWithImpl<$Res>
       null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as ChatWIthAIModel,
+              as SendMessageToBotAIModel,
     ));
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ChatWIthAIModelCopyWith<$Res> get data {
-    return $ChatWIthAIModelCopyWith<$Res>(_value.data, (value) {
+  $SendMessageToBotAIModelCopyWith<$Res> get data {
+    return $SendMessageToBotAIModelCopyWith<$Res>(_value.data, (value) {
       return _then(_value.copyWith(data: value));
     });
   }
@@ -250,7 +276,7 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
   const _$ChatWithAISendMessageImpl(this.data);
 
   @override
-  final ChatWIthAIModel data;
+  final SendMessageToBotAIModel data;
 
   @override
   String toString() {
@@ -279,9 +305,12 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ChatWIthAIModel data) sendMessage,
+    required TResult Function(SendMessageToBotAIModel data) sendMessage,
     required TResult Function(int chatBotID) loadBotAI,
-    required TResult Function(int chatBotID) getChatBotDetail,
+    required TResult Function(int chatBotID, bool isPopularBot)
+        getChatBotDetail,
+    required TResult Function(int chatBotID, int page, int limit, String search)
+        getChatWithBotHistory,
   }) {
     return sendMessage(data);
   }
@@ -290,9 +319,11 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ChatWIthAIModel data)? sendMessage,
+    TResult? Function(SendMessageToBotAIModel data)? sendMessage,
     TResult? Function(int chatBotID)? loadBotAI,
-    TResult? Function(int chatBotID)? getChatBotDetail,
+    TResult? Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
   }) {
     return sendMessage?.call(data);
   }
@@ -301,9 +332,11 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ChatWIthAIModel data)? sendMessage,
+    TResult Function(SendMessageToBotAIModel data)? sendMessage,
     TResult Function(int chatBotID)? loadBotAI,
-    TResult Function(int chatBotID)? getChatBotDetail,
+    TResult Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
+    TResult Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
     required TResult orElse(),
   }) {
     if (sendMessage != null) {
@@ -320,6 +353,8 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
     required TResult Function(ChatWithAILoadBotAI value) loadBotAI,
     required TResult Function(ChatWithAIGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(ChatWithAIGetChatWithBotHistory value)
+        getChatWithBotHistory,
   }) {
     return sendMessage(this);
   }
@@ -331,6 +366,8 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
     TResult? Function(ChatWithAISendMessage value)? sendMessage,
     TResult? Function(ChatWithAILoadBotAI value)? loadBotAI,
     TResult? Function(ChatWithAIGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(ChatWithAIGetChatWithBotHistory value)?
+        getChatWithBotHistory,
   }) {
     return sendMessage?.call(this);
   }
@@ -342,6 +379,8 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
     TResult Function(ChatWithAISendMessage value)? sendMessage,
     TResult Function(ChatWithAILoadBotAI value)? loadBotAI,
     TResult Function(ChatWithAIGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(ChatWithAIGetChatWithBotHistory value)?
+        getChatWithBotHistory,
     required TResult orElse(),
   }) {
     if (sendMessage != null) {
@@ -352,10 +391,10 @@ class _$ChatWithAISendMessageImpl implements ChatWithAISendMessage {
 }
 
 abstract class ChatWithAISendMessage implements ChatWithAiEvent {
-  const factory ChatWithAISendMessage(final ChatWIthAIModel data) =
+  const factory ChatWithAISendMessage(final SendMessageToBotAIModel data) =
       _$ChatWithAISendMessageImpl;
 
-  ChatWIthAIModel get data;
+  SendMessageToBotAIModel get data;
   @JsonKey(ignore: true)
   _$$ChatWithAISendMessageImplCopyWith<_$ChatWithAISendMessageImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -428,9 +467,12 @@ class _$ChatWithAILoadBotAIImpl implements ChatWithAILoadBotAI {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ChatWIthAIModel data) sendMessage,
+    required TResult Function(SendMessageToBotAIModel data) sendMessage,
     required TResult Function(int chatBotID) loadBotAI,
-    required TResult Function(int chatBotID) getChatBotDetail,
+    required TResult Function(int chatBotID, bool isPopularBot)
+        getChatBotDetail,
+    required TResult Function(int chatBotID, int page, int limit, String search)
+        getChatWithBotHistory,
   }) {
     return loadBotAI(chatBotID);
   }
@@ -439,9 +481,11 @@ class _$ChatWithAILoadBotAIImpl implements ChatWithAILoadBotAI {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ChatWIthAIModel data)? sendMessage,
+    TResult? Function(SendMessageToBotAIModel data)? sendMessage,
     TResult? Function(int chatBotID)? loadBotAI,
-    TResult? Function(int chatBotID)? getChatBotDetail,
+    TResult? Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
   }) {
     return loadBotAI?.call(chatBotID);
   }
@@ -450,9 +494,11 @@ class _$ChatWithAILoadBotAIImpl implements ChatWithAILoadBotAI {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ChatWIthAIModel data)? sendMessage,
+    TResult Function(SendMessageToBotAIModel data)? sendMessage,
     TResult Function(int chatBotID)? loadBotAI,
-    TResult Function(int chatBotID)? getChatBotDetail,
+    TResult Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
+    TResult Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
     required TResult orElse(),
   }) {
     if (loadBotAI != null) {
@@ -469,6 +515,8 @@ class _$ChatWithAILoadBotAIImpl implements ChatWithAILoadBotAI {
     required TResult Function(ChatWithAILoadBotAI value) loadBotAI,
     required TResult Function(ChatWithAIGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(ChatWithAIGetChatWithBotHistory value)
+        getChatWithBotHistory,
   }) {
     return loadBotAI(this);
   }
@@ -480,6 +528,8 @@ class _$ChatWithAILoadBotAIImpl implements ChatWithAILoadBotAI {
     TResult? Function(ChatWithAISendMessage value)? sendMessage,
     TResult? Function(ChatWithAILoadBotAI value)? loadBotAI,
     TResult? Function(ChatWithAIGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(ChatWithAIGetChatWithBotHistory value)?
+        getChatWithBotHistory,
   }) {
     return loadBotAI?.call(this);
   }
@@ -491,6 +541,8 @@ class _$ChatWithAILoadBotAIImpl implements ChatWithAILoadBotAI {
     TResult Function(ChatWithAISendMessage value)? sendMessage,
     TResult Function(ChatWithAILoadBotAI value)? loadBotAI,
     TResult Function(ChatWithAIGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(ChatWithAIGetChatWithBotHistory value)?
+        getChatWithBotHistory,
     required TResult orElse(),
   }) {
     if (loadBotAI != null) {
@@ -517,7 +569,7 @@ abstract class _$$ChatWithAIGetChatBotDetailImplCopyWith<$Res> {
           $Res Function(_$ChatWithAIGetChatBotDetailImpl) then) =
       __$$ChatWithAIGetChatBotDetailImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({int chatBotID});
+  $Res call({int chatBotID, bool isPopularBot});
 }
 
 /// @nodoc
@@ -534,12 +586,17 @@ class __$$ChatWithAIGetChatBotDetailImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? chatBotID = null,
+    Object? isPopularBot = null,
   }) {
     return _then(_$ChatWithAIGetChatBotDetailImpl(
       null == chatBotID
           ? _value.chatBotID
           : chatBotID // ignore: cast_nullable_to_non_nullable
               as int,
+      null == isPopularBot
+          ? _value.isPopularBot
+          : isPopularBot // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -547,14 +604,16 @@ class __$$ChatWithAIGetChatBotDetailImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ChatWithAIGetChatBotDetailImpl implements ChatWithAIGetChatBotDetail {
-  const _$ChatWithAIGetChatBotDetailImpl(this.chatBotID);
+  const _$ChatWithAIGetChatBotDetailImpl(this.chatBotID, this.isPopularBot);
 
   @override
   final int chatBotID;
+  @override
+  final bool isPopularBot;
 
   @override
   String toString() {
-    return 'ChatWithAiEvent.getChatBotDetail(chatBotID: $chatBotID)';
+    return 'ChatWithAiEvent.getChatBotDetail(chatBotID: $chatBotID, isPopularBot: $isPopularBot)';
   }
 
   @override
@@ -563,11 +622,13 @@ class _$ChatWithAIGetChatBotDetailImpl implements ChatWithAIGetChatBotDetail {
         (other.runtimeType == runtimeType &&
             other is _$ChatWithAIGetChatBotDetailImpl &&
             (identical(other.chatBotID, chatBotID) ||
-                other.chatBotID == chatBotID));
+                other.chatBotID == chatBotID) &&
+            (identical(other.isPopularBot, isPopularBot) ||
+                other.isPopularBot == isPopularBot));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, chatBotID);
+  int get hashCode => Object.hash(runtimeType, chatBotID, isPopularBot);
 
   @JsonKey(ignore: true)
   @override
@@ -580,35 +641,42 @@ class _$ChatWithAIGetChatBotDetailImpl implements ChatWithAIGetChatBotDetail {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function(ChatWIthAIModel data) sendMessage,
+    required TResult Function(SendMessageToBotAIModel data) sendMessage,
     required TResult Function(int chatBotID) loadBotAI,
-    required TResult Function(int chatBotID) getChatBotDetail,
+    required TResult Function(int chatBotID, bool isPopularBot)
+        getChatBotDetail,
+    required TResult Function(int chatBotID, int page, int limit, String search)
+        getChatWithBotHistory,
   }) {
-    return getChatBotDetail(chatBotID);
+    return getChatBotDetail(chatBotID, isPopularBot);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function(ChatWIthAIModel data)? sendMessage,
+    TResult? Function(SendMessageToBotAIModel data)? sendMessage,
     TResult? Function(int chatBotID)? loadBotAI,
-    TResult? Function(int chatBotID)? getChatBotDetail,
+    TResult? Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
   }) {
-    return getChatBotDetail?.call(chatBotID);
+    return getChatBotDetail?.call(chatBotID, isPopularBot);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function(ChatWIthAIModel data)? sendMessage,
+    TResult Function(SendMessageToBotAIModel data)? sendMessage,
     TResult Function(int chatBotID)? loadBotAI,
-    TResult Function(int chatBotID)? getChatBotDetail,
+    TResult Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
+    TResult Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
     required TResult orElse(),
   }) {
     if (getChatBotDetail != null) {
-      return getChatBotDetail(chatBotID);
+      return getChatBotDetail(chatBotID, isPopularBot);
     }
     return orElse();
   }
@@ -621,6 +689,8 @@ class _$ChatWithAIGetChatBotDetailImpl implements ChatWithAIGetChatBotDetail {
     required TResult Function(ChatWithAILoadBotAI value) loadBotAI,
     required TResult Function(ChatWithAIGetChatBotDetail value)
         getChatBotDetail,
+    required TResult Function(ChatWithAIGetChatWithBotHistory value)
+        getChatWithBotHistory,
   }) {
     return getChatBotDetail(this);
   }
@@ -632,6 +702,8 @@ class _$ChatWithAIGetChatBotDetailImpl implements ChatWithAIGetChatBotDetail {
     TResult? Function(ChatWithAISendMessage value)? sendMessage,
     TResult? Function(ChatWithAILoadBotAI value)? loadBotAI,
     TResult? Function(ChatWithAIGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(ChatWithAIGetChatWithBotHistory value)?
+        getChatWithBotHistory,
   }) {
     return getChatBotDetail?.call(this);
   }
@@ -643,6 +715,8 @@ class _$ChatWithAIGetChatBotDetailImpl implements ChatWithAIGetChatBotDetail {
     TResult Function(ChatWithAISendMessage value)? sendMessage,
     TResult Function(ChatWithAILoadBotAI value)? loadBotAI,
     TResult Function(ChatWithAIGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(ChatWithAIGetChatWithBotHistory value)?
+        getChatWithBotHistory,
     required TResult orElse(),
   }) {
     if (getChatBotDetail != null) {
@@ -653,12 +727,216 @@ class _$ChatWithAIGetChatBotDetailImpl implements ChatWithAIGetChatBotDetail {
 }
 
 abstract class ChatWithAIGetChatBotDetail implements ChatWithAiEvent {
-  const factory ChatWithAIGetChatBotDetail(final int chatBotID) =
+  const factory ChatWithAIGetChatBotDetail(
+          final int chatBotID, final bool isPopularBot) =
       _$ChatWithAIGetChatBotDetailImpl;
 
   int get chatBotID;
+  bool get isPopularBot;
   @JsonKey(ignore: true)
   _$$ChatWithAIGetChatBotDetailImplCopyWith<_$ChatWithAIGetChatBotDetailImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ChatWithAIGetChatWithBotHistoryImplCopyWith<$Res> {
+  factory _$$ChatWithAIGetChatWithBotHistoryImplCopyWith(
+          _$ChatWithAIGetChatWithBotHistoryImpl value,
+          $Res Function(_$ChatWithAIGetChatWithBotHistoryImpl) then) =
+      __$$ChatWithAIGetChatWithBotHistoryImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int chatBotID, int page, int limit, String search});
+}
+
+/// @nodoc
+class __$$ChatWithAIGetChatWithBotHistoryImplCopyWithImpl<$Res>
+    extends _$ChatWithAiEventCopyWithImpl<$Res,
+        _$ChatWithAIGetChatWithBotHistoryImpl>
+    implements _$$ChatWithAIGetChatWithBotHistoryImplCopyWith<$Res> {
+  __$$ChatWithAIGetChatWithBotHistoryImplCopyWithImpl(
+      _$ChatWithAIGetChatWithBotHistoryImpl _value,
+      $Res Function(_$ChatWithAIGetChatWithBotHistoryImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? chatBotID = null,
+    Object? page = null,
+    Object? limit = null,
+    Object? search = null,
+  }) {
+    return _then(_$ChatWithAIGetChatWithBotHistoryImpl(
+      chatBotID: null == chatBotID
+          ? _value.chatBotID
+          : chatBotID // ignore: cast_nullable_to_non_nullable
+              as int,
+      page: null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+      limit: null == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int,
+      search: null == search
+          ? _value.search
+          : search // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChatWithAIGetChatWithBotHistoryImpl
+    implements ChatWithAIGetChatWithBotHistory {
+  const _$ChatWithAIGetChatWithBotHistoryImpl(
+      {required this.chatBotID,
+      required this.page,
+      required this.limit,
+      required this.search});
+
+  @override
+  final int chatBotID;
+  @override
+  final int page;
+  @override
+  final int limit;
+  @override
+  final String search;
+
+  @override
+  String toString() {
+    return 'ChatWithAiEvent.getChatWithBotHistory(chatBotID: $chatBotID, page: $page, limit: $limit, search: $search)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChatWithAIGetChatWithBotHistoryImpl &&
+            (identical(other.chatBotID, chatBotID) ||
+                other.chatBotID == chatBotID) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.search, search) || other.search == search));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, chatBotID, page, limit, search);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChatWithAIGetChatWithBotHistoryImplCopyWith<
+          _$ChatWithAIGetChatWithBotHistoryImpl>
+      get copyWith => __$$ChatWithAIGetChatWithBotHistoryImplCopyWithImpl<
+          _$ChatWithAIGetChatWithBotHistoryImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(SendMessageToBotAIModel data) sendMessage,
+    required TResult Function(int chatBotID) loadBotAI,
+    required TResult Function(int chatBotID, bool isPopularBot)
+        getChatBotDetail,
+    required TResult Function(int chatBotID, int page, int limit, String search)
+        getChatWithBotHistory,
+  }) {
+    return getChatWithBotHistory(chatBotID, page, limit, search);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(SendMessageToBotAIModel data)? sendMessage,
+    TResult? Function(int chatBotID)? loadBotAI,
+    TResult? Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
+  }) {
+    return getChatWithBotHistory?.call(chatBotID, page, limit, search);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(SendMessageToBotAIModel data)? sendMessage,
+    TResult Function(int chatBotID)? loadBotAI,
+    TResult Function(int chatBotID, bool isPopularBot)? getChatBotDetail,
+    TResult Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
+    required TResult orElse(),
+  }) {
+    if (getChatWithBotHistory != null) {
+      return getChatWithBotHistory(chatBotID, page, limit, search);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ChatWithAISendMessage value) sendMessage,
+    required TResult Function(ChatWithAILoadBotAI value) loadBotAI,
+    required TResult Function(ChatWithAIGetChatBotDetail value)
+        getChatBotDetail,
+    required TResult Function(ChatWithAIGetChatWithBotHistory value)
+        getChatWithBotHistory,
+  }) {
+    return getChatWithBotHistory(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ChatWithAISendMessage value)? sendMessage,
+    TResult? Function(ChatWithAILoadBotAI value)? loadBotAI,
+    TResult? Function(ChatWithAIGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(ChatWithAIGetChatWithBotHistory value)?
+        getChatWithBotHistory,
+  }) {
+    return getChatWithBotHistory?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ChatWithAISendMessage value)? sendMessage,
+    TResult Function(ChatWithAILoadBotAI value)? loadBotAI,
+    TResult Function(ChatWithAIGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(ChatWithAIGetChatWithBotHistory value)?
+        getChatWithBotHistory,
+    required TResult orElse(),
+  }) {
+    if (getChatWithBotHistory != null) {
+      return getChatWithBotHistory(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChatWithAIGetChatWithBotHistory implements ChatWithAiEvent {
+  const factory ChatWithAIGetChatWithBotHistory(
+      {required final int chatBotID,
+      required final int page,
+      required final int limit,
+      required final String search}) = _$ChatWithAIGetChatWithBotHistoryImpl;
+
+  int get chatBotID;
+  int get page;
+  int get limit;
+  String get search;
+  @JsonKey(ignore: true)
+  _$$ChatWithAIGetChatWithBotHistoryImplCopyWith<
+          _$ChatWithAIGetChatWithBotHistoryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -673,6 +951,8 @@ mixin _$ChatWithAiState {
     required TResult Function() loadBotAISuccess,
     required TResult Function(AICharacterBotModel aiCharacterBot)
         getChatBotDetailSuccess,
+    required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
+        getChatWithBotHistorySuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -684,6 +964,8 @@ mixin _$ChatWithAiState {
     TResult? Function()? loadBotAISuccess,
     TResult? Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -695,6 +977,8 @@ mixin _$ChatWithAiState {
     TResult Function()? loadBotAISuccess,
     TResult Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -709,6 +993,8 @@ mixin _$ChatWithAiState {
         loadBotAISuccess,
     required TResult Function(ChatWithAIGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)
+        getChatWithBotHistorySuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -720,6 +1006,8 @@ mixin _$ChatWithAiState {
     TResult? Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult? Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -731,6 +1019,8 @@ mixin _$ChatWithAiState {
     TResult Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -799,6 +1089,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loadBotAISuccess,
     required TResult Function(AICharacterBotModel aiCharacterBot)
         getChatBotDetailSuccess,
+    required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
+        getChatWithBotHistorySuccess,
   }) {
     return initial();
   }
@@ -813,6 +1105,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loadBotAISuccess,
     TResult? Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
   }) {
     return initial?.call();
   }
@@ -827,6 +1121,8 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loadBotAISuccess,
     TResult Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -847,6 +1143,8 @@ class _$InitialImpl implements _Initial {
         loadBotAISuccess,
     required TResult Function(ChatWithAIGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)
+        getChatWithBotHistorySuccess,
   }) {
     return initial(this);
   }
@@ -861,6 +1159,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult? Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
   }) {
     return initial?.call(this);
   }
@@ -875,6 +1175,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -933,6 +1235,8 @@ class _$ChatWithAILoadingImpl implements ChatWithAILoading {
     required TResult Function() loadBotAISuccess,
     required TResult Function(AICharacterBotModel aiCharacterBot)
         getChatBotDetailSuccess,
+    required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
+        getChatWithBotHistorySuccess,
   }) {
     return loading();
   }
@@ -947,6 +1251,8 @@ class _$ChatWithAILoadingImpl implements ChatWithAILoading {
     TResult? Function()? loadBotAISuccess,
     TResult? Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
   }) {
     return loading?.call();
   }
@@ -961,6 +1267,8 @@ class _$ChatWithAILoadingImpl implements ChatWithAILoading {
     TResult Function()? loadBotAISuccess,
     TResult Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -981,6 +1289,8 @@ class _$ChatWithAILoadingImpl implements ChatWithAILoading {
         loadBotAISuccess,
     required TResult Function(ChatWithAIGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)
+        getChatWithBotHistorySuccess,
   }) {
     return loading(this);
   }
@@ -995,6 +1305,8 @@ class _$ChatWithAILoadingImpl implements ChatWithAILoading {
     TResult? Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult? Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
   }) {
     return loading?.call(this);
   }
@@ -1009,6 +1321,8 @@ class _$ChatWithAILoadingImpl implements ChatWithAILoading {
     TResult Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1102,6 +1416,8 @@ class _$ChatWithAIErrorImpl implements ChatWithAIError {
     required TResult Function() loadBotAISuccess,
     required TResult Function(AICharacterBotModel aiCharacterBot)
         getChatBotDetailSuccess,
+    required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
+        getChatWithBotHistorySuccess,
   }) {
     return error(title, msg);
   }
@@ -1116,6 +1432,8 @@ class _$ChatWithAIErrorImpl implements ChatWithAIError {
     TResult? Function()? loadBotAISuccess,
     TResult? Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
   }) {
     return error?.call(title, msg);
   }
@@ -1130,6 +1448,8 @@ class _$ChatWithAIErrorImpl implements ChatWithAIError {
     TResult Function()? loadBotAISuccess,
     TResult Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1150,6 +1470,8 @@ class _$ChatWithAIErrorImpl implements ChatWithAIError {
         loadBotAISuccess,
     required TResult Function(ChatWithAIGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)
+        getChatWithBotHistorySuccess,
   }) {
     return error(this);
   }
@@ -1164,6 +1486,8 @@ class _$ChatWithAIErrorImpl implements ChatWithAIError {
     TResult? Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult? Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
   }) {
     return error?.call(this);
   }
@@ -1178,6 +1502,8 @@ class _$ChatWithAIErrorImpl implements ChatWithAIError {
     TResult Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1276,6 +1602,8 @@ class _$ChatWithAISendMessageSuccessImpl
     required TResult Function() loadBotAISuccess,
     required TResult Function(AICharacterBotModel aiCharacterBot)
         getChatBotDetailSuccess,
+    required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
+        getChatWithBotHistorySuccess,
   }) {
     return sendMessageSuccess(msg);
   }
@@ -1290,6 +1618,8 @@ class _$ChatWithAISendMessageSuccessImpl
     TResult? Function()? loadBotAISuccess,
     TResult? Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
   }) {
     return sendMessageSuccess?.call(msg);
   }
@@ -1304,6 +1634,8 @@ class _$ChatWithAISendMessageSuccessImpl
     TResult Function()? loadBotAISuccess,
     TResult Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) {
     if (sendMessageSuccess != null) {
@@ -1324,6 +1656,8 @@ class _$ChatWithAISendMessageSuccessImpl
         loadBotAISuccess,
     required TResult Function(ChatWithAIGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)
+        getChatWithBotHistorySuccess,
   }) {
     return sendMessageSuccess(this);
   }
@@ -1338,6 +1672,8 @@ class _$ChatWithAISendMessageSuccessImpl
     TResult? Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult? Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
   }) {
     return sendMessageSuccess?.call(this);
   }
@@ -1352,6 +1688,8 @@ class _$ChatWithAISendMessageSuccessImpl
     TResult Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) {
     if (sendMessageSuccess != null) {
@@ -1421,6 +1759,8 @@ class _$ChatWithAILoadBotAISuccessImpl implements ChatWithAILoadBotAISuccess {
     required TResult Function() loadBotAISuccess,
     required TResult Function(AICharacterBotModel aiCharacterBot)
         getChatBotDetailSuccess,
+    required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
+        getChatWithBotHistorySuccess,
   }) {
     return loadBotAISuccess();
   }
@@ -1435,6 +1775,8 @@ class _$ChatWithAILoadBotAISuccessImpl implements ChatWithAILoadBotAISuccess {
     TResult? Function()? loadBotAISuccess,
     TResult? Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
   }) {
     return loadBotAISuccess?.call();
   }
@@ -1449,6 +1791,8 @@ class _$ChatWithAILoadBotAISuccessImpl implements ChatWithAILoadBotAISuccess {
     TResult Function()? loadBotAISuccess,
     TResult Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) {
     if (loadBotAISuccess != null) {
@@ -1469,6 +1813,8 @@ class _$ChatWithAILoadBotAISuccessImpl implements ChatWithAILoadBotAISuccess {
         loadBotAISuccess,
     required TResult Function(ChatWithAIGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)
+        getChatWithBotHistorySuccess,
   }) {
     return loadBotAISuccess(this);
   }
@@ -1483,6 +1829,8 @@ class _$ChatWithAILoadBotAISuccessImpl implements ChatWithAILoadBotAISuccess {
     TResult? Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult? Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
   }) {
     return loadBotAISuccess?.call(this);
   }
@@ -1497,6 +1845,8 @@ class _$ChatWithAILoadBotAISuccessImpl implements ChatWithAILoadBotAISuccess {
     TResult Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) {
     if (loadBotAISuccess != null) {
@@ -1598,6 +1948,8 @@ class _$ChatWithAIGetChatBotDetailSuccessImpl
     required TResult Function() loadBotAISuccess,
     required TResult Function(AICharacterBotModel aiCharacterBot)
         getChatBotDetailSuccess,
+    required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
+        getChatWithBotHistorySuccess,
   }) {
     return getChatBotDetailSuccess(aiCharacterBot);
   }
@@ -1612,6 +1964,8 @@ class _$ChatWithAIGetChatBotDetailSuccessImpl
     TResult? Function()? loadBotAISuccess,
     TResult? Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
   }) {
     return getChatBotDetailSuccess?.call(aiCharacterBot);
   }
@@ -1626,6 +1980,8 @@ class _$ChatWithAIGetChatBotDetailSuccessImpl
     TResult Function()? loadBotAISuccess,
     TResult Function(AICharacterBotModel aiCharacterBot)?
         getChatBotDetailSuccess,
+    TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) {
     if (getChatBotDetailSuccess != null) {
@@ -1646,6 +2002,8 @@ class _$ChatWithAIGetChatBotDetailSuccessImpl
         loadBotAISuccess,
     required TResult Function(ChatWithAIGetChatBotDetailSuccess value)
         getChatBotDetailSuccess,
+    required TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)
+        getChatWithBotHistorySuccess,
   }) {
     return getChatBotDetailSuccess(this);
   }
@@ -1660,6 +2018,8 @@ class _$ChatWithAIGetChatBotDetailSuccessImpl
     TResult? Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult? Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult? Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
   }) {
     return getChatBotDetailSuccess?.call(this);
   }
@@ -1674,6 +2034,8 @@ class _$ChatWithAIGetChatBotDetailSuccessImpl
     TResult Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
     TResult Function(ChatWithAIGetChatBotDetailSuccess value)?
         getChatBotDetailSuccess,
+    TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
     required TResult orElse(),
   }) {
     if (getChatBotDetailSuccess != null) {
@@ -1692,5 +2054,202 @@ abstract class ChatWithAIGetChatBotDetailSuccess implements ChatWithAiState {
   @JsonKey(ignore: true)
   _$$ChatWithAIGetChatBotDetailSuccessImplCopyWith<
           _$ChatWithAIGetChatBotDetailSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ChatWithAIGetChatWithBotHistorySuccessImplCopyWith<$Res> {
+  factory _$$ChatWithAIGetChatWithBotHistorySuccessImplCopyWith(
+          _$ChatWithAIGetChatWithBotHistorySuccessImpl value,
+          $Res Function(_$ChatWithAIGetChatWithBotHistorySuccessImpl) then) =
+      __$$ChatWithAIGetChatWithBotHistorySuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<ChatBotMessageHistoryModel> messagesHistory});
+}
+
+/// @nodoc
+class __$$ChatWithAIGetChatWithBotHistorySuccessImplCopyWithImpl<$Res>
+    extends _$ChatWithAiStateCopyWithImpl<$Res,
+        _$ChatWithAIGetChatWithBotHistorySuccessImpl>
+    implements _$$ChatWithAIGetChatWithBotHistorySuccessImplCopyWith<$Res> {
+  __$$ChatWithAIGetChatWithBotHistorySuccessImplCopyWithImpl(
+      _$ChatWithAIGetChatWithBotHistorySuccessImpl _value,
+      $Res Function(_$ChatWithAIGetChatWithBotHistorySuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? messagesHistory = null,
+  }) {
+    return _then(_$ChatWithAIGetChatWithBotHistorySuccessImpl(
+      null == messagesHistory
+          ? _value._messagesHistory
+          : messagesHistory // ignore: cast_nullable_to_non_nullable
+              as List<ChatBotMessageHistoryModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChatWithAIGetChatWithBotHistorySuccessImpl
+    implements ChatWithAIGetChatWithBotHistorySuccess {
+  const _$ChatWithAIGetChatWithBotHistorySuccessImpl(
+      final List<ChatBotMessageHistoryModel> messagesHistory)
+      : _messagesHistory = messagesHistory;
+
+  final List<ChatBotMessageHistoryModel> _messagesHistory;
+  @override
+  List<ChatBotMessageHistoryModel> get messagesHistory {
+    if (_messagesHistory is EqualUnmodifiableListView) return _messagesHistory;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_messagesHistory);
+  }
+
+  @override
+  String toString() {
+    return 'ChatWithAiState.getChatWithBotHistorySuccess(messagesHistory: $messagesHistory)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChatWithAIGetChatWithBotHistorySuccessImpl &&
+            const DeepCollectionEquality()
+                .equals(other._messagesHistory, _messagesHistory));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_messagesHistory));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChatWithAIGetChatWithBotHistorySuccessImplCopyWith<
+          _$ChatWithAIGetChatWithBotHistorySuccessImpl>
+      get copyWith =>
+          __$$ChatWithAIGetChatWithBotHistorySuccessImplCopyWithImpl<
+              _$ChatWithAIGetChatWithBotHistorySuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String title, String msg) error,
+    required TResult Function(String msg) sendMessageSuccess,
+    required TResult Function() loadBotAISuccess,
+    required TResult Function(AICharacterBotModel aiCharacterBot)
+        getChatBotDetailSuccess,
+    required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
+        getChatWithBotHistorySuccess,
+  }) {
+    return getChatWithBotHistorySuccess(messagesHistory);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String title, String msg)? error,
+    TResult? Function(String msg)? sendMessageSuccess,
+    TResult? Function()? loadBotAISuccess,
+    TResult? Function(AICharacterBotModel aiCharacterBot)?
+        getChatBotDetailSuccess,
+    TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
+  }) {
+    return getChatWithBotHistorySuccess?.call(messagesHistory);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String title, String msg)? error,
+    TResult Function(String msg)? sendMessageSuccess,
+    TResult Function()? loadBotAISuccess,
+    TResult Function(AICharacterBotModel aiCharacterBot)?
+        getChatBotDetailSuccess,
+    TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
+        getChatWithBotHistorySuccess,
+    required TResult orElse(),
+  }) {
+    if (getChatWithBotHistorySuccess != null) {
+      return getChatWithBotHistorySuccess(messagesHistory);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ChatWithAILoading value) loading,
+    required TResult Function(ChatWithAIError value) error,
+    required TResult Function(ChatWithAISendMessageSuccess value)
+        sendMessageSuccess,
+    required TResult Function(ChatWithAILoadBotAISuccess value)
+        loadBotAISuccess,
+    required TResult Function(ChatWithAIGetChatBotDetailSuccess value)
+        getChatBotDetailSuccess,
+    required TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)
+        getChatWithBotHistorySuccess,
+  }) {
+    return getChatWithBotHistorySuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ChatWithAILoading value)? loading,
+    TResult? Function(ChatWithAIError value)? error,
+    TResult? Function(ChatWithAISendMessageSuccess value)? sendMessageSuccess,
+    TResult? Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
+    TResult? Function(ChatWithAIGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult? Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
+  }) {
+    return getChatWithBotHistorySuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ChatWithAILoading value)? loading,
+    TResult Function(ChatWithAIError value)? error,
+    TResult Function(ChatWithAISendMessageSuccess value)? sendMessageSuccess,
+    TResult Function(ChatWithAILoadBotAISuccess value)? loadBotAISuccess,
+    TResult Function(ChatWithAIGetChatBotDetailSuccess value)?
+        getChatBotDetailSuccess,
+    TResult Function(ChatWithAIGetChatWithBotHistorySuccess value)?
+        getChatWithBotHistorySuccess,
+    required TResult orElse(),
+  }) {
+    if (getChatWithBotHistorySuccess != null) {
+      return getChatWithBotHistorySuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChatWithAIGetChatWithBotHistorySuccess
+    implements ChatWithAiState {
+  const factory ChatWithAIGetChatWithBotHistorySuccess(
+          final List<ChatBotMessageHistoryModel> messagesHistory) =
+      _$ChatWithAIGetChatWithBotHistorySuccessImpl;
+
+  List<ChatBotMessageHistoryModel> get messagesHistory;
+  @JsonKey(ignore: true)
+  _$$ChatWithAIGetChatWithBotHistorySuccessImplCopyWith<
+          _$ChatWithAIGetChatWithBotHistorySuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

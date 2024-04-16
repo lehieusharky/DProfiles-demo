@@ -4,9 +4,8 @@ import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
-import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/bloc/edit_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +26,7 @@ class _AddNewExperiencePageState extends State<AddNewExperiencePage> {
 
   final _endDateController = TextEditingController();
 
-  final _locationController = TextEditingController();
+  // final _locationController = TextEditingController();
 
   final _startDateController = TextEditingController();
 
@@ -38,14 +37,14 @@ class _AddNewExperiencePageState extends State<AddNewExperiencePage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => injector.get<ProfileBloc>(),
-      child: BlocConsumer<ProfileBloc, ProfileState>(
+      create: (context) => injector.get<EditProfileBloc>(),
+      child: BlocConsumer<EditProfileBloc, EditProfileState>(
         listener: (context, state) {
-          if (state is ProfileLoading) {
+          if (state is EditProfileLoading) {
             showLoadingDialog(context);
           }
 
-          if (state is ProfileAddNewExperienceSuccess) {
+          if (state is EditProfileAddNewExperienceSuccess) {
             Navigator.pop(context);
             showMyDialog(context,
                 title: const Text('Add success'),
@@ -99,22 +98,22 @@ class _AddNewExperiencePageState extends State<AddNewExperiencePage> {
                           },
                         ),
                       ),
-                      Padding(
-                        padding: context.padding(top: 32),
-                        child: AuthField(
-                          controller: _locationController,
-                          textInputAction: TextInputAction.next,
-                          title: 'Location'.toUpperCase(),
-                          hint: 'Location',
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return appLocal(context).fieldCannotBeEmpty;
-                            } else {
-                              return null;
-                            }
-                          },
-                        ),
-                      ),
+                      // Padding(
+                      //   padding: context.padding(top: 32),
+                      //   child: AuthField(
+                      //     controller: _locationController,
+                      //     textInputAction: TextInputAction.next,
+                      //     title: 'Location'.toUpperCase(),
+                      //     hint: 'Location',
+                      //     validator: (value) {
+                      //       if (value == null || value.isEmpty) {
+                      //         return appLocal(context).fieldCannotBeEmpty;
+                      //       } else {
+                      //         return null;
+                      //       }
+                      //     },
+                      //   ),
+                      // ),
                       Padding(
                         padding: context.padding(top: 32),
                         child: AuthField(
@@ -180,7 +179,7 @@ class _AddNewExperiencePageState extends State<AddNewExperiencePage> {
         // endDate: _endDateController.text.convertToIOSDateTimeFormat(),
       );
 
-      context.read<ProfileBloc>().add(ProfileAddNewExperience(newData));
+      context.read<EditProfileBloc>().add(EditProfileAddNewExperience(newData));
     }
   }
 }

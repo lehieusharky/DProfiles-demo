@@ -7,4 +7,6 @@ class HomeEvent with _$HomeEvent {
   const factory HomeEvent.refreshNewsFeed() = HomeRefreshNewsFeed;
 
   const factory HomeEvent.loadMoreNewsFeed() = HomeLoadMoreNewsFeed;
+
+  const factory HomeEvent.getUserInfo() = HomeGetUserInfo;
 }

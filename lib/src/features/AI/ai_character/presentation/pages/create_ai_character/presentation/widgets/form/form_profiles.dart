@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai_character_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/extensions/ext_models/ext_certificate_model.dart';
 import 'package:demo_dprofiles/src/utils/extensions/ext_models/ext_education_model.dart';
@@ -28,7 +30,7 @@ class _FormProfilesState extends State<FormProfiles> {
 
   @override
   Widget build(BuildContext context) {
-    certificates = context.watch<AiCharacterBloc>().certificates;
+    educations = context.watch<AiCharacterBloc>().educations;
     certificates = context.watch<AiCharacterBloc>().certificates;
     experiences = context.watch<AiCharacterBloc>().experiences;
 
@@ -58,7 +60,20 @@ class _FormProfilesState extends State<FormProfiles> {
                 ),
               ),
               Column(
-                children: educations.map((e) => e.toWidget(context)).toList(),
+                children: educations
+                    .map((e) => e.toWidget(context,
+                        onUpdate: () => context.router
+                            .push(FormEditEducationRoute(educationModel: e))
+                            .then((value) => value == null
+                                ? null
+                                : context.read<AiCharacterBloc>().add(
+                                    AICharacterEditEducation(
+                                        educations.indexOf(e),
+                                        value as EducationModel))),
+                        onDelete: () => context
+                            .read<AiCharacterBloc>()
+                            .add(AICharacterRemoveEducation(e))))
+                    .toList(),
               ),
               Padding(
                 padding: context.padding(bottom: 15, top: 27),
@@ -70,19 +85,45 @@ class _FormProfilesState extends State<FormProfiles> {
                 ),
               ),
               Column(
-                children: certificates.map((e) => e.toWidget(context)).toList(),
+                children: certificates
+                    .map((e) => e.toWidget(context,
+                        onUpdate: () => context.router
+                            .push(FormEditCertificateRoute(certificateModel: e))
+                            .then((value) => value == null
+                                ? null
+                                : context.read<AiCharacterBloc>().add(
+                                    AICharacterEditCertificate(
+                                        certificates.indexOf(e),
+                                        value as CertificateModel))),
+                        onDelete: () => context
+                            .read<AiCharacterBloc>()
+                            .add(AICharacterRemoveCertificate(e))))
+                    .toList(),
               ),
               Padding(
                 padding: context.padding(bottom: 15, top: 27),
                 child: Text(
-                  appLocal(context).experiences,
+                  'Experiences',
                   style: AppFont()
                       .fontTheme(context, weight: FontWeight.bold)
                       .bodyLarge,
                 ),
               ),
               Column(
-                children: experiences.map((e) => e.toWidget(context)).toList(),
+                children: experiences
+                    .map((e) => e.toWidget(context,
+                        onUpdate: () => context.router
+                            .push(FormEditExperienceRoute(experienceModel: e))
+                            .then((value) => value == null
+                                ? null
+                                : context.read<AiCharacterBloc>().add(
+                                    AICharacterEditExperience(
+                                        experiences.indexOf(e),
+                                        value as ExperienceModel))),
+                        onDelete: () => context
+                            .read<AiCharacterBloc>()
+                            .add(AICharacterRemoveExperience(e))))
+                    .toList(),
               ),
               Padding(
                 padding: context.padding(vertical: 32),

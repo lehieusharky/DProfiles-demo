@@ -8,6 +8,7 @@ import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets/tabbar_ai_character.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,18 +20,7 @@ class AiCharacterPage extends StatefulWidget {
 }
 
 class _AiCharacterPageState extends State<AiCharacterPage>
-    with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin {
-  late TabController _tabController;
-
-  @override
-  void initState() {
-    super.initState();
-    _tabController = TabController(length: 2, vsync: this);
-    _tabController.addListener(() {
-      _onTabChange(_tabController.index);
-    });
-  }
-
+    with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -50,35 +40,31 @@ class _AiCharacterPageState extends State<AiCharacterPage>
             useAppBar: true,
             horizontalMargin: 20,
             topPadding: 20,
-            body: SingleChildScrollView(
-              child: Column(
-                children: [
-                  AppFlatButton(context).elevatedButton(
+            body: NestedScrollView(
+              headerSliverBuilder:
+                  (BuildContext context, bool innerBoxIsScrolled) => [
+                MySliverAppBar(
+                  height: 50,
+                  child: AppFlatButton(context).elevatedButton(
                       title: 'Create AI Character',
                       onPressed: () =>
                           context.router.push(const CreateAiCharacterRoute())),
-                  TabBarAICharacter(controller: _tabController),
-                  SizedBox(height: context.sizeHeight(16)),
-                  const CharacterBots(),
-                ],
+                ),
+              ],
+              body: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const TabBarAICharacter(),
+                    SizedBox(height: context.sizeHeight(16)),
+                    const CharacterBots(),
+                  ],
+                ),
               ),
             ),
           ),
         ),
       ),
     );
-  }
-
-  void _onTabChange(int index) {
-    final bloc = injector.get<AiCharacterBloc>();
-    switch (index) {
-      case 0:
-        bloc.add(const GetListPopularCharacterBot());
-        break;
-      case 1:
-        bloc.add(const GetListCharacterBot());
-        break;
-    }
   }
 
   @override

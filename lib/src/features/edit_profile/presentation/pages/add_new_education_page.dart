@@ -4,8 +4,8 @@ import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/bloc/edit_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
@@ -35,14 +35,14 @@ class _AddNewEducationPageState extends State<AddNewEducationPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => injector.get<ProfileBloc>(),
-      child: BlocConsumer<ProfileBloc, ProfileState>(
+      create: (context) => injector.get<EditProfileBloc>(),
+      child: BlocConsumer<EditProfileBloc, EditProfileState>(
         listener: (context, state) {
-          if (state is ProfileLoading) {
+          if (state is EditProfileLoading) {
             showLoadingDialog(context);
           }
 
-          if (state is ProfileAddNewEducationSuccess) {
+          if (state is EditProfileAddNewEducationSuccess) {
             Navigator.pop(context);
             showMyDialog(context,
                 title: const Text('Add success'),
@@ -155,13 +155,14 @@ class _AddNewEducationPageState extends State<AddNewEducationPage> {
   void _save(BuildContext context) {
     if (_keyForm.currentState?.validate() ?? false) {
       final newData = EducationModel(
-          schoolName: _nameController.text,
-          description: _descritptionController.text,
-          degreeID: int.parse(_degreeController.text),
-          startDate: _startDateController.text.convertToIOSDateTimeFormat(),
-          endDate: _endDateController.text.convertToIOSDateTimeFormat());
+        schoolName: _nameController.text,
+        description: _descritptionController.text,
+        degreeID: int.parse(_degreeController.text),
+        startDate: _startDateController.text.convertToIOSDateTimeFormat(),
+        // endDate: _endDateController.text.convertToIOSDateTimeFormat(),
+      );
 
-      context.read<ProfileBloc>().add(ProfileAddNewEducation(newData));
+      context.read<EditProfileBloc>().add(EditProfileAddNewEducation(newData));
     }
   }
 }

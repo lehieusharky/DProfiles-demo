@@ -37,4 +37,30 @@ class AiCharacterState with _$AiCharacterState {
 
   const factory AiCharacterState.getListPopularCharacterBotSuccess(
       List<AICharacterBotModel> bots) = GetListPopularCharacterBotSuccess;
+
+  const factory AiCharacterState.getChatBotDetailSuccess(
+          AICharacterBotModel characterBotDetail) =
+      AICharacterGetChatBotDetailSuccess;
+
+  const factory AiCharacterState.removeCertificateSuccess() =
+      AICharacterRemoveCertificateSuccess;
+
+  const factory AiCharacterState.removeEducationSuccess() =
+      AICharacterRemoveEducationSuccess;
+
+  const factory AiCharacterState.removeExperienceSuccess() =
+      AICharacterRemoveExperienceSuccess;
+
+  const factory AiCharacterState.editCertificateSuccess() =
+      AICharacterEditCertificateSuccess;
+
+  const factory AiCharacterState.editEducationSuccess() =
+      AICharacterEditEducationSuccess;
+
+  const factory AiCharacterState.editExperience() =
+      AICharacterEditExperienceSuccess;
+
+  const factory AiCharacterState.getChatWithBotHistorySuccess(
+          List<ChatBotMessageHistoryModel> messagesHistory) =
+      AICharacterGetChatWithBotHistorySuccess;
 }

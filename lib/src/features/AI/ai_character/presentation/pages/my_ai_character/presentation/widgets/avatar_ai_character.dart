@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -10,26 +11,21 @@ import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_butto
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
-class AvatarAICharacter extends StatefulWidget {
-  final String name;
-  final String shortDescription;
-  final String longDescription;
-  final String greeting;
-  final int? id;
+class HeaderMyAICharacter extends StatefulWidget {
+  final AICharacterBotModel botInfo;
+  final bool isPopularBot;
 
-  const AvatarAICharacter(
-      {super.key,
-      required this.name,
-      required this.shortDescription,
-      required this.longDescription,
-      required this.greeting,
-      required this.id});
+  const HeaderMyAICharacter({
+    super.key,
+    required this.botInfo,
+    required this.isPopularBot,
+  });
 
   @override
-  State<AvatarAICharacter> createState() => _AvatarAICharacterState();
+  State<HeaderMyAICharacter> createState() => _HeaderMyAICharacterState();
 }
 
-class _AvatarAICharacterState extends State<AvatarAICharacter> {
+class _HeaderMyAICharacterState extends State<HeaderMyAICharacter> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -66,7 +62,7 @@ class _AvatarAICharacterState extends State<AvatarAICharacter> {
               Padding(
                 padding: context.padding(top: 14, bottom: 28),
                 child: Text(
-                  widget.longDescription,
+                  widget.botInfo.definition!.shortDescription ?? '',
                   style: AppFont().fontTheme(context, height: 1.5).bodyMedium,
                   textAlign: TextAlign.center,
                 ),
@@ -77,10 +73,9 @@ class _AvatarAICharacterState extends State<AvatarAICharacter> {
                     child: AppFlatButton(context).elevatedButton(
                         width: context.width,
                         title: appLocal(context).chat,
-                        onPressed: widget.id == null
-                            ? null
-                            : () => context.router
-                                .push(ChatWithAiRoute(botId: widget.id!))),
+                        onPressed: () => context.router.push(ChatWithAiRoute(
+                            botId: widget.botInfo.id!,
+                            isPopularBot: widget.isPopularBot))),
                   ),
                   context.sizedBox(width: 12),
                   IconButton.outlined(
@@ -98,9 +93,10 @@ class _AvatarAICharacterState extends State<AvatarAICharacter> {
                 padding: context.padding(top: 35),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: colorScheme(context).outlineVariant.withOpacity(0.1),
-                    border:
-                        Border.all(color: colorScheme(context).outlineVariant),
+                    color:
+                        colorScheme(context).outlineVariant.withOpacity(0.1),
+                    border: Border.all(
+                        color: colorScheme(context).outlineVariant),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   padding: context.padding(vertical: 12, horizontal: 20),
@@ -124,7 +120,7 @@ class _AvatarAICharacterState extends State<AvatarAICharacter> {
                       Padding(
                         padding: context.padding(top: 8),
                         child: Text(
-                          widget.shortDescription,
+                          widget.botInfo.definition!.longDescription ?? "",
                           style: AppFont()
                               .fontTheme(context, height: 1.7)
                               .bodySmall,
@@ -180,14 +176,14 @@ class _AvatarAICharacterState extends State<AvatarAICharacter> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Text(
-          widget.name,
+          widget.botInfo.name ?? '',
           style:
               AppFont().fontTheme(context, weight: FontWeight.bold).labelMedium,
         ),
         Padding(
           padding: context.padding(top: 4),
           child: Text(
-            "@${widget.name}",
+            "@${widget.botInfo.name}",
             style: AppFont()
                 .fontTheme(context, color: colorScheme(context).outline)
                 .bodySmall,

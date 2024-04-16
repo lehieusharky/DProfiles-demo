@@ -142,6 +142,9 @@ abstract class RestClient {
   @GET('/api/v1/character-chatbot/popular')
   Future<BaseResponse> getListPopularCharacterBot();
 
+  @POST('/api/v1/chatbot-follow')
+  Future<BaseResponse> followBot();
+
   // community
   @GET('/api/v1/post/newsFeed')
   Future<BaseResponse> getNewsFeed(
@@ -157,13 +160,46 @@ abstract class RestClient {
   @POST('/api/v1/user-skill')
   Future<BaseResponse> addNewUseSkill(@Body() Map<String, dynamic> body);
 
-  @DELETE('/api/v1/user-skill')
+  @GET('/api/v1/user-skill/{id}')
+  Future<BaseResponse> getUserSkillDetail(@Path() String id);
+
+  @DELETE('/api/v1/user-skill/{id}')
   Future<BaseResponse> deleteUserSkill(@Path() String id);
+
+  @PUT('/api/v1/user-skill/{id}')
+  Future<BaseResponse> updateUserSkill(
+      @Path() String id, @Body() Map<String, dynamic> body);
+
+  // language
+
+  @GET('/api/v1/user-language')
+  Future<BaseResponse> getUserLanguages();
+
+  @POST('/api/v1/user-language')
+  Future<BaseResponse> addNewUseLanguage(@Body() Map<String, dynamic> body);
+
+  @GET('/api/v1/user-language/{id}')
+  Future<BaseResponse> getUserLanguageDetail(@Path() String id);
+
+  @DELETE('/api/v1/user-language/{id}')
+  Future<BaseResponse> deleteUserLanguage(@Path() String id);
+
+  @PUT('/api/v1/user-language/{id}')
+  Future<BaseResponse> updateUserLanguage(
+      @Path() String id, @Body() Map<String, dynamic> body);
 
   // chat with ai
 
   @POST('https://char.dev.dprofiles.xyz/chat/')
   Future<BaseResponse> chatWithBotAI(@Body() Map<String, dynamic> body);
+
+  @GET('/api/v1/chatbot-message-history')
+  Future<BaseResponse> getChatBotHistory(
+    @Query('search') String search,
+    @Query('page') int page,
+    @Query('limit') int limit,
+    @Query('chatbot_id') int chatBotID,
+  );
 
   // forgot password
 

@@ -1,10 +1,10 @@
-
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai_character_bloc.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:demo_dprofiles/src/utils/constant/ai_character_bot_properties.dart';
+import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -37,9 +37,27 @@ class _SliderSetPropertyCharacterState
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(
-            widget.property.getTitle(),
-            style: AppFont().fontTheme(context).bodyLarge,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                widget.property.getTitle(),
+                style: AppFont().fontTheme(context).bodyLarge,
+              ),
+              Padding(
+                padding: context.padding(horizontal: 10),
+                child: InkWell(
+                  onTap: () => setState(() {
+                    _rating = 0;
+                  }),
+                  child: Icon(
+                    Icons.cancel_outlined,
+                    size: 20,
+                    color: colorScheme(context).outline,
+                  ),
+                ),
+              ),
+            ],
           ),
           Padding(
             padding: context.padding(top: 5),

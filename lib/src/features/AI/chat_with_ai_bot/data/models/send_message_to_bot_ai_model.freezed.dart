@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'chat_with_ai_model.dart';
+part of 'send_message_to_bot_ai_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,13 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-ChatWIthAIModel _$ChatWIthAIModelFromJson(Map<String, dynamic> json) {
-  return _ChatWIthAIModel.fromJson(json);
+SendMessageToBotAIModel _$SendMessageToBotAIModelFromJson(
+    Map<String, dynamic> json) {
+  return _SendMessageToBotAIModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ChatWIthAIModel {
+mixin _$SendMessageToBotAIModel {
   @JsonKey(name: 'session_id')
   int? get sessionId => throw _privateConstructorUsedError;
   @JsonKey(name: 'chat_bot_id')
@@ -28,15 +29,15 @@ mixin _$ChatWIthAIModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ChatWIthAIModelCopyWith<ChatWIthAIModel> get copyWith =>
+  $SendMessageToBotAIModelCopyWith<SendMessageToBotAIModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ChatWIthAIModelCopyWith<$Res> {
-  factory $ChatWIthAIModelCopyWith(
-          ChatWIthAIModel value, $Res Function(ChatWIthAIModel) then) =
-      _$ChatWIthAIModelCopyWithImpl<$Res, ChatWIthAIModel>;
+abstract class $SendMessageToBotAIModelCopyWith<$Res> {
+  factory $SendMessageToBotAIModelCopyWith(SendMessageToBotAIModel value,
+          $Res Function(SendMessageToBotAIModel) then) =
+      _$SendMessageToBotAIModelCopyWithImpl<$Res, SendMessageToBotAIModel>;
   @useResult
   $Res call(
       {@JsonKey(name: 'session_id') int? sessionId,
@@ -45,9 +46,10 @@ abstract class $ChatWIthAIModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ChatWIthAIModelCopyWithImpl<$Res, $Val extends ChatWIthAIModel>
-    implements $ChatWIthAIModelCopyWith<$Res> {
-  _$ChatWIthAIModelCopyWithImpl(this._value, this._then);
+class _$SendMessageToBotAIModelCopyWithImpl<$Res,
+        $Val extends SendMessageToBotAIModel>
+    implements $SendMessageToBotAIModelCopyWith<$Res> {
+  _$SendMessageToBotAIModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -79,11 +81,12 @@ class _$ChatWIthAIModelCopyWithImpl<$Res, $Val extends ChatWIthAIModel>
 }
 
 /// @nodoc
-abstract class _$$ChatWIthAIModelImplCopyWith<$Res>
-    implements $ChatWIthAIModelCopyWith<$Res> {
-  factory _$$ChatWIthAIModelImplCopyWith(_$ChatWIthAIModelImpl value,
-          $Res Function(_$ChatWIthAIModelImpl) then) =
-      __$$ChatWIthAIModelImplCopyWithImpl<$Res>;
+abstract class _$$SendMessageToBotAIModelImplCopyWith<$Res>
+    implements $SendMessageToBotAIModelCopyWith<$Res> {
+  factory _$$SendMessageToBotAIModelImplCopyWith(
+          _$SendMessageToBotAIModelImpl value,
+          $Res Function(_$SendMessageToBotAIModelImpl) then) =
+      __$$SendMessageToBotAIModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -93,11 +96,13 @@ abstract class _$$ChatWIthAIModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ChatWIthAIModelImplCopyWithImpl<$Res>
-    extends _$ChatWIthAIModelCopyWithImpl<$Res, _$ChatWIthAIModelImpl>
-    implements _$$ChatWIthAIModelImplCopyWith<$Res> {
-  __$$ChatWIthAIModelImplCopyWithImpl(
-      _$ChatWIthAIModelImpl _value, $Res Function(_$ChatWIthAIModelImpl) _then)
+class __$$SendMessageToBotAIModelImplCopyWithImpl<$Res>
+    extends _$SendMessageToBotAIModelCopyWithImpl<$Res,
+        _$SendMessageToBotAIModelImpl>
+    implements _$$SendMessageToBotAIModelImplCopyWith<$Res> {
+  __$$SendMessageToBotAIModelImplCopyWithImpl(
+      _$SendMessageToBotAIModelImpl _value,
+      $Res Function(_$SendMessageToBotAIModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,7 +112,7 @@ class __$$ChatWIthAIModelImplCopyWithImpl<$Res>
     Object? chatBotId = freezed,
     Object? message = freezed,
   }) {
-    return _then(_$ChatWIthAIModelImpl(
+    return _then(_$SendMessageToBotAIModelImpl(
       sessionId: freezed == sessionId
           ? _value.sessionId
           : sessionId // ignore: cast_nullable_to_non_nullable
@@ -126,14 +131,14 @@ class __$$ChatWIthAIModelImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ChatWIthAIModelImpl implements _ChatWIthAIModel {
-  const _$ChatWIthAIModelImpl(
+class _$SendMessageToBotAIModelImpl implements _SendMessageToBotAIModel {
+  const _$SendMessageToBotAIModelImpl(
       {@JsonKey(name: 'session_id') this.sessionId,
       @JsonKey(name: 'chat_bot_id') this.chatBotId,
       this.message});
 
-  factory _$ChatWIthAIModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ChatWIthAIModelImplFromJson(json);
+  factory _$SendMessageToBotAIModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SendMessageToBotAIModelImplFromJson(json);
 
   @override
   @JsonKey(name: 'session_id')
@@ -146,14 +151,14 @@ class _$ChatWIthAIModelImpl implements _ChatWIthAIModel {
 
   @override
   String toString() {
-    return 'ChatWIthAIModel(sessionId: $sessionId, chatBotId: $chatBotId, message: $message)';
+    return 'SendMessageToBotAIModel(sessionId: $sessionId, chatBotId: $chatBotId, message: $message)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ChatWIthAIModelImpl &&
+            other is _$SendMessageToBotAIModelImpl &&
             (identical(other.sessionId, sessionId) ||
                 other.sessionId == sessionId) &&
             (identical(other.chatBotId, chatBotId) ||
@@ -168,26 +173,26 @@ class _$ChatWIthAIModelImpl implements _ChatWIthAIModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChatWIthAIModelImplCopyWith<_$ChatWIthAIModelImpl> get copyWith =>
-      __$$ChatWIthAIModelImplCopyWithImpl<_$ChatWIthAIModelImpl>(
-          this, _$identity);
+  _$$SendMessageToBotAIModelImplCopyWith<_$SendMessageToBotAIModelImpl>
+      get copyWith => __$$SendMessageToBotAIModelImplCopyWithImpl<
+          _$SendMessageToBotAIModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChatWIthAIModelImplToJson(
+    return _$$SendMessageToBotAIModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _ChatWIthAIModel implements ChatWIthAIModel {
-  const factory _ChatWIthAIModel(
+abstract class _SendMessageToBotAIModel implements SendMessageToBotAIModel {
+  const factory _SendMessageToBotAIModel(
       {@JsonKey(name: 'session_id') final int? sessionId,
       @JsonKey(name: 'chat_bot_id') final int? chatBotId,
-      final String? message}) = _$ChatWIthAIModelImpl;
+      final String? message}) = _$SendMessageToBotAIModelImpl;
 
-  factory _ChatWIthAIModel.fromJson(Map<String, dynamic> json) =
-      _$ChatWIthAIModelImpl.fromJson;
+  factory _SendMessageToBotAIModel.fromJson(Map<String, dynamic> json) =
+      _$SendMessageToBotAIModelImpl.fromJson;
 
   @override
   @JsonKey(name: 'session_id')
@@ -199,6 +204,6 @@ abstract class _ChatWIthAIModel implements ChatWIthAIModel {
   String? get message;
   @override
   @JsonKey(ignore: true)
-  _$$ChatWIthAIModelImplCopyWith<_$ChatWIthAIModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SendMessageToBotAIModelImplCopyWith<_$SendMessageToBotAIModelImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

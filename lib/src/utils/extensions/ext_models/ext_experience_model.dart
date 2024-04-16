@@ -7,8 +7,11 @@ import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
 extension ExperienceModelExt on ExperienceModel {
-  Widget toWidget(BuildContext context,
-      {VoidCallback? onDelete, VoidCallback? onUpdate}) {
+  Widget toWidget(
+    BuildContext context, {
+    VoidCallback? onDelete,
+    VoidCallback? onUpdate,
+  }) {
     return Padding(
       padding: context.padding(top: 6),
       child: Container(
@@ -31,7 +34,7 @@ extension ExperienceModelExt on ExperienceModel {
                   children: [
                     if (companyName != null)
                       Text(
-                        companyName!,
+                        '123',
                         style: AppFont()
                             .fontTheme(context, weight: FontWeight.bold)
                             .bodyLarge,
@@ -57,13 +60,15 @@ extension ExperienceModelExt on ExperienceModel {
               ),
             ),
             const Spacer(),
-            // Padding(
-            //   padding: context.padding(horizontal: 15),
-            //   child: const Icon(IconsaxOutline.edit, size: 20),
-            // ),
-            // InkWell(
-            //     onTap: onDelete,
-            //     child: const Icon(IconsaxOutline.trash, size: 20)),
+            Padding(
+              padding: context.padding(horizontal: 15),
+              child: InkWell(
+                  onTap: onUpdate,
+                  child: const Icon(IconsaxOutline.edit, size: 20)),
+            ),
+            InkWell(
+                onTap: onDelete,
+                child: const Icon(IconsaxOutline.trash, size: 20)),
           ],
         ),
       ),

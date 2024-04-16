@@ -341,12 +341,17 @@ class $AssetsImagesProfileGen {
   AssetGenImage get profileBackground =>
       const AssetGenImage('assets/images/profile/profile_background.png');
 
+  /// File path: assets/images/profile/transaction.png
+  AssetGenImage get transaction =>
+      const AssetGenImage('assets/images/profile/transaction.png');
+
   /// File path: assets/images/profile/us_flag.svg
   SvgGenImage get usFlag =>
       const SvgGenImage('assets/images/profile/us_flag.svg');
 
   /// List of all assets
-  List<dynamic> get values => [companyDemo, dot, profileBackground, usFlag];
+  List<dynamic> get values =>
+      [companyDemo, dot, profileBackground, transaction, usFlag];
 }
 
 class Assets {
