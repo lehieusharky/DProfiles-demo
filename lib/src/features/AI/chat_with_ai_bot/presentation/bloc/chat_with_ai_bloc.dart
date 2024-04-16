@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
+import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/chat_bot_message_history_model.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/send_message_to_bot_ai_model.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/domain/usecases/chat_with_ai_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,6 +19,7 @@ class ChatWithAiBloc extends Bloc<ChatWithAiEvent, ChatWithAiState> {
     on<ChatWithAILoadBotAI>(_loadChatAI);
     on<ChatWithAIGetChatBotDetail>(_getChatBotDetail);
     on<ChatWithAISendMessage>(_sendMessage);
+    on<ChatWithAIGetChatWithBotHistory>(_getChatWithAIHistory);
   }
 
   FutureOr<void> _loadChatAI(
@@ -54,5 +56,29 @@ class ChatWithAiBloc extends Bloc<ChatWithAiEvent, ChatWithAiState> {
         (l) => emit(const ChatWithAIError(
             title: 'get details bot failed', msg: 'Load failed')),
         (r) => emit(ChatWithAISendMessageSuccess(r)));
+  }
+
+  FutureOr<void> _getChatWithAIHistory(ChatWithAIGetChatWithBotHistory event,
+      Emitter<ChatWithAiState> emit) async {
+    emit(const ChatWithAILoading());
+
+    final result = await chatWithAIUseCase.getChatBotMessageHistory(
+        chatBotID: event.chatBotID,
+        page: event.page,
+        limit: event.limit,
+        search: event.search);
+
+    result.fold(
+      (l) =>
+          emit(ChatWithAIError(msg: l, title: 'Get chat bot detail  failed')),
+      (r) {
+        final data = r.data as List;
+
+        final messages =
+            data.map((e) => ChatBotMessageHistoryModel.fromJson(e)).toList();
+
+        emit(ChatWithAIGetChatWithBotHistorySuccess(messages));
+      },
+    );
   }
 }

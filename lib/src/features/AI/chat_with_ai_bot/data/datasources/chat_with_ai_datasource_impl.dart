@@ -51,4 +51,20 @@ class ChatWithAIDataSourceImpl implements ChatWithAIDataSource {
       rethrow;
     }
   }
+
+  @override
+  Future<BaseResponse> getChatBotMessageHistory(
+      {required int chatBotID,
+      required int page,
+      required int limit,
+      required String search}) async {
+    try {
+      final baseResponse =
+          await MyHttp.rl().getChatBotHistory(search, page, limit, chatBotID);
+
+      return baseResponse;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
 }

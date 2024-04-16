@@ -2,6 +2,9 @@ import 'dart:async';
 
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
 import 'package:demo_dprofiles/src/features/home/domain/usecases/home_usecase.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
+import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
+import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
@@ -12,6 +15,7 @@ part 'home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final HomeUseCase homeUseCase;
+  final ProfileUseCase profileUseCase;
 
   // Page number starts from 1
   int page = 0;
@@ -20,10 +24,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   final refreshController = RefreshController();
 
-  HomeBloc(this.homeUseCase) : super(const HomeState.initial()) {
+  HomeBloc(this.homeUseCase, this.profileUseCase)
+      : super(const HomeState.initial()) {
     on<HomeGetFeeds>(_getNewsFeed);
     on<HomeLoadMoreNewsFeed>(_loadMoreNewsFeed);
     on<HomeRefreshNewsFeed>(_refreshNewsFeed);
+    on<HomeGetUserInfo>(_getUserInfo);
   }
 
   FutureOr<void> _getNewsFeed(
@@ -81,6 +87,22 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         final newsFeed = data.map((e) => NewFeedModel.fromJson(e)).toList();
 
         emit(HomeGetFeedsSuccess(newsFeed));
+      },
+    );
+  }
+
+  FutureOr<void> _getUserInfo(
+      HomeGetUserInfo event, Emitter<HomeState> emit) async {
+    final result = await profileUseCase.getUserInfo();
+
+    result.fold(
+      (l) => emit(HomeError(
+          message: l.map((e) => e).toString(), title: 'Get info failed')),
+      (r) async {
+        final userInfo = UserInfoModel.fromJson(r.data);
+        await sharePreference.setUserID(userInfo.id!);
+
+        emit(const HomeGetUserInfoSuccess());
       },
     );
   }

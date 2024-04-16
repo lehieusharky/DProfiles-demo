@@ -52,4 +52,21 @@ class ChatWithAIRepositoryImpl implements ChatWithAIRepository {
           response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
+
+  @override
+  Future<Either<ChatWithAiFailure, BaseResponse>> getChatBotMessageHistory(
+      {required int chatBotID,
+      required int page,
+      required int limit,
+      required String search}) async {
+    try {
+      final res = await _chatWithAIDataSource.getChatBotMessageHistory(
+          chatBotID: chatBotID, page: page, limit: limit, search: search);
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(ChatWithAiFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
+    }
+  }
 }

@@ -54,4 +54,10 @@ class AiCharacterEvent with _$AiCharacterEvent {
 
   const factory AiCharacterEvent.editExperience(
       int index, ExperienceModel experienceModel) = AICharacterEditExperience;
+
+  const factory AiCharacterEvent.getChatWithBotHistory(
+      {required int chatBotID,
+      required int page,
+      required int limit,
+      required String search}) = AICharacterGetChatWithBotHistory;
 }

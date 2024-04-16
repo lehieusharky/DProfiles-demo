@@ -12,6 +12,12 @@ abstract class ChatWithAIUseCase {
 
   Future<Either<String, BaseResponse>> getChatBotDetail(
       int chatBotID, bool isPopularBot);
+
+  Future<Either<String, BaseResponse>> getChatBotMessageHistory(
+      {required int chatBotID,
+      required int page,
+      required int limit,
+      required String search});
 }
 
 @Injectable(as: ChatWithAIUseCase)
@@ -44,6 +50,20 @@ class ChatWithAIUseCaseImpl implements ChatWithAIUseCase {
   @override
   Future<Either<String, BaseResponse>> loadBotAI(int chatBotID) async {
     final result = await _chatWithAIRepository.loadBotAI(chatBotID);
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ""),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> getChatBotMessageHistory(
+      {required int chatBotID,
+      required int page,
+      required int limit,
+      required String search}) async {
+    final result = await _chatWithAIRepository.getChatBotMessageHistory(
+        chatBotID: chatBotID, page: page, limit: limit, search: search);
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message ?? ""),
       (r) => Right(r),

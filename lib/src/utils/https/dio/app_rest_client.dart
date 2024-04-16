@@ -142,6 +142,9 @@ abstract class RestClient {
   @GET('/api/v1/character-chatbot/popular')
   Future<BaseResponse> getListPopularCharacterBot();
 
+  @POST('/api/v1/chatbot-follow')
+  Future<BaseResponse> followBot();
+
   // community
   @GET('/api/v1/post/newsFeed')
   Future<BaseResponse> getNewsFeed(
@@ -189,6 +192,14 @@ abstract class RestClient {
 
   @POST('https://char.dev.dprofiles.xyz/chat/')
   Future<BaseResponse> chatWithBotAI(@Body() Map<String, dynamic> body);
+
+  @GET('/api/v1/chatbot-message-history')
+  Future<BaseResponse> getChatBotHistory(
+    @Query('search') String search,
+    @Query('page') int page,
+    @Query('limit') int limit,
+    @Query('chatbot_id') int chatBotID,
+  );
 
   // forgot password
 

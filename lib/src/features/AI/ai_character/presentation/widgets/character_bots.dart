@@ -16,6 +16,7 @@ class CharacterBots extends StatefulWidget {
 
 class _CharacterBotsState extends State<CharacterBots> {
   bool isPopularBot = true;
+  List<AICharacterBotModel>? bots = [];
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +25,15 @@ class _CharacterBotsState extends State<CharacterBots> {
       selector: (state) {
         if (state is GetListPopularCharacterBotSuccess) {
           isPopularBot = true;
-          return state.bots;
+          bots = state.bots;
         } else if (state is GetListCharacterBotSuccess) {
           isPopularBot = false;
-          return state.bots;
+          bots = state.bots;
         }
-        return null;
+        return bots;
       },
       builder: (context, state) {
-        if (state == null) {
+        if (bots == null) {
           return const MyLoading();
         }
 
@@ -44,7 +45,7 @@ class _CharacterBotsState extends State<CharacterBots> {
           mainAxisSpacing: context.sizeWidth(16),
           crossAxisCount: 2,
           children:
-              state.map((e) => e.toPopularBot(context, isPopularBot)).toList(),
+              bots!.map((e) => e.toPopularBot(context, isPopularBot)).toList(),
         );
       },
     );

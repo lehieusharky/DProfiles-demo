@@ -19,6 +19,7 @@ const String CURRENT_LANGUAGE = 'current_language';
 const String CHAT_GPT_VERSION = 'chat_gpt_version';
 const String RECENT_EMAIL_SIGN_IN = 'recent_email_sign_in';
 const String SESSION_ID = 'session_id';
+const String USER_ID = 'user_id';
 
 @Injectable(as: AppSharePreference)
 class AppSharePreferenceImpl implements AppSharePreference {
@@ -136,4 +137,10 @@ class AppSharePreferenceImpl implements AppSharePreference {
 
   @override
   int? getSessionID() => _prefs.getInt(SESSION_ID);
+
+  @override
+  int? getUserID() => _prefs.getInt(USER_ID);
+
+  @override
+  Future<void> setUserID(int id) async => await _prefs.setInt(USER_ID, id);
 }

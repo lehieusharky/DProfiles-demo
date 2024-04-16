@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/my_text_form_field.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/send_message_to_bot_ai_model.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/message_with_bot_model.dart';
@@ -10,6 +11,7 @@ import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_bu
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:intl/intl.dart';
 
 class FormChatAi extends StatefulWidget {
@@ -21,7 +23,7 @@ class FormChatAi extends StatefulWidget {
 }
 
 class _FormChatAiState extends State<FormChatAi> {
-  List<MessageWithBotModel> messages = [];
+  List<MessageWithBotModel>? messages;
 
   final _chatController = TextEditingController();
 
@@ -29,20 +31,41 @@ class _FormChatAiState extends State<FormChatAi> {
   Widget build(BuildContext context) {
     return BlocConsumer<ChatWithAiBloc, ChatWithAiState>(
       listener: (context, state) {
+        if (state is ChatWithAIGetChatWithBotHistorySuccess) {
+          final histories = state.messagesHistory
+              .map((e) => MessageWithBotModel(
+                    isUser: e.userSenderId != null ? true : false,
+                    message: e.content ?? '',
+                    createAt: DateFormat('yyyy-MM-dd HH:mm:ss')
+                        .format(DateTime.parse(e.createdOn!)),
+                  ))
+              .toList();
+
+          messages = histories;
+        }
+
         if (state is ChatWithAISendMessageSuccess) {
           final botMessage = MessageWithBotModel(
               message: state.msg, isUser: false, createAt: _createAt());
 
-          messages.insert(0, botMessage);
+          messages?.insert(0, botMessage);
         }
       },
       builder: (context, state) {
-        return Column(
-          children: [
-            Expanded(child: _buildMessageSegment()),
-            _buildBottomAction(),
-          ],
-        );
+        if (messages == null) {
+          return MyShimmer(count: 5, height: context.height * 0.8);
+        } else {
+          return Column(
+            children: [
+              if (messages == null)
+                Expanded(
+                    child: MyShimmer(count: 5, height: context.height * 0.8))
+              else
+                Expanded(child: _buildMessageSegment()),
+              _buildBottomAction(),
+            ],
+          );
+        }
       },
     );
   }
@@ -83,13 +106,28 @@ class _FormChatAiState extends State<FormChatAi> {
   Widget _buildMessageSegment() {
     return Padding(
       padding: context.padding(horizontal: 20),
-      child: ListView.builder(
-        physics: const BouncingScrollPhysics(),
-        reverse: true,
-        itemCount: messages.length,
-        itemBuilder: (BuildContext context, int index) {
-          return messages[index].toWidget(context);
-        },
+      child: AnimationLimiter(
+        child: ListView.builder(
+          reverse: true,
+          physics: const BouncingScrollPhysics(
+              parent: AlwaysScrollableScrollPhysics()),
+          itemCount: messages!.length,
+          itemBuilder: (BuildContext context, int index) {
+            return AnimationConfiguration.staggeredList(
+              position: index,
+              delay: const Duration(milliseconds: 100),
+              child: SlideAnimation(
+                duration: const Duration(milliseconds: 2500),
+                curve: Curves.fastLinearToSlowEaseIn,
+                child: FadeInAnimation(
+                  curve: Curves.fastLinearToSlowEaseIn,
+                  duration: const Duration(milliseconds: 2500),
+                  child: messages![index].toWidget(context),
+                ),
+              ),
+            );
+          },
+        ),
       ),
     );
   }
@@ -112,7 +150,7 @@ class _FormChatAiState extends State<FormChatAi> {
         isUser: true,
         createAt: _createAt());
 
-    setState(() => messages.insert(0, userMessage));
+    setState(() => messages!.insert(0, userMessage));
   }
 
   SendMessageToBotAIModel _createNewMessage() {

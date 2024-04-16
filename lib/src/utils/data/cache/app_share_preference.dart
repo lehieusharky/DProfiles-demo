@@ -43,4 +43,8 @@ abstract class AppSharePreference {
   int? getSessionID();
 
   Future<void> createSessionID();
+
+  int? getUserID();
+
+  Future<void> setUserID(int id);
 }

@@ -34,7 +34,10 @@ class BlocDI {
     );
 
     injector.registerFactory<HomeBloc>(
-      () => HomeBloc(injector.get<HomeUseCase>()),
+      () => HomeBloc(
+        injector.get<HomeUseCase>(),
+        injector.get<ProfileUseCase>(),
+      ),
     );
 
     injector.registerFactory<ChatWithAiBloc>(

@@ -59,4 +59,8 @@ class AiCharacterState with _$AiCharacterState {
 
   const factory AiCharacterState.editExperience() =
       AICharacterEditExperienceSuccess;
+
+  const factory AiCharacterState.getChatWithBotHistorySuccess(
+          List<ChatBotMessageHistoryModel> messagesHistory) =
+      AICharacterGetChatWithBotHistorySuccess;
 }

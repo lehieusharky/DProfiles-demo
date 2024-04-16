@@ -7,4 +7,10 @@ abstract class ChatWithAIDataSource {
   Future<BaseResponse> loadBotAI(int chatBotID);
 
   Future<BaseResponse> getChatBotDetail(int chatBotID, bool isPopularBot);
+
+  Future<BaseResponse> getChatBotMessageHistory(
+      {required int chatBotID,
+      required int page,
+      required int limit,
+      required String search});
 }

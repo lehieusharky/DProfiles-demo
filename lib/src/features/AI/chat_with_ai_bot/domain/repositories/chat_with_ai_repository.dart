@@ -11,6 +11,12 @@ abstract class ChatWithAIRepository {
 
   Future<Either<ChatWithAiFailure, BaseResponse>> getChatBotDetail(
       int chatBotID, bool isPopularBot);
+
+  Future<Either<ChatWithAiFailure, BaseResponse>> getChatBotMessageHistory(
+      {required int chatBotID,
+        required int page,
+        required int limit,
+        required String search});
 }
 
 class ChatWithAiFailure extends AppFailure {

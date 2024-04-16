@@ -35,6 +35,11 @@ class _ChatWithAiPageState extends State<ChatWithAiPage> {
             context.read<ChatWithAiBloc>().add(
                 ChatWithAIGetChatBotDetail(widget.botId, widget.isPopularBot));
           }
+
+          if (state is ChatWithAIGetChatBotDetailSuccess) {
+            context.read<ChatWithAiBloc>().add(ChatWithAIGetChatWithBotHistory(
+                chatBotID: widget.botId, page: 1, limit: 10, search: ''));
+          }
         },
         builder: (context, state) => MyScaffold(
             useAppBar: true,

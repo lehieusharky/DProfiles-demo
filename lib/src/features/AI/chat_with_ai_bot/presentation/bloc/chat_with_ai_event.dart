@@ -11,4 +11,10 @@ class ChatWithAiEvent with _$ChatWithAiEvent {
 
   const factory ChatWithAiEvent.getChatBotDetail(
       int chatBotID, bool isPopularBot) = ChatWithAIGetChatBotDetail;
+
+  const factory ChatWithAiEvent.getChatWithBotHistory(
+      {required int chatBotID,
+      required int page,
+      required int limit,
+      required String search}) = ChatWithAIGetChatWithBotHistory;
 }

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:flutter/material.dart';
 
 class AnimationBackground extends StatefulWidget {
@@ -12,16 +13,15 @@ class AnimationBackground extends StatefulWidget {
 class _AnimationBackgroundState extends State<AnimationBackground>
     with TickerProviderStateMixin {
   List<Color> colorList = [
-    const Color(0xff171B70),
-    const Color(0xff410D75),
-    const Color(0xff032340),
-    const Color(0xff050340),
-    const Color(0xff2C0340),
+    MyColor.green58BD7D,
+    MyColor.green58BD7D.withOpacity(0.8),
+    MyColor.green58BD7D.withOpacity(0.5),
   ];
+
   List<Alignment> alignmentList = [Alignment.topCenter, Alignment.bottomCenter];
   int index = 0;
-  Color bottomColor = const Color(0xff092646);
-  Color topColor = const Color(0xff410D75);
+  Color bottomColor = MyColor.green58BD7D.withOpacity(0.8);
+  Color topColor = MyColor.green58BD7D;
   Alignment begin = Alignment.bottomCenter;
   Alignment end = Alignment.topCenter;
 
@@ -43,7 +43,7 @@ class _AnimationBackgroundState extends State<AnimationBackground>
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: const Duration(seconds: 1),
+      duration: const Duration(seconds: 2),
       onEnd: () {
         setState(
           () {

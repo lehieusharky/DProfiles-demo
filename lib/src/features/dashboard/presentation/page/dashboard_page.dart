@@ -50,6 +50,7 @@ class _DashboardPageState extends State<DashboardPage> {
         currentIndex: _currentIndex,
         selectedItemColor: colorScheme(context).primary,
         onTap: _onBottomNavigationBarTap,
+
         unselectedItemColor: colorScheme(context).outline,
       ),
     );

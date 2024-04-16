@@ -20,18 +20,7 @@ class AiCharacterPage extends StatefulWidget {
 }
 
 class _AiCharacterPageState extends State<AiCharacterPage>
-    with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin {
-  late TabController _tabController;
-
-  @override
-  void initState() {
-    super.initState();
-    _tabController = TabController(length: 2, vsync: this);
-    _tabController.addListener(() {
-      _onTabChange(_tabController.index);
-    });
-  }
-
+    with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -65,7 +54,7 @@ class _AiCharacterPageState extends State<AiCharacterPage>
               body: SingleChildScrollView(
                 child: Column(
                   children: [
-                    TabBarAICharacter(controller: _tabController),
+                    const TabBarAICharacter(),
                     SizedBox(height: context.sizeHeight(16)),
                     const CharacterBots(),
                   ],
@@ -76,18 +65,6 @@ class _AiCharacterPageState extends State<AiCharacterPage>
         ),
       ),
     );
-  }
-
-  void _onTabChange(int index) {
-    final bloc = injector.get<AiCharacterBloc>();
-    switch (index) {
-      case 0:
-        bloc.add(const GetListPopularCharacterBot());
-        break;
-      case 1:
-        bloc.add(const GetListCharacterBot());
-        break;
-    }
   }
 
   @override
