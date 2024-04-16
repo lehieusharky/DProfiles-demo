@@ -2,26 +2,25 @@ import 'dart:async';
 
 import 'package:demo_dprofiles/src/features/setting/domain/usecases/setting_usecase.dart';
 import 'package:demo_dprofiles/src/utils/constant/support_theme.dart';
+import 'package:demo_dprofiles/src/utils/constant/supported_language.dart';
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:demo_dprofiles/src/utils/services/device_info_service.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-import '../../../../utils/constant/supported_language.dart';
 
 part 'setting_event.dart';
 part 'setting_state.dart';
 part 'setting_bloc.freezed.dart';
 
 class SettingBloc extends Bloc<SettingEvent, SettingState> {
-  final BuildContext context;
+  final SettingUseCase settingUseCase;
 
-  SettingBloc(this.context) : super(const SettingState.initial()) {
+  SettingBloc(this.settingUseCase) : super(const SettingState.initial()) {
     on<GetInitSettingInfo>(_onGetInitSettingInfo);
     on<ToggleTheme>(_onToggleTheme);
     on<ToggleLanguage>(_onToggleLanguage);
     on<ToggleDarkMode>(_onToggleDarkMode);
+    on<SettingDeleteUser>(_deleteUser);
 
     add(const GetInitSettingInfo());
   }
@@ -74,11 +73,21 @@ class SettingBloc extends Bloc<SettingEvent, SettingState> {
 
   FutureOr<void> _onGetInitSettingInfo(
       GetInitSettingInfo event, Emitter<SettingState> emit) async {
-    final status = await settingUseCase.setInitialSettingInfo(context);
+    final status = await settingUseCase.setInitialSettingInfo();
 
     status.fold(
       (l) => emit(SettingError(l)),
       (r) => emit(const GetInitSettingInfoSucess()),
+    );
+  }
+
+  FutureOr<void> _deleteUser(
+      SettingDeleteUser event, Emitter<SettingState> emit) async {
+    final status = await settingUseCase.deleteUser();
+
+    status.fold(
+      (l) => emit(SettingError(l)),
+      (r) => emit(const SettingDeleteUserSucccess()),
     );
   }
 }

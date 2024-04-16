@@ -32,7 +32,6 @@ dependencies:
   uuid: ^4.3.3
   flutter_native_splash: any
   local_auth: ^2.2.0
-  share_plus: ^8.0.3
 
   # route
   auto_route: ^7.9.0

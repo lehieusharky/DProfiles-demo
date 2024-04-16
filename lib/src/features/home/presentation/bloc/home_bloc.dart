@@ -30,6 +30,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<HomeLoadMoreNewsFeed>(_loadMoreNewsFeed);
     on<HomeRefreshNewsFeed>(_refreshNewsFeed);
     on<HomeGetUserInfo>(_getUserInfo);
+
   }
 
   FutureOr<void> _getNewsFeed(
@@ -106,4 +107,5 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       },
     );
   }
+
 }

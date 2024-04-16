@@ -10,6 +10,8 @@ import 'package:demo_dprofiles/src/features/home/domain/usecases/home_usecase.da
 import 'package:demo_dprofiles/src/features/home/presentation/bloc/home_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
+import 'package:demo_dprofiles/src/features/setting/domain/usecases/setting_usecase.dart';
+import 'package:demo_dprofiles/src/features/setting/presentation/bloc/setting_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 class BlocDI {
@@ -50,7 +52,8 @@ class BlocDI {
         injector.get<ProfileUseCase>(),
       ),
     );
-
-
+    injector.registerFactory<SettingBloc>(
+      () => SettingBloc(injector.get<SettingUseCase>()),
+    );
   }
 }
