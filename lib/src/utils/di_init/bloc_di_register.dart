@@ -50,5 +50,7 @@ class BlocDI {
         injector.get<ProfileUseCase>(),
       ),
     );
+
+
   }
 }

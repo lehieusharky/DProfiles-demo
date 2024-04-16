@@ -4,18 +4,16 @@ import 'package:demo_dprofiles/src/core/ui/my_divider.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/entities/ext_user_info_entity.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/skill_item.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/about_component.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/certificate_component.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/education_component.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/experience_component.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/language_component.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/open_to_component.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/sub_profile/skill_component.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/title_sub_page.dart';
-import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'about_component.dart';
+import 'certificate_component.dart';
+import 'education_component.dart';
+import 'experience_component.dart';
+import 'language_component.dart';
+import 'open_to_component.dart';
+import 'skill_component.dart';
 
 class SubProfilePage extends StatelessWidget {
   final UserInfoModel userInfo;
@@ -28,7 +26,9 @@ class SubProfilePage extends StatelessWidget {
       create: (context) => injector.get<ProfileBloc>()
         ..add(const ProfileGetUserEducations())
         ..add(const ProfileGetUserCertificates())
-        ..add(const ProfileGetUserExperience()),
+        ..add(const ProfileGetUserExperience())
+        ..add(const ProfileGetUserSkills())
+        ..add(const ProfileGetUserLanguages()),
       child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,

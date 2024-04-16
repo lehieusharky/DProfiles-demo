@@ -59,6 +59,7 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
     on<AICharacterEditEducation>(_editEducation);
     on<AICharacterEditExperience>(_editExperience);
     on<AICharacterGetChatWithBotHistory>(_getChatWithBotHistory);
+    on<AICharacterFollowBot>(_followBot);
   }
 
   FutureOr<void> _changeCreateStep(
@@ -418,6 +419,19 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
 
         emit(AICharacterGetChatWithBotHistorySuccess(messages));
       },
+    );
+  }
+
+  FutureOr<void> _followBot(
+      AICharacterFollowBot event, Emitter<AiCharacterState> emit) async {
+    emit(const AICharacterLoading());
+
+    final result = await aiCharacterUseCase.followCharacterBot(event.chatBotID);
+
+    result.fold(
+      (l) => emit(
+          AICharacterError(message: [l], title: 'Get chat bot detail  failed')),
+      (r) => emit(const AICharacterFollowBotSuccess()),
     );
   }
 }

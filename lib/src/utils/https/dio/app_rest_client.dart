@@ -143,13 +143,21 @@ abstract class RestClient {
   Future<BaseResponse> getListPopularCharacterBot();
 
   @POST('/api/v1/chatbot-follow')
-  Future<BaseResponse> followBot();
+  Future<BaseResponse> followBot(@Body() Map<String, dynamic> body);
 
   // community
   @GET('/api/v1/post/newsFeed')
   Future<BaseResponse> getNewsFeed(
     @Query('page') int page,
     @Query('limit') int limit,
+  );
+
+  @GET('/api/v1/chatbot-follow/read-by-follower')
+  Future<BaseResponse> getChatBotFollowedByUser(
+    @Query('search') String? search,
+    @Query('page') int page,
+    @Query('limit') int limit,
+    @Query('followee_id') int followeeID,
   );
 
   // skill

@@ -7,6 +7,7 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
+import 'package:tuple/tuple.dart';
 
 class DashboardEndDrawer extends StatefulWidget {
   const DashboardEndDrawer({Key? key}) : super(key: key);
@@ -31,7 +32,7 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
       controller: _drawerController,
       showToggleButton: false,
       theme: SidebarXTheme(
-        margin: context.padding(vertical: 10),
+        margin: context.padding(vertical: 50),
         decoration: BoxDecoration(
           color: colorScheme(context).background,
           borderRadius: BorderRadius.circular(16),
@@ -45,41 +46,44 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
         decoration: BoxDecoration(color: colorScheme(context).background),
       ),
       headerBuilder: (context, extended) {
-        if (extended) {
-          return CircleAvatar(
-            radius: context.sizeHeight(20),
-            child: Assets.icons.homeLogo.image(),
-          );
-        } else {}
-        return Row(
-          children: [
-            SizedBox(
-              height: 100,
-              child: Padding(
-                padding: const EdgeInsets.all(12),
-                child: CircleAvatar(
+        return Padding(
+          padding: context.padding(top: 50),
+          child: Row(
+            children: [
+              CircleAvatar(
                   radius: context.sizeHeight(20),
-                  child: Assets.icons.homeLogo.image(),
-                ),
-              ),
-            ),
-            const Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text('name'),
-                Text('0123j31230130'),
-              ],
-            )
-          ],
+                  child: Assets.images.home.avatarHolder.image()),
+              const Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('name'),
+                  Text('0123j31230130'),
+                ],
+              )
+            ],
+          ),
         );
       },
       items: [
-        SidebarXItem(
+        Tuple3(Assets.icons.iconWallet.svg(), 'My Wallet', () {}),
+        Tuple3(Assets.icons.iconWallet.svg(), 'Digital Profile', () {}),
+        Tuple3(Assets.icons.iconWallet.svg(), 'Edit Profile', () {}),
+        Tuple3(Assets.icons.iconWallet.svg(), 'Account Setting', () {}),
+        Tuple3(Assets.icons.iconWallet.svg(), 'Become Influencer', () {}),
+      ]
+          .map((e) =>
+              SidebarXItem(iconBuilder: (_, __) => e.item1, label: e.item2))
+          .toList(),
+    );
+  }
+}
+
+/*
+ SidebarXItem(
           iconBuilder: (_, __) => Assets.icons.iconWallet.svg(),
           label: 'My Wallet',
-          onTap: () {
-            // context.pushRoute(MyWalletRoute())
-          },
+          onTap: () {},
         ),
         const SidebarXItem(
           icon: Icons.search,
@@ -118,7 +122,4 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
             }
           },
         ),
-      ],
-    );
-  }
-}
+ */

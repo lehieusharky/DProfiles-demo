@@ -63,4 +63,7 @@ class AiCharacterState with _$AiCharacterState {
   const factory AiCharacterState.getChatWithBotHistorySuccess(
           List<ChatBotMessageHistoryModel> messagesHistory) =
       AICharacterGetChatWithBotHistorySuccess;
+
+  const factory AiCharacterState.followBotSuccess() =
+      AICharacterFollowBotSuccess;
 }

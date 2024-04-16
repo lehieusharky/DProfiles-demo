@@ -84,6 +84,10 @@ class $AssetsIconsGen {
   SvgGenImage get iconSpeaker =>
       const SvgGenImage('assets/icons/icon_speaker.svg');
 
+  /// File path: assets/icons/icon_upload.svg
+  SvgGenImage get iconUpload =>
+      const SvgGenImage('assets/icons/icon_upload.svg');
+
   /// File path: assets/icons/icon_wallet.svg
   SvgGenImage get iconWallet =>
       const SvgGenImage('assets/icons/icon_wallet.svg');
@@ -115,6 +119,7 @@ class $AssetsIconsGen {
         iconSearch,
         iconShare,
         iconSpeaker,
+        iconUpload,
         iconWallet,
         profile,
         wallet
@@ -270,6 +275,10 @@ class $AssetsImagesAuthGen {
 class $AssetsImagesHomeGen {
   const $AssetsImagesHomeGen();
 
+  /// File path: assets/images/home/avatar_holder.png
+  AssetGenImage get avatarHolder =>
+      const AssetGenImage('assets/images/home/avatar_holder.png');
+
   /// File path: assets/images/home/banner_background.png
   AssetGenImage get bannerBackground =>
       const AssetGenImage('assets/images/home/banner_background.png');
@@ -290,7 +299,7 @@ class $AssetsImagesHomeGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [bannerBackground, gift, live, scholaships, wallet];
+      [avatarHolder, bannerBackground, gift, live, scholaships, wallet];
 }
 
 class $AssetsImagesMyWalletGen {

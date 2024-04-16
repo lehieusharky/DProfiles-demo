@@ -23,8 +23,8 @@ mixin _$ProfileEvent {
     required TResult Function() getUserExperiences,
     required TResult Function() getUserEducations,
     required TResult Function() getUserCertificates,
-    required TResult Function(String name) getUserSkills,
-    required TResult Function(int languageId) getUserLanguages,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,8 +34,8 @@ mixin _$ProfileEvent {
     TResult? Function()? getUserExperiences,
     TResult? Function()? getUserEducations,
     TResult? Function()? getUserCertificates,
-    TResult? Function(String name)? getUserSkills,
-    TResult? Function(int languageId)? getUserLanguages,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -45,8 +45,8 @@ mixin _$ProfileEvent {
     TResult Function()? getUserExperiences,
     TResult Function()? getUserEducations,
     TResult Function()? getUserCertificates,
-    TResult Function(String name)? getUserSkills,
-    TResult Function(int languageId)? getUserLanguages,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -149,8 +149,8 @@ class _$StartedImpl implements _Started {
     required TResult Function() getUserExperiences,
     required TResult Function() getUserEducations,
     required TResult Function() getUserCertificates,
-    required TResult Function(String name) getUserSkills,
-    required TResult Function(int languageId) getUserLanguages,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
   }) {
     return started();
   }
@@ -163,8 +163,8 @@ class _$StartedImpl implements _Started {
     TResult? Function()? getUserExperiences,
     TResult? Function()? getUserEducations,
     TResult? Function()? getUserCertificates,
-    TResult? Function(String name)? getUserSkills,
-    TResult? Function(int languageId)? getUserLanguages,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
   }) {
     return started?.call();
   }
@@ -177,8 +177,8 @@ class _$StartedImpl implements _Started {
     TResult Function()? getUserExperiences,
     TResult Function()? getUserEducations,
     TResult Function()? getUserCertificates,
-    TResult Function(String name)? getUserSkills,
-    TResult Function(int languageId)? getUserLanguages,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -283,8 +283,8 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     required TResult Function() getUserExperiences,
     required TResult Function() getUserEducations,
     required TResult Function() getUserCertificates,
-    required TResult Function(String name) getUserSkills,
-    required TResult Function(int languageId) getUserLanguages,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
   }) {
     return getUserinfo();
   }
@@ -297,8 +297,8 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function()? getUserExperiences,
     TResult? Function()? getUserEducations,
     TResult? Function()? getUserCertificates,
-    TResult? Function(String name)? getUserSkills,
-    TResult? Function(int languageId)? getUserLanguages,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
   }) {
     return getUserinfo?.call();
   }
@@ -311,8 +311,8 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function()? getUserExperiences,
     TResult Function()? getUserEducations,
     TResult Function()? getUserCertificates,
-    TResult Function(String name)? getUserSkills,
-    TResult Function(int languageId)? getUserLanguages,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -420,8 +420,8 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     required TResult Function() getUserExperiences,
     required TResult Function() getUserEducations,
     required TResult Function() getUserCertificates,
-    required TResult Function(String name) getUserSkills,
-    required TResult Function(int languageId) getUserLanguages,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
   }) {
     return getUserExperiences();
   }
@@ -434,8 +434,8 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult? Function()? getUserExperiences,
     TResult? Function()? getUserEducations,
     TResult? Function()? getUserCertificates,
-    TResult? Function(String name)? getUserSkills,
-    TResult? Function(int languageId)? getUserLanguages,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
   }) {
     return getUserExperiences?.call();
   }
@@ -448,8 +448,8 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult Function()? getUserExperiences,
     TResult Function()? getUserEducations,
     TResult Function()? getUserCertificates,
-    TResult Function(String name)? getUserSkills,
-    TResult Function(int languageId)? getUserLanguages,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -557,8 +557,8 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     required TResult Function() getUserExperiences,
     required TResult Function() getUserEducations,
     required TResult Function() getUserCertificates,
-    required TResult Function(String name) getUserSkills,
-    required TResult Function(int languageId) getUserLanguages,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
   }) {
     return getUserEducations();
   }
@@ -571,8 +571,8 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult? Function()? getUserExperiences,
     TResult? Function()? getUserEducations,
     TResult? Function()? getUserCertificates,
-    TResult? Function(String name)? getUserSkills,
-    TResult? Function(int languageId)? getUserLanguages,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
   }) {
     return getUserEducations?.call();
   }
@@ -585,8 +585,8 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult Function()? getUserExperiences,
     TResult Function()? getUserEducations,
     TResult Function()? getUserCertificates,
-    TResult Function(String name)? getUserSkills,
-    TResult Function(int languageId)? getUserLanguages,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -694,8 +694,8 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     required TResult Function() getUserExperiences,
     required TResult Function() getUserEducations,
     required TResult Function() getUserCertificates,
-    required TResult Function(String name) getUserSkills,
-    required TResult Function(int languageId) getUserLanguages,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
   }) {
     return getUserCertificates();
   }
@@ -708,8 +708,8 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult? Function()? getUserExperiences,
     TResult? Function()? getUserEducations,
     TResult? Function()? getUserCertificates,
-    TResult? Function(String name)? getUserSkills,
-    TResult? Function(int languageId)? getUserLanguages,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
   }) {
     return getUserCertificates?.call();
   }
@@ -722,8 +722,8 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult Function()? getUserExperiences,
     TResult Function()? getUserEducations,
     TResult Function()? getUserCertificates,
-    TResult Function(String name)? getUserSkills,
-    TResult Function(int languageId)? getUserLanguages,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -790,8 +790,6 @@ abstract class _$$ProfileGetUserSkillsImplCopyWith<$Res> {
   factory _$$ProfileGetUserSkillsImplCopyWith(_$ProfileGetUserSkillsImpl value,
           $Res Function(_$ProfileGetUserSkillsImpl) then) =
       __$$ProfileGetUserSkillsImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String name});
 }
 
 /// @nodoc
@@ -801,52 +799,27 @@ class __$$ProfileGetUserSkillsImplCopyWithImpl<$Res>
   __$$ProfileGetUserSkillsImplCopyWithImpl(_$ProfileGetUserSkillsImpl _value,
       $Res Function(_$ProfileGetUserSkillsImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = null,
-  }) {
-    return _then(_$ProfileGetUserSkillsImpl(
-      null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
-  const _$ProfileGetUserSkillsImpl(this.name);
-
-  @override
-  final String name;
+  const _$ProfileGetUserSkillsImpl();
 
   @override
   String toString() {
-    return 'ProfileEvent.getUserSkills(name: $name)';
+    return 'ProfileEvent.getUserSkills()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ProfileGetUserSkillsImpl &&
-            (identical(other.name, name) || other.name == name));
+            other is _$ProfileGetUserSkillsImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ProfileGetUserSkillsImplCopyWith<_$ProfileGetUserSkillsImpl>
-      get copyWith =>
-          __$$ProfileGetUserSkillsImplCopyWithImpl<_$ProfileGetUserSkillsImpl>(
-              this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -856,10 +829,10 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     required TResult Function() getUserExperiences,
     required TResult Function() getUserEducations,
     required TResult Function() getUserCertificates,
-    required TResult Function(String name) getUserSkills,
-    required TResult Function(int languageId) getUserLanguages,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
   }) {
-    return getUserSkills(name);
+    return getUserSkills();
   }
 
   @override
@@ -870,10 +843,10 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult? Function()? getUserExperiences,
     TResult? Function()? getUserEducations,
     TResult? Function()? getUserCertificates,
-    TResult? Function(String name)? getUserSkills,
-    TResult? Function(int languageId)? getUserLanguages,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
   }) {
-    return getUserSkills?.call(name);
+    return getUserSkills?.call();
   }
 
   @override
@@ -884,12 +857,12 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult Function()? getUserExperiences,
     TResult Function()? getUserEducations,
     TResult Function()? getUserCertificates,
-    TResult Function(String name)? getUserSkills,
-    TResult Function(int languageId)? getUserLanguages,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
-      return getUserSkills(name);
+      return getUserSkills();
     }
     return orElse();
   }
@@ -944,13 +917,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
 }
 
 abstract class ProfileGetUserSkills implements ProfileEvent {
-  const factory ProfileGetUserSkills(final String name) =
-      _$ProfileGetUserSkillsImpl;
-
-  String get name;
-  @JsonKey(ignore: true)
-  _$$ProfileGetUserSkillsImplCopyWith<_$ProfileGetUserSkillsImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  const factory ProfileGetUserSkills() = _$ProfileGetUserSkillsImpl;
 }
 
 /// @nodoc
@@ -959,8 +926,6 @@ abstract class _$$ProfileGetUserLanguagesImplCopyWith<$Res> {
           _$ProfileGetUserLanguagesImpl value,
           $Res Function(_$ProfileGetUserLanguagesImpl) then) =
       __$$ProfileGetUserLanguagesImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int languageId});
 }
 
 /// @nodoc
@@ -971,52 +936,27 @@ class __$$ProfileGetUserLanguagesImplCopyWithImpl<$Res>
       _$ProfileGetUserLanguagesImpl _value,
       $Res Function(_$ProfileGetUserLanguagesImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? languageId = null,
-  }) {
-    return _then(_$ProfileGetUserLanguagesImpl(
-      null == languageId
-          ? _value.languageId
-          : languageId // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
-  const _$ProfileGetUserLanguagesImpl(this.languageId);
-
-  @override
-  final int languageId;
+  const _$ProfileGetUserLanguagesImpl();
 
   @override
   String toString() {
-    return 'ProfileEvent.getUserLanguages(languageId: $languageId)';
+    return 'ProfileEvent.getUserLanguages()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ProfileGetUserLanguagesImpl &&
-            (identical(other.languageId, languageId) ||
-                other.languageId == languageId));
+            other is _$ProfileGetUserLanguagesImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, languageId);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ProfileGetUserLanguagesImplCopyWith<_$ProfileGetUserLanguagesImpl>
-      get copyWith => __$$ProfileGetUserLanguagesImplCopyWithImpl<
-          _$ProfileGetUserLanguagesImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
@@ -1026,10 +966,10 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     required TResult Function() getUserExperiences,
     required TResult Function() getUserEducations,
     required TResult Function() getUserCertificates,
-    required TResult Function(String name) getUserSkills,
-    required TResult Function(int languageId) getUserLanguages,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
   }) {
-    return getUserLanguages(languageId);
+    return getUserLanguages();
   }
 
   @override
@@ -1040,10 +980,10 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult? Function()? getUserExperiences,
     TResult? Function()? getUserEducations,
     TResult? Function()? getUserCertificates,
-    TResult? Function(String name)? getUserSkills,
-    TResult? Function(int languageId)? getUserLanguages,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
   }) {
-    return getUserLanguages?.call(languageId);
+    return getUserLanguages?.call();
   }
 
   @override
@@ -1054,12 +994,12 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult Function()? getUserExperiences,
     TResult Function()? getUserEducations,
     TResult Function()? getUserCertificates,
-    TResult Function(String name)? getUserSkills,
-    TResult Function(int languageId)? getUserLanguages,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
-      return getUserLanguages(languageId);
+      return getUserLanguages();
     }
     return orElse();
   }
@@ -1114,13 +1054,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
 }
 
 abstract class ProfileGetUserLanguages implements ProfileEvent {
-  const factory ProfileGetUserLanguages(final int languageId) =
-      _$ProfileGetUserLanguagesImpl;
-
-  int get languageId;
-  @JsonKey(ignore: true)
-  _$$ProfileGetUserLanguagesImplCopyWith<_$ProfileGetUserLanguagesImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  const factory ProfileGetUserLanguages() = _$ProfileGetUserLanguagesImpl;
 }
 
 /// @nodoc
@@ -1137,8 +1071,9 @@ mixin _$ProfileState {
         getUserEducationsSuccess,
     required TResult Function(List<CertificateModel> certificates)
         getUserCertificatesSuccess,
-    required TResult Function(UserSkillModel skillModel) getUserSkills,
-    required TResult Function(dynamic User) getUserLanguages,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1153,8 +1088,8 @@ mixin _$ProfileState {
         getUserEducationsSuccess,
     TResult? Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult? Function(UserSkillModel skillModel)? getUserSkills,
-    TResult? Function(dynamic User)? getUserLanguages,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1168,8 +1103,8 @@ mixin _$ProfileState {
     TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
     TResult Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult Function(UserSkillModel skillModel)? getUserSkills,
-    TResult Function(dynamic User)? getUserLanguages,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1292,8 +1227,9 @@ class _$InitialImpl implements _Initial {
         getUserEducationsSuccess,
     required TResult Function(List<CertificateModel> certificates)
         getUserCertificatesSuccess,
-    required TResult Function(UserSkillModel skillModel) getUserSkills,
-    required TResult Function(dynamic User) getUserLanguages,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
   }) {
     return initial();
   }
@@ -1311,8 +1247,8 @@ class _$InitialImpl implements _Initial {
         getUserEducationsSuccess,
     TResult? Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult? Function(UserSkillModel skillModel)? getUserSkills,
-    TResult? Function(dynamic User)? getUserLanguages,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
   }) {
     return initial?.call();
   }
@@ -1329,8 +1265,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
     TResult Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult Function(UserSkillModel skillModel)? getUserSkills,
-    TResult Function(dynamic User)? getUserLanguages,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1489,8 +1425,9 @@ class _$ProfileErrorImpl implements ProfileError {
         getUserEducationsSuccess,
     required TResult Function(List<CertificateModel> certificates)
         getUserCertificatesSuccess,
-    required TResult Function(UserSkillModel skillModel) getUserSkills,
-    required TResult Function(dynamic User) getUserLanguages,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
   }) {
     return error(message, title);
   }
@@ -1508,8 +1445,8 @@ class _$ProfileErrorImpl implements ProfileError {
         getUserEducationsSuccess,
     TResult? Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult? Function(UserSkillModel skillModel)? getUserSkills,
-    TResult? Function(dynamic User)? getUserLanguages,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
   }) {
     return error?.call(message, title);
   }
@@ -1526,8 +1463,8 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
     TResult Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult Function(UserSkillModel skillModel)? getUserSkills,
-    TResult Function(dynamic User)? getUserLanguages,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1660,8 +1597,9 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         getUserEducationsSuccess,
     required TResult Function(List<CertificateModel> certificates)
         getUserCertificatesSuccess,
-    required TResult Function(UserSkillModel skillModel) getUserSkills,
-    required TResult Function(dynamic User) getUserLanguages,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
   }) {
     return loading();
   }
@@ -1679,8 +1617,8 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         getUserEducationsSuccess,
     TResult? Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult? Function(UserSkillModel skillModel)? getUserSkills,
-    TResult? Function(dynamic User)? getUserLanguages,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
   }) {
     return loading?.call();
   }
@@ -1697,8 +1635,8 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
     TResult Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult Function(UserSkillModel skillModel)? getUserSkills,
-    TResult Function(dynamic User)? getUserLanguages,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1863,8 +1801,9 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         getUserEducationsSuccess,
     required TResult Function(List<CertificateModel> certificates)
         getUserCertificatesSuccess,
-    required TResult Function(UserSkillModel skillModel) getUserSkills,
-    required TResult Function(dynamic User) getUserLanguages,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
   }) {
     return getUserInfoSuccess(userInfoModel);
   }
@@ -1882,8 +1821,8 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         getUserEducationsSuccess,
     TResult? Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult? Function(UserSkillModel skillModel)? getUserSkills,
-    TResult? Function(dynamic User)? getUserLanguages,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
   }) {
     return getUserInfoSuccess?.call(userInfoModel);
   }
@@ -1900,8 +1839,8 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
     TResult Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult Function(UserSkillModel skillModel)? getUserSkills,
-    TResult Function(dynamic User)? getUserLanguages,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -2073,8 +2012,9 @@ class _$ProfileGetUserExperienceSuccessImpl
         getUserEducationsSuccess,
     required TResult Function(List<CertificateModel> certificates)
         getUserCertificatesSuccess,
-    required TResult Function(UserSkillModel skillModel) getUserSkills,
-    required TResult Function(dynamic User) getUserLanguages,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
   }) {
     return getUserExperiencesSuccess(experiences);
   }
@@ -2092,8 +2032,8 @@ class _$ProfileGetUserExperienceSuccessImpl
         getUserEducationsSuccess,
     TResult? Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult? Function(UserSkillModel skillModel)? getUserSkills,
-    TResult? Function(dynamic User)? getUserLanguages,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
   }) {
     return getUserExperiencesSuccess?.call(experiences);
   }
@@ -2110,8 +2050,8 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
     TResult Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult Function(UserSkillModel skillModel)? getUserSkills,
-    TResult Function(dynamic User)? getUserLanguages,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -2285,8 +2225,9 @@ class _$ProfileGetUserEducationsSuccessImpl
         getUserEducationsSuccess,
     required TResult Function(List<CertificateModel> certificates)
         getUserCertificatesSuccess,
-    required TResult Function(UserSkillModel skillModel) getUserSkills,
-    required TResult Function(dynamic User) getUserLanguages,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
   }) {
     return getUserEducationsSuccess(educations);
   }
@@ -2304,8 +2245,8 @@ class _$ProfileGetUserEducationsSuccessImpl
         getUserEducationsSuccess,
     TResult? Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult? Function(UserSkillModel skillModel)? getUserSkills,
-    TResult? Function(dynamic User)? getUserLanguages,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
   }) {
     return getUserEducationsSuccess?.call(educations);
   }
@@ -2322,8 +2263,8 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
     TResult Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult Function(UserSkillModel skillModel)? getUserSkills,
-    TResult Function(dynamic User)? getUserLanguages,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -2497,8 +2438,9 @@ class _$ProfileGetUserCertificatesSuccessImpl
         getUserEducationsSuccess,
     required TResult Function(List<CertificateModel> certificates)
         getUserCertificatesSuccess,
-    required TResult Function(UserSkillModel skillModel) getUserSkills,
-    required TResult Function(dynamic User) getUserLanguages,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
   }) {
     return getUserCertificatesSuccess(certificates);
   }
@@ -2516,8 +2458,8 @@ class _$ProfileGetUserCertificatesSuccessImpl
         getUserEducationsSuccess,
     TResult? Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult? Function(UserSkillModel skillModel)? getUserSkills,
-    TResult? Function(dynamic User)? getUserLanguages,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
   }) {
     return getUserCertificatesSuccess?.call(certificates);
   }
@@ -2534,8 +2476,8 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
     TResult Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult Function(UserSkillModel skillModel)? getUserSkills,
-    TResult Function(dynamic User)? getUserLanguages,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -2627,9 +2569,7 @@ abstract class _$$ProfileGetUserSkillsSuccessImplCopyWith<$Res> {
           $Res Function(_$ProfileGetUserSkillsSuccessImpl) then) =
       __$$ProfileGetUserSkillsSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({UserSkillModel skillModel});
-
-  $UserSkillModelCopyWith<$Res> get skillModel;
+  $Res call({List<UserSkillModel> skillModels});
 }
 
 /// @nodoc
@@ -2644,36 +2584,35 @@ class __$$ProfileGetUserSkillsSuccessImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? skillModel = null,
+    Object? skillModels = null,
   }) {
     return _then(_$ProfileGetUserSkillsSuccessImpl(
-      null == skillModel
-          ? _value.skillModel
-          : skillModel // ignore: cast_nullable_to_non_nullable
-              as UserSkillModel,
+      null == skillModels
+          ? _value._skillModels
+          : skillModels // ignore: cast_nullable_to_non_nullable
+              as List<UserSkillModel>,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UserSkillModelCopyWith<$Res> get skillModel {
-    return $UserSkillModelCopyWith<$Res>(_value.skillModel, (value) {
-      return _then(_value.copyWith(skillModel: value));
-    });
   }
 }
 
 /// @nodoc
 
 class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
-  const _$ProfileGetUserSkillsSuccessImpl(this.skillModel);
+  const _$ProfileGetUserSkillsSuccessImpl(
+      final List<UserSkillModel> skillModels)
+      : _skillModels = skillModels;
 
+  final List<UserSkillModel> _skillModels;
   @override
-  final UserSkillModel skillModel;
+  List<UserSkillModel> get skillModels {
+    if (_skillModels is EqualUnmodifiableListView) return _skillModels;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_skillModels);
+  }
 
   @override
   String toString() {
-    return 'ProfileState.getUserSkills(skillModel: $skillModel)';
+    return 'ProfileState.getUserSkills(skillModels: $skillModels)';
   }
 
   @override
@@ -2681,12 +2620,13 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProfileGetUserSkillsSuccessImpl &&
-            (identical(other.skillModel, skillModel) ||
-                other.skillModel == skillModel));
+            const DeepCollectionEquality()
+                .equals(other._skillModels, _skillModels));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, skillModel);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_skillModels));
 
   @JsonKey(ignore: true)
   @override
@@ -2708,10 +2648,11 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         getUserEducationsSuccess,
     required TResult Function(List<CertificateModel> certificates)
         getUserCertificatesSuccess,
-    required TResult Function(UserSkillModel skillModel) getUserSkills,
-    required TResult Function(dynamic User) getUserLanguages,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
   }) {
-    return getUserSkills(skillModel);
+    return getUserSkills(skillModels);
   }
 
   @override
@@ -2727,10 +2668,10 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         getUserEducationsSuccess,
     TResult? Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult? Function(UserSkillModel skillModel)? getUserSkills,
-    TResult? Function(dynamic User)? getUserLanguages,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
   }) {
-    return getUserSkills?.call(skillModel);
+    return getUserSkills?.call(skillModels);
   }
 
   @override
@@ -2745,12 +2686,12 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
     TResult Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult Function(UserSkillModel skillModel)? getUserSkills,
-    TResult Function(dynamic User)? getUserLanguages,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
-      return getUserSkills(skillModel);
+      return getUserSkills(skillModels);
     }
     return orElse();
   }
@@ -2820,10 +2761,11 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
 }
 
 abstract class ProfileGetUserSkillsSuccess implements ProfileState {
-  const factory ProfileGetUserSkillsSuccess(final UserSkillModel skillModel) =
+  const factory ProfileGetUserSkillsSuccess(
+          final List<UserSkillModel> skillModels) =
       _$ProfileGetUserSkillsSuccessImpl;
 
-  UserSkillModel get skillModel;
+  List<UserSkillModel> get skillModels;
   @JsonKey(ignore: true)
   _$$ProfileGetUserSkillsSuccessImplCopyWith<_$ProfileGetUserSkillsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2836,7 +2778,7 @@ abstract class _$$ProfileGetUserLanguagesSuccessImplCopyWith<$Res> {
           $Res Function(_$ProfileGetUserLanguagesSuccessImpl) then) =
       __$$ProfileGetUserLanguagesSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({dynamic User});
+  $Res call({List<UserLanguageModel> languages});
 }
 
 /// @nodoc
@@ -2852,10 +2794,13 @@ class __$$ProfileGetUserLanguagesSuccessImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? User = freezed,
+    Object? languages = null,
   }) {
     return _then(_$ProfileGetUserLanguagesSuccessImpl(
-      freezed == User ? _value.User! : User,
+      null == languages
+          ? _value._languages
+          : languages // ignore: cast_nullable_to_non_nullable
+              as List<UserLanguageModel>,
     ));
   }
 }
@@ -2864,14 +2809,21 @@ class __$$ProfileGetUserLanguagesSuccessImplCopyWithImpl<$Res>
 
 class _$ProfileGetUserLanguagesSuccessImpl
     implements ProfileGetUserLanguagesSuccess {
-  const _$ProfileGetUserLanguagesSuccessImpl(this.User);
+  const _$ProfileGetUserLanguagesSuccessImpl(
+      final List<UserLanguageModel> languages)
+      : _languages = languages;
 
+  final List<UserLanguageModel> _languages;
   @override
-  final dynamic User;
+  List<UserLanguageModel> get languages {
+    if (_languages is EqualUnmodifiableListView) return _languages;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_languages);
+  }
 
   @override
   String toString() {
-    return 'ProfileState.getUserLanguages(User: $User)';
+    return 'ProfileState.getUserLanguages(languages: $languages)';
   }
 
   @override
@@ -2879,12 +2831,13 @@ class _$ProfileGetUserLanguagesSuccessImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProfileGetUserLanguagesSuccessImpl &&
-            const DeepCollectionEquality().equals(other.User, User));
+            const DeepCollectionEquality()
+                .equals(other._languages, _languages));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(User));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_languages));
 
   @JsonKey(ignore: true)
   @override
@@ -2907,10 +2860,11 @@ class _$ProfileGetUserLanguagesSuccessImpl
         getUserEducationsSuccess,
     required TResult Function(List<CertificateModel> certificates)
         getUserCertificatesSuccess,
-    required TResult Function(UserSkillModel skillModel) getUserSkills,
-    required TResult Function(dynamic User) getUserLanguages,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
   }) {
-    return getUserLanguages(User);
+    return getUserLanguages(languages);
   }
 
   @override
@@ -2926,10 +2880,10 @@ class _$ProfileGetUserLanguagesSuccessImpl
         getUserEducationsSuccess,
     TResult? Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult? Function(UserSkillModel skillModel)? getUserSkills,
-    TResult? Function(dynamic User)? getUserLanguages,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
   }) {
-    return getUserLanguages?.call(User);
+    return getUserLanguages?.call(languages);
   }
 
   @override
@@ -2944,12 +2898,12 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
     TResult Function(List<CertificateModel> certificates)?
         getUserCertificatesSuccess,
-    TResult Function(UserSkillModel skillModel)? getUserSkills,
-    TResult Function(dynamic User)? getUserLanguages,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
-      return getUserLanguages(User);
+      return getUserLanguages(languages);
     }
     return orElse();
   }
@@ -3019,10 +2973,11 @@ class _$ProfileGetUserLanguagesSuccessImpl
 }
 
 abstract class ProfileGetUserLanguagesSuccess implements ProfileState {
-  const factory ProfileGetUserLanguagesSuccess(final dynamic User) =
+  const factory ProfileGetUserLanguagesSuccess(
+          final List<UserLanguageModel> languages) =
       _$ProfileGetUserLanguagesSuccessImpl;
 
-  dynamic get User;
+  List<UserLanguageModel> get languages;
   @JsonKey(ignore: true)
   _$$ProfileGetUserLanguagesSuccessImplCopyWith<
           _$ProfileGetUserLanguagesSuccessImpl>

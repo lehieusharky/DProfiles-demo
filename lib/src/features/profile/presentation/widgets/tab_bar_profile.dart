@@ -32,7 +32,6 @@ class TabBarProfile extends StatelessWidget {
           tabs: const [
             Text('Profile'),
             Text('Posts'),
-            Text('Transactions'),
           ],
         ),
       ),

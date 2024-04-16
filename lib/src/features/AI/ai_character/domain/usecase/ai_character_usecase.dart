@@ -12,6 +12,11 @@ abstract class AICharacterUseCase {
   Future<Either<String, BaseResponse>> getListCharacterBot();
 
   Future<Either<String, BaseResponse>> getListPopularCharacterBot();
+
+  Future<Either<String, BaseResponse>> followCharacterBot(int botID);
+
+  Future<Either<String, BaseResponse>> getChatBotFollowedByUser(
+      String? search, int page, int limit);
 }
 
 @Injectable(as: AICharacterUseCase)
@@ -42,6 +47,26 @@ class AICharacterUseCaseImpl implements AICharacterUseCase {
   @override
   Future<Either<String, BaseResponse>> getListPopularCharacterBot() async {
     final result = await _aiCharacterRepository.getListPopularCharacterBot();
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> followCharacterBot(int botID) async {
+    final result = await _aiCharacterRepository.followCharacterBot(botID);
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> getChatBotFollowedByUser(
+      String? search, int page, int limit) async {
+    final result = await _aiCharacterRepository.getChatBotFollowedByUser(
+        search, page, limit);
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),

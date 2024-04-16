@@ -21,9 +21,9 @@ class ProfileState with _$ProfileState {
   const factory ProfileState.getUserCertificatesSuccess(
       List<CertificateModel> certificates) = ProfileGetUserCertificatesSuccess;
 
-  const factory ProfileState.getUserSkills(UserSkillModel skillModel) =
+  const factory ProfileState.getUserSkills(List<UserSkillModel> skillModels) =
       ProfileGetUserSkillsSuccess;
 
-  const factory ProfileState.getUserLanguages(User) =
-      ProfileGetUserLanguagesSuccess;
+  const factory ProfileState.getUserLanguages(
+      List<UserLanguageModel> languages) = ProfileGetUserLanguagesSuccess;
 }

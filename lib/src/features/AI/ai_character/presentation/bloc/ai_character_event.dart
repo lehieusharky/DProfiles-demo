@@ -60,4 +60,7 @@ class AiCharacterEvent with _$AiCharacterEvent {
       required int page,
       required int limit,
       required String search}) = AICharacterGetChatWithBotHistory;
+
+  const factory AiCharacterEvent.followBot(int chatBotID) =
+      AICharacterFollowBot;
 }
