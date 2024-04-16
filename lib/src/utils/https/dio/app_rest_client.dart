@@ -222,4 +222,133 @@ abstract class RestClient {
 
   @POST('/update-password')
   Future<BaseResponse> updatePassword(@Body() Map<String, dynamic> body);
+
+  // Feed
+  @GET('/api/v1/post')
+  Future<BaseResponse> readAllPosts(
+    @Query('page') int page,
+    @Query('limit') int limit,
+  );
+
+  @GET('/api/v1/post/{id}')
+  Future<BaseResponse> readPost(
+    @Path('id') int id,
+  );
+
+  @PUT('/api/v1/post/{id}')
+  Future<BaseResponse> updatePost(
+    @Path('id') int id,
+    @Body() Map<String, dynamic> post,
+  );
+
+  @DELETE('/api/v1/post/{id}')
+  Future<BaseResponse> deletePost(
+    @Path('id') int id,
+  );
+
+  @GET('/api/v1/share')
+  Future<BaseResponse> readAllShares();
+
+  @POST('/api/v1/share')
+  Future<BaseResponse> createShare(
+    @Body() Map<String, dynamic> share,
+  );
+
+  @GET('/api/v1/share/read-by-post')
+  Future<BaseResponse> readAllSharesByPost(
+    @Query('post_id') int postId,
+    @Query('page') int page,
+    @Query('limit') int limit,
+  );
+
+  @GET('/api/v1/share/shared/{post_id}')
+  Future<BaseResponse> getSharedPost(
+    @Path('post_id') int postId,
+  );
+
+  @GET('/api/v1/share/{id}')
+  Future<BaseResponse> readShare(
+    @Path('id') int id,
+  );
+
+  @PUT('/api/v1/share/{id}')
+  Future<BaseResponse> updateShare(
+    @Path('id') int id,
+    @Body() Map<String, dynamic> share,
+  );
+
+  @DELETE('/api/v1/share/{id}')
+  Future<BaseResponse> deleteShare(
+    @Path('id') int id,
+  );
+
+  @GET('/api/v1/comment')
+  Future<BaseResponse> readAllComments();
+
+  @POST('/api/v1/comment')
+  Future<BaseResponse> createComment(
+    @Body() Map<String, dynamic> comment,
+  );
+
+  @GET('/api/v1/comment/read-by-post')
+  Future<BaseResponse> readAllCommentsByPost(
+    @Query('post_id') int postId,
+    @Query('page') int page,
+    @Query('limit') int limit,
+  );
+
+  @GET('/api/v1/comment/commented/{post_id}')
+  Future<BaseResponse> getCommentedPost(
+    @Path('post_id') int postId,
+  );
+
+  @GET('/api/v1/comment/{id}')
+  Future<BaseResponse> readComment(
+    @Path('id') int id,
+  );
+
+  @PUT('/api/v1/comment/{id}')
+  Future<BaseResponse> updateComment(
+    @Path('id') int id,
+    @Body() Map<String, dynamic> comment,
+  );
+
+  @DELETE('/api/v1/comment/{id}')
+  Future<BaseResponse> deleteComment(
+    @Path('id') int id,
+  );
+
+  @GET('/api/v1/like')
+  Future<BaseResponse> readAllLikes(
+    @Query('post_id') int postId,
+    @Query('page') int page,
+    @Query('limit') int limit,
+  );
+
+  @POST('/api/v1/like')
+  Future<BaseResponse> createLike(
+    @Body() Map<String, dynamic> like,
+  );
+
+  @GET('/api/v1/like/read-by-post')
+  Future<BaseResponse> readAllLikesByPost(
+    @Query('post_id') int postId,
+    @Query('page') int page,
+    @Query('limit') int limit,
+  );
+
+  @GET('/api/v1/like/liked/{post_id}')
+  Future<BaseResponse> getLikedPost(
+    @Path('post_id') int postId,
+  );
+
+  @GET('/api/v1/like/{id}')
+  Future<BaseResponse> readLike(
+    @Path('id') int id,
+  );
+
+  @DELETE('/api/v1/like/{id}')
+  Future<BaseResponse> deleteLike(
+    @Path('id') int id,
+  );
 }

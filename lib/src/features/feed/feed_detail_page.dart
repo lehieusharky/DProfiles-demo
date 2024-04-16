@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
+import 'package:demo_dprofiles/src/features/feed/comment_bar.dart';
+import 'package:demo_dprofiles/src/features/feed/feed_comments.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
 import 'package:demo_dprofiles/src/features/home/domain/entities/ext_new_feed_entity.dart';
-import 'package:demo_dprofiles/src/features/home/presentation/widgets/comment_bar.dart';
-import 'package:demo_dprofiles/src/features/home/presentation/widgets/feed_comments.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
