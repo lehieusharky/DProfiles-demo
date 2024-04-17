@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/part_component.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/title_sub_page.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
@@ -7,6 +8,7 @@ import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class OpenToComponent extends StatelessWidget {
   final String salaryPayType;
@@ -19,7 +21,12 @@ class OpenToComponent extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        const TitleSubPage(title: 'Open to', route: OpenToWorkRoute()),
+        TitleSubPage(
+          title: 'Open to',
+          route: const OpenToWorkRoute(),
+          onCallBack: () =>
+              context.read<ProfileBloc>().add(const ProfileGetUserInfo()),
+        ),
         _buildOpenField(context,
             title: 'Pay',
             type: salaryPayType,

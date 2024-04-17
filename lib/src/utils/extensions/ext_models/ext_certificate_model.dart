@@ -3,6 +3,7 @@ import 'package:demo_dprofiles/src/features/profile/data/models/certificate_mode
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +40,7 @@ extension CertificateModelExt on CertificateModel {
                     Padding(
                       padding: context.padding(vertical: 5),
                       child: Text(
-                        date ?? 'Jul 2019 - Mar 2024',
+                        date.convertToDDMMYYFormat() ?? 'Jul 2019 - Mar 2024',
                         style: AppFont()
                             .fontTheme(context,
                                 color: colorScheme(context).outline)

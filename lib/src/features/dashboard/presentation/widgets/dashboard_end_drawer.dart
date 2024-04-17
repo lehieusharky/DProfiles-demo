@@ -75,7 +75,8 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
         },
         items: [
           Tuple3(Assets.icons.iconWallet.svg(), 'My Wallet', () {}),
-          Tuple3(Assets.icons.iconWallet.svg(), 'Digital Profile', () {}),
+          Tuple3(Assets.icons.iconWallet.svg(), 'Digital Profile',
+              () => context.router.push(const MyDigitalProfileRoute())),
           Tuple3(Assets.icons.iconWallet.svg(), 'Edit Profile', () {}),
           Tuple3(Assets.icons.iconWallet.svg(), 'Account Setting', () {}),
           Tuple3(Assets.icons.iconWallet.svg(), 'Become Influencer', () {}),

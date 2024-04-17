@@ -7,8 +7,13 @@ import 'package:flutter/material.dart';
 class TitleSubPage extends StatelessWidget {
   final String title;
   final PageRouteInfo<dynamic> route;
+  final VoidCallback onCallBack;
 
-  const TitleSubPage({Key? key, required this.title, required this.route})
+  const TitleSubPage(
+      {Key? key,
+      required this.title,
+      required this.route,
+      required this.onCallBack})
       : super(key: key);
 
   @override
@@ -22,7 +27,8 @@ class TitleSubPage extends StatelessWidget {
               AppFont().fontTheme(context, weight: FontWeight.bold).labelMedium,
         ),
         IconButton(
-          onPressed: () => context.router.push(route),
+          onPressed: () =>
+              context.router.push(route).then((value) => onCallBack()),
           icon: Icon(
             IconsaxBold.edit_2,
             color: colorScheme(context).outlineVariant,

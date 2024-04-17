@@ -49,8 +49,10 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
                 content: const Text('You have add new certificate'),
                 action: [
                   TextButton(
-                      onPressed: () =>
-                          Navigator.pop(context, state.certificateModel),
+                      onPressed: () {
+                        Navigator.pop(context);
+                        Navigator.pop(context, state.certificateModel);
+                      },
                       child: const Text('OK'))
                 ]);
           }

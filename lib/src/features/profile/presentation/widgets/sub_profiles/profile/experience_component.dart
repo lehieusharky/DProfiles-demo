@@ -22,9 +22,6 @@ class _ExperienceComponentState extends State<ExperienceComponent> {
     return BlocSelector<ProfileBloc, ProfileState, List<ExperienceModel>?>(
       selector: (state) {
         if (state is ProfileGetUserExperienceSuccess) {
-          if (state.experiences.length > 2) {
-            experiences = state.experiences.sublist(0, 3);
-          }
           experiences = state.experiences;
         }
         return experiences;
@@ -33,8 +30,13 @@ class _ExperienceComponentState extends State<ExperienceComponent> {
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const TitleSubPage(
-                title: 'Experience', route: ListExperienceRoute()),
+            TitleSubPage(
+              title: 'Experience',
+              route: const ListExperienceRoute(),
+              onCallBack: () => context
+                  .read<ProfileBloc>()
+                  .add(const ProfileGetUserExperience()),
+            ),
             if (state == null)
               const MyShimmer(count: 1, height: 150)
             else

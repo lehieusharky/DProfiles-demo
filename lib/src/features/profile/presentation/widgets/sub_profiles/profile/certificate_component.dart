@@ -22,9 +22,6 @@ class _CertificateComponentState extends State<CertificateComponent> {
     return BlocSelector<ProfileBloc, ProfileState, List<CertificateModel>?>(
       selector: (state) {
         if (state is ProfileGetUserCertificatesSuccess) {
-          if (state.certificates.length > 2) {
-            certificates = state.certificates.sublist(0, 3);
-          }
           certificates = state.certificates;
         }
         return certificates;
@@ -33,8 +30,13 @@ class _CertificateComponentState extends State<CertificateComponent> {
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const TitleSubPage(
-                title: 'Certificates', route: ListCertificateRoute()),
+            TitleSubPage(
+              title: 'Certificates',
+              route: const ListCertificateRoute(),
+              onCallBack: () => context
+                  .read<ProfileBloc>()
+                  .add(const ProfileGetUserCertificates()),
+            ),
             if (state == null)
               const MyShimmer(count: 1, height: 150)
             else
