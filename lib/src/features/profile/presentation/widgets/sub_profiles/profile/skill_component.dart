@@ -33,7 +33,12 @@ class _SkillComponentState extends State<SkillComponent> {
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const TitleSubPage(title: 'Skills', route: AddSkillRoute()),
+            TitleSubPage(
+              title: 'Skills',
+              route: const AddSkillRoute(),
+              onCallBack: () =>
+                  context.read<ProfileBloc>().add(const ProfileGetUserSkills()),
+            ),
             Row(
               children: skills.map((e) => e.toWidget()).toList(),
             )

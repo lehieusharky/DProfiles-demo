@@ -53,7 +53,12 @@ class _ListExperiencePageState extends State<ListExperiencePage> {
                             width: context.width,
                             title: 'Add new experience',
                             onPressed: () => context.router
-                                .push(const AddNewExperienceRoute())),
+                                .push(const AddNewExperienceRoute())
+                                .then((value) => value != null
+                                    ? context
+                                        .read<ProfileBloc>()
+                                        .add(const ProfileGetUserExperience())
+                                    : null)),
                       ),
                       Expanded(
                           child: ListView.builder(

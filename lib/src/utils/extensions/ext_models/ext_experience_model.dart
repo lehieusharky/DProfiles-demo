@@ -34,7 +34,7 @@ extension ExperienceModelExt on ExperienceModel {
                   children: [
                     if (companyName != null)
                       Text(
-                        '123',
+                        companyName ?? '',
                         style: AppFont()
                             .fontTheme(context, weight: FontWeight.bold)
                             .bodyLarge,

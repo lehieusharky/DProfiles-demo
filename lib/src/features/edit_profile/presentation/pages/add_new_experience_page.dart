@@ -51,8 +51,10 @@ class _AddNewExperiencePageState extends State<AddNewExperiencePage> {
                 content: const Text('You have add new experience'),
                 action: [
                   TextButton(
-                      onPressed: () =>
-                          Navigator.pop(context, state.experienceModel),
+                      onPressed: () {
+                        Navigator.pop(context);
+                        Navigator.pop(context, state.experienceModel);
+                      },
                       child: const Text('OK'))
                 ]);
           }

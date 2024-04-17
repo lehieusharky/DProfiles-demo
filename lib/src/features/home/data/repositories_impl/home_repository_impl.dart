@@ -24,4 +24,6 @@ class HomeRepositoryImpl implements HomeRepository {
           response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
+
+
 }

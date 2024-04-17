@@ -4,7 +4,6 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/bloc/create_digital_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
@@ -22,20 +21,18 @@ class ListEducationPage extends StatefulWidget {
 }
 
 class _ListEducationPageState extends State<ListEducationPage> {
-  List<EducationModel> educations = [];
+  List<EducationModel>? educations;
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
           injector.get<ProfileBloc>()..add(const ProfileGetUserEducations()),
-      child: BlocSelector<ProfileBloc, ProfileState, List<EducationModel>?>(
-        selector: (state) {
+      child: BlocConsumer<ProfileBloc, ProfileState>(
+        listener: (context, state) {
           if (state is ProfileGetUserEducationsSuccess) {
             educations = state.educations;
           }
-
-          return educations;
         },
         builder: (context, state) {
           return MyScaffold(
@@ -43,7 +40,7 @@ class _ListEducationPageState extends State<ListEducationPage> {
               canBack: true,
               horizontalMargin: 20,
               appBarTitle: 'Educations',
-              body: (state == null)
+              body: (educations == null)
                   ? const MyLoading()
                   : Column(
                       children: [
@@ -53,14 +50,19 @@ class _ListEducationPageState extends State<ListEducationPage> {
                               width: context.width,
                               title: 'Add new education',
                               onPressed: () => context.router
-                                  .push(const AddNewEducationRoute())),
+                                  .push(const AddNewEducationRoute())
+                                  .then((value) => value != null
+                                      ? context
+                                          .read<ProfileBloc>()
+                                          .add(const ProfileGetUserEducations())
+                                      : null)),
                         ),
                         Expanded(
                             child: ListView.builder(
-                                itemCount: educations.length,
+                                itemCount: educations!.length,
                                 shrinkWrap: true,
                                 itemBuilder: (context, index) =>
-                                    educations[index].toWidget(context)))
+                                    educations![index].toWidget(context)))
                       ],
                     ));
         },
