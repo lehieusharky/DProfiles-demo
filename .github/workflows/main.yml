@@ -1,47 +1,29 @@
+name: Build and distribute
+
 on:
-  pull_request:
-    branches:
-      - dev
-      - master
   push:
     branches:
-      - master
       - dev
-name: "Build & Release"
+
 jobs:
   build:
-    name: Build & Release
+    name: build
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-java@v3
-        with:
-          distribution: 'zulu'
-          java-version: '17'
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: 'stable'
-          architecture: x64
+      - uses: actions/checkout@v2
 
-      - run: flutter build apk --release --split-per-abi
+      - uses: cedvdb/action-flutter-build-ios@v1
         with:
-          strapiBaseUrl: https://blog.dev.dprofiles.xyz/api
-          strapiAccessToken: "4444d0ef88c87ba28371fcb9d68bedb8204a7acdc662f5c93ffc8688a55331e6c6a8bbb1c24b3400dac7ded65232cf351f780307add831cb3eb23a06228f17dad1b3696aa44885438ef9611d59253a71ee3c0d7ad892a51de12770a60a523c761c05631524832b62750c38e0037122752392348b03c95b4244040e37b57bad57"
-          blogsEndpoint: /posts
-          file_name: .env
-      - run: |
-          flutter build ios --no-codesign
-          cd build/ios/iphoneos
-          mkdir Payload
-          cd Payload
-          ln -s ../Runner.app
-          cd ..
-          zip -r app.ipa Payload
-      - name: Push to Releases
-        uses: ncipollo/release-action@v1
+          # always use --export-options-plist=ios/GithubActionsExportOptions.plist
+          build-cmd: flutter build ipa --release --flavor dev --export-options-plist=ios/GithubActionsExportOptions.plist
+          certificate-base64: ${{ secrets.IOS_BUILD_CERTIFICATE_BASE64 }}
+          certificate-password: ${{ secrets.IOS_BUILD_CERTIFICATE_PASSWORD }}
+          provisioning-profile-base64: ${{ secrets.IOS_MOBILE_PROVISIONING_PROFILE_BASE64 }}
+          keychain-password: ${{ secrets.token }}
+
+      - name: Archive IPA
+        uses: actions/upload-artifact@v2
         with:
-          artifacts: "build/app/outputs/apk/release/*,build/ios/iphoneos/app.ipa"
-          tag: v1.0.${{ github.run_number }}
-          token: ${{ secrets.TOKEN }}
-
-
+          name: release-ipa
+          # Try running the build locally with the build command to be sure of this path
+          path: build/ios/ipa/App-dev.ipa
