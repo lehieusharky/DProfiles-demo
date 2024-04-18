@@ -40,6 +40,7 @@ mixin _$FeedCommentModel {
   DateTime get updatedTs => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_ts')
   DateTime get createdTs => throw _privateConstructorUsedError;
+  UserInfoModel? get user => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -63,7 +64,10 @@ abstract class $FeedCommentModelCopyWith<$Res> {
       @JsonKey(name: 'video_url') String? videoUrl,
       @JsonKey(name: 'updated_on') DateTime updatedOn,
       @JsonKey(name: 'updated_ts') DateTime updatedTs,
-      @JsonKey(name: 'created_ts') DateTime createdTs});
+      @JsonKey(name: 'created_ts') DateTime createdTs,
+      UserInfoModel? user});
+
+  $UserInfoModelCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -89,6 +93,7 @@ class _$FeedCommentModelCopyWithImpl<$Res, $Val extends FeedCommentModel>
     Object? updatedOn = null,
     Object? updatedTs = null,
     Object? createdTs = null,
+    Object? user = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -131,7 +136,23 @@ class _$FeedCommentModelCopyWithImpl<$Res, $Val extends FeedCommentModel>
           ? _value.createdTs
           : createdTs // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      user: freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserInfoModel?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserInfoModelCopyWith<$Res>? get user {
+    if (_value.user == null) {
+      return null;
+    }
+
+    return $UserInfoModelCopyWith<$Res>(_value.user!, (value) {
+      return _then(_value.copyWith(user: value) as $Val);
+    });
   }
 }
 
@@ -153,7 +174,11 @@ abstract class _$$FeedCommentModelImplCopyWith<$Res>
       @JsonKey(name: 'video_url') String? videoUrl,
       @JsonKey(name: 'updated_on') DateTime updatedOn,
       @JsonKey(name: 'updated_ts') DateTime updatedTs,
-      @JsonKey(name: 'created_ts') DateTime createdTs});
+      @JsonKey(name: 'created_ts') DateTime createdTs,
+      UserInfoModel? user});
+
+  @override
+  $UserInfoModelCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -177,6 +202,7 @@ class __$$FeedCommentModelImplCopyWithImpl<$Res>
     Object? updatedOn = null,
     Object? updatedTs = null,
     Object? createdTs = null,
+    Object? user = freezed,
   }) {
     return _then(_$FeedCommentModelImpl(
       id: null == id
@@ -219,6 +245,10 @@ class __$$FeedCommentModelImplCopyWithImpl<$Res>
           ? _value.createdTs
           : createdTs // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      user: freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserInfoModel?,
     ));
   }
 }
@@ -236,7 +266,8 @@ class _$FeedCommentModelImpl implements _FeedCommentModel {
       @JsonKey(name: 'video_url') this.videoUrl,
       @JsonKey(name: 'updated_on') required this.updatedOn,
       @JsonKey(name: 'updated_ts') required this.updatedTs,
-      @JsonKey(name: 'created_ts') required this.createdTs});
+      @JsonKey(name: 'created_ts') required this.createdTs,
+      this.user});
 
   factory _$FeedCommentModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$FeedCommentModelImplFromJson(json);
@@ -271,10 +302,12 @@ class _$FeedCommentModelImpl implements _FeedCommentModel {
   @override
   @JsonKey(name: 'created_ts')
   final DateTime createdTs;
+  @override
+  final UserInfoModel? user;
 
   @override
   String toString() {
-    return 'FeedCommentModel(id: $id, postId: $postId, userId: $userId, commentId: $commentId, content: $content, imageUrl: $imageUrl, videoUrl: $videoUrl, updatedOn: $updatedOn, updatedTs: $updatedTs, createdTs: $createdTs)';
+    return 'FeedCommentModel(id: $id, postId: $postId, userId: $userId, commentId: $commentId, content: $content, imageUrl: $imageUrl, videoUrl: $videoUrl, updatedOn: $updatedOn, updatedTs: $updatedTs, createdTs: $createdTs, user: $user)';
   }
 
   @override
@@ -297,13 +330,14 @@ class _$FeedCommentModelImpl implements _FeedCommentModel {
             (identical(other.updatedTs, updatedTs) ||
                 other.updatedTs == updatedTs) &&
             (identical(other.createdTs, createdTs) ||
-                other.createdTs == createdTs));
+                other.createdTs == createdTs) &&
+            (identical(other.user, user) || other.user == user));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, postId, userId, commentId,
-      content, imageUrl, videoUrl, updatedOn, updatedTs, createdTs);
+      content, imageUrl, videoUrl, updatedOn, updatedTs, createdTs, user);
 
   @JsonKey(ignore: true)
   @override
@@ -322,17 +356,17 @@ class _$FeedCommentModelImpl implements _FeedCommentModel {
 
 abstract class _FeedCommentModel implements FeedCommentModel {
   factory _FeedCommentModel(
-          {@JsonKey(name: 'id') required final int id,
-          @JsonKey(name: 'post_id') required final int postId,
-          @JsonKey(name: 'user_id') required final int userId,
-          @JsonKey(name: 'comment_id') required final int commentId,
-          @JsonKey(name: 'content') required final String content,
-          @JsonKey(name: 'image_url') final String? imageUrl,
-          @JsonKey(name: 'video_url') final String? videoUrl,
-          @JsonKey(name: 'updated_on') required final DateTime updatedOn,
-          @JsonKey(name: 'updated_ts') required final DateTime updatedTs,
-          @JsonKey(name: 'created_ts') required final DateTime createdTs}) =
-      _$FeedCommentModelImpl;
+      {@JsonKey(name: 'id') required final int id,
+      @JsonKey(name: 'post_id') required final int postId,
+      @JsonKey(name: 'user_id') required final int userId,
+      @JsonKey(name: 'comment_id') required final int commentId,
+      @JsonKey(name: 'content') required final String content,
+      @JsonKey(name: 'image_url') final String? imageUrl,
+      @JsonKey(name: 'video_url') final String? videoUrl,
+      @JsonKey(name: 'updated_on') required final DateTime updatedOn,
+      @JsonKey(name: 'updated_ts') required final DateTime updatedTs,
+      @JsonKey(name: 'created_ts') required final DateTime createdTs,
+      final UserInfoModel? user}) = _$FeedCommentModelImpl;
 
   factory _FeedCommentModel.fromJson(Map<String, dynamic> json) =
       _$FeedCommentModelImpl.fromJson;
@@ -367,6 +401,8 @@ abstract class _FeedCommentModel implements FeedCommentModel {
   @override
   @JsonKey(name: 'created_ts')
   DateTime get createdTs;
+  @override
+  UserInfoModel? get user;
   @override
   @JsonKey(ignore: true)
   _$$FeedCommentModelImplCopyWith<_$FeedCommentModelImpl> get copyWith =>

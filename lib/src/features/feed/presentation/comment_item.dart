@@ -30,7 +30,7 @@ class CommentItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'User ${data.userId}',
+                    '${data.user?.email}',
                     style: AppFont().fontTheme(context).bodyLarge,
                   ),
                   Text(

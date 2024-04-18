@@ -1,3 +1,4 @@
+import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'feed_comment_model.freezed.dart';
@@ -16,6 +17,7 @@ class FeedCommentModel with _$FeedCommentModel {
     @JsonKey(name: 'updated_on') required DateTime updatedOn,
     @JsonKey(name: 'updated_ts') required DateTime updatedTs,
     @JsonKey(name: 'created_ts') required DateTime createdTs,
+    UserInfoModel? user,
   }) = _FeedCommentModel;
 
   factory FeedCommentModel.fromJson(Map<String, dynamic> json) =>

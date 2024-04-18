@@ -10,7 +10,12 @@ import 'package:flutter/material.dart';
 import 'package:tuple/tuple.dart';
 
 extension NewFeedModelExt on NewFeedModel {
-  Widget toWidget(BuildContext context) {
+  Widget toWidget(
+    BuildContext context, {
+    VoidCallback? onLikeClick,
+    VoidCallback? onCommentClick,
+    VoidCallback? onShareClick,
+  }) {
     return Padding(
       padding: context.padding(horizontal: 20),
       child: Column(
@@ -81,6 +86,9 @@ extension NewFeedModelExt on NewFeedModel {
             likes: noOfLike!,
             comments: noOfComment!,
             shares: noOfShare!,
+            onLikeClick: onCommentClick,
+            onCommentClick: onCommentClick,
+            onShareClick: onShareClick,
           ),
         ],
       ),
@@ -136,12 +144,18 @@ class ReactionPost extends StatelessWidget {
   final int likes;
   final int comments;
   final int shares;
+  final VoidCallback? onLikeClick;
+  final VoidCallback? onCommentClick;
+  final VoidCallback? onShareClick;
 
   const ReactionPost({
     super.key,
     required this.likes,
     required this.comments,
     required this.shares,
+    this.onLikeClick,
+    this.onCommentClick,
+    this.onShareClick,
   });
 
   @override
@@ -150,9 +164,30 @@ class ReactionPost extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        Tuple3(const Icon(IconsaxOutline.heart), likes, 0),
-        Tuple3(const Icon(IconsaxOutline.message), comments, 1),
-        Tuple3(const Icon(IconsaxOutline.cloud_sunny), shares, 2),
+        Tuple3(
+          InkWell(
+            onTap: onLikeClick,
+            child: const Icon(IconsaxOutline.heart),
+          ),
+          likes,
+          0,
+        ),
+        Tuple3(
+          InkWell(
+            onTap: onCommentClick,
+            child: const Icon(IconsaxOutline.message),
+          ),
+          comments,
+          0,
+        ),
+        Tuple3(
+          InkWell(
+            onTap: onShareClick,
+            child: const Icon(IconsaxOutline.cloud_sunny),
+          ),
+          shares,
+          0,
+        ),
       ].map((e) => _buildAction(context, e.item1, e.item2)).toList(),
     );
   }

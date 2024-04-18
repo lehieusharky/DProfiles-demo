@@ -19,6 +19,9 @@ _$FeedCommentModelImpl _$$FeedCommentModelImplFromJson(
       updatedOn: DateTime.parse(json['updated_on'] as String),
       updatedTs: DateTime.parse(json['updated_ts'] as String),
       createdTs: DateTime.parse(json['created_ts'] as String),
+      user: json['user'] == null
+          ? null
+          : UserInfoModel.fromJson(json['user'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$FeedCommentModelImplToJson(
@@ -34,4 +37,5 @@ Map<String, dynamic> _$$FeedCommentModelImplToJson(
       'updated_on': instance.updatedOn.toIso8601String(),
       'updated_ts': instance.updatedTs.toIso8601String(),
       'created_ts': instance.createdTs.toIso8601String(),
+      'user': instance.user,
     };

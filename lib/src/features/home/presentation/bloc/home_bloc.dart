@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:demo_dprofiles/src/core/di/di.dart';
+import 'package:demo_dprofiles/src/features/feed/domain/repositories/feed_repository.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
 import 'package:demo_dprofiles/src/features/home/domain/usecases/home_usecase.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
@@ -24,6 +26,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   final refreshController = RefreshController();
 
+  final feedRepository = injector.get<FeedRepository>();
+
   HomeBloc(this.homeUseCase, this.profileUseCase)
       : super(const HomeState.initial()) {
     on<HomeGetFeeds>(_getNewsFeed);
@@ -40,12 +44,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
     result.fold(
       (l) => emit(HomeError(message: l, title: 'Get news feed failed')),
-      (r) {
+      (r) async {
         final data = r.data as List;
 
         final newsFeed = data.map((e) => NewFeedModel.fromJson(e)).toList();
-
         emit(HomeGetFeedsSuccess(newsFeed));
+        emit(HomeGetFeedsSuccess(await _updatesLiked(newsFeed)));
       },
     );
   }
@@ -81,12 +85,13 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     final result = await homeUseCase.getNewsFeed(page, limitPage);
     result.fold(
       (l) => refreshController.refreshFailed(),
-      (r) {
+      (r) async {
         final data = r.data as List;
 
         final newsFeed = data.map((e) => NewFeedModel.fromJson(e)).toList();
 
         emit(HomeGetFeedsSuccess(newsFeed));
+        emit(HomeGetFeedsSuccess(await _updatesLiked(newsFeed)));
       },
     );
   }
@@ -105,5 +110,22 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         emit(const HomeGetUserInfoSuccess());
       },
     );
+  }
+
+  Future<List<NewFeedModel>> _updatesLiked(List<NewFeedModel> newsFeed) async {
+    final newsFeedWithLiked = newsFeed.map((e) async {
+      return await _updateLiked(e);
+    });
+    final res = await Future.wait(newsFeedWithLiked);
+    return res;
+  }
+
+  Future<NewFeedModel> _updateLiked(NewFeedModel feed) async {
+    final res = await feedRepository.getLikedPost(feed.postId ?? 0);
+    bool liked = feed.liked;
+    res.fold((l) {}, (r) {
+      liked = r.data as bool;
+    });
+    return feed.copyWith(liked: liked);
   }
 }

@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'new_feed_model.freezed.dart';
-
 part 'new_feed_model.g.dart';
 
 @freezed
@@ -19,6 +18,7 @@ class NewFeedModel with _$NewFeedModel {
     @Default(0) int? noOfLike,
     @Default(0) int? noOfShare,
     @Default(0) int? noOfComment,
+    @JsonKey(name: 'liked') @Default(false) bool liked,
   }) = _NewFeedModel;
 
   factory NewFeedModel.fromJson(Map<String, Object?> json) =>
