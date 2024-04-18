@@ -2,7 +2,7 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/feed/data/models/feed_comment_model.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/bloc/feed_comment_bloc.dart';
-import 'package:demo_dprofiles/src/features/home/presentation/widgets/comment_item.dart';
+import 'package:demo_dprofiles/src/features/feed/presentation/comment_item.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -33,6 +33,14 @@ class FeedComments extends StatelessWidget {
   }
 
   Widget _buildBody(BuildContext context, List<FeedCommentModel> state) {
+    if (state.isEmpty) {
+      return Center(
+        child: Text(
+          'No comments yet',
+          style: AppFont().fontTheme(context).bodyLarge,
+        ),
+      );
+    }
     return Padding(
       padding: context.padding(all: 20),
       child: Column(
