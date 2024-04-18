@@ -12,13 +12,13 @@ import 'package:auto_route/auto_route.dart' as _i44;
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/pages/create_ai_character_page.dart'
     as _i13;
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/widgets/edit_form/form_edit_certificate_page.dart'
-    as _i22;
+    as _i21;
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/widgets/edit_form/form_edit_education_page.dart'
-    as _i23;
+    as _i22;
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/widgets/edit_form/form_edit_experience_page.dart'
-    as _i24;
+    as _i23;
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/presentation/pages/my_ai_character_page.dart'
-    as _i31;
+    as _i30;
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/ai_features_history_page.dart'
     as _i7;
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/auto_generation_history_detail.dart'
@@ -37,22 +37,22 @@ import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentati
     as _i15;
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/create_dprofile_success_page.dart'
     as _i16;
-import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/digital_profile_page.dart'
-    as _i18;
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/history_update_digital_profile_page.dart'
-    as _i26;
+    as _i25;
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/pages/my_digital_profile_page.dart'
+    as _i31;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/auth_gate/auth_gate_page.dart'
     as _i8;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/connect_wallet/presentation/connect_wallet_page.dart'
     as _i12;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/pages/forgot_password_page.dart'
-    as _i21;
+    as _i20;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/pages/update_new_password_page.dart'
     as _i37;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/pages/verify_email_forgot_password.dart'
     as _i38;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/local_auth/presentation/pages/local_auth_page.dart'
-    as _i30;
+    as _i29;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_in/page/sign_in_page.dart'
     as _i34;
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/page/create_an_account_page.dart'
@@ -82,19 +82,19 @@ import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/add_
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/add_skill_page.dart'
     as _i6;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/edit_profile_page.dart'
-    as _i19;
+    as _i18;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/list_certificate_page.dart'
-    as _i27;
+    as _i26;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/list_education_page.dart'
-    as _i28;
+    as _i27;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/list_experience_page.dart'
-    as _i29;
+    as _i28;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/open_to_work_page.dart'
     as _i33;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/forms/form_skill.dart'
-    as _i25;
+    as _i24;
 import 'package:demo_dprofiles/src/features/feed/presentation/feed_detail_page.dart'
-    as _i20;
+    as _i19;
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart'
     as _i48;
 import 'package:demo_dprofiles/src/features/onboarding/presentation/page/onboarding_page.dart'
@@ -234,23 +234,17 @@ abstract class $AppRouter extends _i44.RootStackRouter {
         child: const _i17.DashboardPage(),
       );
     },
-    DigitalProfileRoute.name: (routeData) {
-      return _i44.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i18.DigitalProfilePage(),
-      );
-    },
     EditProfileRoute.name: (routeData) {
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i19.EditProfilePage(),
+        child: const _i18.EditProfilePage(),
       );
     },
     FeedDetailRoute.name: (routeData) {
       final args = routeData.argsAs<FeedDetailRouteArgs>();
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i20.FeedDetailPage(
+        child: _i19.FeedDetailPage(
           key: args.key,
           feed: args.feed,
         ),
@@ -259,14 +253,14 @@ abstract class $AppRouter extends _i44.RootStackRouter {
     ForgotPasswordRoute.name: (routeData) {
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i21.ForgotPasswordPage(),
+        child: const _i20.ForgotPasswordPage(),
       );
     },
     FormEditCertificateRoute.name: (routeData) {
       final args = routeData.argsAs<FormEditCertificateRouteArgs>();
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i22.FormEditCertificatePage(
+        child: _i21.FormEditCertificatePage(
           key: args.key,
           certificateModel: args.certificateModel,
         ),
@@ -276,7 +270,7 @@ abstract class $AppRouter extends _i44.RootStackRouter {
       final args = routeData.argsAs<FormEditEducationRouteArgs>();
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i23.FormEditEducationPage(
+        child: _i22.FormEditEducationPage(
           key: args.key,
           educationModel: args.educationModel,
         ),
@@ -286,7 +280,7 @@ abstract class $AppRouter extends _i44.RootStackRouter {
       final args = routeData.argsAs<FormEditExperienceRouteArgs>();
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i24.FormEditExperiencePage(
+        child: _i23.FormEditExperiencePage(
           key: args.key,
           experienceModel: args.experienceModel,
         ),
@@ -295,48 +289,54 @@ abstract class $AppRouter extends _i44.RootStackRouter {
     FormSkill.name: (routeData) {
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i25.FormSkill(),
+        child: const _i24.FormSkill(),
       );
     },
     HistoryUpdateDigitalProfileRoute.name: (routeData) {
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i26.HistoryUpdateDigitalProfilePage(),
+        child: const _i25.HistoryUpdateDigitalProfilePage(),
       );
     },
     ListCertificateRoute.name: (routeData) {
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i27.ListCertificatePage(),
+        child: const _i26.ListCertificatePage(),
       );
     },
     ListEducationRoute.name: (routeData) {
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i28.ListEducationPage(),
+        child: const _i27.ListEducationPage(),
       );
     },
     ListExperienceRoute.name: (routeData) {
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i29.ListExperiencePage(),
+        child: const _i28.ListExperiencePage(),
       );
     },
     LocalAuthRoute.name: (routeData) {
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i30.LocalAuthPage(),
+        child: const _i29.LocalAuthPage(),
       );
     },
     MyAICharacterRoute.name: (routeData) {
       final args = routeData.argsAs<MyAICharacterRouteArgs>();
       return _i44.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: _i31.MyAICharacterPage(
+        child: _i30.MyAICharacterPage(
           key: args.key,
           chatBotID: args.chatBotID,
           isPopularBot: args.isPopularBot,
         ),
+      );
+    },
+    MyDigitalProfileRoute.name: (routeData) {
+      return _i44.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i31.MyDigitalProfilePage(),
       );
     },
     OnboardingRoute.name: (routeData) {
@@ -765,21 +765,7 @@ class DashboardRoute extends _i44.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i18.DigitalProfilePage]
-class DigitalProfileRoute extends _i44.PageRouteInfo<void> {
-  const DigitalProfileRoute({List<_i44.PageRouteInfo>? children})
-      : super(
-          DigitalProfileRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'DigitalProfileRoute';
-
-  static const _i44.PageInfo<void> page = _i44.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i19.EditProfilePage]
+/// [_i18.EditProfilePage]
 class EditProfileRoute extends _i44.PageRouteInfo<void> {
   const EditProfileRoute({List<_i44.PageRouteInfo>? children})
       : super(
@@ -793,7 +779,7 @@ class EditProfileRoute extends _i44.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i20.FeedDetailPage]
+/// [_i19.FeedDetailPage]
 class FeedDetailRoute extends _i44.PageRouteInfo<FeedDetailRouteArgs> {
   FeedDetailRoute({
     _i45.Key? key,
@@ -831,7 +817,7 @@ class FeedDetailRouteArgs {
 }
 
 /// generated route for
-/// [_i21.ForgotPasswordPage]
+/// [_i20.ForgotPasswordPage]
 class ForgotPasswordRoute extends _i44.PageRouteInfo<void> {
   const ForgotPasswordRoute({List<_i44.PageRouteInfo>? children})
       : super(
@@ -845,7 +831,7 @@ class ForgotPasswordRoute extends _i44.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i22.FormEditCertificatePage]
+/// [_i21.FormEditCertificatePage]
 class FormEditCertificateRoute
     extends _i44.PageRouteInfo<FormEditCertificateRouteArgs> {
   FormEditCertificateRoute({
@@ -884,7 +870,7 @@ class FormEditCertificateRouteArgs {
 }
 
 /// generated route for
-/// [_i23.FormEditEducationPage]
+/// [_i22.FormEditEducationPage]
 class FormEditEducationRoute
     extends _i44.PageRouteInfo<FormEditEducationRouteArgs> {
   FormEditEducationRoute({
@@ -923,7 +909,7 @@ class FormEditEducationRouteArgs {
 }
 
 /// generated route for
-/// [_i24.FormEditExperiencePage]
+/// [_i23.FormEditExperiencePage]
 class FormEditExperienceRoute
     extends _i44.PageRouteInfo<FormEditExperienceRouteArgs> {
   FormEditExperienceRoute({
@@ -962,7 +948,7 @@ class FormEditExperienceRouteArgs {
 }
 
 /// generated route for
-/// [_i25.FormSkill]
+/// [_i24.FormSkill]
 class FormSkill extends _i44.PageRouteInfo<void> {
   const FormSkill({List<_i44.PageRouteInfo>? children})
       : super(
@@ -976,7 +962,7 @@ class FormSkill extends _i44.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i26.HistoryUpdateDigitalProfilePage]
+/// [_i25.HistoryUpdateDigitalProfilePage]
 class HistoryUpdateDigitalProfileRoute extends _i44.PageRouteInfo<void> {
   const HistoryUpdateDigitalProfileRoute({List<_i44.PageRouteInfo>? children})
       : super(
@@ -990,7 +976,7 @@ class HistoryUpdateDigitalProfileRoute extends _i44.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i27.ListCertificatePage]
+/// [_i26.ListCertificatePage]
 class ListCertificateRoute extends _i44.PageRouteInfo<void> {
   const ListCertificateRoute({List<_i44.PageRouteInfo>? children})
       : super(
@@ -1004,7 +990,7 @@ class ListCertificateRoute extends _i44.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i28.ListEducationPage]
+/// [_i27.ListEducationPage]
 class ListEducationRoute extends _i44.PageRouteInfo<void> {
   const ListEducationRoute({List<_i44.PageRouteInfo>? children})
       : super(
@@ -1018,7 +1004,7 @@ class ListEducationRoute extends _i44.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i29.ListExperiencePage]
+/// [_i28.ListExperiencePage]
 class ListExperienceRoute extends _i44.PageRouteInfo<void> {
   const ListExperienceRoute({List<_i44.PageRouteInfo>? children})
       : super(
@@ -1032,7 +1018,7 @@ class ListExperienceRoute extends _i44.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i30.LocalAuthPage]
+/// [_i29.LocalAuthPage]
 class LocalAuthRoute extends _i44.PageRouteInfo<void> {
   const LocalAuthRoute({List<_i44.PageRouteInfo>? children})
       : super(
@@ -1046,7 +1032,7 @@ class LocalAuthRoute extends _i44.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i31.MyAICharacterPage]
+/// [_i30.MyAICharacterPage]
 class MyAICharacterRoute extends _i44.PageRouteInfo<MyAICharacterRouteArgs> {
   MyAICharacterRoute({
     _i45.Key? key,
@@ -1086,6 +1072,20 @@ class MyAICharacterRouteArgs {
   String toString() {
     return 'MyAICharacterRouteArgs{key: $key, chatBotID: $chatBotID, isPopularBot: $isPopularBot}';
   }
+}
+
+/// generated route for
+/// [_i31.MyDigitalProfilePage]
+class MyDigitalProfileRoute extends _i44.PageRouteInfo<void> {
+  const MyDigitalProfileRoute({List<_i44.PageRouteInfo>? children})
+      : super(
+          MyDigitalProfileRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'MyDigitalProfileRoute';
+
+  static const _i44.PageInfo<void> page = _i44.PageInfo<void>(name);
 }
 
 /// generated route for

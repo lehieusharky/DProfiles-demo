@@ -81,7 +81,7 @@ class _AutoGenerateTextToSpeechState extends State<AutoGenerateTextToSpeech> {
           padding: context.padding(horizontal: 20),
           child: InkWell(
               onTap: () => _speak(),
-              child: const Icon(IconsaxOutline.timer_start)),
+              child: const Icon(IconsaxOutline.play_cricle)),
         )
       ],
     );

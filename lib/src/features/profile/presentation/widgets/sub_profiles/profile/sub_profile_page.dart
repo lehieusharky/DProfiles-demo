@@ -24,6 +24,7 @@ class SubProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider<ProfileBloc>(
       create: (context) => injector.get<ProfileBloc>()
+        ..add(const ProfileGetUserInfo())
         ..add(const ProfileGetUserEducations())
         ..add(const ProfileGetUserCertificates())
         ..add(const ProfileGetUserExperience())

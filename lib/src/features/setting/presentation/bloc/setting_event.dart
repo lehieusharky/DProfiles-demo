@@ -7,4 +7,5 @@ class SettingEvent with _$SettingEvent {
       ToggleLanguage;
   const factory SettingEvent.toggleTheme(SupportedTheme theme) = ToggleTheme;
   const factory SettingEvent.toggleDarkMode(bool status) = ToggleDarkMode;
+  const factory SettingEvent.deleteUser() = SettingDeleteUser;
 }

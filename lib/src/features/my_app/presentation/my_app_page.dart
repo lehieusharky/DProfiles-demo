@@ -1,3 +1,4 @@
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/setting/presentation/bloc/setting_bloc.dart';
 import 'package:demo_dprofiles/src/l10n/app_localizations.dart';
 import 'package:demo_dprofiles/src/routes/app_route.dart';
@@ -34,10 +35,10 @@ class _MyAppPageState extends State<MyAppPage> {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => SettingBloc(context)),
+        BlocProvider(create: (context) => injector.get<SettingBloc>()),
       ],
       child: BlocProvider<SettingBloc>(
-        create: (context) => SettingBloc(context),
+        create: (context) => injector.get<SettingBloc>(),
         child: BlocConsumer<SettingBloc, SettingState>(
           listener: (context, state) {
             if (state is ToggleThemeSuccess) {

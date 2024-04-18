@@ -22,11 +22,7 @@ class _EducationComponentState extends State<EducationComponent> {
     return BlocSelector<ProfileBloc, ProfileState, List<EducationModel>?>(
       selector: (state) {
         if (state is ProfileGetUserEducationsSuccess) {
-          if (state.educations.length > 2) {
-            educations = state.educations.sublist(0, 3);
-          } else {
-            educations = state.educations;
-          }
+          educations = state.educations;
         }
         return educations;
       },
@@ -34,7 +30,13 @@ class _EducationComponentState extends State<EducationComponent> {
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const TitleSubPage(title: 'Education', route: ListEducationRoute()),
+            TitleSubPage(
+              title: 'Education',
+              route: const ListEducationRoute(),
+              onCallBack: () => context
+                  .read<ProfileBloc>()
+                  .add(const ProfileGetUserEducations()),
+            ),
             if (state == null)
               const MyShimmer(count: 1, height: 150)
             else

@@ -49,8 +49,10 @@ class _AddNewEducationPageState extends State<AddNewEducationPage> {
                 content: const Text('You have add new education'),
                 action: [
                   TextButton(
-                      onPressed: () =>
-                          Navigator.pop(context, state.educationModel),
+                      onPressed: () {
+                        Navigator.pop(context);
+                        Navigator.pop(context, state.educationModel);
+                      },
                       child: const Text('OK'))
                 ]);
           }
