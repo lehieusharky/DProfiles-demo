@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
+import 'package:demo_dprofiles/src/features/feed/presentation/feed_menu.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -58,10 +59,7 @@ extension NewFeedModelExt on NewFeedModel {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const _FollowingButton(),
-                  Padding(
-                      padding: context.padding(left: 10),
-                      child: InkWell(
-                          onTap: () {}, child: Assets.icons.iconMore.svg()))
+                  _buildMenu(context),
                 ],
               )
             ],
@@ -115,6 +113,10 @@ extension NewFeedModelExt on NewFeedModel {
   //         ),
   //       ));
   // }
+
+  Widget _buildMenu(BuildContext context) {
+    return FeedMenu();
+  }
 }
 
 class _FollowingButton extends StatelessWidget {

@@ -19,6 +19,8 @@ class MyButton extends StatelessWidget {
   final Widget? suffixIcon;
   final Widget? child;
   final bool enabled;
+  final MainAxisAlignment mainAxisAlignment;
+  final MainAxisSize mainAxisSize;
 
   const MyButton({
     Key? key,
@@ -37,6 +39,8 @@ class MyButton extends StatelessWidget {
     this.suffixIcon,
     this.child,
     this.enabled = true,
+    this.mainAxisAlignment = MainAxisAlignment.center,
+    this.mainAxisSize = MainAxisSize.min,
   }) : super(key: key);
 
   @override
@@ -60,7 +64,8 @@ class MyButton extends StatelessWidget {
               child: Padding(
                 padding: context.padding(vertical: 5),
                 child: Row(
-                  mainAxisSize: MainAxisSize.min,
+                  mainAxisSize: mainAxisSize,
+                  mainAxisAlignment: mainAxisAlignment,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     prefixIcon ?? SizedBox.fromSize(),
