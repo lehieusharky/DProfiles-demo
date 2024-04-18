@@ -43,7 +43,7 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
   Widget _buildBody(List<NewFeedModel> state) {
     return AnimationLimiter(
       child: ListView.separated(
-        physics: const NeverScrollableScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         itemCount: state.length,
         itemBuilder: (context, index) => _buildItem(context, index, state),
         separatorBuilder: (BuildContext context, int index) => MyDivider(
