@@ -6,7 +6,6 @@ import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/constant/supported_chat_gpt.dart';
-import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:ficonsax/ficonsax.dart';
@@ -28,6 +27,8 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
 
   @override
   Widget build(BuildContext context) {
+    final gptVersion = context.watch<AiFeaturesBloc>().currentChatGPTVersion;
+
     return BlocConsumer<AiFeaturesBloc, AiFeaturesState>(
       listener: (context, state) {
         if (state is AiFeaturesLoading) {
@@ -93,9 +94,9 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
                     Expanded(
                       child: AppFlatButton(context).elevatedButton(
                         width: context.width,
-                        onPressed: () => _sendToAI(context),
+                        onPressed: () => _sendToAI(context, gptVersion),
                         title: appLocal(context).sendToAI,
-                        suffixIcon: _buildSuffixIconSendButton(),
+                        suffixIcon: _buildSuffixIconSendButton(gptVersion),
                       ),
                     ),
                   ],
@@ -108,13 +109,13 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
     );
   }
 
-  Widget _buildSuffixIconSendButton() => Padding(
+  Widget _buildSuffixIconSendButton(SupportedChatGPT gptVersion) => Padding(
         padding: context.padding(left: 40),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
-              '10',
+              gptVersion.getPoint().toString(),
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.bold)
                   .bodyMedium,
@@ -125,13 +126,13 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
         ),
       );
 
-  void _sendToAI(BuildContext context) {
+  void _sendToAI(BuildContext context, SupportedChatGPT gptVersion) {
     if (_keyForm.currentState?.validate() ?? false) {
       final model = WriteCoverLetterModel(
-        maxToken: 10,
+        maxToken: gptVersion.getPoint(),
         jobTitle: _jobTitleController.text,
         summary: _aboutYourSelfController.text + _promptController.text,
-        gptModel: sharePreference.getChatGPTVersion().toVersion(),
+        gptModel: gptVersion.toVersion(),
       );
       context.read<AiFeaturesBloc>().add(GenerateCoverLetter(model));
     }

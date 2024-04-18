@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/features/setting/presentation/bloc/setting_bloc.dart';
+import 'package:demo_dprofiles/src/features/dashboard/presentation/bloc/dashboard_bloc.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -29,9 +29,9 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<SettingBloc, SettingState>(
+    return BlocListener<DashboardBloc, DashboardState>(
       listener: (context, state) {
-        if (state is SettingDeleteUserSucccess) {
+        if (state is DashboardDeleteAccountSuccess) {
           _logout(context);
         }
       },
@@ -55,18 +55,34 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
         ),
         headerBuilder: (context, extended) {
           return Padding(
-            padding: context.padding(top: 50),
+            padding: context.padding(top: 50, horizontal: 8),
             child: Row(
               children: [
                 CircleAvatar(
-                    radius: context.sizeHeight(20),
-                    child: Assets.images.home.avatarHolder.image()),
-                const Column(
+                  radius: context.sizeHeight(20),
+                  child: Assets.images.home.avatarHolder.image(
+                    width: context.sizeWidth(60),
+                    height: context.sizeWidth(60),
+                  ),
+                ),
+                context.sizedBox(width: 16),
+                Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('name'),
-                    Text('0123j31230130'),
+                    Text(
+                      'name',
+                      style: AppFont()
+                          .fontTheme(context, weight: FontWeight.w600)
+                          .bodyLarge,
+                    ),
+                    Text(
+                      'Wallet: 12sdf...234',
+                      style: AppFont()
+                          .fontTheme(context,
+                              color: colorScheme(context).outline)
+                          .bodySmall,
+                    ),
                   ],
                 )
               ],
@@ -104,6 +120,6 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
   }
 
   void _deleteAccount(BuildContext context) {
-    context.read<SettingBloc>().add(const SettingDeleteUser());
+    context.read<DashboardBloc>().add(DashboardDeleteAccount());
   }
 }

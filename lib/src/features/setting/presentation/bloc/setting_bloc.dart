@@ -20,7 +20,6 @@ class SettingBloc extends Bloc<SettingEvent, SettingState> {
     on<ToggleTheme>(_onToggleTheme);
     on<ToggleLanguage>(_onToggleLanguage);
     on<ToggleDarkMode>(_onToggleDarkMode);
-    on<SettingDeleteUser>(_deleteUser);
 
     add(const GetInitSettingInfo());
   }
@@ -81,13 +80,4 @@ class SettingBloc extends Bloc<SettingEvent, SettingState> {
     );
   }
 
-  FutureOr<void> _deleteUser(
-      SettingDeleteUser event, Emitter<SettingState> emit) async {
-    final status = await settingUseCase.deleteUser();
-
-    status.fold(
-      (l) => emit(SettingError(l)),
-      (r) => emit(const SettingDeleteUserSucccess()),
-    );
-  }
 }

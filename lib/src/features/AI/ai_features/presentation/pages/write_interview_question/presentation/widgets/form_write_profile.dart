@@ -30,6 +30,8 @@ class _FormWriteInterviewQuestionState
 
   @override
   Widget build(BuildContext context) {
+    final gptVersion = context.watch<AiFeaturesBloc>().currentChatGPTVersion;
+
     return BlocConsumer<AiFeaturesBloc, AiFeaturesState>(
       listener: (context, state) {
         if (state is AiFeaturesLoading) {
@@ -84,9 +86,9 @@ class _FormWriteInterviewQuestionState
                     Expanded(
                       child: AppFlatButton(context).elevatedButton(
                         width: context.width,
-                        onPressed: () => _sendToAI(context),
+                        onPressed: () => _sendToAI(context, gptVersion),
                         title: appLocal(context).sendToAI,
-                        suffixIcon: _buildSuffixIconSendButton(),
+                        suffixIcon: _buildSuffixIconSendButton(gptVersion),
                       ),
                     ),
                   ],
@@ -99,13 +101,13 @@ class _FormWriteInterviewQuestionState
     );
   }
 
-  Widget _buildSuffixIconSendButton() => Padding(
+  Widget _buildSuffixIconSendButton(SupportedChatGPT gptVersion) => Padding(
         padding: context.padding(left: 40),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
-              '10',
+              gptVersion.getPoint().toString(),
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.bold)
                   .bodyMedium,
@@ -116,12 +118,12 @@ class _FormWriteInterviewQuestionState
         ),
       );
 
-  void _sendToAI(BuildContext context) {
+  void _sendToAI(BuildContext context, SupportedChatGPT gptVersion) {
     if (_keyForm.currentState?.validate() ?? false) {
       final model = WriteInterviewQuestionModel(
         jobTitle: _jobTitleController.text,
         about: _interviewQuestionController.text.trim(),
-        gptModel: sharePreference.getChatGPTVersion().toVersion(),
+        gptModel: gptVersion.toVersion(),
       );
       context.read<AiFeaturesBloc>().add(GenerateInterviewQuestion(model));
     }

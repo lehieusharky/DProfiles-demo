@@ -8,7 +8,6 @@ import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/wr
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/header_auto_gen.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/write_skill_knowledge/presentation/widgets/form_skill_knowledge.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/chat_gpt_selector.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,16 +21,7 @@ class WriteSkillKnowledgePage extends StatefulWidget {
       _WriteSkillKnowledgePageState();
 }
 
-class _WriteSkillKnowledgePageState extends State<WriteSkillKnowledgePage>
-    with SingleTickerProviderStateMixin {
-  late TabController _tabController;
-
-  @override
-  void initState() {
-    super.initState();
-    _tabController = TabController(vsync: this, length: 2);
-  }
-
+class _WriteSkillKnowledgePageState extends State<WriteSkillKnowledgePage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -66,7 +56,7 @@ class _WriteSkillKnowledgePageState extends State<WriteSkillKnowledgePage>
             body: SingleChildScrollView(
               child: Column(
                 children: [
-                  ChatGPTSelector(controller: _tabController),
+                  const ChatGPTSelector(),
                   Padding(
                     padding: context.padding(vertical: 16),
                     child: const FormSkillKnowledge(),

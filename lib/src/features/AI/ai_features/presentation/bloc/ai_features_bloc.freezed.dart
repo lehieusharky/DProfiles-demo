@@ -32,6 +32,7 @@ mixin _$AiFeaturesEvent {
         generateCoverLetter,
     required TResult Function(int id) getAutoGenerateHistoryDetail,
     required TResult Function() getCurrentPointOfUser,
+    required TResult Function(SupportedChatGPT version) changeGPTVersion,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -48,6 +49,7 @@ mixin _$AiFeaturesEvent {
         generateCoverLetter,
     TResult? Function(int id)? getAutoGenerateHistoryDetail,
     TResult? Function()? getCurrentPointOfUser,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersion,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -64,6 +66,7 @@ mixin _$AiFeaturesEvent {
         generateCoverLetter,
     TResult Function(int id)? getAutoGenerateHistoryDetail,
     TResult Function()? getCurrentPointOfUser,
+    TResult Function(SupportedChatGPT version)? changeGPTVersion,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -83,6 +86,8 @@ mixin _$AiFeaturesEvent {
         getAutoGenerateHistoryDetail,
     required TResult Function(GetCurrentPointOfUser value)
         getCurrentPointOfUser,
+    required TResult Function(AICharacterChangeGPTVersion value)
+        changeGPTVersion,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -98,6 +103,7 @@ mixin _$AiFeaturesEvent {
     TResult? Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult? Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -113,6 +119,7 @@ mixin _$AiFeaturesEvent {
     TResult Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -188,6 +195,7 @@ class _$StartedImpl implements _Started {
         generateCoverLetter,
     required TResult Function(int id) getAutoGenerateHistoryDetail,
     required TResult Function() getCurrentPointOfUser,
+    required TResult Function(SupportedChatGPT version) changeGPTVersion,
   }) {
     return started();
   }
@@ -207,6 +215,7 @@ class _$StartedImpl implements _Started {
         generateCoverLetter,
     TResult? Function(int id)? getAutoGenerateHistoryDetail,
     TResult? Function()? getCurrentPointOfUser,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersion,
   }) {
     return started?.call();
   }
@@ -226,6 +235,7 @@ class _$StartedImpl implements _Started {
         generateCoverLetter,
     TResult Function(int id)? getAutoGenerateHistoryDetail,
     TResult Function()? getCurrentPointOfUser,
+    TResult Function(SupportedChatGPT version)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -251,6 +261,8 @@ class _$StartedImpl implements _Started {
         getAutoGenerateHistoryDetail,
     required TResult Function(GetCurrentPointOfUser value)
         getCurrentPointOfUser,
+    required TResult Function(AICharacterChangeGPTVersion value)
+        changeGPTVersion,
   }) {
     return started(this);
   }
@@ -269,6 +281,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult? Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
   }) {
     return started?.call(this);
   }
@@ -287,6 +300,7 @@ class _$StartedImpl implements _Started {
     TResult Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -355,6 +369,7 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
         generateCoverLetter,
     required TResult Function(int id) getAutoGenerateHistoryDetail,
     required TResult Function() getCurrentPointOfUser,
+    required TResult Function(SupportedChatGPT version) changeGPTVersion,
   }) {
     return getAutoGenerateHistory();
   }
@@ -374,6 +389,7 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
         generateCoverLetter,
     TResult? Function(int id)? getAutoGenerateHistoryDetail,
     TResult? Function()? getCurrentPointOfUser,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersion,
   }) {
     return getAutoGenerateHistory?.call();
   }
@@ -393,6 +409,7 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
         generateCoverLetter,
     TResult Function(int id)? getAutoGenerateHistoryDetail,
     TResult Function()? getCurrentPointOfUser,
+    TResult Function(SupportedChatGPT version)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistory != null) {
@@ -418,6 +435,8 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
         getAutoGenerateHistoryDetail,
     required TResult Function(GetCurrentPointOfUser value)
         getCurrentPointOfUser,
+    required TResult Function(AICharacterChangeGPTVersion value)
+        changeGPTVersion,
   }) {
     return getAutoGenerateHistory(this);
   }
@@ -436,6 +455,7 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
     TResult? Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult? Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
   }) {
     return getAutoGenerateHistory?.call(this);
   }
@@ -454,6 +474,7 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
     TResult Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistory != null) {
@@ -562,6 +583,7 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
         generateCoverLetter,
     required TResult Function(int id) getAutoGenerateHistoryDetail,
     required TResult Function() getCurrentPointOfUser,
+    required TResult Function(SupportedChatGPT version) changeGPTVersion,
   }) {
     return generateProfileIntroduction(profileIntroductionModel);
   }
@@ -581,6 +603,7 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
         generateCoverLetter,
     TResult? Function(int id)? getAutoGenerateHistoryDetail,
     TResult? Function()? getCurrentPointOfUser,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersion,
   }) {
     return generateProfileIntroduction?.call(profileIntroductionModel);
   }
@@ -600,6 +623,7 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
         generateCoverLetter,
     TResult Function(int id)? getAutoGenerateHistoryDetail,
     TResult Function()? getCurrentPointOfUser,
+    TResult Function(SupportedChatGPT version)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (generateProfileIntroduction != null) {
@@ -625,6 +649,8 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
         getAutoGenerateHistoryDetail,
     required TResult Function(GetCurrentPointOfUser value)
         getCurrentPointOfUser,
+    required TResult Function(AICharacterChangeGPTVersion value)
+        changeGPTVersion,
   }) {
     return generateProfileIntroduction(this);
   }
@@ -643,6 +669,7 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
     TResult? Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult? Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
   }) {
     return generateProfileIntroduction?.call(this);
   }
@@ -661,6 +688,7 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
     TResult Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (generateProfileIntroduction != null) {
@@ -774,6 +802,7 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
         generateCoverLetter,
     required TResult Function(int id) getAutoGenerateHistoryDetail,
     required TResult Function() getCurrentPointOfUser,
+    required TResult Function(SupportedChatGPT version) changeGPTVersion,
   }) {
     return generateInterviewQuestion(interviewQuestionModel);
   }
@@ -793,6 +822,7 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
         generateCoverLetter,
     TResult? Function(int id)? getAutoGenerateHistoryDetail,
     TResult? Function()? getCurrentPointOfUser,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersion,
   }) {
     return generateInterviewQuestion?.call(interviewQuestionModel);
   }
@@ -812,6 +842,7 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
         generateCoverLetter,
     TResult Function(int id)? getAutoGenerateHistoryDetail,
     TResult Function()? getCurrentPointOfUser,
+    TResult Function(SupportedChatGPT version)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (generateInterviewQuestion != null) {
@@ -837,6 +868,8 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
         getAutoGenerateHistoryDetail,
     required TResult Function(GetCurrentPointOfUser value)
         getCurrentPointOfUser,
+    required TResult Function(AICharacterChangeGPTVersion value)
+        changeGPTVersion,
   }) {
     return generateInterviewQuestion(this);
   }
@@ -855,6 +888,7 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
     TResult? Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult? Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
   }) {
     return generateInterviewQuestion?.call(this);
   }
@@ -873,6 +907,7 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
     TResult Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (generateInterviewQuestion != null) {
@@ -986,6 +1021,7 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
         generateCoverLetter,
     required TResult Function(int id) getAutoGenerateHistoryDetail,
     required TResult Function() getCurrentPointOfUser,
+    required TResult Function(SupportedChatGPT version) changeGPTVersion,
   }) {
     return generateSkillKnowledge(skillKnowledgeModel);
   }
@@ -1005,6 +1041,7 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
         generateCoverLetter,
     TResult? Function(int id)? getAutoGenerateHistoryDetail,
     TResult? Function()? getCurrentPointOfUser,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersion,
   }) {
     return generateSkillKnowledge?.call(skillKnowledgeModel);
   }
@@ -1024,6 +1061,7 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
         generateCoverLetter,
     TResult Function(int id)? getAutoGenerateHistoryDetail,
     TResult Function()? getCurrentPointOfUser,
+    TResult Function(SupportedChatGPT version)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (generateSkillKnowledge != null) {
@@ -1049,6 +1087,8 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
         getAutoGenerateHistoryDetail,
     required TResult Function(GetCurrentPointOfUser value)
         getCurrentPointOfUser,
+    required TResult Function(AICharacterChangeGPTVersion value)
+        changeGPTVersion,
   }) {
     return generateSkillKnowledge(this);
   }
@@ -1067,6 +1107,7 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
     TResult? Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult? Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
   }) {
     return generateSkillKnowledge?.call(this);
   }
@@ -1085,6 +1126,7 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
     TResult Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (generateSkillKnowledge != null) {
@@ -1196,6 +1238,7 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
         generateCoverLetter,
     required TResult Function(int id) getAutoGenerateHistoryDetail,
     required TResult Function() getCurrentPointOfUser,
+    required TResult Function(SupportedChatGPT version) changeGPTVersion,
   }) {
     return generateCoverLetter(coverLetterModel);
   }
@@ -1215,6 +1258,7 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
         generateCoverLetter,
     TResult? Function(int id)? getAutoGenerateHistoryDetail,
     TResult? Function()? getCurrentPointOfUser,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersion,
   }) {
     return generateCoverLetter?.call(coverLetterModel);
   }
@@ -1234,6 +1278,7 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
         generateCoverLetter,
     TResult Function(int id)? getAutoGenerateHistoryDetail,
     TResult Function()? getCurrentPointOfUser,
+    TResult Function(SupportedChatGPT version)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (generateCoverLetter != null) {
@@ -1259,6 +1304,8 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
         getAutoGenerateHistoryDetail,
     required TResult Function(GetCurrentPointOfUser value)
         getCurrentPointOfUser,
+    required TResult Function(AICharacterChangeGPTVersion value)
+        changeGPTVersion,
   }) {
     return generateCoverLetter(this);
   }
@@ -1277,6 +1324,7 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
     TResult? Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult? Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
   }) {
     return generateCoverLetter?.call(this);
   }
@@ -1295,6 +1343,7 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
     TResult Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (generateCoverLetter != null) {
@@ -1398,6 +1447,7 @@ class _$GetAutoGenerateHistoryDetailImpl
         generateCoverLetter,
     required TResult Function(int id) getAutoGenerateHistoryDetail,
     required TResult Function() getCurrentPointOfUser,
+    required TResult Function(SupportedChatGPT version) changeGPTVersion,
   }) {
     return getAutoGenerateHistoryDetail(id);
   }
@@ -1417,6 +1467,7 @@ class _$GetAutoGenerateHistoryDetailImpl
         generateCoverLetter,
     TResult? Function(int id)? getAutoGenerateHistoryDetail,
     TResult? Function()? getCurrentPointOfUser,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersion,
   }) {
     return getAutoGenerateHistoryDetail?.call(id);
   }
@@ -1436,6 +1487,7 @@ class _$GetAutoGenerateHistoryDetailImpl
         generateCoverLetter,
     TResult Function(int id)? getAutoGenerateHistoryDetail,
     TResult Function()? getCurrentPointOfUser,
+    TResult Function(SupportedChatGPT version)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistoryDetail != null) {
@@ -1461,6 +1513,8 @@ class _$GetAutoGenerateHistoryDetailImpl
         getAutoGenerateHistoryDetail,
     required TResult Function(GetCurrentPointOfUser value)
         getCurrentPointOfUser,
+    required TResult Function(AICharacterChangeGPTVersion value)
+        changeGPTVersion,
   }) {
     return getAutoGenerateHistoryDetail(this);
   }
@@ -1479,6 +1533,7 @@ class _$GetAutoGenerateHistoryDetailImpl
     TResult? Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult? Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
   }) {
     return getAutoGenerateHistoryDetail?.call(this);
   }
@@ -1497,6 +1552,7 @@ class _$GetAutoGenerateHistoryDetailImpl
     TResult Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistoryDetail != null) {
@@ -1571,6 +1627,7 @@ class _$GetCurrentPointOfUserImpl implements GetCurrentPointOfUser {
         generateCoverLetter,
     required TResult Function(int id) getAutoGenerateHistoryDetail,
     required TResult Function() getCurrentPointOfUser,
+    required TResult Function(SupportedChatGPT version) changeGPTVersion,
   }) {
     return getCurrentPointOfUser();
   }
@@ -1590,6 +1647,7 @@ class _$GetCurrentPointOfUserImpl implements GetCurrentPointOfUser {
         generateCoverLetter,
     TResult? Function(int id)? getAutoGenerateHistoryDetail,
     TResult? Function()? getCurrentPointOfUser,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersion,
   }) {
     return getCurrentPointOfUser?.call();
   }
@@ -1609,6 +1667,7 @@ class _$GetCurrentPointOfUserImpl implements GetCurrentPointOfUser {
         generateCoverLetter,
     TResult Function(int id)? getAutoGenerateHistoryDetail,
     TResult Function()? getCurrentPointOfUser,
+    TResult Function(SupportedChatGPT version)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (getCurrentPointOfUser != null) {
@@ -1634,6 +1693,8 @@ class _$GetCurrentPointOfUserImpl implements GetCurrentPointOfUser {
         getAutoGenerateHistoryDetail,
     required TResult Function(GetCurrentPointOfUser value)
         getCurrentPointOfUser,
+    required TResult Function(AICharacterChangeGPTVersion value)
+        changeGPTVersion,
   }) {
     return getCurrentPointOfUser(this);
   }
@@ -1652,6 +1713,7 @@ class _$GetCurrentPointOfUserImpl implements GetCurrentPointOfUser {
     TResult? Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult? Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
   }) {
     return getCurrentPointOfUser?.call(this);
   }
@@ -1670,6 +1732,7 @@ class _$GetCurrentPointOfUserImpl implements GetCurrentPointOfUser {
     TResult Function(GetAutoGenerateHistoryDetail value)?
         getAutoGenerateHistoryDetail,
     TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
     required TResult orElse(),
   }) {
     if (getCurrentPointOfUser != null) {
@@ -1681,6 +1744,213 @@ class _$GetCurrentPointOfUserImpl implements GetCurrentPointOfUser {
 
 abstract class GetCurrentPointOfUser implements AiFeaturesEvent {
   const factory GetCurrentPointOfUser() = _$GetCurrentPointOfUserImpl;
+}
+
+/// @nodoc
+abstract class _$$AICharacterChangeGPTVersionImplCopyWith<$Res> {
+  factory _$$AICharacterChangeGPTVersionImplCopyWith(
+          _$AICharacterChangeGPTVersionImpl value,
+          $Res Function(_$AICharacterChangeGPTVersionImpl) then) =
+      __$$AICharacterChangeGPTVersionImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({SupportedChatGPT version});
+}
+
+/// @nodoc
+class __$$AICharacterChangeGPTVersionImplCopyWithImpl<$Res>
+    extends _$AiFeaturesEventCopyWithImpl<$Res,
+        _$AICharacterChangeGPTVersionImpl>
+    implements _$$AICharacterChangeGPTVersionImplCopyWith<$Res> {
+  __$$AICharacterChangeGPTVersionImplCopyWithImpl(
+      _$AICharacterChangeGPTVersionImpl _value,
+      $Res Function(_$AICharacterChangeGPTVersionImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? version = null,
+  }) {
+    return _then(_$AICharacterChangeGPTVersionImpl(
+      null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as SupportedChatGPT,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AICharacterChangeGPTVersionImpl implements AICharacterChangeGPTVersion {
+  const _$AICharacterChangeGPTVersionImpl(this.version);
+
+  @override
+  final SupportedChatGPT version;
+
+  @override
+  String toString() {
+    return 'AiFeaturesEvent.changeGPTVersion(version: $version)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AICharacterChangeGPTVersionImpl &&
+            (identical(other.version, version) || other.version == version));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, version);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AICharacterChangeGPTVersionImplCopyWith<_$AICharacterChangeGPTVersionImpl>
+      get copyWith => __$$AICharacterChangeGPTVersionImplCopyWithImpl<
+          _$AICharacterChangeGPTVersionImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(
+            WriteProfileIntroductionModel profileIntroductionModel)
+        generateProfileIntroduction,
+    required TResult Function(
+            WriteInterviewQuestionModel interviewQuestionModel)
+        generateInterviewQuestion,
+    required TResult Function(WriteSkillKnowledgeModel skillKnowledgeModel)
+        generateSkillKnowledge,
+    required TResult Function(WriteCoverLetterModel coverLetterModel)
+        generateCoverLetter,
+    required TResult Function(int id) getAutoGenerateHistoryDetail,
+    required TResult Function() getCurrentPointOfUser,
+    required TResult Function(SupportedChatGPT version) changeGPTVersion,
+  }) {
+    return changeGPTVersion(version);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
+        generateProfileIntroduction,
+    TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
+        generateInterviewQuestion,
+    TResult? Function(WriteSkillKnowledgeModel skillKnowledgeModel)?
+        generateSkillKnowledge,
+    TResult? Function(WriteCoverLetterModel coverLetterModel)?
+        generateCoverLetter,
+    TResult? Function(int id)? getAutoGenerateHistoryDetail,
+    TResult? Function()? getCurrentPointOfUser,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersion,
+  }) {
+    return changeGPTVersion?.call(version);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getAutoGenerateHistory,
+    TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
+        generateProfileIntroduction,
+    TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
+        generateInterviewQuestion,
+    TResult Function(WriteSkillKnowledgeModel skillKnowledgeModel)?
+        generateSkillKnowledge,
+    TResult Function(WriteCoverLetterModel coverLetterModel)?
+        generateCoverLetter,
+    TResult Function(int id)? getAutoGenerateHistoryDetail,
+    TResult Function()? getCurrentPointOfUser,
+    TResult Function(SupportedChatGPT version)? changeGPTVersion,
+    required TResult orElse(),
+  }) {
+    if (changeGPTVersion != null) {
+      return changeGPTVersion(version);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(GetAutoGenerateHistory value)
+        getAutoGenerateHistory,
+    required TResult Function(GenerateProfileIntroduction value)
+        generateProfileIntroduction,
+    required TResult Function(GenerateInterviewQuestion value)
+        generateInterviewQuestion,
+    required TResult Function(GenerateSkillKnowledge value)
+        generateSkillKnowledge,
+    required TResult Function(GenerateCoverLetter value) generateCoverLetter,
+    required TResult Function(GetAutoGenerateHistoryDetail value)
+        getAutoGenerateHistoryDetail,
+    required TResult Function(GetCurrentPointOfUser value)
+        getCurrentPointOfUser,
+    required TResult Function(AICharacterChangeGPTVersion value)
+        changeGPTVersion,
+  }) {
+    return changeGPTVersion(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(GetAutoGenerateHistory value)? getAutoGenerateHistory,
+    TResult? Function(GenerateProfileIntroduction value)?
+        generateProfileIntroduction,
+    TResult? Function(GenerateInterviewQuestion value)?
+        generateInterviewQuestion,
+    TResult? Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
+    TResult? Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult? Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult? Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult? Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
+  }) {
+    return changeGPTVersion?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(GetAutoGenerateHistory value)? getAutoGenerateHistory,
+    TResult Function(GenerateProfileIntroduction value)?
+        generateProfileIntroduction,
+    TResult Function(GenerateInterviewQuestion value)?
+        generateInterviewQuestion,
+    TResult Function(GenerateSkillKnowledge value)? generateSkillKnowledge,
+    TResult Function(GenerateCoverLetter value)? generateCoverLetter,
+    TResult Function(GetAutoGenerateHistoryDetail value)?
+        getAutoGenerateHistoryDetail,
+    TResult Function(GetCurrentPointOfUser value)? getCurrentPointOfUser,
+    TResult Function(AICharacterChangeGPTVersion value)? changeGPTVersion,
+    required TResult orElse(),
+  }) {
+    if (changeGPTVersion != null) {
+      return changeGPTVersion(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AICharacterChangeGPTVersion implements AiFeaturesEvent {
+  const factory AICharacterChangeGPTVersion(final SupportedChatGPT version) =
+      _$AICharacterChangeGPTVersionImpl;
+
+  SupportedChatGPT get version;
+  @JsonKey(ignore: true)
+  _$$AICharacterChangeGPTVersionImplCopyWith<_$AICharacterChangeGPTVersionImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1701,6 +1971,7 @@ mixin _$AiFeaturesState {
             AutoGenerateHistoryModel autoGenerateHistoryDetail)
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(int point) getCurrentPointOfUserSuccess,
+    required TResult Function(SupportedChatGPT version) changeGPTVersionSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1717,6 +1988,7 @@ mixin _$AiFeaturesState {
     TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(int point)? getCurrentPointOfUserSuccess,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersionSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1733,6 +2005,7 @@ mixin _$AiFeaturesState {
     TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(int point)? getCurrentPointOfUserSuccess,
+    TResult Function(SupportedChatGPT version)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1755,6 +2028,8 @@ mixin _$AiFeaturesState {
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(GetCurrentPointOfUserSuccess value)
         getCurrentPointOfUserSuccess,
+    required TResult Function(ChangeGPTVersionSuccess value)
+        changeGPTVersionSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1776,6 +2051,7 @@ mixin _$AiFeaturesState {
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult? Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1797,6 +2073,7 @@ mixin _$AiFeaturesState {
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1872,6 +2149,7 @@ class _$InitialImpl implements _Initial {
             AutoGenerateHistoryModel autoGenerateHistoryDetail)
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(int point) getCurrentPointOfUserSuccess,
+    required TResult Function(SupportedChatGPT version) changeGPTVersionSuccess,
   }) {
     return initial();
   }
@@ -1891,6 +2169,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(int point)? getCurrentPointOfUserSuccess,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersionSuccess,
   }) {
     return initial?.call();
   }
@@ -1910,6 +2189,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(int point)? getCurrentPointOfUserSuccess,
+    TResult Function(SupportedChatGPT version)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1938,6 +2218,8 @@ class _$InitialImpl implements _Initial {
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(GetCurrentPointOfUserSuccess value)
         getCurrentPointOfUserSuccess,
+    required TResult Function(ChangeGPTVersionSuccess value)
+        changeGPTVersionSuccess,
   }) {
     return initial(this);
   }
@@ -1962,6 +2244,7 @@ class _$InitialImpl implements _Initial {
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult? Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
   }) {
     return initial?.call(this);
   }
@@ -1986,6 +2269,7 @@ class _$InitialImpl implements _Initial {
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -2086,6 +2370,7 @@ class _$AiFeaturesErrorImpl implements AiFeaturesError {
             AutoGenerateHistoryModel autoGenerateHistoryDetail)
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(int point) getCurrentPointOfUserSuccess,
+    required TResult Function(SupportedChatGPT version) changeGPTVersionSuccess,
   }) {
     return error(message, title);
   }
@@ -2105,6 +2390,7 @@ class _$AiFeaturesErrorImpl implements AiFeaturesError {
     TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(int point)? getCurrentPointOfUserSuccess,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersionSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -2124,6 +2410,7 @@ class _$AiFeaturesErrorImpl implements AiFeaturesError {
     TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(int point)? getCurrentPointOfUserSuccess,
+    TResult Function(SupportedChatGPT version)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -2152,6 +2439,8 @@ class _$AiFeaturesErrorImpl implements AiFeaturesError {
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(GetCurrentPointOfUserSuccess value)
         getCurrentPointOfUserSuccess,
+    required TResult Function(ChangeGPTVersionSuccess value)
+        changeGPTVersionSuccess,
   }) {
     return error(this);
   }
@@ -2176,6 +2465,7 @@ class _$AiFeaturesErrorImpl implements AiFeaturesError {
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult? Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
   }) {
     return error?.call(this);
   }
@@ -2200,6 +2490,7 @@ class _$AiFeaturesErrorImpl implements AiFeaturesError {
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -2273,6 +2564,7 @@ class _$AiFeaturesLoadingImpl implements AiFeaturesLoading {
             AutoGenerateHistoryModel autoGenerateHistoryDetail)
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(int point) getCurrentPointOfUserSuccess,
+    required TResult Function(SupportedChatGPT version) changeGPTVersionSuccess,
   }) {
     return loading();
   }
@@ -2292,6 +2584,7 @@ class _$AiFeaturesLoadingImpl implements AiFeaturesLoading {
     TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(int point)? getCurrentPointOfUserSuccess,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersionSuccess,
   }) {
     return loading?.call();
   }
@@ -2311,6 +2604,7 @@ class _$AiFeaturesLoadingImpl implements AiFeaturesLoading {
     TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(int point)? getCurrentPointOfUserSuccess,
+    TResult Function(SupportedChatGPT version)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -2339,6 +2633,8 @@ class _$AiFeaturesLoadingImpl implements AiFeaturesLoading {
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(GetCurrentPointOfUserSuccess value)
         getCurrentPointOfUserSuccess,
+    required TResult Function(ChangeGPTVersionSuccess value)
+        changeGPTVersionSuccess,
   }) {
     return loading(this);
   }
@@ -2363,6 +2659,7 @@ class _$AiFeaturesLoadingImpl implements AiFeaturesLoading {
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult? Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
   }) {
     return loading?.call(this);
   }
@@ -2387,6 +2684,7 @@ class _$AiFeaturesLoadingImpl implements AiFeaturesLoading {
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -2494,6 +2792,7 @@ class _$GetAutoGenerateHistorySuccessImpl
             AutoGenerateHistoryModel autoGenerateHistoryDetail)
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(int point) getCurrentPointOfUserSuccess,
+    required TResult Function(SupportedChatGPT version) changeGPTVersionSuccess,
   }) {
     return getAutoGenerateHistory(autoGenerateHistories);
   }
@@ -2513,6 +2812,7 @@ class _$GetAutoGenerateHistorySuccessImpl
     TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(int point)? getCurrentPointOfUserSuccess,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersionSuccess,
   }) {
     return getAutoGenerateHistory?.call(autoGenerateHistories);
   }
@@ -2532,6 +2832,7 @@ class _$GetAutoGenerateHistorySuccessImpl
     TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(int point)? getCurrentPointOfUserSuccess,
+    TResult Function(SupportedChatGPT version)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistory != null) {
@@ -2560,6 +2861,8 @@ class _$GetAutoGenerateHistorySuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(GetCurrentPointOfUserSuccess value)
         getCurrentPointOfUserSuccess,
+    required TResult Function(ChangeGPTVersionSuccess value)
+        changeGPTVersionSuccess,
   }) {
     return getAutoGenerateHistory(this);
   }
@@ -2584,6 +2887,7 @@ class _$GetAutoGenerateHistorySuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult? Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
   }) {
     return getAutoGenerateHistory?.call(this);
   }
@@ -2608,6 +2912,7 @@ class _$GetAutoGenerateHistorySuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistory != null) {
@@ -2713,6 +3018,7 @@ class _$GenerateProfileIntroductionSuccessImpl
             AutoGenerateHistoryModel autoGenerateHistoryDetail)
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(int point) getCurrentPointOfUserSuccess,
+    required TResult Function(SupportedChatGPT version) changeGPTVersionSuccess,
   }) {
     return generateProfileIntroductionSuccess(data);
   }
@@ -2732,6 +3038,7 @@ class _$GenerateProfileIntroductionSuccessImpl
     TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(int point)? getCurrentPointOfUserSuccess,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersionSuccess,
   }) {
     return generateProfileIntroductionSuccess?.call(data);
   }
@@ -2751,6 +3058,7 @@ class _$GenerateProfileIntroductionSuccessImpl
     TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(int point)? getCurrentPointOfUserSuccess,
+    TResult Function(SupportedChatGPT version)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (generateProfileIntroductionSuccess != null) {
@@ -2779,6 +3087,8 @@ class _$GenerateProfileIntroductionSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(GetCurrentPointOfUserSuccess value)
         getCurrentPointOfUserSuccess,
+    required TResult Function(ChangeGPTVersionSuccess value)
+        changeGPTVersionSuccess,
   }) {
     return generateProfileIntroductionSuccess(this);
   }
@@ -2803,6 +3113,7 @@ class _$GenerateProfileIntroductionSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult? Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
   }) {
     return generateProfileIntroductionSuccess?.call(this);
   }
@@ -2827,6 +3138,7 @@ class _$GenerateProfileIntroductionSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (generateProfileIntroductionSuccess != null) {
@@ -2931,6 +3243,7 @@ class _$GenerateInterviewQuestionSuccessImpl
             AutoGenerateHistoryModel autoGenerateHistoryDetail)
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(int point) getCurrentPointOfUserSuccess,
+    required TResult Function(SupportedChatGPT version) changeGPTVersionSuccess,
   }) {
     return generateInterviewQuestionSuccess(data);
   }
@@ -2950,6 +3263,7 @@ class _$GenerateInterviewQuestionSuccessImpl
     TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(int point)? getCurrentPointOfUserSuccess,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersionSuccess,
   }) {
     return generateInterviewQuestionSuccess?.call(data);
   }
@@ -2969,6 +3283,7 @@ class _$GenerateInterviewQuestionSuccessImpl
     TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(int point)? getCurrentPointOfUserSuccess,
+    TResult Function(SupportedChatGPT version)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (generateInterviewQuestionSuccess != null) {
@@ -2997,6 +3312,8 @@ class _$GenerateInterviewQuestionSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(GetCurrentPointOfUserSuccess value)
         getCurrentPointOfUserSuccess,
+    required TResult Function(ChangeGPTVersionSuccess value)
+        changeGPTVersionSuccess,
   }) {
     return generateInterviewQuestionSuccess(this);
   }
@@ -3021,6 +3338,7 @@ class _$GenerateInterviewQuestionSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult? Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
   }) {
     return generateInterviewQuestionSuccess?.call(this);
   }
@@ -3045,6 +3363,7 @@ class _$GenerateInterviewQuestionSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (generateInterviewQuestionSuccess != null) {
@@ -3149,6 +3468,7 @@ class _$GenerateSkillKnowledgeSuccessImpl
             AutoGenerateHistoryModel autoGenerateHistoryDetail)
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(int point) getCurrentPointOfUserSuccess,
+    required TResult Function(SupportedChatGPT version) changeGPTVersionSuccess,
   }) {
     return generateSkillKnowledgeSuccess(data);
   }
@@ -3168,6 +3488,7 @@ class _$GenerateSkillKnowledgeSuccessImpl
     TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(int point)? getCurrentPointOfUserSuccess,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersionSuccess,
   }) {
     return generateSkillKnowledgeSuccess?.call(data);
   }
@@ -3187,6 +3508,7 @@ class _$GenerateSkillKnowledgeSuccessImpl
     TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(int point)? getCurrentPointOfUserSuccess,
+    TResult Function(SupportedChatGPT version)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (generateSkillKnowledgeSuccess != null) {
@@ -3215,6 +3537,8 @@ class _$GenerateSkillKnowledgeSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(GetCurrentPointOfUserSuccess value)
         getCurrentPointOfUserSuccess,
+    required TResult Function(ChangeGPTVersionSuccess value)
+        changeGPTVersionSuccess,
   }) {
     return generateSkillKnowledgeSuccess(this);
   }
@@ -3239,6 +3563,7 @@ class _$GenerateSkillKnowledgeSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult? Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
   }) {
     return generateSkillKnowledgeSuccess?.call(this);
   }
@@ -3263,6 +3588,7 @@ class _$GenerateSkillKnowledgeSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (generateSkillKnowledgeSuccess != null) {
@@ -3365,6 +3691,7 @@ class _$GenerateCoverLetterSuccessImpl implements GenerateCoverLetterSuccess {
             AutoGenerateHistoryModel autoGenerateHistoryDetail)
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(int point) getCurrentPointOfUserSuccess,
+    required TResult Function(SupportedChatGPT version) changeGPTVersionSuccess,
   }) {
     return generateCoverLetterSuccess(data);
   }
@@ -3384,6 +3711,7 @@ class _$GenerateCoverLetterSuccessImpl implements GenerateCoverLetterSuccess {
     TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(int point)? getCurrentPointOfUserSuccess,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersionSuccess,
   }) {
     return generateCoverLetterSuccess?.call(data);
   }
@@ -3403,6 +3731,7 @@ class _$GenerateCoverLetterSuccessImpl implements GenerateCoverLetterSuccess {
     TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(int point)? getCurrentPointOfUserSuccess,
+    TResult Function(SupportedChatGPT version)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (generateCoverLetterSuccess != null) {
@@ -3431,6 +3760,8 @@ class _$GenerateCoverLetterSuccessImpl implements GenerateCoverLetterSuccess {
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(GetCurrentPointOfUserSuccess value)
         getCurrentPointOfUserSuccess,
+    required TResult Function(ChangeGPTVersionSuccess value)
+        changeGPTVersionSuccess,
   }) {
     return generateCoverLetterSuccess(this);
   }
@@ -3455,6 +3786,7 @@ class _$GenerateCoverLetterSuccessImpl implements GenerateCoverLetterSuccess {
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult? Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
   }) {
     return generateCoverLetterSuccess?.call(this);
   }
@@ -3479,6 +3811,7 @@ class _$GenerateCoverLetterSuccessImpl implements GenerateCoverLetterSuccess {
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (generateCoverLetterSuccess != null) {
@@ -3596,6 +3929,7 @@ class _$GetAutoGenerateHistoryDetailSuccessImpl
             AutoGenerateHistoryModel autoGenerateHistoryDetail)
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(int point) getCurrentPointOfUserSuccess,
+    required TResult Function(SupportedChatGPT version) changeGPTVersionSuccess,
   }) {
     return getAutoGenerateHistoryDetailSuccess(autoGenerateHistoryDetail);
   }
@@ -3615,6 +3949,7 @@ class _$GetAutoGenerateHistoryDetailSuccessImpl
     TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(int point)? getCurrentPointOfUserSuccess,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersionSuccess,
   }) {
     return getAutoGenerateHistoryDetailSuccess?.call(autoGenerateHistoryDetail);
   }
@@ -3634,6 +3969,7 @@ class _$GetAutoGenerateHistoryDetailSuccessImpl
     TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(int point)? getCurrentPointOfUserSuccess,
+    TResult Function(SupportedChatGPT version)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistoryDetailSuccess != null) {
@@ -3662,6 +3998,8 @@ class _$GetAutoGenerateHistoryDetailSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(GetCurrentPointOfUserSuccess value)
         getCurrentPointOfUserSuccess,
+    required TResult Function(ChangeGPTVersionSuccess value)
+        changeGPTVersionSuccess,
   }) {
     return getAutoGenerateHistoryDetailSuccess(this);
   }
@@ -3686,6 +4024,7 @@ class _$GetAutoGenerateHistoryDetailSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult? Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
   }) {
     return getAutoGenerateHistoryDetailSuccess?.call(this);
   }
@@ -3710,6 +4049,7 @@ class _$GetAutoGenerateHistoryDetailSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistoryDetailSuccess != null) {
@@ -3815,6 +4155,7 @@ class _$GetCurrentPointOfUserSuccessImpl
             AutoGenerateHistoryModel autoGenerateHistoryDetail)
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(int point) getCurrentPointOfUserSuccess,
+    required TResult Function(SupportedChatGPT version) changeGPTVersionSuccess,
   }) {
     return getCurrentPointOfUserSuccess(point);
   }
@@ -3834,6 +4175,7 @@ class _$GetCurrentPointOfUserSuccessImpl
     TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(int point)? getCurrentPointOfUserSuccess,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersionSuccess,
   }) {
     return getCurrentPointOfUserSuccess?.call(point);
   }
@@ -3853,6 +4195,7 @@ class _$GetCurrentPointOfUserSuccessImpl
     TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(int point)? getCurrentPointOfUserSuccess,
+    TResult Function(SupportedChatGPT version)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (getCurrentPointOfUserSuccess != null) {
@@ -3881,6 +4224,8 @@ class _$GetCurrentPointOfUserSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     required TResult Function(GetCurrentPointOfUserSuccess value)
         getCurrentPointOfUserSuccess,
+    required TResult Function(ChangeGPTVersionSuccess value)
+        changeGPTVersionSuccess,
   }) {
     return getCurrentPointOfUserSuccess(this);
   }
@@ -3905,6 +4250,7 @@ class _$GetCurrentPointOfUserSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     TResult? Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult? Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
   }) {
     return getCurrentPointOfUserSuccess?.call(this);
   }
@@ -3929,6 +4275,7 @@ class _$GetCurrentPointOfUserSuccessImpl
         getAutoGenerateHistoryDetailSuccess,
     TResult Function(GetCurrentPointOfUserSuccess value)?
         getCurrentPointOfUserSuccess,
+    TResult Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
     required TResult orElse(),
   }) {
     if (getCurrentPointOfUserSuccess != null) {
@@ -3946,5 +4293,226 @@ abstract class GetCurrentPointOfUserSuccess implements AiFeaturesState {
   @JsonKey(ignore: true)
   _$$GetCurrentPointOfUserSuccessImplCopyWith<
           _$GetCurrentPointOfUserSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ChangeGPTVersionSuccessImplCopyWith<$Res> {
+  factory _$$ChangeGPTVersionSuccessImplCopyWith(
+          _$ChangeGPTVersionSuccessImpl value,
+          $Res Function(_$ChangeGPTVersionSuccessImpl) then) =
+      __$$ChangeGPTVersionSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({SupportedChatGPT version});
+}
+
+/// @nodoc
+class __$$ChangeGPTVersionSuccessImplCopyWithImpl<$Res>
+    extends _$AiFeaturesStateCopyWithImpl<$Res, _$ChangeGPTVersionSuccessImpl>
+    implements _$$ChangeGPTVersionSuccessImplCopyWith<$Res> {
+  __$$ChangeGPTVersionSuccessImplCopyWithImpl(
+      _$ChangeGPTVersionSuccessImpl _value,
+      $Res Function(_$ChangeGPTVersionSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? version = null,
+  }) {
+    return _then(_$ChangeGPTVersionSuccessImpl(
+      null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as SupportedChatGPT,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ChangeGPTVersionSuccessImpl implements ChangeGPTVersionSuccess {
+  const _$ChangeGPTVersionSuccessImpl(this.version);
+
+  @override
+  final SupportedChatGPT version;
+
+  @override
+  String toString() {
+    return 'AiFeaturesState.changeGPTVersionSuccess(version: $version)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChangeGPTVersionSuccessImpl &&
+            (identical(other.version, version) || other.version == version));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, version);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChangeGPTVersionSuccessImplCopyWith<_$ChangeGPTVersionSuccessImpl>
+      get copyWith => __$$ChangeGPTVersionSuccessImplCopyWithImpl<
+          _$ChangeGPTVersionSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(
+            List<AutoGenerateHistoryModel> autoGenerateHistories)
+        getAutoGenerateHistory,
+    required TResult Function(String data) generateProfileIntroductionSuccess,
+    required TResult Function(String data) generateInterviewQuestionSuccess,
+    required TResult Function(String data) generateSkillKnowledgeSuccess,
+    required TResult Function(String data) generateCoverLetterSuccess,
+    required TResult Function(
+            AutoGenerateHistoryModel autoGenerateHistoryDetail)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(int point) getCurrentPointOfUserSuccess,
+    required TResult Function(SupportedChatGPT version) changeGPTVersionSuccess,
+  }) {
+    return changeGPTVersionSuccess(version);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(List<AutoGenerateHistoryModel> autoGenerateHistories)?
+        getAutoGenerateHistory,
+    TResult? Function(String data)? generateProfileIntroductionSuccess,
+    TResult? Function(String data)? generateInterviewQuestionSuccess,
+    TResult? Function(String data)? generateSkillKnowledgeSuccess,
+    TResult? Function(String data)? generateCoverLetterSuccess,
+    TResult? Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(int point)? getCurrentPointOfUserSuccess,
+    TResult? Function(SupportedChatGPT version)? changeGPTVersionSuccess,
+  }) {
+    return changeGPTVersionSuccess?.call(version);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(List<AutoGenerateHistoryModel> autoGenerateHistories)?
+        getAutoGenerateHistory,
+    TResult Function(String data)? generateProfileIntroductionSuccess,
+    TResult Function(String data)? generateInterviewQuestionSuccess,
+    TResult Function(String data)? generateSkillKnowledgeSuccess,
+    TResult Function(String data)? generateCoverLetterSuccess,
+    TResult Function(AutoGenerateHistoryModel autoGenerateHistoryDetail)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(int point)? getCurrentPointOfUserSuccess,
+    TResult Function(SupportedChatGPT version)? changeGPTVersionSuccess,
+    required TResult orElse(),
+  }) {
+    if (changeGPTVersionSuccess != null) {
+      return changeGPTVersionSuccess(version);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(AiFeaturesError value) error,
+    required TResult Function(AiFeaturesLoading value) loading,
+    required TResult Function(GetAutoGenerateHistorySuccess value)
+        getAutoGenerateHistory,
+    required TResult Function(GenerateProfileIntroductionSuccess value)
+        generateProfileIntroductionSuccess,
+    required TResult Function(GenerateInterviewQuestionSuccess value)
+        generateInterviewQuestionSuccess,
+    required TResult Function(GenerateSkillKnowledgeSuccess value)
+        generateSkillKnowledgeSuccess,
+    required TResult Function(GenerateCoverLetterSuccess value)
+        generateCoverLetterSuccess,
+    required TResult Function(GetAutoGenerateHistoryDetailSuccess value)
+        getAutoGenerateHistoryDetailSuccess,
+    required TResult Function(GetCurrentPointOfUserSuccess value)
+        getCurrentPointOfUserSuccess,
+    required TResult Function(ChangeGPTVersionSuccess value)
+        changeGPTVersionSuccess,
+  }) {
+    return changeGPTVersionSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(AiFeaturesError value)? error,
+    TResult? Function(AiFeaturesLoading value)? loading,
+    TResult? Function(GetAutoGenerateHistorySuccess value)?
+        getAutoGenerateHistory,
+    TResult? Function(GenerateProfileIntroductionSuccess value)?
+        generateProfileIntroductionSuccess,
+    TResult? Function(GenerateInterviewQuestionSuccess value)?
+        generateInterviewQuestionSuccess,
+    TResult? Function(GenerateSkillKnowledgeSuccess value)?
+        generateSkillKnowledgeSuccess,
+    TResult? Function(GenerateCoverLetterSuccess value)?
+        generateCoverLetterSuccess,
+    TResult? Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult? Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
+    TResult? Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
+  }) {
+    return changeGPTVersionSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(AiFeaturesError value)? error,
+    TResult Function(AiFeaturesLoading value)? loading,
+    TResult Function(GetAutoGenerateHistorySuccess value)?
+        getAutoGenerateHistory,
+    TResult Function(GenerateProfileIntroductionSuccess value)?
+        generateProfileIntroductionSuccess,
+    TResult Function(GenerateInterviewQuestionSuccess value)?
+        generateInterviewQuestionSuccess,
+    TResult Function(GenerateSkillKnowledgeSuccess value)?
+        generateSkillKnowledgeSuccess,
+    TResult Function(GenerateCoverLetterSuccess value)?
+        generateCoverLetterSuccess,
+    TResult Function(GetAutoGenerateHistoryDetailSuccess value)?
+        getAutoGenerateHistoryDetailSuccess,
+    TResult Function(GetCurrentPointOfUserSuccess value)?
+        getCurrentPointOfUserSuccess,
+    TResult Function(ChangeGPTVersionSuccess value)? changeGPTVersionSuccess,
+    required TResult orElse(),
+  }) {
+    if (changeGPTVersionSuccess != null) {
+      return changeGPTVersionSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ChangeGPTVersionSuccess implements AiFeaturesState {
+  const factory ChangeGPTVersionSuccess(final SupportedChatGPT version) =
+      _$ChangeGPTVersionSuccessImpl;
+
+  SupportedChatGPT get version;
+  @JsonKey(ignore: true)
+  _$$ChangeGPTVersionSuccessImplCopyWith<_$ChangeGPTVersionSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

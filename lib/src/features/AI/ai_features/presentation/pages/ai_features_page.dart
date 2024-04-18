@@ -15,25 +15,18 @@ class _AiFeaturesPageState extends State<AiFeaturesPage>
     return BlocProvider(
       create: (context) =>
           injector.get<AiFeaturesBloc>()..add(const GetAutoGenerateHistory()),
-      child: MyScaffold(
+      child: const MyScaffold(
         horizontalMargin: 20,
         topPadding: 10,
-        body: SmartRefresher(
-          enablePullDown: true,
-          // enablePullUp: true,
-          onRefresh: () {},
-          onLoading: () {},
-          controller: injector.get<AiFeaturesBloc>().refreshController,
-          child: const SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                TitleAiFeatures(),
-                HeaderAIFeatures(),
-                ViewHistoryTitle(),
-                ListAutoGenerateHistory(),
-              ],
-            ),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TitleAiFeatures(),
+              HeaderAIFeatures(),
+              ViewHistoryTitle(),
+              ListAutoGenerateHistory(),
+            ],
           ),
         ),
       ),

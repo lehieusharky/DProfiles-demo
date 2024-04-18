@@ -51,8 +51,6 @@ class _YourChatAiCharacterHistoryState
             return AnimationLimiter(
               child: ListView.builder(
                 reverse: true,
-                physics: const BouncingScrollPhysics(
-                    parent: AlwaysScrollableScrollPhysics()),
                 itemCount: messages!.length,
                 itemBuilder: (BuildContext context, int index) {
                   return AnimationConfiguration.staggeredList(

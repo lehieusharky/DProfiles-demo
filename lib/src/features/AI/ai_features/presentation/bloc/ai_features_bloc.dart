@@ -7,9 +7,10 @@ import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_ski
 import 'package:demo_dprofiles/src/features/AI/ai_features/domain/usecases/auto_generate_usecase.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
+import 'package:demo_dprofiles/src/utils/constant/supported_chat_gpt.dart';
+import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
 part 'ai_features_event.dart';
 part 'ai_features_state.dart';
@@ -18,6 +19,8 @@ part 'ai_features_bloc.freezed.dart';
 class AiFeaturesBloc extends Bloc<AiFeaturesEvent, AiFeaturesState> {
   final AutoGenerateUseCase autoGenerateUseCase;
   final ProfileUseCase profileUseCase;
+
+  SupportedChatGPT currentChatGPTVersion = sharePreference.getChatGPTVersion();
 
   AiFeaturesBloc(this.autoGenerateUseCase, this.profileUseCase)
       : super(const AiFeaturesState.initial()) {
@@ -28,6 +31,7 @@ class AiFeaturesBloc extends Bloc<AiFeaturesEvent, AiFeaturesState> {
     on<GenerateSkillKnowledge>(_generateSkillKnowledge);
     on<GenerateInterviewQuestion>(_generateInterviewQuestion);
     on<GetCurrentPointOfUser>(_getCurrentPointOfUser);
+    on<AICharacterChangeGPTVersion>(_changeGPTVersion);
   }
 
   FutureOr<void> _getAutoGenerateHistory(
@@ -148,5 +152,15 @@ class AiFeaturesBloc extends Bloc<AiFeaturesEvent, AiFeaturesState> {
     );
   }
 
-  final refreshController = RefreshController();
+  FutureOr<void> _changeGPTVersion(
+      AICharacterChangeGPTVersion event, Emitter<AiFeaturesState> emit) async {
+    try {
+      currentChatGPTVersion = event.version;
+
+      emit(ChangeGPTVersionSuccess(currentChatGPTVersion));
+    } catch (e) {
+      emit(
+          const AiFeaturesError(message: 'change gpt failed', title: 'failed'));
+    }
+  }
 }
