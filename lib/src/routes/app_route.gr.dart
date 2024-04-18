@@ -93,7 +93,8 @@ import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/open
     as _i33;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/forms/form_skill.dart'
     as _i25;
-import 'package:demo_dprofiles/src/features/feed/feed_detail_page.dart' as _i20;
+import 'package:demo_dprofiles/src/features/feed/presentation/feed_detail_page.dart'
+    as _i20;
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart'
     as _i48;
 import 'package:demo_dprofiles/src/features/onboarding/presentation/page/onboarding_page.dart'

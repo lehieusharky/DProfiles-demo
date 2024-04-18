@@ -49,18 +49,15 @@ extension NewFeedModelExt on NewFeedModel {
                   ],
                 ),
               ),
-              SizedBox(
-                width: context.sizeWidth(120),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const _FollowingButton(),
-                    Padding(
-                        padding: context.padding(left: 10),
-                        child: InkWell(
-                            onTap: () {}, child: Assets.icons.iconMore.svg()))
-                  ],
-                ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const _FollowingButton(),
+                  Padding(
+                      padding: context.padding(left: 10),
+                      child: InkWell(
+                          onTap: () {}, child: Assets.icons.iconMore.svg()))
+                ],
               )
             ],
           ),

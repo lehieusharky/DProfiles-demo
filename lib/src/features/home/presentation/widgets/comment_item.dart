@@ -1,7 +1,9 @@
+import 'package:demo_dprofiles/src/features/feed/data/models/feed_comment_model.dart';
 import 'package:flutter/material.dart';
 
 class CommentItem extends StatelessWidget {
-  const CommentItem({super.key});
+  const CommentItem(this.data, {super.key});
+  final FeedCommentModel data;
 
   @override
   Widget build(BuildContext context) {

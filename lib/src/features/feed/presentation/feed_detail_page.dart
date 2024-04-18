@@ -1,10 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/features/feed/comment_bar.dart';
-import 'package:demo_dprofiles/src/features/feed/feed_comments.dart';
+import 'package:demo_dprofiles/src/features/feed/presentation/bloc/feed_comment_bloc.dart';
+import 'package:demo_dprofiles/src/features/feed/presentation/comment_bar.dart';
+import 'package:demo_dprofiles/src/features/feed/presentation/feed_comments.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
 import 'package:demo_dprofiles/src/features/home/domain/entities/ext_new_feed_entity.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 @RoutePage()
 class FeedDetailPage extends StatelessWidget {
@@ -29,7 +31,11 @@ class FeedDetailPage extends StatelessWidget {
                 ),
               ),
             ],
-            body: const FeedComments(),
+            body: BlocProvider(
+              create: (_) => FeedCommentBloc(feed.postId ?? 0)
+                ..add(const FeedCommentFetchEvent()),
+              child: const FeedComments(),
+            ),
           ),
           Align(
             alignment: Alignment.bottomCenter,
