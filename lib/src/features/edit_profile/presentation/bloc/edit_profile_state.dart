@@ -23,4 +23,10 @@ class EditProfileState with _$EditProfileState {
 
   const factory EditProfileState.updateUserInfoSuccess() =
       EditProfileUpdateUserInfoSuccess;
+
+  const factory EditProfileState.addNewSkillSuccess(UserSkillModel skillModel) =
+      EditProfileAddNewSkillSuccess;
+
+  const factory EditProfileState.addNewLanguageSuccess(
+      UserLanguageModel languageModel) = EditProfileAddNewLanguageSuccess;
 }

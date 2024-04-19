@@ -9,7 +9,6 @@ import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentati
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/form/form_experience.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/header_create_digital.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

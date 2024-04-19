@@ -67,4 +67,30 @@ class EditProfileRepositoryImpl implements EditProfileRepository {
           response: ErrorResponse.fromJson(e.response!.data)));
     }
   }
+
+  @override
+  Future<Either<EditProfileFailure, BaseResponse>> addNewLanguage(
+      int languageID) async {
+    try {
+      final res = await _editProfileDataSource.addNewLanguage(languageID);
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(EditProfileFailure(
+          response: ErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<EditProfileFailure, BaseResponse>> addNewSkill(
+      String skill) async {
+    try {
+      final res = await _editProfileDataSource.addNewSkill(skill);
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(EditProfileFailure(
+          response: ErrorResponse.fromJson(e.response!.data)));
+    }
+  }
 }

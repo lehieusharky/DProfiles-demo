@@ -89,16 +89,8 @@ class AvatarProfile extends StatelessWidget {
 
   Widget _buildBackgroundAction(BuildContext context) {
     return Padding(
-      padding: context.padding(horizontal: 20, top: 20),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Assets.icons.iconMenu.svg(
-              colorFilter:
-                  const ColorFilter.mode(MyColor.getWhite, BlendMode.srcIn)),
-          _buildUploadWidget(context),
-        ],
-      ),
+      padding: context.padding(horizontal: 20, top: 40),
+      child: _buildUploadWidget(context),
     );
   }
 }

@@ -1,15 +1,22 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/bloc/dashboard_bloc.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
+import 'package:demo_dprofiles/src/utils/services/connect_wallet_service.dart';
+import 'package:ficonsax/ficonsax.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sidebarx/sidebarx.dart';
 import 'package:tuple/tuple.dart';
+import 'package:web3modal_flutter/web3modal_flutter.dart';
 
 class DashboardEndDrawer extends StatefulWidget {
   const DashboardEndDrawer({Key? key}) : super(key: key);
@@ -21,6 +28,8 @@ class DashboardEndDrawer extends StatefulWidget {
 class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
   late SidebarXController _drawerController;
 
+  UserInfoModel userInfo = const UserInfoModel();
+
   @override
   void initState() {
     super.initState();
@@ -29,12 +38,23 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocListener<DashboardBloc, DashboardState>(
-      listener: (context, state) {
-        if (state is DashboardDeleteAccountSuccess) {
-          _logout(context);
-        }
-      },
+    return MultiBlocListener(
+      listeners: [
+        BlocListener<DashboardBloc, DashboardState>(
+          listener: (context, state) {
+            if (state is DashboardDeleteAccountSuccess) {
+              _logout(context);
+            }
+          },
+        ),
+        BlocListener<ProfileBloc, ProfileState>(
+          listener: (context, state) {
+            if (state is ProfileGetUserInfoSuccess) {
+              userInfo = state.userInfoModel;
+            }
+          },
+        ),
+      ],
       child: SidebarX(
         animationDuration: const Duration(milliseconds: 200),
         controller: _drawerController,
@@ -50,55 +70,55 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
           selectedItemTextPadding: context.padding(left: 20),
         ),
         extendedTheme: SidebarXTheme(
-          width: context.sizeWidth(200),
+          width: context.sizeWidth(280),
           decoration: BoxDecoration(color: colorScheme(context).background),
         ),
         headerBuilder: (context, extended) {
           return Padding(
             padding: context.padding(top: 50, horizontal: 8),
-            child: Row(
+            child: Column(
               children: [
-                CircleAvatar(
-                  radius: context.sizeHeight(20),
-                  child: Assets.images.home.avatarHolder.image(
-                    width: context.sizeWidth(60),
-                    height: context.sizeWidth(60),
-                  ),
-                ),
-                context.sizedBox(width: 16),
-                Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      'name',
-                      style: AppFont()
-                          .fontTheme(context, weight: FontWeight.w600)
-                          .bodyLarge,
+                    CircleAvatar(
+                      radius: context.sizeHeight(20),
+                      child: Assets.images.home.avatarHolder.image(
+                        width: context.sizeWidth(60),
+                        height: context.sizeWidth(60),
+                      ),
                     ),
-                    Text(
-                      'Wallet: 12sdf...234',
-                      style: AppFont()
-                          .fontTheme(context,
-                              color: colorScheme(context).outline)
-                          .bodySmall,
-                    ),
+                    context.sizedBox(width: 16),
+                    Expanded(
+                      child: Text(
+                        userInfo.username ?? '',
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 2,
+                        style: AppFont()
+                            .fontTheme(context, weight: FontWeight.w600)
+                            .bodyLarge,
+                      ),
+                    )
                   ],
-                )
+                ),
+                context.sizedBox(height: 10),
+                W3MAccountButton(service: AppConnectWalletService().w3mService),
+                W3MConnectWalletButton(
+                    service: AppConnectWalletService().w3mService)
               ],
             ),
           );
         },
         items: [
-          Tuple3(Assets.icons.iconWallet.svg(), 'My Wallet', () {}),
-          Tuple3(Assets.icons.iconWallet.svg(), 'Digital Profile',
-              () => context.router.push(const MyDigitalProfileRoute())),
-          Tuple3(Assets.icons.iconWallet.svg(), 'Edit Profile', () {}),
-          Tuple3(Assets.icons.iconWallet.svg(), 'Account Setting', () {}),
-          Tuple3(Assets.icons.iconWallet.svg(), 'Become Influencer', () {}),
-          Tuple3(
-              Assets.icons.iconWallet.svg(), 'Log out', () => _logout(context)),
-          Tuple3(Assets.icons.iconWallet.svg(), 'Delete Account',
+          Tuple3(const Icon(IconsaxOutline.wallet), 'My Wallet', () {}),
+          Tuple3(const Icon(IconsaxOutline.profile_circle), 'Digital Profile',
+              () => _onOpenDProfile()),
+          Tuple3(const Icon(IconsaxOutline.edit), 'Edit Profile', () {}),
+          Tuple3(const Icon(IconsaxOutline.setting), 'Account Setting', () {}),
+          Tuple3(const Icon(IconsaxOutline.frame), 'Become Influencer', () {}),
+          Tuple3(const Icon(IconsaxOutline.logout), 'Log out',
+              () => _logout(context)),
+          Tuple3(const Icon(IconsaxOutline.profile_delete), 'Delete Account',
               () => _deleteAccount(context)),
         ]
             .map((e) => SidebarXItem(
@@ -109,6 +129,15 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
             .toList(),
       ),
     );
+  }
+
+  void _onOpenDProfile() {
+    if (userInfo.walletAddress == null) {
+      showErrorDialog(context,
+          title: "Failed", description: "You don't have digital profile");
+    } else {
+      context.router.push(const MyDigitalProfileRoute());
+    }
   }
 
   void _logout(BuildContext context) async {

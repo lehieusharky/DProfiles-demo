@@ -77,7 +77,7 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
                   controller: _promptController,
                   title: appLocal(context).prompt.toUpperCase(),
                   maxLines: 2,
-                  hint: appLocal(context).yourRequire,
+                  hint: 'How many words for this?'
                 ),
               ),
               Padding(

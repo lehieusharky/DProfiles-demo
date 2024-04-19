@@ -24,6 +24,8 @@ mixin _$EditProfileEvent {
         addNewCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
     required TResult Function() getUserinfo,
+    required TResult Function(String skill) addNewSkill,
+    required TResult Function(int languageID) addNewLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -33,6 +35,8 @@ mixin _$EditProfileEvent {
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
     TResult? Function()? getUserinfo,
+    TResult? Function(String skill)? addNewSkill,
+    TResult? Function(int languageID)? addNewLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +46,8 @@ mixin _$EditProfileEvent {
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
     TResult Function()? getUserinfo,
+    TResult Function(String skill)? addNewSkill,
+    TResult Function(int languageID)? addNewLanguage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -54,6 +60,8 @@ mixin _$EditProfileEvent {
         addNewCertificate,
     required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
+    required TResult Function(EditProfileAddNewSkill value) addNewSkill,
+    required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +71,8 @@ mixin _$EditProfileEvent {
     TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,6 +82,8 @@ mixin _$EditProfileEvent {
     TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -180,6 +192,8 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
         addNewCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
     required TResult Function() getUserinfo,
+    required TResult Function(String skill) addNewSkill,
+    required TResult Function(int languageID) addNewLanguage,
   }) {
     return addNewEducation(educationModel);
   }
@@ -192,6 +206,8 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
     TResult? Function()? getUserinfo,
+    TResult? Function(String skill)? addNewSkill,
+    TResult? Function(int languageID)? addNewLanguage,
   }) {
     return addNewEducation?.call(educationModel);
   }
@@ -204,6 +220,8 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
     TResult Function()? getUserinfo,
+    TResult Function(String skill)? addNewSkill,
+    TResult Function(int languageID)? addNewLanguage,
     required TResult orElse(),
   }) {
     if (addNewEducation != null) {
@@ -222,6 +240,8 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
         addNewCertificate,
     required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
+    required TResult Function(EditProfileAddNewSkill value) addNewSkill,
+    required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
   }) {
     return addNewEducation(this);
   }
@@ -234,6 +254,8 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
   }) {
     return addNewEducation?.call(this);
   }
@@ -246,6 +268,8 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
     required TResult orElse(),
   }) {
     if (addNewEducation != null) {
@@ -350,6 +374,8 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
         addNewCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
     required TResult Function() getUserinfo,
+    required TResult Function(String skill) addNewSkill,
+    required TResult Function(int languageID) addNewLanguage,
   }) {
     return addNewExperience(experienceModel);
   }
@@ -362,6 +388,8 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
     TResult? Function()? getUserinfo,
+    TResult? Function(String skill)? addNewSkill,
+    TResult? Function(int languageID)? addNewLanguage,
   }) {
     return addNewExperience?.call(experienceModel);
   }
@@ -374,6 +402,8 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
     TResult Function()? getUserinfo,
+    TResult Function(String skill)? addNewSkill,
+    TResult Function(int languageID)? addNewLanguage,
     required TResult orElse(),
   }) {
     if (addNewExperience != null) {
@@ -392,6 +422,8 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
         addNewCertificate,
     required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
+    required TResult Function(EditProfileAddNewSkill value) addNewSkill,
+    required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
   }) {
     return addNewExperience(this);
   }
@@ -404,6 +436,8 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
   }) {
     return addNewExperience?.call(this);
   }
@@ -416,6 +450,8 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
     required TResult orElse(),
   }) {
     if (addNewExperience != null) {
@@ -523,6 +559,8 @@ class _$EditProfileAddNewCertificateImpl
         addNewCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
     required TResult Function() getUserinfo,
+    required TResult Function(String skill) addNewSkill,
+    required TResult Function(int languageID) addNewLanguage,
   }) {
     return addNewCertificate(certificateModel);
   }
@@ -535,6 +573,8 @@ class _$EditProfileAddNewCertificateImpl
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
     TResult? Function()? getUserinfo,
+    TResult? Function(String skill)? addNewSkill,
+    TResult? Function(int languageID)? addNewLanguage,
   }) {
     return addNewCertificate?.call(certificateModel);
   }
@@ -547,6 +587,8 @@ class _$EditProfileAddNewCertificateImpl
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
     TResult Function()? getUserinfo,
+    TResult Function(String skill)? addNewSkill,
+    TResult Function(int languageID)? addNewLanguage,
     required TResult orElse(),
   }) {
     if (addNewCertificate != null) {
@@ -565,6 +607,8 @@ class _$EditProfileAddNewCertificateImpl
         addNewCertificate,
     required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
+    required TResult Function(EditProfileAddNewSkill value) addNewSkill,
+    required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
   }) {
     return addNewCertificate(this);
   }
@@ -577,6 +621,8 @@ class _$EditProfileAddNewCertificateImpl
     TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
   }) {
     return addNewCertificate?.call(this);
   }
@@ -589,6 +635,8 @@ class _$EditProfileAddNewCertificateImpl
     TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
     required TResult orElse(),
   }) {
     if (addNewCertificate != null) {
@@ -695,6 +743,8 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
         addNewCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
     required TResult Function() getUserinfo,
+    required TResult Function(String skill) addNewSkill,
+    required TResult Function(int languageID) addNewLanguage,
   }) {
     return updateUserInfo(userInfoModel);
   }
@@ -707,6 +757,8 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
     TResult? Function()? getUserinfo,
+    TResult? Function(String skill)? addNewSkill,
+    TResult? Function(int languageID)? addNewLanguage,
   }) {
     return updateUserInfo?.call(userInfoModel);
   }
@@ -719,6 +771,8 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
     TResult Function()? getUserinfo,
+    TResult Function(String skill)? addNewSkill,
+    TResult Function(int languageID)? addNewLanguage,
     required TResult orElse(),
   }) {
     if (updateUserInfo != null) {
@@ -737,6 +791,8 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
         addNewCertificate,
     required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
+    required TResult Function(EditProfileAddNewSkill value) addNewSkill,
+    required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
   }) {
     return updateUserInfo(this);
   }
@@ -749,6 +805,8 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
   }) {
     return updateUserInfo?.call(this);
   }
@@ -761,6 +819,8 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
     required TResult orElse(),
   }) {
     if (updateUserInfo != null) {
@@ -827,6 +887,8 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
         addNewCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
     required TResult Function() getUserinfo,
+    required TResult Function(String skill) addNewSkill,
+    required TResult Function(int languageID) addNewLanguage,
   }) {
     return getUserinfo();
   }
@@ -839,6 +901,8 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
     TResult? Function(CertificateModel certificateModel)? addNewCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
     TResult? Function()? getUserinfo,
+    TResult? Function(String skill)? addNewSkill,
+    TResult? Function(int languageID)? addNewLanguage,
   }) {
     return getUserinfo?.call();
   }
@@ -851,6 +915,8 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
     TResult Function(CertificateModel certificateModel)? addNewCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
     TResult Function()? getUserinfo,
+    TResult Function(String skill)? addNewSkill,
+    TResult Function(int languageID)? addNewLanguage,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -869,6 +935,8 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
         addNewCertificate,
     required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
+    required TResult Function(EditProfileAddNewSkill value) addNewSkill,
+    required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
   }) {
     return getUserinfo(this);
   }
@@ -881,6 +949,8 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
     TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
   }) {
     return getUserinfo?.call(this);
   }
@@ -893,6 +963,8 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
     TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
     TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -904,6 +976,348 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
 
 abstract class EditProfileGetUserInfo implements EditProfileEvent {
   const factory EditProfileGetUserInfo() = _$EditProfileGetUserInfoImpl;
+}
+
+/// @nodoc
+abstract class _$$EditProfileAddNewSkillImplCopyWith<$Res> {
+  factory _$$EditProfileAddNewSkillImplCopyWith(
+          _$EditProfileAddNewSkillImpl value,
+          $Res Function(_$EditProfileAddNewSkillImpl) then) =
+      __$$EditProfileAddNewSkillImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String skill});
+}
+
+/// @nodoc
+class __$$EditProfileAddNewSkillImplCopyWithImpl<$Res>
+    extends _$EditProfileEventCopyWithImpl<$Res, _$EditProfileAddNewSkillImpl>
+    implements _$$EditProfileAddNewSkillImplCopyWith<$Res> {
+  __$$EditProfileAddNewSkillImplCopyWithImpl(
+      _$EditProfileAddNewSkillImpl _value,
+      $Res Function(_$EditProfileAddNewSkillImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? skill = null,
+  }) {
+    return _then(_$EditProfileAddNewSkillImpl(
+      null == skill
+          ? _value.skill
+          : skill // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EditProfileAddNewSkillImpl implements EditProfileAddNewSkill {
+  const _$EditProfileAddNewSkillImpl(this.skill);
+
+  @override
+  final String skill;
+
+  @override
+  String toString() {
+    return 'EditProfileEvent.addNewSkill(skill: $skill)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditProfileAddNewSkillImpl &&
+            (identical(other.skill, skill) || other.skill == skill));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, skill);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditProfileAddNewSkillImplCopyWith<_$EditProfileAddNewSkillImpl>
+      get copyWith => __$$EditProfileAddNewSkillImplCopyWithImpl<
+          _$EditProfileAddNewSkillImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(EducationModel educationModel) addNewEducation,
+    required TResult Function(ExperienceModel experienceModel) addNewExperience,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserinfo,
+    required TResult Function(String skill) addNewSkill,
+    required TResult Function(int languageID) addNewLanguage,
+  }) {
+    return addNewSkill(skill);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(EducationModel educationModel)? addNewEducation,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserinfo,
+    TResult? Function(String skill)? addNewSkill,
+    TResult? Function(int languageID)? addNewLanguage,
+  }) {
+    return addNewSkill?.call(skill);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(EducationModel educationModel)? addNewEducation,
+    TResult Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserinfo,
+    TResult Function(String skill)? addNewSkill,
+    TResult Function(int languageID)? addNewLanguage,
+    required TResult orElse(),
+  }) {
+    if (addNewSkill != null) {
+      return addNewSkill(skill);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EditProfileAddNewEducation value) addNewEducation,
+    required TResult Function(EditProfileAddNewExperience value)
+        addNewExperience,
+    required TResult Function(EditProfileAddNewCertificate value)
+        addNewCertificate,
+    required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(EditProfileGetUserInfo value) getUserinfo,
+    required TResult Function(EditProfileAddNewSkill value) addNewSkill,
+    required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
+  }) {
+    return addNewSkill(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EditProfileAddNewEducation value)? addNewEducation,
+    TResult? Function(EditProfileAddNewExperience value)? addNewExperience,
+    TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
+  }) {
+    return addNewSkill?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EditProfileAddNewEducation value)? addNewEducation,
+    TResult Function(EditProfileAddNewExperience value)? addNewExperience,
+    TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    required TResult orElse(),
+  }) {
+    if (addNewSkill != null) {
+      return addNewSkill(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditProfileAddNewSkill implements EditProfileEvent {
+  const factory EditProfileAddNewSkill(final String skill) =
+      _$EditProfileAddNewSkillImpl;
+
+  String get skill;
+  @JsonKey(ignore: true)
+  _$$EditProfileAddNewSkillImplCopyWith<_$EditProfileAddNewSkillImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EditProfileAddNewLanguageImplCopyWith<$Res> {
+  factory _$$EditProfileAddNewLanguageImplCopyWith(
+          _$EditProfileAddNewLanguageImpl value,
+          $Res Function(_$EditProfileAddNewLanguageImpl) then) =
+      __$$EditProfileAddNewLanguageImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int languageID});
+}
+
+/// @nodoc
+class __$$EditProfileAddNewLanguageImplCopyWithImpl<$Res>
+    extends _$EditProfileEventCopyWithImpl<$Res,
+        _$EditProfileAddNewLanguageImpl>
+    implements _$$EditProfileAddNewLanguageImplCopyWith<$Res> {
+  __$$EditProfileAddNewLanguageImplCopyWithImpl(
+      _$EditProfileAddNewLanguageImpl _value,
+      $Res Function(_$EditProfileAddNewLanguageImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? languageID = null,
+  }) {
+    return _then(_$EditProfileAddNewLanguageImpl(
+      null == languageID
+          ? _value.languageID
+          : languageID // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EditProfileAddNewLanguageImpl implements EditProfileAddNewLanguage {
+  const _$EditProfileAddNewLanguageImpl(this.languageID);
+
+  @override
+  final int languageID;
+
+  @override
+  String toString() {
+    return 'EditProfileEvent.addNewLanguage(languageID: $languageID)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditProfileAddNewLanguageImpl &&
+            (identical(other.languageID, languageID) ||
+                other.languageID == languageID));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, languageID);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditProfileAddNewLanguageImplCopyWith<_$EditProfileAddNewLanguageImpl>
+      get copyWith => __$$EditProfileAddNewLanguageImplCopyWithImpl<
+          _$EditProfileAddNewLanguageImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(EducationModel educationModel) addNewEducation,
+    required TResult Function(ExperienceModel experienceModel) addNewExperience,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserinfo,
+    required TResult Function(String skill) addNewSkill,
+    required TResult Function(int languageID) addNewLanguage,
+  }) {
+    return addNewLanguage(languageID);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(EducationModel educationModel)? addNewEducation,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserinfo,
+    TResult? Function(String skill)? addNewSkill,
+    TResult? Function(int languageID)? addNewLanguage,
+  }) {
+    return addNewLanguage?.call(languageID);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(EducationModel educationModel)? addNewEducation,
+    TResult Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserinfo,
+    TResult Function(String skill)? addNewSkill,
+    TResult Function(int languageID)? addNewLanguage,
+    required TResult orElse(),
+  }) {
+    if (addNewLanguage != null) {
+      return addNewLanguage(languageID);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EditProfileAddNewEducation value) addNewEducation,
+    required TResult Function(EditProfileAddNewExperience value)
+        addNewExperience,
+    required TResult Function(EditProfileAddNewCertificate value)
+        addNewCertificate,
+    required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(EditProfileGetUserInfo value) getUserinfo,
+    required TResult Function(EditProfileAddNewSkill value) addNewSkill,
+    required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
+  }) {
+    return addNewLanguage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EditProfileAddNewEducation value)? addNewEducation,
+    TResult? Function(EditProfileAddNewExperience value)? addNewExperience,
+    TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
+  }) {
+    return addNewLanguage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EditProfileAddNewEducation value)? addNewEducation,
+    TResult Function(EditProfileAddNewExperience value)? addNewExperience,
+    TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    required TResult orElse(),
+  }) {
+    if (addNewLanguage != null) {
+      return addNewLanguage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditProfileAddNewLanguage implements EditProfileEvent {
+  const factory EditProfileAddNewLanguage(final int languageID) =
+      _$EditProfileAddNewLanguageImpl;
+
+  int get languageID;
+  @JsonKey(ignore: true)
+  _$$EditProfileAddNewLanguageImplCopyWith<_$EditProfileAddNewLanguageImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -921,6 +1335,9 @@ mixin _$EditProfileState {
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
+    required TResult Function(UserLanguageModel languageModel)
+        addNewLanguageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -934,6 +1351,8 @@ mixin _$EditProfileState {
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -947,6 +1366,8 @@ mixin _$EditProfileState {
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -965,6 +1386,10 @@ mixin _$EditProfileState {
         addNewCertificateSuccess,
     required TResult Function(EditProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(EditProfileAddNewSkillSuccess value)
+        addNewSkillSuccess,
+    required TResult Function(EditProfileAddNewLanguageSuccess value)
+        addNewLanguageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -981,6 +1406,9 @@ mixin _$EditProfileState {
         addNewCertificateSuccess,
     TResult? Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult? Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -997,6 +1425,9 @@ mixin _$EditProfileState {
         addNewCertificateSuccess,
     TResult Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1069,6 +1500,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
+    required TResult Function(UserLanguageModel languageModel)
+        addNewLanguageSuccess,
   }) {
     return initial();
   }
@@ -1085,6 +1519,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
   }) {
     return initial?.call();
   }
@@ -1101,6 +1537,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1125,6 +1563,10 @@ class _$InitialImpl implements _Initial {
         addNewCertificateSuccess,
     required TResult Function(EditProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(EditProfileAddNewSkillSuccess value)
+        addNewSkillSuccess,
+    required TResult Function(EditProfileAddNewLanguageSuccess value)
+        addNewLanguageSuccess,
   }) {
     return initial(this);
   }
@@ -1144,6 +1586,9 @@ class _$InitialImpl implements _Initial {
         addNewCertificateSuccess,
     TResult? Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult? Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
   }) {
     return initial?.call(this);
   }
@@ -1163,6 +1608,9 @@ class _$InitialImpl implements _Initial {
         addNewCertificateSuccess,
     TResult Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1260,6 +1708,9 @@ class _$EditProfileErrorImpl implements EditProfileError {
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
+    required TResult Function(UserLanguageModel languageModel)
+        addNewLanguageSuccess,
   }) {
     return error(message, title);
   }
@@ -1276,6 +1727,8 @@ class _$EditProfileErrorImpl implements EditProfileError {
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -1292,6 +1745,8 @@ class _$EditProfileErrorImpl implements EditProfileError {
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1316,6 +1771,10 @@ class _$EditProfileErrorImpl implements EditProfileError {
         addNewCertificateSuccess,
     required TResult Function(EditProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(EditProfileAddNewSkillSuccess value)
+        addNewSkillSuccess,
+    required TResult Function(EditProfileAddNewLanguageSuccess value)
+        addNewLanguageSuccess,
   }) {
     return error(this);
   }
@@ -1335,6 +1794,9 @@ class _$EditProfileErrorImpl implements EditProfileError {
         addNewCertificateSuccess,
     TResult? Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult? Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
   }) {
     return error?.call(this);
   }
@@ -1354,6 +1816,9 @@ class _$EditProfileErrorImpl implements EditProfileError {
         addNewCertificateSuccess,
     TResult Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1424,6 +1889,9 @@ class _$EditProfileLoadingImpl implements EditProfileLoading {
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
+    required TResult Function(UserLanguageModel languageModel)
+        addNewLanguageSuccess,
   }) {
     return loading();
   }
@@ -1440,6 +1908,8 @@ class _$EditProfileLoadingImpl implements EditProfileLoading {
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
   }) {
     return loading?.call();
   }
@@ -1456,6 +1926,8 @@ class _$EditProfileLoadingImpl implements EditProfileLoading {
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1480,6 +1952,10 @@ class _$EditProfileLoadingImpl implements EditProfileLoading {
         addNewCertificateSuccess,
     required TResult Function(EditProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(EditProfileAddNewSkillSuccess value)
+        addNewSkillSuccess,
+    required TResult Function(EditProfileAddNewLanguageSuccess value)
+        addNewLanguageSuccess,
   }) {
     return loading(this);
   }
@@ -1499,6 +1975,9 @@ class _$EditProfileLoadingImpl implements EditProfileLoading {
         addNewCertificateSuccess,
     TResult? Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult? Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
   }) {
     return loading?.call(this);
   }
@@ -1518,6 +1997,9 @@ class _$EditProfileLoadingImpl implements EditProfileLoading {
         addNewCertificateSuccess,
     TResult Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1623,6 +2105,9 @@ class _$EditProfileGetUserInfoSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
+    required TResult Function(UserLanguageModel languageModel)
+        addNewLanguageSuccess,
   }) {
     return getUserInfoSuccess(userInfoModel);
   }
@@ -1639,6 +2124,8 @@ class _$EditProfileGetUserInfoSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
   }) {
     return getUserInfoSuccess?.call(userInfoModel);
   }
@@ -1655,6 +2142,8 @@ class _$EditProfileGetUserInfoSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -1679,6 +2168,10 @@ class _$EditProfileGetUserInfoSuccessImpl
         addNewCertificateSuccess,
     required TResult Function(EditProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(EditProfileAddNewSkillSuccess value)
+        addNewSkillSuccess,
+    required TResult Function(EditProfileAddNewLanguageSuccess value)
+        addNewLanguageSuccess,
   }) {
     return getUserInfoSuccess(this);
   }
@@ -1698,6 +2191,9 @@ class _$EditProfileGetUserInfoSuccessImpl
         addNewCertificateSuccess,
     TResult? Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult? Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
   }) {
     return getUserInfoSuccess?.call(this);
   }
@@ -1717,6 +2213,9 @@ class _$EditProfileGetUserInfoSuccessImpl
         addNewCertificateSuccess,
     TResult Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -1829,6 +2328,9 @@ class _$EditProfileAddNewEducationSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
+    required TResult Function(UserLanguageModel languageModel)
+        addNewLanguageSuccess,
   }) {
     return addNewEducationSuccess(educationModel);
   }
@@ -1845,6 +2347,8 @@ class _$EditProfileAddNewEducationSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
   }) {
     return addNewEducationSuccess?.call(educationModel);
   }
@@ -1861,6 +2365,8 @@ class _$EditProfileAddNewEducationSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewEducationSuccess != null) {
@@ -1885,6 +2391,10 @@ class _$EditProfileAddNewEducationSuccessImpl
         addNewCertificateSuccess,
     required TResult Function(EditProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(EditProfileAddNewSkillSuccess value)
+        addNewSkillSuccess,
+    required TResult Function(EditProfileAddNewLanguageSuccess value)
+        addNewLanguageSuccess,
   }) {
     return addNewEducationSuccess(this);
   }
@@ -1904,6 +2414,9 @@ class _$EditProfileAddNewEducationSuccessImpl
         addNewCertificateSuccess,
     TResult? Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult? Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
   }) {
     return addNewEducationSuccess?.call(this);
   }
@@ -1923,6 +2436,9 @@ class _$EditProfileAddNewEducationSuccessImpl
         addNewCertificateSuccess,
     TResult Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewEducationSuccess != null) {
@@ -2036,6 +2552,9 @@ class _$EditProfileAddNewExperienceSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
+    required TResult Function(UserLanguageModel languageModel)
+        addNewLanguageSuccess,
   }) {
     return addNewExperienceSuccess(experienceModel);
   }
@@ -2052,6 +2571,8 @@ class _$EditProfileAddNewExperienceSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
   }) {
     return addNewExperienceSuccess?.call(experienceModel);
   }
@@ -2068,6 +2589,8 @@ class _$EditProfileAddNewExperienceSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewExperienceSuccess != null) {
@@ -2092,6 +2615,10 @@ class _$EditProfileAddNewExperienceSuccessImpl
         addNewCertificateSuccess,
     required TResult Function(EditProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(EditProfileAddNewSkillSuccess value)
+        addNewSkillSuccess,
+    required TResult Function(EditProfileAddNewLanguageSuccess value)
+        addNewLanguageSuccess,
   }) {
     return addNewExperienceSuccess(this);
   }
@@ -2111,6 +2638,9 @@ class _$EditProfileAddNewExperienceSuccessImpl
         addNewCertificateSuccess,
     TResult? Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult? Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
   }) {
     return addNewExperienceSuccess?.call(this);
   }
@@ -2130,6 +2660,9 @@ class _$EditProfileAddNewExperienceSuccessImpl
         addNewCertificateSuccess,
     TResult Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewExperienceSuccess != null) {
@@ -2243,6 +2776,9 @@ class _$EditProfileAddNewCertificateSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
+    required TResult Function(UserLanguageModel languageModel)
+        addNewLanguageSuccess,
   }) {
     return addNewCertificateSuccess(certificateModel);
   }
@@ -2259,6 +2795,8 @@ class _$EditProfileAddNewCertificateSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
   }) {
     return addNewCertificateSuccess?.call(certificateModel);
   }
@@ -2275,6 +2813,8 @@ class _$EditProfileAddNewCertificateSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewCertificateSuccess != null) {
@@ -2299,6 +2839,10 @@ class _$EditProfileAddNewCertificateSuccessImpl
         addNewCertificateSuccess,
     required TResult Function(EditProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(EditProfileAddNewSkillSuccess value)
+        addNewSkillSuccess,
+    required TResult Function(EditProfileAddNewLanguageSuccess value)
+        addNewLanguageSuccess,
   }) {
     return addNewCertificateSuccess(this);
   }
@@ -2318,6 +2862,9 @@ class _$EditProfileAddNewCertificateSuccessImpl
         addNewCertificateSuccess,
     TResult? Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult? Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
   }) {
     return addNewCertificateSuccess?.call(this);
   }
@@ -2337,6 +2884,9 @@ class _$EditProfileAddNewCertificateSuccessImpl
         addNewCertificateSuccess,
     TResult Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewCertificateSuccess != null) {
@@ -2412,6 +2962,9 @@ class _$EditProfileUpdateUserInfoSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         addNewCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
+    required TResult Function(UserLanguageModel languageModel)
+        addNewLanguageSuccess,
   }) {
     return updateUserInfoSuccess();
   }
@@ -2428,6 +2981,8 @@ class _$EditProfileUpdateUserInfoSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
   }) {
     return updateUserInfoSuccess?.call();
   }
@@ -2444,6 +2999,8 @@ class _$EditProfileUpdateUserInfoSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         addNewCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (updateUserInfoSuccess != null) {
@@ -2468,6 +3025,10 @@ class _$EditProfileUpdateUserInfoSuccessImpl
         addNewCertificateSuccess,
     required TResult Function(EditProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(EditProfileAddNewSkillSuccess value)
+        addNewSkillSuccess,
+    required TResult Function(EditProfileAddNewLanguageSuccess value)
+        addNewLanguageSuccess,
   }) {
     return updateUserInfoSuccess(this);
   }
@@ -2487,6 +3048,9 @@ class _$EditProfileUpdateUserInfoSuccessImpl
         addNewCertificateSuccess,
     TResult? Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult? Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
   }) {
     return updateUserInfoSuccess?.call(this);
   }
@@ -2506,6 +3070,9 @@ class _$EditProfileUpdateUserInfoSuccessImpl
         addNewCertificateSuccess,
     TResult Function(EditProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
     required TResult orElse(),
   }) {
     if (updateUserInfoSuccess != null) {
@@ -2518,4 +3085,451 @@ class _$EditProfileUpdateUserInfoSuccessImpl
 abstract class EditProfileUpdateUserInfoSuccess implements EditProfileState {
   const factory EditProfileUpdateUserInfoSuccess() =
       _$EditProfileUpdateUserInfoSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$EditProfileAddNewSkillSuccessImplCopyWith<$Res> {
+  factory _$$EditProfileAddNewSkillSuccessImplCopyWith(
+          _$EditProfileAddNewSkillSuccessImpl value,
+          $Res Function(_$EditProfileAddNewSkillSuccessImpl) then) =
+      __$$EditProfileAddNewSkillSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserSkillModel skillModel});
+
+  $UserSkillModelCopyWith<$Res> get skillModel;
+}
+
+/// @nodoc
+class __$$EditProfileAddNewSkillSuccessImplCopyWithImpl<$Res>
+    extends _$EditProfileStateCopyWithImpl<$Res,
+        _$EditProfileAddNewSkillSuccessImpl>
+    implements _$$EditProfileAddNewSkillSuccessImplCopyWith<$Res> {
+  __$$EditProfileAddNewSkillSuccessImplCopyWithImpl(
+      _$EditProfileAddNewSkillSuccessImpl _value,
+      $Res Function(_$EditProfileAddNewSkillSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? skillModel = null,
+  }) {
+    return _then(_$EditProfileAddNewSkillSuccessImpl(
+      null == skillModel
+          ? _value.skillModel
+          : skillModel // ignore: cast_nullable_to_non_nullable
+              as UserSkillModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserSkillModelCopyWith<$Res> get skillModel {
+    return $UserSkillModelCopyWith<$Res>(_value.skillModel, (value) {
+      return _then(_value.copyWith(skillModel: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$EditProfileAddNewSkillSuccessImpl
+    implements EditProfileAddNewSkillSuccess {
+  const _$EditProfileAddNewSkillSuccessImpl(this.skillModel);
+
+  @override
+  final UserSkillModel skillModel;
+
+  @override
+  String toString() {
+    return 'EditProfileState.addNewSkillSuccess(skillModel: $skillModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditProfileAddNewSkillSuccessImpl &&
+            (identical(other.skillModel, skillModel) ||
+                other.skillModel == skillModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, skillModel);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditProfileAddNewSkillSuccessImplCopyWith<
+          _$EditProfileAddNewSkillSuccessImpl>
+      get copyWith => __$$EditProfileAddNewSkillSuccessImplCopyWithImpl<
+          _$EditProfileAddNewSkillSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(EducationModel educationModel)
+        addNewEducationSuccess,
+    required TResult Function(ExperienceModel experienceModel)
+        addNewExperienceSuccess,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
+    required TResult Function(UserLanguageModel languageModel)
+        addNewLanguageSuccess,
+  }) {
+    return addNewSkillSuccess(skillModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult? Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+  }) {
+    return addNewSkillSuccess?.call(skillModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    required TResult orElse(),
+  }) {
+    if (addNewSkillSuccess != null) {
+      return addNewSkillSuccess(skillModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(EditProfileError value) error,
+    required TResult Function(EditProfileLoading value) loading,
+    required TResult Function(EditProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(EditProfileAddNewEducationSuccess value)
+        addNewEducationSuccess,
+    required TResult Function(EditProfileAddNewExperienceSuccess value)
+        addNewExperienceSuccess,
+    required TResult Function(EditProfileAddNewCertificateSuccess value)
+        addNewCertificateSuccess,
+    required TResult Function(EditProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(EditProfileAddNewSkillSuccess value)
+        addNewSkillSuccess,
+    required TResult Function(EditProfileAddNewLanguageSuccess value)
+        addNewLanguageSuccess,
+  }) {
+    return addNewSkillSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(EditProfileError value)? error,
+    TResult? Function(EditProfileLoading value)? loading,
+    TResult? Function(EditProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(EditProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult? Function(EditProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult? Function(EditProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult? Function(EditProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult? Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
+  }) {
+    return addNewSkillSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(EditProfileError value)? error,
+    TResult Function(EditProfileLoading value)? loading,
+    TResult Function(EditProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(EditProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult Function(EditProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult Function(EditProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult Function(EditProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
+    required TResult orElse(),
+  }) {
+    if (addNewSkillSuccess != null) {
+      return addNewSkillSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditProfileAddNewSkillSuccess implements EditProfileState {
+  const factory EditProfileAddNewSkillSuccess(final UserSkillModel skillModel) =
+      _$EditProfileAddNewSkillSuccessImpl;
+
+  UserSkillModel get skillModel;
+  @JsonKey(ignore: true)
+  _$$EditProfileAddNewSkillSuccessImplCopyWith<
+          _$EditProfileAddNewSkillSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EditProfileAddNewLanguageSuccessImplCopyWith<$Res> {
+  factory _$$EditProfileAddNewLanguageSuccessImplCopyWith(
+          _$EditProfileAddNewLanguageSuccessImpl value,
+          $Res Function(_$EditProfileAddNewLanguageSuccessImpl) then) =
+      __$$EditProfileAddNewLanguageSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserLanguageModel languageModel});
+
+  $UserLanguageModelCopyWith<$Res> get languageModel;
+}
+
+/// @nodoc
+class __$$EditProfileAddNewLanguageSuccessImplCopyWithImpl<$Res>
+    extends _$EditProfileStateCopyWithImpl<$Res,
+        _$EditProfileAddNewLanguageSuccessImpl>
+    implements _$$EditProfileAddNewLanguageSuccessImplCopyWith<$Res> {
+  __$$EditProfileAddNewLanguageSuccessImplCopyWithImpl(
+      _$EditProfileAddNewLanguageSuccessImpl _value,
+      $Res Function(_$EditProfileAddNewLanguageSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? languageModel = null,
+  }) {
+    return _then(_$EditProfileAddNewLanguageSuccessImpl(
+      null == languageModel
+          ? _value.languageModel
+          : languageModel // ignore: cast_nullable_to_non_nullable
+              as UserLanguageModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserLanguageModelCopyWith<$Res> get languageModel {
+    return $UserLanguageModelCopyWith<$Res>(_value.languageModel, (value) {
+      return _then(_value.copyWith(languageModel: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$EditProfileAddNewLanguageSuccessImpl
+    implements EditProfileAddNewLanguageSuccess {
+  const _$EditProfileAddNewLanguageSuccessImpl(this.languageModel);
+
+  @override
+  final UserLanguageModel languageModel;
+
+  @override
+  String toString() {
+    return 'EditProfileState.addNewLanguageSuccess(languageModel: $languageModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditProfileAddNewLanguageSuccessImpl &&
+            (identical(other.languageModel, languageModel) ||
+                other.languageModel == languageModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, languageModel);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditProfileAddNewLanguageSuccessImplCopyWith<
+          _$EditProfileAddNewLanguageSuccessImpl>
+      get copyWith => __$$EditProfileAddNewLanguageSuccessImplCopyWithImpl<
+          _$EditProfileAddNewLanguageSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(EducationModel educationModel)
+        addNewEducationSuccess,
+    required TResult Function(ExperienceModel experienceModel)
+        addNewExperienceSuccess,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
+    required TResult Function(UserLanguageModel languageModel)
+        addNewLanguageSuccess,
+  }) {
+    return addNewLanguageSuccess(languageModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult? Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+  }) {
+    return addNewLanguageSuccess?.call(languageModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    required TResult orElse(),
+  }) {
+    if (addNewLanguageSuccess != null) {
+      return addNewLanguageSuccess(languageModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(EditProfileError value) error,
+    required TResult Function(EditProfileLoading value) loading,
+    required TResult Function(EditProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(EditProfileAddNewEducationSuccess value)
+        addNewEducationSuccess,
+    required TResult Function(EditProfileAddNewExperienceSuccess value)
+        addNewExperienceSuccess,
+    required TResult Function(EditProfileAddNewCertificateSuccess value)
+        addNewCertificateSuccess,
+    required TResult Function(EditProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(EditProfileAddNewSkillSuccess value)
+        addNewSkillSuccess,
+    required TResult Function(EditProfileAddNewLanguageSuccess value)
+        addNewLanguageSuccess,
+  }) {
+    return addNewLanguageSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(EditProfileError value)? error,
+    TResult? Function(EditProfileLoading value)? loading,
+    TResult? Function(EditProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(EditProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult? Function(EditProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult? Function(EditProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult? Function(EditProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult? Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
+  }) {
+    return addNewLanguageSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(EditProfileError value)? error,
+    TResult Function(EditProfileLoading value)? loading,
+    TResult Function(EditProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(EditProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult Function(EditProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult Function(EditProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult Function(EditProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
+    required TResult orElse(),
+  }) {
+    if (addNewLanguageSuccess != null) {
+      return addNewLanguageSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditProfileAddNewLanguageSuccess implements EditProfileState {
+  const factory EditProfileAddNewLanguageSuccess(
+          final UserLanguageModel languageModel) =
+      _$EditProfileAddNewLanguageSuccessImpl;
+
+  UserLanguageModel get languageModel;
+  @JsonKey(ignore: true)
+  _$$EditProfileAddNewLanguageSuccessImplCopyWith<
+          _$EditProfileAddNewLanguageSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

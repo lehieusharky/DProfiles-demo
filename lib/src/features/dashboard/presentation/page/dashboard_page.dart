@@ -5,6 +5,7 @@ import 'package:demo_dprofiles/src/features/dashboard/presentation/bloc/dashboar
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_extension.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/widgets/bottom_bar_dashboard.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/widgets/dashboard_end_drawer.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,8 +36,16 @@ class _DashboardPageState extends State<DashboardPage> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => injector.get<DashboardBloc>(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => injector.get<DashboardBloc>(),
+        ),
+        BlocProvider(
+          create: (context) =>
+              injector.get<ProfileBloc>()..add(const ProfileGetUserInfo()),
+        ),
+      ],
       child: Scaffold(
         key: _scaffoldKey,
         appBar: MyAppbar(

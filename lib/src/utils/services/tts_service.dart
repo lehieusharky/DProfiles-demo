@@ -24,7 +24,7 @@ class TtsService {
   void _configTts() async {
     await _tts?.setLanguage("en-US");
 
-    await _tts?.setSpeechRate(0.6);
+    await _tts?.setSpeechRate(0.5);
 
     await _tts?.setVolume(1.0);
 

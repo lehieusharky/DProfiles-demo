@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 import 'package:web3modal_flutter/web3modal_flutter.dart';
 
 class AppConnectWalletService {
@@ -35,6 +36,8 @@ class AppConnectWalletService {
       _w3mService?.init();
     }
   }
+
+  String? get walletAddress => _w3mService!.session?.address;
 
   void connectWallet(BuildContext context) {
     if (_w3mService!.isConnected) {

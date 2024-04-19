@@ -18,6 +18,11 @@ abstract class EditProfileRepository {
 
   Future<Either<EditProfileFailure, BaseResponse>> updateUserInfo(
       UserInfoModel data);
+
+  Future<Either<EditProfileFailure, BaseResponse>> addNewSkill(String skill);
+
+  Future<Either<EditProfileFailure, BaseResponse>> addNewLanguage(
+      int languageID);
 }
 
 class EditProfileFailure extends AppFailure {
