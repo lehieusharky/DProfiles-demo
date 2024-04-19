@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
@@ -26,18 +25,15 @@ class MyAICharacterPage extends StatefulWidget {
   State<MyAICharacterPage> createState() => _MyAICharacterPageState();
 }
 
-class _MyAICharacterPageState extends State<MyAICharacterPage>
-    with SingleTickerProviderStateMixin {
+class _MyAICharacterPageState extends State<MyAICharacterPage> {
   AICharacterBotModel? _botInfo;
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => injector.get<AiCharacterBloc>()
-        ..add(AICharacterGetChatBotDetail(
-          widget.chatBotID,
-          widget.isPopularBot,
-        )),
+        ..add(
+            AICharacterGetChatBotDetail(widget.chatBotID, widget.isPopularBot)),
       child: BlocConsumer<AiCharacterBloc, AiCharacterState>(
         listener: (context, state) {
           if (state is AICharacterGetChatBotDetailSuccess) {

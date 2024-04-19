@@ -5784,7 +5784,7 @@ mixin _$AiCharacterState {
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -5817,7 +5817,7 @@ mixin _$AiCharacterState {
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -5849,7 +5849,7 @@ mixin _$AiCharacterState {
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -6062,7 +6062,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return initial();
   }
@@ -6098,7 +6098,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return initial?.call();
   }
@@ -6133,7 +6133,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -6348,7 +6348,7 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return loading();
   }
@@ -6384,7 +6384,7 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return loading?.call();
   }
@@ -6419,7 +6419,7 @@ class _$AICharacterLoadingImpl implements AICharacterLoading {
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -6678,7 +6678,7 @@ class _$AICharacterErrorImpl implements AICharacterError {
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return error(message, title);
   }
@@ -6714,7 +6714,7 @@ class _$AICharacterErrorImpl implements AICharacterError {
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -6749,7 +6749,7 @@ class _$AICharacterErrorImpl implements AICharacterError {
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -7005,7 +7005,7 @@ class _$AICharacterChangeCreationStepSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return changeCreationStepSuccess(currentStep);
   }
@@ -7041,7 +7041,7 @@ class _$AICharacterChangeCreationStepSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return changeCreationStepSuccess?.call(currentStep);
   }
@@ -7076,7 +7076,7 @@ class _$AICharacterChangeCreationStepSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -7304,7 +7304,7 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return addBasicInfoOfCharacterBotSuccess();
   }
@@ -7340,7 +7340,7 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return addBasicInfoOfCharacterBotSuccess?.call();
   }
@@ -7375,7 +7375,7 @@ class _$AddBasicInfoOfCharacterBotSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (addBasicInfoOfCharacterBotSuccess != null) {
@@ -7634,7 +7634,7 @@ class _$AICharacterGetUserInfoSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return getUserInfo(userInfoModel);
   }
@@ -7670,7 +7670,7 @@ class _$AICharacterGetUserInfoSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return getUserInfo?.call(userInfoModel);
   }
@@ -7705,7 +7705,7 @@ class _$AICharacterGetUserInfoSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -7968,7 +7968,7 @@ class _$AICharacterGetUserCertificatesSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return getUserCertificatesSuccess(certificates);
   }
@@ -8004,7 +8004,7 @@ class _$AICharacterGetUserCertificatesSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return getUserCertificatesSuccess?.call(certificates);
   }
@@ -8039,7 +8039,7 @@ class _$AICharacterGetUserCertificatesSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -8304,7 +8304,7 @@ class _$AICharacterGetUserEducationsSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return getUserEducationsSuccess(educations);
   }
@@ -8340,7 +8340,7 @@ class _$AICharacterGetUserEducationsSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return getUserEducationsSuccess?.call(educations);
   }
@@ -8375,7 +8375,7 @@ class _$AICharacterGetUserEducationsSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -8639,7 +8639,7 @@ class _$AICharacterGetUserExperiencesSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return getUserExperiencesSuccess(experiences);
   }
@@ -8675,7 +8675,7 @@ class _$AICharacterGetUserExperiencesSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return getUserExperiencesSuccess?.call(experiences);
   }
@@ -8710,7 +8710,7 @@ class _$AICharacterGetUserExperiencesSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -8977,7 +8977,7 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return generateCharacterBotSuccess(createCharacterBotModel);
   }
@@ -9013,7 +9013,7 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return generateCharacterBotSuccess?.call(createCharacterBotModel);
   }
@@ -9048,7 +9048,7 @@ class _$GenerateCharacterBotSuccessImpl implements GenerateCharacterBotSuccess {
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (generateCharacterBotSuccess != null) {
@@ -9307,7 +9307,7 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return getListCharacterBotSuccess(bots);
   }
@@ -9343,7 +9343,7 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return getListCharacterBotSuccess?.call(bots);
   }
@@ -9378,7 +9378,7 @@ class _$GetListCharacterBotSuccessImpl implements GetListCharacterBotSuccess {
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (getListCharacterBotSuccess != null) {
@@ -9639,7 +9639,7 @@ class _$GetListPopularCharacterBotSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return getListPopularCharacterBotSuccess(bots);
   }
@@ -9675,7 +9675,7 @@ class _$GetListPopularCharacterBotSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return getListPopularCharacterBotSuccess?.call(bots);
   }
@@ -9710,7 +9710,7 @@ class _$GetListPopularCharacterBotSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (getListPopularCharacterBotSuccess != null) {
@@ -9977,7 +9977,7 @@ class _$AICharacterGetChatBotDetailSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return getChatBotDetailSuccess(characterBotDetail);
   }
@@ -10013,7 +10013,7 @@ class _$AICharacterGetChatBotDetailSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return getChatBotDetailSuccess?.call(characterBotDetail);
   }
@@ -10048,7 +10048,7 @@ class _$AICharacterGetChatBotDetailSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (getChatBotDetailSuccess != null) {
@@ -10276,7 +10276,7 @@ class _$AICharacterRemoveCertificateSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return removeCertificateSuccess();
   }
@@ -10312,7 +10312,7 @@ class _$AICharacterRemoveCertificateSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return removeCertificateSuccess?.call();
   }
@@ -10347,7 +10347,7 @@ class _$AICharacterRemoveCertificateSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (removeCertificateSuccess != null) {
@@ -10568,7 +10568,7 @@ class _$AICharacterRemoveEducationSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return removeEducationSuccess();
   }
@@ -10604,7 +10604,7 @@ class _$AICharacterRemoveEducationSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return removeEducationSuccess?.call();
   }
@@ -10639,7 +10639,7 @@ class _$AICharacterRemoveEducationSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (removeEducationSuccess != null) {
@@ -10860,7 +10860,7 @@ class _$AICharacterRemoveExperienceSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return removeExperienceSuccess();
   }
@@ -10896,7 +10896,7 @@ class _$AICharacterRemoveExperienceSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return removeExperienceSuccess?.call();
   }
@@ -10931,7 +10931,7 @@ class _$AICharacterRemoveExperienceSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (removeExperienceSuccess != null) {
@@ -11152,7 +11152,7 @@ class _$AICharacterEditCertificateSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return editCertificateSuccess();
   }
@@ -11188,7 +11188,7 @@ class _$AICharacterEditCertificateSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return editCertificateSuccess?.call();
   }
@@ -11223,7 +11223,7 @@ class _$AICharacterEditCertificateSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (editCertificateSuccess != null) {
@@ -11444,7 +11444,7 @@ class _$AICharacterEditEducationSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return editEducationSuccess();
   }
@@ -11480,7 +11480,7 @@ class _$AICharacterEditEducationSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return editEducationSuccess?.call();
   }
@@ -11515,7 +11515,7 @@ class _$AICharacterEditEducationSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (editEducationSuccess != null) {
@@ -11736,7 +11736,7 @@ class _$AICharacterEditExperienceSuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return editExperience();
   }
@@ -11772,7 +11772,7 @@ class _$AICharacterEditExperienceSuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return editExperience?.call();
   }
@@ -11807,7 +11807,7 @@ class _$AICharacterEditExperienceSuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (editExperience != null) {
@@ -12065,7 +12065,7 @@ class _$AICharacterGetChatWithBotHistorySuccessImpl
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
     return getChatWithBotHistorySuccess(messagesHistory);
   }
@@ -12101,7 +12101,7 @@ class _$AICharacterGetChatWithBotHistorySuccessImpl
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
     return getChatWithBotHistorySuccess?.call(messagesHistory);
   }
@@ -12136,7 +12136,7 @@ class _$AICharacterGetChatWithBotHistorySuccessImpl
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (getChatWithBotHistorySuccess != null) {
@@ -12300,6 +12300,8 @@ abstract class _$$AICharacterFollowBotSuccessImplCopyWith<$Res> {
           _$AICharacterFollowBotSuccessImpl value,
           $Res Function(_$AICharacterFollowBotSuccessImpl) then) =
       __$$AICharacterFollowBotSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int botID});
 }
 
 /// @nodoc
@@ -12311,27 +12313,51 @@ class __$$AICharacterFollowBotSuccessImplCopyWithImpl<$Res>
       _$AICharacterFollowBotSuccessImpl _value,
       $Res Function(_$AICharacterFollowBotSuccessImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? botID = null,
+  }) {
+    return _then(_$AICharacterFollowBotSuccessImpl(
+      null == botID
+          ? _value.botID
+          : botID // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$AICharacterFollowBotSuccessImpl implements AICharacterFollowBotSuccess {
-  const _$AICharacterFollowBotSuccessImpl();
+  const _$AICharacterFollowBotSuccessImpl(this.botID);
+
+  @override
+  final int botID;
 
   @override
   String toString() {
-    return 'AiCharacterState.followBotSuccess()';
+    return 'AiCharacterState.followBotSuccess(botID: $botID)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AICharacterFollowBotSuccessImpl);
+            other is _$AICharacterFollowBotSuccessImpl &&
+            (identical(other.botID, botID) || other.botID == botID));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, botID);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AICharacterFollowBotSuccessImplCopyWith<_$AICharacterFollowBotSuccessImpl>
+      get copyWith => __$$AICharacterFollowBotSuccessImplCopyWithImpl<
+          _$AICharacterFollowBotSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -12364,9 +12390,9 @@ class _$AICharacterFollowBotSuccessImpl implements AICharacterFollowBotSuccess {
     required TResult Function() editExperience,
     required TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)
         getChatWithBotHistorySuccess,
-    required TResult Function() followBotSuccess,
+    required TResult Function(int botID) followBotSuccess,
   }) {
-    return followBotSuccess();
+    return followBotSuccess(botID);
   }
 
   @override
@@ -12400,9 +12426,9 @@ class _$AICharacterFollowBotSuccessImpl implements AICharacterFollowBotSuccess {
     TResult? Function()? editExperience,
     TResult? Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult? Function()? followBotSuccess,
+    TResult? Function(int botID)? followBotSuccess,
   }) {
-    return followBotSuccess?.call();
+    return followBotSuccess?.call(botID);
   }
 
   @override
@@ -12435,11 +12461,11 @@ class _$AICharacterFollowBotSuccessImpl implements AICharacterFollowBotSuccess {
     TResult Function()? editExperience,
     TResult Function(List<ChatBotMessageHistoryModel> messagesHistory)?
         getChatWithBotHistorySuccess,
-    TResult Function()? followBotSuccess,
+    TResult Function(int botID)? followBotSuccess,
     required TResult orElse(),
   }) {
     if (followBotSuccess != null) {
-      return followBotSuccess();
+      return followBotSuccess(botID);
     }
     return orElse();
   }
@@ -12581,6 +12607,11 @@ class _$AICharacterFollowBotSuccessImpl implements AICharacterFollowBotSuccess {
 }
 
 abstract class AICharacterFollowBotSuccess implements AiCharacterState {
-  const factory AICharacterFollowBotSuccess() =
+  const factory AICharacterFollowBotSuccess(final int botID) =
       _$AICharacterFollowBotSuccessImpl;
+
+  int get botID;
+  @JsonKey(ignore: true)
+  _$$AICharacterFollowBotSuccessImplCopyWith<_$AICharacterFollowBotSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

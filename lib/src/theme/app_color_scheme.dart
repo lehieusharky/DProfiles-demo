@@ -10,7 +10,7 @@ class AppColorScheme {
         primary: Color(0xff58bd7d),
         primaryContainer: Color(0xffd0e4ff),
         secondary: Color(0xff23262f),
-        secondaryContainer: Color(0xff777e90),
+        secondaryContainer: Color(0xff777e90),  
         tertiary: Color(0xff006875),
         tertiaryContainer: Color(0xff95f0ff),
         appBarColor: Color(0xff777e90),
