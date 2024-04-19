@@ -60,12 +60,25 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
           if (state is GenerateCharacterBotSuccess) {
             Navigator.pop(context);
 
-            context.read<AiCharacterBloc>().add(
-                AICharacterFollowBot(state.createCharacterBotModel.chatBotId!));
+            showErrorDialog(context, onPressed: () {
+              while (context.router.canPop()) {
+                Navigator.pop(context);
+              }
+            }, title: 'Success', description: 'Create bot success');
+            
+            // context.replaceRoute(MyAICharacterRoute(
+            //     chatBotID: state.createCharacterBotModel.chatBotId!,
+            //     isPopularBot: false));
 
+            // TODO 
+            // context.read<AiCharacterBloc>().add(
+            //     AICharacterFollowBot(state.createCharacterBotModel.chatBotId!));
+          }
+
+          if (state is AICharacterFollowBotSuccess) {
+            Navigator.pop(context);
             context.replaceRoute(MyAICharacterRoute(
-                chatBotID: state.createCharacterBotModel.chatBotId!,
-                isPopularBot: false));
+                chatBotID: state.botID, isPopularBot: false));
           }
 
           if (state is AICharacterError) {
@@ -73,6 +86,8 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
             showErrorDialog(context,
                 title: 'Generate failed', description: state.message[0]);
           }
+
+          if (state is AICharacterFollowBotSuccess) {}
         },
         child: DefaultTabController(
           length: 3,

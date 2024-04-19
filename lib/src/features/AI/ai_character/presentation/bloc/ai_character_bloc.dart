@@ -424,14 +424,12 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
 
   FutureOr<void> _followBot(
       AICharacterFollowBot event, Emitter<AiCharacterState> emit) async {
-    emit(const AICharacterLoading());
-
     final result = await aiCharacterUseCase.followCharacterBot(event.chatBotID);
 
     result.fold(
       (l) => emit(
           AICharacterError(message: [l], title: 'Get chat bot detail  failed')),
-      (r) => emit(const AICharacterFollowBotSuccess()),
+      (r) => emit(AICharacterFollowBotSuccess(event.chatBotID)),
     );
   }
 }
