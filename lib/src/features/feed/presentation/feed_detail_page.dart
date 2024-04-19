@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/bloc/feed_comment_bloc.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/comment_bar.dart';
+import 'package:demo_dprofiles/src/features/feed/presentation/cubit/feed_detail_cubit.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/cubit/focus_comment_cubit.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/feed_comments.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
@@ -30,6 +31,9 @@ class FeedDetailPage extends StatelessWidget {
           BlocProvider(
             create: (context) => FocusCommentCubit(feed.postId ?? 0),
           ),
+          BlocProvider(
+            create: (_) => FeedDetailCubit(feed),
+          ),
         ],
         child: Stack(
           children: [
@@ -37,7 +41,12 @@ class FeedDetailPage extends StatelessWidget {
               headerSliverBuilder: (context, innerBoxIsScrolled) => [
                 SliverList(
                   delegate: SliverChildListDelegate.fixed(
-                    [feed.toWidget(context)],
+                    [
+                      BlocBuilder<FeedDetailCubit, FeedDetailState>(
+                          builder: (context, state) {
+                        return feed.toWidget(context);
+                      }),
+                    ],
                   ),
                 ),
               ],

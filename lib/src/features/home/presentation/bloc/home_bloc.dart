@@ -22,7 +22,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   // Page number starts from 1
   int page = 1;
 
-  final int limitPage = 5;
+  final int limitPage = 10;
 
   final refreshController = RefreshController();
 
@@ -34,6 +34,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<HomeLoadMoreNewsFeed>(_loadMoreNewsFeed);
     on<HomeRefreshNewsFeed>(_refreshNewsFeed);
     on<HomeGetUserInfo>(_getUserInfo);
+    on<UpdateFeedEvent>(_updateFeed);
   }
 
   FutureOr<void> _getNewsFeed(
@@ -42,14 +43,15 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
     final result = await homeUseCase.getNewsFeed(page, limitPage);
 
-    result.fold(
-      (l) => emit(HomeError(message: l, title: 'Get news feed failed')),
+    await result.fold(
+      (l) async => emit(HomeError(message: l, title: 'Get news feed failed')),
       (r) async {
         final data = r.data as List;
 
         final newsFeed = data.map((e) => NewFeedModel.fromJson(e)).toList();
-        emit(HomeGetFeedsSuccess(newsFeed));
-        emit(HomeGetFeedsSuccess(await _updatesLiked(newsFeed)));
+        // emit(HomeGetFeedsSuccess(newsFeed));
+        final feedUpdated = await _updatesLiked(newsFeed);
+        emit(HomeState.getFeedsSuccess(feedUpdated));
       },
     );
   }
@@ -90,7 +92,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
         final newsFeed = data.map((e) => NewFeedModel.fromJson(e)).toList();
 
-        emit(HomeGetFeedsSuccess(newsFeed));
+        // emit(HomeGetFeedsSuccess(newsFeed));
         emit(HomeGetFeedsSuccess(await _updatesLiked(newsFeed)));
       },
     );
@@ -127,5 +129,19 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       liked = r.data as bool;
     });
     return feed.copyWith(liked: liked);
+  }
+
+  FutureOr<void> _updateFeed(
+      UpdateFeedEvent event, Emitter<HomeState> emit) async {
+    if (state is HomeGetFeedsSuccess) {
+      final newsFeed = (state as HomeGetFeedsSuccess).newsFeed;
+      final updatedNewsFeed = newsFeed.map((e) {
+        if (e.postId == event.feed.postId) {
+          return event.feed;
+        }
+        return e;
+      }).toList();
+      emit(HomeGetFeedsSuccess(updatedNewsFeed));
+    }
   }
 }

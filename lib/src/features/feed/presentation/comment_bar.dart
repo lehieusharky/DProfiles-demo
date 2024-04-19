@@ -1,6 +1,7 @@
 import 'package:demo_dprofiles/src/core/common/simple_status/simple_state_status.dart';
 import 'package:demo_dprofiles/src/core/ui/my_text_form_field.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/bloc/feed_comment_bloc.dart';
+import 'package:demo_dprofiles/src/features/feed/presentation/cubit/feed_detail_cubit.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/cubit/focus_comment_cubit.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class CommentBar extends StatelessWidget {
         switch (state.status) {
           case SimpleStateStatus.success:
             context.read<FeedCommentBloc>().add(const FeedCommentEvent.fetch());
+            context.read<FeedDetailCubit>().refetch();
             break;
           default:
             break;

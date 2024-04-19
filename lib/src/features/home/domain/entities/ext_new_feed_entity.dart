@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
+import 'package:demo_dprofiles/src/features/feed/presentation/cubit/feed_detail_cubit.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/feed_menu.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
@@ -8,6 +9,7 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tuple/tuple.dart';
 
 extension NewFeedModelExt on NewFeedModel {
@@ -17,80 +19,8 @@ extension NewFeedModelExt on NewFeedModel {
     VoidCallback? onCommentClick,
     VoidCallback? onShareClick,
   }) {
-    return Padding(
-      padding: context.padding(horizontal: 20),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: context.padding(right: 12),
-                child: CircleAvatar(
-                  radius: context.sizeHeight(20),
-                  child: Assets.icons.homeLogo.image(),
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      user?.username ?? '',
-                      style: AppFont()
-                          .fontTheme(context, weight: FontWeight.w600)
-                          .bodyLarge,
-                    ),
-                    Text(
-                      postCreatedTs.toString().convertToDDMMYYFormat(),
-                      style: AppFont()
-                          .fontTheme(context,
-                              weight: FontWeight.w400,
-                              color: colorScheme(context).outline)
-                          .bodySmall,
-                    )
-                  ],
-                ),
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const _FollowingButton(),
-                  _buildMenu(context),
-                ],
-              )
-            ],
-          ),
-          if (postContent != null)
-            Padding(
-              padding: context.padding(top: 16),
-              child: Text(
-                postContent!,
-                style: AppFont()
-                    .fontTheme(context, height: 1.5, letterSpacing: 0.5)
-                    .bodyMedium,
-              ),
-            ),
-          Padding(
-              padding: context.padding(vertical: 25),
-              child: MyCacheImage(
-                imageUrl: postImageUrl ?? '',
-                errorWidget: Assets.images.home.live.image(),
-              )),
-          ReactionPost(
-            likes: noOfLike!,
-            comments: noOfComment!,
-            shares: noOfShare!,
-            onLikeClick: onCommentClick,
-            onCommentClick: onCommentClick,
-            onShareClick: onShareClick,
-          ),
-        ],
-      ),
-    );
+    final bloc = context.read<FeedDetailCubit>();
+    return _buildBody(context, bloc.state.feed);
   }
 
   // void _showPhotoView(BuildContext context) {
@@ -113,6 +43,94 @@ extension NewFeedModelExt on NewFeedModel {
   //         ),
   //       ));
   // }
+
+  Widget _buildBody(
+    BuildContext context,
+    NewFeedModel feed, {
+    VoidCallback? onLikeClick,
+    VoidCallback? onCommentClick,
+    VoidCallback? onShareClick,
+  }) {
+    final bloc = context.read<FeedDetailCubit>();
+    return Padding(
+      padding: context.padding(horizontal: 20),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: context.padding(right: 12),
+                child: CircleAvatar(
+                  radius: context.sizeHeight(20),
+                  child: Assets.icons.homeLogo.image(),
+                ),
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      feed.user?.username ?? '',
+                      style: AppFont()
+                          .fontTheme(context, weight: FontWeight.w600)
+                          .bodyLarge,
+                    ),
+                    Text(
+                      feed.postCreatedTs.toString().convertToDDMMYYFormat(),
+                      style: AppFont()
+                          .fontTheme(context,
+                              weight: FontWeight.w400,
+                              color: colorScheme(context).outline)
+                          .bodySmall,
+                    )
+                  ],
+                ),
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const _FollowingButton(),
+                  _buildMenu(context),
+                ],
+              )
+            ],
+          ),
+          if (feed.postContent != null)
+            Padding(
+              padding: context.padding(top: 16),
+              child: Text(
+                feed.postContent!,
+                style: AppFont()
+                    .fontTheme(context, height: 1.5, letterSpacing: 0.5)
+                    .bodyMedium,
+              ),
+            ),
+          Padding(
+              padding: context.padding(top: 25),
+              child: MyCacheImage(
+                imageUrl: feed.postImageUrl ?? '',
+                errorWidget: Assets.images.home.live.image(),
+              )),
+          ReactionPost(
+            likes: feed.noOfLike!,
+            comments: feed.noOfComment!,
+            shares: feed.noOfShare!,
+            liked: feed.liked,
+            onLikeClick: () {
+              bloc.like();
+              onLikeClick?.call();
+            },
+            onCommentClick: onCommentClick,
+            onShareClick: onShareClick,
+          ),
+        ],
+      ),
+    );
+  }
 
   Widget _buildMenu(BuildContext context) {
     return FeedMenu();
@@ -149,6 +167,7 @@ class ReactionPost extends StatelessWidget {
   final VoidCallback? onLikeClick;
   final VoidCallback? onCommentClick;
   final VoidCallback? onShareClick;
+  final bool liked;
 
   const ReactionPost({
     super.key,
@@ -158,6 +177,7 @@ class ReactionPost extends StatelessWidget {
     this.onLikeClick,
     this.onCommentClick,
     this.onShareClick,
+    this.liked = false,
   });
 
   @override
@@ -166,54 +186,70 @@ class ReactionPost extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        Tuple3(
-          InkWell(
-            onTap: onLikeClick,
-            child: const Icon(IconsaxOutline.heart),
-          ),
+        Tuple4(
+          liked
+              ? const Icon(IconsaxBold.heart)
+              : const Icon(IconsaxOutline.heart),
           likes,
-          0,
+          liked,
+          onLikeClick,
         ),
-        Tuple3(
-          InkWell(
-            onTap: onCommentClick,
-            child: const Icon(IconsaxOutline.message),
-          ),
+        Tuple4(
+          const Icon(IconsaxOutline.message),
           comments,
-          0,
+          false,
+          onCommentClick,
         ),
-        Tuple3(
-          InkWell(
-            onTap: onShareClick,
-            child: const Icon(IconsaxOutline.cloud_sunny),
-          ),
+        Tuple4(
+          const Icon(IconsaxOutline.cloud_sunny),
           shares,
-          0,
+          false,
+          onShareClick,
         ),
-      ].map((e) => _buildAction(context, e.item1, e.item2)).toList(),
+      ]
+          .map(
+            (e) => _buildAction(
+              context,
+              e.item1,
+              e.item2,
+              e.item3,
+              e.item4,
+            ),
+          )
+          .toList(),
     );
   }
 
-  Widget _buildAction(BuildContext context, Widget icon, int value) {
-    return Padding(
-      padding: context.padding(right: 16),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          icon,
-          Padding(
-            padding: context.padding(left: 8),
-            child: Text(
-              value.toString(),
-              style: AppFont()
-                  .fontTheme(
-                    context,
-                    weight: FontWeight.w400,
-                  )
-                  .bodyMedium,
+  Widget _buildAction(
+    BuildContext context,
+    Widget icon,
+    int value,
+    bool filled,
+    VoidCallback? onTap,
+  ) {
+    return InkWell(
+      onTap: onTap,
+      splashFactory: NoSplash.splashFactory,
+      child: Padding(
+        padding: context.padding(right: 16),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            icon,
+            Padding(
+              padding: context.padding(left: 8, vertical: 16),
+              child: Text(
+                value.toString(),
+                style: AppFont()
+                    .fontTheme(
+                      context,
+                      weight: FontWeight.w400,
+                    )
+                    .bodyMedium,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
