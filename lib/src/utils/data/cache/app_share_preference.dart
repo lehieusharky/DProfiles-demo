@@ -47,4 +47,8 @@ abstract class AppSharePreference {
   int? getUserID();
 
   Future<void> setUserID(int id);
+
+  // String? getWalletAddress();
+  //
+  // Future<void> setWalletAddress(int id);
 }

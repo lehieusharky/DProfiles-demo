@@ -25,4 +25,7 @@ class AiFeaturesEvent with _$AiFeaturesEvent {
       GetAutoGenerateHistoryDetail;
 
   const factory AiFeaturesEvent.getCurrentPointOfUser() = GetCurrentPointOfUser;
+
+  const factory AiFeaturesEvent.changeGPTVersion(SupportedChatGPT version) =
+      AICharacterChangeGPTVersion;
 }

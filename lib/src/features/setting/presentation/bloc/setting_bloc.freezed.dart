@@ -22,7 +22,6 @@ mixin _$SettingEvent {
     required TResult Function(SupportedLanguage language) toggleLanguage,
     required TResult Function(SupportedTheme theme) toggleTheme,
     required TResult Function(bool status) toggleDarkMode,
-    required TResult Function() deleteUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,7 +30,6 @@ mixin _$SettingEvent {
     TResult? Function(SupportedLanguage language)? toggleLanguage,
     TResult? Function(SupportedTheme theme)? toggleTheme,
     TResult? Function(bool status)? toggleDarkMode,
-    TResult? Function()? deleteUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +38,6 @@ mixin _$SettingEvent {
     TResult Function(SupportedLanguage language)? toggleLanguage,
     TResult Function(SupportedTheme theme)? toggleTheme,
     TResult Function(bool status)? toggleDarkMode,
-    TResult Function()? deleteUser,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -50,7 +47,6 @@ mixin _$SettingEvent {
     required TResult Function(ToggleLanguage value) toggleLanguage,
     required TResult Function(ToggleTheme value) toggleTheme,
     required TResult Function(ToggleDarkMode value) toggleDarkMode,
-    required TResult Function(SettingDeleteUser value) deleteUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,7 +55,6 @@ mixin _$SettingEvent {
     TResult? Function(ToggleLanguage value)? toggleLanguage,
     TResult? Function(ToggleTheme value)? toggleTheme,
     TResult? Function(ToggleDarkMode value)? toggleDarkMode,
-    TResult? Function(SettingDeleteUser value)? deleteUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -68,7 +63,6 @@ mixin _$SettingEvent {
     TResult Function(ToggleLanguage value)? toggleLanguage,
     TResult Function(ToggleTheme value)? toggleTheme,
     TResult Function(ToggleDarkMode value)? toggleDarkMode,
-    TResult Function(SettingDeleteUser value)? deleteUser,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,7 +128,6 @@ class _$GetInitSettingInfoImpl implements GetInitSettingInfo {
     required TResult Function(SupportedLanguage language) toggleLanguage,
     required TResult Function(SupportedTheme theme) toggleTheme,
     required TResult Function(bool status) toggleDarkMode,
-    required TResult Function() deleteUser,
   }) {
     return getInitSettingInfo();
   }
@@ -146,7 +139,6 @@ class _$GetInitSettingInfoImpl implements GetInitSettingInfo {
     TResult? Function(SupportedLanguage language)? toggleLanguage,
     TResult? Function(SupportedTheme theme)? toggleTheme,
     TResult? Function(bool status)? toggleDarkMode,
-    TResult? Function()? deleteUser,
   }) {
     return getInitSettingInfo?.call();
   }
@@ -158,7 +150,6 @@ class _$GetInitSettingInfoImpl implements GetInitSettingInfo {
     TResult Function(SupportedLanguage language)? toggleLanguage,
     TResult Function(SupportedTheme theme)? toggleTheme,
     TResult Function(bool status)? toggleDarkMode,
-    TResult Function()? deleteUser,
     required TResult orElse(),
   }) {
     if (getInitSettingInfo != null) {
@@ -174,7 +165,6 @@ class _$GetInitSettingInfoImpl implements GetInitSettingInfo {
     required TResult Function(ToggleLanguage value) toggleLanguage,
     required TResult Function(ToggleTheme value) toggleTheme,
     required TResult Function(ToggleDarkMode value) toggleDarkMode,
-    required TResult Function(SettingDeleteUser value) deleteUser,
   }) {
     return getInitSettingInfo(this);
   }
@@ -186,7 +176,6 @@ class _$GetInitSettingInfoImpl implements GetInitSettingInfo {
     TResult? Function(ToggleLanguage value)? toggleLanguage,
     TResult? Function(ToggleTheme value)? toggleTheme,
     TResult? Function(ToggleDarkMode value)? toggleDarkMode,
-    TResult? Function(SettingDeleteUser value)? deleteUser,
   }) {
     return getInitSettingInfo?.call(this);
   }
@@ -198,7 +187,6 @@ class _$GetInitSettingInfoImpl implements GetInitSettingInfo {
     TResult Function(ToggleLanguage value)? toggleLanguage,
     TResult Function(ToggleTheme value)? toggleTheme,
     TResult Function(ToggleDarkMode value)? toggleDarkMode,
-    TResult Function(SettingDeleteUser value)? deleteUser,
     required TResult orElse(),
   }) {
     if (getInitSettingInfo != null) {
@@ -282,7 +270,6 @@ class _$ToggleLanguageImpl implements ToggleLanguage {
     required TResult Function(SupportedLanguage language) toggleLanguage,
     required TResult Function(SupportedTheme theme) toggleTheme,
     required TResult Function(bool status) toggleDarkMode,
-    required TResult Function() deleteUser,
   }) {
     return toggleLanguage(language);
   }
@@ -294,7 +281,6 @@ class _$ToggleLanguageImpl implements ToggleLanguage {
     TResult? Function(SupportedLanguage language)? toggleLanguage,
     TResult? Function(SupportedTheme theme)? toggleTheme,
     TResult? Function(bool status)? toggleDarkMode,
-    TResult? Function()? deleteUser,
   }) {
     return toggleLanguage?.call(language);
   }
@@ -306,7 +292,6 @@ class _$ToggleLanguageImpl implements ToggleLanguage {
     TResult Function(SupportedLanguage language)? toggleLanguage,
     TResult Function(SupportedTheme theme)? toggleTheme,
     TResult Function(bool status)? toggleDarkMode,
-    TResult Function()? deleteUser,
     required TResult orElse(),
   }) {
     if (toggleLanguage != null) {
@@ -322,7 +307,6 @@ class _$ToggleLanguageImpl implements ToggleLanguage {
     required TResult Function(ToggleLanguage value) toggleLanguage,
     required TResult Function(ToggleTheme value) toggleTheme,
     required TResult Function(ToggleDarkMode value) toggleDarkMode,
-    required TResult Function(SettingDeleteUser value) deleteUser,
   }) {
     return toggleLanguage(this);
   }
@@ -334,7 +318,6 @@ class _$ToggleLanguageImpl implements ToggleLanguage {
     TResult? Function(ToggleLanguage value)? toggleLanguage,
     TResult? Function(ToggleTheme value)? toggleTheme,
     TResult? Function(ToggleDarkMode value)? toggleDarkMode,
-    TResult? Function(SettingDeleteUser value)? deleteUser,
   }) {
     return toggleLanguage?.call(this);
   }
@@ -346,7 +329,6 @@ class _$ToggleLanguageImpl implements ToggleLanguage {
     TResult Function(ToggleLanguage value)? toggleLanguage,
     TResult Function(ToggleTheme value)? toggleTheme,
     TResult Function(ToggleDarkMode value)? toggleDarkMode,
-    TResult Function(SettingDeleteUser value)? deleteUser,
     required TResult orElse(),
   }) {
     if (toggleLanguage != null) {
@@ -434,7 +416,6 @@ class _$ToggleThemeImpl implements ToggleTheme {
     required TResult Function(SupportedLanguage language) toggleLanguage,
     required TResult Function(SupportedTheme theme) toggleTheme,
     required TResult Function(bool status) toggleDarkMode,
-    required TResult Function() deleteUser,
   }) {
     return toggleTheme(theme);
   }
@@ -446,7 +427,6 @@ class _$ToggleThemeImpl implements ToggleTheme {
     TResult? Function(SupportedLanguage language)? toggleLanguage,
     TResult? Function(SupportedTheme theme)? toggleTheme,
     TResult? Function(bool status)? toggleDarkMode,
-    TResult? Function()? deleteUser,
   }) {
     return toggleTheme?.call(theme);
   }
@@ -458,7 +438,6 @@ class _$ToggleThemeImpl implements ToggleTheme {
     TResult Function(SupportedLanguage language)? toggleLanguage,
     TResult Function(SupportedTheme theme)? toggleTheme,
     TResult Function(bool status)? toggleDarkMode,
-    TResult Function()? deleteUser,
     required TResult orElse(),
   }) {
     if (toggleTheme != null) {
@@ -474,7 +453,6 @@ class _$ToggleThemeImpl implements ToggleTheme {
     required TResult Function(ToggleLanguage value) toggleLanguage,
     required TResult Function(ToggleTheme value) toggleTheme,
     required TResult Function(ToggleDarkMode value) toggleDarkMode,
-    required TResult Function(SettingDeleteUser value) deleteUser,
   }) {
     return toggleTheme(this);
   }
@@ -486,7 +464,6 @@ class _$ToggleThemeImpl implements ToggleTheme {
     TResult? Function(ToggleLanguage value)? toggleLanguage,
     TResult? Function(ToggleTheme value)? toggleTheme,
     TResult? Function(ToggleDarkMode value)? toggleDarkMode,
-    TResult? Function(SettingDeleteUser value)? deleteUser,
   }) {
     return toggleTheme?.call(this);
   }
@@ -498,7 +475,6 @@ class _$ToggleThemeImpl implements ToggleTheme {
     TResult Function(ToggleLanguage value)? toggleLanguage,
     TResult Function(ToggleTheme value)? toggleTheme,
     TResult Function(ToggleDarkMode value)? toggleDarkMode,
-    TResult Function(SettingDeleteUser value)? deleteUser,
     required TResult orElse(),
   }) {
     if (toggleTheme != null) {
@@ -586,7 +562,6 @@ class _$ToggleDarkModeImpl implements ToggleDarkMode {
     required TResult Function(SupportedLanguage language) toggleLanguage,
     required TResult Function(SupportedTheme theme) toggleTheme,
     required TResult Function(bool status) toggleDarkMode,
-    required TResult Function() deleteUser,
   }) {
     return toggleDarkMode(status);
   }
@@ -598,7 +573,6 @@ class _$ToggleDarkModeImpl implements ToggleDarkMode {
     TResult? Function(SupportedLanguage language)? toggleLanguage,
     TResult? Function(SupportedTheme theme)? toggleTheme,
     TResult? Function(bool status)? toggleDarkMode,
-    TResult? Function()? deleteUser,
   }) {
     return toggleDarkMode?.call(status);
   }
@@ -610,7 +584,6 @@ class _$ToggleDarkModeImpl implements ToggleDarkMode {
     TResult Function(SupportedLanguage language)? toggleLanguage,
     TResult Function(SupportedTheme theme)? toggleTheme,
     TResult Function(bool status)? toggleDarkMode,
-    TResult Function()? deleteUser,
     required TResult orElse(),
   }) {
     if (toggleDarkMode != null) {
@@ -626,7 +599,6 @@ class _$ToggleDarkModeImpl implements ToggleDarkMode {
     required TResult Function(ToggleLanguage value) toggleLanguage,
     required TResult Function(ToggleTheme value) toggleTheme,
     required TResult Function(ToggleDarkMode value) toggleDarkMode,
-    required TResult Function(SettingDeleteUser value) deleteUser,
   }) {
     return toggleDarkMode(this);
   }
@@ -638,7 +610,6 @@ class _$ToggleDarkModeImpl implements ToggleDarkMode {
     TResult? Function(ToggleLanguage value)? toggleLanguage,
     TResult? Function(ToggleTheme value)? toggleTheme,
     TResult? Function(ToggleDarkMode value)? toggleDarkMode,
-    TResult? Function(SettingDeleteUser value)? deleteUser,
   }) {
     return toggleDarkMode?.call(this);
   }
@@ -650,7 +621,6 @@ class _$ToggleDarkModeImpl implements ToggleDarkMode {
     TResult Function(ToggleLanguage value)? toggleLanguage,
     TResult Function(ToggleTheme value)? toggleTheme,
     TResult Function(ToggleDarkMode value)? toggleDarkMode,
-    TResult Function(SettingDeleteUser value)? deleteUser,
     required TResult orElse(),
   }) {
     if (toggleDarkMode != null) {
@@ -670,126 +640,6 @@ abstract class ToggleDarkMode implements SettingEvent {
 }
 
 /// @nodoc
-abstract class _$$SettingDeleteUserImplCopyWith<$Res> {
-  factory _$$SettingDeleteUserImplCopyWith(_$SettingDeleteUserImpl value,
-          $Res Function(_$SettingDeleteUserImpl) then) =
-      __$$SettingDeleteUserImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SettingDeleteUserImplCopyWithImpl<$Res>
-    extends _$SettingEventCopyWithImpl<$Res, _$SettingDeleteUserImpl>
-    implements _$$SettingDeleteUserImplCopyWith<$Res> {
-  __$$SettingDeleteUserImplCopyWithImpl(_$SettingDeleteUserImpl _value,
-      $Res Function(_$SettingDeleteUserImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SettingDeleteUserImpl implements SettingDeleteUser {
-  const _$SettingDeleteUserImpl();
-
-  @override
-  String toString() {
-    return 'SettingEvent.deleteUser()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SettingDeleteUserImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() getInitSettingInfo,
-    required TResult Function(SupportedLanguage language) toggleLanguage,
-    required TResult Function(SupportedTheme theme) toggleTheme,
-    required TResult Function(bool status) toggleDarkMode,
-    required TResult Function() deleteUser,
-  }) {
-    return deleteUser();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getInitSettingInfo,
-    TResult? Function(SupportedLanguage language)? toggleLanguage,
-    TResult? Function(SupportedTheme theme)? toggleTheme,
-    TResult? Function(bool status)? toggleDarkMode,
-    TResult? Function()? deleteUser,
-  }) {
-    return deleteUser?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getInitSettingInfo,
-    TResult Function(SupportedLanguage language)? toggleLanguage,
-    TResult Function(SupportedTheme theme)? toggleTheme,
-    TResult Function(bool status)? toggleDarkMode,
-    TResult Function()? deleteUser,
-    required TResult orElse(),
-  }) {
-    if (deleteUser != null) {
-      return deleteUser();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(GetInitSettingInfo value) getInitSettingInfo,
-    required TResult Function(ToggleLanguage value) toggleLanguage,
-    required TResult Function(ToggleTheme value) toggleTheme,
-    required TResult Function(ToggleDarkMode value) toggleDarkMode,
-    required TResult Function(SettingDeleteUser value) deleteUser,
-  }) {
-    return deleteUser(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(GetInitSettingInfo value)? getInitSettingInfo,
-    TResult? Function(ToggleLanguage value)? toggleLanguage,
-    TResult? Function(ToggleTheme value)? toggleTheme,
-    TResult? Function(ToggleDarkMode value)? toggleDarkMode,
-    TResult? Function(SettingDeleteUser value)? deleteUser,
-  }) {
-    return deleteUser?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(GetInitSettingInfo value)? getInitSettingInfo,
-    TResult Function(ToggleLanguage value)? toggleLanguage,
-    TResult Function(ToggleTheme value)? toggleTheme,
-    TResult Function(ToggleDarkMode value)? toggleDarkMode,
-    TResult Function(SettingDeleteUser value)? deleteUser,
-    required TResult orElse(),
-  }) {
-    if (deleteUser != null) {
-      return deleteUser(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SettingDeleteUser implements SettingEvent {
-  const factory SettingDeleteUser() = _$SettingDeleteUserImpl;
-}
-
-/// @nodoc
 mixin _$SettingState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -800,7 +650,6 @@ mixin _$SettingState {
         toggleLanguageSuccess,
     required TResult Function(bool status) toggleDarkModeSuccess,
     required TResult Function(String msg) error,
-    required TResult Function() deleteUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -811,7 +660,6 @@ mixin _$SettingState {
     TResult? Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult? Function(bool status)? toggleDarkModeSuccess,
     TResult? Function(String msg)? error,
-    TResult? Function()? deleteUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -822,7 +670,6 @@ mixin _$SettingState {
     TResult Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult Function(bool status)? toggleDarkModeSuccess,
     TResult Function(String msg)? error,
-    TResult Function()? deleteUser,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -837,7 +684,6 @@ mixin _$SettingState {
     required TResult Function(ToggleDarkModeSuccess value)
         toggleDarkModeSuccess,
     required TResult Function(SettingError value) error,
-    required TResult Function(SettingDeleteUserSucccess value) deleteUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -849,7 +695,6 @@ mixin _$SettingState {
     TResult? Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult? Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult? Function(SettingError value)? error,
-    TResult? Function(SettingDeleteUserSucccess value)? deleteUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -860,7 +705,6 @@ mixin _$SettingState {
     TResult Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult Function(SettingError value)? error,
-    TResult Function(SettingDeleteUserSucccess value)? deleteUser,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -929,7 +773,6 @@ class _$InitialImpl implements _Initial {
         toggleLanguageSuccess,
     required TResult Function(bool status) toggleDarkModeSuccess,
     required TResult Function(String msg) error,
-    required TResult Function() deleteUser,
   }) {
     return initial();
   }
@@ -943,7 +786,6 @@ class _$InitialImpl implements _Initial {
     TResult? Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult? Function(bool status)? toggleDarkModeSuccess,
     TResult? Function(String msg)? error,
-    TResult? Function()? deleteUser,
   }) {
     return initial?.call();
   }
@@ -957,7 +799,6 @@ class _$InitialImpl implements _Initial {
     TResult Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult Function(bool status)? toggleDarkModeSuccess,
     TResult Function(String msg)? error,
-    TResult Function()? deleteUser,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -978,7 +819,6 @@ class _$InitialImpl implements _Initial {
     required TResult Function(ToggleDarkModeSuccess value)
         toggleDarkModeSuccess,
     required TResult Function(SettingError value) error,
-    required TResult Function(SettingDeleteUserSucccess value) deleteUser,
   }) {
     return initial(this);
   }
@@ -993,7 +833,6 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult? Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult? Function(SettingError value)? error,
-    TResult? Function(SettingDeleteUserSucccess value)? deleteUser,
   }) {
     return initial?.call(this);
   }
@@ -1007,7 +846,6 @@ class _$InitialImpl implements _Initial {
     TResult Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult Function(SettingError value)? error,
-    TResult Function(SettingDeleteUserSucccess value)? deleteUser,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1069,7 +907,6 @@ class _$GetInitSettingInfoSucessImpl implements GetInitSettingInfoSucess {
         toggleLanguageSuccess,
     required TResult Function(bool status) toggleDarkModeSuccess,
     required TResult Function(String msg) error,
-    required TResult Function() deleteUser,
   }) {
     return getInitSettingInfoSuccess();
   }
@@ -1083,7 +920,6 @@ class _$GetInitSettingInfoSucessImpl implements GetInitSettingInfoSucess {
     TResult? Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult? Function(bool status)? toggleDarkModeSuccess,
     TResult? Function(String msg)? error,
-    TResult? Function()? deleteUser,
   }) {
     return getInitSettingInfoSuccess?.call();
   }
@@ -1097,7 +933,6 @@ class _$GetInitSettingInfoSucessImpl implements GetInitSettingInfoSucess {
     TResult Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult Function(bool status)? toggleDarkModeSuccess,
     TResult Function(String msg)? error,
-    TResult Function()? deleteUser,
     required TResult orElse(),
   }) {
     if (getInitSettingInfoSuccess != null) {
@@ -1118,7 +953,6 @@ class _$GetInitSettingInfoSucessImpl implements GetInitSettingInfoSucess {
     required TResult Function(ToggleDarkModeSuccess value)
         toggleDarkModeSuccess,
     required TResult Function(SettingError value) error,
-    required TResult Function(SettingDeleteUserSucccess value) deleteUser,
   }) {
     return getInitSettingInfoSuccess(this);
   }
@@ -1133,7 +967,6 @@ class _$GetInitSettingInfoSucessImpl implements GetInitSettingInfoSucess {
     TResult? Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult? Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult? Function(SettingError value)? error,
-    TResult? Function(SettingDeleteUserSucccess value)? deleteUser,
   }) {
     return getInitSettingInfoSuccess?.call(this);
   }
@@ -1147,7 +980,6 @@ class _$GetInitSettingInfoSucessImpl implements GetInitSettingInfoSucess {
     TResult Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult Function(SettingError value)? error,
-    TResult Function(SettingDeleteUserSucccess value)? deleteUser,
     required TResult orElse(),
   }) {
     if (getInitSettingInfoSuccess != null) {
@@ -1234,7 +1066,6 @@ class _$ToggleThemeSuccessImpl implements ToggleThemeSuccess {
         toggleLanguageSuccess,
     required TResult Function(bool status) toggleDarkModeSuccess,
     required TResult Function(String msg) error,
-    required TResult Function() deleteUser,
   }) {
     return toggleThemeSuccess(updatedTheme);
   }
@@ -1248,7 +1079,6 @@ class _$ToggleThemeSuccessImpl implements ToggleThemeSuccess {
     TResult? Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult? Function(bool status)? toggleDarkModeSuccess,
     TResult? Function(String msg)? error,
-    TResult? Function()? deleteUser,
   }) {
     return toggleThemeSuccess?.call(updatedTheme);
   }
@@ -1262,7 +1092,6 @@ class _$ToggleThemeSuccessImpl implements ToggleThemeSuccess {
     TResult Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult Function(bool status)? toggleDarkModeSuccess,
     TResult Function(String msg)? error,
-    TResult Function()? deleteUser,
     required TResult orElse(),
   }) {
     if (toggleThemeSuccess != null) {
@@ -1283,7 +1112,6 @@ class _$ToggleThemeSuccessImpl implements ToggleThemeSuccess {
     required TResult Function(ToggleDarkModeSuccess value)
         toggleDarkModeSuccess,
     required TResult Function(SettingError value) error,
-    required TResult Function(SettingDeleteUserSucccess value) deleteUser,
   }) {
     return toggleThemeSuccess(this);
   }
@@ -1298,7 +1126,6 @@ class _$ToggleThemeSuccessImpl implements ToggleThemeSuccess {
     TResult? Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult? Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult? Function(SettingError value)? error,
-    TResult? Function(SettingDeleteUserSucccess value)? deleteUser,
   }) {
     return toggleThemeSuccess?.call(this);
   }
@@ -1312,7 +1139,6 @@ class _$ToggleThemeSuccessImpl implements ToggleThemeSuccess {
     TResult Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult Function(SettingError value)? error,
-    TResult Function(SettingDeleteUserSucccess value)? deleteUser,
     required TResult orElse(),
   }) {
     if (toggleThemeSuccess != null) {
@@ -1406,7 +1232,6 @@ class _$ToggleLanguageSuccessImpl implements ToggleLanguageSuccess {
         toggleLanguageSuccess,
     required TResult Function(bool status) toggleDarkModeSuccess,
     required TResult Function(String msg) error,
-    required TResult Function() deleteUser,
   }) {
     return toggleLanguageSuccess(updatedLanguage);
   }
@@ -1420,7 +1245,6 @@ class _$ToggleLanguageSuccessImpl implements ToggleLanguageSuccess {
     TResult? Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult? Function(bool status)? toggleDarkModeSuccess,
     TResult? Function(String msg)? error,
-    TResult? Function()? deleteUser,
   }) {
     return toggleLanguageSuccess?.call(updatedLanguage);
   }
@@ -1434,7 +1258,6 @@ class _$ToggleLanguageSuccessImpl implements ToggleLanguageSuccess {
     TResult Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult Function(bool status)? toggleDarkModeSuccess,
     TResult Function(String msg)? error,
-    TResult Function()? deleteUser,
     required TResult orElse(),
   }) {
     if (toggleLanguageSuccess != null) {
@@ -1455,7 +1278,6 @@ class _$ToggleLanguageSuccessImpl implements ToggleLanguageSuccess {
     required TResult Function(ToggleDarkModeSuccess value)
         toggleDarkModeSuccess,
     required TResult Function(SettingError value) error,
-    required TResult Function(SettingDeleteUserSucccess value) deleteUser,
   }) {
     return toggleLanguageSuccess(this);
   }
@@ -1470,7 +1292,6 @@ class _$ToggleLanguageSuccessImpl implements ToggleLanguageSuccess {
     TResult? Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult? Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult? Function(SettingError value)? error,
-    TResult? Function(SettingDeleteUserSucccess value)? deleteUser,
   }) {
     return toggleLanguageSuccess?.call(this);
   }
@@ -1484,7 +1305,6 @@ class _$ToggleLanguageSuccessImpl implements ToggleLanguageSuccess {
     TResult Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult Function(SettingError value)? error,
-    TResult Function(SettingDeleteUserSucccess value)? deleteUser,
     required TResult orElse(),
   }) {
     if (toggleLanguageSuccess != null) {
@@ -1577,7 +1397,6 @@ class _$ToggleDarkModeSuccessImpl implements ToggleDarkModeSuccess {
         toggleLanguageSuccess,
     required TResult Function(bool status) toggleDarkModeSuccess,
     required TResult Function(String msg) error,
-    required TResult Function() deleteUser,
   }) {
     return toggleDarkModeSuccess(status);
   }
@@ -1591,7 +1410,6 @@ class _$ToggleDarkModeSuccessImpl implements ToggleDarkModeSuccess {
     TResult? Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult? Function(bool status)? toggleDarkModeSuccess,
     TResult? Function(String msg)? error,
-    TResult? Function()? deleteUser,
   }) {
     return toggleDarkModeSuccess?.call(status);
   }
@@ -1605,7 +1423,6 @@ class _$ToggleDarkModeSuccessImpl implements ToggleDarkModeSuccess {
     TResult Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult Function(bool status)? toggleDarkModeSuccess,
     TResult Function(String msg)? error,
-    TResult Function()? deleteUser,
     required TResult orElse(),
   }) {
     if (toggleDarkModeSuccess != null) {
@@ -1626,7 +1443,6 @@ class _$ToggleDarkModeSuccessImpl implements ToggleDarkModeSuccess {
     required TResult Function(ToggleDarkModeSuccess value)
         toggleDarkModeSuccess,
     required TResult Function(SettingError value) error,
-    required TResult Function(SettingDeleteUserSucccess value) deleteUser,
   }) {
     return toggleDarkModeSuccess(this);
   }
@@ -1641,7 +1457,6 @@ class _$ToggleDarkModeSuccessImpl implements ToggleDarkModeSuccess {
     TResult? Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult? Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult? Function(SettingError value)? error,
-    TResult? Function(SettingDeleteUserSucccess value)? deleteUser,
   }) {
     return toggleDarkModeSuccess?.call(this);
   }
@@ -1655,7 +1470,6 @@ class _$ToggleDarkModeSuccessImpl implements ToggleDarkModeSuccess {
     TResult Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult Function(SettingError value)? error,
-    TResult Function(SettingDeleteUserSucccess value)? deleteUser,
     required TResult orElse(),
   }) {
     if (toggleDarkModeSuccess != null) {
@@ -1746,7 +1560,6 @@ class _$SettingErrorImpl implements SettingError {
         toggleLanguageSuccess,
     required TResult Function(bool status) toggleDarkModeSuccess,
     required TResult Function(String msg) error,
-    required TResult Function() deleteUser,
   }) {
     return error(msg);
   }
@@ -1760,7 +1573,6 @@ class _$SettingErrorImpl implements SettingError {
     TResult? Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult? Function(bool status)? toggleDarkModeSuccess,
     TResult? Function(String msg)? error,
-    TResult? Function()? deleteUser,
   }) {
     return error?.call(msg);
   }
@@ -1774,7 +1586,6 @@ class _$SettingErrorImpl implements SettingError {
     TResult Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
     TResult Function(bool status)? toggleDarkModeSuccess,
     TResult Function(String msg)? error,
-    TResult Function()? deleteUser,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1795,7 +1606,6 @@ class _$SettingErrorImpl implements SettingError {
     required TResult Function(ToggleDarkModeSuccess value)
         toggleDarkModeSuccess,
     required TResult Function(SettingError value) error,
-    required TResult Function(SettingDeleteUserSucccess value) deleteUser,
   }) {
     return error(this);
   }
@@ -1810,7 +1620,6 @@ class _$SettingErrorImpl implements SettingError {
     TResult? Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult? Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult? Function(SettingError value)? error,
-    TResult? Function(SettingDeleteUserSucccess value)? deleteUser,
   }) {
     return error?.call(this);
   }
@@ -1824,7 +1633,6 @@ class _$SettingErrorImpl implements SettingError {
     TResult Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
     TResult Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
     TResult Function(SettingError value)? error,
-    TResult Function(SettingDeleteUserSucccess value)? deleteUser,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1841,144 +1649,4 @@ abstract class SettingError implements SettingState {
   @JsonKey(ignore: true)
   _$$SettingErrorImplCopyWith<_$SettingErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$SettingDeleteUserSucccessImplCopyWith<$Res> {
-  factory _$$SettingDeleteUserSucccessImplCopyWith(
-          _$SettingDeleteUserSucccessImpl value,
-          $Res Function(_$SettingDeleteUserSucccessImpl) then) =
-      __$$SettingDeleteUserSucccessImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$SettingDeleteUserSucccessImplCopyWithImpl<$Res>
-    extends _$SettingStateCopyWithImpl<$Res, _$SettingDeleteUserSucccessImpl>
-    implements _$$SettingDeleteUserSucccessImplCopyWith<$Res> {
-  __$$SettingDeleteUserSucccessImplCopyWithImpl(
-      _$SettingDeleteUserSucccessImpl _value,
-      $Res Function(_$SettingDeleteUserSucccessImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$SettingDeleteUserSucccessImpl implements SettingDeleteUserSucccess {
-  const _$SettingDeleteUserSucccessImpl();
-
-  @override
-  String toString() {
-    return 'SettingState.deleteUser()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SettingDeleteUserSucccessImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() getInitSettingInfoSuccess,
-    required TResult Function(SupportedTheme updatedTheme) toggleThemeSuccess,
-    required TResult Function(SupportedLanguage updatedLanguage)
-        toggleLanguageSuccess,
-    required TResult Function(bool status) toggleDarkModeSuccess,
-    required TResult Function(String msg) error,
-    required TResult Function() deleteUser,
-  }) {
-    return deleteUser();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? getInitSettingInfoSuccess,
-    TResult? Function(SupportedTheme updatedTheme)? toggleThemeSuccess,
-    TResult? Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
-    TResult? Function(bool status)? toggleDarkModeSuccess,
-    TResult? Function(String msg)? error,
-    TResult? Function()? deleteUser,
-  }) {
-    return deleteUser?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? getInitSettingInfoSuccess,
-    TResult Function(SupportedTheme updatedTheme)? toggleThemeSuccess,
-    TResult Function(SupportedLanguage updatedLanguage)? toggleLanguageSuccess,
-    TResult Function(bool status)? toggleDarkModeSuccess,
-    TResult Function(String msg)? error,
-    TResult Function()? deleteUser,
-    required TResult orElse(),
-  }) {
-    if (deleteUser != null) {
-      return deleteUser();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(GetInitSettingInfoSucess value)
-        getInitSettingInfoSuccess,
-    required TResult Function(ToggleThemeSuccess value) toggleThemeSuccess,
-    required TResult Function(ToggleLanguageSuccess value)
-        toggleLanguageSuccess,
-    required TResult Function(ToggleDarkModeSuccess value)
-        toggleDarkModeSuccess,
-    required TResult Function(SettingError value) error,
-    required TResult Function(SettingDeleteUserSucccess value) deleteUser,
-  }) {
-    return deleteUser(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(GetInitSettingInfoSucess value)?
-        getInitSettingInfoSuccess,
-    TResult? Function(ToggleThemeSuccess value)? toggleThemeSuccess,
-    TResult? Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
-    TResult? Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
-    TResult? Function(SettingError value)? error,
-    TResult? Function(SettingDeleteUserSucccess value)? deleteUser,
-  }) {
-    return deleteUser?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(GetInitSettingInfoSucess value)? getInitSettingInfoSuccess,
-    TResult Function(ToggleThemeSuccess value)? toggleThemeSuccess,
-    TResult Function(ToggleLanguageSuccess value)? toggleLanguageSuccess,
-    TResult Function(ToggleDarkModeSuccess value)? toggleDarkModeSuccess,
-    TResult Function(SettingError value)? error,
-    TResult Function(SettingDeleteUserSucccess value)? deleteUser,
-    required TResult orElse(),
-  }) {
-    if (deleteUser != null) {
-      return deleteUser(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SettingDeleteUserSucccess implements SettingState {
-  const factory SettingDeleteUserSucccess() = _$SettingDeleteUserSucccessImpl;
 }

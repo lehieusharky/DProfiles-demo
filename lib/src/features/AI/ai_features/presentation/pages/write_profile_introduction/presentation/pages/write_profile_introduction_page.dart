@@ -22,15 +22,13 @@ class WriteProfileIntroductionPage extends StatefulWidget {
 }
 
 class _WriteProfileIntroductionPageState
-    extends State<WriteProfileIntroductionPage>
-    with SingleTickerProviderStateMixin {
-  late TabController _tabController;
+    extends State<WriteProfileIntroductionPage> {
   late ScrollController _scrollController;
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(vsync: this, length: 2);
+
     _scrollController = ScrollController();
   }
 
@@ -75,7 +73,7 @@ class _WriteProfileIntroductionPageState
             body: SingleChildScrollView(
               child: Column(
                 children: [
-                  ChatGPTSelector(controller: _tabController),
+                  const ChatGPTSelector(),
                   Padding(
                       padding: context.padding(vertical: 16),
                       child: const FormWriteProfile()),

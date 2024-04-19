@@ -53,7 +53,7 @@ class ConnectWalletPage extends StatelessWidget {
             child: MyButton(
               width: context.width,
               onPressed: () async =>
-                  AppConnectWalletService().connectWallet(context),
+                  AppConnectWalletService().connectWallet(context, ),
               title: appLocal(context).connectWallet,
             ),
           ),

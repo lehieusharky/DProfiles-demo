@@ -12,4 +12,8 @@ abstract class EditProfileDataSource {
   Future<BaseResponse> addNewCertificate(CertificateModel data);
 
   Future<BaseResponse> updateUserInfo(UserInfoModel data);
+
+  Future<BaseResponse> addNewSkill(String skill);
+
+  Future<BaseResponse> addNewLanguage(int languageID);
 }

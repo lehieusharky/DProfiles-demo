@@ -1,15 +1,18 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
+import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/bloc/create_digital_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
+import 'package:demo_dprofiles/src/utils/services/connect_wallet_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pinput/pinput.dart';
+import 'package:web3modal_flutter/web3modal_flutter.dart';
 
 class FormAddBasicInfo extends StatefulWidget {
   const FormAddBasicInfo({super.key});
@@ -35,6 +38,22 @@ class _FormAddBasicInfoState extends State<FormAddBasicInfo>
       listener: (context, state) {
         if (state is GetUserInfoSuccess) {
           _userInfo = UserInfoModel.fromJson(state.response.data);
+
+          if (AppConnectWalletService().walletAddress != null &&
+              _userInfo.walletAddress == null) {
+            _userInfo = _userInfo.copyWith(
+                walletAddress: AppConnectWalletService().walletAddress);
+          }
+
+          if (_userInfo.walletAddress == null &&
+              AppConnectWalletService().walletAddress == null) {
+            showErrorDialog(context,
+                    title: 'Cannot create digital profile',
+                    description: 'You have to connect wallet before')
+                .then(
+              (value) => Navigator.pop(context),
+            );
+          }
 
           _handlerTextFieldController();
         }

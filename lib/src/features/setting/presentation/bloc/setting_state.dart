@@ -12,5 +12,4 @@ class SettingState with _$SettingState {
   const factory SettingState.toggleDarkModeSuccess(bool status) =
       ToggleDarkModeSuccess;
   const factory SettingState.error(String msg) = SettingError;
-  const factory SettingState.deleteUser() = SettingDeleteUserSucccess;
 }

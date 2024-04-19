@@ -23,37 +23,36 @@ class SubProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<ProfileBloc>(
-      create: (context) => injector.get<ProfileBloc>()
-        ..add(const ProfileGetUserInfo())
-        ..add(const ProfileGetUserEducations())
-        ..add(const ProfileGetUserCertificates())
-        ..add(const ProfileGetUserExperience())
-        ..add(const ProfileGetUserSkills())
-        ..add(const ProfileGetUserLanguages()),
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            OpenToComponent(
-              salaryPayType: userInfo.getSalaryPayType(),
-              salary: userInfo.salary,
-            ),
-            const MyDivider(verticalMargin: 8),
-            AboutComponent(about: userInfo.summary),
-            const MyDivider(verticalMargin: 8),
-            const ExperienceComponent(),
-            const MyDivider(verticalMargin: 8),
-            const SkillComponent(),
-            const MyDivider(verticalMargin: 8),
-            const EducationComponent(),
-            const MyDivider(verticalMargin: 8),
-            const CertificateComponent(),
-            const MyDivider(verticalMargin: 8),
-            const LanguageComponent(),
-            context.sizedBox(height: 50),
-          ],
-        ),
-      ),
-    );
+        create: (context) => injector.get<ProfileBloc>()
+          ..add(const ProfileGetUserInfo())
+          ..add(const ProfileGetUserEducations())
+          ..add(const ProfileGetUserCertificates())
+          ..add(const ProfileGetUserExperience())
+          ..add(const ProfileGetUserSkills())
+          ..add(const ProfileGetUserLanguages()),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              OpenToComponent(
+                salaryPayType: userInfo.getSalaryPayType(),
+                salary: userInfo.salary,
+              ),
+              const MyDivider(verticalMargin: 8),
+              const AboutComponent(),
+              const MyDivider(verticalMargin: 8),
+              const ExperienceComponent(),
+              const MyDivider(verticalMargin: 8),
+              const SkillComponent(),
+              const MyDivider(verticalMargin: 8),
+              const EducationComponent(),
+              const MyDivider(verticalMargin: 8),
+              const CertificateComponent(),
+              const MyDivider(verticalMargin: 8),
+              const LanguageComponent(),
+              context.sizedBox(height: 50),
+            ],
+          ),
+        ));
   }
 }

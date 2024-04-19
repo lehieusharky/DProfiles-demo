@@ -97,6 +97,25 @@ class $AssetsIconsGen {
   /// File path: assets/icons/profile.svg
   SvgGenImage get profile => const SvgGenImage('assets/icons/profile.svg');
 
+  /// File path: assets/icons/social_instagram.svg
+  SvgGenImage get socialInstagram =>
+      const SvgGenImage('assets/icons/social_instagram.svg');
+
+  /// File path: assets/icons/social_linkedin.svg
+  SvgGenImage get socialLinkedin =>
+      const SvgGenImage('assets/icons/social_linkedin.svg');
+
+  /// File path: assets/icons/social_telegram.svg
+  SvgGenImage get socialTelegram =>
+      const SvgGenImage('assets/icons/social_telegram.svg');
+
+  /// File path: assets/icons/social_whatapp.svg
+  SvgGenImage get socialWhatapp =>
+      const SvgGenImage('assets/icons/social_whatapp.svg');
+
+  /// File path: assets/icons/social_x.svg
+  SvgGenImage get socialX => const SvgGenImage('assets/icons/social_x.svg');
+
   /// File path: assets/icons/wallet.svg
   SvgGenImage get wallet => const SvgGenImage('assets/icons/wallet.svg');
 
@@ -122,6 +141,11 @@ class $AssetsIconsGen {
         iconUpload,
         iconWallet,
         profile,
+        socialInstagram,
+        socialLinkedin,
+        socialTelegram,
+        socialWhatapp,
+        socialX,
         wallet
       ];
 }

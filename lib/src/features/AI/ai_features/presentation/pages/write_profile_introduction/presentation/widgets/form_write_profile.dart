@@ -1,13 +1,11 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
-import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_profile_introduction_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/constant/supported_chat_gpt.dart';
-import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:ficonsax/ficonsax.dart';
@@ -29,6 +27,7 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
 
   @override
   Widget build(BuildContext context) {
+    final gptVersion = context.watch<AiFeaturesBloc>().currentChatGPTVersion;
     return BlocConsumer<AiFeaturesBloc, AiFeaturesState>(
       listener: (context, state) {
         if (state is AiFeaturesLoading) {
@@ -74,9 +73,10 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
                 padding: context.padding(top: 32),
                 child: AuthField(
                   controller: _promptController,
+                  keyboardType: TextInputType.name,
                   title: appLocal(context).prompt.toUpperCase(),
                   maxLines: 2,
-                  hint: appLocal(context).yourRequire,
+                  hint: 'How many words for this?',
                 ),
               ),
               Padding(
@@ -93,9 +93,9 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
                     Expanded(
                       child: AppFlatButton(context).elevatedButton(
                         width: context.width,
-                        onPressed: () => _sendToAI(context),
+                        onPressed: () => _sendToAI(context, gptVersion),
                         title: appLocal(context).sendToAI,
-                        suffixIcon: _buildSuffixIconSendButton(),
+                        suffixIcon: _buildSuffixIconSendButton(gptVersion),
                       ),
                     ),
                   ],
@@ -108,13 +108,13 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
     );
   }
 
-  Widget _buildSuffixIconSendButton() => Padding(
+  Widget _buildSuffixIconSendButton(SupportedChatGPT gptVersion) => Padding(
         padding: context.padding(left: 40),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
-              '10',
+              gptVersion.getPoint().toString(),
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.bold)
                   .bodyMedium,
@@ -125,13 +125,13 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
         ),
       );
 
-  void _sendToAI(BuildContext context) {
+  void _sendToAI(BuildContext context, SupportedChatGPT gptVersion) {
     if (_keyForm.currentState?.validate() ?? false) {
       final model = WriteProfileIntroductionModel(
         summary: _aboutYourSelfController.text + _promptController.text,
         style: _writeStyleController.text.trim(),
-        gptModel: sharePreference.getChatGPTVersion().toVersion(),
-        maxToken: 10,
+        gptModel: gptVersion.toVersion(),
+        maxToken: gptVersion.getPoint(),
       );
       context.read<AiFeaturesBloc>().add(GenerateProfileIntroduction(model));
     }

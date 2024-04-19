@@ -15,4 +15,10 @@ class EditProfileEvent with _$EditProfileEvent {
       EditProfileUpdateUserInfo;
 
   const factory EditProfileEvent.getUserinfo() = EditProfileGetUserInfo;
+
+  const factory EditProfileEvent.addNewSkill(String skill) =
+      EditProfileAddNewSkill;
+
+  const factory EditProfileEvent.addNewLanguage(int languageID) =
+      EditProfileAddNewLanguage;
 }

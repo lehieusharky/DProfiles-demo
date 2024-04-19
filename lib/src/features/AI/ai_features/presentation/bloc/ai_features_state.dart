@@ -30,5 +30,8 @@ class AiFeaturesState with _$AiFeaturesState {
       GetAutoGenerateHistoryDetailSuccess;
 
   const factory AiFeaturesState.getCurrentPointOfUserSuccess(int point) =
-  GetCurrentPointOfUserSuccess;
+      GetCurrentPointOfUserSuccess;
+
+  const factory AiFeaturesState.changeGPTVersionSuccess(
+      SupportedChatGPT version) = ChangeGPTVersionSuccess;
 }

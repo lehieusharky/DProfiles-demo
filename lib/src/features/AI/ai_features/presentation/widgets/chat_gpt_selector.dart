@@ -1,14 +1,30 @@
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/constant/supported_chat_gpt.dart';
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ChatGPTSelector extends StatelessWidget {
-  final TabController controller;
-  const ChatGPTSelector({super.key, required this.controller});
+class ChatGPTSelector extends StatefulWidget {
+  const ChatGPTSelector({super.key});
+
+  @override
+  State<ChatGPTSelector> createState() => _ChatGPTSelectorState();
+}
+
+class _ChatGPTSelectorState extends State<ChatGPTSelector>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(vsync: this, length: 2);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +37,7 @@ class ChatGPTSelector extends StatelessWidget {
             color: colorScheme(context).secondary,
             borderRadius: BorderRadius.circular(100)),
         child: TabBar(
-            controller: controller,
+            controller: _tabController,
             dividerColor: Colors.transparent,
             indicatorSize: TabBarIndicatorSize.tab,
             labelColor: colorScheme(context).onBackground,
@@ -30,8 +46,14 @@ class ChatGPTSelector extends StatelessWidget {
             labelStyle: AppFont()
                 .fontTheme(context, weight: FontWeight.bold)
                 .bodyMedium,
-            onTap: (index) async => await sharePreference.setChatGPTVersion(
-                index == 0 ? SupportedChatGPT.gpt_3_5 : SupportedChatGPT.gpt_4),
+            onTap: (index) {
+              final version = index == 0
+                  ? SupportedChatGPT.gpt_3_5
+                  : SupportedChatGPT.gpt_4;
+              context
+                  .read<AiFeaturesBloc>()
+                  .add(AICharacterChangeGPTVersion(version));
+            },
             indicator: BubbleTabIndicator(
               indicatorHeight: context.sizeHeight(35),
               insets: context.padding(horizontal: 0),

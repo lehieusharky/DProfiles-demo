@@ -50,4 +50,26 @@ class EditProfileDataSourceImpl implements EditProfileDataSource {
       rethrow;
     }
   }
+
+  @override
+  Future<BaseResponse> addNewLanguage(int languageID) async {
+    try {
+      final body = {"language_id": languageID == 0 ? 1 : languageID};
+      final baseResponse = await MyHttp.rl().addNewUseLanguage(body);
+      return baseResponse;
+    } on DioException {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<BaseResponse> addNewSkill(String skill) async {
+    try {
+      final body = {"name": skill};
+      final baseResponse = await MyHttp.rl().addNewUseSkill(body);
+      return baseResponse;
+    } on DioException {
+      rethrow;
+    }
+  }
 }

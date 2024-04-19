@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:demo_dprofiles/src/features/auth/data/models/auth_error_response.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/domain/repositories/edit_profile_repository.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
@@ -19,6 +20,10 @@ abstract class EditProfileUseCase {
       CertificateModel data);
 
   Future<Either<List<String>, BaseResponse>> updateUserInfo(UserInfoModel data);
+
+  Future<Either<String, BaseResponse>> addNewSkill(String skill);
+
+  Future<Either<String, BaseResponse>> addNewLanguage(int languageID);
 }
 
 @Injectable(as: EditProfileUseCase)
@@ -63,6 +68,24 @@ class EditProfileUseCaseImpl implements EditProfileUseCase {
     final result = await _editProfileRepository.updateUserInfo(data);
     return result.fold(
       (l) => Left((l.response as ErrorResponse).message),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> addNewLanguage(int languageID) async {
+    final result = await _editProfileRepository.addNewLanguage(languageID);
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> addNewSkill(String skill) async {
+    final result = await _editProfileRepository.addNewSkill(skill);
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),
     );
   }
