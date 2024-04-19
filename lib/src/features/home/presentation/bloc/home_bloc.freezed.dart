@@ -22,6 +22,7 @@ mixin _$HomeEvent {
     required TResult Function() refreshNewsFeed,
     required TResult Function() loadMoreNewsFeed,
     required TResult Function() getUserInfo,
+    required TResult Function(NewFeedModel feed) updateFeed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$HomeEvent {
     TResult? Function()? refreshNewsFeed,
     TResult? Function()? loadMoreNewsFeed,
     TResult? Function()? getUserInfo,
+    TResult? Function(NewFeedModel feed)? updateFeed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$HomeEvent {
     TResult Function()? refreshNewsFeed,
     TResult Function()? loadMoreNewsFeed,
     TResult Function()? getUserInfo,
+    TResult Function(NewFeedModel feed)? updateFeed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$HomeEvent {
     required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
     required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
     required TResult Function(HomeGetUserInfo value) getUserInfo,
+    required TResult Function(UpdateFeedEvent value) updateFeed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$HomeEvent {
     TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
     TResult? Function(HomeGetUserInfo value)? getUserInfo,
+    TResult? Function(UpdateFeedEvent value)? updateFeed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$HomeEvent {
     TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
     TResult Function(HomeGetUserInfo value)? getUserInfo,
+    TResult Function(UpdateFeedEvent value)? updateFeed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +133,7 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
     required TResult Function() refreshNewsFeed,
     required TResult Function() loadMoreNewsFeed,
     required TResult Function() getUserInfo,
+    required TResult Function(NewFeedModel feed) updateFeed,
   }) {
     return getFeeds();
   }
@@ -138,6 +145,7 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
     TResult? Function()? refreshNewsFeed,
     TResult? Function()? loadMoreNewsFeed,
     TResult? Function()? getUserInfo,
+    TResult? Function(NewFeedModel feed)? updateFeed,
   }) {
     return getFeeds?.call();
   }
@@ -149,6 +157,7 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
     TResult Function()? refreshNewsFeed,
     TResult Function()? loadMoreNewsFeed,
     TResult Function()? getUserInfo,
+    TResult Function(NewFeedModel feed)? updateFeed,
     required TResult orElse(),
   }) {
     if (getFeeds != null) {
@@ -164,6 +173,7 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
     required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
     required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
     required TResult Function(HomeGetUserInfo value) getUserInfo,
+    required TResult Function(UpdateFeedEvent value) updateFeed,
   }) {
     return getFeeds(this);
   }
@@ -175,6 +185,7 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
     TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
     TResult? Function(HomeGetUserInfo value)? getUserInfo,
+    TResult? Function(UpdateFeedEvent value)? updateFeed,
   }) {
     return getFeeds?.call(this);
   }
@@ -186,6 +197,7 @@ class _$HomeGetFeedsImpl implements HomeGetFeeds {
     TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
     TResult Function(HomeGetUserInfo value)? getUserInfo,
+    TResult Function(UpdateFeedEvent value)? updateFeed,
     required TResult orElse(),
   }) {
     if (getFeeds != null) {
@@ -242,6 +254,7 @@ class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
     required TResult Function() refreshNewsFeed,
     required TResult Function() loadMoreNewsFeed,
     required TResult Function() getUserInfo,
+    required TResult Function(NewFeedModel feed) updateFeed,
   }) {
     return refreshNewsFeed();
   }
@@ -253,6 +266,7 @@ class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
     TResult? Function()? refreshNewsFeed,
     TResult? Function()? loadMoreNewsFeed,
     TResult? Function()? getUserInfo,
+    TResult? Function(NewFeedModel feed)? updateFeed,
   }) {
     return refreshNewsFeed?.call();
   }
@@ -264,6 +278,7 @@ class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
     TResult Function()? refreshNewsFeed,
     TResult Function()? loadMoreNewsFeed,
     TResult Function()? getUserInfo,
+    TResult Function(NewFeedModel feed)? updateFeed,
     required TResult orElse(),
   }) {
     if (refreshNewsFeed != null) {
@@ -279,6 +294,7 @@ class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
     required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
     required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
     required TResult Function(HomeGetUserInfo value) getUserInfo,
+    required TResult Function(UpdateFeedEvent value) updateFeed,
   }) {
     return refreshNewsFeed(this);
   }
@@ -290,6 +306,7 @@ class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
     TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
     TResult? Function(HomeGetUserInfo value)? getUserInfo,
+    TResult? Function(UpdateFeedEvent value)? updateFeed,
   }) {
     return refreshNewsFeed?.call(this);
   }
@@ -301,6 +318,7 @@ class _$HomeRefreshNewsFeedImpl implements HomeRefreshNewsFeed {
     TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
     TResult Function(HomeGetUserInfo value)? getUserInfo,
+    TResult Function(UpdateFeedEvent value)? updateFeed,
     required TResult orElse(),
   }) {
     if (refreshNewsFeed != null) {
@@ -357,6 +375,7 @@ class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
     required TResult Function() refreshNewsFeed,
     required TResult Function() loadMoreNewsFeed,
     required TResult Function() getUserInfo,
+    required TResult Function(NewFeedModel feed) updateFeed,
   }) {
     return loadMoreNewsFeed();
   }
@@ -368,6 +387,7 @@ class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
     TResult? Function()? refreshNewsFeed,
     TResult? Function()? loadMoreNewsFeed,
     TResult? Function()? getUserInfo,
+    TResult? Function(NewFeedModel feed)? updateFeed,
   }) {
     return loadMoreNewsFeed?.call();
   }
@@ -379,6 +399,7 @@ class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
     TResult Function()? refreshNewsFeed,
     TResult Function()? loadMoreNewsFeed,
     TResult Function()? getUserInfo,
+    TResult Function(NewFeedModel feed)? updateFeed,
     required TResult orElse(),
   }) {
     if (loadMoreNewsFeed != null) {
@@ -394,6 +415,7 @@ class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
     required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
     required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
     required TResult Function(HomeGetUserInfo value) getUserInfo,
+    required TResult Function(UpdateFeedEvent value) updateFeed,
   }) {
     return loadMoreNewsFeed(this);
   }
@@ -405,6 +427,7 @@ class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
     TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
     TResult? Function(HomeGetUserInfo value)? getUserInfo,
+    TResult? Function(UpdateFeedEvent value)? updateFeed,
   }) {
     return loadMoreNewsFeed?.call(this);
   }
@@ -416,6 +439,7 @@ class _$HomeLoadMoreNewsFeedImpl implements HomeLoadMoreNewsFeed {
     TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
     TResult Function(HomeGetUserInfo value)? getUserInfo,
+    TResult Function(UpdateFeedEvent value)? updateFeed,
     required TResult orElse(),
   }) {
     if (loadMoreNewsFeed != null) {
@@ -471,6 +495,7 @@ class _$HomeGetUserInfoImpl implements HomeGetUserInfo {
     required TResult Function() refreshNewsFeed,
     required TResult Function() loadMoreNewsFeed,
     required TResult Function() getUserInfo,
+    required TResult Function(NewFeedModel feed) updateFeed,
   }) {
     return getUserInfo();
   }
@@ -482,6 +507,7 @@ class _$HomeGetUserInfoImpl implements HomeGetUserInfo {
     TResult? Function()? refreshNewsFeed,
     TResult? Function()? loadMoreNewsFeed,
     TResult? Function()? getUserInfo,
+    TResult? Function(NewFeedModel feed)? updateFeed,
   }) {
     return getUserInfo?.call();
   }
@@ -493,6 +519,7 @@ class _$HomeGetUserInfoImpl implements HomeGetUserInfo {
     TResult Function()? refreshNewsFeed,
     TResult Function()? loadMoreNewsFeed,
     TResult Function()? getUserInfo,
+    TResult Function(NewFeedModel feed)? updateFeed,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -508,6 +535,7 @@ class _$HomeGetUserInfoImpl implements HomeGetUserInfo {
     required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
     required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
     required TResult Function(HomeGetUserInfo value) getUserInfo,
+    required TResult Function(UpdateFeedEvent value) updateFeed,
   }) {
     return getUserInfo(this);
   }
@@ -519,6 +547,7 @@ class _$HomeGetUserInfoImpl implements HomeGetUserInfo {
     TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
     TResult? Function(HomeGetUserInfo value)? getUserInfo,
+    TResult? Function(UpdateFeedEvent value)? updateFeed,
   }) {
     return getUserInfo?.call(this);
   }
@@ -530,6 +559,7 @@ class _$HomeGetUserInfoImpl implements HomeGetUserInfo {
     TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
     TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
     TResult Function(HomeGetUserInfo value)? getUserInfo,
+    TResult Function(UpdateFeedEvent value)? updateFeed,
     required TResult orElse(),
   }) {
     if (getUserInfo != null) {
@@ -541,6 +571,169 @@ class _$HomeGetUserInfoImpl implements HomeGetUserInfo {
 
 abstract class HomeGetUserInfo implements HomeEvent {
   const factory HomeGetUserInfo() = _$HomeGetUserInfoImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdateFeedEventImplCopyWith<$Res> {
+  factory _$$UpdateFeedEventImplCopyWith(_$UpdateFeedEventImpl value,
+          $Res Function(_$UpdateFeedEventImpl) then) =
+      __$$UpdateFeedEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({NewFeedModel feed});
+
+  $NewFeedModelCopyWith<$Res> get feed;
+}
+
+/// @nodoc
+class __$$UpdateFeedEventImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$UpdateFeedEventImpl>
+    implements _$$UpdateFeedEventImplCopyWith<$Res> {
+  __$$UpdateFeedEventImplCopyWithImpl(
+      _$UpdateFeedEventImpl _value, $Res Function(_$UpdateFeedEventImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? feed = null,
+  }) {
+    return _then(_$UpdateFeedEventImpl(
+      null == feed
+          ? _value.feed
+          : feed // ignore: cast_nullable_to_non_nullable
+              as NewFeedModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NewFeedModelCopyWith<$Res> get feed {
+    return $NewFeedModelCopyWith<$Res>(_value.feed, (value) {
+      return _then(_value.copyWith(feed: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$UpdateFeedEventImpl implements UpdateFeedEvent {
+  const _$UpdateFeedEventImpl(this.feed);
+
+  @override
+  final NewFeedModel feed;
+
+  @override
+  String toString() {
+    return 'HomeEvent.updateFeed(feed: $feed)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateFeedEventImpl &&
+            (identical(other.feed, feed) || other.feed == feed));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, feed);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateFeedEventImplCopyWith<_$UpdateFeedEventImpl> get copyWith =>
+      __$$UpdateFeedEventImplCopyWithImpl<_$UpdateFeedEventImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() getFeeds,
+    required TResult Function() refreshNewsFeed,
+    required TResult Function() loadMoreNewsFeed,
+    required TResult Function() getUserInfo,
+    required TResult Function(NewFeedModel feed) updateFeed,
+  }) {
+    return updateFeed(feed);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? getFeeds,
+    TResult? Function()? refreshNewsFeed,
+    TResult? Function()? loadMoreNewsFeed,
+    TResult? Function()? getUserInfo,
+    TResult? Function(NewFeedModel feed)? updateFeed,
+  }) {
+    return updateFeed?.call(feed);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? getFeeds,
+    TResult Function()? refreshNewsFeed,
+    TResult Function()? loadMoreNewsFeed,
+    TResult Function()? getUserInfo,
+    TResult Function(NewFeedModel feed)? updateFeed,
+    required TResult orElse(),
+  }) {
+    if (updateFeed != null) {
+      return updateFeed(feed);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeGetFeeds value) getFeeds,
+    required TResult Function(HomeRefreshNewsFeed value) refreshNewsFeed,
+    required TResult Function(HomeLoadMoreNewsFeed value) loadMoreNewsFeed,
+    required TResult Function(HomeGetUserInfo value) getUserInfo,
+    required TResult Function(UpdateFeedEvent value) updateFeed,
+  }) {
+    return updateFeed(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomeGetFeeds value)? getFeeds,
+    TResult? Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
+    TResult? Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    TResult? Function(HomeGetUserInfo value)? getUserInfo,
+    TResult? Function(UpdateFeedEvent value)? updateFeed,
+  }) {
+    return updateFeed?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeGetFeeds value)? getFeeds,
+    TResult Function(HomeRefreshNewsFeed value)? refreshNewsFeed,
+    TResult Function(HomeLoadMoreNewsFeed value)? loadMoreNewsFeed,
+    TResult Function(HomeGetUserInfo value)? getUserInfo,
+    TResult Function(UpdateFeedEvent value)? updateFeed,
+    required TResult orElse(),
+  }) {
+    if (updateFeed != null) {
+      return updateFeed(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateFeedEvent implements HomeEvent {
+  const factory UpdateFeedEvent(final NewFeedModel feed) =
+      _$UpdateFeedEventImpl;
+
+  NewFeedModel get feed;
+  @JsonKey(ignore: true)
+  _$$UpdateFeedEventImplCopyWith<_$UpdateFeedEventImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

@@ -8,7 +8,7 @@ class HomeDiscover extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const TabBarView(
-      physics: AlwaysScrollableScrollPhysics(),
+      physics: ClampingScrollPhysics(),
       children: [
         NewsFeedHome(),
         BlogListPage(),

@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/ui/my_divider.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
+import 'package:demo_dprofiles/src/features/feed/presentation/cubit/feed_detail_cubit.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
 import 'package:demo_dprofiles/src/features/home/domain/entities/ext_new_feed_entity.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/bloc/home_bloc.dart';
@@ -43,7 +44,7 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
   Widget _buildBody(List<NewFeedModel> state) {
     return AnimationLimiter(
       child: ListView.separated(
-        physics: const NeverScrollableScrollPhysics(),
+        physics: const ClampingScrollPhysics(),
         itemCount: state.length,
         itemBuilder: (context, index) => _buildItem(context, index, state),
         separatorBuilder: (BuildContext context, int index) => MyDivider(
@@ -69,7 +70,14 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
             onTap: () => context.router.push(
               FeedDetailRoute(feed: data),
             ),
-            child: data.toWidget(context),
+            child: BlocProvider(
+              create: (_) => FeedDetailCubit(data),
+              child: BlocBuilder<FeedDetailCubit, FeedDetailState>(
+                builder: (context, state) {
+                  return data.toWidget(context);
+                },
+              ),
+            ),
           ),
         ),
       ),

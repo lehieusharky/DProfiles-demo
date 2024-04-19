@@ -93,10 +93,10 @@ import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/open
     as _i33;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/forms/form_skill.dart'
     as _i24;
+import 'package:demo_dprofiles/src/features/feed/presentation/feed_detail_page.dart'
+    as _i19;
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart'
     as _i48;
-import 'package:demo_dprofiles/src/features/home/presentation/pages/feed_detail_page.dart'
-    as _i19;
 import 'package:demo_dprofiles/src/features/onboarding/presentation/page/onboarding_page.dart'
     as _i32;
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart'
