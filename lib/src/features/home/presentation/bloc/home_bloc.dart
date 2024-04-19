@@ -20,7 +20,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final ProfileUseCase profileUseCase;
 
   // Page number starts from 1
-  int page = 0;
+  int page = 1;
 
   final int limitPage = 5;
 

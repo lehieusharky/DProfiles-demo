@@ -20,29 +20,31 @@ NewFeedModel _$NewFeedModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$NewFeedModel {
-  @JsonKey(name: 'post_id')
+  @JsonKey(name: 'id')
   int? get postId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'post_user_id')
+  @JsonKey(name: 'user_id')
   int? get postUserId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'post_admin_id')
+  @JsonKey(name: 'admin_id')
   int? get postAdminId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'post_content')
+  @JsonKey(name: 'content')
   String? get postContent => throw _privateConstructorUsedError;
-  @JsonKey(name: 'post_image_url')
+  @JsonKey(name: 'image_url')
   String? get postImageUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'post_video_url')
+  @JsonKey(name: 'video_url')
   String? get postVideoUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'post_updated_on')
+  @JsonKey(name: 'updated_on')
   String? get postUpdatedOn => throw _privateConstructorUsedError;
-  @JsonKey(name: 'post_updated_ts')
+  @JsonKey(name: 'updated_ts')
   String? get postUpdatedTs => throw _privateConstructorUsedError;
-  @JsonKey(name: 'post_created_ts')
+  @JsonKey(name: 'created_ts')
   String? get postCreatedTs => throw _privateConstructorUsedError;
   int? get noOfLike => throw _privateConstructorUsedError;
   int? get noOfShare => throw _privateConstructorUsedError;
   int? get noOfComment => throw _privateConstructorUsedError;
   @JsonKey(name: 'liked')
   bool get liked => throw _privateConstructorUsedError;
+  @JsonKey(name: 'user')
+  UserInfoModel? get user => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -57,19 +59,22 @@ abstract class $NewFeedModelCopyWith<$Res> {
       _$NewFeedModelCopyWithImpl<$Res, NewFeedModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'post_id') int? postId,
-      @JsonKey(name: 'post_user_id') int? postUserId,
-      @JsonKey(name: 'post_admin_id') int? postAdminId,
-      @JsonKey(name: 'post_content') String? postContent,
-      @JsonKey(name: 'post_image_url') String? postImageUrl,
-      @JsonKey(name: 'post_video_url') String? postVideoUrl,
-      @JsonKey(name: 'post_updated_on') String? postUpdatedOn,
-      @JsonKey(name: 'post_updated_ts') String? postUpdatedTs,
-      @JsonKey(name: 'post_created_ts') String? postCreatedTs,
+      {@JsonKey(name: 'id') int? postId,
+      @JsonKey(name: 'user_id') int? postUserId,
+      @JsonKey(name: 'admin_id') int? postAdminId,
+      @JsonKey(name: 'content') String? postContent,
+      @JsonKey(name: 'image_url') String? postImageUrl,
+      @JsonKey(name: 'video_url') String? postVideoUrl,
+      @JsonKey(name: 'updated_on') String? postUpdatedOn,
+      @JsonKey(name: 'updated_ts') String? postUpdatedTs,
+      @JsonKey(name: 'created_ts') String? postCreatedTs,
       int? noOfLike,
       int? noOfShare,
       int? noOfComment,
-      @JsonKey(name: 'liked') bool liked});
+      @JsonKey(name: 'liked') bool liked,
+      @JsonKey(name: 'user') UserInfoModel? user});
+
+  $UserInfoModelCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -98,6 +103,7 @@ class _$NewFeedModelCopyWithImpl<$Res, $Val extends NewFeedModel>
     Object? noOfShare = freezed,
     Object? noOfComment = freezed,
     Object? liked = null,
+    Object? user = freezed,
   }) {
     return _then(_value.copyWith(
       postId: freezed == postId
@@ -152,7 +158,23 @@ class _$NewFeedModelCopyWithImpl<$Res, $Val extends NewFeedModel>
           ? _value.liked
           : liked // ignore: cast_nullable_to_non_nullable
               as bool,
+      user: freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserInfoModel?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserInfoModelCopyWith<$Res>? get user {
+    if (_value.user == null) {
+      return null;
+    }
+
+    return $UserInfoModelCopyWith<$Res>(_value.user!, (value) {
+      return _then(_value.copyWith(user: value) as $Val);
+    });
   }
 }
 
@@ -165,19 +187,23 @@ abstract class _$$NewFeedModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'post_id') int? postId,
-      @JsonKey(name: 'post_user_id') int? postUserId,
-      @JsonKey(name: 'post_admin_id') int? postAdminId,
-      @JsonKey(name: 'post_content') String? postContent,
-      @JsonKey(name: 'post_image_url') String? postImageUrl,
-      @JsonKey(name: 'post_video_url') String? postVideoUrl,
-      @JsonKey(name: 'post_updated_on') String? postUpdatedOn,
-      @JsonKey(name: 'post_updated_ts') String? postUpdatedTs,
-      @JsonKey(name: 'post_created_ts') String? postCreatedTs,
+      {@JsonKey(name: 'id') int? postId,
+      @JsonKey(name: 'user_id') int? postUserId,
+      @JsonKey(name: 'admin_id') int? postAdminId,
+      @JsonKey(name: 'content') String? postContent,
+      @JsonKey(name: 'image_url') String? postImageUrl,
+      @JsonKey(name: 'video_url') String? postVideoUrl,
+      @JsonKey(name: 'updated_on') String? postUpdatedOn,
+      @JsonKey(name: 'updated_ts') String? postUpdatedTs,
+      @JsonKey(name: 'created_ts') String? postCreatedTs,
       int? noOfLike,
       int? noOfShare,
       int? noOfComment,
-      @JsonKey(name: 'liked') bool liked});
+      @JsonKey(name: 'liked') bool liked,
+      @JsonKey(name: 'user') UserInfoModel? user});
+
+  @override
+  $UserInfoModelCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -204,6 +230,7 @@ class __$$NewFeedModelImplCopyWithImpl<$Res>
     Object? noOfShare = freezed,
     Object? noOfComment = freezed,
     Object? liked = null,
+    Object? user = freezed,
   }) {
     return _then(_$NewFeedModelImpl(
       postId: freezed == postId
@@ -258,6 +285,10 @@ class __$$NewFeedModelImplCopyWithImpl<$Res>
           ? _value.liked
           : liked // ignore: cast_nullable_to_non_nullable
               as bool,
+      user: freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserInfoModel?,
     ));
   }
 }
@@ -266,49 +297,50 @@ class __$$NewFeedModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$NewFeedModelImpl implements _NewFeedModel {
   const _$NewFeedModelImpl(
-      {@JsonKey(name: 'post_id') this.postId = 0,
-      @JsonKey(name: 'post_user_id') this.postUserId = 0,
-      @JsonKey(name: 'post_admin_id') this.postAdminId = 0,
-      @JsonKey(name: 'post_content') this.postContent,
-      @JsonKey(name: 'post_image_url') this.postImageUrl,
-      @JsonKey(name: 'post_video_url') this.postVideoUrl,
-      @JsonKey(name: 'post_updated_on') this.postUpdatedOn,
-      @JsonKey(name: 'post_updated_ts') this.postUpdatedTs,
-      @JsonKey(name: 'post_created_ts') this.postCreatedTs,
+      {@JsonKey(name: 'id') this.postId = 0,
+      @JsonKey(name: 'user_id') this.postUserId = 0,
+      @JsonKey(name: 'admin_id') this.postAdminId = 0,
+      @JsonKey(name: 'content') this.postContent,
+      @JsonKey(name: 'image_url') this.postImageUrl,
+      @JsonKey(name: 'video_url') this.postVideoUrl,
+      @JsonKey(name: 'updated_on') this.postUpdatedOn,
+      @JsonKey(name: 'updated_ts') this.postUpdatedTs,
+      @JsonKey(name: 'created_ts') this.postCreatedTs,
       this.noOfLike = 0,
       this.noOfShare = 0,
       this.noOfComment = 0,
-      @JsonKey(name: 'liked') this.liked = false});
+      @JsonKey(name: 'liked') this.liked = false,
+      @JsonKey(name: 'user') this.user});
 
   factory _$NewFeedModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$NewFeedModelImplFromJson(json);
 
   @override
-  @JsonKey(name: 'post_id')
+  @JsonKey(name: 'id')
   final int? postId;
   @override
-  @JsonKey(name: 'post_user_id')
+  @JsonKey(name: 'user_id')
   final int? postUserId;
   @override
-  @JsonKey(name: 'post_admin_id')
+  @JsonKey(name: 'admin_id')
   final int? postAdminId;
   @override
-  @JsonKey(name: 'post_content')
+  @JsonKey(name: 'content')
   final String? postContent;
   @override
-  @JsonKey(name: 'post_image_url')
+  @JsonKey(name: 'image_url')
   final String? postImageUrl;
   @override
-  @JsonKey(name: 'post_video_url')
+  @JsonKey(name: 'video_url')
   final String? postVideoUrl;
   @override
-  @JsonKey(name: 'post_updated_on')
+  @JsonKey(name: 'updated_on')
   final String? postUpdatedOn;
   @override
-  @JsonKey(name: 'post_updated_ts')
+  @JsonKey(name: 'updated_ts')
   final String? postUpdatedTs;
   @override
-  @JsonKey(name: 'post_created_ts')
+  @JsonKey(name: 'created_ts')
   final String? postCreatedTs;
   @override
   @JsonKey()
@@ -322,10 +354,13 @@ class _$NewFeedModelImpl implements _NewFeedModel {
   @override
   @JsonKey(name: 'liked')
   final bool liked;
+  @override
+  @JsonKey(name: 'user')
+  final UserInfoModel? user;
 
   @override
   String toString() {
-    return 'NewFeedModel(postId: $postId, postUserId: $postUserId, postAdminId: $postAdminId, postContent: $postContent, postImageUrl: $postImageUrl, postVideoUrl: $postVideoUrl, postUpdatedOn: $postUpdatedOn, postUpdatedTs: $postUpdatedTs, postCreatedTs: $postCreatedTs, noOfLike: $noOfLike, noOfShare: $noOfShare, noOfComment: $noOfComment, liked: $liked)';
+    return 'NewFeedModel(postId: $postId, postUserId: $postUserId, postAdminId: $postAdminId, postContent: $postContent, postImageUrl: $postImageUrl, postVideoUrl: $postVideoUrl, postUpdatedOn: $postUpdatedOn, postUpdatedTs: $postUpdatedTs, postCreatedTs: $postCreatedTs, noOfLike: $noOfLike, noOfShare: $noOfShare, noOfComment: $noOfComment, liked: $liked, user: $user)';
   }
 
   @override
@@ -356,7 +391,8 @@ class _$NewFeedModelImpl implements _NewFeedModel {
                 other.noOfShare == noOfShare) &&
             (identical(other.noOfComment, noOfComment) ||
                 other.noOfComment == noOfComment) &&
-            (identical(other.liked, liked) || other.liked == liked));
+            (identical(other.liked, liked) || other.liked == liked) &&
+            (identical(other.user, user) || other.user == user));
   }
 
   @JsonKey(ignore: true)
@@ -375,7 +411,8 @@ class _$NewFeedModelImpl implements _NewFeedModel {
       noOfLike,
       noOfShare,
       noOfComment,
-      liked);
+      liked,
+      user);
 
   @JsonKey(ignore: true)
   @override
@@ -393,49 +430,50 @@ class _$NewFeedModelImpl implements _NewFeedModel {
 
 abstract class _NewFeedModel implements NewFeedModel {
   const factory _NewFeedModel(
-      {@JsonKey(name: 'post_id') final int? postId,
-      @JsonKey(name: 'post_user_id') final int? postUserId,
-      @JsonKey(name: 'post_admin_id') final int? postAdminId,
-      @JsonKey(name: 'post_content') final String? postContent,
-      @JsonKey(name: 'post_image_url') final String? postImageUrl,
-      @JsonKey(name: 'post_video_url') final String? postVideoUrl,
-      @JsonKey(name: 'post_updated_on') final String? postUpdatedOn,
-      @JsonKey(name: 'post_updated_ts') final String? postUpdatedTs,
-      @JsonKey(name: 'post_created_ts') final String? postCreatedTs,
+      {@JsonKey(name: 'id') final int? postId,
+      @JsonKey(name: 'user_id') final int? postUserId,
+      @JsonKey(name: 'admin_id') final int? postAdminId,
+      @JsonKey(name: 'content') final String? postContent,
+      @JsonKey(name: 'image_url') final String? postImageUrl,
+      @JsonKey(name: 'video_url') final String? postVideoUrl,
+      @JsonKey(name: 'updated_on') final String? postUpdatedOn,
+      @JsonKey(name: 'updated_ts') final String? postUpdatedTs,
+      @JsonKey(name: 'created_ts') final String? postCreatedTs,
       final int? noOfLike,
       final int? noOfShare,
       final int? noOfComment,
-      @JsonKey(name: 'liked') final bool liked}) = _$NewFeedModelImpl;
+      @JsonKey(name: 'liked') final bool liked,
+      @JsonKey(name: 'user') final UserInfoModel? user}) = _$NewFeedModelImpl;
 
   factory _NewFeedModel.fromJson(Map<String, dynamic> json) =
       _$NewFeedModelImpl.fromJson;
 
   @override
-  @JsonKey(name: 'post_id')
+  @JsonKey(name: 'id')
   int? get postId;
   @override
-  @JsonKey(name: 'post_user_id')
+  @JsonKey(name: 'user_id')
   int? get postUserId;
   @override
-  @JsonKey(name: 'post_admin_id')
+  @JsonKey(name: 'admin_id')
   int? get postAdminId;
   @override
-  @JsonKey(name: 'post_content')
+  @JsonKey(name: 'content')
   String? get postContent;
   @override
-  @JsonKey(name: 'post_image_url')
+  @JsonKey(name: 'image_url')
   String? get postImageUrl;
   @override
-  @JsonKey(name: 'post_video_url')
+  @JsonKey(name: 'video_url')
   String? get postVideoUrl;
   @override
-  @JsonKey(name: 'post_updated_on')
+  @JsonKey(name: 'updated_on')
   String? get postUpdatedOn;
   @override
-  @JsonKey(name: 'post_updated_ts')
+  @JsonKey(name: 'updated_ts')
   String? get postUpdatedTs;
   @override
-  @JsonKey(name: 'post_created_ts')
+  @JsonKey(name: 'created_ts')
   String? get postCreatedTs;
   @override
   int? get noOfLike;
@@ -446,6 +484,9 @@ abstract class _NewFeedModel implements NewFeedModel {
   @override
   @JsonKey(name: 'liked')
   bool get liked;
+  @override
+  @JsonKey(name: 'user')
+  UserInfoModel? get user;
   @override
   @JsonKey(ignore: true)
   _$$NewFeedModelImplCopyWith<_$NewFeedModelImpl> get copyWith =>

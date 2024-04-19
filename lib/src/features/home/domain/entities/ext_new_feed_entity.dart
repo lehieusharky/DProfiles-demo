@@ -39,7 +39,7 @@ extension NewFeedModelExt on NewFeedModel {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'DProfiles',
+                      user?.username ?? '',
                       style: AppFont()
                           .fontTheme(context, weight: FontWeight.w600)
                           .bodyLarge,
