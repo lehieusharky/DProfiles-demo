@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
@@ -22,14 +21,12 @@ extension AICharacterBotModelExt on AICharacterBotModel {
             if (definition != null && definition!.shortDescription != null)
               Padding(
                 padding: context.padding(top: 60, horizontal: 10),
-                child: Flexible(
-                  child: Text(
-                    definition!.shortDescription!,
-                    style: AppFont()
-                        .fontTheme(context,
-                            color: MyColor.getWhite, weight: FontWeight.w600)
-                        .bodyMedium,
-                  ),
+                child: Text(
+                  definition!.shortDescription!,
+                  style: AppFont()
+                      .fontTheme(context,
+                          color: MyColor.getWhite, weight: FontWeight.w600)
+                      .bodyMedium,
                 ),
               ),
             const Spacer(),
