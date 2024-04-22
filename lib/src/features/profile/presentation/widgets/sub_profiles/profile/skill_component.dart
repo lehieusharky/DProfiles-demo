@@ -32,6 +32,7 @@ class _SkillComponentState extends State<SkillComponent> {
       builder: (context, state) {
         return Column(
           mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TitleSubPage(
               title: 'Skills',
