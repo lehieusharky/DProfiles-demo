@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 import 'package:web3modal_flutter/web3modal_flutter.dart';
 
 class AppConnectWalletService {
@@ -39,7 +38,19 @@ class AppConnectWalletService {
 
   String? get walletAddress => _w3mService!.session?.address;
 
-  void connectWallet(BuildContext context) {
+  String get statusWalletConnection =>
+      _w3mService!.isConnected ? 'Connected' : 'Disconnected';
+
+  void connectWallet(
+    BuildContext context,
+    void Function(String walletAddress) onConnected,
+  ) {
+    _w3mService!.addListener(() {
+      if (_w3mService!.isConnected) {
+        onConnected(_w3mService!.session?.address ?? '');
+      }
+    });
+
     if (_w3mService!.isConnected) {
       _w3mService!.disconnect();
     } else {

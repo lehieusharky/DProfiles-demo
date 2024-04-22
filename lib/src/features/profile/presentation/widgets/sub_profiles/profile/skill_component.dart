@@ -17,7 +17,7 @@ class SkillComponent extends StatefulWidget {
 }
 
 class _SkillComponentState extends State<SkillComponent> {
-  List<UserSkillModel> skills = [];
+  List<UserSkillModel>? skills;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _SkillComponentState extends State<SkillComponent> {
           skills = state.skillModels;
         }
 
-        return null;
+        return skills;
       },
       builder: (context, state) {
         return Column(
@@ -39,9 +39,13 @@ class _SkillComponentState extends State<SkillComponent> {
               onCallBack: () =>
                   context.read<ProfileBloc>().add(const ProfileGetUserSkills()),
             ),
-            Row(
-              children: skills.map((e) => e.toWidget()).toList(),
-            )
+            if (skills != null)
+              Wrap(
+                spacing: 1,
+                runSpacing: 1,
+                children: List.generate(
+                    skills!.length, (index) => skills![index].toWidget()),
+              )
           ],
         );
       },

@@ -63,7 +63,7 @@ class ProfileUseCaseImpl implements ProfileUseCase {
 
   @override
   Future<Either<String, BaseResponse>> getUserLanguage() async {
-    final result = await _profileRepository.getUserInfo();
+    final result = await _profileRepository.getUserLanguage();
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),
@@ -72,7 +72,7 @@ class ProfileUseCaseImpl implements ProfileUseCase {
 
   @override
   Future<Either<String, BaseResponse>> getUserSkills() async {
-    final result = await _profileRepository.getUserInfo();
+    final result = await _profileRepository.getUserSkills();
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),

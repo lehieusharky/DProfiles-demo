@@ -9,7 +9,6 @@ class AppRouter extends $AppRouter {
         AutoRoute(path: '/local_auth', page: LocalAuthRoute.page),
         AutoRoute(path: '/onboarding', page: OnboardingRoute.page),
         AutoRoute(path: '/dashboard', page: DashboardRoute.page),
-        AutoRoute(path: '/connect_wallet', page: ConnectWalletRoute.page),
         AutoRoute(path: '/sign_in', page: SignInRoute.page),
         AutoRoute(path: '/sign_up', page: SignUpRoute.page),
         AutoRoute(path: '/forgot_password', page: ForgotPasswordRoute.page),

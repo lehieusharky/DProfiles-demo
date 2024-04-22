@@ -59,7 +59,10 @@ class BlocDI {
     );
 
     injector.registerFactory<DashboardBloc>(
-          () => DashboardBloc(injector.get<SettingUseCase>()),
+      () => DashboardBloc(
+        injector.get<SettingUseCase>(),
+        injector.get<EditProfileUseCase>(),
+      ),
     );
   }
 }

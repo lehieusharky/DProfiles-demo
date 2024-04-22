@@ -122,6 +122,9 @@ abstract class RestClient {
   @PUT('/api/v1/dProfile/update')
   Future<BaseResponse> updateDigitalProfile();
 
+  @GET('/api/v1/dprofile-stored')
+  Future<BaseResponse> checkDigitalProfileStored();
+
   // ai character
 
   @POST('https://char.dev.dprofiles.xyz/generate-character-bot/')

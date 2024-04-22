@@ -9,9 +9,9 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:demo_dprofiles/src/utils/services/connect_wallet_service.dart';
 import 'package:ficonsax/ficonsax.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sidebarx/sidebarx.dart';
@@ -44,6 +44,12 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
           listener: (context, state) {
             if (state is DashboardDeleteAccountSuccess) {
               _logout(context);
+            }
+
+            if (state is DashboardUpdateWalletAddressSuccess) {
+              showErrorDialog(context,
+                  title: 'Success',
+                  description: 'Update wallet address success');
             }
           },
         ),
@@ -103,8 +109,11 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
                 ),
                 context.sizedBox(height: 10),
                 W3MAccountButton(service: AppConnectWalletService().w3mService),
-                W3MConnectWalletButton(
-                    service: AppConnectWalletService().w3mService)
+                AppFlatButton(context).elevatedButton(
+                    title: 'Connect Wallet',
+                    onPressed: () => AppConnectWalletService().connectWallet(
+                        context,
+                        (walletAddress) => _onConnectWallet(walletAddress))),
               ],
             ),
           );
@@ -131,6 +140,12 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
     );
   }
 
+  void _onConnectWallet(String walletAddress) {
+    userInfo = userInfo.copyWith(walletAddress: walletAddress);
+
+    context.read<DashboardBloc>().add(DashboardUpdateWalletAddress(userInfo));
+  }
+
   void _onOpenDProfile() {
     if (userInfo.walletAddress == null) {
       showErrorDialog(context,
@@ -149,6 +164,6 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
   }
 
   void _deleteAccount(BuildContext context) {
-    context.read<DashboardBloc>().add(DashboardDeleteAccount());
+    context.read<DashboardBloc>().add(const DashboardDeleteAccount());
   }
 }

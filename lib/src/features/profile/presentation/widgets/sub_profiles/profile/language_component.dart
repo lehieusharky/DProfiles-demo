@@ -21,28 +21,6 @@ class LanguageComponent extends StatelessWidget {
           onCallBack: () =>
               context.read<ProfileBloc>().add(const ProfileGetUserLanguages()),
         ),
-        Padding(
-          padding: context.padding(top: 8),
-          child: SizedBox(
-            height: context.sizeHeight(100),
-            child: const Column(
-              children: [
-                Row(
-                  children: [
-                    SkillItem(title: 'English'),
-                    SkillItem(title: 'Korean'),
-                    SkillItem(title: 'Vietnamese'),
-                  ],
-                ),
-                Row(
-                  children: [
-                    SkillItem(title: 'Chinese'),
-                  ],
-                )
-              ],
-            ),
-          ),
-        ),
       ],
     );
   }
