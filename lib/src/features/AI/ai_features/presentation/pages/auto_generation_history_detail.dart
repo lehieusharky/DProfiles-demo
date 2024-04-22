@@ -40,23 +40,13 @@ class AutoGenerationHistoryDetailPage extends StatelessWidget {
             appBarTitle: type.getTitle(context),
             body: state == null
                 ? MyShimmer(count: 5, height: context.height)
-                : SingleChildScrollView(
-                    child: Stack(
-                      alignment: Alignment.bottomCenter,
-                      children: [
-                        SizedBox(
-                          height: context.height * 0.8,
-                          child: Column(
-                            children: [
-                              AutoGenerateTextToSpeech(
-                                textGenerated: state.result,
-                                createAt: DateTime.now().toString(),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                      ],
+                : Padding(
+                    padding: context.padding(horizontal: 20, top: 20),
+                    child: SingleChildScrollView(
+                      child: AutoGenerateTextToSpeech(
+                        textGenerated: state.result,
+                        createAt: DateTime.now().toString(),
+                      ),
                     ),
                   ),
           );

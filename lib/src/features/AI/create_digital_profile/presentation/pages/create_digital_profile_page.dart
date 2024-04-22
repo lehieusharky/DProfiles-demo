@@ -59,6 +59,9 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
         builder: (context, state) => DefaultTabController(
           length: 3,
           child: MyScaffold(
+            useAppBar: true,
+            canBack: true,
+            appBarTitle: 'Create Digital Profile',
             body: NestedScrollView(
               headerSliverBuilder:
                   (BuildContext context, bool innerBoxIsScrolled) => [

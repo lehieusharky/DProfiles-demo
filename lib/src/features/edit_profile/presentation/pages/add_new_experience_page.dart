@@ -143,6 +143,7 @@ class _AddNewExperiencePageState extends State<AddNewExperiencePage> {
                         child: AuthField(
                             controller: _descriptionController,
                             textInputAction: TextInputAction.done,
+                            maxLines: 5,
                             title: 'Description'.toUpperCase(),
                             validator: (value) {
                               if (value == null || value.isEmpty) {

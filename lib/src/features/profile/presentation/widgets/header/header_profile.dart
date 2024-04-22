@@ -41,6 +41,7 @@ class HeaderProfile extends StatelessWidget {
                       follower: '12,5K',
                       following: '12,5K',
                       post: '12,5K',
+                      point: state.point ?? 0,
                     ),
                     Padding(
                       padding: context.padding(vertical: 12),
