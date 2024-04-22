@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/features/auth/data/models/sign_in_model.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
+import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -354,4 +355,9 @@ abstract class RestClient {
   Future<BaseResponse> deleteLike(
     @Path('id') int id,
   );
+
+  // upload
+
+  @POST('https://upload.dev.dprofiles.xyz/presigned-upload-url')
+  Future<UploadFileResponse> uploadImage(@Body() Map<String, dynamic> comment);
 }

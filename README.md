@@ -45,12 +45,3 @@ flutter packages pub run build_runner watch
 ```bash
 fluttergen -c pubspec.yaml
 ```
-
-
-```agsl
-- before create dProfile have to connect wallet
-
-- point
-
-
-```
