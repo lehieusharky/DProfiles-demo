@@ -20,18 +20,21 @@ mixin _$DashboardEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() logout,
     required TResult Function() deleteAccount,
+    required TResult Function(UserInfoModel userInfo) updateWalletAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? logout,
     TResult? Function()? deleteAccount,
+    TResult? Function(UserInfoModel userInfo)? updateWalletAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? logout,
     TResult Function()? deleteAccount,
+    TResult Function(UserInfoModel userInfo)? updateWalletAddress,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,22 @@ mixin _$DashboardEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(DashboardLogOut value) logout,
     required TResult Function(DashboardDeleteAccount value) deleteAccount,
+    required TResult Function(DashboardUpdateWalletAddress value)
+        updateWalletAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(DashboardLogOut value)? logout,
     TResult? Function(DashboardDeleteAccount value)? deleteAccount,
+    TResult? Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(DashboardLogOut value)? logout,
     TResult Function(DashboardDeleteAccount value)? deleteAccount,
+    TResult Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,6 +121,7 @@ class _$DashboardLogOutImpl implements DashboardLogOut {
   TResult when<TResult extends Object?>({
     required TResult Function() logout,
     required TResult Function() deleteAccount,
+    required TResult Function(UserInfoModel userInfo) updateWalletAddress,
   }) {
     return logout();
   }
@@ -123,6 +131,7 @@ class _$DashboardLogOutImpl implements DashboardLogOut {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? logout,
     TResult? Function()? deleteAccount,
+    TResult? Function(UserInfoModel userInfo)? updateWalletAddress,
   }) {
     return logout?.call();
   }
@@ -132,6 +141,7 @@ class _$DashboardLogOutImpl implements DashboardLogOut {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? logout,
     TResult Function()? deleteAccount,
+    TResult Function(UserInfoModel userInfo)? updateWalletAddress,
     required TResult orElse(),
   }) {
     if (logout != null) {
@@ -145,6 +155,8 @@ class _$DashboardLogOutImpl implements DashboardLogOut {
   TResult map<TResult extends Object?>({
     required TResult Function(DashboardLogOut value) logout,
     required TResult Function(DashboardDeleteAccount value) deleteAccount,
+    required TResult Function(DashboardUpdateWalletAddress value)
+        updateWalletAddress,
   }) {
     return logout(this);
   }
@@ -154,6 +166,7 @@ class _$DashboardLogOutImpl implements DashboardLogOut {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(DashboardLogOut value)? logout,
     TResult? Function(DashboardDeleteAccount value)? deleteAccount,
+    TResult? Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
   }) {
     return logout?.call(this);
   }
@@ -163,6 +176,7 @@ class _$DashboardLogOutImpl implements DashboardLogOut {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(DashboardLogOut value)? logout,
     TResult Function(DashboardDeleteAccount value)? deleteAccount,
+    TResult Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
     required TResult orElse(),
   }) {
     if (logout != null) {
@@ -219,6 +233,7 @@ class _$DashboardDeleteAccountImpl implements DashboardDeleteAccount {
   TResult when<TResult extends Object?>({
     required TResult Function() logout,
     required TResult Function() deleteAccount,
+    required TResult Function(UserInfoModel userInfo) updateWalletAddress,
   }) {
     return deleteAccount();
   }
@@ -228,6 +243,7 @@ class _$DashboardDeleteAccountImpl implements DashboardDeleteAccount {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? logout,
     TResult? Function()? deleteAccount,
+    TResult? Function(UserInfoModel userInfo)? updateWalletAddress,
   }) {
     return deleteAccount?.call();
   }
@@ -237,6 +253,7 @@ class _$DashboardDeleteAccountImpl implements DashboardDeleteAccount {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? logout,
     TResult Function()? deleteAccount,
+    TResult Function(UserInfoModel userInfo)? updateWalletAddress,
     required TResult orElse(),
   }) {
     if (deleteAccount != null) {
@@ -250,6 +267,8 @@ class _$DashboardDeleteAccountImpl implements DashboardDeleteAccount {
   TResult map<TResult extends Object?>({
     required TResult Function(DashboardLogOut value) logout,
     required TResult Function(DashboardDeleteAccount value) deleteAccount,
+    required TResult Function(DashboardUpdateWalletAddress value)
+        updateWalletAddress,
   }) {
     return deleteAccount(this);
   }
@@ -259,6 +278,7 @@ class _$DashboardDeleteAccountImpl implements DashboardDeleteAccount {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(DashboardLogOut value)? logout,
     TResult? Function(DashboardDeleteAccount value)? deleteAccount,
+    TResult? Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
   }) {
     return deleteAccount?.call(this);
   }
@@ -268,6 +288,7 @@ class _$DashboardDeleteAccountImpl implements DashboardDeleteAccount {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(DashboardLogOut value)? logout,
     TResult Function(DashboardDeleteAccount value)? deleteAccount,
+    TResult Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
     required TResult orElse(),
   }) {
     if (deleteAccount != null) {
@@ -282,6 +303,165 @@ abstract class DashboardDeleteAccount implements DashboardEvent {
 }
 
 /// @nodoc
+abstract class _$$DashboardUpdateWalletAddressImplCopyWith<$Res> {
+  factory _$$DashboardUpdateWalletAddressImplCopyWith(
+          _$DashboardUpdateWalletAddressImpl value,
+          $Res Function(_$DashboardUpdateWalletAddressImpl) then) =
+      __$$DashboardUpdateWalletAddressImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UserInfoModel userInfo});
+
+  $UserInfoModelCopyWith<$Res> get userInfo;
+}
+
+/// @nodoc
+class __$$DashboardUpdateWalletAddressImplCopyWithImpl<$Res>
+    extends _$DashboardEventCopyWithImpl<$Res,
+        _$DashboardUpdateWalletAddressImpl>
+    implements _$$DashboardUpdateWalletAddressImplCopyWith<$Res> {
+  __$$DashboardUpdateWalletAddressImplCopyWithImpl(
+      _$DashboardUpdateWalletAddressImpl _value,
+      $Res Function(_$DashboardUpdateWalletAddressImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userInfo = null,
+  }) {
+    return _then(_$DashboardUpdateWalletAddressImpl(
+      null == userInfo
+          ? _value.userInfo
+          : userInfo // ignore: cast_nullable_to_non_nullable
+              as UserInfoModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserInfoModelCopyWith<$Res> get userInfo {
+    return $UserInfoModelCopyWith<$Res>(_value.userInfo, (value) {
+      return _then(_value.copyWith(userInfo: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$DashboardUpdateWalletAddressImpl
+    implements DashboardUpdateWalletAddress {
+  const _$DashboardUpdateWalletAddressImpl(this.userInfo);
+
+  @override
+  final UserInfoModel userInfo;
+
+  @override
+  String toString() {
+    return 'DashboardEvent.updateWalletAddress(userInfo: $userInfo)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DashboardUpdateWalletAddressImpl &&
+            (identical(other.userInfo, userInfo) ||
+                other.userInfo == userInfo));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, userInfo);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DashboardUpdateWalletAddressImplCopyWith<
+          _$DashboardUpdateWalletAddressImpl>
+      get copyWith => __$$DashboardUpdateWalletAddressImplCopyWithImpl<
+          _$DashboardUpdateWalletAddressImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() logout,
+    required TResult Function() deleteAccount,
+    required TResult Function(UserInfoModel userInfo) updateWalletAddress,
+  }) {
+    return updateWalletAddress(userInfo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? logout,
+    TResult? Function()? deleteAccount,
+    TResult? Function(UserInfoModel userInfo)? updateWalletAddress,
+  }) {
+    return updateWalletAddress?.call(userInfo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? logout,
+    TResult Function()? deleteAccount,
+    TResult Function(UserInfoModel userInfo)? updateWalletAddress,
+    required TResult orElse(),
+  }) {
+    if (updateWalletAddress != null) {
+      return updateWalletAddress(userInfo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(DashboardLogOut value) logout,
+    required TResult Function(DashboardDeleteAccount value) deleteAccount,
+    required TResult Function(DashboardUpdateWalletAddress value)
+        updateWalletAddress,
+  }) {
+    return updateWalletAddress(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(DashboardLogOut value)? logout,
+    TResult? Function(DashboardDeleteAccount value)? deleteAccount,
+    TResult? Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
+  }) {
+    return updateWalletAddress?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(DashboardLogOut value)? logout,
+    TResult Function(DashboardDeleteAccount value)? deleteAccount,
+    TResult Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
+    required TResult orElse(),
+  }) {
+    if (updateWalletAddress != null) {
+      return updateWalletAddress(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DashboardUpdateWalletAddress implements DashboardEvent {
+  const factory DashboardUpdateWalletAddress(final UserInfoModel userInfo) =
+      _$DashboardUpdateWalletAddressImpl;
+
+  UserInfoModel get userInfo;
+  @JsonKey(ignore: true)
+  _$$DashboardUpdateWalletAddressImplCopyWith<
+          _$DashboardUpdateWalletAddressImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$DashboardState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -290,6 +470,7 @@ mixin _$DashboardState {
     required TResult Function() deleteAccountSuccess,
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
+    required TResult Function() updateWalletAddressSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -299,6 +480,7 @@ mixin _$DashboardState {
     TResult? Function()? deleteAccountSuccess,
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
+    TResult? Function()? updateWalletAddressSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -308,6 +490,7 @@ mixin _$DashboardState {
     TResult Function()? deleteAccountSuccess,
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
+    TResult Function()? updateWalletAddressSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -319,6 +502,8 @@ mixin _$DashboardState {
         deleteAccountSuccess,
     required TResult Function(DashboardLoading value) loading,
     required TResult Function(DashboardError value) error,
+    required TResult Function(DashboardUpdateWalletAddressSuccess value)
+        updateWalletAddressSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -329,6 +514,8 @@ mixin _$DashboardState {
         deleteAccountSuccess,
     TResult? Function(DashboardLoading value)? loading,
     TResult? Function(DashboardError value)? error,
+    TResult? Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -338,6 +525,8 @@ mixin _$DashboardState {
     TResult Function(DashboardDeleteAccountSuccess value)? deleteAccountSuccess,
     TResult Function(DashboardLoading value)? loading,
     TResult Function(DashboardError value)? error,
+    TResult Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -404,6 +593,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() deleteAccountSuccess,
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
+    required TResult Function() updateWalletAddressSuccess,
   }) {
     return initial();
   }
@@ -416,6 +606,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? deleteAccountSuccess,
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
+    TResult? Function()? updateWalletAddressSuccess,
   }) {
     return initial?.call();
   }
@@ -428,6 +619,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? deleteAccountSuccess,
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
+    TResult Function()? updateWalletAddressSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -445,6 +637,8 @@ class _$InitialImpl implements _Initial {
         deleteAccountSuccess,
     required TResult Function(DashboardLoading value) loading,
     required TResult Function(DashboardError value) error,
+    required TResult Function(DashboardUpdateWalletAddressSuccess value)
+        updateWalletAddressSuccess,
   }) {
     return initial(this);
   }
@@ -458,6 +652,8 @@ class _$InitialImpl implements _Initial {
         deleteAccountSuccess,
     TResult? Function(DashboardLoading value)? loading,
     TResult? Function(DashboardError value)? error,
+    TResult? Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
   }) {
     return initial?.call(this);
   }
@@ -470,6 +666,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(DashboardDeleteAccountSuccess value)? deleteAccountSuccess,
     TResult Function(DashboardLoading value)? loading,
     TResult Function(DashboardError value)? error,
+    TResult Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -529,6 +727,7 @@ class _$DashboardLogOutSuccessImpl implements DashboardLogOutSuccess {
     required TResult Function() deleteAccountSuccess,
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
+    required TResult Function() updateWalletAddressSuccess,
   }) {
     return logoutSuccess();
   }
@@ -541,6 +740,7 @@ class _$DashboardLogOutSuccessImpl implements DashboardLogOutSuccess {
     TResult? Function()? deleteAccountSuccess,
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
+    TResult? Function()? updateWalletAddressSuccess,
   }) {
     return logoutSuccess?.call();
   }
@@ -553,6 +753,7 @@ class _$DashboardLogOutSuccessImpl implements DashboardLogOutSuccess {
     TResult Function()? deleteAccountSuccess,
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
+    TResult Function()? updateWalletAddressSuccess,
     required TResult orElse(),
   }) {
     if (logoutSuccess != null) {
@@ -570,6 +771,8 @@ class _$DashboardLogOutSuccessImpl implements DashboardLogOutSuccess {
         deleteAccountSuccess,
     required TResult Function(DashboardLoading value) loading,
     required TResult Function(DashboardError value) error,
+    required TResult Function(DashboardUpdateWalletAddressSuccess value)
+        updateWalletAddressSuccess,
   }) {
     return logoutSuccess(this);
   }
@@ -583,6 +786,8 @@ class _$DashboardLogOutSuccessImpl implements DashboardLogOutSuccess {
         deleteAccountSuccess,
     TResult? Function(DashboardLoading value)? loading,
     TResult? Function(DashboardError value)? error,
+    TResult? Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
   }) {
     return logoutSuccess?.call(this);
   }
@@ -595,6 +800,8 @@ class _$DashboardLogOutSuccessImpl implements DashboardLogOutSuccess {
     TResult Function(DashboardDeleteAccountSuccess value)? deleteAccountSuccess,
     TResult Function(DashboardLoading value)? loading,
     TResult Function(DashboardError value)? error,
+    TResult Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
     required TResult orElse(),
   }) {
     if (logoutSuccess != null) {
@@ -656,6 +863,7 @@ class _$DashboardDeleteAccountSuccessImpl
     required TResult Function() deleteAccountSuccess,
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
+    required TResult Function() updateWalletAddressSuccess,
   }) {
     return deleteAccountSuccess();
   }
@@ -668,6 +876,7 @@ class _$DashboardDeleteAccountSuccessImpl
     TResult? Function()? deleteAccountSuccess,
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
+    TResult? Function()? updateWalletAddressSuccess,
   }) {
     return deleteAccountSuccess?.call();
   }
@@ -680,6 +889,7 @@ class _$DashboardDeleteAccountSuccessImpl
     TResult Function()? deleteAccountSuccess,
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
+    TResult Function()? updateWalletAddressSuccess,
     required TResult orElse(),
   }) {
     if (deleteAccountSuccess != null) {
@@ -697,6 +907,8 @@ class _$DashboardDeleteAccountSuccessImpl
         deleteAccountSuccess,
     required TResult Function(DashboardLoading value) loading,
     required TResult Function(DashboardError value) error,
+    required TResult Function(DashboardUpdateWalletAddressSuccess value)
+        updateWalletAddressSuccess,
   }) {
     return deleteAccountSuccess(this);
   }
@@ -710,6 +922,8 @@ class _$DashboardDeleteAccountSuccessImpl
         deleteAccountSuccess,
     TResult? Function(DashboardLoading value)? loading,
     TResult? Function(DashboardError value)? error,
+    TResult? Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
   }) {
     return deleteAccountSuccess?.call(this);
   }
@@ -722,6 +936,8 @@ class _$DashboardDeleteAccountSuccessImpl
     TResult Function(DashboardDeleteAccountSuccess value)? deleteAccountSuccess,
     TResult Function(DashboardLoading value)? loading,
     TResult Function(DashboardError value)? error,
+    TResult Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
     required TResult orElse(),
   }) {
     if (deleteAccountSuccess != null) {
@@ -779,6 +995,7 @@ class _$DashboardLoadingImpl implements DashboardLoading {
     required TResult Function() deleteAccountSuccess,
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
+    required TResult Function() updateWalletAddressSuccess,
   }) {
     return loading();
   }
@@ -791,6 +1008,7 @@ class _$DashboardLoadingImpl implements DashboardLoading {
     TResult? Function()? deleteAccountSuccess,
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
+    TResult? Function()? updateWalletAddressSuccess,
   }) {
     return loading?.call();
   }
@@ -803,6 +1021,7 @@ class _$DashboardLoadingImpl implements DashboardLoading {
     TResult Function()? deleteAccountSuccess,
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
+    TResult Function()? updateWalletAddressSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -820,6 +1039,8 @@ class _$DashboardLoadingImpl implements DashboardLoading {
         deleteAccountSuccess,
     required TResult Function(DashboardLoading value) loading,
     required TResult Function(DashboardError value) error,
+    required TResult Function(DashboardUpdateWalletAddressSuccess value)
+        updateWalletAddressSuccess,
   }) {
     return loading(this);
   }
@@ -833,6 +1054,8 @@ class _$DashboardLoadingImpl implements DashboardLoading {
         deleteAccountSuccess,
     TResult? Function(DashboardLoading value)? loading,
     TResult? Function(DashboardError value)? error,
+    TResult? Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
   }) {
     return loading?.call(this);
   }
@@ -845,6 +1068,8 @@ class _$DashboardLoadingImpl implements DashboardLoading {
     TResult Function(DashboardDeleteAccountSuccess value)? deleteAccountSuccess,
     TResult Function(DashboardLoading value)? loading,
     TResult Function(DashboardError value)? error,
+    TResult Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -936,6 +1161,7 @@ class _$DashboardErrorImpl implements DashboardError {
     required TResult Function() deleteAccountSuccess,
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
+    required TResult Function() updateWalletAddressSuccess,
   }) {
     return error(title, msg);
   }
@@ -948,6 +1174,7 @@ class _$DashboardErrorImpl implements DashboardError {
     TResult? Function()? deleteAccountSuccess,
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
+    TResult? Function()? updateWalletAddressSuccess,
   }) {
     return error?.call(title, msg);
   }
@@ -960,6 +1187,7 @@ class _$DashboardErrorImpl implements DashboardError {
     TResult Function()? deleteAccountSuccess,
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
+    TResult Function()? updateWalletAddressSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -977,6 +1205,8 @@ class _$DashboardErrorImpl implements DashboardError {
         deleteAccountSuccess,
     required TResult Function(DashboardLoading value) loading,
     required TResult Function(DashboardError value) error,
+    required TResult Function(DashboardUpdateWalletAddressSuccess value)
+        updateWalletAddressSuccess,
   }) {
     return error(this);
   }
@@ -990,6 +1220,8 @@ class _$DashboardErrorImpl implements DashboardError {
         deleteAccountSuccess,
     TResult? Function(DashboardLoading value)? loading,
     TResult? Function(DashboardError value)? error,
+    TResult? Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
   }) {
     return error?.call(this);
   }
@@ -1002,6 +1234,8 @@ class _$DashboardErrorImpl implements DashboardError {
     TResult Function(DashboardDeleteAccountSuccess value)? deleteAccountSuccess,
     TResult Function(DashboardLoading value)? loading,
     TResult Function(DashboardError value)? error,
+    TResult Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1021,4 +1255,141 @@ abstract class DashboardError implements DashboardState {
   @JsonKey(ignore: true)
   _$$DashboardErrorImplCopyWith<_$DashboardErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DashboardUpdateWalletAddressSuccessImplCopyWith<$Res> {
+  factory _$$DashboardUpdateWalletAddressSuccessImplCopyWith(
+          _$DashboardUpdateWalletAddressSuccessImpl value,
+          $Res Function(_$DashboardUpdateWalletAddressSuccessImpl) then) =
+      __$$DashboardUpdateWalletAddressSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DashboardUpdateWalletAddressSuccessImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res,
+        _$DashboardUpdateWalletAddressSuccessImpl>
+    implements _$$DashboardUpdateWalletAddressSuccessImplCopyWith<$Res> {
+  __$$DashboardUpdateWalletAddressSuccessImplCopyWithImpl(
+      _$DashboardUpdateWalletAddressSuccessImpl _value,
+      $Res Function(_$DashboardUpdateWalletAddressSuccessImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DashboardUpdateWalletAddressSuccessImpl
+    implements DashboardUpdateWalletAddressSuccess {
+  const _$DashboardUpdateWalletAddressSuccessImpl();
+
+  @override
+  String toString() {
+    return 'DashboardState.updateWalletAddressSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DashboardUpdateWalletAddressSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() logoutSuccess,
+    required TResult Function() deleteAccountSuccess,
+    required TResult Function() loading,
+    required TResult Function(String title, String msg) error,
+    required TResult Function() updateWalletAddressSuccess,
+  }) {
+    return updateWalletAddressSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? logoutSuccess,
+    TResult? Function()? deleteAccountSuccess,
+    TResult? Function()? loading,
+    TResult? Function(String title, String msg)? error,
+    TResult? Function()? updateWalletAddressSuccess,
+  }) {
+    return updateWalletAddressSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? logoutSuccess,
+    TResult Function()? deleteAccountSuccess,
+    TResult Function()? loading,
+    TResult Function(String title, String msg)? error,
+    TResult Function()? updateWalletAddressSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateWalletAddressSuccess != null) {
+      return updateWalletAddressSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(DashboardLogOutSuccess value) logoutSuccess,
+    required TResult Function(DashboardDeleteAccountSuccess value)
+        deleteAccountSuccess,
+    required TResult Function(DashboardLoading value) loading,
+    required TResult Function(DashboardError value) error,
+    required TResult Function(DashboardUpdateWalletAddressSuccess value)
+        updateWalletAddressSuccess,
+  }) {
+    return updateWalletAddressSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(DashboardLogOutSuccess value)? logoutSuccess,
+    TResult? Function(DashboardDeleteAccountSuccess value)?
+        deleteAccountSuccess,
+    TResult? Function(DashboardLoading value)? loading,
+    TResult? Function(DashboardError value)? error,
+    TResult? Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
+  }) {
+    return updateWalletAddressSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(DashboardLogOutSuccess value)? logoutSuccess,
+    TResult Function(DashboardDeleteAccountSuccess value)? deleteAccountSuccess,
+    TResult Function(DashboardLoading value)? loading,
+    TResult Function(DashboardError value)? error,
+    TResult Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateWalletAddressSuccess != null) {
+      return updateWalletAddressSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DashboardUpdateWalletAddressSuccess implements DashboardState {
+  const factory DashboardUpdateWalletAddressSuccess() =
+      _$DashboardUpdateWalletAddressSuccessImpl;
 }

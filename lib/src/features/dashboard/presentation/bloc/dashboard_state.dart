@@ -13,4 +13,7 @@ class DashboardState with _$DashboardState {
 
   const factory DashboardState.error(
       {required String title, required String msg}) = DashboardError;
+
+  const factory DashboardState.updateWalletAddressSuccess() =
+      DashboardUpdateWalletAddressSuccess;
 }

@@ -11,6 +11,7 @@ class TitleWalletFollowerProfile extends StatefulWidget {
   final String follower;
   final String following;
   final String post;
+  final int point;
 
   const TitleWalletFollowerProfile(
       {Key? key,
@@ -18,7 +19,8 @@ class TitleWalletFollowerProfile extends StatefulWidget {
       required this.walletAddress,
       required this.follower,
       required this.following,
-      required this.post})
+      required this.post,
+      required this.point})
       : super(key: key);
 
   @override
@@ -99,7 +101,7 @@ class _TitleWalletFollowerProfileState
           child: Row(
             children: [
               Text(
-                '100',
+                widget.point.toString(),
                 style: AppFont()
                     .fontTheme(context, color: colorScheme(context).outline)
                     .bodyMedium,

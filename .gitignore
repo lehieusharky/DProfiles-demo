@@ -46,3 +46,4 @@ app.*.map.json
 pubspec.lock
 key.properties
 app/upload-keystore.jks
+.env

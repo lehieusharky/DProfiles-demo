@@ -214,4 +214,14 @@ class CreateDigitalProfileDataSourceImpl
       rethrow;
     }
   }
+
+  @override
+  Future<bool> checkDigitalProfileIsAvailable() async {
+    try {
+      final baseResponse = await MyHttp.rl().checkDigitalProfileStored();
+      return baseResponse.error != null ? false : true;
+    } on DioException {
+      return false;
+    }
+  }
 }

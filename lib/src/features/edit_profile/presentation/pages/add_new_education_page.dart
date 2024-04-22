@@ -126,6 +126,7 @@ class _AddNewEducationPageState extends State<AddNewEducationPage> {
                         child: AuthField(
                             controller: _descritptionController,
                             textInputAction: TextInputAction.done,
+                            maxLines: 5,
                             title: 'Description'.toUpperCase(),
                             validator: (value) {
                               if (value == null || value.isEmpty) {

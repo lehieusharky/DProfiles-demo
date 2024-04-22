@@ -63,7 +63,7 @@ class ProfileDataSourceImpl implements ProfileDataSource {
     try {
       final baseResponse = await MyHttp.rl().getUserSkills();
       return baseResponse;
-    } on DioException {
+    } on DioException catch (e) {
       rethrow;
     }
   }

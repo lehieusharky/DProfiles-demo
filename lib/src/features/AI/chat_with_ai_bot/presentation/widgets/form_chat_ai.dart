@@ -7,6 +7,7 @@ import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/send
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/message_with_bot_model.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/domain/entitties/ext_message_with_bot_entity.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/presentation/bloc/chat_with_ai_bloc.dart';
+import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class _FormChatAiState extends State<FormChatAi> {
     return BlocConsumer<ChatWithAiBloc, ChatWithAiState>(
       listener: (context, state) {
         if (state is ChatWithAIGetChatWithBotHistorySuccess) {
-          final histories = state.messagesHistory
+          messages = state.messagesHistory
               .map((e) => MessageWithBotModel(
                     isUser: e.userSenderId != null ? true : false,
                     message: e.content ?? '',
@@ -40,8 +41,6 @@ class _FormChatAiState extends State<FormChatAi> {
                         .format(DateTime.parse(e.createdOn!)),
                   ))
               .toList();
-
-          messages = histories;
         }
 
         if (state is ChatWithAISendMessageSuccess) {
@@ -76,6 +75,7 @@ class _FormChatAiState extends State<FormChatAi> {
       child: Container(
         padding: context.padding(vertical: 10),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             AppOutlineButton(context).iconButton(
               iconData: IconsaxOutline.image,
@@ -86,16 +86,12 @@ class _FormChatAiState extends State<FormChatAi> {
                 controller: _chatController,
                 minLines: 1,
                 maxLines: 10,
-                suffixIcon: AppOutlineButton(context).iconButton(
-                  iconData: IconsaxOutline.send_2,
-                  onPressed: () => _sendMessage(context),
-                ),
               ),
             ),
             context.sizedBox(width: 10),
             AppOutlineButton(context).iconButton(
-              iconData: IconsaxOutline.microphone_2,
-              onPressed: () {},
+              iconData: IconsaxOutline.send_2,
+              onPressed: () => _sendMessage(context),
             ),
           ],
         ),
@@ -122,7 +118,7 @@ class _FormChatAiState extends State<FormChatAi> {
                 child: FadeInAnimation(
                   curve: Curves.fastLinearToSlowEaseIn,
                   duration: const Duration(milliseconds: 2500),
-                  child: messages![index].toWidget(context),
+                  child: messages![index].toGesWidget(context),
                 ),
               ),
             );
@@ -156,7 +152,7 @@ class _FormChatAiState extends State<FormChatAi> {
   SendMessageToBotAIModel _createNewMessage() {
     final data = SendMessageToBotAIModel(
       message: _chatController.text.trim(),
-      sessionId: Random().nextInt(1000),
+      sessionId: sharePreference.getSessionID(),
       chatBotId: widget.botId,
     );
     return data;

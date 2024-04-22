@@ -1,10 +1,110 @@
+import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
+import 'package:demo_dprofiles/src/core/ui/my_button.dart';
+import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/bloc/edit_profile_bloc.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class FormLanguage extends StatelessWidget {
+class FormLanguage extends StatefulWidget {
   const FormLanguage({Key? key}) : super(key: key);
 
   @override
+  State<FormLanguage> createState() => _FormLanguageState();
+}
+
+class _FormLanguageState extends State<FormLanguage> {
+  late TextEditingController _languageController;
+  final keyForm = GlobalKey<FormState>();
+
+  @override
+  void initState() {
+    super.initState();
+
+    _languageController = TextEditingController();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Container();
+    return BlocConsumer<EditProfileBloc, EditProfileState>(
+      listener: (context, state) {
+        if (state is EditProfileLoading) {
+          showLoadingDialog(context);
+        }
+
+        if (state is EditProfileAddNewLanguageSuccess) {
+          Navigator.pop(context);
+          showMyDialog(context,
+              title: const Text('Add success'),
+              content: const Text('You have add new language'),
+              action: [
+                TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      Navigator.pop(context, state.languageModel);
+                    },
+                    child: const Text('OK'))
+              ]);
+        }
+      },
+      builder: (context, state) => Padding(
+        padding: context.padding(top: 16),
+        child: Form(
+          key: keyForm,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: context.padding(top: 32),
+                child: AuthField(
+                  title: 'Language',
+                  hint: 'Add new language',
+                  keyboardType: TextInputType.number,
+                  autoFocus: true,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return appLocal(context).fieldCannotBeEmpty;
+                    } else {
+                      return null;
+                    }
+                  },
+                  controller: _languageController,
+                ),
+              ),
+              Padding(
+                padding: context.padding(top: 24, bottom: 100),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: AppOutlineButton(context).elevatedButton(
+                        onPressed: () => Navigator.pop(context),
+                        title: 'Cancel',
+                      ),
+                    ),
+                    context.sizedBox(width: 16),
+                    Expanded(
+                      child: MyButton(
+                        onPressed: () => _save(),
+                        title: 'Save',
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _save() {
+    if (keyForm.currentState?.validate() ?? false) {
+      context.read<EditProfileBloc>().add(EditProfileAddNewLanguage(
+          int.parse(_languageController.text.trim())));
+    }
   }
 }
