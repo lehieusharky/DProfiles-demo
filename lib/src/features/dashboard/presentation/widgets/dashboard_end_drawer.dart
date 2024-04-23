@@ -134,10 +134,10 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
               () => _onOpenDProfile(context)),
           Tuple3(const Icon(IconsaxOutline.edit), 'Edit Profile',
               () => _onEditProfile(context)),
-          Tuple3(const Icon(IconsaxOutline.logout), 'Log out',
-              () => _logout(context)),
           Tuple3(const Icon(IconsaxOutline.paperclip), 'Privacy & Policy',
               () => _openPrivacyDoc()),
+          Tuple3(const Icon(IconsaxOutline.logout), 'Log out',
+              () => _logout(context)),
           Tuple3(const Icon(IconsaxOutline.profile_delete), 'Delete Account',
               () => _deleteAccount(context)),
         ]
