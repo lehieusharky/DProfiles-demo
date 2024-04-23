@@ -204,6 +204,10 @@ class $AssetsIconsLogosGen {
   SvgGenImage get homeLogo =>
       const SvgGenImage('assets/icons/logos/home_logo.svg');
 
+  /// File path: assets/icons/logos/logo_home_app.svg
+  SvgGenImage get logoHomeApp =>
+      const SvgGenImage('assets/icons/logos/logo_home_app.svg');
+
   /// File path: assets/icons/logos/my_wallet_logo.svg
   SvgGenImage get myWalletLogo =>
       const SvgGenImage('assets/icons/logos/my_wallet_logo.svg');
@@ -226,6 +230,7 @@ class $AssetsIconsLogosGen {
         dWhitePWhiteDprofileGreen,
         dprofilesBlack,
         homeLogo,
+        logoHomeApp,
         myWalletLogo,
         talentUpBlack,
         talentUpLogo

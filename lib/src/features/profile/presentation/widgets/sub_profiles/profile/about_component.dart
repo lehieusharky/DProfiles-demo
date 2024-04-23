@@ -7,17 +7,25 @@ import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class AboutComponent extends StatelessWidget {
+class AboutComponent extends StatefulWidget {
   const AboutComponent({Key? key}) : super(key: key);
+
+  @override
+  State<AboutComponent> createState() => _AboutComponentState();
+}
+
+class _AboutComponentState extends State<AboutComponent> {
+  UserInfoModel? userInfo;
+  bool _showMore = false;
 
   @override
   Widget build(BuildContext context) {
     return BlocSelector<ProfileBloc, ProfileState, UserInfoModel?>(
       selector: (state) {
         if (state is ProfileGetUserInfoSuccess) {
-          return state.userInfoModel;
+          userInfo = state.userInfoModel;
         }
-        return null;
+        return userInfo;
       },
       builder: (context, state) {
         return Column(
@@ -29,12 +37,14 @@ class AboutComponent extends StatelessWidget {
               onCallBack: () =>
                   context.read<ProfileBloc>().add(const ProfileGetUserInfo()),
             ),
-            if (state != null)
+            if (userInfo != null)
               Padding(
                 padding: context.padding(top: 8),
                 child: Text(
-                    state.summary ??
+                    userInfo!.summary ??
                         "You don't have introduction, Try write something",
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 4,
                     style: AppFont().fontTheme(context).bodyLarge),
               ),
           ],

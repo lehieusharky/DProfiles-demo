@@ -3,6 +3,7 @@ import 'package:demo_dprofiles/src/features/auth/data/models/auth_error_response
 import 'package:demo_dprofiles/src/features/profile/domain/repositories/profile_repository.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/error_response.dart';
+import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 import 'package:injectable/injectable.dart';
 
 abstract class ProfileUseCase {
@@ -17,6 +18,8 @@ abstract class ProfileUseCase {
   Future<Either<String, BaseResponse>> getUserSkills();
 
   Future<Either<String, BaseResponse>> getUserLanguage();
+
+  Future<Either<String, UploadFileResponse?>> uploadImage();
 }
 
 @Injectable(as: ProfileUseCase)
@@ -73,6 +76,15 @@ class ProfileUseCaseImpl implements ProfileUseCase {
   @override
   Future<Either<String, BaseResponse>> getUserSkills() async {
     final result = await _profileRepository.getUserSkills();
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, UploadFileResponse?>> uploadImage() async {
+    final result = await _profileRepository.uploadImage();
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),

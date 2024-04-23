@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
+import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 
 abstract class ProfileDataSource {
   Future<BaseResponse> getUserInfo();
@@ -12,4 +13,6 @@ abstract class ProfileDataSource {
   Future<BaseResponse> getUserSkills();
 
   Future<BaseResponse> getUserLanguage();
+
+  Future<UploadFileResponse?> uploadImage();
 }

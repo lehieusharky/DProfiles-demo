@@ -125,8 +125,8 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
         items: [
           Tuple3(const Icon(IconsaxOutline.profile_circle), 'Digital Profile',
               () => _onOpenDProfile()),
-          Tuple3(const Icon(IconsaxOutline.edit), 'Edit Profile', () {}),
-          Tuple3(const Icon(IconsaxOutline.setting), 'Account Setting', () {}),
+          Tuple3(const Icon(IconsaxOutline.edit), 'Edit Profile',
+              () => _onEditProfile(context)),
           Tuple3(const Icon(IconsaxOutline.logout), 'Log out',
               () => _logout(context)),
           Tuple3(const Icon(IconsaxOutline.profile_delete), 'Delete Account',
@@ -183,6 +183,10 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
 
   void _deleteAccount(BuildContext context) {
     context.read<DashboardBloc>().add(const DashboardDeleteAccount());
+  }
+
+  void _onEditProfile(BuildContext context) {
+    context.router.push(const EditProfileRoute());
   }
 
   @override

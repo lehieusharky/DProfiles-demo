@@ -49,7 +49,7 @@ class _DashboardPageState extends State<DashboardPage> {
       child: Scaffold(
         key: _scaffoldKey,
         appBar: MyAppbar(
-            titleWidget: Assets.icons.logos.dWhitePWhite.svg(), height: 50),
+            titleWidget: Assets.icons.logos.logoHomeApp.svg(), height: 50),
         endDrawer: const DashboardEndDrawer(),
         body: PageView(
           onPageChanged: (index) => _onNavigate(index),

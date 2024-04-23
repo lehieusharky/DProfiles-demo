@@ -7,6 +7,7 @@ import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.
 import 'package:demo_dprofiles/src/features/profile/data/models/user_language_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_skill_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
+import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -25,6 +26,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<ProfileGetUserExperience>(_getUserExperiences);
     on<ProfileGetUserLanguages>(_getLanguages);
     on<ProfileGetUserSkills>(_getSkills);
+    on<ProfileUploadAvatar>(_uploadAvatar);
   }
 
   Future<void> _getUserInfo(
@@ -121,5 +123,15 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
 
       emit(ProfileGetUserSkillsSuccess(skills));
     });
+  }
+
+  FutureOr<void> _uploadAvatar(
+      ProfileUploadAvatar event, Emitter<ProfileState> emit) async {
+    final result = await profileUseCase.uploadImage();
+
+    result.fold(
+        (l) => emit(
+            ProfileError(message: l, title: 'Upload avatar failed')),
+        (r) => emit(ProfileUploadAvatarSuccess(r)));
   }
 }

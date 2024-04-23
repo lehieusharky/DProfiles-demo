@@ -25,6 +25,7 @@ mixin _$ProfileEvent {
     required TResult Function() getUserCertificates,
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +37,7 @@ mixin _$ProfileEvent {
     TResult? Function()? getUserCertificates,
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +49,7 @@ mixin _$ProfileEvent {
     TResult Function()? getUserCertificates,
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -61,6 +64,7 @@ mixin _$ProfileEvent {
         getUserCertificates,
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,6 +76,7 @@ mixin _$ProfileEvent {
     TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -83,6 +88,7 @@ mixin _$ProfileEvent {
     TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -151,6 +157,7 @@ class _$StartedImpl implements _Started {
     required TResult Function() getUserCertificates,
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
   }) {
     return started();
   }
@@ -165,6 +172,7 @@ class _$StartedImpl implements _Started {
     TResult? Function()? getUserCertificates,
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
   }) {
     return started?.call();
   }
@@ -179,6 +187,7 @@ class _$StartedImpl implements _Started {
     TResult Function()? getUserCertificates,
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -199,6 +208,7 @@ class _$StartedImpl implements _Started {
         getUserCertificates,
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
   }) {
     return started(this);
   }
@@ -213,6 +223,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
   }) {
     return started?.call(this);
   }
@@ -227,6 +238,7 @@ class _$StartedImpl implements _Started {
     TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -285,6 +297,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     required TResult Function() getUserCertificates,
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
   }) {
     return getUserinfo();
   }
@@ -299,6 +312,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function()? getUserCertificates,
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
   }) {
     return getUserinfo?.call();
   }
@@ -313,6 +327,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function()? getUserCertificates,
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -333,6 +348,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
         getUserCertificates,
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
   }) {
     return getUserinfo(this);
   }
@@ -347,6 +363,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
   }) {
     return getUserinfo?.call(this);
   }
@@ -361,6 +378,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -422,6 +440,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     required TResult Function() getUserCertificates,
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
   }) {
     return getUserExperiences();
   }
@@ -436,6 +455,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult? Function()? getUserCertificates,
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
   }) {
     return getUserExperiences?.call();
   }
@@ -450,6 +470,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult Function()? getUserCertificates,
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -470,6 +491,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
         getUserCertificates,
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
   }) {
     return getUserExperiences(this);
   }
@@ -484,6 +506,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
   }) {
     return getUserExperiences?.call(this);
   }
@@ -498,6 +521,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -559,6 +583,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     required TResult Function() getUserCertificates,
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
   }) {
     return getUserEducations();
   }
@@ -573,6 +598,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult? Function()? getUserCertificates,
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
   }) {
     return getUserEducations?.call();
   }
@@ -587,6 +613,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult Function()? getUserCertificates,
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -607,6 +634,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
         getUserCertificates,
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
   }) {
     return getUserEducations(this);
   }
@@ -621,6 +649,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
   }) {
     return getUserEducations?.call(this);
   }
@@ -635,6 +664,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -696,6 +726,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     required TResult Function() getUserCertificates,
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
   }) {
     return getUserCertificates();
   }
@@ -710,6 +741,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult? Function()? getUserCertificates,
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
   }) {
     return getUserCertificates?.call();
   }
@@ -724,6 +756,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult Function()? getUserCertificates,
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -744,6 +777,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
         getUserCertificates,
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
   }) {
     return getUserCertificates(this);
   }
@@ -758,6 +792,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
   }) {
     return getUserCertificates?.call(this);
   }
@@ -772,6 +807,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -831,6 +867,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     required TResult Function() getUserCertificates,
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
   }) {
     return getUserSkills();
   }
@@ -845,6 +882,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult? Function()? getUserCertificates,
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
   }) {
     return getUserSkills?.call();
   }
@@ -859,6 +897,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult Function()? getUserCertificates,
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -879,6 +918,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
         getUserCertificates,
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
   }) {
     return getUserSkills(this);
   }
@@ -893,6 +933,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
   }) {
     return getUserSkills?.call(this);
   }
@@ -907,6 +948,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -968,6 +1010,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     required TResult Function() getUserCertificates,
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
   }) {
     return getUserLanguages();
   }
@@ -982,6 +1025,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult? Function()? getUserCertificates,
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
   }) {
     return getUserLanguages?.call();
   }
@@ -996,6 +1040,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult Function()? getUserCertificates,
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -1016,6 +1061,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
         getUserCertificates,
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
   }) {
     return getUserLanguages(this);
   }
@@ -1030,6 +1076,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
   }) {
     return getUserLanguages?.call(this);
   }
@@ -1044,6 +1091,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -1055,6 +1103,147 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
 
 abstract class ProfileGetUserLanguages implements ProfileEvent {
   const factory ProfileGetUserLanguages() = _$ProfileGetUserLanguagesImpl;
+}
+
+/// @nodoc
+abstract class _$$ProfileUploadAvatarImplCopyWith<$Res> {
+  factory _$$ProfileUploadAvatarImplCopyWith(_$ProfileUploadAvatarImpl value,
+          $Res Function(_$ProfileUploadAvatarImpl) then) =
+      __$$ProfileUploadAvatarImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ProfileUploadAvatarImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileUploadAvatarImpl>
+    implements _$$ProfileUploadAvatarImplCopyWith<$Res> {
+  __$$ProfileUploadAvatarImplCopyWithImpl(_$ProfileUploadAvatarImpl _value,
+      $Res Function(_$ProfileUploadAvatarImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
+  const _$ProfileUploadAvatarImpl();
+
+  @override
+  String toString() {
+    return 'ProfileEvent.uploadAvatar()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileUploadAvatarImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
+  }) {
+    return uploadAvatar();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
+  }) {
+    return uploadAvatar?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
+    required TResult orElse(),
+  }) {
+    if (uploadAvatar != null) {
+      return uploadAvatar();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(ProfileGetUserSkills value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+  }) {
+    return uploadAvatar(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult? Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+  }) {
+    return uploadAvatar?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    required TResult orElse(),
+  }) {
+    if (uploadAvatar != null) {
+      return uploadAvatar(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileUploadAvatar implements ProfileEvent {
+  const factory ProfileUploadAvatar() = _$ProfileUploadAvatarImpl;
 }
 
 /// @nodoc
@@ -1074,6 +1263,8 @@ mixin _$ProfileState {
     required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
     required TResult Function(List<UserLanguageModel> languages)
         getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1090,6 +1281,8 @@ mixin _$ProfileState {
         getUserCertificatesSuccess,
     TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1105,6 +1298,8 @@ mixin _$ProfileState {
         getUserCertificatesSuccess,
     TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1124,6 +1319,8 @@ mixin _$ProfileState {
     required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
     required TResult Function(ProfileGetUserLanguagesSuccess value)
         getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1140,6 +1337,7 @@ mixin _$ProfileState {
         getUserCertificatesSuccess,
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1156,6 +1354,7 @@ mixin _$ProfileState {
         getUserCertificatesSuccess,
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1230,6 +1429,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
     required TResult Function(List<UserLanguageModel> languages)
         getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
   }) {
     return initial();
   }
@@ -1249,6 +1450,8 @@ class _$InitialImpl implements _Initial {
         getUserCertificatesSuccess,
     TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
   }) {
     return initial?.call();
   }
@@ -1267,6 +1470,8 @@ class _$InitialImpl implements _Initial {
         getUserCertificatesSuccess,
     TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1292,6 +1497,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
     required TResult Function(ProfileGetUserLanguagesSuccess value)
         getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
   }) {
     return initial(this);
   }
@@ -1311,6 +1518,7 @@ class _$InitialImpl implements _Initial {
         getUserCertificatesSuccess,
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
   }) {
     return initial?.call(this);
   }
@@ -1330,6 +1538,7 @@ class _$InitialImpl implements _Initial {
         getUserCertificatesSuccess,
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1428,6 +1637,8 @@ class _$ProfileErrorImpl implements ProfileError {
     required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
     required TResult Function(List<UserLanguageModel> languages)
         getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
   }) {
     return error(message, title);
   }
@@ -1447,6 +1658,8 @@ class _$ProfileErrorImpl implements ProfileError {
         getUserCertificatesSuccess,
     TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -1465,6 +1678,8 @@ class _$ProfileErrorImpl implements ProfileError {
         getUserCertificatesSuccess,
     TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1490,6 +1705,8 @@ class _$ProfileErrorImpl implements ProfileError {
     required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
     required TResult Function(ProfileGetUserLanguagesSuccess value)
         getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
   }) {
     return error(this);
   }
@@ -1509,6 +1726,7 @@ class _$ProfileErrorImpl implements ProfileError {
         getUserCertificatesSuccess,
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
   }) {
     return error?.call(this);
   }
@@ -1528,6 +1746,7 @@ class _$ProfileErrorImpl implements ProfileError {
         getUserCertificatesSuccess,
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1600,6 +1819,8 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
     required TResult Function(List<UserLanguageModel> languages)
         getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
   }) {
     return loading();
   }
@@ -1619,6 +1840,8 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         getUserCertificatesSuccess,
     TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
   }) {
     return loading?.call();
   }
@@ -1637,6 +1860,8 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         getUserCertificatesSuccess,
     TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1662,6 +1887,8 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
     required TResult Function(ProfileGetUserLanguagesSuccess value)
         getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
   }) {
     return loading(this);
   }
@@ -1681,6 +1908,7 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         getUserCertificatesSuccess,
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
   }) {
     return loading?.call(this);
   }
@@ -1700,6 +1928,7 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         getUserCertificatesSuccess,
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1804,6 +2033,8 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
     required TResult Function(List<UserLanguageModel> languages)
         getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
   }) {
     return getUserInfoSuccess(userInfoModel);
   }
@@ -1823,6 +2054,8 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         getUserCertificatesSuccess,
     TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
   }) {
     return getUserInfoSuccess?.call(userInfoModel);
   }
@@ -1841,6 +2074,8 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         getUserCertificatesSuccess,
     TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -1866,6 +2101,8 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
     required TResult Function(ProfileGetUserLanguagesSuccess value)
         getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
   }) {
     return getUserInfoSuccess(this);
   }
@@ -1885,6 +2122,7 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         getUserCertificatesSuccess,
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
   }) {
     return getUserInfoSuccess?.call(this);
   }
@@ -1904,6 +2142,7 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         getUserCertificatesSuccess,
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -2015,6 +2254,8 @@ class _$ProfileGetUserExperienceSuccessImpl
     required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
     required TResult Function(List<UserLanguageModel> languages)
         getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
   }) {
     return getUserExperiencesSuccess(experiences);
   }
@@ -2034,6 +2275,8 @@ class _$ProfileGetUserExperienceSuccessImpl
         getUserCertificatesSuccess,
     TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
   }) {
     return getUserExperiencesSuccess?.call(experiences);
   }
@@ -2052,6 +2295,8 @@ class _$ProfileGetUserExperienceSuccessImpl
         getUserCertificatesSuccess,
     TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -2077,6 +2322,8 @@ class _$ProfileGetUserExperienceSuccessImpl
     required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
     required TResult Function(ProfileGetUserLanguagesSuccess value)
         getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
   }) {
     return getUserExperiencesSuccess(this);
   }
@@ -2096,6 +2343,7 @@ class _$ProfileGetUserExperienceSuccessImpl
         getUserCertificatesSuccess,
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
   }) {
     return getUserExperiencesSuccess?.call(this);
   }
@@ -2115,6 +2363,7 @@ class _$ProfileGetUserExperienceSuccessImpl
         getUserCertificatesSuccess,
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -2228,6 +2477,8 @@ class _$ProfileGetUserEducationsSuccessImpl
     required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
     required TResult Function(List<UserLanguageModel> languages)
         getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
   }) {
     return getUserEducationsSuccess(educations);
   }
@@ -2247,6 +2498,8 @@ class _$ProfileGetUserEducationsSuccessImpl
         getUserCertificatesSuccess,
     TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
   }) {
     return getUserEducationsSuccess?.call(educations);
   }
@@ -2265,6 +2518,8 @@ class _$ProfileGetUserEducationsSuccessImpl
         getUserCertificatesSuccess,
     TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -2290,6 +2545,8 @@ class _$ProfileGetUserEducationsSuccessImpl
     required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
     required TResult Function(ProfileGetUserLanguagesSuccess value)
         getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
   }) {
     return getUserEducationsSuccess(this);
   }
@@ -2309,6 +2566,7 @@ class _$ProfileGetUserEducationsSuccessImpl
         getUserCertificatesSuccess,
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
   }) {
     return getUserEducationsSuccess?.call(this);
   }
@@ -2328,6 +2586,7 @@ class _$ProfileGetUserEducationsSuccessImpl
         getUserCertificatesSuccess,
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -2441,6 +2700,8 @@ class _$ProfileGetUserCertificatesSuccessImpl
     required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
     required TResult Function(List<UserLanguageModel> languages)
         getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
   }) {
     return getUserCertificatesSuccess(certificates);
   }
@@ -2460,6 +2721,8 @@ class _$ProfileGetUserCertificatesSuccessImpl
         getUserCertificatesSuccess,
     TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
   }) {
     return getUserCertificatesSuccess?.call(certificates);
   }
@@ -2478,6 +2741,8 @@ class _$ProfileGetUserCertificatesSuccessImpl
         getUserCertificatesSuccess,
     TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -2503,6 +2768,8 @@ class _$ProfileGetUserCertificatesSuccessImpl
     required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
     required TResult Function(ProfileGetUserLanguagesSuccess value)
         getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
   }) {
     return getUserCertificatesSuccess(this);
   }
@@ -2522,6 +2789,7 @@ class _$ProfileGetUserCertificatesSuccessImpl
         getUserCertificatesSuccess,
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
   }) {
     return getUserCertificatesSuccess?.call(this);
   }
@@ -2541,6 +2809,7 @@ class _$ProfileGetUserCertificatesSuccessImpl
         getUserCertificatesSuccess,
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -2651,6 +2920,8 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
     required TResult Function(List<UserLanguageModel> languages)
         getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
   }) {
     return getUserSkills(skillModels);
   }
@@ -2670,6 +2941,8 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         getUserCertificatesSuccess,
     TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
   }) {
     return getUserSkills?.call(skillModels);
   }
@@ -2688,6 +2961,8 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         getUserCertificatesSuccess,
     TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -2713,6 +2988,8 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
     required TResult Function(ProfileGetUserLanguagesSuccess value)
         getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
   }) {
     return getUserSkills(this);
   }
@@ -2732,6 +3009,7 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         getUserCertificatesSuccess,
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
   }) {
     return getUserSkills?.call(this);
   }
@@ -2751,6 +3029,7 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         getUserCertificatesSuccess,
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -2863,6 +3142,8 @@ class _$ProfileGetUserLanguagesSuccessImpl
     required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
     required TResult Function(List<UserLanguageModel> languages)
         getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
   }) {
     return getUserLanguages(languages);
   }
@@ -2882,6 +3163,8 @@ class _$ProfileGetUserLanguagesSuccessImpl
         getUserCertificatesSuccess,
     TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
   }) {
     return getUserLanguages?.call(languages);
   }
@@ -2900,6 +3183,8 @@ class _$ProfileGetUserLanguagesSuccessImpl
         getUserCertificatesSuccess,
     TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -2925,6 +3210,8 @@ class _$ProfileGetUserLanguagesSuccessImpl
     required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
     required TResult Function(ProfileGetUserLanguagesSuccess value)
         getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
   }) {
     return getUserLanguages(this);
   }
@@ -2944,6 +3231,7 @@ class _$ProfileGetUserLanguagesSuccessImpl
         getUserCertificatesSuccess,
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
   }) {
     return getUserLanguages?.call(this);
   }
@@ -2963,6 +3251,7 @@ class _$ProfileGetUserLanguagesSuccessImpl
         getUserCertificatesSuccess,
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -2981,5 +3270,231 @@ abstract class ProfileGetUserLanguagesSuccess implements ProfileState {
   @JsonKey(ignore: true)
   _$$ProfileGetUserLanguagesSuccessImplCopyWith<
           _$ProfileGetUserLanguagesSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileUploadAvatarSuccessImplCopyWith<$Res> {
+  factory _$$ProfileUploadAvatarSuccessImplCopyWith(
+          _$ProfileUploadAvatarSuccessImpl value,
+          $Res Function(_$ProfileUploadAvatarSuccessImpl) then) =
+      __$$ProfileUploadAvatarSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({UploadFileResponse? uploadImageResponse});
+
+  $UploadFileResponseCopyWith<$Res>? get uploadImageResponse;
+}
+
+/// @nodoc
+class __$$ProfileUploadAvatarSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$ProfileUploadAvatarSuccessImpl>
+    implements _$$ProfileUploadAvatarSuccessImplCopyWith<$Res> {
+  __$$ProfileUploadAvatarSuccessImplCopyWithImpl(
+      _$ProfileUploadAvatarSuccessImpl _value,
+      $Res Function(_$ProfileUploadAvatarSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? uploadImageResponse = freezed,
+  }) {
+    return _then(_$ProfileUploadAvatarSuccessImpl(
+      freezed == uploadImageResponse
+          ? _value.uploadImageResponse
+          : uploadImageResponse // ignore: cast_nullable_to_non_nullable
+              as UploadFileResponse?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UploadFileResponseCopyWith<$Res>? get uploadImageResponse {
+    if (_value.uploadImageResponse == null) {
+      return null;
+    }
+
+    return $UploadFileResponseCopyWith<$Res>(_value.uploadImageResponse!,
+        (value) {
+      return _then(_value.copyWith(uploadImageResponse: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
+  const _$ProfileUploadAvatarSuccessImpl(this.uploadImageResponse);
+
+  @override
+  final UploadFileResponse? uploadImageResponse;
+
+  @override
+  String toString() {
+    return 'ProfileState.uploadAvatarSuccess(uploadImageResponse: $uploadImageResponse)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileUploadAvatarSuccessImpl &&
+            (identical(other.uploadImageResponse, uploadImageResponse) ||
+                other.uploadImageResponse == uploadImageResponse));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, uploadImageResponse);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileUploadAvatarSuccessImplCopyWith<_$ProfileUploadAvatarSuccessImpl>
+      get copyWith => __$$ProfileUploadAvatarSuccessImplCopyWithImpl<
+          _$ProfileUploadAvatarSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
+  }) {
+    return uploadAvatarSuccess(uploadImageResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+  }) {
+    return uploadAvatarSuccess?.call(uploadImageResponse);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    required TResult orElse(),
+  }) {
+    if (uploadAvatarSuccess != null) {
+      return uploadAvatarSuccess(uploadImageResponse);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguagesSuccess value)
+        getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
+  }) {
+    return uploadAvatarSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+  }) {
+    return uploadAvatarSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    required TResult orElse(),
+  }) {
+    if (uploadAvatarSuccess != null) {
+      return uploadAvatarSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileUploadAvatarSuccess implements ProfileState {
+  const factory ProfileUploadAvatarSuccess(
+          final UploadFileResponse? uploadImageResponse) =
+      _$ProfileUploadAvatarSuccessImpl;
+
+  UploadFileResponse? get uploadImageResponse;
+  @JsonKey(ignore: true)
+  _$$ProfileUploadAvatarSuccessImplCopyWith<_$ProfileUploadAvatarSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -3,6 +3,7 @@ import 'package:demo_dprofiles/src/features/profile/data/datasoures/profile_data
 import 'package:demo_dprofiles/src/features/profile/domain/repositories/profile_repository.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/error_response.dart';
+import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 
@@ -76,6 +77,18 @@ class ProfileRepositoryImpl implements ProfileRepository {
   Future<Either<ProfileFailure, BaseResponse>> getUserSkills() async {
     try {
       final res = await _profileDataSource.getUserSkills();
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(
+          ProfileFailure(response: ErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<ProfileFailure, UploadFileResponse?>> uploadImage() async {
+    try {
+      final res = await _profileDataSource.uploadImage();
 
       return Right(res);
     } on DioException catch (e) {
