@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
@@ -16,6 +18,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sidebarx/sidebarx.dart';
 import 'package:tuple/tuple.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DashboardEndDrawer extends StatefulWidget {
   const DashboardEndDrawer({Key? key}) : super(key: key);
@@ -129,6 +132,8 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
               () => _onEditProfile(context)),
           Tuple3(const Icon(IconsaxOutline.logout), 'Log out',
               () => _logout(context)),
+          Tuple3(const Icon(IconsaxOutline.paperclip), 'Privacy & Policy',
+              () => _openPrivacyDoc()),
           Tuple3(const Icon(IconsaxOutline.profile_delete), 'Delete Account',
               () => _deleteAccount(context)),
         ]
@@ -191,4 +196,17 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
 
   @override
   bool get wantKeepAlive => true;
+
+  Future<void> _openPrivacyDoc() async {
+    try {
+      final Uri url =
+          Uri.parse('https://docs.dprofiles.xyz/privacy-and-policy');
+
+      if (!await launchUrl(url)) {
+        throw Exception('Could not launch $url');
+      }
+    } catch (e) {
+      log(e.toString());
+    }
+  }
 }
