@@ -51,10 +51,13 @@ class AppConnectWalletService {
       }
     });
 
-    if (_w3mService!.isConnected) {
-      _w3mService!.disconnect();
-    } else {
-      _w3mService!.openModal(context);
-    }
+    _w3mService!.openModal(context);
+  }
+
+  void disconnectWallet(
+    BuildContext context,
+    void Function() onConnected,
+  ) {
+    _w3mService!.disconnect().then((value) => onConnected());
   }
 }

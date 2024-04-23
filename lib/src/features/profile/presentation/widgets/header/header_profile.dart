@@ -50,9 +50,9 @@ class HeaderProfile extends StatelessWidget {
                         style: AppFont().fontTheme(context).bodyLarge,
                       ),
                     ),
-                    const FreelancerLanguageProfile(
+                    FreelancerLanguageProfile(
                       title: 'Freelancer',
-                      nationality: 'US',
+                      nationality: state!.nationality ?? 'USA',
                       available: 'Available',
                     ),
                     Padding(

@@ -1,14 +1,13 @@
 import 'package:auto_route/annotations.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
-import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/auto_generate_history_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/auto_generate_text_to_speech.dart';
 import 'package:demo_dprofiles/src/utils/constant/ai_features_type.dart';
-import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
+import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -37,7 +36,7 @@ class AutoGenerationHistoryDetailPage extends StatelessWidget {
           return MyScaffold(
             useAppBar: true,
             canBack: true,
-            appBarTitle: type.getTitle(context),
+            appBarTitle: 'History details',
             body: state == null
                 ? MyShimmer(count: 5, height: context.height)
                 : Padding(
@@ -45,7 +44,7 @@ class AutoGenerationHistoryDetailPage extends StatelessWidget {
                     child: SingleChildScrollView(
                       child: AutoGenerateTextToSpeech(
                         textGenerated: state.result,
-                        createAt: DateTime.now().toString(),
+                        createAt: state.createdTs.convertToDDMMYYFormat()
                       ),
                     ),
                   ),

@@ -36,8 +36,6 @@ class AiFeaturesBloc extends Bloc<AiFeaturesEvent, AiFeaturesState> {
 
   FutureOr<void> _getAutoGenerateHistory(
       GetAutoGenerateHistory event, Emitter<AiFeaturesState> emit) async {
-    emit(const AiFeaturesLoading());
-
     final result = await autoGenerateUseCase.getAutoGenerateHistory();
 
     result.fold(

@@ -16,7 +16,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sidebarx/sidebarx.dart';
 import 'package:tuple/tuple.dart';
-import 'package:web3modal_flutter/web3modal_flutter.dart';
 
 class DashboardEndDrawer extends StatefulWidget {
   const DashboardEndDrawer({Key? key}) : super(key: key);
@@ -25,7 +24,8 @@ class DashboardEndDrawer extends StatefulWidget {
   State<DashboardEndDrawer> createState() => _DashboardEndDrawerState();
 }
 
-class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
+class _DashboardEndDrawerState extends State<DashboardEndDrawer>
+    with AutomaticKeepAliveClientMixin {
   late SidebarXController _drawerController;
 
   UserInfoModel userInfo = const UserInfoModel();
@@ -38,6 +38,7 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return MultiBlocListener(
       listeners: [
         BlocListener<DashboardBloc, DashboardState>(
@@ -47,6 +48,8 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
             }
 
             if (state is DashboardUpdateWalletAddressSuccess) {
+              context.read<ProfileBloc>().add(const ProfileGetUserInfo());
+
               showErrorDialog(context,
                   title: 'Success',
                   description: 'Update wallet address success');
@@ -108,9 +111,10 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
                   ],
                 ),
                 context.sizedBox(height: 10),
-                W3MAccountButton(service: AppConnectWalletService().w3mService),
                 AppFlatButton(context).elevatedButton(
-                    title: 'Connect Wallet',
+                    title: userInfo.walletAddress == null
+                        ? 'Connect Wallet'
+                        : 'Disconnect wallet',
                     onPressed: () => AppConnectWalletService().connectWallet(
                         context,
                         (walletAddress) => _onConnectWallet(walletAddress))),
@@ -119,12 +123,10 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
           );
         },
         items: [
-          Tuple3(const Icon(IconsaxOutline.wallet), 'My Wallet', () {}),
           Tuple3(const Icon(IconsaxOutline.profile_circle), 'Digital Profile',
               () => _onOpenDProfile()),
           Tuple3(const Icon(IconsaxOutline.edit), 'Edit Profile', () {}),
           Tuple3(const Icon(IconsaxOutline.setting), 'Account Setting', () {}),
-          Tuple3(const Icon(IconsaxOutline.frame), 'Become Influencer', () {}),
           Tuple3(const Icon(IconsaxOutline.logout), 'Log out',
               () => _logout(context)),
           Tuple3(const Icon(IconsaxOutline.profile_delete), 'Delete Account',
@@ -140,8 +142,24 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
     );
   }
 
+  void onWalletButtonPressed() {
+    if (userInfo.walletAddress == null) {
+      AppConnectWalletService().connectWallet(
+          context, (walletAddress) => _onConnectWallet(walletAddress));
+    } else {
+      AppConnectWalletService()
+          .disconnectWallet(context, () => _onDisconnectWallet());
+    }
+  }
+
   void _onConnectWallet(String walletAddress) {
     userInfo = userInfo.copyWith(walletAddress: walletAddress);
+
+    context.read<DashboardBloc>().add(DashboardUpdateWalletAddress(userInfo));
+  }
+
+  void _onDisconnectWallet() {
+    userInfo = userInfo.copyWith(walletAddress: null);
 
     context.read<DashboardBloc>().add(DashboardUpdateWalletAddress(userInfo));
   }
@@ -166,4 +184,7 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
   void _deleteAccount(BuildContext context) {
     context.read<DashboardBloc>().add(const DashboardDeleteAccount());
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

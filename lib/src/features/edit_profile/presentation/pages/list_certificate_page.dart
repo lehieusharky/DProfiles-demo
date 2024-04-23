@@ -49,7 +49,7 @@ class _ListCertificatePageState extends State<ListCertificatePage> {
                         padding: context.padding(vertical: 32, bottom: 12),
                         child: AppFlatButton(context).elevatedButton(
                             width: context.width,
-                            title: 'Add new education',
+                            title: 'Add New Certificate',
                             onPressed: () => context.router
                                 .push(const AddNewCertificateRoute())
                                 .then((value) => value != null
