@@ -9,7 +9,7 @@ abstract class CreateDigitalProfileDataSource {
 
   Future<BaseResponse> getUserInfo();
 
-  Future<bool> checkDigitalProfileIsAvailable();
+  Future<BaseResponse> checkDigitalProfileIsAvailable();
 
   // certificate
 

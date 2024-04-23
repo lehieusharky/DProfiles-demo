@@ -50,6 +50,10 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
               _logout(context);
             }
 
+            if (state is DashboardCheckDigitalProfileAvailableSuccess) {
+              _onCheckDigitalProfileSuccess(state.status);
+            }
+
             if (state is DashboardUpdateWalletAddressSuccess) {
               context.read<ProfileBloc>().add(const ProfileGetUserInfo());
 
@@ -127,7 +131,7 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
         },
         items: [
           Tuple3(const Icon(IconsaxOutline.profile_circle), 'Digital Profile',
-              () => _onOpenDProfile()),
+              () => _onOpenDProfile(context)),
           Tuple3(const Icon(IconsaxOutline.edit), 'Edit Profile',
               () => _onEditProfile(context)),
           Tuple3(const Icon(IconsaxOutline.logout), 'Log out',
@@ -169,8 +173,14 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
     context.read<DashboardBloc>().add(DashboardUpdateWalletAddress(userInfo));
   }
 
-  void _onOpenDProfile() {
-    if (userInfo.walletAddress == null) {
+  void _onOpenDProfile(BuildContext context) {
+    context
+        .read<DashboardBloc>()
+        .add(const DashboardCheckDigitalProfileAvailable());
+  }
+
+  void _onCheckDigitalProfileSuccess(bool status) {
+    if (!status) {
       showErrorDialog(context,
           title: "Failed", description: "You don't have digital profile");
     } else {

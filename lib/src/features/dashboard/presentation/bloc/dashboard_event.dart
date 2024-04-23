@@ -8,4 +8,7 @@ class DashboardEvent with _$DashboardEvent {
 
   const factory DashboardEvent.updateWalletAddress(UserInfoModel userInfo) =
       DashboardUpdateWalletAddress;
+
+  const factory DashboardEvent.checkDigitalProfileAvailable() =
+      DashboardCheckDigitalProfileAvailable;
 }

@@ -21,6 +21,7 @@ mixin _$DashboardEvent {
     required TResult Function() logout,
     required TResult Function() deleteAccount,
     required TResult Function(UserInfoModel userInfo) updateWalletAddress,
+    required TResult Function() checkDigitalProfileAvailable,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$DashboardEvent {
     TResult? Function()? logout,
     TResult? Function()? deleteAccount,
     TResult? Function(UserInfoModel userInfo)? updateWalletAddress,
+    TResult? Function()? checkDigitalProfileAvailable,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$DashboardEvent {
     TResult Function()? logout,
     TResult Function()? deleteAccount,
     TResult Function(UserInfoModel userInfo)? updateWalletAddress,
+    TResult Function()? checkDigitalProfileAvailable,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -44,6 +47,8 @@ mixin _$DashboardEvent {
     required TResult Function(DashboardDeleteAccount value) deleteAccount,
     required TResult Function(DashboardUpdateWalletAddress value)
         updateWalletAddress,
+    required TResult Function(DashboardCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +56,8 @@ mixin _$DashboardEvent {
     TResult? Function(DashboardLogOut value)? logout,
     TResult? Function(DashboardDeleteAccount value)? deleteAccount,
     TResult? Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
+    TResult? Function(DashboardCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +65,8 @@ mixin _$DashboardEvent {
     TResult Function(DashboardLogOut value)? logout,
     TResult Function(DashboardDeleteAccount value)? deleteAccount,
     TResult Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
+    TResult Function(DashboardCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -122,6 +131,7 @@ class _$DashboardLogOutImpl implements DashboardLogOut {
     required TResult Function() logout,
     required TResult Function() deleteAccount,
     required TResult Function(UserInfoModel userInfo) updateWalletAddress,
+    required TResult Function() checkDigitalProfileAvailable,
   }) {
     return logout();
   }
@@ -132,6 +142,7 @@ class _$DashboardLogOutImpl implements DashboardLogOut {
     TResult? Function()? logout,
     TResult? Function()? deleteAccount,
     TResult? Function(UserInfoModel userInfo)? updateWalletAddress,
+    TResult? Function()? checkDigitalProfileAvailable,
   }) {
     return logout?.call();
   }
@@ -142,6 +153,7 @@ class _$DashboardLogOutImpl implements DashboardLogOut {
     TResult Function()? logout,
     TResult Function()? deleteAccount,
     TResult Function(UserInfoModel userInfo)? updateWalletAddress,
+    TResult Function()? checkDigitalProfileAvailable,
     required TResult orElse(),
   }) {
     if (logout != null) {
@@ -157,6 +169,8 @@ class _$DashboardLogOutImpl implements DashboardLogOut {
     required TResult Function(DashboardDeleteAccount value) deleteAccount,
     required TResult Function(DashboardUpdateWalletAddress value)
         updateWalletAddress,
+    required TResult Function(DashboardCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
   }) {
     return logout(this);
   }
@@ -167,6 +181,8 @@ class _$DashboardLogOutImpl implements DashboardLogOut {
     TResult? Function(DashboardLogOut value)? logout,
     TResult? Function(DashboardDeleteAccount value)? deleteAccount,
     TResult? Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
+    TResult? Function(DashboardCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
   }) {
     return logout?.call(this);
   }
@@ -177,6 +193,8 @@ class _$DashboardLogOutImpl implements DashboardLogOut {
     TResult Function(DashboardLogOut value)? logout,
     TResult Function(DashboardDeleteAccount value)? deleteAccount,
     TResult Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
+    TResult Function(DashboardCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
     required TResult orElse(),
   }) {
     if (logout != null) {
@@ -234,6 +252,7 @@ class _$DashboardDeleteAccountImpl implements DashboardDeleteAccount {
     required TResult Function() logout,
     required TResult Function() deleteAccount,
     required TResult Function(UserInfoModel userInfo) updateWalletAddress,
+    required TResult Function() checkDigitalProfileAvailable,
   }) {
     return deleteAccount();
   }
@@ -244,6 +263,7 @@ class _$DashboardDeleteAccountImpl implements DashboardDeleteAccount {
     TResult? Function()? logout,
     TResult? Function()? deleteAccount,
     TResult? Function(UserInfoModel userInfo)? updateWalletAddress,
+    TResult? Function()? checkDigitalProfileAvailable,
   }) {
     return deleteAccount?.call();
   }
@@ -254,6 +274,7 @@ class _$DashboardDeleteAccountImpl implements DashboardDeleteAccount {
     TResult Function()? logout,
     TResult Function()? deleteAccount,
     TResult Function(UserInfoModel userInfo)? updateWalletAddress,
+    TResult Function()? checkDigitalProfileAvailable,
     required TResult orElse(),
   }) {
     if (deleteAccount != null) {
@@ -269,6 +290,8 @@ class _$DashboardDeleteAccountImpl implements DashboardDeleteAccount {
     required TResult Function(DashboardDeleteAccount value) deleteAccount,
     required TResult Function(DashboardUpdateWalletAddress value)
         updateWalletAddress,
+    required TResult Function(DashboardCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
   }) {
     return deleteAccount(this);
   }
@@ -279,6 +302,8 @@ class _$DashboardDeleteAccountImpl implements DashboardDeleteAccount {
     TResult? Function(DashboardLogOut value)? logout,
     TResult? Function(DashboardDeleteAccount value)? deleteAccount,
     TResult? Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
+    TResult? Function(DashboardCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
   }) {
     return deleteAccount?.call(this);
   }
@@ -289,6 +314,8 @@ class _$DashboardDeleteAccountImpl implements DashboardDeleteAccount {
     TResult Function(DashboardLogOut value)? logout,
     TResult Function(DashboardDeleteAccount value)? deleteAccount,
     TResult Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
+    TResult Function(DashboardCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
     required TResult orElse(),
   }) {
     if (deleteAccount != null) {
@@ -386,6 +413,7 @@ class _$DashboardUpdateWalletAddressImpl
     required TResult Function() logout,
     required TResult Function() deleteAccount,
     required TResult Function(UserInfoModel userInfo) updateWalletAddress,
+    required TResult Function() checkDigitalProfileAvailable,
   }) {
     return updateWalletAddress(userInfo);
   }
@@ -396,6 +424,7 @@ class _$DashboardUpdateWalletAddressImpl
     TResult? Function()? logout,
     TResult? Function()? deleteAccount,
     TResult? Function(UserInfoModel userInfo)? updateWalletAddress,
+    TResult? Function()? checkDigitalProfileAvailable,
   }) {
     return updateWalletAddress?.call(userInfo);
   }
@@ -406,6 +435,7 @@ class _$DashboardUpdateWalletAddressImpl
     TResult Function()? logout,
     TResult Function()? deleteAccount,
     TResult Function(UserInfoModel userInfo)? updateWalletAddress,
+    TResult Function()? checkDigitalProfileAvailable,
     required TResult orElse(),
   }) {
     if (updateWalletAddress != null) {
@@ -421,6 +451,8 @@ class _$DashboardUpdateWalletAddressImpl
     required TResult Function(DashboardDeleteAccount value) deleteAccount,
     required TResult Function(DashboardUpdateWalletAddress value)
         updateWalletAddress,
+    required TResult Function(DashboardCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
   }) {
     return updateWalletAddress(this);
   }
@@ -431,6 +463,8 @@ class _$DashboardUpdateWalletAddressImpl
     TResult? Function(DashboardLogOut value)? logout,
     TResult? Function(DashboardDeleteAccount value)? deleteAccount,
     TResult? Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
+    TResult? Function(DashboardCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
   }) {
     return updateWalletAddress?.call(this);
   }
@@ -441,6 +475,8 @@ class _$DashboardUpdateWalletAddressImpl
     TResult Function(DashboardLogOut value)? logout,
     TResult Function(DashboardDeleteAccount value)? deleteAccount,
     TResult Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
+    TResult Function(DashboardCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
     required TResult orElse(),
   }) {
     if (updateWalletAddress != null) {
@@ -462,6 +498,130 @@ abstract class DashboardUpdateWalletAddress implements DashboardEvent {
 }
 
 /// @nodoc
+abstract class _$$DashboardCheckDigitalProfileAvailableImplCopyWith<$Res> {
+  factory _$$DashboardCheckDigitalProfileAvailableImplCopyWith(
+          _$DashboardCheckDigitalProfileAvailableImpl value,
+          $Res Function(_$DashboardCheckDigitalProfileAvailableImpl) then) =
+      __$$DashboardCheckDigitalProfileAvailableImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DashboardCheckDigitalProfileAvailableImplCopyWithImpl<$Res>
+    extends _$DashboardEventCopyWithImpl<$Res,
+        _$DashboardCheckDigitalProfileAvailableImpl>
+    implements _$$DashboardCheckDigitalProfileAvailableImplCopyWith<$Res> {
+  __$$DashboardCheckDigitalProfileAvailableImplCopyWithImpl(
+      _$DashboardCheckDigitalProfileAvailableImpl _value,
+      $Res Function(_$DashboardCheckDigitalProfileAvailableImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$DashboardCheckDigitalProfileAvailableImpl
+    implements DashboardCheckDigitalProfileAvailable {
+  const _$DashboardCheckDigitalProfileAvailableImpl();
+
+  @override
+  String toString() {
+    return 'DashboardEvent.checkDigitalProfileAvailable()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DashboardCheckDigitalProfileAvailableImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() logout,
+    required TResult Function() deleteAccount,
+    required TResult Function(UserInfoModel userInfo) updateWalletAddress,
+    required TResult Function() checkDigitalProfileAvailable,
+  }) {
+    return checkDigitalProfileAvailable();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? logout,
+    TResult? Function()? deleteAccount,
+    TResult? Function(UserInfoModel userInfo)? updateWalletAddress,
+    TResult? Function()? checkDigitalProfileAvailable,
+  }) {
+    return checkDigitalProfileAvailable?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? logout,
+    TResult Function()? deleteAccount,
+    TResult Function(UserInfoModel userInfo)? updateWalletAddress,
+    TResult Function()? checkDigitalProfileAvailable,
+    required TResult orElse(),
+  }) {
+    if (checkDigitalProfileAvailable != null) {
+      return checkDigitalProfileAvailable();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(DashboardLogOut value) logout,
+    required TResult Function(DashboardDeleteAccount value) deleteAccount,
+    required TResult Function(DashboardUpdateWalletAddress value)
+        updateWalletAddress,
+    required TResult Function(DashboardCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
+  }) {
+    return checkDigitalProfileAvailable(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(DashboardLogOut value)? logout,
+    TResult? Function(DashboardDeleteAccount value)? deleteAccount,
+    TResult? Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
+    TResult? Function(DashboardCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+  }) {
+    return checkDigitalProfileAvailable?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(DashboardLogOut value)? logout,
+    TResult Function(DashboardDeleteAccount value)? deleteAccount,
+    TResult Function(DashboardUpdateWalletAddress value)? updateWalletAddress,
+    TResult Function(DashboardCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    required TResult orElse(),
+  }) {
+    if (checkDigitalProfileAvailable != null) {
+      return checkDigitalProfileAvailable(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DashboardCheckDigitalProfileAvailable implements DashboardEvent {
+  const factory DashboardCheckDigitalProfileAvailable() =
+      _$DashboardCheckDigitalProfileAvailableImpl;
+}
+
+/// @nodoc
 mixin _$DashboardState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -471,6 +631,7 @@ mixin _$DashboardState {
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
     required TResult Function() updateWalletAddressSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -481,6 +642,7 @@ mixin _$DashboardState {
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
     TResult? Function()? updateWalletAddressSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -491,6 +653,7 @@ mixin _$DashboardState {
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
     TResult Function()? updateWalletAddressSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -504,6 +667,9 @@ mixin _$DashboardState {
     required TResult Function(DashboardError value) error,
     required TResult Function(DashboardUpdateWalletAddressSuccess value)
         updateWalletAddressSuccess,
+    required TResult Function(
+            DashboardCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -516,6 +682,8 @@ mixin _$DashboardState {
     TResult? Function(DashboardError value)? error,
     TResult? Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult? Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -527,6 +695,8 @@ mixin _$DashboardState {
     TResult Function(DashboardError value)? error,
     TResult Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -594,6 +764,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
     required TResult Function() updateWalletAddressSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
   }) {
     return initial();
   }
@@ -607,6 +778,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
     TResult? Function()? updateWalletAddressSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
   }) {
     return initial?.call();
   }
@@ -620,6 +792,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
     TResult Function()? updateWalletAddressSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -639,6 +812,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(DashboardError value) error,
     required TResult Function(DashboardUpdateWalletAddressSuccess value)
         updateWalletAddressSuccess,
+    required TResult Function(
+            DashboardCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
   }) {
     return initial(this);
   }
@@ -654,6 +830,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(DashboardError value)? error,
     TResult? Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult? Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
   }) {
     return initial?.call(this);
   }
@@ -668,6 +846,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(DashboardError value)? error,
     TResult Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -728,6 +908,7 @@ class _$DashboardLogOutSuccessImpl implements DashboardLogOutSuccess {
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
     required TResult Function() updateWalletAddressSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
   }) {
     return logoutSuccess();
   }
@@ -741,6 +922,7 @@ class _$DashboardLogOutSuccessImpl implements DashboardLogOutSuccess {
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
     TResult? Function()? updateWalletAddressSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
   }) {
     return logoutSuccess?.call();
   }
@@ -754,6 +936,7 @@ class _$DashboardLogOutSuccessImpl implements DashboardLogOutSuccess {
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
     TResult Function()? updateWalletAddressSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) {
     if (logoutSuccess != null) {
@@ -773,6 +956,9 @@ class _$DashboardLogOutSuccessImpl implements DashboardLogOutSuccess {
     required TResult Function(DashboardError value) error,
     required TResult Function(DashboardUpdateWalletAddressSuccess value)
         updateWalletAddressSuccess,
+    required TResult Function(
+            DashboardCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
   }) {
     return logoutSuccess(this);
   }
@@ -788,6 +974,8 @@ class _$DashboardLogOutSuccessImpl implements DashboardLogOutSuccess {
     TResult? Function(DashboardError value)? error,
     TResult? Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult? Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
   }) {
     return logoutSuccess?.call(this);
   }
@@ -802,6 +990,8 @@ class _$DashboardLogOutSuccessImpl implements DashboardLogOutSuccess {
     TResult Function(DashboardError value)? error,
     TResult Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) {
     if (logoutSuccess != null) {
@@ -864,6 +1054,7 @@ class _$DashboardDeleteAccountSuccessImpl
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
     required TResult Function() updateWalletAddressSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
   }) {
     return deleteAccountSuccess();
   }
@@ -877,6 +1068,7 @@ class _$DashboardDeleteAccountSuccessImpl
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
     TResult? Function()? updateWalletAddressSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
   }) {
     return deleteAccountSuccess?.call();
   }
@@ -890,6 +1082,7 @@ class _$DashboardDeleteAccountSuccessImpl
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
     TResult Function()? updateWalletAddressSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) {
     if (deleteAccountSuccess != null) {
@@ -909,6 +1102,9 @@ class _$DashboardDeleteAccountSuccessImpl
     required TResult Function(DashboardError value) error,
     required TResult Function(DashboardUpdateWalletAddressSuccess value)
         updateWalletAddressSuccess,
+    required TResult Function(
+            DashboardCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
   }) {
     return deleteAccountSuccess(this);
   }
@@ -924,6 +1120,8 @@ class _$DashboardDeleteAccountSuccessImpl
     TResult? Function(DashboardError value)? error,
     TResult? Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult? Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
   }) {
     return deleteAccountSuccess?.call(this);
   }
@@ -938,6 +1136,8 @@ class _$DashboardDeleteAccountSuccessImpl
     TResult Function(DashboardError value)? error,
     TResult Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) {
     if (deleteAccountSuccess != null) {
@@ -996,6 +1196,7 @@ class _$DashboardLoadingImpl implements DashboardLoading {
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
     required TResult Function() updateWalletAddressSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
   }) {
     return loading();
   }
@@ -1009,6 +1210,7 @@ class _$DashboardLoadingImpl implements DashboardLoading {
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
     TResult? Function()? updateWalletAddressSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
   }) {
     return loading?.call();
   }
@@ -1022,6 +1224,7 @@ class _$DashboardLoadingImpl implements DashboardLoading {
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
     TResult Function()? updateWalletAddressSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1041,6 +1244,9 @@ class _$DashboardLoadingImpl implements DashboardLoading {
     required TResult Function(DashboardError value) error,
     required TResult Function(DashboardUpdateWalletAddressSuccess value)
         updateWalletAddressSuccess,
+    required TResult Function(
+            DashboardCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
   }) {
     return loading(this);
   }
@@ -1056,6 +1262,8 @@ class _$DashboardLoadingImpl implements DashboardLoading {
     TResult? Function(DashboardError value)? error,
     TResult? Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult? Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
   }) {
     return loading?.call(this);
   }
@@ -1070,6 +1278,8 @@ class _$DashboardLoadingImpl implements DashboardLoading {
     TResult Function(DashboardError value)? error,
     TResult Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1162,6 +1372,7 @@ class _$DashboardErrorImpl implements DashboardError {
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
     required TResult Function() updateWalletAddressSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
   }) {
     return error(title, msg);
   }
@@ -1175,6 +1386,7 @@ class _$DashboardErrorImpl implements DashboardError {
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
     TResult? Function()? updateWalletAddressSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
   }) {
     return error?.call(title, msg);
   }
@@ -1188,6 +1400,7 @@ class _$DashboardErrorImpl implements DashboardError {
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
     TResult Function()? updateWalletAddressSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1207,6 +1420,9 @@ class _$DashboardErrorImpl implements DashboardError {
     required TResult Function(DashboardError value) error,
     required TResult Function(DashboardUpdateWalletAddressSuccess value)
         updateWalletAddressSuccess,
+    required TResult Function(
+            DashboardCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
   }) {
     return error(this);
   }
@@ -1222,6 +1438,8 @@ class _$DashboardErrorImpl implements DashboardError {
     TResult? Function(DashboardError value)? error,
     TResult? Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult? Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
   }) {
     return error?.call(this);
   }
@@ -1236,6 +1454,8 @@ class _$DashboardErrorImpl implements DashboardError {
     TResult Function(DashboardError value)? error,
     TResult Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1306,6 +1526,7 @@ class _$DashboardUpdateWalletAddressSuccessImpl
     required TResult Function() loading,
     required TResult Function(String title, String msg) error,
     required TResult Function() updateWalletAddressSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
   }) {
     return updateWalletAddressSuccess();
   }
@@ -1319,6 +1540,7 @@ class _$DashboardUpdateWalletAddressSuccessImpl
     TResult? Function()? loading,
     TResult? Function(String title, String msg)? error,
     TResult? Function()? updateWalletAddressSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
   }) {
     return updateWalletAddressSuccess?.call();
   }
@@ -1332,6 +1554,7 @@ class _$DashboardUpdateWalletAddressSuccessImpl
     TResult Function()? loading,
     TResult Function(String title, String msg)? error,
     TResult Function()? updateWalletAddressSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) {
     if (updateWalletAddressSuccess != null) {
@@ -1351,6 +1574,9 @@ class _$DashboardUpdateWalletAddressSuccessImpl
     required TResult Function(DashboardError value) error,
     required TResult Function(DashboardUpdateWalletAddressSuccess value)
         updateWalletAddressSuccess,
+    required TResult Function(
+            DashboardCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
   }) {
     return updateWalletAddressSuccess(this);
   }
@@ -1366,6 +1592,8 @@ class _$DashboardUpdateWalletAddressSuccessImpl
     TResult? Function(DashboardError value)? error,
     TResult? Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult? Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
   }) {
     return updateWalletAddressSuccess?.call(this);
   }
@@ -1380,6 +1608,8 @@ class _$DashboardUpdateWalletAddressSuccessImpl
     TResult Function(DashboardError value)? error,
     TResult Function(DashboardUpdateWalletAddressSuccess value)?
         updateWalletAddressSuccess,
+    TResult Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
     required TResult orElse(),
   }) {
     if (updateWalletAddressSuccess != null) {
@@ -1392,4 +1622,190 @@ class _$DashboardUpdateWalletAddressSuccessImpl
 abstract class DashboardUpdateWalletAddressSuccess implements DashboardState {
   const factory DashboardUpdateWalletAddressSuccess() =
       _$DashboardUpdateWalletAddressSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$DashboardCheckDigitalProfileAvailableSuccessImplCopyWith<
+    $Res> {
+  factory _$$DashboardCheckDigitalProfileAvailableSuccessImplCopyWith(
+          _$DashboardCheckDigitalProfileAvailableSuccessImpl value,
+          $Res Function(_$DashboardCheckDigitalProfileAvailableSuccessImpl)
+              then) =
+      __$$DashboardCheckDigitalProfileAvailableSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool status});
+}
+
+/// @nodoc
+class __$$DashboardCheckDigitalProfileAvailableSuccessImplCopyWithImpl<$Res>
+    extends _$DashboardStateCopyWithImpl<$Res,
+        _$DashboardCheckDigitalProfileAvailableSuccessImpl>
+    implements
+        _$$DashboardCheckDigitalProfileAvailableSuccessImplCopyWith<$Res> {
+  __$$DashboardCheckDigitalProfileAvailableSuccessImplCopyWithImpl(
+      _$DashboardCheckDigitalProfileAvailableSuccessImpl _value,
+      $Res Function(_$DashboardCheckDigitalProfileAvailableSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? status = null,
+  }) {
+    return _then(_$DashboardCheckDigitalProfileAvailableSuccessImpl(
+      null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DashboardCheckDigitalProfileAvailableSuccessImpl
+    implements DashboardCheckDigitalProfileAvailableSuccess {
+  const _$DashboardCheckDigitalProfileAvailableSuccessImpl(this.status);
+
+  @override
+  final bool status;
+
+  @override
+  String toString() {
+    return 'DashboardState.checkDigitalProfileAvailableSuccess(status: $status)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DashboardCheckDigitalProfileAvailableSuccessImpl &&
+            (identical(other.status, status) || other.status == status));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, status);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DashboardCheckDigitalProfileAvailableSuccessImplCopyWith<
+          _$DashboardCheckDigitalProfileAvailableSuccessImpl>
+      get copyWith =>
+          __$$DashboardCheckDigitalProfileAvailableSuccessImplCopyWithImpl<
+                  _$DashboardCheckDigitalProfileAvailableSuccessImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() logoutSuccess,
+    required TResult Function() deleteAccountSuccess,
+    required TResult Function() loading,
+    required TResult Function(String title, String msg) error,
+    required TResult Function() updateWalletAddressSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+  }) {
+    return checkDigitalProfileAvailableSuccess(status);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? logoutSuccess,
+    TResult? Function()? deleteAccountSuccess,
+    TResult? Function()? loading,
+    TResult? Function(String title, String msg)? error,
+    TResult? Function()? updateWalletAddressSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+  }) {
+    return checkDigitalProfileAvailableSuccess?.call(status);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? logoutSuccess,
+    TResult Function()? deleteAccountSuccess,
+    TResult Function()? loading,
+    TResult Function(String title, String msg)? error,
+    TResult Function()? updateWalletAddressSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    required TResult orElse(),
+  }) {
+    if (checkDigitalProfileAvailableSuccess != null) {
+      return checkDigitalProfileAvailableSuccess(status);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(DashboardLogOutSuccess value) logoutSuccess,
+    required TResult Function(DashboardDeleteAccountSuccess value)
+        deleteAccountSuccess,
+    required TResult Function(DashboardLoading value) loading,
+    required TResult Function(DashboardError value) error,
+    required TResult Function(DashboardUpdateWalletAddressSuccess value)
+        updateWalletAddressSuccess,
+    required TResult Function(
+            DashboardCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
+  }) {
+    return checkDigitalProfileAvailableSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(DashboardLogOutSuccess value)? logoutSuccess,
+    TResult? Function(DashboardDeleteAccountSuccess value)?
+        deleteAccountSuccess,
+    TResult? Function(DashboardLoading value)? loading,
+    TResult? Function(DashboardError value)? error,
+    TResult? Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
+    TResult? Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+  }) {
+    return checkDigitalProfileAvailableSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(DashboardLogOutSuccess value)? logoutSuccess,
+    TResult Function(DashboardDeleteAccountSuccess value)? deleteAccountSuccess,
+    TResult Function(DashboardLoading value)? loading,
+    TResult Function(DashboardError value)? error,
+    TResult Function(DashboardUpdateWalletAddressSuccess value)?
+        updateWalletAddressSuccess,
+    TResult Function(DashboardCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    required TResult orElse(),
+  }) {
+    if (checkDigitalProfileAvailableSuccess != null) {
+      return checkDigitalProfileAvailableSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class DashboardCheckDigitalProfileAvailableSuccess
+    implements DashboardState {
+  const factory DashboardCheckDigitalProfileAvailableSuccess(
+      final bool status) = _$DashboardCheckDigitalProfileAvailableSuccessImpl;
+
+  bool get status;
+  @JsonKey(ignore: true)
+  _$$DashboardCheckDigitalProfileAvailableSuccessImplCopyWith<
+          _$DashboardCheckDigitalProfileAvailableSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

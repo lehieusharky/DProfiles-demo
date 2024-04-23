@@ -12,6 +12,9 @@ abstract class CreateDigitalProfileRepository {
 
   Future<Either<CreateDigitalProfileFailure, BaseResponse>> getUserInfo();
 
+  Future<Either<CreateDigitalProfileFailure, BaseResponse>>
+      checkDigitalProfileIsAvailable();
+
   // certificate
 
   Future<Either<CreateDigitalProfileFailure, BaseResponse>>
@@ -64,7 +67,8 @@ abstract class CreateDigitalProfileRepository {
 
   Future<Either<CreateDigitalProfileFailure, void>> createDigitalProfile();
 
-  Future<Either<CreateDigitalProfileFailure, BaseResponse>> updateDigitalProfile();
+  Future<Either<CreateDigitalProfileFailure, BaseResponse>>
+      updateDigitalProfile();
 }
 
 class CreateDigitalProfileFailure extends AppFailure {

@@ -1,4 +1,3 @@
-import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
@@ -14,7 +13,7 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tuple/tuple.dart';
@@ -50,17 +49,6 @@ class MyDigitalProfilePage extends StatelessWidget {
                       style: AppFont()
                           .fontTheme(context, weight: FontWeight.w600)
                           .titleSmall,
-                    ),
-                    TextButton(
-                      onPressed: () => context.router
-                          .push(const HistoryUpdateDigitalProfileRoute()),
-                      child: Text(
-                        'View History',
-                        style: AppFont()
-                            .fontTheme(context,
-                                color: colorScheme(context).primary)
-                            .bodyMedium,
-                      ),
                     ),
                   ],
                 ),
@@ -120,7 +108,7 @@ class _BasicInfoOfDigitalProfileState extends State<BasicInfoOfDigitalProfile> {
           child: Column(
               children: [
             Tuple2('Name', userInfo!.username),
-            Tuple2('DOB', userInfo!.birthDay.convertToDDMMYYFormat()),
+            Tuple2('DOB', userInfo!.birthDay),
             Tuple2('Nationality', userInfo!.nationality),
             Tuple2('ID Card Number', userInfo!.idCardNumber),
           ]
