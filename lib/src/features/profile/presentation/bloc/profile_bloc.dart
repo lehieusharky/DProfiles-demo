@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
@@ -7,6 +8,7 @@ import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.
 import 'package:demo_dprofiles/src/features/profile/data/models/user_language_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_skill_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
+import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -16,8 +18,10 @@ part 'profile_bloc.freezed.dart';
 
 class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   final ProfileUseCase profileUseCase;
+  final CreateDigitalProfileUseCase createDigitalProfileUseCase;
 
-  ProfileBloc(this.profileUseCase) : super(const ProfileState.initial()) {
+  ProfileBloc(this.profileUseCase, this.createDigitalProfileUseCase)
+      : super(const ProfileState.initial()) {
     on<ProfileGetUserInfo>(_getUserInfo);
 
     on<ProfileGetUserCertificates>(_getUserCertificates);
@@ -25,6 +29,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<ProfileGetUserExperience>(_getUserExperiences);
     on<ProfileGetUserLanguages>(_getLanguages);
     on<ProfileGetUserSkills>(_getSkills);
+    on<ProfileUploadAvatar>(_uploadAvatar);
+    on<ProfileCheckDigitalProfileAvailable>(_checkDigitalProfileAvailable);
   }
 
   Future<void> _getUserInfo(
@@ -121,5 +127,28 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
 
       emit(ProfileGetUserSkillsSuccess(skills));
     });
+  }
+
+  FutureOr<void> _uploadAvatar(
+      ProfileUploadAvatar event, Emitter<ProfileState> emit) async {
+    final result = await profileUseCase.uploadImage();
+
+    result.fold(
+        (l) => emit(ProfileError(message: l, title: 'Upload avatar failed')),
+        (r) => emit(ProfileUploadAvatarSuccess(r)));
+  }
+
+  FutureOr<void> _checkDigitalProfileAvailable(
+      ProfileCheckDigitalProfileAvailable event,
+      Emitter<ProfileState> emit) async {
+    emit(const ProfileLoading());
+    final status =
+        await createDigitalProfileUseCase.checkDigitalProfileIsAvailable();
+
+    status.fold(
+      (l) => emit(const ProfileCheckDigitalProfileAvailableSuccess(false)),
+      (r) => emit(ProfileCheckDigitalProfileAvailableSuccess(
+          r.data != null ? true : false)),
+    );
   }
 }

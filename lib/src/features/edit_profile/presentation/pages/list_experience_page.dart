@@ -3,11 +3,9 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
-import 'package:demo_dprofiles/src/utils/extensions/ext_models/ext_certificate_model.dart';
 import 'package:demo_dprofiles/src/utils/extensions/ext_models/ext_experience_model.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +49,7 @@ class _ListExperiencePageState extends State<ListExperiencePage> {
                         padding: context.padding(vertical: 32, bottom: 12),
                         child: AppFlatButton(context).elevatedButton(
                             width: context.width,
-                            title: 'Add new experience',
+                            title: 'Add New Experience',
                             onPressed: () => context.router
                                 .push(const AddNewExperienceRoute())
                                 .then((value) => value != null

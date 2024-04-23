@@ -28,6 +28,7 @@ class SignUpPage extends StatelessWidget {
           horizontalMargin: 32,
           useAppBar: true,
           canBack: true,
+          resizeToAvoidBottomInset: false,
           body: Column(
             children: [
               AuthLogo(),

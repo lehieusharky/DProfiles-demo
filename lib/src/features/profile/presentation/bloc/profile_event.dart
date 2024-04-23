@@ -15,4 +15,9 @@ class ProfileEvent with _$ProfileEvent {
   const factory ProfileEvent.getUserSkills() = ProfileGetUserSkills;
 
   const factory ProfileEvent.getUserLanguages() = ProfileGetUserLanguages;
+
+  const factory ProfileEvent.uploadAvatar() = ProfileUploadAvatar;
+
+  const factory ProfileEvent.checkDigitalProfileAvailable() =
+      ProfileCheckDigitalProfileAvailable;
 }

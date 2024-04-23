@@ -8,6 +8,8 @@ import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/wr
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/header_auto_gen.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/write_profile_introduction/presentation/widgets/profile_introduction_generation.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/chat_gpt_selector.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/list_auto_generate_history.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/view_history_title.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,12 +37,16 @@ class _WriteProfileIntroductionPageState
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-          injector.get<AiFeaturesBloc>()..add(const GetCurrentPointOfUser()),
+      create: (context) => injector.get<AiFeaturesBloc>()
+        ..add(const GetCurrentPointOfUser())
+        ..add(const GetAutoGenerateHistory()),
       child: BlocListener<AiFeaturesBloc, AiFeaturesState>(
         listener: (context, state) {
           if (state is GenerateProfileIntroductionSuccess) {
             Navigator.pop(context);
+
+            context.read<AiFeaturesBloc>().add(const GetAutoGenerateHistory());
+
             _scrollController.animateTo(
               _scrollController.position.maxScrollExtent,
               duration: const Duration(milliseconds: 500),
@@ -78,6 +84,8 @@ class _WriteProfileIntroductionPageState
                       padding: context.padding(vertical: 16),
                       child: const FormWriteProfile()),
                   const ProfileIntroductionGeneration(),
+                  const ViewHistoryTitle(),
+                  const ListAutoGenerateHistory(),
                 ],
               ),
             ),

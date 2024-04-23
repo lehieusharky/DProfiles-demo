@@ -12,36 +12,43 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'freelancer_language_profile.dart';
 
-class HeaderProfile extends StatelessWidget {
+class HeaderProfile extends StatefulWidget {
   const HeaderProfile({super.key});
+
+  @override
+  State<HeaderProfile> createState() => _HeaderProfileState();
+}
+
+class _HeaderProfileState extends State<HeaderProfile> {
+  UserInfoModel? userInfo;
 
   @override
   Widget build(BuildContext context) {
     return BlocSelector<ProfileBloc, ProfileState, UserInfoModel?>(
       selector: (state) {
         if (state is ProfileGetUserInfoSuccess) {
-          return state.userInfoModel;
+          userInfo = state.userInfoModel;
         }
 
-        return null;
+        return userInfo;
       },
       builder: (context, state) {
         return Padding(
           padding: context.padding(horizontal: 20, top: 16),
-          child: (state == null)
+          child: (userInfo == null)
               ? MyShimmer(count: 2, height: context.sizeHeight(320))
               : Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    UsernameProfile(username: state.username ?? ''),
+                    UsernameProfile(username: userInfo!.username ?? ''),
                     TitleWalletFollowerProfile(
-                      title: state.jobTitle ?? '',
-                      walletAddress: state.walletAddress ?? '',
+                      title: userInfo!.jobTitle ?? '',
+                      walletAddress: userInfo!.walletAddress ?? '',
                       follower: '12,5K',
                       following: '12,5K',
                       post: '12,5K',
-                      point: state.point ?? 0,
+                      point: userInfo!.point ?? 0,
                     ),
                     Padding(
                       padding: context.padding(vertical: 12),
@@ -50,16 +57,7 @@ class HeaderProfile extends StatelessWidget {
                         style: AppFont().fontTheme(context).bodyLarge,
                       ),
                     ),
-                    const FreelancerLanguageProfile(
-                      title: 'Freelancer',
-                      nationality: 'US',
-                      available: 'Available',
-                    ),
-                    Padding(
-                      padding: context.padding(top: 12, bottom: 22),
-                      child: AppOutlineButton(context)
-                          .elevatedButton(onPressed: () {}, title: 'Top-up'),
-                    ),
+                    const FreelancerLanguageProfile(),
                   ],
                 ),
         );

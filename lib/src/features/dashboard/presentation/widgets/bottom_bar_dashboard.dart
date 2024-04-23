@@ -18,17 +18,15 @@ class BottomBarDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: BottomNavigationBar(
-        items: items(context, currentTab),
-        currentIndex: currentTab,
-        selectedItemColor: colorScheme(context).primary,
-        onTap: onChangeTab,
-        unselectedItemColor: colorScheme(context).outline,
-        selectedLabelStyle: AppFont().fontTheme(context).bodySmall,
-        unselectedLabelStyle: AppFont().fontTheme(context).bodySmall,
-        type: BottomNavigationBarType.fixed,
-      ),
+    return BottomNavigationBar(
+      items: items(context, currentTab),
+      currentIndex: currentTab,
+      selectedItemColor: colorScheme(context).primary,
+      onTap: onChangeTab,
+      unselectedItemColor: colorScheme(context).outline,
+      selectedLabelStyle: AppFont().fontTheme(context).bodySmall,
+      unselectedLabelStyle: AppFont().fontTheme(context).bodySmall,
+      type: BottomNavigationBarType.fixed,
     );
   }
 

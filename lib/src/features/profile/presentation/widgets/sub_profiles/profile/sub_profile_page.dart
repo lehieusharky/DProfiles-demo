@@ -34,10 +34,7 @@ class SubProfilePage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              OpenToComponent(
-                salaryPayType: userInfo.getSalaryPayType(),
-                salary: userInfo.salary,
-              ),
+              const OpenToComponent(),
               const MyDivider(verticalMargin: 8),
               const AboutComponent(),
               const MyDivider(verticalMargin: 8),

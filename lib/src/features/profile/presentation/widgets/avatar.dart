@@ -1,9 +1,11 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
-import 'package:ficonsax/ficonsax.dart';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AvatarProfile extends StatelessWidget {
   const AvatarProfile({super.key});
@@ -40,15 +42,18 @@ class AvatarProfile extends StatelessWidget {
   }
 
   Widget _buildAvatar(BuildContext context) {
-    return Container(
-      padding: context.padding(all: 1.5),
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: colorScheme(context).background,
-      ),
-      child: Assets.images.home.avatarHolder.image(
-        width: context.sizeWidth(96),
-        height: context.sizeWidth(96),
+    return InkWell(
+      onTap: () => context.read<ProfileBloc>().add(const ProfileUploadAvatar()),
+      child: Container(
+        padding: context.padding(all: 1.5),
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: colorScheme(context).background,
+        ),
+        child: Assets.images.home.avatarHolder.image(
+          width: context.sizeWidth(96),
+          height: context.sizeWidth(96),
+        ),
       ),
     );
   }

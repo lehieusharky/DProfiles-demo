@@ -275,4 +275,18 @@ class CreateDigitalProfileRepositoryImpl
           response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
+
+  @override
+  Future<Either<CreateDigitalProfileFailure, BaseResponse>>
+      checkDigitalProfileIsAvailable() async {
+    try {
+      final res = await _createDigitalProfileDataSource
+          .checkDigitalProfileIsAvailable();
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(CreateDigitalProfileFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
+    }
+  }
 }

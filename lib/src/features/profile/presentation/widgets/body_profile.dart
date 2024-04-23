@@ -6,27 +6,34 @@ import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_pro
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class BodyProfile extends StatelessWidget {
+class BodyProfile extends StatefulWidget {
   const BodyProfile({Key? key}) : super(key: key);
+
+  @override
+  State<BodyProfile> createState() => _BodyProfileState();
+}
+
+class _BodyProfileState extends State<BodyProfile> {
+  UserInfoModel? userInfo;
 
   @override
   Widget build(BuildContext context) {
     return BlocSelector<ProfileBloc, ProfileState, UserInfoModel?>(
       selector: (state) {
         if (state is ProfileGetUserInfoSuccess) {
-          return state.userInfoModel;
+          userInfo =  state.userInfoModel;
         }
 
-        return null;
+        return userInfo;
       },
       builder: (context, state) {
-        if (state == null) {
+        if (userInfo == null) {
           return const MyLoading();
         } else {
           return TabBarView(
             children: [
-              SubProfilePage(userInfo: state),
-              SubPostPage(userInfo: state),
+              SubProfilePage(userInfo: userInfo!),
+              SubPostPage(userInfo: userInfo!),
             ],
           );
         }

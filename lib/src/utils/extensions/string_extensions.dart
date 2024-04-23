@@ -68,7 +68,9 @@ extension StringExt on String? {
     } else {
       DateTime dateTime = DateTime.parse(this!);
 
-      String formattedDate = DateFormat('dd/MM/yyyy').format(dateTime);
+      DateFormat formatter = DateFormat('HH:mm dd-MMM');
+
+      String formattedDate = formatter.format(dateTime);
 
       return formattedDate;
     }

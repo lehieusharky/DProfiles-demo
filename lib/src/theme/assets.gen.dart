@@ -80,6 +80,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_share.svg
   SvgGenImage get iconShare => const SvgGenImage('assets/icons/icon_share.svg');
 
+  /// File path: assets/icons/icon_speak.svg
+  SvgGenImage get iconSpeak => const SvgGenImage('assets/icons/icon_speak.svg');
+
   /// File path: assets/icons/icon_speaker.svg
   SvgGenImage get iconSpeaker =>
       const SvgGenImage('assets/icons/icon_speaker.svg');
@@ -137,6 +140,7 @@ class $AssetsIconsGen {
         iconMore,
         iconSearch,
         iconShare,
+        iconSpeak,
         iconSpeaker,
         iconUpload,
         iconWallet,
@@ -200,6 +204,10 @@ class $AssetsIconsLogosGen {
   SvgGenImage get homeLogo =>
       const SvgGenImage('assets/icons/logos/home_logo.svg');
 
+  /// File path: assets/icons/logos/logo_home_app.svg
+  SvgGenImage get logoHomeApp =>
+      const SvgGenImage('assets/icons/logos/logo_home_app.svg');
+
   /// File path: assets/icons/logos/my_wallet_logo.svg
   SvgGenImage get myWalletLogo =>
       const SvgGenImage('assets/icons/logos/my_wallet_logo.svg');
@@ -222,6 +230,7 @@ class $AssetsIconsLogosGen {
         dWhitePWhiteDprofileGreen,
         dprofilesBlack,
         homeLogo,
+        logoHomeApp,
         myWalletLogo,
         talentUpBlack,
         talentUpLogo

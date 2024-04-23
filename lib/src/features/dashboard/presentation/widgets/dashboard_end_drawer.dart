@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
@@ -16,7 +18,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sidebarx/sidebarx.dart';
 import 'package:tuple/tuple.dart';
-import 'package:web3modal_flutter/web3modal_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DashboardEndDrawer extends StatefulWidget {
   const DashboardEndDrawer({Key? key}) : super(key: key);
@@ -25,7 +27,8 @@ class DashboardEndDrawer extends StatefulWidget {
   State<DashboardEndDrawer> createState() => _DashboardEndDrawerState();
 }
 
-class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
+class _DashboardEndDrawerState extends State<DashboardEndDrawer>
+    with AutomaticKeepAliveClientMixin {
   late SidebarXController _drawerController;
 
   UserInfoModel userInfo = const UserInfoModel();
@@ -38,6 +41,7 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return MultiBlocListener(
       listeners: [
         BlocListener<DashboardBloc, DashboardState>(
@@ -46,7 +50,13 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
               _logout(context);
             }
 
+            if (state is DashboardCheckDigitalProfileAvailableSuccess) {
+              _onCheckDigitalProfileSuccess(state.status);
+            }
+
             if (state is DashboardUpdateWalletAddressSuccess) {
+              context.read<ProfileBloc>().add(const ProfileGetUserInfo());
+
               showErrorDialog(context,
                   title: 'Success',
                   description: 'Update wallet address success');
@@ -108,9 +118,10 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
                   ],
                 ),
                 context.sizedBox(height: 10),
-                W3MAccountButton(service: AppConnectWalletService().w3mService),
                 AppFlatButton(context).elevatedButton(
-                    title: 'Connect Wallet',
+                    title: userInfo.walletAddress == null
+                        ? 'Connect Wallet'
+                        : 'Disconnect wallet',
                     onPressed: () => AppConnectWalletService().connectWallet(
                         context,
                         (walletAddress) => _onConnectWallet(walletAddress))),
@@ -119,14 +130,14 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
           );
         },
         items: [
-          Tuple3(const Icon(IconsaxOutline.wallet), 'My Wallet', () {}),
           Tuple3(const Icon(IconsaxOutline.profile_circle), 'Digital Profile',
-              () => _onOpenDProfile()),
-          Tuple3(const Icon(IconsaxOutline.edit), 'Edit Profile', () {}),
-          Tuple3(const Icon(IconsaxOutline.setting), 'Account Setting', () {}),
-          Tuple3(const Icon(IconsaxOutline.frame), 'Become Influencer', () {}),
+              () => _onOpenDProfile(context)),
+          Tuple3(const Icon(IconsaxOutline.edit), 'Edit Profile',
+              () => _onEditProfile(context)),
           Tuple3(const Icon(IconsaxOutline.logout), 'Log out',
               () => _logout(context)),
+          Tuple3(const Icon(IconsaxOutline.paperclip), 'Privacy & Policy',
+              () => _openPrivacyDoc()),
           Tuple3(const Icon(IconsaxOutline.profile_delete), 'Delete Account',
               () => _deleteAccount(context)),
         ]
@@ -140,14 +151,36 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
     );
   }
 
+  void onWalletButtonPressed() {
+    if (userInfo.walletAddress == null) {
+      AppConnectWalletService().connectWallet(
+          context, (walletAddress) => _onConnectWallet(walletAddress));
+    } else {
+      AppConnectWalletService()
+          .disconnectWallet(context, () => _onDisconnectWallet());
+    }
+  }
+
   void _onConnectWallet(String walletAddress) {
     userInfo = userInfo.copyWith(walletAddress: walletAddress);
 
     context.read<DashboardBloc>().add(DashboardUpdateWalletAddress(userInfo));
   }
 
-  void _onOpenDProfile() {
-    if (userInfo.walletAddress == null) {
+  void _onDisconnectWallet() {
+    userInfo = userInfo.copyWith(walletAddress: null);
+
+    context.read<DashboardBloc>().add(DashboardUpdateWalletAddress(userInfo));
+  }
+
+  void _onOpenDProfile(BuildContext context) {
+    context
+        .read<DashboardBloc>()
+        .add(const DashboardCheckDigitalProfileAvailable());
+  }
+
+  void _onCheckDigitalProfileSuccess(bool status) {
+    if (!status) {
       showErrorDialog(context,
           title: "Failed", description: "You don't have digital profile");
     } else {
@@ -165,5 +198,25 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer> {
 
   void _deleteAccount(BuildContext context) {
     context.read<DashboardBloc>().add(const DashboardDeleteAccount());
+  }
+
+  void _onEditProfile(BuildContext context) {
+    context.router.push(const EditProfileRoute());
+  }
+
+  @override
+  bool get wantKeepAlive => true;
+
+  Future<void> _openPrivacyDoc() async {
+    try {
+      final Uri url =
+          Uri.parse('https://docs.dprofiles.xyz/privacy-and-policy');
+
+      if (!await launchUrl(url)) {
+        throw Exception('Could not launch $url');
+      }
+    } catch (e) {
+      log(e.toString());
+    }
   }
 }

@@ -48,7 +48,7 @@ class _ListEducationPageState extends State<ListEducationPage> {
                           padding: context.padding(vertical: 32, bottom: 12),
                           child: AppFlatButton(context).elevatedButton(
                               width: context.width,
-                              title: 'Add new education',
+                              title: 'Add New Education',
                               onPressed: () => context.router
                                   .push(const AddNewEducationRoute())
                                   .then((value) => value != null

@@ -27,8 +27,9 @@ class _ProfilePageState extends State<ProfilePage>
   Widget build(BuildContext context) {
     super.build(context);
     return BlocProvider(
-      create: (context) =>
-          injector.get<ProfileBloc>()..add(const ProfileGetUserInfo()),
+      create: (context) => injector.get<ProfileBloc>()
+        ..add(const ProfileGetUserInfo())
+        ..add(const ProfileCheckDigitalProfileAvailable()),
       child: MyScaffold(
         topPadding: 20,
         body: DefaultTabController(
@@ -37,7 +38,7 @@ class _ProfilePageState extends State<ProfilePage>
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => [
               const Tuple2(AvatarProfile(), 210),
-              const Tuple2(HeaderProfile(), 330),
+              const Tuple2(HeaderProfile(), 270),
               const Tuple2(SeparatedProfile(), 12),
               const Tuple2(DProfileComponent(), 88),
               const Tuple2(SeparatedProfile(), 12),

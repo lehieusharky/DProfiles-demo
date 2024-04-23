@@ -20,6 +20,8 @@ abstract class CreateDigitalProfileUseCase {
 
   Future<Either<List<String>, BaseResponse>> getUserInfo();
 
+  Future<Either<String, BaseResponse>> checkDigitalProfileIsAvailable();
+
   // certificate
 
   Future<Either<List<String>, BaseResponse>> getUserCertificates();
@@ -263,6 +265,16 @@ class CreateDigitalProfileUseCaseImpl implements CreateDigitalProfileUseCase {
   @override
   Future<Either<String, BaseResponse>> updateDigitalProfile() async {
     final result = await _createDigitalProfileRepository.updateDigitalProfile();
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> checkDigitalProfileIsAvailable() async {
+    final result =
+        await _createDigitalProfileRepository.checkDigitalProfileIsAvailable();
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),

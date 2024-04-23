@@ -26,4 +26,10 @@ class ProfileState with _$ProfileState {
 
   const factory ProfileState.getUserLanguages(
       List<UserLanguageModel> languages) = ProfileGetUserLanguagesSuccess;
+
+  const factory ProfileState.uploadAvatarSuccess(
+      UploadFileResponse? uploadImageResponse) = ProfileUploadAvatarSuccess;
+
+  const factory ProfileState.checkDigitalProfileAvailableSuccess(bool status) =
+      ProfileCheckDigitalProfileAvailableSuccess;
 }

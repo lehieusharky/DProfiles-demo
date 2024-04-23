@@ -16,4 +16,7 @@ class DashboardState with _$DashboardState {
 
   const factory DashboardState.updateWalletAddressSuccess() =
       DashboardUpdateWalletAddressSuccess;
+
+  const factory DashboardState.checkDigitalProfileAvailableSuccess(
+      bool status) = DashboardCheckDigitalProfileAvailableSuccess;
 }

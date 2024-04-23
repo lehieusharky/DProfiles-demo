@@ -13,8 +13,7 @@ class _AiFeaturesPageState extends State<AiFeaturesPage>
   Widget build(BuildContext context) {
     super.build(context);
     return BlocProvider(
-      create: (context) =>
-          injector.get<AiFeaturesBloc>()..add(const GetAutoGenerateHistory()),
+      create: (context) => injector.get<AiFeaturesBloc>(),
       child: const MyScaffold(
         horizontalMargin: 20,
         topPadding: 10,
@@ -24,8 +23,6 @@ class _AiFeaturesPageState extends State<AiFeaturesPage>
             children: [
               TitleAiFeatures(),
               HeaderAIFeatures(),
-              ViewHistoryTitle(),
-              ListAutoGenerateHistory(),
             ],
           ),
         ),

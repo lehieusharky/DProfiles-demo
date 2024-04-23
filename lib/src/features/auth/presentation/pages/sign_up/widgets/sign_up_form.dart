@@ -22,27 +22,29 @@ class _SignUpFormState extends State<SignUpForm> {
   Widget build(BuildContext context) {
     return Form(
       key: _keyForm,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          AuthField(
-            autoFocus: true,
-            controller: _emailController,
-            title: appLocal(context).email.toUpperCase(),
-            hint: appLocal(context).emailAddress,
-            keyboardType: TextInputType.emailAddress,
-            validator: (email) => email.emailValidation(context),
-          ),
-          Padding(
-            padding: context.padding(vertical: 32),
-            child: AppFlatButton(context).elevatedButton(
-              width: context.width,
-              onPressed: () => _signUp(context),
-              title: appLocal(context).nextButton,
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            AuthField(
+              autoFocus: true,
+              controller: _emailController,
+              title: appLocal(context).email.toUpperCase(),
+              hint: appLocal(context).emailAddress,
+              keyboardType: TextInputType.emailAddress,
+              validator: (email) => email.emailValidation(context),
             ),
-          ),
-        ],
+            Padding(
+              padding: context.padding(vertical: 32),
+              child: AppFlatButton(context).elevatedButton(
+                width: context.width,
+                onPressed: () => _signUp(context),
+                title: appLocal(context).nextButton,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

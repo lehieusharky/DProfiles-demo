@@ -216,12 +216,12 @@ class CreateDigitalProfileDataSourceImpl
   }
 
   @override
-  Future<bool> checkDigitalProfileIsAvailable() async {
+  Future<BaseResponse> checkDigitalProfileIsAvailable() async {
     try {
       final baseResponse = await MyHttp.rl().checkDigitalProfileStored();
-      return baseResponse.error != null ? false : true;
+      return baseResponse;
     } on DioException {
-      return false;
+      rethrow;
     }
   }
 }
