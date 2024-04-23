@@ -27,8 +27,9 @@ class _ProfilePageState extends State<ProfilePage>
   Widget build(BuildContext context) {
     super.build(context);
     return BlocProvider(
-      create: (context) =>
-          injector.get<ProfileBloc>()..add(const ProfileGetUserInfo()),
+      create: (context) => injector.get<ProfileBloc>()
+        ..add(const ProfileGetUserInfo())
+        ..add(const ProfileCheckDigitalProfileAvailable()),
       child: MyScaffold(
         topPadding: 20,
         body: DefaultTabController(

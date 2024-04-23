@@ -34,7 +34,10 @@ class BlocDI {
     );
 
     injector.registerFactory<ProfileBloc>(
-      () => ProfileBloc(injector.get<ProfileUseCase>()),
+      () => ProfileBloc(
+        injector.get<ProfileUseCase>(),
+        injector.get<CreateDigitalProfileUseCase>(),
+      ),
     );
 
     injector.registerLazySingleton<HomeBloc>(

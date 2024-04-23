@@ -102,9 +102,7 @@ class _TitleWalletFollowerProfileState
             children: [
               Text(
                 widget.point.toString(),
-                style: AppFont()
-                    .fontTheme(context, color: colorScheme(context).outline)
-                    .bodyMedium,
+                style: AppFont().fontTheme(context).bodyMedium,
               ),
               context.sizedBox(width: 5),
               Assets.icons.iconWallet.svg(),
