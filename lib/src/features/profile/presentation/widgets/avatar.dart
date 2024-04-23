@@ -3,7 +3,7 @@ import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bl
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
-import 'package:ficonsax/ficonsax.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

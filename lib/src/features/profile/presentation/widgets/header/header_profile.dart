@@ -58,11 +58,6 @@ class _HeaderProfileState extends State<HeaderProfile> {
                       ),
                     ),
                     const FreelancerLanguageProfile(),
-                    Padding(
-                      padding: context.padding(top: 12, bottom: 22),
-                      child: AppOutlineButton(context)
-                          .elevatedButton(onPressed: () {}, title: 'Top-up'),
-                    ),
                   ],
                 ),
         );
