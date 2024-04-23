@@ -68,7 +68,7 @@ class _DProfileComponentState extends State<DProfileComponent> {
         child: Row(
           children: [
             Text(
-              status ? 'My DProfile' : 'Create dProfile',
+              status ? 'View Digital Profile' : 'Create dProfile',
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.bold)
                   .bodyMedium,
