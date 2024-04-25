@@ -40,6 +40,7 @@ class _TitleWalletFollowerProfileState
         Padding(
           padding: context.padding(vertical: 2),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Tuple2('Follower', widget.follower),
               Tuple2('Following', widget.following),

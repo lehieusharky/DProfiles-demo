@@ -44,9 +44,9 @@ class _HeaderProfileState extends State<HeaderProfile> {
                     TitleWalletFollowerProfile(
                       title: userInfo!.jobTitle ?? '',
                       walletAddress: userInfo!.walletAddress ?? '',
-                      follower: '12,5K',
-                      following: '12,5K',
-                      post: '12,5K',
+                      follower: '-',
+                      following: '-',
+                      post: '-',
                       point: userInfo!.point ?? 0,
                     ),
                     Padding(

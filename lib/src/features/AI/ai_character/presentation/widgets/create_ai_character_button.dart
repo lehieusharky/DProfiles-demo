@@ -5,21 +5,30 @@ import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_butto
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CreateAICharacterBotButton extends StatelessWidget {
+class CreateAICharacterBotButton extends StatefulWidget {
   const CreateAICharacterBotButton({super.key});
+
+  @override
+  State<CreateAICharacterBotButton> createState() =>
+      _CreateAICharacterBotButtonState();
+}
+
+class _CreateAICharacterBotButtonState
+    extends State<CreateAICharacterBotButton> {
+  bool _showButton = true;
 
   @override
   Widget build(BuildContext context) {
     return BlocSelector<AiCharacterBloc, AiCharacterState, bool>(
       selector: (state) {
         if (state is GetListCharacterBotSuccess) {
-          return state.bots.isEmpty ? true : false;
+          _showButton = state.bots.isEmpty ? true : false;
         }
 
-        return true;
+        return _showButton;
       },
       builder: (context, state) {
-        if (state) {
+        if (_showButton) {
           return AppFlatButton(context).elevatedButton(
               title: 'Create Your AI Character',
               onPressed: () =>

@@ -39,7 +39,7 @@ class _ProfilePageState extends State<ProfilePage>
                 (BuildContext context, bool innerBoxIsScrolled) => [
               const Tuple2(AvatarProfile(), 170),
               const Tuple2(HeaderProfile(), 260),
-              const Tuple2(SeparatedProfile(), 12),
+              const Tuple2(SeparatedProfile(), 2),
               const Tuple2(DProfileComponent(), 88),
               const Tuple2(SeparatedProfile(), 12),
               const Tuple2(SocialMediaComponent(), 88),
