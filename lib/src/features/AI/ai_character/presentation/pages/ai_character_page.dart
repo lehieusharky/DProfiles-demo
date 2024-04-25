@@ -5,6 +5,7 @@ import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai_character_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets/character_bots.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets/create_ai_character_button.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets/tabbar_ai_character.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/action_dashboard.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_extension.dart';
@@ -58,10 +59,7 @@ class _AiCharacterPageState extends State<AiCharacterPage>
               body: SingleChildScrollView(
                 child: Column(
                   children: [
-                    AppFlatButton(context).elevatedButton(
-                        title: 'Create Your AI Character',
-                        onPressed: () => context.router
-                            .push(const CreateAiCharacterRoute())),
+                    const CreateAICharacterBotButton(),
                     const TabBarAICharacter(),
                     SizedBox(height: context.sizeHeight(16)),
                     const CharacterBots(),
