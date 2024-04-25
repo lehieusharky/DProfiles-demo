@@ -31,13 +31,13 @@ class _ProfilePageState extends State<ProfilePage>
         ..add(const ProfileGetUserInfo())
         ..add(const ProfileCheckDigitalProfileAvailable()),
       child: MyScaffold(
-        topPadding: 20,
+        topPadding: 0,
         body: DefaultTabController(
           length: 2,
           child: NestedScrollView(
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => [
-              const Tuple2(AvatarProfile(), 210),
+              const Tuple2(AvatarProfile(), 170),
               const Tuple2(HeaderProfile(), 260),
               const Tuple2(SeparatedProfile(), 12),
               const Tuple2(DProfileComponent(), 88),

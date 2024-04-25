@@ -6,8 +6,12 @@ import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai_character_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets/character_bots.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets/tabbar_ai_character.dart';
+import 'package:demo_dprofiles/src/features/dashboard/presentation/page/action_dashboard.dart';
+import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_extension.dart';
+import 'package:demo_dprofiles/src/features/dashboard/presentation/widgets/dashboard_end_drawer.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/icons/my_icon_app.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,7 +24,10 @@ class AiCharacterPage extends StatefulWidget {
 }
 
 class _AiCharacterPageState extends State<AiCharacterPage>
-    with AutomaticKeepAliveClientMixin {
+    with AutomaticKeepAliveClientMixin
+    implements ActionDashboard {
+  final _skey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -37,23 +44,24 @@ class _AiCharacterPageState extends State<AiCharacterPage>
         child: DefaultTabController(
           length: 2,
           child: MyScaffold(
-            useAppBar: true,
-            horizontalMargin: 20,
+            sKey: _skey,
             topPadding: 20,
+            horizontalMargin: 20,
+            useAppBar: true,
+            canBack: false,
+            titleWidget: const MyIconApp(),
+            action: buildActonAppBar(),
+            endDrawer: buildEndDrawer(),
             body: NestedScrollView(
               headerSliverBuilder:
-                  (BuildContext context, bool innerBoxIsScrolled) => [
-                MySliverAppBar(
-                  height: 50,
-                  child: AppFlatButton(context).elevatedButton(
-                      title: 'Create AI Character',
-                      onPressed: () =>
-                          context.router.push(const CreateAiCharacterRoute())),
-                ),
-              ],
+                  (BuildContext context, bool innerBoxIsScrolled) => [],
               body: SingleChildScrollView(
                 child: Column(
                   children: [
+                    AppFlatButton(context).elevatedButton(
+                        title: 'Create Your AI Character',
+                        onPressed: () => context.router
+                            .push(const CreateAiCharacterRoute())),
                     const TabBarAICharacter(),
                     SizedBox(height: context.sizeHeight(16)),
                     const CharacterBots(),
@@ -69,4 +77,19 @@ class _AiCharacterPageState extends State<AiCharacterPage>
 
   @override
   bool get wantKeepAlive => true;
+
+  @override
+  Widget buildEndDrawer() {
+    return const DashboardEndDrawer(
+      key: Key('ai character'),
+    );
+  }
+
+  @override
+  List<Widget> buildActonAppBar() {
+    return actionAppbar(context, _skey);
+  }
+
+  @override
+  GlobalKey<ScaffoldState> sKey() => _skey;
 }

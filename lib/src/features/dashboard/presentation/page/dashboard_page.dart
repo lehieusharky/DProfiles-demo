@@ -24,15 +24,10 @@ class _DashboardPageState extends State<DashboardPage> {
 
   late PageController _pageController;
 
-  late ScrollController _scrollController;
-
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
   @override
   void initState() {
     super.initState();
     _pageController = PageController();
-    _scrollController = ScrollController();
   }
 
   @override
@@ -48,16 +43,10 @@ class _DashboardPageState extends State<DashboardPage> {
         ),
       ],
       child: Scaffold(
-        key: _scaffoldKey,
-        appBar: MyAppbar(
-            action: widget.actionAppbar(context, _scaffoldKey),
-            titleWidget: Assets.icons.logos.logoHomeApp.svg(),
-            height: 50),
-        endDrawer: const DashboardEndDrawer(),
         body: PageView(
           onPageChanged: (index) => _onNavigate(index),
           controller: _pageController,
-          children: widget.screens(_scrollController),
+          children: widget.screens(),
         ),
         bottomNavigationBar: BottomBarDashboard(
           currentTab: _currentIndex,

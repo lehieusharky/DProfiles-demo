@@ -8,16 +8,25 @@ class AiFeaturesPage extends StatefulWidget {
 }
 
 class _AiFeaturesPageState extends State<AiFeaturesPage>
-    with AutomaticKeepAliveClientMixin {
+    with AutomaticKeepAliveClientMixin
+    implements ActionDashboard {
+  final _skey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
     return BlocProvider(
       create: (context) => injector.get<AiFeaturesBloc>(),
-      child: const MyScaffold(
+      child: MyScaffold(
+        sKey: _skey,
+        topPadding: 20,
         horizontalMargin: 20,
-        topPadding: 10,
-        body: SingleChildScrollView(
+        useAppBar: true,
+        canBack: false,
+        titleWidget: const MyIconApp(),
+        action: buildActonAppBar(),
+        endDrawer: buildEndDrawer(),
+        body: const SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -32,4 +41,19 @@ class _AiFeaturesPageState extends State<AiFeaturesPage>
 
   @override
   bool get wantKeepAlive => true;
+
+  @override
+  Widget buildEndDrawer() {
+    return const DashboardEndDrawer(
+      key: Key('ai features page'),
+    );
+  }
+
+  @override
+  List<Widget> buildActonAppBar() {
+    return actionAppbar(context, _skey);
+  }
+
+  @override
+  GlobalKey<ScaffoldState> sKey() => _skey;
 }
