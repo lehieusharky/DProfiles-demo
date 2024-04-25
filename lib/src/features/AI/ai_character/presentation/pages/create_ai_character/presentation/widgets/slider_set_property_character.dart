@@ -53,7 +53,7 @@ class _SliderSetPropertyCharacterState
                   child: Icon(
                     Icons.cancel_outlined,
                     size: 20,
-                    color: colorScheme(context).outline,
+                    color: colorScheme(context).outlineVariant,
                   ),
                 ),
               ),
