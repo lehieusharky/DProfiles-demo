@@ -38,7 +38,7 @@ class _ProfilePageState extends State<ProfilePage>
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => [
               const Tuple2(AvatarProfile(), 210),
-              const Tuple2(HeaderProfile(), 270),
+              const Tuple2(HeaderProfile(), 260),
               const Tuple2(SeparatedProfile(), 12),
               const Tuple2(DProfileComponent(), 88),
               const Tuple2(SeparatedProfile(), 12),

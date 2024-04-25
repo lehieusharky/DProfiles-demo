@@ -52,7 +52,7 @@ class _HeaderProfileState extends State<HeaderProfile> {
                     Padding(
                       padding: context.padding(vertical: 12),
                       child: Text(
-                        'Hello I’m Product designer, I eager to connect for freelance job',
+                        userInfo!.headline ?? 'Create Your Headline now',
                         style: AppFont().fontTheme(context).bodyLarge,
                       ),
                     ),

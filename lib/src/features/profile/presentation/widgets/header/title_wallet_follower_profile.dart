@@ -57,14 +57,17 @@ class _TitleWalletFollowerProfileState
         Text(
           title,
           style: AppFont()
-              .fontTheme(context, color: colorScheme(context).outline)
+              .fontTheme(context,
+                  weight: FontWeight.w600, color: colorScheme(context).outline)
               .bodyMedium,
         ),
         Padding(
           padding: context.padding(left: 8, right: 16),
           child: Text(
             value,
-            style: AppFont().fontTheme(context).bodyMedium,
+            style: AppFont()
+                .fontTheme(context, weight: FontWeight.w600)
+                .bodyMedium,
           ),
         ),
       ],
@@ -77,7 +80,8 @@ class _TitleWalletFollowerProfileState
       child: Text(
         "Wallet: ${widget.walletAddress}",
         style: AppFont()
-            .fontTheme(context, color: colorScheme(context).outline)
+            .fontTheme(context,
+                weight: FontWeight.w600, color: colorScheme(context).outline)
             .bodyMedium,
       ),
     );
@@ -90,7 +94,8 @@ class _TitleWalletFollowerProfileState
         Text(
           "Title: ${widget.title}",
           style: AppFont()
-              .fontTheme(context, color: colorScheme(context).outline)
+              .fontTheme(context,
+                  weight: FontWeight.w600, color: colorScheme(context).outline)
               .bodyMedium,
         ),
         Container(
@@ -102,7 +107,9 @@ class _TitleWalletFollowerProfileState
             children: [
               Text(
                 widget.point.toString(),
-                style: AppFont().fontTheme(context).bodyMedium,
+                style: AppFont()
+                    .fontTheme(context, weight: FontWeight.w600)
+                    .bodyMedium,
               ),
               context.sizedBox(width: 5),
               Assets.icons.iconWallet.svg(),
