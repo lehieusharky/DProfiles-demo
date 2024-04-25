@@ -2,7 +2,7 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/avatar.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/widgets/avatar_profile.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/body_profile.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/dprofile_component.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/header/header_profile.dart';

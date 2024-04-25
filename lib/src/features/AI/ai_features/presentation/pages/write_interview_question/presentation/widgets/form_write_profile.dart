@@ -6,7 +6,6 @@ import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/constant/supported_chat_gpt.dart';
-import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:ficonsax/ficonsax.dart';

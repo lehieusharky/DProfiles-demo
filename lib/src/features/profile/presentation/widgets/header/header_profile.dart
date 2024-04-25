@@ -5,7 +5,6 @@ import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bl
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/header/title_wallet_follower_profile.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/header/username_profile.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
-import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -41,7 +40,7 @@ class _HeaderProfileState extends State<HeaderProfile> {
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    UsernameProfile(username: userInfo!.username ?? ''),
+                    const NameProfile(),
                     TitleWalletFollowerProfile(
                       title: userInfo!.jobTitle ?? '',
                       walletAddress: userInfo!.walletAddress ?? '',

@@ -47,3 +47,4 @@ pubspec.lock
 key.properties
 app/upload-keystore.jks
 .env
+.vscode
