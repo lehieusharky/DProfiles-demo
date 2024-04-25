@@ -7,6 +7,7 @@ import 'package:demo_dprofiles/src/features/dashboard/presentation/widgets/botto
 import 'package:demo_dprofiles/src/features/dashboard/presentation/widgets/dashboard_end_drawer.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -49,7 +50,9 @@ class _DashboardPageState extends State<DashboardPage> {
       child: Scaffold(
         key: _scaffoldKey,
         appBar: MyAppbar(
-            titleWidget: Assets.icons.logos.logoHomeApp.svg(), height: 50),
+            action: widget.actionAppbar(context, _scaffoldKey),
+            titleWidget: Assets.icons.logos.logoHomeApp.svg(),
+            height: 50),
         endDrawer: const DashboardEndDrawer(),
         body: PageView(
           onPageChanged: (index) => _onNavigate(index),

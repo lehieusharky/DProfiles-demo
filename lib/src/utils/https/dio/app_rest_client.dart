@@ -361,5 +361,12 @@ abstract class RestClient {
   @POST('https://upload.dev.dprofiles.xyz/presigned-upload-url')
   Future<UploadFileResponse> uploadImage(@Body() Map<String, dynamic> comment);
 
+  // search
 
+  @GET('/api/v1/search-bar')
+  Future<BaseResponse> searchBar(
+    @Query('search') String? search,
+    @Query('page') int page,
+    @Query('limit') int? limit,
+  );
 }
