@@ -109,7 +109,6 @@ import 'package:demo_dprofiles/src/features/search/presentation/pages/search_hom
     as _i34;
 import 'package:demo_dprofiles/src/utils/constant/ai_features_type.dart'
     as _i47;
-import 'package:flutter/foundation.dart' as _i53;
 import 'package:flutter/material.dart' as _i46;
 
 abstract class $AppRouter extends _i45.RootStackRouter {
@@ -1119,7 +1118,7 @@ class OpenToWorkRoute extends _i45.PageRouteInfo<void> {
 /// [_i33.PublicProfilePage]
 class PublicProfileRoute extends _i45.PageRouteInfo<PublicProfileRouteArgs> {
   PublicProfileRoute({
-    _i53.Key? key,
+    _i46.Key? key,
     required String userName,
     List<_i45.PageRouteInfo>? children,
   }) : super(
@@ -1143,7 +1142,7 @@ class PublicProfileRouteArgs {
     required this.userName,
   });
 
-  final _i53.Key? key;
+  final _i46.Key? key;
 
   final String userName;
 

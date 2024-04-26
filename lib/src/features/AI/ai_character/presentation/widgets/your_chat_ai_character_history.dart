@@ -1,6 +1,7 @@
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
-import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai_character_bloc.dart';
+
+import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/presentation/bloc/bloc/my_ai_character_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/message_with_bot_model.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/domain/entitties/ext_message_with_bot_entity.dart';
 import 'package:flutter/material.dart';
@@ -25,12 +26,12 @@ class _YourChatAiCharacterHistoryState
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => injector.get<AiCharacterBloc>()
-        ..add(AICharacterGetChatWithBotHistory(
+      create: (context) => injector.get<MyAiCharacterBloc>()
+        ..add(MyAiCharacterGetChatWithBotHistory(
             chatBotID: widget.chatBotID, page: 1, limit: 10, search: '')),
-      child: BlocConsumer<AiCharacterBloc, AiCharacterState>(
+      child: BlocConsumer<MyAiCharacterBloc, MyAiCharacterState>(
         listener: (context, state) {
-          if (state is AICharacterGetChatWithBotHistorySuccess) {
+          if (state is MyAiCharacterGetChatWithBotHistorySuccess) {
             final newData = state.messagesHistory
                 .map((e) => MessageWithBotModel(
                       isUser: e.userSenderId != null ? true : false,
