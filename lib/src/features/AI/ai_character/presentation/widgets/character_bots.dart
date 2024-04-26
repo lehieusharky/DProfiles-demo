@@ -9,6 +9,7 @@ class CharacterBots extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const TabBarView(
+      physics: NeverScrollableScrollPhysics(),
       children: [
         ListPopularBot(),
         ListFollowingBot(),
