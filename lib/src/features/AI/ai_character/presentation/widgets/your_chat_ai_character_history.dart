@@ -40,7 +40,7 @@ class _YourChatAiCharacterHistoryState
                     ))
                 .toList();
 
-            messages = newData;
+            messages = newData.reversed.toList();
           }
         },
         builder: (context, state) {
@@ -49,8 +49,7 @@ class _YourChatAiCharacterHistoryState
           } else {
             return AnimationLimiter(
               child: ListView.builder(
-                reverse: true,
-                physics: const NeverScrollableScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 itemCount: messages!.length,
                 itemBuilder: (BuildContext context, int index) {
                   return AnimationConfiguration.staggeredList(
