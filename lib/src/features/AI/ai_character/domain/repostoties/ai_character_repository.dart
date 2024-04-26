@@ -9,7 +9,8 @@ abstract class AICharacterRepository {
 
   Future<Either<AICharacterFailure, BaseResponse>> getListCharacterBot();
 
-  Future<Either<AICharacterFailure, BaseResponse>> getListPopularCharacterBot();
+  Future<Either<AICharacterFailure, BaseResponse>> getListPopularCharacterBot(
+      {required int page, int? limit});
 
   Future<Either<AICharacterFailure, BaseResponse>> followCharacterBot(
       int botID);

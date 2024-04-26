@@ -30,8 +30,7 @@ class _AiCharacterPageState extends State<AiCharacterPage>
   Widget build(BuildContext context) {
     super.build(context);
     return BlocProvider(
-      create: (context) => injector.get<AiCharacterBloc>()
-        ..add(const GetListPopularCharacterBot()),
+      create: (context) => injector.get<AiCharacterBloc>(),
       child: BlocListener<AiCharacterBloc, AiCharacterState>(
         listener: (context, state) {
           if (state is AICharacterError) {

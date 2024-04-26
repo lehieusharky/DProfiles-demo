@@ -31,9 +31,9 @@ class AICharacterDataSourceImpl implements AICharacterDataSource {
   }
 
   @override
-  Future<BaseResponse> getListPopularCharacterBot() async {
+  Future<BaseResponse> getListPopularCharacterBot({required int page, int? limit}) async {
     try {
-      final baseResponse = await MyHttp.rl().getListPopularCharacterBot();
+      final baseResponse = await MyHttp.rl().getListPopularCharacterBot(page, limit);
       return baseResponse;
     } on DioException {
       rethrow;

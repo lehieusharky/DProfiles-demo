@@ -1049,9 +1049,16 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<BaseResponse> getListPopularCharacterBot() async {
+  Future<BaseResponse> getListPopularCharacterBot(
+    int? page,
+    int? limit,
+  ) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'page': page,
+      r'limit': limit,
+    };
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio

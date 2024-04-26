@@ -16,65 +16,51 @@ class MyAICharacterPage extends StatefulWidget {
 }
 
 class _MyAICharacterPageState extends State<MyAICharacterPage> {
-  AICharacterBotModel? _botInfo;
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => injector.get<MyAiCharacterBloc>()
-        ..add(MyAiCharacterGetChatBotDetail(
-            widget.chatBotID, widget.isPopularBot)),
-      child: BlocConsumer<MyAiCharacterBloc, MyAiCharacterState>(
-        listener: (context, state) {
-          if (state is MyAiCharacterGetChatBotDetailSuccess) {
-            _botInfo = state.characterBotDetail;
-          }
-        },
-        builder: (context, state) {
-          return DefaultTabController(
-            length: 2,
-            child: MyScaffold(
-              useAppBar: true,
-              canBack: true,
-              onBack: () {
-                while (context.router.canPop()) {
-                  Navigator.pop(context);
-                }
-              },
-              appBarTitle: appLocal(context).myAiCharacter,
-              body: (_botInfo == null)
-                  ? const MyLoading()
-                  : NestedScrollView(
-                      headerSliverBuilder:
-                          (BuildContext context, bool innerBoxIsScrolled) => [
-                        MySliverAppBar(
-                          height: context.height * 0.9,
-                          child: HeaderMyAICharacter(
-                            botInfo: _botInfo!,
-                            isPopularBot: widget.isPopularBot,
-                          ),
-                        ),
-                      ],
-                      body: Padding(
-                        padding: context.padding(
-                            horizontal: 20, top: 20, bottom: 50),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            _buildViewHistoryTitle(),
-                            const TabBarChatHistoryMyAiCharacter(),
-                            Expanded(
-                                child: ViewHistoryMyCharacterBot(
-                                    chatBotID: widget.chatBotID)),
-                          ],
-                        ),
-                      ),
-                    ),
+        create: (context) => injector.get<MyAiCharacterBloc>()
+          ..add(MyAiCharacterGetChatBotDetail(
+              widget.chatBotID, widget.isPopularBot))
+          ..add(MyAiCharacterGetChatWithBotHistory(
+              chatBotID: widget.chatBotID, page: 1, limit: 10, search: '')),
+        child: DefaultTabController(
+          length: 2,
+          child: MyScaffold(
+            useAppBar: true,
+            canBack: true,
+            onBack: () {
+              while (context.router.canPop()) {
+                Navigator.pop(context);
+              }
+            },
+            appBarTitle: appLocal(context).myAiCharacter,
+            body: NestedScrollView(
+              headerSliverBuilder:
+                  (BuildContext context, bool innerBoxIsScrolled) => [
+                MySliverAppBar(
+                  height: context.height * 0.9,
+                  child: HeaderMyAICharacter(
+                    isPopularBot: widget.isPopularBot,
+                  ),
+                ),
+              ],
+              body: Padding(
+                padding: context.padding(horizontal: 20, top: 20, bottom: 50),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    _buildViewHistoryTitle(),
+                    const TabBarChatHistoryMyAiCharacter(),
+                    Expanded(
+                        child: ViewHistoryMyCharacterBot(
+                            chatBotID: widget.chatBotID)),
+                  ],
+                ),
+              ),
             ),
-          );
-        },
-      ),
-    );
+          ),
+        ));
   }
 
   Widget _buildViewHistoryTitle() {
@@ -82,5 +68,11 @@ class _MyAICharacterPageState extends State<MyAICharacterPage> {
       'View Chat History',
       style: AppFont().fontTheme(context, weight: FontWeight.w600).titleSmall,
     );
+  }
+
+  @override
+  void dispose() {
+    injector.get<MyAiCharacterBloc>().close();
+    super.dispose();
   }
 }

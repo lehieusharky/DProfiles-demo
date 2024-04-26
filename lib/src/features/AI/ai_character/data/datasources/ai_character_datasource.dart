@@ -6,7 +6,8 @@ abstract class AICharacterDataSource {
 
   Future<BaseResponse> getListCharacterBot();
 
-  Future<BaseResponse> getListPopularCharacterBot();
+  Future<BaseResponse> getListPopularCharacterBot(
+      {required int page, int? limit});
 
   Future<BaseResponse> followCharacterBot(int botID);
 

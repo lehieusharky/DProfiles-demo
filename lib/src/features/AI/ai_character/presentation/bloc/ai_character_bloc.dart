@@ -38,6 +38,8 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
   PropertyAICharacterModel propertyAICharacterModel =
       const PropertyAICharacterModel();
 
+  int _currentPagePopularBot = 1;
+
   AiCharacterBloc(
       this.aiCharacterUseCase, this.profileUseCase, this.chatWithAiUseCase)
       : super(const AiCharacterState.initial()) {
@@ -60,6 +62,8 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
     on<AICharacterEditExperience>(_editExperience);
     on<AICharacterGetChatWithBotHistory>(_getChatWithBotHistory);
     on<AICharacterFollowBot>(_followBot);
+
+    add(GetListPopularCharacterBot(page: _currentPagePopularBot));
   }
 
   FutureOr<void> _changeCreateStep(
@@ -281,7 +285,10 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
       GetListPopularCharacterBot event, Emitter<AiCharacterState> emit) async {
     emit(const AICharacterLoading());
 
-    final result = await aiCharacterUseCase.getListPopularCharacterBot();
+    final result = await aiCharacterUseCase.getListPopularCharacterBot(
+      page: ++_currentPagePopularBot,
+      limit: event.limit,
+    );
 
     result.fold(
         (l) => emit(AICharacterError(

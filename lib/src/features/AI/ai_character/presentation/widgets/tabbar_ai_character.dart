@@ -51,7 +51,9 @@ class TabBarAICharacter extends StatelessWidget {
 
   _onChange(BuildContext context, int value) {
     if (value == 0) {
-      context.read<AiCharacterBloc>().add(const GetListPopularCharacterBot());
+      context
+          .read<AiCharacterBloc>()
+          .add(const GetListPopularCharacterBot(page: 1));
     } else {
       context.read<AiCharacterBloc>().add(const GetListCharacterBot());
     }

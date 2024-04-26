@@ -28,7 +28,7 @@ mixin _$AiCharacterEvent {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -58,7 +58,7 @@ mixin _$AiCharacterEvent {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -86,7 +86,7 @@ mixin _$AiCharacterEvent {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -265,7 +265,7 @@ class _$StartedImpl implements _Started {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -298,7 +298,7 @@ class _$StartedImpl implements _Started {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -329,7 +329,7 @@ class _$StartedImpl implements _Started {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -542,7 +542,7 @@ class _$AICharacterChangeCreationStepImpl
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -575,7 +575,7 @@ class _$AICharacterChangeCreationStepImpl
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -606,7 +606,7 @@ class _$AICharacterChangeCreationStepImpl
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -797,7 +797,7 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -830,7 +830,7 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -861,7 +861,7 @@ class _$AICharacterGetUserInfoImpl implements AICharacterGetUserInfo {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -1081,7 +1081,7 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -1114,7 +1114,7 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -1145,7 +1145,7 @@ class _$AddBasicInfoOfCharacterBotImpl implements AddBasicInfoOfCharacterBot {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -1339,7 +1339,7 @@ class _$AICharacterGetUserCertificatesImpl
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -1372,7 +1372,7 @@ class _$AICharacterGetUserCertificatesImpl
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -1403,7 +1403,7 @@ class _$AICharacterGetUserCertificatesImpl
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -1590,7 +1590,7 @@ class _$AICharacterGetUserEducationsImpl
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -1623,7 +1623,7 @@ class _$AICharacterGetUserEducationsImpl
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -1654,7 +1654,7 @@ class _$AICharacterGetUserEducationsImpl
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -1841,7 +1841,7 @@ class _$AICharacterGetUserExperiencesImpl
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -1874,7 +1874,7 @@ class _$AICharacterGetUserExperiencesImpl
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -1905,7 +1905,7 @@ class _$AICharacterGetUserExperiencesImpl
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -2088,7 +2088,7 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -2121,7 +2121,7 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -2152,7 +2152,7 @@ class _$GenerateCharacterBotImpl implements GenerateCharacterBot {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -2334,7 +2334,7 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -2367,7 +2367,7 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -2398,7 +2398,7 @@ class _$GetListCharacterBotImpl implements GetListCharacterBot {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -2537,6 +2537,8 @@ abstract class _$$GetListPopularCharacterBotImplCopyWith<$Res> {
           _$GetListPopularCharacterBotImpl value,
           $Res Function(_$GetListPopularCharacterBotImpl) then) =
       __$$GetListPopularCharacterBotImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int? page, int? limit});
 }
 
 /// @nodoc
@@ -2548,27 +2550,59 @@ class __$$GetListPopularCharacterBotImplCopyWithImpl<$Res>
       _$GetListPopularCharacterBotImpl _value,
       $Res Function(_$GetListPopularCharacterBotImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? limit = freezed,
+  }) {
+    return _then(_$GetListPopularCharacterBotImpl(
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
-  const _$GetListPopularCharacterBotImpl();
+  const _$GetListPopularCharacterBotImpl({this.page, this.limit});
+
+  @override
+  final int? page;
+  @override
+  final int? limit;
 
   @override
   String toString() {
-    return 'AiCharacterEvent.getListPopularCharacterBot()';
+    return 'AiCharacterEvent.getListPopularCharacterBot(page: $page, limit: $limit)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetListPopularCharacterBotImpl);
+            other is _$GetListPopularCharacterBotImpl &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, page, limit);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetListPopularCharacterBotImplCopyWith<_$GetListPopularCharacterBotImpl>
+      get copyWith => __$$GetListPopularCharacterBotImplCopyWithImpl<
+          _$GetListPopularCharacterBotImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2583,7 +2617,7 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -2601,7 +2635,7 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
         getChatWithBotHistory,
     required TResult Function(int chatBotID) followBot,
   }) {
-    return getListPopularCharacterBot();
+    return getListPopularCharacterBot(page, limit);
   }
 
   @override
@@ -2616,7 +2650,7 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -2632,7 +2666,7 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
         getChatWithBotHistory,
     TResult? Function(int chatBotID)? followBot,
   }) {
-    return getListPopularCharacterBot?.call();
+    return getListPopularCharacterBot?.call(page, limit);
   }
 
   @override
@@ -2647,7 +2681,7 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -2665,7 +2699,7 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
     required TResult orElse(),
   }) {
     if (getListPopularCharacterBot != null) {
-      return getListPopularCharacterBot();
+      return getListPopularCharacterBot(page, limit);
     }
     return orElse();
   }
@@ -2777,7 +2811,14 @@ class _$GetListPopularCharacterBotImpl implements GetListPopularCharacterBot {
 }
 
 abstract class GetListPopularCharacterBot implements AiCharacterEvent {
-  const factory GetListPopularCharacterBot() = _$GetListPopularCharacterBotImpl;
+  const factory GetListPopularCharacterBot(
+      {final int? page, final int? limit}) = _$GetListPopularCharacterBotImpl;
+
+  int? get page;
+  int? get limit;
+  @JsonKey(ignore: true)
+  _$$GetListPopularCharacterBotImplCopyWith<_$GetListPopularCharacterBotImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2869,7 +2910,7 @@ class _$UpdatePropertiesOfCharacterBotImpl
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -2902,7 +2943,7 @@ class _$UpdatePropertiesOfCharacterBotImpl
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -2933,7 +2974,7 @@ class _$UpdatePropertiesOfCharacterBotImpl
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -3162,7 +3203,7 @@ class _$AICharacterGetChatBotDetailImpl implements AICharacterGetChatBotDetail {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -3195,7 +3236,7 @@ class _$AICharacterGetChatBotDetailImpl implements AICharacterGetChatBotDetail {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -3226,7 +3267,7 @@ class _$AICharacterGetChatBotDetailImpl implements AICharacterGetChatBotDetail {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -3458,7 +3499,7 @@ class _$AICharacterRemoveCertificateImpl
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -3491,7 +3532,7 @@ class _$AICharacterRemoveCertificateImpl
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -3522,7 +3563,7 @@ class _$AICharacterRemoveCertificateImpl
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -3752,7 +3793,7 @@ class _$AICharacterRemoveEducationImpl implements AICharacterRemoveEducation {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -3785,7 +3826,7 @@ class _$AICharacterRemoveEducationImpl implements AICharacterRemoveEducation {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -3816,7 +3857,7 @@ class _$AICharacterRemoveEducationImpl implements AICharacterRemoveEducation {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -4044,7 +4085,7 @@ class _$AICharacterRemoveExperienceImpl implements AICharacterRemoveExperience {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -4077,7 +4118,7 @@ class _$AICharacterRemoveExperienceImpl implements AICharacterRemoveExperience {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -4108,7 +4149,7 @@ class _$AICharacterRemoveExperienceImpl implements AICharacterRemoveExperience {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -4345,7 +4386,7 @@ class _$AICharacterEditCertificateImpl implements AICharacterEditCertificate {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -4378,7 +4419,7 @@ class _$AICharacterEditCertificateImpl implements AICharacterEditCertificate {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -4409,7 +4450,7 @@ class _$AICharacterEditCertificateImpl implements AICharacterEditCertificate {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -4646,7 +4687,7 @@ class _$AICharacterEditEducationImpl implements AICharacterEditEducation {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -4679,7 +4720,7 @@ class _$AICharacterEditEducationImpl implements AICharacterEditEducation {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -4710,7 +4751,7 @@ class _$AICharacterEditEducationImpl implements AICharacterEditEducation {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -4948,7 +4989,7 @@ class _$AICharacterEditExperienceImpl implements AICharacterEditExperience {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -4981,7 +5022,7 @@ class _$AICharacterEditExperienceImpl implements AICharacterEditExperience {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -5012,7 +5053,7 @@ class _$AICharacterEditExperienceImpl implements AICharacterEditExperience {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -5262,7 +5303,7 @@ class _$AICharacterGetChatWithBotHistoryImpl
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -5295,7 +5336,7 @@ class _$AICharacterGetChatWithBotHistoryImpl
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -5326,7 +5367,7 @@ class _$AICharacterGetChatWithBotHistoryImpl
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -5549,7 +5590,7 @@ class _$AICharacterFollowBotImpl implements AICharacterFollowBot {
     required TResult Function() getUserExperiences,
     required TResult Function() generateCharacterBot,
     required TResult Function() getListCharacterBot,
-    required TResult Function() getListPopularCharacterBot,
+    required TResult Function(int? page, int? limit) getListPopularCharacterBot,
     required TResult Function(PropertiesOfCharacter property, int value)
         updatePropertiesOfCharacterBot,
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
@@ -5582,7 +5623,7 @@ class _$AICharacterFollowBotImpl implements AICharacterFollowBot {
     TResult? Function()? getUserExperiences,
     TResult? Function()? generateCharacterBot,
     TResult? Function()? getListCharacterBot,
-    TResult? Function()? getListPopularCharacterBot,
+    TResult? Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult? Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
@@ -5613,7 +5654,7 @@ class _$AICharacterFollowBotImpl implements AICharacterFollowBot {
     TResult Function()? getUserExperiences,
     TResult Function()? generateCharacterBot,
     TResult Function()? getListCharacterBot,
-    TResult Function()? getListPopularCharacterBot,
+    TResult Function(int? page, int? limit)? getListPopularCharacterBot,
     TResult Function(PropertiesOfCharacter property, int value)?
         updatePropertiesOfCharacterBot,
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,

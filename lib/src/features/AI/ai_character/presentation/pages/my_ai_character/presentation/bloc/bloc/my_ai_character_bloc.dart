@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/domain/my_ai_character_usecase.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/chat_bot_message_history_model.dart';
-import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/domain/usecases/chat_with_ai_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -10,9 +10,9 @@ part 'my_ai_character_state.dart';
 part 'my_ai_character_bloc.freezed.dart';
 
 class MyAiCharacterBloc extends Bloc<MyAiCharacterEvent, MyAiCharacterState> {
-  final ChatWithAIUseCase chatWithAiUseCase;
+  final MyAICharacterUseCase myAICharacterUseCase;
 
-  MyAiCharacterBloc(this.chatWithAiUseCase) : super(const _Initial()) {
+  MyAiCharacterBloc(this.myAICharacterUseCase) : super(const _Initial()) {
     on<MyAiCharacterGetChatBotDetail>(_getChatBotDetail);
     on<MyAiCharacterGetChatWithBotHistory>(_getChatWithBotHistory);
   }
@@ -21,8 +21,8 @@ class MyAiCharacterBloc extends Bloc<MyAiCharacterEvent, MyAiCharacterState> {
       Emitter<MyAiCharacterState> emit) async {
     emit(const MyAiCharacterLoading());
 
-    final result =
-        await chatWithAiUseCase.getChatBotDetail(event.id, event.isPopularBot);
+    final result = await myAICharacterUseCase.getChatBotDetail(
+        event.id, event.isPopularBot);
 
     result.fold(
         (l) => emit(MyAiCharacterError(
@@ -37,7 +37,7 @@ class MyAiCharacterBloc extends Bloc<MyAiCharacterEvent, MyAiCharacterState> {
       Emitter<MyAiCharacterState> emit) async {
     emit(const MyAiCharacterLoading());
 
-    final result = await chatWithAiUseCase.getChatBotMessageHistory(
+    final result = await myAICharacterUseCase.getChatBotMessageHistory(
         chatBotID: event.chatBotID,
         page: event.page,
         limit: event.limit,

@@ -39,10 +39,11 @@ class AICharacterRepositoryImpl implements AICharacterRepository {
   }
 
   @override
-  Future<Either<AICharacterFailure, BaseResponse>>
-      getListPopularCharacterBot() async {
+  Future<Either<AICharacterFailure, BaseResponse>> getListPopularCharacterBot(
+      {required int page, int? limit}) async {
     try {
-      final res = await _aiCharacterDataSource.getListPopularCharacterBot();
+      final res = await _aiCharacterDataSource.getListPopularCharacterBot(
+          page: page, limit: limit);
 
       return Right(res);
     } on DioException catch (e) {

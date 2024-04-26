@@ -25,53 +25,48 @@ class _YourChatAiCharacterHistoryState
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => injector.get<MyAiCharacterBloc>()
-        ..add(MyAiCharacterGetChatWithBotHistory(
-            chatBotID: widget.chatBotID, page: 1, limit: 10, search: '')),
-      child: BlocConsumer<MyAiCharacterBloc, MyAiCharacterState>(
-        listener: (context, state) {
-          if (state is MyAiCharacterGetChatWithBotHistorySuccess) {
-            final newData = state.messagesHistory
-                .map((e) => MessageWithBotModel(
-                      isUser: e.userSenderId != null ? true : false,
-                      message: e.content ?? '',
-                      createAt: DateFormat('yyyy-MM-dd HH:mm:ss')
-                          .format(DateTime.parse(e.createdOn!)),
-                    ))
-                .toList();
-
-            messages = newData.reversed.toList();
-          }
-        },
-        builder: (context, state) {
-          if (messages == null) {
-            return const MyShimmer(count: 2, height: 300);
-          } else {
-            return AnimationLimiter(
-              child: ListView.builder(
-                physics: const BouncingScrollPhysics(),
-                itemCount: messages!.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return AnimationConfiguration.staggeredList(
-                    position: index,
-                    delay: const Duration(milliseconds: 100),
-                    child: SlideAnimation(
-                      duration: const Duration(milliseconds: 2500),
+    return BlocConsumer<MyAiCharacterBloc, MyAiCharacterState>(
+      listener: (context, state) {
+        if (state is MyAiCharacterGetChatWithBotHistorySuccess) {
+          final newData = state.messagesHistory
+              .map((e) => MessageWithBotModel(
+                    isUser: e.userSenderId != null ? true : false,
+                    message: e.content ?? '',
+                    createAt: DateFormat('yyyy-MM-dd HH:mm:ss')
+                        .format(DateTime.parse(e.createdOn!)),
+                  ))
+              .toList();
+    
+          messages = newData.reversed.toList();
+        }
+      },
+      builder: (context, state) {
+        if (messages == null) {
+          return const MyShimmer(count: 2, height: 300);
+        } else {
+          return AnimationLimiter(
+            child: ListView.builder(
+              physics: const BouncingScrollPhysics(),
+              itemCount: messages!.length,
+              itemBuilder: (BuildContext context, int index) {
+                return AnimationConfiguration.staggeredList(
+                  position: index,
+                  delay: const Duration(milliseconds: 100),
+                  child: SlideAnimation(
+                    duration: const Duration(milliseconds: 2500),
+                    curve: Curves.fastLinearToSlowEaseIn,
+                    child: FadeInAnimation(
                       curve: Curves.fastLinearToSlowEaseIn,
-                      child: FadeInAnimation(
-                        curve: Curves.fastLinearToSlowEaseIn,
-                        duration: const Duration(milliseconds: 2500),
-                        child: messages![index].toWidget(context),
-                      ),
+                      duration: const Duration(milliseconds: 2500),
+                      child: messages![index].toWidget(context),
                     ),
-                  );
-                },
-              ),
-            );
-          }
-        },
-      ),
+                  ),
+                );
+              },
+            ),
+          );
+        }
+      },
     );
   }
 }

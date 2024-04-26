@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 
 class ListCharacterBot extends StatelessWidget {
   final List<Widget> children;
-  const ListCharacterBot({super.key, required this.children});
+  final ScrollController? controller;
+  const ListCharacterBot({super.key, required this.children, this.controller});
 
   @override
   Widget build(BuildContext context) {
     return GridView.count(
+        controller: controller,
         primary: false,
         shrinkWrap: true,
         crossAxisSpacing: context.sizeWidth(12),
