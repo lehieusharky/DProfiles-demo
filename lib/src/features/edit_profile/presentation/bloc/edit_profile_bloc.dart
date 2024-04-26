@@ -8,6 +8,7 @@ import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.
 import 'package:demo_dprofiles/src/features/profile/data/models/user_language_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_skill_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
+import 'package:demo_dprofiles/src/utils/data/models/meta_language_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -29,6 +30,7 @@ class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
     on<EditProfileGetUserInfo>(_getUserInfo);
     on<EditProfileAddNewSkill>(_addNewSkill);
     on<EditProfileAddNewLanguage>(_addNewLanguage);
+    on<EditProfileGetMetaLanguage>(_getMetaLanguage);
   }
 
   FutureOr<void> _addNewEducation(
@@ -125,5 +127,20 @@ class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
       (r) => emit(
           EditProfileAddNewLanguageSuccess(UserLanguageModel.fromJson(r.data))),
     );
+  }
+
+  FutureOr<void> _getMetaLanguage(
+      EditProfileGetMetaLanguage event, Emitter<EditProfileState> emit) async {
+    final status = await profileUseCase.getMetaLanguage();
+
+    status.fold(
+        (l) => emit(const EditProfileError(
+            message: 'Get meta language failed', title: 'Failed')), (r) {
+      final data = r.data as List;
+
+      final languages = data.map((e) => MetaLanguageModel.fromJson(e)).toList();
+
+      emit(EditProfileGetMetaLanguageSuccess(languages));
+    });
   }
 }

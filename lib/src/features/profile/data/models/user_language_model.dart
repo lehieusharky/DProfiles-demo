@@ -13,6 +13,7 @@ class UserLanguageModel with _$UserLanguageModel {
     @JsonKey(name: 'updated_on') String? updatedOn,
     @JsonKey(name: 'updated_ts') String? updatedTs,
     @JsonKey(name: 'created_ts') String? createdTs,
+    String? name,
   }) = _UserLanguageModel;
 
   factory UserLanguageModel.fromJson(Map<String, Object?> json) =>

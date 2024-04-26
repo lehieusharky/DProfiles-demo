@@ -8,6 +8,7 @@ import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.
 import 'package:demo_dprofiles/src/features/profile/data/models/user_language_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_skill_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
+import 'package:demo_dprofiles/src/utils/data/models/meta_language_model.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -31,6 +32,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<ProfileGetUserSkills>(_getSkills);
     on<ProfileUploadAvatar>(_uploadAvatar);
     on<ProfileCheckDigitalProfileAvailable>(_checkDigitalProfileAvailable);
+    on<ProfileGetMetaLanguage>(_getMetaLanguage);
   }
 
   Future<void> _getUserInfo(
@@ -149,6 +151,25 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       (l) => emit(const ProfileCheckDigitalProfileAvailableSuccess(false)),
       (r) => emit(ProfileCheckDigitalProfileAvailableSuccess(
           r.data != null ? true : false)),
+    );
+  }
+
+  FutureOr<void> _getMetaLanguage(
+      ProfileGetMetaLanguage event, Emitter<ProfileState> emit) async {
+    emit(const ProfileLoading());
+
+    final status =
+        await profileUseCase.getMetaLanguage();
+
+    status.fold(
+      (l) => emit(const ProfileError(message: 'Get meta language failed', title: 'Failed')),
+      (r) {
+        final data = r.data as List;
+
+        final languages = data.map((e) => MetaLanguageModel.fromJson(e)).toList();
+
+        emit(ProfileGetMetaLanguageSuccess(languages));
+      }
     );
   }
 }

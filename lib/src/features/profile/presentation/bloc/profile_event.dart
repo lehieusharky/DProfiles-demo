@@ -20,4 +20,7 @@ class ProfileEvent with _$ProfileEvent {
 
   const factory ProfileEvent.checkDigitalProfileAvailable() =
       ProfileCheckDigitalProfileAvailable;
+
+  const factory ProfileEvent.getMetaLanguage({String? search}) =
+      ProfileGetMetaLanguage;
 }

@@ -369,4 +369,13 @@ abstract class RestClient {
     @Query('page') int page,
     @Query('limit') int? limit,
   );
+
+  // meta
+
+  @GET('/api/v1/meta-language')
+  Future<BaseResponse> getMetaLanguage();
+
+  // public
+  @GET('/api/v1/public/user/{username}')
+  Future<BaseResponse> getPublicUserInfo(@Path('username') int userName);
 }

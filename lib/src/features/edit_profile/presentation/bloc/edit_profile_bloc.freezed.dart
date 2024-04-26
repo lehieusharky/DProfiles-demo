@@ -26,6 +26,7 @@ mixin _$EditProfileEvent {
     required TResult Function() getUserinfo,
     required TResult Function(String skill) addNewSkill,
     required TResult Function(int languageID) addNewLanguage,
+    required TResult Function() getMetaLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -37,6 +38,7 @@ mixin _$EditProfileEvent {
     TResult? Function()? getUserinfo,
     TResult? Function(String skill)? addNewSkill,
     TResult? Function(int languageID)? addNewLanguage,
+    TResult? Function()? getMetaLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -48,6 +50,7 @@ mixin _$EditProfileEvent {
     TResult Function()? getUserinfo,
     TResult Function(String skill)? addNewSkill,
     TResult Function(int languageID)? addNewLanguage,
+    TResult Function()? getMetaLanguage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -62,6 +65,7 @@ mixin _$EditProfileEvent {
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
     required TResult Function(EditProfileAddNewSkill value) addNewSkill,
     required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
+    required TResult Function(EditProfileGetMetaLanguage value) getMetaLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -73,6 +77,7 @@ mixin _$EditProfileEvent {
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult? Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -84,6 +89,7 @@ mixin _$EditProfileEvent {
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -194,6 +200,7 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     required TResult Function() getUserinfo,
     required TResult Function(String skill) addNewSkill,
     required TResult Function(int languageID) addNewLanguage,
+    required TResult Function() getMetaLanguage,
   }) {
     return addNewEducation(educationModel);
   }
@@ -208,6 +215,7 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     TResult? Function()? getUserinfo,
     TResult? Function(String skill)? addNewSkill,
     TResult? Function(int languageID)? addNewLanguage,
+    TResult? Function()? getMetaLanguage,
   }) {
     return addNewEducation?.call(educationModel);
   }
@@ -222,6 +230,7 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     TResult Function()? getUserinfo,
     TResult Function(String skill)? addNewSkill,
     TResult Function(int languageID)? addNewLanguage,
+    TResult Function()? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (addNewEducation != null) {
@@ -242,6 +251,7 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
     required TResult Function(EditProfileAddNewSkill value) addNewSkill,
     required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
+    required TResult Function(EditProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return addNewEducation(this);
   }
@@ -256,6 +266,7 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult? Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return addNewEducation?.call(this);
   }
@@ -270,6 +281,7 @@ class _$EditProfileAddNewEducationImpl implements EditProfileAddNewEducation {
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (addNewEducation != null) {
@@ -376,6 +388,7 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     required TResult Function() getUserinfo,
     required TResult Function(String skill) addNewSkill,
     required TResult Function(int languageID) addNewLanguage,
+    required TResult Function() getMetaLanguage,
   }) {
     return addNewExperience(experienceModel);
   }
@@ -390,6 +403,7 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     TResult? Function()? getUserinfo,
     TResult? Function(String skill)? addNewSkill,
     TResult? Function(int languageID)? addNewLanguage,
+    TResult? Function()? getMetaLanguage,
   }) {
     return addNewExperience?.call(experienceModel);
   }
@@ -404,6 +418,7 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     TResult Function()? getUserinfo,
     TResult Function(String skill)? addNewSkill,
     TResult Function(int languageID)? addNewLanguage,
+    TResult Function()? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (addNewExperience != null) {
@@ -424,6 +439,7 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
     required TResult Function(EditProfileAddNewSkill value) addNewSkill,
     required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
+    required TResult Function(EditProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return addNewExperience(this);
   }
@@ -438,6 +454,7 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult? Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return addNewExperience?.call(this);
   }
@@ -452,6 +469,7 @@ class _$EditProfileAddNewExperienceImpl implements EditProfileAddNewExperience {
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (addNewExperience != null) {
@@ -561,6 +579,7 @@ class _$EditProfileAddNewCertificateImpl
     required TResult Function() getUserinfo,
     required TResult Function(String skill) addNewSkill,
     required TResult Function(int languageID) addNewLanguage,
+    required TResult Function() getMetaLanguage,
   }) {
     return addNewCertificate(certificateModel);
   }
@@ -575,6 +594,7 @@ class _$EditProfileAddNewCertificateImpl
     TResult? Function()? getUserinfo,
     TResult? Function(String skill)? addNewSkill,
     TResult? Function(int languageID)? addNewLanguage,
+    TResult? Function()? getMetaLanguage,
   }) {
     return addNewCertificate?.call(certificateModel);
   }
@@ -589,6 +609,7 @@ class _$EditProfileAddNewCertificateImpl
     TResult Function()? getUserinfo,
     TResult Function(String skill)? addNewSkill,
     TResult Function(int languageID)? addNewLanguage,
+    TResult Function()? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (addNewCertificate != null) {
@@ -609,6 +630,7 @@ class _$EditProfileAddNewCertificateImpl
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
     required TResult Function(EditProfileAddNewSkill value) addNewSkill,
     required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
+    required TResult Function(EditProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return addNewCertificate(this);
   }
@@ -623,6 +645,7 @@ class _$EditProfileAddNewCertificateImpl
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult? Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return addNewCertificate?.call(this);
   }
@@ -637,6 +660,7 @@ class _$EditProfileAddNewCertificateImpl
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (addNewCertificate != null) {
@@ -745,6 +769,7 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     required TResult Function() getUserinfo,
     required TResult Function(String skill) addNewSkill,
     required TResult Function(int languageID) addNewLanguage,
+    required TResult Function() getMetaLanguage,
   }) {
     return updateUserInfo(userInfoModel);
   }
@@ -759,6 +784,7 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     TResult? Function()? getUserinfo,
     TResult? Function(String skill)? addNewSkill,
     TResult? Function(int languageID)? addNewLanguage,
+    TResult? Function()? getMetaLanguage,
   }) {
     return updateUserInfo?.call(userInfoModel);
   }
@@ -773,6 +799,7 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     TResult Function()? getUserinfo,
     TResult Function(String skill)? addNewSkill,
     TResult Function(int languageID)? addNewLanguage,
+    TResult Function()? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (updateUserInfo != null) {
@@ -793,6 +820,7 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
     required TResult Function(EditProfileAddNewSkill value) addNewSkill,
     required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
+    required TResult Function(EditProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return updateUserInfo(this);
   }
@@ -807,6 +835,7 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult? Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return updateUserInfo?.call(this);
   }
@@ -821,6 +850,7 @@ class _$EditProfileUpdateUserInfoImpl implements EditProfileUpdateUserInfo {
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (updateUserInfo != null) {
@@ -889,6 +919,7 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
     required TResult Function() getUserinfo,
     required TResult Function(String skill) addNewSkill,
     required TResult Function(int languageID) addNewLanguage,
+    required TResult Function() getMetaLanguage,
   }) {
     return getUserinfo();
   }
@@ -903,6 +934,7 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
     TResult? Function()? getUserinfo,
     TResult? Function(String skill)? addNewSkill,
     TResult? Function(int languageID)? addNewLanguage,
+    TResult? Function()? getMetaLanguage,
   }) {
     return getUserinfo?.call();
   }
@@ -917,6 +949,7 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
     TResult Function()? getUserinfo,
     TResult Function(String skill)? addNewSkill,
     TResult Function(int languageID)? addNewLanguage,
+    TResult Function()? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -937,6 +970,7 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
     required TResult Function(EditProfileAddNewSkill value) addNewSkill,
     required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
+    required TResult Function(EditProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return getUserinfo(this);
   }
@@ -951,6 +985,7 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult? Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return getUserinfo?.call(this);
   }
@@ -965,6 +1000,7 @@ class _$EditProfileGetUserInfoImpl implements EditProfileGetUserInfo {
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -1053,6 +1089,7 @@ class _$EditProfileAddNewSkillImpl implements EditProfileAddNewSkill {
     required TResult Function() getUserinfo,
     required TResult Function(String skill) addNewSkill,
     required TResult Function(int languageID) addNewLanguage,
+    required TResult Function() getMetaLanguage,
   }) {
     return addNewSkill(skill);
   }
@@ -1067,6 +1104,7 @@ class _$EditProfileAddNewSkillImpl implements EditProfileAddNewSkill {
     TResult? Function()? getUserinfo,
     TResult? Function(String skill)? addNewSkill,
     TResult? Function(int languageID)? addNewLanguage,
+    TResult? Function()? getMetaLanguage,
   }) {
     return addNewSkill?.call(skill);
   }
@@ -1081,6 +1119,7 @@ class _$EditProfileAddNewSkillImpl implements EditProfileAddNewSkill {
     TResult Function()? getUserinfo,
     TResult Function(String skill)? addNewSkill,
     TResult Function(int languageID)? addNewLanguage,
+    TResult Function()? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (addNewSkill != null) {
@@ -1101,6 +1140,7 @@ class _$EditProfileAddNewSkillImpl implements EditProfileAddNewSkill {
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
     required TResult Function(EditProfileAddNewSkill value) addNewSkill,
     required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
+    required TResult Function(EditProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return addNewSkill(this);
   }
@@ -1115,6 +1155,7 @@ class _$EditProfileAddNewSkillImpl implements EditProfileAddNewSkill {
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult? Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return addNewSkill?.call(this);
   }
@@ -1129,6 +1170,7 @@ class _$EditProfileAddNewSkillImpl implements EditProfileAddNewSkill {
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (addNewSkill != null) {
@@ -1225,6 +1267,7 @@ class _$EditProfileAddNewLanguageImpl implements EditProfileAddNewLanguage {
     required TResult Function() getUserinfo,
     required TResult Function(String skill) addNewSkill,
     required TResult Function(int languageID) addNewLanguage,
+    required TResult Function() getMetaLanguage,
   }) {
     return addNewLanguage(languageID);
   }
@@ -1239,6 +1282,7 @@ class _$EditProfileAddNewLanguageImpl implements EditProfileAddNewLanguage {
     TResult? Function()? getUserinfo,
     TResult? Function(String skill)? addNewSkill,
     TResult? Function(int languageID)? addNewLanguage,
+    TResult? Function()? getMetaLanguage,
   }) {
     return addNewLanguage?.call(languageID);
   }
@@ -1253,6 +1297,7 @@ class _$EditProfileAddNewLanguageImpl implements EditProfileAddNewLanguage {
     TResult Function()? getUserinfo,
     TResult Function(String skill)? addNewSkill,
     TResult Function(int languageID)? addNewLanguage,
+    TResult Function()? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (addNewLanguage != null) {
@@ -1273,6 +1318,7 @@ class _$EditProfileAddNewLanguageImpl implements EditProfileAddNewLanguage {
     required TResult Function(EditProfileGetUserInfo value) getUserinfo,
     required TResult Function(EditProfileAddNewSkill value) addNewSkill,
     required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
+    required TResult Function(EditProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return addNewLanguage(this);
   }
@@ -1287,6 +1333,7 @@ class _$EditProfileAddNewLanguageImpl implements EditProfileAddNewLanguage {
     TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult? Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return addNewLanguage?.call(this);
   }
@@ -1301,6 +1348,7 @@ class _$EditProfileAddNewLanguageImpl implements EditProfileAddNewLanguage {
     TResult Function(EditProfileGetUserInfo value)? getUserinfo,
     TResult Function(EditProfileAddNewSkill value)? addNewSkill,
     TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (addNewLanguage != null) {
@@ -1321,6 +1369,151 @@ abstract class EditProfileAddNewLanguage implements EditProfileEvent {
 }
 
 /// @nodoc
+abstract class _$$EditProfileGetMetaLanguageImplCopyWith<$Res> {
+  factory _$$EditProfileGetMetaLanguageImplCopyWith(
+          _$EditProfileGetMetaLanguageImpl value,
+          $Res Function(_$EditProfileGetMetaLanguageImpl) then) =
+      __$$EditProfileGetMetaLanguageImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$EditProfileGetMetaLanguageImplCopyWithImpl<$Res>
+    extends _$EditProfileEventCopyWithImpl<$Res,
+        _$EditProfileGetMetaLanguageImpl>
+    implements _$$EditProfileGetMetaLanguageImplCopyWith<$Res> {
+  __$$EditProfileGetMetaLanguageImplCopyWithImpl(
+      _$EditProfileGetMetaLanguageImpl _value,
+      $Res Function(_$EditProfileGetMetaLanguageImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$EditProfileGetMetaLanguageImpl implements EditProfileGetMetaLanguage {
+  const _$EditProfileGetMetaLanguageImpl();
+
+  @override
+  String toString() {
+    return 'EditProfileEvent.getMetaLanguage()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditProfileGetMetaLanguageImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(EducationModel educationModel) addNewEducation,
+    required TResult Function(ExperienceModel experienceModel) addNewExperience,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserinfo,
+    required TResult Function(String skill) addNewSkill,
+    required TResult Function(int languageID) addNewLanguage,
+    required TResult Function() getMetaLanguage,
+  }) {
+    return getMetaLanguage();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(EducationModel educationModel)? addNewEducation,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult? Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserinfo,
+    TResult? Function(String skill)? addNewSkill,
+    TResult? Function(int languageID)? addNewLanguage,
+    TResult? Function()? getMetaLanguage,
+  }) {
+    return getMetaLanguage?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(EducationModel educationModel)? addNewEducation,
+    TResult Function(ExperienceModel experienceModel)? addNewExperience,
+    TResult Function(CertificateModel certificateModel)? addNewCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserinfo,
+    TResult Function(String skill)? addNewSkill,
+    TResult Function(int languageID)? addNewLanguage,
+    TResult Function()? getMetaLanguage,
+    required TResult orElse(),
+  }) {
+    if (getMetaLanguage != null) {
+      return getMetaLanguage();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EditProfileAddNewEducation value) addNewEducation,
+    required TResult Function(EditProfileAddNewExperience value)
+        addNewExperience,
+    required TResult Function(EditProfileAddNewCertificate value)
+        addNewCertificate,
+    required TResult Function(EditProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(EditProfileGetUserInfo value) getUserinfo,
+    required TResult Function(EditProfileAddNewSkill value) addNewSkill,
+    required TResult Function(EditProfileAddNewLanguage value) addNewLanguage,
+    required TResult Function(EditProfileGetMetaLanguage value) getMetaLanguage,
+  }) {
+    return getMetaLanguage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EditProfileAddNewEducation value)? addNewEducation,
+    TResult? Function(EditProfileAddNewExperience value)? addNewExperience,
+    TResult? Function(EditProfileAddNewCertificate value)? addNewCertificate,
+    TResult? Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult? Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult? Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
+  }) {
+    return getMetaLanguage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EditProfileAddNewEducation value)? addNewEducation,
+    TResult Function(EditProfileAddNewExperience value)? addNewExperience,
+    TResult Function(EditProfileAddNewCertificate value)? addNewCertificate,
+    TResult Function(EditProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(EditProfileGetUserInfo value)? getUserinfo,
+    TResult Function(EditProfileAddNewSkill value)? addNewSkill,
+    TResult Function(EditProfileAddNewLanguage value)? addNewLanguage,
+    TResult Function(EditProfileGetMetaLanguage value)? getMetaLanguage,
+    required TResult orElse(),
+  }) {
+    if (getMetaLanguage != null) {
+      return getMetaLanguage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditProfileGetMetaLanguage implements EditProfileEvent {
+  const factory EditProfileGetMetaLanguage() = _$EditProfileGetMetaLanguageImpl;
+}
+
+/// @nodoc
 mixin _$EditProfileState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -1338,6 +1531,8 @@ mixin _$EditProfileState {
     required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
     required TResult Function(UserLanguageModel languageModel)
         addNewLanguageSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1353,6 +1548,8 @@ mixin _$EditProfileState {
     TResult? Function()? updateUserInfoSuccess,
     TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1368,6 +1565,7 @@ mixin _$EditProfileState {
     TResult Function()? updateUserInfoSuccess,
     TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1390,6 +1588,8 @@ mixin _$EditProfileState {
         addNewSkillSuccess,
     required TResult Function(EditProfileAddNewLanguageSuccess value)
         addNewLanguageSuccess,
+    required TResult Function(EditProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1409,6 +1609,8 @@ mixin _$EditProfileState {
     TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult? Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult? Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1428,6 +1630,8 @@ mixin _$EditProfileState {
     TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1503,6 +1707,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
     required TResult Function(UserLanguageModel languageModel)
         addNewLanguageSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return initial();
   }
@@ -1521,6 +1727,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? updateUserInfoSuccess,
     TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return initial?.call();
   }
@@ -1539,6 +1747,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? updateUserInfoSuccess,
     TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1567,6 +1776,8 @@ class _$InitialImpl implements _Initial {
         addNewSkillSuccess,
     required TResult Function(EditProfileAddNewLanguageSuccess value)
         addNewLanguageSuccess,
+    required TResult Function(EditProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return initial(this);
   }
@@ -1589,6 +1800,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult? Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult? Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return initial?.call(this);
   }
@@ -1611,6 +1824,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1711,6 +1926,8 @@ class _$EditProfileErrorImpl implements EditProfileError {
     required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
     required TResult Function(UserLanguageModel languageModel)
         addNewLanguageSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return error(message, title);
   }
@@ -1729,6 +1946,8 @@ class _$EditProfileErrorImpl implements EditProfileError {
     TResult? Function()? updateUserInfoSuccess,
     TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -1747,6 +1966,7 @@ class _$EditProfileErrorImpl implements EditProfileError {
     TResult Function()? updateUserInfoSuccess,
     TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1775,6 +1995,8 @@ class _$EditProfileErrorImpl implements EditProfileError {
         addNewSkillSuccess,
     required TResult Function(EditProfileAddNewLanguageSuccess value)
         addNewLanguageSuccess,
+    required TResult Function(EditProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return error(this);
   }
@@ -1797,6 +2019,8 @@ class _$EditProfileErrorImpl implements EditProfileError {
     TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult? Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult? Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return error?.call(this);
   }
@@ -1819,6 +2043,8 @@ class _$EditProfileErrorImpl implements EditProfileError {
     TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1892,6 +2118,8 @@ class _$EditProfileLoadingImpl implements EditProfileLoading {
     required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
     required TResult Function(UserLanguageModel languageModel)
         addNewLanguageSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return loading();
   }
@@ -1910,6 +2138,8 @@ class _$EditProfileLoadingImpl implements EditProfileLoading {
     TResult? Function()? updateUserInfoSuccess,
     TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return loading?.call();
   }
@@ -1928,6 +2158,7 @@ class _$EditProfileLoadingImpl implements EditProfileLoading {
     TResult Function()? updateUserInfoSuccess,
     TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1956,6 +2187,8 @@ class _$EditProfileLoadingImpl implements EditProfileLoading {
         addNewSkillSuccess,
     required TResult Function(EditProfileAddNewLanguageSuccess value)
         addNewLanguageSuccess,
+    required TResult Function(EditProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return loading(this);
   }
@@ -1978,6 +2211,8 @@ class _$EditProfileLoadingImpl implements EditProfileLoading {
     TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult? Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult? Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return loading?.call(this);
   }
@@ -2000,6 +2235,8 @@ class _$EditProfileLoadingImpl implements EditProfileLoading {
     TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -2108,6 +2345,8 @@ class _$EditProfileGetUserInfoSuccessImpl
     required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
     required TResult Function(UserLanguageModel languageModel)
         addNewLanguageSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return getUserInfoSuccess(userInfoModel);
   }
@@ -2126,6 +2365,8 @@ class _$EditProfileGetUserInfoSuccessImpl
     TResult? Function()? updateUserInfoSuccess,
     TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return getUserInfoSuccess?.call(userInfoModel);
   }
@@ -2144,6 +2385,7 @@ class _$EditProfileGetUserInfoSuccessImpl
     TResult Function()? updateUserInfoSuccess,
     TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -2172,6 +2414,8 @@ class _$EditProfileGetUserInfoSuccessImpl
         addNewSkillSuccess,
     required TResult Function(EditProfileAddNewLanguageSuccess value)
         addNewLanguageSuccess,
+    required TResult Function(EditProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return getUserInfoSuccess(this);
   }
@@ -2194,6 +2438,8 @@ class _$EditProfileGetUserInfoSuccessImpl
     TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult? Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult? Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return getUserInfoSuccess?.call(this);
   }
@@ -2216,6 +2462,8 @@ class _$EditProfileGetUserInfoSuccessImpl
     TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -2331,6 +2579,8 @@ class _$EditProfileAddNewEducationSuccessImpl
     required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
     required TResult Function(UserLanguageModel languageModel)
         addNewLanguageSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return addNewEducationSuccess(educationModel);
   }
@@ -2349,6 +2599,8 @@ class _$EditProfileAddNewEducationSuccessImpl
     TResult? Function()? updateUserInfoSuccess,
     TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return addNewEducationSuccess?.call(educationModel);
   }
@@ -2367,6 +2619,7 @@ class _$EditProfileAddNewEducationSuccessImpl
     TResult Function()? updateUserInfoSuccess,
     TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewEducationSuccess != null) {
@@ -2395,6 +2648,8 @@ class _$EditProfileAddNewEducationSuccessImpl
         addNewSkillSuccess,
     required TResult Function(EditProfileAddNewLanguageSuccess value)
         addNewLanguageSuccess,
+    required TResult Function(EditProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return addNewEducationSuccess(this);
   }
@@ -2417,6 +2672,8 @@ class _$EditProfileAddNewEducationSuccessImpl
     TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult? Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult? Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return addNewEducationSuccess?.call(this);
   }
@@ -2439,6 +2696,8 @@ class _$EditProfileAddNewEducationSuccessImpl
     TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewEducationSuccess != null) {
@@ -2555,6 +2814,8 @@ class _$EditProfileAddNewExperienceSuccessImpl
     required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
     required TResult Function(UserLanguageModel languageModel)
         addNewLanguageSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return addNewExperienceSuccess(experienceModel);
   }
@@ -2573,6 +2834,8 @@ class _$EditProfileAddNewExperienceSuccessImpl
     TResult? Function()? updateUserInfoSuccess,
     TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return addNewExperienceSuccess?.call(experienceModel);
   }
@@ -2591,6 +2854,7 @@ class _$EditProfileAddNewExperienceSuccessImpl
     TResult Function()? updateUserInfoSuccess,
     TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewExperienceSuccess != null) {
@@ -2619,6 +2883,8 @@ class _$EditProfileAddNewExperienceSuccessImpl
         addNewSkillSuccess,
     required TResult Function(EditProfileAddNewLanguageSuccess value)
         addNewLanguageSuccess,
+    required TResult Function(EditProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return addNewExperienceSuccess(this);
   }
@@ -2641,6 +2907,8 @@ class _$EditProfileAddNewExperienceSuccessImpl
     TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult? Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult? Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return addNewExperienceSuccess?.call(this);
   }
@@ -2663,6 +2931,8 @@ class _$EditProfileAddNewExperienceSuccessImpl
     TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewExperienceSuccess != null) {
@@ -2779,6 +3049,8 @@ class _$EditProfileAddNewCertificateSuccessImpl
     required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
     required TResult Function(UserLanguageModel languageModel)
         addNewLanguageSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return addNewCertificateSuccess(certificateModel);
   }
@@ -2797,6 +3069,8 @@ class _$EditProfileAddNewCertificateSuccessImpl
     TResult? Function()? updateUserInfoSuccess,
     TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return addNewCertificateSuccess?.call(certificateModel);
   }
@@ -2815,6 +3089,7 @@ class _$EditProfileAddNewCertificateSuccessImpl
     TResult Function()? updateUserInfoSuccess,
     TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewCertificateSuccess != null) {
@@ -2843,6 +3118,8 @@ class _$EditProfileAddNewCertificateSuccessImpl
         addNewSkillSuccess,
     required TResult Function(EditProfileAddNewLanguageSuccess value)
         addNewLanguageSuccess,
+    required TResult Function(EditProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return addNewCertificateSuccess(this);
   }
@@ -2865,6 +3142,8 @@ class _$EditProfileAddNewCertificateSuccessImpl
     TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult? Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult? Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return addNewCertificateSuccess?.call(this);
   }
@@ -2887,6 +3166,8 @@ class _$EditProfileAddNewCertificateSuccessImpl
     TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewCertificateSuccess != null) {
@@ -2965,6 +3246,8 @@ class _$EditProfileUpdateUserInfoSuccessImpl
     required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
     required TResult Function(UserLanguageModel languageModel)
         addNewLanguageSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return updateUserInfoSuccess();
   }
@@ -2983,6 +3266,8 @@ class _$EditProfileUpdateUserInfoSuccessImpl
     TResult? Function()? updateUserInfoSuccess,
     TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return updateUserInfoSuccess?.call();
   }
@@ -3001,6 +3286,7 @@ class _$EditProfileUpdateUserInfoSuccessImpl
     TResult Function()? updateUserInfoSuccess,
     TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (updateUserInfoSuccess != null) {
@@ -3029,6 +3315,8 @@ class _$EditProfileUpdateUserInfoSuccessImpl
         addNewSkillSuccess,
     required TResult Function(EditProfileAddNewLanguageSuccess value)
         addNewLanguageSuccess,
+    required TResult Function(EditProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return updateUserInfoSuccess(this);
   }
@@ -3051,6 +3339,8 @@ class _$EditProfileUpdateUserInfoSuccessImpl
     TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult? Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult? Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return updateUserInfoSuccess?.call(this);
   }
@@ -3073,6 +3363,8 @@ class _$EditProfileUpdateUserInfoSuccessImpl
     TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (updateUserInfoSuccess != null) {
@@ -3182,6 +3474,8 @@ class _$EditProfileAddNewSkillSuccessImpl
     required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
     required TResult Function(UserLanguageModel languageModel)
         addNewLanguageSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return addNewSkillSuccess(skillModel);
   }
@@ -3200,6 +3494,8 @@ class _$EditProfileAddNewSkillSuccessImpl
     TResult? Function()? updateUserInfoSuccess,
     TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return addNewSkillSuccess?.call(skillModel);
   }
@@ -3218,6 +3514,7 @@ class _$EditProfileAddNewSkillSuccessImpl
     TResult Function()? updateUserInfoSuccess,
     TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewSkillSuccess != null) {
@@ -3246,6 +3543,8 @@ class _$EditProfileAddNewSkillSuccessImpl
         addNewSkillSuccess,
     required TResult Function(EditProfileAddNewLanguageSuccess value)
         addNewLanguageSuccess,
+    required TResult Function(EditProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return addNewSkillSuccess(this);
   }
@@ -3268,6 +3567,8 @@ class _$EditProfileAddNewSkillSuccessImpl
     TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult? Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult? Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return addNewSkillSuccess?.call(this);
   }
@@ -3290,6 +3591,8 @@ class _$EditProfileAddNewSkillSuccessImpl
     TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewSkillSuccess != null) {
@@ -3405,6 +3708,8 @@ class _$EditProfileAddNewLanguageSuccessImpl
     required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
     required TResult Function(UserLanguageModel languageModel)
         addNewLanguageSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return addNewLanguageSuccess(languageModel);
   }
@@ -3423,6 +3728,8 @@ class _$EditProfileAddNewLanguageSuccessImpl
     TResult? Function()? updateUserInfoSuccess,
     TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return addNewLanguageSuccess?.call(languageModel);
   }
@@ -3441,6 +3748,7 @@ class _$EditProfileAddNewLanguageSuccessImpl
     TResult Function()? updateUserInfoSuccess,
     TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
     TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewLanguageSuccess != null) {
@@ -3469,6 +3777,8 @@ class _$EditProfileAddNewLanguageSuccessImpl
         addNewSkillSuccess,
     required TResult Function(EditProfileAddNewLanguageSuccess value)
         addNewLanguageSuccess,
+    required TResult Function(EditProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return addNewLanguageSuccess(this);
   }
@@ -3491,6 +3801,8 @@ class _$EditProfileAddNewLanguageSuccessImpl
     TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult? Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult? Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return addNewLanguageSuccess?.call(this);
   }
@@ -3513,6 +3825,8 @@ class _$EditProfileAddNewLanguageSuccessImpl
     TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
     TResult Function(EditProfileAddNewLanguageSuccess value)?
         addNewLanguageSuccess,
+    TResult Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (addNewLanguageSuccess != null) {
@@ -3531,5 +3845,238 @@ abstract class EditProfileAddNewLanguageSuccess implements EditProfileState {
   @JsonKey(ignore: true)
   _$$EditProfileAddNewLanguageSuccessImplCopyWith<
           _$EditProfileAddNewLanguageSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$EditProfileGetMetaLanguageSuccessImplCopyWith<$Res> {
+  factory _$$EditProfileGetMetaLanguageSuccessImplCopyWith(
+          _$EditProfileGetMetaLanguageSuccessImpl value,
+          $Res Function(_$EditProfileGetMetaLanguageSuccessImpl) then) =
+      __$$EditProfileGetMetaLanguageSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<MetaLanguageModel> languages});
+}
+
+/// @nodoc
+class __$$EditProfileGetMetaLanguageSuccessImplCopyWithImpl<$Res>
+    extends _$EditProfileStateCopyWithImpl<$Res,
+        _$EditProfileGetMetaLanguageSuccessImpl>
+    implements _$$EditProfileGetMetaLanguageSuccessImplCopyWith<$Res> {
+  __$$EditProfileGetMetaLanguageSuccessImplCopyWithImpl(
+      _$EditProfileGetMetaLanguageSuccessImpl _value,
+      $Res Function(_$EditProfileGetMetaLanguageSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? languages = null,
+  }) {
+    return _then(_$EditProfileGetMetaLanguageSuccessImpl(
+      null == languages
+          ? _value._languages
+          : languages // ignore: cast_nullable_to_non_nullable
+              as List<MetaLanguageModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$EditProfileGetMetaLanguageSuccessImpl
+    implements EditProfileGetMetaLanguageSuccess {
+  const _$EditProfileGetMetaLanguageSuccessImpl(
+      final List<MetaLanguageModel> languages)
+      : _languages = languages;
+
+  final List<MetaLanguageModel> _languages;
+  @override
+  List<MetaLanguageModel> get languages {
+    if (_languages is EqualUnmodifiableListView) return _languages;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_languages);
+  }
+
+  @override
+  String toString() {
+    return 'EditProfileState.getMetaLanguageSuccess(languages: $languages)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EditProfileGetMetaLanguageSuccessImpl &&
+            const DeepCollectionEquality()
+                .equals(other._languages, _languages));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_languages));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EditProfileGetMetaLanguageSuccessImplCopyWith<
+          _$EditProfileGetMetaLanguageSuccessImpl>
+      get copyWith => __$$EditProfileGetMetaLanguageSuccessImplCopyWithImpl<
+          _$EditProfileGetMetaLanguageSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(EducationModel educationModel)
+        addNewEducationSuccess,
+    required TResult Function(ExperienceModel experienceModel)
+        addNewExperienceSuccess,
+    required TResult Function(CertificateModel certificateModel)
+        addNewCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(UserSkillModel skillModel) addNewSkillSuccess,
+    required TResult Function(UserLanguageModel languageModel)
+        addNewLanguageSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
+  }) {
+    return getMetaLanguageSuccess(languages);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult? Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult? Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult? Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
+  }) {
+    return getMetaLanguageSuccess?.call(languages);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(EducationModel educationModel)? addNewEducationSuccess,
+    TResult Function(ExperienceModel experienceModel)? addNewExperienceSuccess,
+    TResult Function(CertificateModel certificateModel)?
+        addNewCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(UserSkillModel skillModel)? addNewSkillSuccess,
+    TResult Function(UserLanguageModel languageModel)? addNewLanguageSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    required TResult orElse(),
+  }) {
+    if (getMetaLanguageSuccess != null) {
+      return getMetaLanguageSuccess(languages);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(EditProfileError value) error,
+    required TResult Function(EditProfileLoading value) loading,
+    required TResult Function(EditProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(EditProfileAddNewEducationSuccess value)
+        addNewEducationSuccess,
+    required TResult Function(EditProfileAddNewExperienceSuccess value)
+        addNewExperienceSuccess,
+    required TResult Function(EditProfileAddNewCertificateSuccess value)
+        addNewCertificateSuccess,
+    required TResult Function(EditProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(EditProfileAddNewSkillSuccess value)
+        addNewSkillSuccess,
+    required TResult Function(EditProfileAddNewLanguageSuccess value)
+        addNewLanguageSuccess,
+    required TResult Function(EditProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
+  }) {
+    return getMetaLanguageSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(EditProfileError value)? error,
+    TResult? Function(EditProfileLoading value)? loading,
+    TResult? Function(EditProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(EditProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult? Function(EditProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult? Function(EditProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult? Function(EditProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult? Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
+    TResult? Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+  }) {
+    return getMetaLanguageSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(EditProfileError value)? error,
+    TResult Function(EditProfileLoading value)? loading,
+    TResult Function(EditProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(EditProfileAddNewEducationSuccess value)?
+        addNewEducationSuccess,
+    TResult Function(EditProfileAddNewExperienceSuccess value)?
+        addNewExperienceSuccess,
+    TResult Function(EditProfileAddNewCertificateSuccess value)?
+        addNewCertificateSuccess,
+    TResult Function(EditProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult Function(EditProfileAddNewSkillSuccess value)? addNewSkillSuccess,
+    TResult Function(EditProfileAddNewLanguageSuccess value)?
+        addNewLanguageSuccess,
+    TResult Function(EditProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    required TResult orElse(),
+  }) {
+    if (getMetaLanguageSuccess != null) {
+      return getMetaLanguageSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class EditProfileGetMetaLanguageSuccess implements EditProfileState {
+  const factory EditProfileGetMetaLanguageSuccess(
+          final List<MetaLanguageModel> languages) =
+      _$EditProfileGetMetaLanguageSuccessImpl;
+
+  List<MetaLanguageModel> get languages;
+  @JsonKey(ignore: true)
+  _$$EditProfileGetMetaLanguageSuccessImplCopyWith<
+          _$EditProfileGetMetaLanguageSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

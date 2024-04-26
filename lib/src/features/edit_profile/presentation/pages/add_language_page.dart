@@ -14,7 +14,8 @@ class AddLanguagePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<EditProfileBloc>(
-      create: (context) => injector.get<EditProfileBloc>(),
+      create: (context) => injector.get<EditProfileBloc>()
+        ..add(const EditProfileGetMetaLanguage()),
       child: const MyScaffold(
         horizontalMargin: 20,
         useAppBar: true,

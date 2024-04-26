@@ -15,4 +15,6 @@ abstract class ProfileDataSource {
   Future<BaseResponse> getUserLanguage();
 
   Future<UploadFileResponse?> uploadImage();
+
+  Future<BaseResponse> getMetaLanguage();
 }

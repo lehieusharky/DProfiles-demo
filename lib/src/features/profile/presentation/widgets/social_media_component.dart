@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/ui/my_toast.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
@@ -58,9 +59,7 @@ class SocialMediaComponent extends StatelessWidget {
                           (e) => Padding(
                             padding: context.padding(horizontal: 5),
                             child: InkWell(
-                              onTap: e.item2 != null
-                                  ? () => _openUrl(e.item2!)
-                                  : null,
+                              onTap: () => _openUrl(context, e.item2),
                               child: SvgPicture.asset(e.item1),
                             ),
                           ),
@@ -76,15 +75,23 @@ class SocialMediaComponent extends StatelessWidget {
     );
   }
 
-  Future<void> _openUrl(String uri) async {
+  Future<void> _openUrl(BuildContext context, String? uri) async {
     try {
-      final Uri url = Uri.parse(uri);
-
-      if (!await launchUrl(url)) {
-        throw Exception('Could not launch $url');
+      if (uri == null || uri.isEmpty) {
+        showToast(context, 'Social media was not set up');
+      } else {
+        await _launchUrl(uri);
       }
     } catch (e) {
       log(e.toString());
+    }
+  }
+
+  Future<void> _launchUrl(String uri) async {
+    final Uri url = Uri.parse(uri);
+
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
     }
   }
 }

@@ -17,7 +17,7 @@ import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/c
     as _i21;
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/widgets/edit_form/form_edit_experience_page.dart'
     as _i22;
-import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/presentation/pages/my_ai_character_page.dart'
+import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/presentation/pages/import_my_ai_character_page.dart'
     as _i29;
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/ai_features_history_page.dart'
     as _i7;

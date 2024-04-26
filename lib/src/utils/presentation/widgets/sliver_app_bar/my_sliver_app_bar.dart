@@ -19,8 +19,8 @@ class MySliverAppBar extends StatelessWidget {
       padding: margin ?? context.padding(),
       sliver: SliverAppBar(
         automaticallyImplyLeading: false,
-        // leading: null,
-        // actions: [Container()],
+        leading: null,
+        actions: [Container()],
         expandedHeight: context.sizeHeight(height),
         flexibleSpace: FlexibleSpaceBar(
           background: child,

@@ -17,6 +17,8 @@ abstract class ProfileRepository {
   Future<Either<ProfileFailure, BaseResponse>> getUserLanguage();
 
   Future<Either<ProfileFailure, UploadFileResponse?>> uploadImage();
+
+  Future<Either<ProfileFailure, BaseResponse>> getMetaLanguage();
 }
 
 class ProfileFailure extends AppFailure {

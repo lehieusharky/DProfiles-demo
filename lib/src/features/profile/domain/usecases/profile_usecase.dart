@@ -20,6 +20,8 @@ abstract class ProfileUseCase {
   Future<Either<String, BaseResponse>> getUserLanguage();
 
   Future<Either<String, UploadFileResponse?>> uploadImage();
+
+  Future<Either<String, BaseResponse>> getMetaLanguage();
 }
 
 @Injectable(as: ProfileUseCase)
@@ -85,6 +87,15 @@ class ProfileUseCaseImpl implements ProfileUseCase {
   @override
   Future<Either<String, UploadFileResponse?>> uploadImage() async {
     final result = await _profileRepository.uploadImage();
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+  
+  @override
+  Future<Either<String, BaseResponse>> getMetaLanguage()async {
+     final result = await _profileRepository.getMetaLanguage();
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),
