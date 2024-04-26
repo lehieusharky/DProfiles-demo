@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
+import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
@@ -39,7 +40,7 @@ class _HeaderMyAICharacterState extends State<HeaderMyAICharacter> {
                 const SizedBox(height: 50),
               ],
             ),
-            _buildAvatar(),
+            _buildAvatar(widget.botInfo.avatar),
           ],
         ),
         Padding(
@@ -93,10 +94,9 @@ class _HeaderMyAICharacterState extends State<HeaderMyAICharacter> {
                 padding: context.padding(top: 35),
                 child: Container(
                   decoration: BoxDecoration(
-                    color:
-                        colorScheme(context).outlineVariant.withOpacity(0.1),
-                    border: Border.all(
-                        color: colorScheme(context).outlineVariant),
+                    color: colorScheme(context).outlineVariant.withOpacity(0.1),
+                    border:
+                        Border.all(color: colorScheme(context).outlineVariant),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   padding: context.padding(vertical: 12, horizontal: 20),
@@ -211,7 +211,7 @@ class _HeaderMyAICharacterState extends State<HeaderMyAICharacter> {
         ],
       );
 
-  Widget _buildAvatar() => Padding(
+  Widget _buildAvatar(String? avatar) => Padding(
         padding: context.padding(horizontal: 20),
         child: Stack(
           alignment: Alignment.bottomRight,
@@ -225,7 +225,7 @@ class _HeaderMyAICharacterState extends State<HeaderMyAICharacter> {
                       shape: BoxShape.circle,
                       color: colorScheme(context).background,
                     ),
-                    child: const CircleAvatar(radius: 50)),
+                    child: _buildAvatar2(context, avatar)),
                 Container(
                     padding: context.padding(horizontal: 6, vertical: 2),
                     decoration: BoxDecoration(
@@ -262,4 +262,17 @@ class _HeaderMyAICharacterState extends State<HeaderMyAICharacter> {
           ],
         ),
       );
+
+  Widget _buildAvatar2(BuildContext context, String? avatar) {
+    return (avatar == null)
+        ? CircleAvatar(radius: context.sizeWidth(40))
+        : CircleAvatar(
+            radius: context.sizeWidth(40),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(1000),
+              child: MyCacheImage(
+                  imageUrl: 'https://d3v3a2vsni37rv.cloudfront.net/$avatar'),
+            ),
+          );
+  }
 }

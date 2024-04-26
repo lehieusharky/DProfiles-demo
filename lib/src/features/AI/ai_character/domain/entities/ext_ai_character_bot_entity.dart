@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
@@ -48,45 +49,40 @@ extension AICharacterBotModelExt on AICharacterBotModel {
               ),
               child: Padding(
                 padding: context.padding(horizontal: 8),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: context.padding(right: 15),
-                      child: CircleAvatar(
-                        // TODO avatar of bot
-                        // foregroundImage: (avatar != null)
-                        //     ? CachedNetworkImageProvider(avatar!)
-                        //     : null,
-                        radius: context.sizeWidth(25),
-                      ),
-                    ),
-                    Expanded(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          if (name != null)
-                            Text(
-                              name!,
-                              style: AppFont()
-                                  .fontTheme(context,
-                                      color: MyColor.getWhite,
-                                      weight: FontWeight.w600)
-                                  .bodyMedium,
+                child: InkWell(
+                  onTap: () => context.router.push(MyAICharacterRoute(
+                      chatBotID: id!, isPopularBot: isPopularBot)),
+                  child: Row(
+                    children: [
+                      _buildAvatar(context),
+                      Expanded(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            if (name != null)
+                              Text(
+                                name!,
+                                style: AppFont()
+                                    .fontTheme(context,
+                                        color: MyColor.getWhite,
+                                        weight: FontWeight.w600)
+                                    .bodyMedium,
+                              ),
+                            Padding(
+                              padding: context.padding(top: 2),
+                              child: Text(
+                                "@$name",
+                                style: AppFont()
+                                    .fontTheme(context, color: MyColor.getWhite)
+                                    .bodySmall,
+                              ),
                             ),
-                          Padding(
-                            padding: context.padding(top: 2),
-                            child: Text(
-                              "@$name",
-                              style: AppFont()
-                                  .fontTheme(context, color: MyColor.getWhite)
-                                  .bodySmall,
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             )
@@ -108,6 +104,22 @@ extension AICharacterBotModelExt on AICharacterBotModel {
         )
       ],
     );
+  }
+
+  Widget _buildAvatar(BuildContext context) {
+    return Padding(
+        padding: context.padding(right: 15),
+        child: (avatar == null)
+            ? CircleAvatar(radius: context.sizeWidth(25))
+            : CircleAvatar(
+                radius: context.sizeWidth(25),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(1000),
+                  child: MyCacheImage(
+                      imageUrl:
+                          'https://d3v3a2vsni37rv.cloudfront.net/$avatar'),
+                ),
+              ));
   }
 
   Widget _buildChatButton(BuildContext context, bool isPopularBot) {
@@ -143,7 +155,6 @@ extension AICharacterBotModelExt on AICharacterBotModel {
     return Row(
       children: [
         Assets.icons.iconChat.svg(color: MyColor.getWhite),
-        // TODO: Remove hardcoded text
         Text(
           '10 k',
           style:

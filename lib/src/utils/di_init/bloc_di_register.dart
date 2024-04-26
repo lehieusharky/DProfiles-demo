@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/features/AI/ai_character/domain/usecase/ai_character_usecase.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai_character_bloc.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/presentation/bloc/bloc/my_ai_character_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/domain/usecases/auto_generate_usecase.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/domain/usecases/chat_with_ai_usecase.dart';
@@ -35,6 +36,10 @@ class BlocDI {
         injector.get<ProfileUseCase>(),
         injector.get<ChatWithAIUseCase>(),
       ),
+    );
+
+    injector.registerLazySingleton<MyAiCharacterBloc>(
+      () => MyAiCharacterBloc(injector.get<ChatWithAIUseCase>()),
     );
 
     injector.registerFactory<ProfileBloc>(

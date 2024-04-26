@@ -17,11 +17,13 @@ class ListFollowingBot extends StatefulWidget {
   State<ListFollowingBot> createState() => _ListFollowingBotState();
 }
 
-class _ListFollowingBotState extends State<ListFollowingBot> {
+class _ListFollowingBotState extends State<ListFollowingBot>
+    with AutomaticKeepAliveClientMixin {
   List<AICharacterBotModel>? bots = [];
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocSelector<AiCharacterBloc, AiCharacterState,
         List<AICharacterBotModel>?>(
       selector: (state) {
@@ -51,4 +53,7 @@ class _ListFollowingBotState extends State<ListFollowingBot> {
       },
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

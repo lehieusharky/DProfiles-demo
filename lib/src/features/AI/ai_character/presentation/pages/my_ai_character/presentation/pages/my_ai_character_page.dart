@@ -21,12 +21,12 @@ class _MyAICharacterPageState extends State<MyAICharacterPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => injector.get<AiCharacterBloc>()
-        ..add(
-            AICharacterGetChatBotDetail(widget.chatBotID, widget.isPopularBot)),
-      child: BlocConsumer<AiCharacterBloc, AiCharacterState>(
+      create: (context) => injector.get<MyAiCharacterBloc>()
+        ..add(MyAiCharacterGetChatBotDetail(
+            widget.chatBotID, widget.isPopularBot)),
+      child: BlocConsumer<MyAiCharacterBloc, MyAiCharacterState>(
         listener: (context, state) {
-          if (state is AICharacterGetChatBotDetailSuccess) {
+          if (state is MyAiCharacterGetChatBotDetailSuccess) {
             _botInfo = state.characterBotDetail;
           }
         },
