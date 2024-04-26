@@ -1,4 +1,4 @@
-import 'package:demo_dprofiles/src/core/di/di.dart';
+
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/presentation/bloc/bloc/my_ai_character_bloc.dart';

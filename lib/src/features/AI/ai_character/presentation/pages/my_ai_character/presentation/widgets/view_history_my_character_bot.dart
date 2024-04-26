@@ -1,4 +1,4 @@
-import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/widgets/your_chat_ai_character_history.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/presentation/widgets/your_chat_ai_character_history.dart';
 import 'package:flutter/material.dart';
 
 class ViewHistoryMyCharacterBot extends StatelessWidget {

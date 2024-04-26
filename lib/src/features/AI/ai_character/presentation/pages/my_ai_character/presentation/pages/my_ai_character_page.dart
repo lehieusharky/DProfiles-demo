@@ -70,9 +70,5 @@ class _MyAICharacterPageState extends State<MyAICharacterPage> {
     );
   }
 
-  @override
-  void dispose() {
-    injector.get<MyAiCharacterBloc>().close();
-    super.dispose();
-  }
+  
 }
