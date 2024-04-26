@@ -12,7 +12,6 @@ import 'package:demo_dprofiles/src/utils/services/connect_wallet_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pinput/pinput.dart';
-import 'package:web3modal_flutter/web3modal_flutter.dart';
 
 class FormAddBasicInfo extends StatefulWidget {
   const FormAddBasicInfo({super.key});

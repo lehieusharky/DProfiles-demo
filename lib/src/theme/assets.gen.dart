@@ -33,6 +33,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ai_tools.svg
   SvgGenImage get aiTools => const SvgGenImage('assets/icons/ai_tools.svg');
 
+  /// File path: assets/icons/app_icon.png
+  AssetGenImage get appIcon => const AssetGenImage('assets/icons/app_icon.png');
+
   /// File path: assets/icons/appstore.png
   AssetGenImage get appstore =>
       const AssetGenImage('assets/icons/appstore.png');
@@ -126,6 +129,7 @@ class $AssetsIconsGen {
   List<dynamic> get values => [
         aiCharacter,
         aiTools,
+        appIcon,
         appstore,
         arrowLeft,
         home,

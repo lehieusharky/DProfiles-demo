@@ -21,7 +21,7 @@ class TtsService {
     return _tts ?? FlutterTts();
   }
 
-  void stopSpeaking() async => await _tts!.stop();
+  void stopSpeaking() async => await tts.stop();
 
   void _configTts() async {
     await _tts?.setLanguage("en-US");

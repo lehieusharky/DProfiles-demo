@@ -1,7 +1,4 @@
-import 'dart:async';
-import 'dart:io';
 
-import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';

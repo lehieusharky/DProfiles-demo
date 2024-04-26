@@ -3,7 +3,7 @@ import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/a
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/part_ai_features.dart';
 
 import 'package:demo_dprofiles/src/features/home/presentation/pages/import_home_page.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/page/profile_page.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/page/import_profile_page.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';

@@ -10,7 +10,6 @@ import 'package:demo_dprofiles/src/utils/services/app_clipboard_service.dart';
 import 'package:demo_dprofiles/src/utils/services/tts_service.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
-import 'package:toastification/toastification.dart';
 import 'package:tuple/tuple.dart';
 
 extension MessageWithBotExt on MessageWithBotModel {
