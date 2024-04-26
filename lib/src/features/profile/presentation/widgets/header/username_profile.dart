@@ -48,10 +48,14 @@ class _NameProfileState extends State<NameProfile> {
   }
 
   Widget _buildName() {
-    String name = 'Your Name';
+    String name = '';
 
     if (userInfo?.lastName != null || userInfo?.firstName != null) {
       name = "${userInfo!.lastName} ${userInfo!.firstName}";
+    }
+
+    if (name.isEmpty) {
+      name = 'Your Name';
     }
 
     return Column(

@@ -12,6 +12,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tuple/tuple.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'seperate_profile.dart';
+
 class SocialMediaComponent extends StatelessWidget {
   const SocialMediaComponent({Key? key}) : super(key: key);
 
@@ -25,40 +27,51 @@ class SocialMediaComponent extends StatelessWidget {
 
         return null;
       },
-      builder: (context, state) => Padding(
-        padding: context.padding(horizontal: 20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'Social Media',
-              style: AppFont()
-                  .fontTheme(context, weight: FontWeight.bold)
-                  .bodyLarge,
+      builder: (context, state) => Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Padding(
+            padding: context.padding(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Social Media',
+                  style: AppFont()
+                      .fontTheme(context, weight: FontWeight.bold)
+                      .bodyLarge,
+                ),
+                if (state != null)
+                  Row(
+                    children: [
+                      Tuple2(Assets.icons.socialInstagram.path,
+                          state.instagramUrl),
+                      Tuple2(Assets.icons.socialX.path, state.twitterUrl),
+                      Tuple2(
+                          Assets.icons.socialTelegram.path, state.telegramUrl),
+                      Tuple2(
+                          Assets.icons.socialWhatapp.path, state.whatsappUrl),
+                      Tuple2(
+                          Assets.icons.socialLinkedin.path, state.linkedinUrl)
+                    ]
+                        .map(
+                          (e) => Padding(
+                            padding: context.padding(horizontal: 5),
+                            child: InkWell(
+                              onTap: e.item2 != null
+                                  ? () => _openUrl(e.item2!)
+                                  : null,
+                              child: SvgPicture.asset(e.item1),
+                            ),
+                          ),
+                        )
+                        .toList(),
+                  )
+              ],
             ),
-            if (state != null)
-              Row(
-                children: [
-                  Tuple2(Assets.icons.socialInstagram.path, state.instagramUrl),
-                  Tuple2(Assets.icons.socialX.path, state.twitterUrl),
-                  Tuple2(Assets.icons.socialTelegram.path, state.telegramUrl),
-                  Tuple2(Assets.icons.socialWhatapp.path, state.whatsappUrl),
-                  Tuple2(Assets.icons.socialLinkedin.path, state.linkedinUrl)
-                ]
-                    .map(
-                      (e) => Padding(
-                        padding: context.padding(horizontal: 5),
-                        child: InkWell(
-                          onTap:
-                              e.item2 != null ? () => _openUrl(e.item2!) : null,
-                          child: SvgPicture.asset(e.item1),
-                        ),
-                      ),
-                    )
-                    .toList(),
-              )
-          ],
-        ),
+          ),
+          const SeparatedProfile(),
+        ],
       ),
     );
   }
