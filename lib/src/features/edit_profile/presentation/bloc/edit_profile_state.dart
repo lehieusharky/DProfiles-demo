@@ -29,4 +29,7 @@ class EditProfileState with _$EditProfileState {
 
   const factory EditProfileState.addNewLanguageSuccess(
       UserLanguageModel languageModel) = EditProfileAddNewLanguageSuccess;
+
+  const factory EditProfileState.getMetaLanguageSuccess(
+      List<MetaLanguageModel> languages) = EditProfileGetMetaLanguageSuccess;
 }

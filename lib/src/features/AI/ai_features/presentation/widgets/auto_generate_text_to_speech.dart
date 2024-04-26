@@ -14,7 +14,14 @@ import 'package:rounded_background_text/rounded_background_text.dart';
 class AutoGenerateTextToSpeech extends StatefulWidget {
   final String? textGenerated;
   final String? createAt;
-  const AutoGenerateTextToSpeech({Key? key, this.textGenerated, this.createAt})
+  final bool? autoStart;
+  final bool? useAction;
+  const AutoGenerateTextToSpeech(
+      {Key? key,
+      this.textGenerated,
+      this.createAt,
+      this.autoStart,
+      this.useAction})
       : super(key: key);
 
   @override
@@ -33,6 +40,9 @@ class _AutoGenerateTextToSpeechState extends State<AutoGenerateTextToSpeech> {
   void initState() {
     super.initState();
     initTts();
+    if (widget.autoStart == true) {
+      tts.speak(widget.textGenerated ?? '');
+    }
   }
 
   dynamic initTts() {
@@ -56,7 +66,7 @@ class _AutoGenerateTextToSpeechState extends State<AutoGenerateTextToSpeech> {
           ? [
               _buildTitle(),
               _buildBody(),
-              _buildActionButton(),
+              if (widget.useAction != false) _buildActionButton(),
             ]
           : [],
     );

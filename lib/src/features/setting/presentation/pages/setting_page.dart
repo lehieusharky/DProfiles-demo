@@ -66,6 +66,8 @@ class _SettingPageState extends State<SettingPage> {
                         onPressed: () async {
                           await sharePreference.removeAccessToken();
 
+                          if (!context.mounted) return;
+
                           context.router.replace(const SignInRoute());
                         },
                         iconData: IconsaxOutline.logout,

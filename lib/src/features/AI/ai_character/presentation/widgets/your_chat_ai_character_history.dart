@@ -1,4 +1,3 @@
-import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai_character_bloc.dart';
@@ -41,7 +40,7 @@ class _YourChatAiCharacterHistoryState
                     ))
                 .toList();
 
-            messages = newData;
+            messages = newData.reversed.toList();
           }
         },
         builder: (context, state) {
@@ -50,7 +49,7 @@ class _YourChatAiCharacterHistoryState
           } else {
             return AnimationLimiter(
               child: ListView.builder(
-                reverse: true,
+                physics: const BouncingScrollPhysics(),
                 itemCount: messages!.length,
                 itemBuilder: (BuildContext context, int index) {
                   return AnimationConfiguration.staggeredList(

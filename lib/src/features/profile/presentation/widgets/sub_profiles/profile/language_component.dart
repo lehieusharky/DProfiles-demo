@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:demo_dprofiles/src/features/profile/data/models/user_language_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/entities/ext_user_language_entity.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
@@ -14,17 +16,25 @@ class LanguageComponent extends StatefulWidget {
 }
 
 class _LanguageComponentState extends State<LanguageComponent> {
-  List<UserLanguageModel>? languages;
+  List<UserLanguageModel> languages = [];
 
   @override
   Widget build(BuildContext context) {
-    return BlocSelector<ProfileBloc, ProfileState, List<UserLanguageModel>?>(
-      selector: (state) {
+    return BlocConsumer<ProfileBloc, ProfileState>(
+      listener: (context, state) {
         if (state is ProfileGetUserLanguagesSuccess) {
-          languages = state.languages;
+          languages = [];
+
+          for (var element in state.languages) {
+            languages.add(element);
+          }
+
+          context.read<ProfileBloc>().add(const ProfileGetMetaLanguage());
         }
 
-        return languages;
+        if (state is ProfileGetMetaLanguageSuccess) {
+          _handleGetMetaLanguage(state);
+        }
       },
       builder: (context, state) {
         return Column(
@@ -38,16 +48,37 @@ class _LanguageComponentState extends State<LanguageComponent> {
                   .read<ProfileBloc>()
                   .add(const ProfileGetUserLanguages()),
             ),
-            if (languages != null)
+            if (state is ProfileGetMetaLanguageSuccess)
               Wrap(
                 spacing: 1,
                 runSpacing: 1,
                 children: List.generate(
-                    languages!.length, (index) => languages![index].toWidget()),
+                    languages.length, (index) => languages[index].toWidget()),
               )
           ],
         );
       },
     );
+  }
+
+  void _handleGetMetaLanguage(ProfileGetMetaLanguageSuccess state) {
+    Map<int, String> mapLanguage = {};
+
+    for (var e in state.languages) {
+      mapLanguage[e.id!] = e.name!;
+    }
+
+    // for (var language in languages) {
+    //   log('language: ${mapLanguage[language.languageId]}');
+    //   language = language.copyWith(name: 'mapLanguage[language.languageId]');
+    // }
+
+    for (var i = 0; i < languages.length; i++) {
+      final updateLanguage =
+          languages[i].copyWith(name: mapLanguage[languages[i].languageId]);
+      languages.removeAt(i);
+
+      languages.insert(i, updateLanguage);
+    }
   }
 }

@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/my_text_form_field.dart';

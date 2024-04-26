@@ -6,11 +6,11 @@ import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/pages/cubit/forgot_password_cubit.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/widgets/forgot_password_form.dart';
+import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_logo.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/bottom_navigation_text.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -50,21 +50,12 @@ class ForgotPasswordPage extends StatelessWidget {
     return MyScaffold(
       horizontalMargin: 32,
       heightAppBar: 50,
+      topPadding: 20,
       canBack: true,
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
-              padding: context.padding(top: 20, bottom: 24),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Assets.icons.logos.dWhitePWhite.svg(),
-                  context.sizedBox(width: 9),
-                  Assets.icons.logos.dprofilesBlack.svg(),
-                ],
-              ),
-            ),
+            AuthLogo(),
             BottomNavigationText(
               content1: "Don’t have an account?   ",
               content2: 'Sign up for free',

@@ -1,12 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
-import 'package:demo_dprofiles/src/core/ui/my_appbar.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/bloc/dashboard_bloc.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_extension.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/widgets/bottom_bar_dashboard.dart';
-import 'package:demo_dprofiles/src/features/dashboard/presentation/widgets/dashboard_end_drawer.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,15 +20,10 @@ class _DashboardPageState extends State<DashboardPage> {
 
   late PageController _pageController;
 
-  late ScrollController _scrollController;
-
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-
   @override
   void initState() {
     super.initState();
     _pageController = PageController();
-    _scrollController = ScrollController();
   }
 
   @override
@@ -47,14 +39,11 @@ class _DashboardPageState extends State<DashboardPage> {
         ),
       ],
       child: Scaffold(
-        key: _scaffoldKey,
-        appBar: MyAppbar(
-            titleWidget: Assets.icons.logos.logoHomeApp.svg(), height: 50),
-        endDrawer: const DashboardEndDrawer(),
         body: PageView(
+          physics: const NeverScrollableScrollPhysics(),
           onPageChanged: (index) => _onNavigate(index),
           controller: _pageController,
-          children: widget.screens(_scrollController),
+          children: widget.screens(),
         ),
         bottomNavigationBar: BottomBarDashboard(
           currentTab: _currentIndex,

@@ -1,38 +1,38 @@
-import 'package:demo_dprofiles/src/core/di/di.dart';
-import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/features/home/presentation/bloc/home_bloc.dart';
-import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_banner.dart';
-import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_discover.dart';
-import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_tab_bar.dart';
-import 'package:demo_dprofiles/src/features/home/presentation/widgets/title_home.dart';
-import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+part of 'import_home_page.dart';
 
 class HomePage extends StatefulWidget {
-  final ScrollController scrollController;
-  const HomePage({Key? key, required this.scrollController}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage>
-    with AutomaticKeepAliveClientMixin {
+    with AutomaticKeepAliveClientMixin
+    implements ActionDashboard {
+  final _skey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     super.build(context);
     return BlocProvider(
       create: (context) => injector.get<HomeBloc>()..add(const HomeGetFeeds()),
       child: MyScaffold(
+        sKey: _skey,
         topPadding: 20,
+        useAppBar: true,
+        canBack: false,
+        titleWidget: const MyIconApp(),
+        action: buildActonAppBar(),
+        endDrawer: buildEndDrawer(),
         body: DefaultTabController(
           length: 2,
           child: NestedScrollView(
-            controller: widget.scrollController,
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => [
-              const MySliverAppBar(height: 280, child: HomeBanner()),
+              const MySliverAppBar(
+                height: 280,
+                child: HomeBanner(),
+              ),
             ],
             body: const Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -50,4 +50,23 @@ class _HomePageState extends State<HomePage>
 
   @override
   bool get wantKeepAlive => true;
+
+  @override
+  void dispose() {
+    injector.get<HomeBloc>().close();
+    super.dispose();
+  }
+
+  @override
+  Widget buildEndDrawer() {
+    return const DashboardEndDrawer();
+  }
+
+  @override
+  List<Widget> buildActonAppBar() {
+    return actionAppbar(context, _skey);
+  }
+
+  @override
+  GlobalKey<ScaffoldState> sKey() => _skey;
 }

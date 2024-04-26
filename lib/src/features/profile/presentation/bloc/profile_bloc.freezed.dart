@@ -27,6 +27,7 @@ mixin _$ProfileEvent {
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,6 +41,7 @@ mixin _$ProfileEvent {
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -53,6 +55,7 @@ mixin _$ProfileEvent {
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -70,6 +73,7 @@ mixin _$ProfileEvent {
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -84,6 +88,7 @@ mixin _$ProfileEvent {
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -98,6 +103,7 @@ mixin _$ProfileEvent {
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -168,6 +174,7 @@ class _$StartedImpl implements _Started {
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
   }) {
     return started();
   }
@@ -184,6 +191,7 @@ class _$StartedImpl implements _Started {
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
   }) {
     return started?.call();
   }
@@ -200,6 +208,7 @@ class _$StartedImpl implements _Started {
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -223,6 +232,7 @@ class _$StartedImpl implements _Started {
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return started(this);
   }
@@ -240,6 +250,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return started?.call(this);
   }
@@ -257,6 +268,7 @@ class _$StartedImpl implements _Started {
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -317,6 +329,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
   }) {
     return getUserinfo();
   }
@@ -333,6 +346,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
   }) {
     return getUserinfo?.call();
   }
@@ -349,6 +363,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -372,6 +387,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return getUserinfo(this);
   }
@@ -389,6 +405,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return getUserinfo?.call(this);
   }
@@ -406,6 +423,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -469,6 +487,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
   }) {
     return getUserExperiences();
   }
@@ -485,6 +504,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
   }) {
     return getUserExperiences?.call();
   }
@@ -501,6 +521,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -524,6 +545,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return getUserExperiences(this);
   }
@@ -541,6 +563,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return getUserExperiences?.call(this);
   }
@@ -558,6 +581,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -621,6 +645,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
   }) {
     return getUserEducations();
   }
@@ -637,6 +662,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
   }) {
     return getUserEducations?.call();
   }
@@ -653,6 +679,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -676,6 +703,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return getUserEducations(this);
   }
@@ -693,6 +721,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return getUserEducations?.call(this);
   }
@@ -710,6 +739,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -773,6 +803,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
   }) {
     return getUserCertificates();
   }
@@ -789,6 +820,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
   }) {
     return getUserCertificates?.call();
   }
@@ -805,6 +837,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -828,6 +861,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return getUserCertificates(this);
   }
@@ -845,6 +879,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return getUserCertificates?.call(this);
   }
@@ -862,6 +897,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -923,6 +959,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
   }) {
     return getUserSkills();
   }
@@ -939,6 +976,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
   }) {
     return getUserSkills?.call();
   }
@@ -955,6 +993,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -978,6 +1017,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return getUserSkills(this);
   }
@@ -995,6 +1035,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return getUserSkills?.call(this);
   }
@@ -1012,6 +1053,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -1075,6 +1117,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
   }) {
     return getUserLanguages();
   }
@@ -1091,6 +1134,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
   }) {
     return getUserLanguages?.call();
   }
@@ -1107,6 +1151,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -1130,6 +1175,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return getUserLanguages(this);
   }
@@ -1147,6 +1193,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return getUserLanguages?.call(this);
   }
@@ -1164,6 +1211,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -1225,6 +1273,7 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
   }) {
     return uploadAvatar();
   }
@@ -1241,6 +1290,7 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
   }) {
     return uploadAvatar?.call();
   }
@@ -1257,6 +1307,7 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (uploadAvatar != null) {
@@ -1280,6 +1331,7 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return uploadAvatar(this);
   }
@@ -1297,6 +1349,7 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return uploadAvatar?.call(this);
   }
@@ -1314,6 +1367,7 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (uploadAvatar != null) {
@@ -1379,6 +1433,7 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
   }) {
     return checkDigitalProfileAvailable();
   }
@@ -1395,6 +1450,7 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
   }) {
     return checkDigitalProfileAvailable?.call();
   }
@@ -1411,6 +1467,7 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (checkDigitalProfileAvailable != null) {
@@ -1434,6 +1491,7 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
   }) {
     return checkDigitalProfileAvailable(this);
   }
@@ -1451,6 +1509,7 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
   }) {
     return checkDigitalProfileAvailable?.call(this);
   }
@@ -1468,6 +1527,7 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
     required TResult orElse(),
   }) {
     if (checkDigitalProfileAvailable != null) {
@@ -1480,6 +1540,196 @@ class _$ProfileCheckDigitalProfileAvailableImpl
 abstract class ProfileCheckDigitalProfileAvailable implements ProfileEvent {
   const factory ProfileCheckDigitalProfileAvailable() =
       _$ProfileCheckDigitalProfileAvailableImpl;
+}
+
+/// @nodoc
+abstract class _$$ProfileGetMetaLanguageImplCopyWith<$Res> {
+  factory _$$ProfileGetMetaLanguageImplCopyWith(
+          _$ProfileGetMetaLanguageImpl value,
+          $Res Function(_$ProfileGetMetaLanguageImpl) then) =
+      __$$ProfileGetMetaLanguageImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? search});
+}
+
+/// @nodoc
+class __$$ProfileGetMetaLanguageImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileGetMetaLanguageImpl>
+    implements _$$ProfileGetMetaLanguageImplCopyWith<$Res> {
+  __$$ProfileGetMetaLanguageImplCopyWithImpl(
+      _$ProfileGetMetaLanguageImpl _value,
+      $Res Function(_$ProfileGetMetaLanguageImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? search = freezed,
+  }) {
+    return _then(_$ProfileGetMetaLanguageImpl(
+      search: freezed == search
+          ? _value.search
+          : search // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
+  const _$ProfileGetMetaLanguageImpl({this.search});
+
+  @override
+  final String? search;
+
+  @override
+  String toString() {
+    return 'ProfileEvent.getMetaLanguage(search: $search)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileGetMetaLanguageImpl &&
+            (identical(other.search, search) || other.search == search));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, search);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileGetMetaLanguageImplCopyWith<_$ProfileGetMetaLanguageImpl>
+      get copyWith => __$$ProfileGetMetaLanguageImplCopyWithImpl<
+          _$ProfileGetMetaLanguageImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
+    required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
+  }) {
+    return getMetaLanguage(search);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
+  }) {
+    return getMetaLanguage?.call(search);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
+    TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
+    required TResult orElse(),
+  }) {
+    if (getMetaLanguage != null) {
+      return getMetaLanguage(search);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(ProfileGetUserSkills value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+  }) {
+    return getMetaLanguage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult? Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+  }) {
+    return getMetaLanguage?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    required TResult orElse(),
+  }) {
+    if (getMetaLanguage != null) {
+      return getMetaLanguage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileGetMetaLanguage implements ProfileEvent {
+  const factory ProfileGetMetaLanguage({final String? search}) =
+      _$ProfileGetMetaLanguageImpl;
+
+  String? get search;
+  @JsonKey(ignore: true)
+  _$$ProfileGetMetaLanguageImplCopyWith<_$ProfileGetMetaLanguageImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1502,6 +1752,8 @@ mixin _$ProfileState {
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1521,6 +1773,8 @@ mixin _$ProfileState {
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1539,6 +1793,7 @@ mixin _$ProfileState {
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1562,6 +1817,8 @@ mixin _$ProfileState {
         uploadAvatarSuccess,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1581,6 +1838,8 @@ mixin _$ProfileState {
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1600,6 +1859,8 @@ mixin _$ProfileState {
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1677,6 +1938,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return initial();
   }
@@ -1699,6 +1962,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return initial?.call();
   }
@@ -1720,6 +1985,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1749,6 +2015,8 @@ class _$InitialImpl implements _Initial {
         uploadAvatarSuccess,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return initial(this);
   }
@@ -1771,6 +2039,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return initial?.call(this);
   }
@@ -1793,6 +2063,8 @@ class _$InitialImpl implements _Initial {
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1894,6 +2166,8 @@ class _$ProfileErrorImpl implements ProfileError {
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return error(message, title);
   }
@@ -1916,6 +2190,8 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -1937,6 +2213,7 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1966,6 +2243,8 @@ class _$ProfileErrorImpl implements ProfileError {
         uploadAvatarSuccess,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return error(this);
   }
@@ -1988,6 +2267,8 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return error?.call(this);
   }
@@ -2010,6 +2291,8 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -2085,6 +2368,8 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return loading();
   }
@@ -2107,6 +2392,8 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return loading?.call();
   }
@@ -2128,6 +2415,7 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -2157,6 +2445,8 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         uploadAvatarSuccess,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return loading(this);
   }
@@ -2179,6 +2469,8 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return loading?.call(this);
   }
@@ -2201,6 +2493,8 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -2308,6 +2602,8 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return getUserInfoSuccess(userInfoModel);
   }
@@ -2330,6 +2626,8 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return getUserInfoSuccess?.call(userInfoModel);
   }
@@ -2351,6 +2649,7 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -2380,6 +2679,8 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         uploadAvatarSuccess,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return getUserInfoSuccess(this);
   }
@@ -2402,6 +2703,8 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return getUserInfoSuccess?.call(this);
   }
@@ -2424,6 +2727,8 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -2538,6 +2843,8 @@ class _$ProfileGetUserExperienceSuccessImpl
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return getUserExperiencesSuccess(experiences);
   }
@@ -2560,6 +2867,8 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return getUserExperiencesSuccess?.call(experiences);
   }
@@ -2581,6 +2890,7 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -2610,6 +2920,8 @@ class _$ProfileGetUserExperienceSuccessImpl
         uploadAvatarSuccess,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return getUserExperiencesSuccess(this);
   }
@@ -2632,6 +2944,8 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return getUserExperiencesSuccess?.call(this);
   }
@@ -2654,6 +2968,8 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -2770,6 +3086,8 @@ class _$ProfileGetUserEducationsSuccessImpl
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return getUserEducationsSuccess(educations);
   }
@@ -2792,6 +3110,8 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return getUserEducationsSuccess?.call(educations);
   }
@@ -2813,6 +3133,7 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -2842,6 +3163,8 @@ class _$ProfileGetUserEducationsSuccessImpl
         uploadAvatarSuccess,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return getUserEducationsSuccess(this);
   }
@@ -2864,6 +3187,8 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return getUserEducationsSuccess?.call(this);
   }
@@ -2886,6 +3211,8 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -3002,6 +3329,8 @@ class _$ProfileGetUserCertificatesSuccessImpl
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return getUserCertificatesSuccess(certificates);
   }
@@ -3024,6 +3353,8 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return getUserCertificatesSuccess?.call(certificates);
   }
@@ -3045,6 +3376,7 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -3074,6 +3406,8 @@ class _$ProfileGetUserCertificatesSuccessImpl
         uploadAvatarSuccess,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return getUserCertificatesSuccess(this);
   }
@@ -3096,6 +3430,8 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return getUserCertificatesSuccess?.call(this);
   }
@@ -3118,6 +3454,8 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -3231,6 +3569,8 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return getUserSkills(skillModels);
   }
@@ -3253,6 +3593,8 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return getUserSkills?.call(skillModels);
   }
@@ -3274,6 +3616,7 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -3303,6 +3646,8 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         uploadAvatarSuccess,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return getUserSkills(this);
   }
@@ -3325,6 +3670,8 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return getUserSkills?.call(this);
   }
@@ -3347,6 +3694,8 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -3462,6 +3811,8 @@ class _$ProfileGetUserLanguagesSuccessImpl
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return getUserLanguages(languages);
   }
@@ -3484,6 +3835,8 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return getUserLanguages?.call(languages);
   }
@@ -3505,6 +3858,7 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -3534,6 +3888,8 @@ class _$ProfileGetUserLanguagesSuccessImpl
         uploadAvatarSuccess,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return getUserLanguages(this);
   }
@@ -3556,6 +3912,8 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return getUserLanguages?.call(this);
   }
@@ -3578,6 +3936,8 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -3698,6 +4058,8 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return uploadAvatarSuccess(uploadImageResponse);
   }
@@ -3720,6 +4082,8 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return uploadAvatarSuccess?.call(uploadImageResponse);
   }
@@ -3741,6 +4105,7 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (uploadAvatarSuccess != null) {
@@ -3770,6 +4135,8 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
         uploadAvatarSuccess,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return uploadAvatarSuccess(this);
   }
@@ -3792,6 +4159,8 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return uploadAvatarSuccess?.call(this);
   }
@@ -3814,6 +4183,8 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (uploadAvatarSuccess != null) {
@@ -3923,6 +4294,8 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
   }) {
     return checkDigitalProfileAvailableSuccess(status);
   }
@@ -3945,6 +4318,8 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
   }) {
     return checkDigitalProfileAvailableSuccess?.call(status);
   }
@@ -3966,6 +4341,7 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (checkDigitalProfileAvailableSuccess != null) {
@@ -3995,6 +4371,8 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
         uploadAvatarSuccess,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
   }) {
     return checkDigitalProfileAvailableSuccess(this);
   }
@@ -4017,6 +4395,8 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
   }) {
     return checkDigitalProfileAvailableSuccess?.call(this);
   }
@@ -4039,6 +4419,8 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
     required TResult orElse(),
   }) {
     if (checkDigitalProfileAvailableSuccess != null) {
@@ -4057,5 +4439,248 @@ abstract class ProfileCheckDigitalProfileAvailableSuccess
   @JsonKey(ignore: true)
   _$$ProfileCheckDigitalProfileAvailableSuccessImplCopyWith<
           _$ProfileCheckDigitalProfileAvailableSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileGetMetaLanguageSuccessImplCopyWith<$Res> {
+  factory _$$ProfileGetMetaLanguageSuccessImplCopyWith(
+          _$ProfileGetMetaLanguageSuccessImpl value,
+          $Res Function(_$ProfileGetMetaLanguageSuccessImpl) then) =
+      __$$ProfileGetMetaLanguageSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<MetaLanguageModel> languages});
+}
+
+/// @nodoc
+class __$$ProfileGetMetaLanguageSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res,
+        _$ProfileGetMetaLanguageSuccessImpl>
+    implements _$$ProfileGetMetaLanguageSuccessImplCopyWith<$Res> {
+  __$$ProfileGetMetaLanguageSuccessImplCopyWithImpl(
+      _$ProfileGetMetaLanguageSuccessImpl _value,
+      $Res Function(_$ProfileGetMetaLanguageSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? languages = null,
+  }) {
+    return _then(_$ProfileGetMetaLanguageSuccessImpl(
+      null == languages
+          ? _value._languages
+          : languages // ignore: cast_nullable_to_non_nullable
+              as List<MetaLanguageModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileGetMetaLanguageSuccessImpl
+    implements ProfileGetMetaLanguageSuccess {
+  const _$ProfileGetMetaLanguageSuccessImpl(
+      final List<MetaLanguageModel> languages)
+      : _languages = languages;
+
+  final List<MetaLanguageModel> _languages;
+  @override
+  List<MetaLanguageModel> get languages {
+    if (_languages is EqualUnmodifiableListView) return _languages;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_languages);
+  }
+
+  @override
+  String toString() {
+    return 'ProfileState.getMetaLanguageSuccess(languages: $languages)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileGetMetaLanguageSuccessImpl &&
+            const DeepCollectionEquality()
+                .equals(other._languages, _languages));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_languages));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileGetMetaLanguageSuccessImplCopyWith<
+          _$ProfileGetMetaLanguageSuccessImpl>
+      get copyWith => __$$ProfileGetMetaLanguageSuccessImplCopyWithImpl<
+          _$ProfileGetMetaLanguageSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
+  }) {
+    return getMetaLanguageSuccess(languages);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
+  }) {
+    return getMetaLanguageSuccess?.call(languages);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    required TResult orElse(),
+  }) {
+    if (getMetaLanguageSuccess != null) {
+      return getMetaLanguageSuccess(languages);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguagesSuccess value)
+        getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
+    required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
+  }) {
+    return getMetaLanguageSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+  }) {
+    return getMetaLanguageSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    required TResult orElse(),
+  }) {
+    if (getMetaLanguageSuccess != null) {
+      return getMetaLanguageSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileGetMetaLanguageSuccess implements ProfileState {
+  const factory ProfileGetMetaLanguageSuccess(
+          final List<MetaLanguageModel> languages) =
+      _$ProfileGetMetaLanguageSuccessImpl;
+
+  List<MetaLanguageModel> get languages;
+  @JsonKey(ignore: true)
+  _$$ProfileGetMetaLanguageSuccessImplCopyWith<
+          _$ProfileGetMetaLanguageSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

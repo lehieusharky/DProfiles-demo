@@ -5,7 +5,7 @@ import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class AuthField extends StatelessWidget {
-  final String title;
+  final String? title;
   final String hint;
   final TextEditingController controller;
   final Widget? suffixIcon;
@@ -19,7 +19,7 @@ class AuthField extends StatelessWidget {
 
   const AuthField(
       {Key? key,
-      required this.title,
+      this.title,
       required this.hint,
       required this.controller,
       this.suffixIcon,
@@ -38,17 +38,18 @@ class AuthField extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: context.padding(bottom: 10),
-          child: Text(
-            title,
-            style: AppFont()
-                .fontTheme(context,
-                    weight: FontWeight.bold,
-                    color: colorScheme(context).outlineVariant)
-                .bodyMedium,
+        if (title != null)
+          Padding(
+            padding: context.padding(bottom: 10),
+            child: Text(
+              title!,
+              style: AppFont()
+                  .fontTheme(context,
+                      weight: FontWeight.bold,
+                      color: colorScheme(context).outlineVariant)
+                  .bodyMedium,
+            ),
           ),
-        ),
         MyTextFormField(
           autoFocus: autoFocus,
           controller: controller,

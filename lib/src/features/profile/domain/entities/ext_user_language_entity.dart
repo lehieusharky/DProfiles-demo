@@ -4,6 +4,6 @@ import 'package:flutter/material.dart';
 
 extension UserLanguageExt on UserLanguageModel {
   Widget toWidget() {
-    return SkillItem(title: languageId.toString());
+    return SkillItem(title: name.toString());
   }
 }

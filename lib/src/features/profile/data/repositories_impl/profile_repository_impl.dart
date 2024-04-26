@@ -96,4 +96,17 @@ class ProfileRepositoryImpl implements ProfileRepository {
           ProfileFailure(response: ErrorResponse.fromJson(e.response!.data)));
     }
   }
+
+  @override
+  Future<Either<ProfileFailure, BaseResponse>> getMetaLanguage(
+      ) async {
+    try {
+      final res = await _profileDataSource.getMetaLanguage();
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(
+          ProfileFailure(response: ErrorResponse.fromJson(e.response!.data)));
+    }
+  }
 }

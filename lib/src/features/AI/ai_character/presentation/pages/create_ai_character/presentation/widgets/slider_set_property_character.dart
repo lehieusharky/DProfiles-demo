@@ -4,7 +4,6 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:demo_dprofiles/src/utils/constant/ai_character_bot_properties.dart';
-import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -53,7 +52,7 @@ class _SliderSetPropertyCharacterState
                   child: Icon(
                     Icons.cancel_outlined,
                     size: 20,
-                    color: colorScheme(context).outline,
+                    color: colorScheme(context).outlineVariant,
                   ),
                 ),
               ),

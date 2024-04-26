@@ -108,4 +108,14 @@ class ProfileDataSourceImpl implements ProfileDataSource {
       rethrow;
     }
   }
+
+  @override
+  Future<BaseResponse> getMetaLanguage() async {
+    try {
+      final baseResponse = await MyHttp.rl().getMetaLanguage();
+      return baseResponse;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
 }

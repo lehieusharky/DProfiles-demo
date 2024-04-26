@@ -32,4 +32,7 @@ class ProfileState with _$ProfileState {
 
   const factory ProfileState.checkDigitalProfileAvailableSuccess(bool status) =
       ProfileCheckDigitalProfileAvailableSuccess;
+
+  const factory ProfileState.getMetaLanguageSuccess(
+      List<MetaLanguageModel> languages) = ProfileGetMetaLanguageSuccess;
 }

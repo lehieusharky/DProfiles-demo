@@ -21,4 +21,6 @@ class EditProfileEvent with _$EditProfileEvent {
 
   const factory EditProfileEvent.addNewLanguage(int languageID) =
       EditProfileAddNewLanguage;
+
+  const factory EditProfileEvent.getMetaLanguage() = EditProfileGetMetaLanguage;
 }

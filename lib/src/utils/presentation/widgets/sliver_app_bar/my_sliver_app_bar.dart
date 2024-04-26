@@ -5,9 +5,13 @@ class MySliverAppBar extends StatelessWidget {
   final Widget child;
   final double height;
   final EdgeInsetsGeometry? margin;
-  const MySliverAppBar(
-      {Key? key, required this.child, required this.height, this.margin})
-      : super(key: key);
+
+  const MySliverAppBar({
+    Key? key,
+    required this.child,
+    required this.height,
+    this.margin,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +19,8 @@ class MySliverAppBar extends StatelessWidget {
       padding: margin ?? context.padding(),
       sliver: SliverAppBar(
         automaticallyImplyLeading: false,
+        leading: null,
+        actions: [Container()],
         expandedHeight: context.sizeHeight(height),
         flexibleSpace: FlexibleSpaceBar(
           background: child,

@@ -18,51 +18,25 @@ class FormEditBasicInfo extends StatefulWidget {
 }
 
 class _FormEditBasicInfoState extends State<FormEditBasicInfo> {
-  late TextEditingController _nameController;
-  late TextEditingController _jobTitleController;
-  late TextEditingController _nationalityController;
-  late TextEditingController _instagramController;
-  late TextEditingController _xController;
-  late TextEditingController _telegramController;
-  late TextEditingController _whatappController;
-  late TextEditingController _linkedinController;
+  late TextEditingController _usernameController = TextEditingController();
+  late TextEditingController _jobTitleController = TextEditingController();
+  late TextEditingController _nationalityController = TextEditingController();
+  late TextEditingController _instagramController = TextEditingController();
+  late TextEditingController _xController = TextEditingController();
+  late TextEditingController _telegramController = TextEditingController();
+  late TextEditingController _whatappController = TextEditingController();
+  late TextEditingController _linkedinController = TextEditingController();
+  late TextEditingController _firstNameController = TextEditingController();
+  late TextEditingController _lastNameController = TextEditingController();
+  late TextEditingController _headlineController = TextEditingController();
   final keyForm = GlobalKey<FormState>();
-
-  @override
-  void initState() {
-    super.initState();
-    _nameController = TextEditingController();
-    _jobTitleController = TextEditingController();
-    _nationalityController = TextEditingController();
-    _instagramController = TextEditingController();
-    _xController = TextEditingController();
-    _telegramController = TextEditingController();
-    _whatappController = TextEditingController();
-    _linkedinController = TextEditingController();
-  }
 
   @override
   Widget build(BuildContext context) {
     return BlocSelector<EditProfileBloc, EditProfileState, UserInfoModel?>(
       selector: (state) {
         if (state is EditProfileGetUserInfoSuccess) {
-          _nameController =
-              TextEditingController(text: state.userInfoModel.username);
-          _jobTitleController =
-              TextEditingController(text: state.userInfoModel.jobTitle);
-          _nationalityController =
-              TextEditingController(text: state.userInfoModel.nationality);
-
-          _instagramController =
-              TextEditingController(text: state.userInfoModel.instagramUrl);
-          _xController =
-              TextEditingController(text: state.userInfoModel.twitterUrl);
-          _telegramController =
-              TextEditingController(text: state.userInfoModel.telegramUrl);
-          _whatappController =
-              TextEditingController(text: state.userInfoModel.whatsappUrl);
-          _linkedinController =
-              TextEditingController(text: state.userInfoModel.linkedinUrl);
+          _hanleTextController(state);
           return state.userInfoModel;
         }
 
@@ -89,8 +63,8 @@ class _FormEditBasicInfoState extends State<FormEditBasicInfo> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 AuthField(
-                  title: 'NAME',
-                  hint: 'Your Name',
+                  title: 'USERNAME',
+                  hint: 'Your Username',
                   keyboardType: TextInputType.text,
                   textInputAction: TextInputAction.next,
                   autoFocus: true,
@@ -101,7 +75,38 @@ class _FormEditBasicInfoState extends State<FormEditBasicInfo> {
                       return null;
                     }
                   },
-                  controller: _nameController,
+                  controller: _usernameController,
+                ),
+                Padding(
+                  padding: context.padding(top: 32),
+                  child: AuthField(
+                    title: 'FIRST NAME',
+                    hint: 'Your First Name',
+                    textInputAction: TextInputAction.next,
+                    keyboardType: TextInputType.text,
+                    controller: _firstNameController,
+                  ),
+                ),
+                Padding(
+                  padding: context.padding(top: 32),
+                  child: AuthField(
+                    title: 'LAST NAME',
+                    hint: 'Your Last Name',
+                    textInputAction: TextInputAction.next,
+                    keyboardType: TextInputType.text,
+                    controller: _lastNameController,
+                  ),
+                ),
+                Padding(
+                  padding: context.padding(top: 32),
+                  child: AuthField(
+                    title: 'HEADLINE',
+                    hint: 'Headline',
+                    maxLines: 3,
+                    textInputAction: TextInputAction.next,
+                    keyboardType: TextInputType.text,
+                    controller: _headlineController,
+                  ),
                 ),
                 Padding(
                   padding: context.padding(top: 32),
@@ -206,26 +211,60 @@ class _FormEditBasicInfoState extends State<FormEditBasicInfo> {
     );
   }
 
+  void _hanleTextController(EditProfileGetUserInfoSuccess state) {
+    _usernameController =
+        TextEditingController(text: state.userInfoModel.username);
+    _jobTitleController =
+        TextEditingController(text: state.userInfoModel.jobTitle);
+    _nationalityController =
+        TextEditingController(text: state.userInfoModel.nationality);
+    _instagramController =
+        TextEditingController(text: state.userInfoModel.instagramUrl);
+    _xController = TextEditingController(text: state.userInfoModel.twitterUrl);
+    _telegramController =
+        TextEditingController(text: state.userInfoModel.telegramUrl);
+    _whatappController =
+        TextEditingController(text: state.userInfoModel.whatsappUrl);
+    _linkedinController =
+        TextEditingController(text: state.userInfoModel.linkedinUrl);
+    _firstNameController =
+        TextEditingController(text: state.userInfoModel.firstName);
+    _lastNameController =
+        TextEditingController(text: state.userInfoModel.lastName);
+    _headlineController =
+        TextEditingController(text: state.userInfoModel.headline);
+  }
+
   void _save(UserInfoModel userInfo) {
     if (keyForm.currentState?.validate() ?? false) {
       userInfo = userInfo.copyWith(
-          username: _nameController.text.trim(),
-          jobTitle: _jobTitleController.text.trim(),
-          nationality: _nationalityController.text.trim(),
-          twitterUrl:
-              _xController.text.isNotEmpty ? _xController.text.trim() : null,
-          whatsappUrl: _whatappController.text.isNotEmpty
-              ? _whatappController.text.trim()
-              : null,
-          telegramUrl: _telegramController.text.isNotEmpty
-              ? _telegramController.text.trim()
-              : null,
-          linkedinUrl: _linkedinController.text.isNotEmpty
-              ? _linkedinController.text.trim()
-              : null,
-          instagramUrl: _instagramController.text.isNotEmpty
-              ? _instagramController.text.trim()
-              : null);
+        username: _usernameController.text.trim(),
+        jobTitle: _jobTitleController.text.trim(),
+        nationality: _nationalityController.text.trim(),
+        twitterUrl:
+            _xController.text.isNotEmpty ? _xController.text.trim() : null,
+        whatsappUrl: _whatappController.text.isNotEmpty
+            ? _whatappController.text.trim()
+            : null,
+        telegramUrl: _telegramController.text.isNotEmpty
+            ? _telegramController.text.trim()
+            : null,
+        linkedinUrl: _linkedinController.text.isNotEmpty
+            ? _linkedinController.text.trim()
+            : null,
+        instagramUrl: _instagramController.text.isNotEmpty
+            ? _instagramController.text.trim()
+            : null,
+        firstName: _firstNameController.text.isNotEmpty
+            ? _firstNameController.text.trim()
+            : null,
+        lastName: _lastNameController.text.isNotEmpty
+            ? _lastNameController.text.trim()
+            : null,
+        headline: _headlineController.text.isNotEmpty
+            ? _headlineController.text.trim()
+            : null,
+      );
 
       context.read<EditProfileBloc>().add(EditProfileUpdateUserInfo(userInfo));
     }

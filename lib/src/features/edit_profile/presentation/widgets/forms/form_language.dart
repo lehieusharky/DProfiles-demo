@@ -4,6 +4,8 @@ import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/bloc/edit_profile_bloc.dart';
+import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
+import 'package:demo_dprofiles/src/utils/data/models/meta_language_model.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,6 +21,8 @@ class _FormLanguageState extends State<FormLanguage> {
   late TextEditingController _languageController;
   final keyForm = GlobalKey<FormState>();
 
+  List<MetaLanguageModel>? metaLanguages;
+
   @override
   void initState() {
     super.initState();
@@ -32,6 +36,10 @@ class _FormLanguageState extends State<FormLanguage> {
       listener: (context, state) {
         if (state is EditProfileLoading) {
           showLoadingDialog(context);
+        }
+
+        if (state is EditProfileGetMetaLanguageSuccess) {
+          metaLanguages = state.languages;
         }
 
         if (state is EditProfileAddNewLanguageSuccess) {
@@ -66,6 +74,9 @@ class _FormLanguageState extends State<FormLanguage> {
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return appLocal(context).fieldCannotBeEmpty;
+                    }
+                    if (int.parse(value) < 0 || int.parse(value) > 78) {
+                      return 'Your choose is invalid';
                     } else {
                       return null;
                     }
@@ -73,6 +84,27 @@ class _FormLanguageState extends State<FormLanguage> {
                   controller: _languageController,
                 ),
               ),
+              if (metaLanguages != null)
+                Padding(
+                  padding: context.padding(vertical: 5),
+                  child: Container(
+                    height: context.sizeHeight(200),
+                    padding: context.padding(vertical: 10, horizontal: 12),
+                    decoration: BoxDecoration(
+                      color:
+                          colorScheme(context).outlineVariant.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: metaLanguages!
+                            .map((e) => Text("${e.id} - ${e.name}"))
+                            .toList(),
+                      ),
+                    ),
+                  ),
+                ),
               Padding(
                 padding: context.padding(top: 24, bottom: 100),
                 child: Row(

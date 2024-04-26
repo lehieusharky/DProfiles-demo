@@ -31,6 +31,7 @@ mixin _$UserLanguageModel {
   String? get updatedTs => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_ts')
   String? get createdTs => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -50,7 +51,8 @@ abstract class $UserLanguageModelCopyWith<$Res> {
       int? id,
       @JsonKey(name: 'updated_on') String? updatedOn,
       @JsonKey(name: 'updated_ts') String? updatedTs,
-      @JsonKey(name: 'created_ts') String? createdTs});
+      @JsonKey(name: 'created_ts') String? createdTs,
+      String? name});
 }
 
 /// @nodoc
@@ -72,6 +74,7 @@ class _$UserLanguageModelCopyWithImpl<$Res, $Val extends UserLanguageModel>
     Object? updatedOn = freezed,
     Object? updatedTs = freezed,
     Object? createdTs = freezed,
+    Object? name = freezed,
   }) {
     return _then(_value.copyWith(
       languageId: freezed == languageId
@@ -98,6 +101,10 @@ class _$UserLanguageModelCopyWithImpl<$Res, $Val extends UserLanguageModel>
           ? _value.createdTs
           : createdTs // ignore: cast_nullable_to_non_nullable
               as String?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -116,7 +123,8 @@ abstract class _$$UserLanguageModelImplCopyWith<$Res>
       int? id,
       @JsonKey(name: 'updated_on') String? updatedOn,
       @JsonKey(name: 'updated_ts') String? updatedTs,
-      @JsonKey(name: 'created_ts') String? createdTs});
+      @JsonKey(name: 'created_ts') String? createdTs,
+      String? name});
 }
 
 /// @nodoc
@@ -136,6 +144,7 @@ class __$$UserLanguageModelImplCopyWithImpl<$Res>
     Object? updatedOn = freezed,
     Object? updatedTs = freezed,
     Object? createdTs = freezed,
+    Object? name = freezed,
   }) {
     return _then(_$UserLanguageModelImpl(
       languageId: freezed == languageId
@@ -162,6 +171,10 @@ class __$$UserLanguageModelImplCopyWithImpl<$Res>
           ? _value.createdTs
           : createdTs // ignore: cast_nullable_to_non_nullable
               as String?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -175,7 +188,8 @@ class _$UserLanguageModelImpl implements _UserLanguageModel {
       this.id,
       @JsonKey(name: 'updated_on') this.updatedOn,
       @JsonKey(name: 'updated_ts') this.updatedTs,
-      @JsonKey(name: 'created_ts') this.createdTs});
+      @JsonKey(name: 'created_ts') this.createdTs,
+      this.name});
 
   factory _$UserLanguageModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserLanguageModelImplFromJson(json);
@@ -197,10 +211,12 @@ class _$UserLanguageModelImpl implements _UserLanguageModel {
   @override
   @JsonKey(name: 'created_ts')
   final String? createdTs;
+  @override
+  final String? name;
 
   @override
   String toString() {
-    return 'UserLanguageModel(languageId: $languageId, userId: $userId, id: $id, updatedOn: $updatedOn, updatedTs: $updatedTs, createdTs: $createdTs)';
+    return 'UserLanguageModel(languageId: $languageId, userId: $userId, id: $id, updatedOn: $updatedOn, updatedTs: $updatedTs, createdTs: $createdTs, name: $name)';
   }
 
   @override
@@ -217,13 +233,14 @@ class _$UserLanguageModelImpl implements _UserLanguageModel {
             (identical(other.updatedTs, updatedTs) ||
                 other.updatedTs == updatedTs) &&
             (identical(other.createdTs, createdTs) ||
-                other.createdTs == createdTs));
+                other.createdTs == createdTs) &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, languageId, userId, id, updatedOn, updatedTs, createdTs);
+  int get hashCode => Object.hash(runtimeType, languageId, userId, id,
+      updatedOn, updatedTs, createdTs, name);
 
   @JsonKey(ignore: true)
   @override
@@ -242,13 +259,13 @@ class _$UserLanguageModelImpl implements _UserLanguageModel {
 
 abstract class _UserLanguageModel implements UserLanguageModel {
   const factory _UserLanguageModel(
-          {@JsonKey(name: 'language_id') final int? languageId,
-          @JsonKey(name: 'user_id') final int? userId,
-          final int? id,
-          @JsonKey(name: 'updated_on') final String? updatedOn,
-          @JsonKey(name: 'updated_ts') final String? updatedTs,
-          @JsonKey(name: 'created_ts') final String? createdTs}) =
-      _$UserLanguageModelImpl;
+      {@JsonKey(name: 'language_id') final int? languageId,
+      @JsonKey(name: 'user_id') final int? userId,
+      final int? id,
+      @JsonKey(name: 'updated_on') final String? updatedOn,
+      @JsonKey(name: 'updated_ts') final String? updatedTs,
+      @JsonKey(name: 'created_ts') final String? createdTs,
+      final String? name}) = _$UserLanguageModelImpl;
 
   factory _UserLanguageModel.fromJson(Map<String, dynamic> json) =
       _$UserLanguageModelImpl.fromJson;
@@ -270,6 +287,8 @@ abstract class _UserLanguageModel implements UserLanguageModel {
   @override
   @JsonKey(name: 'created_ts')
   String? get createdTs;
+  @override
+  String? get name;
   @override
   @JsonKey(ignore: true)
   _$$UserLanguageModelImplCopyWith<_$UserLanguageModelImpl> get copyWith =>
