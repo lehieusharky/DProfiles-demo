@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/search/presentation/bloc/bloc/search_bloc.dart';
@@ -29,7 +30,12 @@ class SearchHomePage extends StatelessWidget {
                         child: FormSearchBar(),
                       ),
                     ],
-            body: const Expanded(child: ListSearchResult())),
+            body: Column(
+              children: [
+                context.sizedBox(height: 10),
+                const Expanded(child: ListSearchResult()),
+              ],
+            )),
       ),
     );
   }
