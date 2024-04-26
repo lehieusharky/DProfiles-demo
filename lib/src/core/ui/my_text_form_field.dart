@@ -3,6 +3,7 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class MyTextFormField extends StatefulWidget {
   final TextEditingController? controller;
@@ -29,6 +30,7 @@ class MyTextFormField extends StatefulWidget {
   final void Function(String)? onSubmit;
   final bool? isPasswordField;
   final String? labelText;
+  final List<TextInputFormatter>? inputFormatters;
 
   const MyTextFormField({
     super.key,
@@ -55,7 +57,7 @@ class MyTextFormField extends StatefulWidget {
     this.onSubmit,
     this.isPasswordField,
     this.labelText,
-    this.minLines,
+    this.minLines, this.inputFormatters,
   });
 
   @override
@@ -103,6 +105,7 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      inputFormatters: widget.inputFormatters,
       controller: widget.controller,
       maxLines: widget.maxLines ?? 1,
       focusNode: widget.focusNode,

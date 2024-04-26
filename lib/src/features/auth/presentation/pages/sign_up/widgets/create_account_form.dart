@@ -8,6 +8,7 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CreateAccountForm extends StatefulWidget {
@@ -38,8 +39,11 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AuthField(
-              title: appLocal(context).name.toUpperCase(),
-              hint: appLocal(context).enterYourName,
+              inputFormatters: [
+                FilteringTextInputFormatter.deny(RegExp(r'\s')),
+              ],
+              title: 'USERNAME',
+              hint: 'Enter Your Username',
               autoFocus: true,
               textInputAction: TextInputAction.next,
               validator: (name) => name != null && name.isNotEmpty

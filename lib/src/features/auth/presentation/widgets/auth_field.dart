@@ -3,6 +3,7 @@ import 'package:demo_dprofiles/src/core/ui/my_text_form_field.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class AuthField extends StatelessWidget {
   final String? title;
@@ -16,6 +17,7 @@ class AuthField extends StatelessWidget {
   final TextInputAction? textInputAction;
   final VoidCallback? onTap;
   final bool? autoFocus;
+  final List<TextInputFormatter>? inputFormatters;
 
   const AuthField(
       {Key? key,
@@ -29,7 +31,7 @@ class AuthField extends StatelessWidget {
       this.validator,
       this.textInputAction,
       this.onTap,
-      this.autoFocus})
+      this.autoFocus, this.inputFormatters})
       : super(key: key);
 
   @override
@@ -52,6 +54,7 @@ class AuthField extends StatelessWidget {
           ),
         MyTextFormField(
           autoFocus: autoFocus,
+          inputFormatters: inputFormatters,
           controller: controller,
           hintText: hint,
           suffixIcon: suffixIcon,

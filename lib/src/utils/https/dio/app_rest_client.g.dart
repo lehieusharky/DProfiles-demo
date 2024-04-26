@@ -2423,7 +2423,7 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<BaseResponse> getPublicUserInfo(int userName) async {
+  Future<BaseResponse> getPublicUserInfo(String userName) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
