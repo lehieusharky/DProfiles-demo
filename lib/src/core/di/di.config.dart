@@ -11,7 +11,7 @@
 import 'package:dio/dio.dart' as _i30;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
-import 'package:shared_preferences/shared_preferences.dart' as _i65;
+import 'package:shared_preferences/shared_preferences.dart' as _i70;
 
 import '../../features/AI/ai_character/data/datasources/ai_character_datasource.dart'
     as _i3;
@@ -67,16 +67,16 @@ import '../../features/auth/presentation/pages/forgot_password/data/repositories
     as _i43;
 import '../../features/auth/presentation/pages/forgot_password/domain/repositories/forgot_password_repository.dart'
     as _i42;
-import '../../features/blogs/data/datasources/blog_datasource.dart' as _i67;
+import '../../features/blogs/data/datasources/blog_datasource.dart' as _i72;
 import '../../features/blogs/data/datasources/blog_datasource_impl.dart'
-    as _i68;
+    as _i73;
 import '../../features/blogs/data/repositories_impl/blog_repository_impl.dart'
-    as _i70;
-import '../../features/blogs/domain/repositories/blog_repository.dart' as _i69;
+    as _i75;
+import '../../features/blogs/domain/repositories/blog_repository.dart' as _i74;
 import '../../features/blogs/domain/usecases/fetch_all_blogs_usecase.dart'
-    as _i71;
+    as _i76;
 import '../../features/blogs/domain/usecases/fetch_all_blogs_usecase_impl.dart'
-    as _i72;
+    as _i77;
 import '../../features/edit_profile/data/datasources/edit_profile_datasource.dart'
     as _i31;
 import '../../features/edit_profile/data/datasources/edit_profile_datasource_impl.dart'
@@ -106,29 +106,39 @@ import '../../features/profile/data/repositories_impl/profile_repository_impl.da
 import '../../features/profile/domain/repositories/profile_repository.dart'
     as _i51;
 import '../../features/profile/domain/usecases/profile_usecase.dart' as _i53;
-import '../../features/search/data/datasources/search_datasource.dart' as _i55;
-import '../../features/search/data/datasources/search_datasource_impl.dart'
-    as _i56;
-import '../../features/search/data/repositories_impl/search_repository_impl.dart'
-    as _i58;
-import '../../features/search/domain/repositories/search_repository.dart'
+import '../../features/pubic_profile/data/datasource/public_profile_datasource.dart'
+    as _i54;
+import '../../features/pubic_profile/data/datasource/public_profile_datasource_impl.dart'
+    as _i55;
+import '../../features/pubic_profile/data/repositories_impl/public_profile_repositories_impl.dart'
     as _i57;
-import '../../features/search/domain/usecases/search_usecase.dart' as _i59;
-import '../../features/setting/data/datasources/setting_datasource.dart'
-    as _i60;
-import '../../features/setting/data/datasources/setting_datasource_impl.dart'
+import '../../features/pubic_profile/domain/repositories/public_profile_repository.dart'
+    as _i56;
+import '../../features/pubic_profile/domain/usecases/public_profile_usecase.dart'
+    as _i58;
+import '../../features/search/data/datasources/search_datasource.dart' as _i60;
+import '../../features/search/data/datasources/search_datasource_impl.dart'
     as _i61;
-import '../../features/setting/data/repositories_impl/setting_repository_impl.dart'
+import '../../features/search/data/repositories_impl/search_repository_impl.dart'
     as _i63;
-import '../../features/setting/domain/repositories/setting_repository.dart'
+import '../../features/search/domain/repositories/search_repository.dart'
     as _i62;
-import '../../features/setting/domain/usecases/setting_usecase.dart' as _i64;
+import '../../features/search/domain/usecases/search_usecase.dart' as _i64;
+import '../../features/setting/data/datasources/setting_datasource.dart'
+    as _i65;
+import '../../features/setting/data/datasources/setting_datasource_impl.dart'
+    as _i66;
+import '../../features/setting/data/repositories_impl/setting_repository_impl.dart'
+    as _i68;
+import '../../features/setting/domain/repositories/setting_repository.dart'
+    as _i67;
+import '../../features/setting/domain/usecases/setting_usecase.dart' as _i69;
 import '../../utils/data/cache/app_share_preference.dart' as _i8;
 import '../../utils/data/cache/app_share_preference_impl.dart' as _i9;
-import '../../utils/https/dio/app_rest_client.dart' as _i54;
-import '../../utils/services/strapi/strapi_dio_client.dart' as _i73;
-import '../../utils/services/strapi/strapi_service.dart' as _i66;
-import 'di.dart' as _i74;
+import '../../utils/https/dio/app_rest_client.dart' as _i59;
+import '../../utils/services/strapi/strapi_dio_client.dart' as _i78;
+import '../../utils/services/strapi/strapi_service.dart' as _i71;
+import 'di.dart' as _i79;
 
 // initializes the registration of main-scope dependencies inside of GetIt
 Future<_i1.GetIt> $initGetIt(
@@ -200,32 +210,38 @@ Future<_i1.GetIt> $initGetIt(
       () => _i52.ProfileRepositoryImpl(gh<_i49.ProfileDataSource>()));
   gh.factory<_i53.ProfileUseCase>(
       () => _i53.ProfileUseCaseImpl(gh<_i51.ProfileRepository>()));
-  gh.factory<_i54.RestClient>(() => appModule.restClient);
-  gh.factory<_i55.SearchDataSource>(() => _i56.SearchDataSourceImpl());
-  gh.factory<_i57.SearchRepository>(
-      () => _i58.SearchRepositoryImpl(gh<_i55.SearchDataSource>()));
-  gh.factory<_i59.SearchUseCase>(
-      () => _i59.SearchUseCaseImpl(gh<_i57.SearchRepository>()));
-  gh.factory<_i60.SettingDataSource>(() => _i61.SettingDataSourceImpl());
-  gh.factory<_i62.SettingRepository>(
-      () => _i63.SettingRepositoryImpl(gh<_i60.SettingDataSource>()));
-  gh.factory<_i64.SettingUseCase>(
-      () => _i64.SettingUseCaseImpl(gh<_i62.SettingRepository>()));
-  await gh.factoryAsync<_i65.SharedPreferences>(
+  gh.factory<_i54.PublicProfileDataSource>(
+      () => _i55.PublicProfileDataSourceImpl());
+  gh.factory<_i56.PublicProfileRepository>(() =>
+      _i57.PublicProfileRepositoryImpl(gh<_i54.PublicProfileDataSource>()));
+  gh.factory<_i58.PublicProfileUseCase>(
+      () => _i58.PublicProfileUseCaseImpl(gh<_i56.PublicProfileRepository>()));
+  gh.factory<_i59.RestClient>(() => appModule.restClient);
+  gh.factory<_i60.SearchDataSource>(() => _i61.SearchDataSourceImpl());
+  gh.factory<_i62.SearchRepository>(
+      () => _i63.SearchRepositoryImpl(gh<_i60.SearchDataSource>()));
+  gh.factory<_i64.SearchUseCase>(
+      () => _i64.SearchUseCaseImpl(gh<_i62.SearchRepository>()));
+  gh.factory<_i65.SettingDataSource>(() => _i66.SettingDataSourceImpl());
+  gh.factory<_i67.SettingRepository>(
+      () => _i68.SettingRepositoryImpl(gh<_i65.SettingDataSource>()));
+  gh.factory<_i69.SettingUseCase>(
+      () => _i69.SettingUseCaseImpl(gh<_i67.SettingRepository>()));
+  await gh.factoryAsync<_i70.SharedPreferences>(
     () => appModule.sharedPreferences,
     preResolve: true,
   );
-  gh.factory<_i66.StrapiService>(
-      () => _i66.StrapiService(gh<_i30.Dio>(instanceName: 'strapi')));
-  gh.factory<_i67.BlogDataSource>(
-      () => _i68.BlogDataSourceImpl(gh<_i66.StrapiService>()));
-  gh.factory<_i69.BlogRepository>(
-      () => _i70.BlogRepositoryImpl(gh<_i67.BlogDataSource>()));
-  gh.factory<_i71.FetchAllBlogsUseCase>(
-      () => _i72.FetchAllBlogsUseCaseImpl(gh<_i69.BlogRepository>()));
+  gh.factory<_i71.StrapiService>(
+      () => _i71.StrapiService(gh<_i30.Dio>(instanceName: 'strapi')));
+  gh.factory<_i72.BlogDataSource>(
+      () => _i73.BlogDataSourceImpl(gh<_i71.StrapiService>()));
+  gh.factory<_i74.BlogRepository>(
+      () => _i75.BlogRepositoryImpl(gh<_i72.BlogDataSource>()));
+  gh.factory<_i76.FetchAllBlogsUseCase>(
+      () => _i77.FetchAllBlogsUseCaseImpl(gh<_i74.BlogRepository>()));
   return getIt;
 }
 
-class _$StrapiModule extends _i73.StrapiModule {}
+class _$StrapiModule extends _i78.StrapiModule {}
 
-class _$AppModule extends _i74.AppModule {}
+class _$AppModule extends _i79.AppModule {}

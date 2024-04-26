@@ -376,6 +376,7 @@ abstract class RestClient {
   Future<BaseResponse> getMetaLanguage();
 
   // public
+
   @GET('/api/v1/public/user/{username}')
-  Future<BaseResponse> getPublicUserInfo(@Path('username') int userName);
+  Future<BaseResponse> getPublicUserInfo(@Path('username') String userName);
 }

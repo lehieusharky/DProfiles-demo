@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
 import 'package:demo_dprofiles/src/features/search/data/models/search_bar_result_model.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
@@ -11,7 +13,8 @@ extension SearchBarResultModelExt on SearchBarResultModel {
     return Padding(
       padding: context.padding(vertical: 5),
       child: InkWell(
-        onTap: () {},
+        onTap: () =>
+            context.router.push(PublicProfileRoute(userName: username!)),
         child: Container(
           padding: context.padding(vertical: 8, horizontal: 12),
           decoration: BoxDecoration(

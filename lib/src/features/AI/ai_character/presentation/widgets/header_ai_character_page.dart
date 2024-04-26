@@ -26,7 +26,7 @@ class _HeaderAICharacterPageState extends State<HeaderAICharacterPage> {
     super.initState();
     initTts();
 
-    tts.speak(widget.textGenerated);
+    // tts.speak(widget.textGenerated);
   }
 
   dynamic initTts() {
@@ -43,15 +43,17 @@ class _HeaderAICharacterPageState extends State<HeaderAICharacterPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      widget.textGenerated,
-      style: AppFont()
-          .fontTheme(
-            context,
-            weight: FontWeight.bold,
-            color: colorScheme(context).outline,
-          )
-          .bodyLarge,
+    return Center(
+      child: Text(
+        widget.textGenerated,
+        style: AppFont()
+            .fontTheme(
+              context,
+              weight: FontWeight.bold,
+              color: colorScheme(context).outline,
+            )
+            .bodyLarge,
+      ),
     );
   }
 
