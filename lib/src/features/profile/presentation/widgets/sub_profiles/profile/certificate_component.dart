@@ -1,8 +1,8 @@
+import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/title_sub_page.dart';
-import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/utils/extensions/ext_models/ext_certificate_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -30,13 +30,9 @@ class _CertificateComponentState extends State<CertificateComponent> {
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            TitleSubPage(
-              title: 'Certificates',
-              route: const ListCertificateRoute(),
-              onCallBack: () => context
-                  .read<ProfileBloc>()
-                  .add(const ProfileGetUserCertificates()),
-            ),
+            context.sizedBox(height: 10),
+            const TitleSubPage(title: 'Certificates', canEdit: false),
+            context.sizedBox(height: 5),
             if (state == null)
               const MyShimmer(count: 1, height: 150)
             else
