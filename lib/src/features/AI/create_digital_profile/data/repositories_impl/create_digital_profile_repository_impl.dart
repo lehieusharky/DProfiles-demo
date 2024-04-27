@@ -62,7 +62,7 @@ class CreateDigitalProfileRepositoryImpl
 
   @override
   Future<Either<CreateDigitalProfileFailure, BaseResponse>>
-      deleteUserCertificate(String id) async {
+      deleteUserCertificate(int id) async {
     try {
       final res =
           await _createDigitalProfileDataSource.deleteUserCertificate(id);
@@ -131,7 +131,7 @@ class CreateDigitalProfileRepositoryImpl
 
   @override
   Future<Either<CreateDigitalProfileFailure, BaseResponse>> deleteEducation(
-      String id) async {
+      int id) async {
     try {
       final res = await _createDigitalProfileDataSource.deleteEducation(id);
 
@@ -199,7 +199,7 @@ class CreateDigitalProfileRepositoryImpl
 
   @override
   Future<Either<CreateDigitalProfileFailure, BaseResponse>> deleteExperience(
-      String id) async {
+      int id) async {
     try {
       final res = await _createDigitalProfileDataSource.deleteExperience(id);
 

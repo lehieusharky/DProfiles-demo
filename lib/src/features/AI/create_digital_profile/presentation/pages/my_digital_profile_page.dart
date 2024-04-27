@@ -3,6 +3,9 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/certificate_dprofile.dart';
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/education_dprofile.dart';
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/experience_dprofile.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/profile/certificate_component.dart';
@@ -65,9 +68,9 @@ class MyDigitalProfilePage extends StatelessWidget {
                 ),
                 const BasicInfoOfDigitalProfile(),
                 context.sizedBox(height: 8),
-                const EducationComponent(),
-                const CertificateComponent(),
-                const ExperienceComponent()
+                const EducationDProfile(),
+                const CertificateDProfile(),
+                const ExperienceDProfile()
               ],
             ),
           ),

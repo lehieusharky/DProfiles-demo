@@ -287,8 +287,7 @@ class CreateDigitalProfileBloc
             (r.data as List).map((e) => EducationModel.fromJson(e)).toList();
 
         for (var element in userEducations) {
-          await createDigitalProfileUseCase
-              .deleteUserEducation(element.id.toString());
+          await createDigitalProfileUseCase.deleteUserEducation(element.id!);
         }
 
         for (var element in educations) {
@@ -304,8 +303,7 @@ class CreateDigitalProfileBloc
             (r.data as List).map((e) => CertificateModel.fromJson(e)).toList();
 
         for (var element in userCertificates) {
-          await createDigitalProfileUseCase
-              .deleteUserCertificate(element.id.toString());
+          await createDigitalProfileUseCase.deleteUserCertificate(element.id!);
         }
 
         for (var element in certificates) {
@@ -321,8 +319,7 @@ class CreateDigitalProfileBloc
             (r.data as List).map((e) => ExperienceModel.fromJson(e)).toList();
 
         for (var element in userExperiences) {
-          await createDigitalProfileUseCase
-              .deleteUserExperience(element.id.toString());
+          await createDigitalProfileUseCase.deleteUserExperience(element.id!);
         }
 
         for (var element in experiences) {

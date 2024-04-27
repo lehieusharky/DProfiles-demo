@@ -19,6 +19,12 @@ abstract class ProfileRepository {
   Future<Either<ProfileFailure, UploadFileResponse?>> uploadImage();
 
   Future<Either<ProfileFailure, BaseResponse>> getMetaLanguage();
+
+  Future<Either<ProfileFailure, BaseResponse>> deleteUserExperience(int id);
+
+  Future<Either<ProfileFailure, BaseResponse>> deleteUserEducation(int id);
+
+  Future<Either<ProfileFailure, BaseResponse>> deleteUserCertificate(int id);
 }
 
 class ProfileFailure extends AppFailure {

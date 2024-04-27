@@ -5,13 +5,13 @@ import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:flutter/material.dart';
 
-Future<void> showMyDialog(
+Future<T> showMyDialog<T>(
   BuildContext context, {
   required Widget title,
   required Widget content,
   required List<Widget> action,
 }) async {
-  return showDialog<void>(
+  return await showDialog(
     context: context,
     barrierDismissible: true,
     builder: (BuildContext context) {

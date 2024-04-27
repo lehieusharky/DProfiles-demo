@@ -325,7 +325,7 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<BaseResponse> deleteEducationInfo(String id) async {
+  Future<BaseResponse> deleteEducationInfo(int id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -496,7 +496,7 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<BaseResponse> deleteCertificate(String id) async {
+  Future<BaseResponse> deleteCertificate(int id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -636,7 +636,7 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<BaseResponse> deleteExperienceInfo(String id) async {
+  Future<BaseResponse> deleteExperienceInfo(int id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

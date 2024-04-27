@@ -69,7 +69,7 @@ class CreateDigitalProfileDataSourceImpl
   }
 
   @override
-  Future<BaseResponse> deleteUserCertificate(String id) async {
+  Future<BaseResponse> deleteUserCertificate(int id) async {
     try {
       final baseResponse = await MyHttp.rl().deleteCertificate(id);
       return baseResponse;
@@ -133,7 +133,7 @@ class CreateDigitalProfileDataSourceImpl
   }
 
   @override
-  Future<BaseResponse> deleteEducation(String id) async {
+  Future<BaseResponse> deleteEducation(int id) async {
     try {
       final baseResponse = await MyHttp.rl().deleteEducationInfo(id);
       return baseResponse;
@@ -187,7 +187,7 @@ class CreateDigitalProfileDataSourceImpl
   }
 
   @override
-  Future<BaseResponse> deleteExperience(String id) async {
+  Future<BaseResponse> deleteExperience(int id) async {
     try {
       final baseResponse = await MyHttp.rl().deleteExperienceInfo(id);
       return baseResponse;

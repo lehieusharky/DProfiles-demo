@@ -120,4 +120,34 @@ class ProfileDataSourceImpl implements ProfileDataSource {
       rethrow;
     }
   }
+
+  @override
+  Future<BaseResponse> deleteUserCertificate(int id) async {
+    try {
+      final baseResponse = await MyHttp.rl().deleteCertificate(id);
+      return baseResponse;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<BaseResponse> deleteUserEducation(int id) async {
+    try {
+      final baseResponse = await MyHttp.rl().deleteEducationInfo(id);
+      return baseResponse;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<BaseResponse> deleteUserExperience(int id) async {
+    try {
+      final baseResponse = await MyHttp.rl().deleteExperienceInfo(id);
+      return baseResponse;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
 }

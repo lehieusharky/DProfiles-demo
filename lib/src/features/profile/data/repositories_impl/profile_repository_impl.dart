@@ -98,10 +98,48 @@ class ProfileRepositoryImpl implements ProfileRepository {
   }
 
   @override
-  Future<Either<ProfileFailure, BaseResponse>> getMetaLanguage(
-      ) async {
+  Future<Either<ProfileFailure, BaseResponse>> getMetaLanguage() async {
     try {
       final res = await _profileDataSource.getMetaLanguage();
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(
+          ProfileFailure(response: ErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<ProfileFailure, BaseResponse>> deleteUserCertificate(
+      int id) async {
+    try {
+      final res = await _profileDataSource.deleteUserCertificate(id);
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(
+          ProfileFailure(response: ErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<ProfileFailure, BaseResponse>> deleteUserEducation(
+      int id) async {
+    try {
+      final res = await _profileDataSource.deleteUserEducation(id);
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(
+          ProfileFailure(response: ErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<ProfileFailure, BaseResponse>> deleteUserExperience(
+      int id) async {
+    try {
+      final res = await _profileDataSource.deleteUserExperience(id);
 
       return Right(res);
     } on DioException catch (e) {

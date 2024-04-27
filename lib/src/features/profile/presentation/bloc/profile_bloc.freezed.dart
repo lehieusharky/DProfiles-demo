@@ -28,6 +28,9 @@ mixin _$ProfileEvent {
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -42,6 +45,9 @@ mixin _$ProfileEvent {
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -56,6 +62,9 @@ mixin _$ProfileEvent {
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -74,6 +83,9 @@ mixin _$ProfileEvent {
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -89,6 +101,9 @@ mixin _$ProfileEvent {
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -104,6 +119,9 @@ mixin _$ProfileEvent {
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -175,6 +193,9 @@ class _$StartedImpl implements _Started {
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
   }) {
     return started();
   }
@@ -192,6 +213,9 @@ class _$StartedImpl implements _Started {
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
   }) {
     return started?.call();
   }
@@ -209,6 +233,9 @@ class _$StartedImpl implements _Started {
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -233,6 +260,9 @@ class _$StartedImpl implements _Started {
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
   }) {
     return started(this);
   }
@@ -251,6 +281,9 @@ class _$StartedImpl implements _Started {
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
   }) {
     return started?.call(this);
   }
@@ -269,6 +302,9 @@ class _$StartedImpl implements _Started {
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -330,6 +366,9 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
   }) {
     return getUserinfo();
   }
@@ -347,6 +386,9 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
   }) {
     return getUserinfo?.call();
   }
@@ -364,6 +406,9 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -388,6 +433,9 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
   }) {
     return getUserinfo(this);
   }
@@ -406,6 +454,9 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
   }) {
     return getUserinfo?.call(this);
   }
@@ -424,6 +475,9 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -488,6 +542,9 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
   }) {
     return getUserExperiences();
   }
@@ -505,6 +562,9 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
   }) {
     return getUserExperiences?.call();
   }
@@ -522,6 +582,9 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -546,6 +609,9 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
   }) {
     return getUserExperiences(this);
   }
@@ -564,6 +630,9 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
   }) {
     return getUserExperiences?.call(this);
   }
@@ -582,6 +651,9 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -646,6 +718,9 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
   }) {
     return getUserEducations();
   }
@@ -663,6 +738,9 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
   }) {
     return getUserEducations?.call();
   }
@@ -680,6 +758,9 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -704,6 +785,9 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
   }) {
     return getUserEducations(this);
   }
@@ -722,6 +806,9 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
   }) {
     return getUserEducations?.call(this);
   }
@@ -740,6 +827,9 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -804,6 +894,9 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
   }) {
     return getUserCertificates();
   }
@@ -821,6 +914,9 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
   }) {
     return getUserCertificates?.call();
   }
@@ -838,6 +934,9 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -862,6 +961,9 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
   }) {
     return getUserCertificates(this);
   }
@@ -880,6 +982,9 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
   }) {
     return getUserCertificates?.call(this);
   }
@@ -898,6 +1003,9 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -960,6 +1068,9 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
   }) {
     return getUserSkills();
   }
@@ -977,6 +1088,9 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
   }) {
     return getUserSkills?.call();
   }
@@ -994,6 +1108,9 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -1018,6 +1135,9 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
   }) {
     return getUserSkills(this);
   }
@@ -1036,6 +1156,9 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
   }) {
     return getUserSkills?.call(this);
   }
@@ -1054,6 +1177,9 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -1118,6 +1244,9 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
   }) {
     return getUserLanguages();
   }
@@ -1135,6 +1264,9 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
   }) {
     return getUserLanguages?.call();
   }
@@ -1152,6 +1284,9 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -1176,6 +1311,9 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
   }) {
     return getUserLanguages(this);
   }
@@ -1194,6 +1332,9 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
   }) {
     return getUserLanguages?.call(this);
   }
@@ -1212,6 +1353,9 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -1274,6 +1418,9 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
   }) {
     return uploadAvatar();
   }
@@ -1291,6 +1438,9 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
   }) {
     return uploadAvatar?.call();
   }
@@ -1308,6 +1458,9 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
     required TResult orElse(),
   }) {
     if (uploadAvatar != null) {
@@ -1332,6 +1485,9 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
   }) {
     return uploadAvatar(this);
   }
@@ -1350,6 +1506,9 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
   }) {
     return uploadAvatar?.call(this);
   }
@@ -1368,6 +1527,9 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
     required TResult orElse(),
   }) {
     if (uploadAvatar != null) {
@@ -1434,6 +1596,9 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
   }) {
     return checkDigitalProfileAvailable();
   }
@@ -1451,6 +1616,9 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
   }) {
     return checkDigitalProfileAvailable?.call();
   }
@@ -1468,6 +1636,9 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
     required TResult orElse(),
   }) {
     if (checkDigitalProfileAvailable != null) {
@@ -1492,6 +1663,9 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
   }) {
     return checkDigitalProfileAvailable(this);
   }
@@ -1510,6 +1684,9 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
   }) {
     return checkDigitalProfileAvailable?.call(this);
   }
@@ -1528,6 +1705,9 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
     required TResult orElse(),
   }) {
     if (checkDigitalProfileAvailable != null) {
@@ -1619,6 +1799,9 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     required TResult Function() uploadAvatar,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
   }) {
     return getMetaLanguage(search);
   }
@@ -1636,6 +1819,9 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     TResult? Function()? uploadAvatar,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
   }) {
     return getMetaLanguage?.call(search);
   }
@@ -1653,6 +1839,9 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     TResult Function()? uploadAvatar,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getMetaLanguage != null) {
@@ -1677,6 +1866,9 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
   }) {
     return getMetaLanguage(this);
   }
@@ -1695,6 +1887,9 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
   }) {
     return getMetaLanguage?.call(this);
   }
@@ -1713,6 +1908,9 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
     required TResult orElse(),
   }) {
     if (getMetaLanguage != null) {
@@ -1729,6 +1927,630 @@ abstract class ProfileGetMetaLanguage implements ProfileEvent {
   String? get search;
   @JsonKey(ignore: true)
   _$$ProfileGetMetaLanguageImplCopyWith<_$ProfileGetMetaLanguageImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileDeleteEducationImplCopyWith<$Res> {
+  factory _$$ProfileDeleteEducationImplCopyWith(
+          _$ProfileDeleteEducationImpl value,
+          $Res Function(_$ProfileDeleteEducationImpl) then) =
+      __$$ProfileDeleteEducationImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id});
+}
+
+/// @nodoc
+class __$$ProfileDeleteEducationImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileDeleteEducationImpl>
+    implements _$$ProfileDeleteEducationImplCopyWith<$Res> {
+  __$$ProfileDeleteEducationImplCopyWithImpl(
+      _$ProfileDeleteEducationImpl _value,
+      $Res Function(_$ProfileDeleteEducationImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$ProfileDeleteEducationImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
+  const _$ProfileDeleteEducationImpl(this.id);
+
+  @override
+  final int id;
+
+  @override
+  String toString() {
+    return 'ProfileEvent.deleteEducation(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileDeleteEducationImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileDeleteEducationImplCopyWith<_$ProfileDeleteEducationImpl>
+      get copyWith => __$$ProfileDeleteEducationImplCopyWithImpl<
+          _$ProfileDeleteEducationImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
+    required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
+  }) {
+    return deleteEducation(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
+  }) {
+    return deleteEducation?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
+    TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
+    required TResult orElse(),
+  }) {
+    if (deleteEducation != null) {
+      return deleteEducation(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(ProfileGetUserSkills value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
+  }) {
+    return deleteEducation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult? Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
+  }) {
+    return deleteEducation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
+    required TResult orElse(),
+  }) {
+    if (deleteEducation != null) {
+      return deleteEducation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileDeleteEducation implements ProfileEvent {
+  const factory ProfileDeleteEducation(final int id) =
+      _$ProfileDeleteEducationImpl;
+
+  int get id;
+  @JsonKey(ignore: true)
+  _$$ProfileDeleteEducationImplCopyWith<_$ProfileDeleteEducationImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileDeleteCertificateImplCopyWith<$Res> {
+  factory _$$ProfileDeleteCertificateImplCopyWith(
+          _$ProfileDeleteCertificateImpl value,
+          $Res Function(_$ProfileDeleteCertificateImpl) then) =
+      __$$ProfileDeleteCertificateImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id});
+}
+
+/// @nodoc
+class __$$ProfileDeleteCertificateImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileDeleteCertificateImpl>
+    implements _$$ProfileDeleteCertificateImplCopyWith<$Res> {
+  __$$ProfileDeleteCertificateImplCopyWithImpl(
+      _$ProfileDeleteCertificateImpl _value,
+      $Res Function(_$ProfileDeleteCertificateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$ProfileDeleteCertificateImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
+  const _$ProfileDeleteCertificateImpl(this.id);
+
+  @override
+  final int id;
+
+  @override
+  String toString() {
+    return 'ProfileEvent.deleteCertificate(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileDeleteCertificateImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileDeleteCertificateImplCopyWith<_$ProfileDeleteCertificateImpl>
+      get copyWith => __$$ProfileDeleteCertificateImplCopyWithImpl<
+          _$ProfileDeleteCertificateImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
+    required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
+  }) {
+    return deleteCertificate(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
+  }) {
+    return deleteCertificate?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
+    TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
+    required TResult orElse(),
+  }) {
+    if (deleteCertificate != null) {
+      return deleteCertificate(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(ProfileGetUserSkills value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
+  }) {
+    return deleteCertificate(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult? Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
+  }) {
+    return deleteCertificate?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
+    required TResult orElse(),
+  }) {
+    if (deleteCertificate != null) {
+      return deleteCertificate(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileDeleteCertificate implements ProfileEvent {
+  const factory ProfileDeleteCertificate(final int id) =
+      _$ProfileDeleteCertificateImpl;
+
+  int get id;
+  @JsonKey(ignore: true)
+  _$$ProfileDeleteCertificateImplCopyWith<_$ProfileDeleteCertificateImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileDeleteExperienceImplCopyWith<$Res> {
+  factory _$$ProfileDeleteExperienceImplCopyWith(
+          _$ProfileDeleteExperienceImpl value,
+          $Res Function(_$ProfileDeleteExperienceImpl) then) =
+      __$$ProfileDeleteExperienceImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id});
+}
+
+/// @nodoc
+class __$$ProfileDeleteExperienceImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileDeleteExperienceImpl>
+    implements _$$ProfileDeleteExperienceImplCopyWith<$Res> {
+  __$$ProfileDeleteExperienceImplCopyWithImpl(
+      _$ProfileDeleteExperienceImpl _value,
+      $Res Function(_$ProfileDeleteExperienceImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$ProfileDeleteExperienceImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
+  const _$ProfileDeleteExperienceImpl(this.id);
+
+  @override
+  final int id;
+
+  @override
+  String toString() {
+    return 'ProfileEvent.deleteExperience(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileDeleteExperienceImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileDeleteExperienceImplCopyWith<_$ProfileDeleteExperienceImpl>
+      get copyWith => __$$ProfileDeleteExperienceImplCopyWithImpl<
+          _$ProfileDeleteExperienceImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
+    required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
+  }) {
+    return deleteExperience(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
+  }) {
+    return deleteExperience?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
+    TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
+    required TResult orElse(),
+  }) {
+    if (deleteExperience != null) {
+      return deleteExperience(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(ProfileGetUserSkills value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
+  }) {
+    return deleteExperience(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult? Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
+  }) {
+    return deleteExperience?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
+    required TResult orElse(),
+  }) {
+    if (deleteExperience != null) {
+      return deleteExperience(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileDeleteExperience implements ProfileEvent {
+  const factory ProfileDeleteExperience(final int id) =
+      _$ProfileDeleteExperienceImpl;
+
+  int get id;
+  @JsonKey(ignore: true)
+  _$$ProfileDeleteExperienceImplCopyWith<_$ProfileDeleteExperienceImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1754,6 +2576,9 @@ mixin _$ProfileState {
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1775,6 +2600,9 @@ mixin _$ProfileState {
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1794,6 +2622,9 @@ mixin _$ProfileState {
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1819,6 +2650,12 @@ mixin _$ProfileState {
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1840,6 +2677,12 @@ mixin _$ProfileState {
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1861,6 +2704,12 @@ mixin _$ProfileState {
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1940,6 +2789,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) {
     return initial();
   }
@@ -1964,6 +2816,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) {
     return initial?.call();
   }
@@ -1986,6 +2841,9 @@ class _$InitialImpl implements _Initial {
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -2017,6 +2875,12 @@ class _$InitialImpl implements _Initial {
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) {
     return initial(this);
   }
@@ -2041,6 +2905,12 @@ class _$InitialImpl implements _Initial {
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) {
     return initial?.call(this);
   }
@@ -2065,6 +2935,12 @@ class _$InitialImpl implements _Initial {
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -2168,6 +3044,9 @@ class _$ProfileErrorImpl implements ProfileError {
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) {
     return error(message, title);
   }
@@ -2192,6 +3071,9 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -2214,6 +3096,9 @@ class _$ProfileErrorImpl implements ProfileError {
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -2245,6 +3130,12 @@ class _$ProfileErrorImpl implements ProfileError {
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) {
     return error(this);
   }
@@ -2269,6 +3160,12 @@ class _$ProfileErrorImpl implements ProfileError {
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) {
     return error?.call(this);
   }
@@ -2293,6 +3190,12 @@ class _$ProfileErrorImpl implements ProfileError {
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -2370,6 +3273,9 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) {
     return loading();
   }
@@ -2394,6 +3300,9 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) {
     return loading?.call();
   }
@@ -2416,6 +3325,9 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -2447,6 +3359,12 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) {
     return loading(this);
   }
@@ -2471,6 +3389,12 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) {
     return loading?.call(this);
   }
@@ -2495,6 +3419,12 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -2604,6 +3534,9 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) {
     return getUserInfoSuccess(userInfoModel);
   }
@@ -2628,6 +3561,9 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) {
     return getUserInfoSuccess?.call(userInfoModel);
   }
@@ -2650,6 +3586,9 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -2681,6 +3620,12 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) {
     return getUserInfoSuccess(this);
   }
@@ -2705,6 +3650,12 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) {
     return getUserInfoSuccess?.call(this);
   }
@@ -2729,6 +3680,12 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -2845,6 +3802,9 @@ class _$ProfileGetUserExperienceSuccessImpl
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) {
     return getUserExperiencesSuccess(experiences);
   }
@@ -2869,6 +3829,9 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) {
     return getUserExperiencesSuccess?.call(experiences);
   }
@@ -2891,6 +3854,9 @@ class _$ProfileGetUserExperienceSuccessImpl
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -2922,6 +3888,12 @@ class _$ProfileGetUserExperienceSuccessImpl
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) {
     return getUserExperiencesSuccess(this);
   }
@@ -2946,6 +3918,12 @@ class _$ProfileGetUserExperienceSuccessImpl
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) {
     return getUserExperiencesSuccess?.call(this);
   }
@@ -2970,6 +3948,12 @@ class _$ProfileGetUserExperienceSuccessImpl
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -3088,6 +4072,9 @@ class _$ProfileGetUserEducationsSuccessImpl
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) {
     return getUserEducationsSuccess(educations);
   }
@@ -3112,6 +4099,9 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) {
     return getUserEducationsSuccess?.call(educations);
   }
@@ -3134,6 +4124,9 @@ class _$ProfileGetUserEducationsSuccessImpl
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -3165,6 +4158,12 @@ class _$ProfileGetUserEducationsSuccessImpl
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) {
     return getUserEducationsSuccess(this);
   }
@@ -3189,6 +4188,12 @@ class _$ProfileGetUserEducationsSuccessImpl
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) {
     return getUserEducationsSuccess?.call(this);
   }
@@ -3213,6 +4218,12 @@ class _$ProfileGetUserEducationsSuccessImpl
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -3331,6 +4342,9 @@ class _$ProfileGetUserCertificatesSuccessImpl
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) {
     return getUserCertificatesSuccess(certificates);
   }
@@ -3355,6 +4369,9 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) {
     return getUserCertificatesSuccess?.call(certificates);
   }
@@ -3377,6 +4394,9 @@ class _$ProfileGetUserCertificatesSuccessImpl
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -3408,6 +4428,12 @@ class _$ProfileGetUserCertificatesSuccessImpl
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) {
     return getUserCertificatesSuccess(this);
   }
@@ -3432,6 +4458,12 @@ class _$ProfileGetUserCertificatesSuccessImpl
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) {
     return getUserCertificatesSuccess?.call(this);
   }
@@ -3456,6 +4488,12 @@ class _$ProfileGetUserCertificatesSuccessImpl
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -3571,6 +4609,9 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) {
     return getUserSkills(skillModels);
   }
@@ -3595,6 +4636,9 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) {
     return getUserSkills?.call(skillModels);
   }
@@ -3617,6 +4661,9 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -3648,6 +4695,12 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) {
     return getUserSkills(this);
   }
@@ -3672,6 +4725,12 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) {
     return getUserSkills?.call(this);
   }
@@ -3696,6 +4755,12 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -3813,6 +4878,9 @@ class _$ProfileGetUserLanguagesSuccessImpl
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) {
     return getUserLanguages(languages);
   }
@@ -3837,6 +4905,9 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) {
     return getUserLanguages?.call(languages);
   }
@@ -3859,6 +4930,9 @@ class _$ProfileGetUserLanguagesSuccessImpl
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -3890,6 +4964,12 @@ class _$ProfileGetUserLanguagesSuccessImpl
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) {
     return getUserLanguages(this);
   }
@@ -3914,6 +4994,12 @@ class _$ProfileGetUserLanguagesSuccessImpl
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) {
     return getUserLanguages?.call(this);
   }
@@ -3938,6 +5024,12 @@ class _$ProfileGetUserLanguagesSuccessImpl
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -4060,6 +5152,9 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) {
     return uploadAvatarSuccess(uploadImageResponse);
   }
@@ -4084,6 +5179,9 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) {
     return uploadAvatarSuccess?.call(uploadImageResponse);
   }
@@ -4106,6 +5204,9 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (uploadAvatarSuccess != null) {
@@ -4137,6 +5238,12 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) {
     return uploadAvatarSuccess(this);
   }
@@ -4161,6 +5268,12 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) {
     return uploadAvatarSuccess?.call(this);
   }
@@ -4185,6 +5298,12 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (uploadAvatarSuccess != null) {
@@ -4296,6 +5415,9 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) {
     return checkDigitalProfileAvailableSuccess(status);
   }
@@ -4320,6 +5442,9 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) {
     return checkDigitalProfileAvailableSuccess?.call(status);
   }
@@ -4342,6 +5467,9 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (checkDigitalProfileAvailableSuccess != null) {
@@ -4373,6 +5501,12 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) {
     return checkDigitalProfileAvailableSuccess(this);
   }
@@ -4397,6 +5531,12 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) {
     return checkDigitalProfileAvailableSuccess?.call(this);
   }
@@ -4421,6 +5561,12 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (checkDigitalProfileAvailableSuccess != null) {
@@ -4539,6 +5685,9 @@ class _$ProfileGetMetaLanguageSuccessImpl
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
   }) {
     return getMetaLanguageSuccess(languages);
   }
@@ -4563,6 +5712,9 @@ class _$ProfileGetMetaLanguageSuccessImpl
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
   }) {
     return getMetaLanguageSuccess?.call(languages);
   }
@@ -4585,6 +5737,9 @@ class _$ProfileGetMetaLanguageSuccessImpl
         uploadAvatarSuccess,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getMetaLanguageSuccess != null) {
@@ -4616,6 +5771,12 @@ class _$ProfileGetMetaLanguageSuccessImpl
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
         getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
   }) {
     return getMetaLanguageSuccess(this);
   }
@@ -4640,6 +5801,12 @@ class _$ProfileGetMetaLanguageSuccessImpl
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
   }) {
     return getMetaLanguageSuccess?.call(this);
   }
@@ -4664,6 +5831,12 @@ class _$ProfileGetMetaLanguageSuccessImpl
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
         getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
     required TResult orElse(),
   }) {
     if (getMetaLanguageSuccess != null) {
@@ -4682,5 +5855,785 @@ abstract class ProfileGetMetaLanguageSuccess implements ProfileState {
   @JsonKey(ignore: true)
   _$$ProfileGetMetaLanguageSuccessImplCopyWith<
           _$ProfileGetMetaLanguageSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileDeleteEducationSuccessImplCopyWith<$Res> {
+  factory _$$ProfileDeleteEducationSuccessImplCopyWith(
+          _$ProfileDeleteEducationSuccessImpl value,
+          $Res Function(_$ProfileDeleteEducationSuccessImpl) then) =
+      __$$ProfileDeleteEducationSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id});
+}
+
+/// @nodoc
+class __$$ProfileDeleteEducationSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res,
+        _$ProfileDeleteEducationSuccessImpl>
+    implements _$$ProfileDeleteEducationSuccessImplCopyWith<$Res> {
+  __$$ProfileDeleteEducationSuccessImplCopyWithImpl(
+      _$ProfileDeleteEducationSuccessImpl _value,
+      $Res Function(_$ProfileDeleteEducationSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$ProfileDeleteEducationSuccessImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileDeleteEducationSuccessImpl
+    implements ProfileDeleteEducationSuccess {
+  const _$ProfileDeleteEducationSuccessImpl(this.id);
+
+  @override
+  final int id;
+
+  @override
+  String toString() {
+    return 'ProfileState.deleteEducationSuccess(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileDeleteEducationSuccessImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileDeleteEducationSuccessImplCopyWith<
+          _$ProfileDeleteEducationSuccessImpl>
+      get copyWith => __$$ProfileDeleteEducationSuccessImplCopyWithImpl<
+          _$ProfileDeleteEducationSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
+  }) {
+    return deleteEducationSuccess(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
+  }) {
+    return deleteEducationSuccess?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
+    required TResult orElse(),
+  }) {
+    if (deleteEducationSuccess != null) {
+      return deleteEducationSuccess(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguagesSuccess value)
+        getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
+    required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
+  }) {
+    return deleteEducationSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+  }) {
+    return deleteEducationSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+    required TResult orElse(),
+  }) {
+    if (deleteEducationSuccess != null) {
+      return deleteEducationSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileDeleteEducationSuccess implements ProfileState {
+  const factory ProfileDeleteEducationSuccess(final int id) =
+      _$ProfileDeleteEducationSuccessImpl;
+
+  int get id;
+  @JsonKey(ignore: true)
+  _$$ProfileDeleteEducationSuccessImplCopyWith<
+          _$ProfileDeleteEducationSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileDeleteCertificateSuccessImplCopyWith<$Res> {
+  factory _$$ProfileDeleteCertificateSuccessImplCopyWith(
+          _$ProfileDeleteCertificateSuccessImpl value,
+          $Res Function(_$ProfileDeleteCertificateSuccessImpl) then) =
+      __$$ProfileDeleteCertificateSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id});
+}
+
+/// @nodoc
+class __$$ProfileDeleteCertificateSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res,
+        _$ProfileDeleteCertificateSuccessImpl>
+    implements _$$ProfileDeleteCertificateSuccessImplCopyWith<$Res> {
+  __$$ProfileDeleteCertificateSuccessImplCopyWithImpl(
+      _$ProfileDeleteCertificateSuccessImpl _value,
+      $Res Function(_$ProfileDeleteCertificateSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$ProfileDeleteCertificateSuccessImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileDeleteCertificateSuccessImpl
+    implements ProfileDeleteCertificateSuccess {
+  const _$ProfileDeleteCertificateSuccessImpl(this.id);
+
+  @override
+  final int id;
+
+  @override
+  String toString() {
+    return 'ProfileState.deleteCertificateSuccess(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileDeleteCertificateSuccessImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileDeleteCertificateSuccessImplCopyWith<
+          _$ProfileDeleteCertificateSuccessImpl>
+      get copyWith => __$$ProfileDeleteCertificateSuccessImplCopyWithImpl<
+          _$ProfileDeleteCertificateSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
+  }) {
+    return deleteCertificateSuccess(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
+  }) {
+    return deleteCertificateSuccess?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
+    required TResult orElse(),
+  }) {
+    if (deleteCertificateSuccess != null) {
+      return deleteCertificateSuccess(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguagesSuccess value)
+        getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
+    required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
+  }) {
+    return deleteCertificateSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+  }) {
+    return deleteCertificateSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+    required TResult orElse(),
+  }) {
+    if (deleteCertificateSuccess != null) {
+      return deleteCertificateSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileDeleteCertificateSuccess implements ProfileState {
+  const factory ProfileDeleteCertificateSuccess(final int id) =
+      _$ProfileDeleteCertificateSuccessImpl;
+
+  int get id;
+  @JsonKey(ignore: true)
+  _$$ProfileDeleteCertificateSuccessImplCopyWith<
+          _$ProfileDeleteCertificateSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileDeleteExperienceSuccessImplCopyWith<$Res> {
+  factory _$$ProfileDeleteExperienceSuccessImplCopyWith(
+          _$ProfileDeleteExperienceSuccessImpl value,
+          $Res Function(_$ProfileDeleteExperienceSuccessImpl) then) =
+      __$$ProfileDeleteExperienceSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int id});
+}
+
+/// @nodoc
+class __$$ProfileDeleteExperienceSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res,
+        _$ProfileDeleteExperienceSuccessImpl>
+    implements _$$ProfileDeleteExperienceSuccessImplCopyWith<$Res> {
+  __$$ProfileDeleteExperienceSuccessImplCopyWithImpl(
+      _$ProfileDeleteExperienceSuccessImpl _value,
+      $Res Function(_$ProfileDeleteExperienceSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+  }) {
+    return _then(_$ProfileDeleteExperienceSuccessImpl(
+      null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileDeleteExperienceSuccessImpl
+    implements ProfileDeleteExperienceSuccess {
+  const _$ProfileDeleteExperienceSuccessImpl(this.id);
+
+  @override
+  final int id;
+
+  @override
+  String toString() {
+    return 'ProfileState.deleteExperienceSuccess(id: $id)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileDeleteExperienceSuccessImpl &&
+            (identical(other.id, id) || other.id == id));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileDeleteExperienceSuccessImplCopyWith<
+          _$ProfileDeleteExperienceSuccessImpl>
+      get copyWith => __$$ProfileDeleteExperienceSuccessImplCopyWithImpl<
+          _$ProfileDeleteExperienceSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
+  }) {
+    return deleteExperienceSuccess(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
+  }) {
+    return deleteExperienceSuccess?.call(id);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
+    required TResult orElse(),
+  }) {
+    if (deleteExperienceSuccess != null) {
+      return deleteExperienceSuccess(id);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguagesSuccess value)
+        getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
+    required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
+  }) {
+    return deleteExperienceSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+  }) {
+    return deleteExperienceSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+    required TResult orElse(),
+  }) {
+    if (deleteExperienceSuccess != null) {
+      return deleteExperienceSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileDeleteExperienceSuccess implements ProfileState {
+  const factory ProfileDeleteExperienceSuccess(final int id) =
+      _$ProfileDeleteExperienceSuccessImpl;
+
+  int get id;
+  @JsonKey(ignore: true)
+  _$$ProfileDeleteExperienceSuccessImplCopyWith<
+          _$ProfileDeleteExperienceSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
