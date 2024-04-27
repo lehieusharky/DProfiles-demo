@@ -61,15 +61,17 @@ extension EducationModelExt on EducationModel {
               ),
             ),
             const Spacer(),
-            Padding(
-              padding: context.padding(horizontal: 15),
-              child: InkWell(
-                  onTap: onUpdate,
-                  child: const Icon(IconsaxOutline.edit, size: 20)),
-            ),
-            InkWell(
-                onTap: onDelete,
-                child: const Icon(IconsaxOutline.trash, size: 20)),
+            if (onUpdate != null)
+              Padding(
+                padding: context.padding(horizontal: 15),
+                child: InkWell(
+                    onTap: onUpdate,
+                    child: const Icon(IconsaxOutline.edit, size: 20)),
+              ),
+            if (onDelete != null)
+              InkWell(
+                  onTap: onDelete,
+                  child: const Icon(IconsaxOutline.trash, size: 20)),
           ],
         ),
       ),

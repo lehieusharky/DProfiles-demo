@@ -31,7 +31,7 @@ class BlocDI {
           injector.get<AutoGenerateUseCase>(), injector.get<ProfileUseCase>()),
     );
 
-    injector.registerLazySingleton<AiCharacterBloc>(
+    injector.registerFactory<AiCharacterBloc>(
       () => AiCharacterBloc(
         injector.get<AICharacterUseCase>(),
         injector.get<ProfileUseCase>(),
@@ -39,7 +39,7 @@ class BlocDI {
       ),
     );
 
-    injector.registerLazySingleton<MyAiCharacterBloc>(
+    injector.registerFactory<MyAiCharacterBloc>(
       () => MyAiCharacterBloc(injector.get<MyAICharacterUseCase>()),
     );
 
@@ -50,7 +50,7 @@ class BlocDI {
       ),
     );
 
-    injector.registerLazySingleton<HomeBloc>(
+    injector.registerFactory<HomeBloc>(
       () => HomeBloc(
         injector.get<HomeUseCase>(),
         injector.get<ProfileUseCase>(),
