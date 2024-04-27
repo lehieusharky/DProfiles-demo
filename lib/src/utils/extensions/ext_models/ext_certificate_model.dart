@@ -58,14 +58,16 @@ extension CertificateModelExt on CertificateModel {
               ),
             ),
             const Spacer(),
-            Padding(
-              padding: context.padding(horizontal: 15),
-              child:
-                  InkWell(onTap: onUpdate, child: Assets.icons.iconEdit.svg()),
-            ),
-            InkWell(
-                onTap: onDelete,
-                child: const Icon(IconsaxOutline.trash, size: 20)),
+            if (onUpdate != null)
+              Padding(
+                padding: context.padding(horizontal: 15),
+                child: InkWell(
+                    onTap: onUpdate, child: Assets.icons.iconEdit.svg()),
+              ),
+            if (onDelete != null)
+              InkWell(
+                  onTap: onDelete,
+                  child: const Icon(IconsaxOutline.trash, size: 20)),
           ],
         ),
       ),
