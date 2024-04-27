@@ -32,7 +32,7 @@ class _ProfilePageState extends State<ProfilePage>
                         height: e.item2.toDouble(), child: e.item1))
                     .toList(),
             body: Padding(
-              padding: context.padding(horizontal: 20, top: 5),
+              padding: context.padding(top: 5),
               child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [

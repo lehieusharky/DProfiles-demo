@@ -28,7 +28,7 @@ class PublicProfilePage extends StatelessWidget {
           headerSliverBuilder:
               (BuildContext context, bool innerBoxIsScrolled) => [
             const Tuple2(AvatarPublicProfile(), 170),
-            const Tuple2(HeaderPublicProfile(), 220),
+            const Tuple2(HeaderPublicProfile(), 280),
           ]
                   .map((e) => MySliverAppBar(
                       height: e.item2.toDouble(), child: e.item1))
