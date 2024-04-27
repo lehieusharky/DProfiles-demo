@@ -60,7 +60,13 @@ class SocialMediaComponent extends StatelessWidget {
                             padding: context.padding(horizontal: 5),
                             child: InkWell(
                               onTap: () => _openUrl(context, e.item2),
-                              child: SvgPicture.asset(e.item1),
+                              child: SvgPicture.asset(e.item1,
+                                  colorFilter:
+                                      (e.item2 == null || e.item2!.isEmpty)
+                                          ? ColorFilter.mode(
+                                              colorScheme(context).outline,
+                                              BlendMode.srcIn)
+                                          : null),
                             ),
                           ),
                         )
