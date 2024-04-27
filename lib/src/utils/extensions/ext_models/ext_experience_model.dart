@@ -25,7 +25,7 @@ extension ExperienceModelExt on ExperienceModel {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Assets.images.profile.companyDemo.image(),
+            Assets.images.profile.mockCer.image(),
             Padding(
               padding: context.padding(left: 12),
               child: SizedBox(

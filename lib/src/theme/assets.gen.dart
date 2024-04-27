@@ -383,6 +383,14 @@ class $AssetsImagesProfileGen {
   /// File path: assets/images/profile/dot.svg
   SvgGenImage get dot => const SvgGenImage('assets/images/profile/dot.svg');
 
+  /// File path: assets/images/profile/mock_cer.jpg
+  AssetGenImage get mockCer =>
+      const AssetGenImage('assets/images/profile/mock_cer.jpg');
+
+  /// File path: assets/images/profile/mock_edu.jpg
+  AssetGenImage get mockEdu =>
+      const AssetGenImage('assets/images/profile/mock_edu.jpg');
+
   /// File path: assets/images/profile/profile_background.png
   AssetGenImage get profileBackground =>
       const AssetGenImage('assets/images/profile/profile_background.png');
@@ -396,8 +404,15 @@ class $AssetsImagesProfileGen {
       const SvgGenImage('assets/images/profile/us_flag.svg');
 
   /// List of all assets
-  List<dynamic> get values =>
-      [companyDemo, dot, profileBackground, transaction, usFlag];
+  List<dynamic> get values => [
+        companyDemo,
+        dot,
+        mockCer,
+        mockEdu,
+        profileBackground,
+        transaction,
+        usFlag
+      ];
 }
 
 class Assets {

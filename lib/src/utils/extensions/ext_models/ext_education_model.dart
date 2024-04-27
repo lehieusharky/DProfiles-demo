@@ -25,7 +25,7 @@ extension EducationModelExt on EducationModel {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Assets.images.profile.companyDemo.image(),
+            Assets.images.profile.mockEdu.image(),
             Padding(
               padding: context.padding(left: 12),
               child: SizedBox(
