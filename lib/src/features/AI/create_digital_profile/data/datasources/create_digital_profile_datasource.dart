@@ -21,7 +21,7 @@ abstract class CreateDigitalProfileDataSource {
 
   Future<BaseResponse> updateUserCertificate(String id, CertificateModel data);
 
-  Future<BaseResponse> deleteUserCertificate(String id);
+  Future<BaseResponse> deleteUserCertificate(int id);
 
   // education
   Future<BaseResponse> getUserEducations();
@@ -32,7 +32,7 @@ abstract class CreateDigitalProfileDataSource {
 
   Future<BaseResponse> updateEducationInfo(String id, EducationModel data);
 
-  Future<BaseResponse> deleteEducation(String id);
+  Future<BaseResponse> deleteEducation(int id);
 
   // experience
 
@@ -44,7 +44,7 @@ abstract class CreateDigitalProfileDataSource {
 
   Future<BaseResponse> updateExperienceInfo(String id, ExperienceModel data);
 
-  Future<BaseResponse> deleteExperience(String id);
+  Future<BaseResponse> deleteExperience(int id);
 
   // create digital profile
 

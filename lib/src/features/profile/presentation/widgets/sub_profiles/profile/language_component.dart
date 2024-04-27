@@ -68,11 +68,6 @@ class _LanguageComponentState extends State<LanguageComponent> {
       mapLanguage[e.id!] = e.name!;
     }
 
-    // for (var language in languages) {
-    //   log('language: ${mapLanguage[language.languageId]}');
-    //   language = language.copyWith(name: 'mapLanguage[language.languageId]');
-    // }
-
     for (var i = 0; i < languages.length; i++) {
       final updateLanguage =
           languages[i].copyWith(name: mapLanguage[languages[i].languageId]);

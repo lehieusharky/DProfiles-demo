@@ -81,4 +81,8 @@ class CreateDigitalProfileState with _$CreateDigitalProfileState {
 
   const factory CreateDigitalProfileState.updateDigitalProfileSuccess() =
       UpdateDigitalProfileSuccess;
+
+  const factory CreateDigitalProfileState.getDProfileUpateHisotrySuccess(
+          List<HistoryDProfileUpdateModel> histories) =
+      GetDProfileUpdateHistorySuccess;
 }

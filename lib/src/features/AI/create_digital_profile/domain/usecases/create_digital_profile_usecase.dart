@@ -11,8 +11,7 @@ import 'package:demo_dprofiles/src/utils/https/my_response/error_response.dart';
 
 import 'package:injectable/injectable.dart';
 
-CreateDigitalProfileUseCase get createDigitalProfileUseCase =>
-    injector.get<CreateDigitalProfileUseCase>();
+
 
 abstract class CreateDigitalProfileUseCase {
   Future<Either<List<String>, BaseResponse>> updateUserInfo(
@@ -34,7 +33,7 @@ abstract class CreateDigitalProfileUseCase {
   Future<Either<List<String>, BaseResponse>> updateUserCertificate(
       String id, CertificateModel data);
 
-  Future<Either<List<String>, BaseResponse>> deleteUserCertificate(String id);
+  Future<Either<List<String>, BaseResponse>> deleteUserCertificate(int id);
 
   // education
 
@@ -48,7 +47,7 @@ abstract class CreateDigitalProfileUseCase {
   Future<Either<List<String>, BaseResponse>> updateUserEducation(
       String id, EducationModel data);
 
-  Future<Either<List<String>, BaseResponse>> deleteUserEducation(String id);
+  Future<Either<List<String>, BaseResponse>> deleteUserEducation(int id);
 
   // experience
 
@@ -62,7 +61,7 @@ abstract class CreateDigitalProfileUseCase {
   Future<Either<List<String>, BaseResponse>> updateUserExperience(
       String id, ExperienceModel data);
 
-  Future<Either<List<String>, BaseResponse>> deleteUserExperience(String id);
+  Future<Either<List<String>, BaseResponse>> deleteUserExperience(int id);
 
   Future<Either<String, void>> createDigitalProfile();
 
@@ -109,7 +108,7 @@ class CreateDigitalProfileUseCaseImpl implements CreateDigitalProfileUseCase {
 
   @override
   Future<Either<List<String>, BaseResponse>> deleteUserCertificate(
-      String id) async {
+      int id) async {
     final result =
         await _createDigitalProfileRepository.deleteUserCertificate(id);
     return result.fold(
@@ -162,8 +161,7 @@ class CreateDigitalProfileUseCaseImpl implements CreateDigitalProfileUseCase {
   }
 
   @override
-  Future<Either<List<String>, BaseResponse>> deleteUserEducation(
-      String id) async {
+  Future<Either<List<String>, BaseResponse>> deleteUserEducation(int id) async {
     final result = await _createDigitalProfileRepository.deleteEducation(id);
     return result.fold(
       (l) => Left((l.response as ErrorResponse).message),
@@ -215,7 +213,7 @@ class CreateDigitalProfileUseCaseImpl implements CreateDigitalProfileUseCase {
 
   @override
   Future<Either<List<String>, BaseResponse>> deleteUserExperience(
-      String id) async {
+      int id) async {
     final result = await _createDigitalProfileRepository.deleteExperience(id);
     return result.fold(
       (l) => Left((l.response as ErrorResponse).message),

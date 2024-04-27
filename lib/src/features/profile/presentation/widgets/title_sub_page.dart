@@ -6,14 +6,16 @@ import 'package:flutter/material.dart';
 
 class TitleSubPage extends StatelessWidget {
   final String title;
-  final PageRouteInfo<dynamic> route;
-  final VoidCallback onCallBack;
+  final PageRouteInfo<dynamic>? route;
+  final VoidCallback? onCallBack;
+  final bool? canEdit;
 
   const TitleSubPage(
       {Key? key,
       required this.title,
-      required this.route,
-      required this.onCallBack})
+      this.route,
+      this.onCallBack,
+      this.canEdit})
       : super(key: key);
 
   @override
@@ -26,14 +28,15 @@ class TitleSubPage extends StatelessWidget {
           style:
               AppFont().fontTheme(context, weight: FontWeight.bold).labelMedium,
         ),
-        IconButton(
-          onPressed: () =>
-              context.router.push(route).then((value) => onCallBack()),
-          icon: Icon(
-            IconsaxBold.edit_2,
-            color: colorScheme(context).outlineVariant,
+        if (canEdit != false)
+          IconButton(
+            onPressed: () =>
+                context.router.push(route!).then((value) => onCallBack!()),
+            icon: Icon(
+              IconsaxBold.edit_2,
+              color: colorScheme(context).outlineVariant,
+            ),
           ),
-        ),
       ],
     );
   }

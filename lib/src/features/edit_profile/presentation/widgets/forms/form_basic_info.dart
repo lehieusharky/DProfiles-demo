@@ -102,7 +102,7 @@ class _FormEditBasicInfoState extends State<FormEditBasicInfo> {
                   child: AuthField(
                     title: 'HEADLINE',
                     hint: 'Headline',
-                    maxLines: 3,
+                    maxLines: 5,
                     textInputAction: TextInputAction.next,
                     keyboardType: TextInputType.text,
                     controller: _headlineController,

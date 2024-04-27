@@ -22,7 +22,7 @@ extension CertificateModelExt on CertificateModel {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Assets.images.profile.companyDemo.image(),
+            Assets.images.profile.mockEdu.image(),
             Padding(
               padding: context.padding(left: 12),
               child: SizedBox(
@@ -58,14 +58,16 @@ extension CertificateModelExt on CertificateModel {
               ),
             ),
             const Spacer(),
-            Padding(
-              padding: context.padding(horizontal: 15),
-              child:
-                  InkWell(onTap: onUpdate, child: Assets.icons.iconEdit.svg()),
-            ),
-            InkWell(
-                onTap: onDelete,
-                child: const Icon(IconsaxOutline.trash, size: 20)),
+            if (onUpdate != null)
+              Padding(
+                padding: context.padding(horizontal: 15),
+                child: InkWell(
+                    onTap: onUpdate, child: Assets.icons.iconEdit.svg()),
+              ),
+            if (onDelete != null)
+              InkWell(
+                  onTap: onDelete,
+                  child: const Icon(IconsaxOutline.trash, size: 20)),
           ],
         ),
       ),

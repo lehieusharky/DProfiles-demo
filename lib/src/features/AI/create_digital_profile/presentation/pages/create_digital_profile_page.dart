@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/bloc/create_digital_profile_bloc.dart';
@@ -33,8 +34,8 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CreateDigitalProfileBloc(),
+    return BlocProvider<CreateDigitalProfileBloc>(
+      create: (context) => injector.get<CreateDigitalProfileBloc>(),
       child: BlocConsumer<CreateDigitalProfileBloc, CreateDigitalProfileState>(
         listener: (context, state) {
           if (state is ChangeCreationStepSuccess) {

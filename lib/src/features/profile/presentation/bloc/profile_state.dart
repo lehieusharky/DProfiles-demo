@@ -35,4 +35,13 @@ class ProfileState with _$ProfileState {
 
   const factory ProfileState.getMetaLanguageSuccess(
       List<MetaLanguageModel> languages) = ProfileGetMetaLanguageSuccess;
+
+  const factory ProfileState.deleteEducationSuccess(int id) =
+      ProfileDeleteEducationSuccess;
+
+  const factory ProfileState.deleteCertificateSuccess(int id) =
+      ProfileDeleteCertificateSuccess;
+
+  const factory ProfileState.deleteExperienceSuccess(int id) =
+      ProfileDeleteExperienceSuccess;
 }

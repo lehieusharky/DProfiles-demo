@@ -3,6 +3,7 @@ import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ extension ExperienceModelExt on ExperienceModel {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Assets.images.profile.companyDemo.image(),
+            Assets.images.profile.mockCer.image(),
             Padding(
               padding: context.padding(left: 12),
               child: SizedBox(
@@ -42,7 +43,7 @@ extension ExperienceModelExt on ExperienceModel {
                     Padding(
                       padding: context.padding(vertical: 5),
                       child: Text(
-                        startDate ?? '',
+                        "${startDate.convertToDDMMYYFormat()} - ${endDate.convertToDDMMYYFormat()}",
                         style: AppFont()
                             .fontTheme(context,
                                 color: colorScheme(context).outline)
@@ -60,15 +61,17 @@ extension ExperienceModelExt on ExperienceModel {
               ),
             ),
             const Spacer(),
-            Padding(
-              padding: context.padding(horizontal: 15),
-              child: InkWell(
-                  onTap: onUpdate,
-                  child: const Icon(IconsaxOutline.edit, size: 20)),
-            ),
-            InkWell(
-                onTap: onDelete,
-                child: const Icon(IconsaxOutline.trash, size: 20)),
+            if (onUpdate != null)
+              Padding(
+                padding: context.padding(horizontal: 15),
+                child: InkWell(
+                    onTap: onUpdate,
+                    child: const Icon(IconsaxOutline.edit, size: 20)),
+              ),
+            if (onDelete != null)
+              InkWell(
+                  onTap: onDelete,
+                  child: const Icon(IconsaxOutline.trash, size: 20)),
           ],
         ),
       ),

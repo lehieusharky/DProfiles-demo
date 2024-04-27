@@ -11,7 +11,7 @@ class TabBarProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.padding(top: 20),
+      padding: context.padding(top: 20, horizontal: 20),
       child: Container(
         height: context.sizeHeight(54),
         padding: context.padding(vertical: 12),

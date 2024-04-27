@@ -22,6 +22,7 @@ mixin _$CreateDigitalProfileEvent {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -55,6 +56,7 @@ mixin _$CreateDigitalProfileEvent {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -84,6 +86,7 @@ mixin _$CreateDigitalProfileEvent {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -114,6 +117,8 @@ mixin _$CreateDigitalProfileEvent {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -142,6 +147,7 @@ mixin _$CreateDigitalProfileEvent {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -168,6 +174,7 @@ mixin _$CreateDigitalProfileEvent {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -252,6 +259,7 @@ class _$StartedImpl implements _Started {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -288,6 +296,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -320,6 +329,7 @@ class _$StartedImpl implements _Started {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -356,6 +366,8 @@ class _$StartedImpl implements _Started {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -387,6 +399,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -416,6 +429,7 @@ class _$StartedImpl implements _Started {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -517,6 +531,7 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -553,6 +568,7 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -585,6 +601,7 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -621,6 +638,8 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -652,6 +671,7 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -681,6 +701,7 @@ class _$ChangeCreationStepImpl implements ChangeCreationStep {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -797,6 +818,7 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -833,6 +855,7 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -865,6 +888,7 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -901,6 +925,8 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -932,6 +958,7 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -961,6 +988,7 @@ class _$UpdateUserInfoImpl implements UpdateUserInfo {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -1040,6 +1068,7 @@ class _$GetUserInfoImpl implements GetUserInfo {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -1076,6 +1105,7 @@ class _$GetUserInfoImpl implements GetUserInfo {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -1108,6 +1138,7 @@ class _$GetUserInfoImpl implements GetUserInfo {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -1144,6 +1175,8 @@ class _$GetUserInfoImpl implements GetUserInfo {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -1175,6 +1208,7 @@ class _$GetUserInfoImpl implements GetUserInfo {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -1204,6 +1238,7 @@ class _$GetUserInfoImpl implements GetUserInfo {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -1233,6 +1268,254 @@ class _$GetUserInfoImpl implements GetUserInfo {
 
 abstract class GetUserInfo implements CreateDigitalProfileEvent {
   const factory GetUserInfo() = _$GetUserInfoImpl;
+}
+
+/// @nodoc
+abstract class _$$GetDProfileUpdateHistoryImplCopyWith<$Res> {
+  factory _$$GetDProfileUpdateHistoryImplCopyWith(
+          _$GetDProfileUpdateHistoryImpl value,
+          $Res Function(_$GetDProfileUpdateHistoryImpl) then) =
+      __$$GetDProfileUpdateHistoryImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetDProfileUpdateHistoryImplCopyWithImpl<$Res>
+    extends _$CreateDigitalProfileEventCopyWithImpl<$Res,
+        _$GetDProfileUpdateHistoryImpl>
+    implements _$$GetDProfileUpdateHistoryImplCopyWith<$Res> {
+  __$$GetDProfileUpdateHistoryImplCopyWithImpl(
+      _$GetDProfileUpdateHistoryImpl _value,
+      $Res Function(_$GetDProfileUpdateHistoryImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetDProfileUpdateHistoryImpl implements GetDProfileUpdateHistory {
+  const _$GetDProfileUpdateHistoryImpl();
+
+  @override
+  String toString() {
+    return 'CreateDigitalProfileEvent.getDProfileUpateHisotry()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetDProfileUpdateHistoryImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(bool isNext) changeCreationStep,
+    required TResult Function(UserInfoModel param) updateUserInfo,
+    required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
+    required TResult Function() getUserCertificates,
+    required TResult Function(CertificateModel certificateModel)
+        addUserCertificates,
+    required TResult Function(String id) getCertificateInfo,
+    required TResult Function(CertificateModel certificateModel)
+        deleteUserCertificate,
+    required TResult Function(String id, CertificateModel certificateModel)
+        updateUserCertificate,
+    required TResult Function() getUserEducations,
+    required TResult Function(EducationModel educationModel) addUserEducations,
+    required TResult Function(String id) getEducationInfo,
+    required TResult Function(EducationModel ed) deleteUserEducation,
+    required TResult Function(String id, EducationModel educationModel)
+        updateUserEducation,
+    required TResult Function() getUserExperiences,
+    required TResult Function(ExperienceModel experienceModel)
+        addUserExperiences,
+    required TResult Function(String id) getExperienceInfo,
+    required TResult Function(ExperienceModel experienceModel)
+        deleteUserExperience,
+    required TResult Function(String id, ExperienceModel experienceModel)
+        updateUserExperience,
+    required TResult Function() saveUpdatedProfile,
+    required TResult Function() createDigitalProfile,
+    required TResult Function() updateDigitalProfile,
+  }) {
+    return getDProfileUpateHisotry();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(bool isNext)? changeCreationStep,
+    TResult? Function(UserInfoModel param)? updateUserInfo,
+    TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
+    TResult? Function()? getUserCertificates,
+    TResult? Function(CertificateModel certificateModel)? addUserCertificates,
+    TResult? Function(String id)? getCertificateInfo,
+    TResult? Function(CertificateModel certificateModel)? deleteUserCertificate,
+    TResult? Function(String id, CertificateModel certificateModel)?
+        updateUserCertificate,
+    TResult? Function()? getUserEducations,
+    TResult? Function(EducationModel educationModel)? addUserEducations,
+    TResult? Function(String id)? getEducationInfo,
+    TResult? Function(EducationModel ed)? deleteUserEducation,
+    TResult? Function(String id, EducationModel educationModel)?
+        updateUserEducation,
+    TResult? Function()? getUserExperiences,
+    TResult? Function(ExperienceModel experienceModel)? addUserExperiences,
+    TResult? Function(String id)? getExperienceInfo,
+    TResult? Function(ExperienceModel experienceModel)? deleteUserExperience,
+    TResult? Function(String id, ExperienceModel experienceModel)?
+        updateUserExperience,
+    TResult? Function()? saveUpdatedProfile,
+    TResult? Function()? createDigitalProfile,
+    TResult? Function()? updateDigitalProfile,
+  }) {
+    return getDProfileUpateHisotry?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(bool isNext)? changeCreationStep,
+    TResult Function(UserInfoModel param)? updateUserInfo,
+    TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
+    TResult Function()? getUserCertificates,
+    TResult Function(CertificateModel certificateModel)? addUserCertificates,
+    TResult Function(String id)? getCertificateInfo,
+    TResult Function(CertificateModel certificateModel)? deleteUserCertificate,
+    TResult Function(String id, CertificateModel certificateModel)?
+        updateUserCertificate,
+    TResult Function()? getUserEducations,
+    TResult Function(EducationModel educationModel)? addUserEducations,
+    TResult Function(String id)? getEducationInfo,
+    TResult Function(EducationModel ed)? deleteUserEducation,
+    TResult Function(String id, EducationModel educationModel)?
+        updateUserEducation,
+    TResult Function()? getUserExperiences,
+    TResult Function(ExperienceModel experienceModel)? addUserExperiences,
+    TResult Function(String id)? getExperienceInfo,
+    TResult Function(ExperienceModel experienceModel)? deleteUserExperience,
+    TResult Function(String id, ExperienceModel experienceModel)?
+        updateUserExperience,
+    TResult Function()? saveUpdatedProfile,
+    TResult Function()? createDigitalProfile,
+    TResult Function()? updateDigitalProfile,
+    required TResult orElse(),
+  }) {
+    if (getDProfileUpateHisotry != null) {
+      return getDProfileUpateHisotry();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ChangeCreationStep value) changeCreationStep,
+    required TResult Function(UpdateUserInfo value) updateUserInfo,
+    required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
+    required TResult Function(GetUserCertificates value) getUserCertificates,
+    required TResult Function(AddUserCertificate value) addUserCertificates,
+    required TResult Function(GetCertificateInfo value) getCertificateInfo,
+    required TResult Function(DeleteUserCertificate value)
+        deleteUserCertificate,
+    required TResult Function(UpdateUserCertificate value)
+        updateUserCertificate,
+    required TResult Function(GetUserEducations value) getUserEducations,
+    required TResult Function(AddUserEducation value) addUserEducations,
+    required TResult Function(GetEducationInfo value) getEducationInfo,
+    required TResult Function(DeleteUserEducation value) deleteUserEducation,
+    required TResult Function(UpdateUserEducation value) updateUserEducation,
+    required TResult Function(GetUserExperiences value) getUserExperiences,
+    required TResult Function(AddUserExperience value) addUserExperiences,
+    required TResult Function(GetExperienceInfo value) getExperienceInfo,
+    required TResult Function(DeleteUserExperience value) deleteUserExperience,
+    required TResult Function(UpdateUserExperience value) updateUserExperience,
+    required TResult Function(SaveUpdatedProfile value) saveUpdatedProfile,
+    required TResult Function(CreateDigitalProfile value) createDigitalProfile,
+    required TResult Function(UpdateDigitalProfile value) updateDigitalProfile,
+  }) {
+    return getDProfileUpateHisotry(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ChangeCreationStep value)? changeCreationStep,
+    TResult? Function(UpdateUserInfo value)? updateUserInfo,
+    TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
+    TResult? Function(GetUserCertificates value)? getUserCertificates,
+    TResult? Function(AddUserCertificate value)? addUserCertificates,
+    TResult? Function(GetCertificateInfo value)? getCertificateInfo,
+    TResult? Function(DeleteUserCertificate value)? deleteUserCertificate,
+    TResult? Function(UpdateUserCertificate value)? updateUserCertificate,
+    TResult? Function(GetUserEducations value)? getUserEducations,
+    TResult? Function(AddUserEducation value)? addUserEducations,
+    TResult? Function(GetEducationInfo value)? getEducationInfo,
+    TResult? Function(DeleteUserEducation value)? deleteUserEducation,
+    TResult? Function(UpdateUserEducation value)? updateUserEducation,
+    TResult? Function(GetUserExperiences value)? getUserExperiences,
+    TResult? Function(AddUserExperience value)? addUserExperiences,
+    TResult? Function(GetExperienceInfo value)? getExperienceInfo,
+    TResult? Function(DeleteUserExperience value)? deleteUserExperience,
+    TResult? Function(UpdateUserExperience value)? updateUserExperience,
+    TResult? Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult? Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult? Function(UpdateDigitalProfile value)? updateDigitalProfile,
+  }) {
+    return getDProfileUpateHisotry?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ChangeCreationStep value)? changeCreationStep,
+    TResult Function(UpdateUserInfo value)? updateUserInfo,
+    TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
+    TResult Function(GetUserCertificates value)? getUserCertificates,
+    TResult Function(AddUserCertificate value)? addUserCertificates,
+    TResult Function(GetCertificateInfo value)? getCertificateInfo,
+    TResult Function(DeleteUserCertificate value)? deleteUserCertificate,
+    TResult Function(UpdateUserCertificate value)? updateUserCertificate,
+    TResult Function(GetUserEducations value)? getUserEducations,
+    TResult Function(AddUserEducation value)? addUserEducations,
+    TResult Function(GetEducationInfo value)? getEducationInfo,
+    TResult Function(DeleteUserEducation value)? deleteUserEducation,
+    TResult Function(UpdateUserEducation value)? updateUserEducation,
+    TResult Function(GetUserExperiences value)? getUserExperiences,
+    TResult Function(AddUserExperience value)? addUserExperiences,
+    TResult Function(GetExperienceInfo value)? getExperienceInfo,
+    TResult Function(DeleteUserExperience value)? deleteUserExperience,
+    TResult Function(UpdateUserExperience value)? updateUserExperience,
+    TResult Function(SaveUpdatedProfile value)? saveUpdatedProfile,
+    TResult Function(CreateDigitalProfile value)? createDigitalProfile,
+    TResult Function(UpdateDigitalProfile value)? updateDigitalProfile,
+    required TResult orElse(),
+  }) {
+    if (getDProfileUpateHisotry != null) {
+      return getDProfileUpateHisotry(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetDProfileUpdateHistory implements CreateDigitalProfileEvent {
+  const factory GetDProfileUpdateHistory() = _$GetDProfileUpdateHistoryImpl;
 }
 
 /// @nodoc
@@ -1279,6 +1562,7 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -1315,6 +1599,7 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -1347,6 +1632,7 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -1383,6 +1669,8 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -1414,6 +1702,7 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -1443,6 +1732,7 @@ class _$GetUserCertificatesImpl implements GetUserCertificates {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -1555,6 +1845,7 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -1591,6 +1882,7 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -1623,6 +1915,7 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -1659,6 +1952,8 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -1690,6 +1985,7 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -1719,6 +2015,7 @@ class _$AddUserCertificateImpl implements AddUserCertificate {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -1826,6 +2123,7 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -1862,6 +2160,7 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -1894,6 +2193,7 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -1930,6 +2230,8 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -1961,6 +2263,7 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -1990,6 +2293,7 @@ class _$GetCertificateInfoImpl implements GetCertificateInfo {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -2108,6 +2412,7 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -2144,6 +2449,7 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -2176,6 +2482,7 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -2212,6 +2519,8 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -2243,6 +2552,7 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -2272,6 +2582,7 @@ class _$DeleteUserCertificateImpl implements DeleteUserCertificate {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -2399,6 +2710,7 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -2435,6 +2747,7 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -2467,6 +2780,7 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -2503,6 +2817,8 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -2534,6 +2850,7 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -2563,6 +2880,7 @@ class _$UpdateUserCertificateImpl implements UpdateUserCertificate {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -2645,6 +2963,7 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -2681,6 +3000,7 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -2713,6 +3033,7 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -2749,6 +3070,8 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -2780,6 +3103,7 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -2809,6 +3133,7 @@ class _$GetUserEducationsImpl implements GetUserEducations {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -2921,6 +3246,7 @@ class _$AddUserEducationImpl implements AddUserEducation {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -2957,6 +3283,7 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -2989,6 +3316,7 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -3025,6 +3353,8 @@ class _$AddUserEducationImpl implements AddUserEducation {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -3056,6 +3386,7 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -3085,6 +3416,7 @@ class _$AddUserEducationImpl implements AddUserEducation {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -3192,6 +3524,7 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -3228,6 +3561,7 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -3260,6 +3594,7 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -3296,6 +3631,8 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -3327,6 +3664,7 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -3356,6 +3694,7 @@ class _$GetEducationInfoImpl implements GetEducationInfo {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -3472,6 +3811,7 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -3508,6 +3848,7 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -3540,6 +3881,7 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -3576,6 +3918,8 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -3607,6 +3951,7 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -3636,6 +3981,7 @@ class _$DeleteUserEducationImpl implements DeleteUserEducation {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -3762,6 +4108,7 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -3798,6 +4145,7 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -3830,6 +4178,7 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -3866,6 +4215,8 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -3897,6 +4248,7 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -3926,6 +4278,7 @@ class _$UpdateUserEducationImpl implements UpdateUserEducation {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -4008,6 +4361,7 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -4044,6 +4398,7 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -4076,6 +4431,7 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -4112,6 +4468,8 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -4143,6 +4501,7 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -4172,6 +4531,7 @@ class _$GetUserExperiencesImpl implements GetUserExperiences {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -4284,6 +4644,7 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -4320,6 +4681,7 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -4352,6 +4714,7 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -4388,6 +4751,8 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -4419,6 +4784,7 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -4448,6 +4814,7 @@ class _$AddUserExperienceImpl implements AddUserExperience {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -4555,6 +4922,7 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -4591,6 +4959,7 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -4623,6 +4992,7 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -4659,6 +5029,8 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -4690,6 +5062,7 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -4719,6 +5092,7 @@ class _$GetExperienceInfoImpl implements GetExperienceInfo {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -4837,6 +5211,7 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -4873,6 +5248,7 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -4905,6 +5281,7 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -4941,6 +5318,8 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -4972,6 +5351,7 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -5001,6 +5381,7 @@ class _$DeleteUserExperienceImpl implements DeleteUserExperience {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -5128,6 +5509,7 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -5164,6 +5546,7 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -5196,6 +5579,7 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -5232,6 +5616,8 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -5263,6 +5649,7 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -5292,6 +5679,7 @@ class _$UpdateUserExperienceImpl implements UpdateUserExperience {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -5374,6 +5762,7 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -5410,6 +5799,7 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -5442,6 +5832,7 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -5478,6 +5869,8 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -5509,6 +5902,7 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -5538,6 +5932,7 @@ class _$SaveUpdatedProfileImpl implements SaveUpdatedProfile {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -5613,6 +6008,7 @@ class _$CreateDigitalProfileImpl implements CreateDigitalProfile {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -5649,6 +6045,7 @@ class _$CreateDigitalProfileImpl implements CreateDigitalProfile {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -5681,6 +6078,7 @@ class _$CreateDigitalProfileImpl implements CreateDigitalProfile {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -5717,6 +6115,8 @@ class _$CreateDigitalProfileImpl implements CreateDigitalProfile {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -5748,6 +6148,7 @@ class _$CreateDigitalProfileImpl implements CreateDigitalProfile {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -5777,6 +6178,7 @@ class _$CreateDigitalProfileImpl implements CreateDigitalProfile {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -5852,6 +6254,7 @@ class _$UpdateDigitalProfileImpl implements UpdateDigitalProfile {
     required TResult Function(bool isNext) changeCreationStep,
     required TResult Function(UserInfoModel param) updateUserInfo,
     required TResult Function() getUserInfo,
+    required TResult Function() getDProfileUpateHisotry,
     required TResult Function() getUserCertificates,
     required TResult Function(CertificateModel certificateModel)
         addUserCertificates,
@@ -5888,6 +6291,7 @@ class _$UpdateDigitalProfileImpl implements UpdateDigitalProfile {
     TResult? Function(bool isNext)? changeCreationStep,
     TResult? Function(UserInfoModel param)? updateUserInfo,
     TResult? Function()? getUserInfo,
+    TResult? Function()? getDProfileUpateHisotry,
     TResult? Function()? getUserCertificates,
     TResult? Function(CertificateModel certificateModel)? addUserCertificates,
     TResult? Function(String id)? getCertificateInfo,
@@ -5920,6 +6324,7 @@ class _$UpdateDigitalProfileImpl implements UpdateDigitalProfile {
     TResult Function(bool isNext)? changeCreationStep,
     TResult Function(UserInfoModel param)? updateUserInfo,
     TResult Function()? getUserInfo,
+    TResult Function()? getDProfileUpateHisotry,
     TResult Function()? getUserCertificates,
     TResult Function(CertificateModel certificateModel)? addUserCertificates,
     TResult Function(String id)? getCertificateInfo,
@@ -5956,6 +6361,8 @@ class _$UpdateDigitalProfileImpl implements UpdateDigitalProfile {
     required TResult Function(ChangeCreationStep value) changeCreationStep,
     required TResult Function(UpdateUserInfo value) updateUserInfo,
     required TResult Function(GetUserInfo value) getUserInfo,
+    required TResult Function(GetDProfileUpdateHistory value)
+        getDProfileUpateHisotry,
     required TResult Function(GetUserCertificates value) getUserCertificates,
     required TResult Function(AddUserCertificate value) addUserCertificates,
     required TResult Function(GetCertificateInfo value) getCertificateInfo,
@@ -5987,6 +6394,7 @@ class _$UpdateDigitalProfileImpl implements UpdateDigitalProfile {
     TResult? Function(ChangeCreationStep value)? changeCreationStep,
     TResult? Function(UpdateUserInfo value)? updateUserInfo,
     TResult? Function(GetUserInfo value)? getUserInfo,
+    TResult? Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult? Function(GetUserCertificates value)? getUserCertificates,
     TResult? Function(AddUserCertificate value)? addUserCertificates,
     TResult? Function(GetCertificateInfo value)? getCertificateInfo,
@@ -6016,6 +6424,7 @@ class _$UpdateDigitalProfileImpl implements UpdateDigitalProfile {
     TResult Function(ChangeCreationStep value)? changeCreationStep,
     TResult Function(UpdateUserInfo value)? updateUserInfo,
     TResult Function(GetUserInfo value)? getUserInfo,
+    TResult Function(GetDProfileUpdateHistory value)? getDProfileUpateHisotry,
     TResult Function(GetUserCertificates value)? getUserCertificates,
     TResult Function(AddUserCertificate value)? addUserCertificates,
     TResult Function(GetCertificateInfo value)? getCertificateInfo,
@@ -6078,6 +6487,8 @@ mixin _$CreateDigitalProfileState {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -6107,6 +6518,8 @@ mixin _$CreateDigitalProfileState {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -6135,6 +6548,8 @@ mixin _$CreateDigitalProfileState {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -6184,6 +6599,8 @@ mixin _$CreateDigitalProfileState {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -6227,6 +6644,8 @@ mixin _$CreateDigitalProfileState {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -6269,6 +6688,8 @@ mixin _$CreateDigitalProfileState {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -6358,6 +6779,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return initial();
   }
@@ -6390,6 +6813,8 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return initial?.call();
   }
@@ -6421,6 +6846,8 @@ class _$InitialImpl implements _Initial {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -6476,6 +6903,8 @@ class _$InitialImpl implements _Initial {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return initial(this);
   }
@@ -6522,6 +6951,8 @@ class _$InitialImpl implements _Initial {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return initial?.call(this);
   }
@@ -6567,6 +6998,8 @@ class _$InitialImpl implements _Initial {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -6649,6 +7082,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return loading();
   }
@@ -6681,6 +7116,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return loading?.call();
   }
@@ -6712,6 +7149,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -6767,6 +7206,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return loading(this);
   }
@@ -6813,6 +7254,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return loading?.call(this);
   }
@@ -6858,6 +7301,8 @@ class _$CreateDigitalProfileLoadingImpl implements CreateDigitalProfileLoading {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -6985,6 +7430,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return error(message, title);
   }
@@ -7017,6 +7464,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return error?.call(message, title);
   }
@@ -7048,6 +7497,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -7103,6 +7554,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return error(this);
   }
@@ -7149,6 +7602,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return error?.call(this);
   }
@@ -7194,6 +7649,8 @@ class _$CreateDigitalProfileErrorImpl implements CreateDigitalProfileError {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -7311,6 +7768,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return changeCreationStepSuccess(currentStep);
   }
@@ -7343,6 +7802,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return changeCreationStepSuccess?.call(currentStep);
   }
@@ -7374,6 +7835,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -7429,6 +7892,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return changeCreationStepSuccess(this);
   }
@@ -7475,6 +7940,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return changeCreationStepSuccess?.call(this);
   }
@@ -7520,6 +7987,8 @@ class _$ChangeCreationStepSuccessImpl implements ChangeCreationStepSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (changeCreationStepSuccess != null) {
@@ -7648,6 +8117,8 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserInfoSuccess(response);
   }
@@ -7680,6 +8151,8 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserInfoSuccess?.call(response);
   }
@@ -7711,6 +8184,8 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (updateUserInfoSuccess != null) {
@@ -7766,6 +8241,8 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserInfoSuccess(this);
   }
@@ -7812,6 +8289,8 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserInfoSuccess?.call(this);
   }
@@ -7857,6 +8336,8 @@ class _$UpdateUserInfoSuccessImpl implements UpdateUserInfoSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (updateUserInfoSuccess != null) {
@@ -7980,6 +8461,8 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserInfoSuccess(response);
   }
@@ -8012,6 +8495,8 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserInfoSuccess?.call(response);
   }
@@ -8043,6 +8528,8 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -8098,6 +8585,8 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserInfoSuccess(this);
   }
@@ -8144,6 +8633,8 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserInfoSuccess?.call(this);
   }
@@ -8189,6 +8680,8 @@ class _$GetUserInfoSuccessImpl implements GetUserInfoSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -8314,6 +8807,8 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserCertificatesSuccess(response);
   }
@@ -8346,6 +8841,8 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserCertificatesSuccess?.call(response);
   }
@@ -8377,6 +8874,8 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -8432,6 +8931,8 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserCertificatesSuccess(this);
   }
@@ -8478,6 +8979,8 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserCertificatesSuccess?.call(this);
   }
@@ -8523,6 +9026,8 @@ class _$GetUserCertificatesSuccessImpl implements GetUserCertificatesSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -8611,6 +9116,8 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return addUserCertificatesSuccess();
   }
@@ -8643,6 +9150,8 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return addUserCertificatesSuccess?.call();
   }
@@ -8674,6 +9183,8 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (addUserCertificatesSuccess != null) {
@@ -8729,6 +9240,8 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return addUserCertificatesSuccess(this);
   }
@@ -8775,6 +9288,8 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return addUserCertificatesSuccess?.call(this);
   }
@@ -8820,6 +9335,8 @@ class _$AddUserCertificateSuccessImpl implements AddUserCertificateSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (addUserCertificatesSuccess != null) {
@@ -8939,6 +9456,8 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getCertificateInfoSuccess(response);
   }
@@ -8971,6 +9490,8 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getCertificateInfoSuccess?.call(response);
   }
@@ -9002,6 +9523,8 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getCertificateInfoSuccess != null) {
@@ -9057,6 +9580,8 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getCertificateInfoSuccess(this);
   }
@@ -9103,6 +9628,8 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getCertificateInfoSuccess?.call(this);
   }
@@ -9148,6 +9675,8 @@ class _$GetCertificateInfoSuccessImpl implements GetCertificateInfoSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getCertificateInfoSuccess != null) {
@@ -9237,6 +9766,8 @@ class _$DeleteUserCertificateSuccessImpl
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return deleteUserCertificateSuccess();
   }
@@ -9269,6 +9800,8 @@ class _$DeleteUserCertificateSuccessImpl
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return deleteUserCertificateSuccess?.call();
   }
@@ -9300,6 +9833,8 @@ class _$DeleteUserCertificateSuccessImpl
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (deleteUserCertificateSuccess != null) {
@@ -9355,6 +9890,8 @@ class _$DeleteUserCertificateSuccessImpl
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return deleteUserCertificateSuccess(this);
   }
@@ -9401,6 +9938,8 @@ class _$DeleteUserCertificateSuccessImpl
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return deleteUserCertificateSuccess?.call(this);
   }
@@ -9446,6 +9985,8 @@ class _$DeleteUserCertificateSuccessImpl
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (deleteUserCertificateSuccess != null) {
@@ -9569,6 +10110,8 @@ class _$UpdateUserCertificateSuccessImpl
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserCertificateSuccess(response);
   }
@@ -9601,6 +10144,8 @@ class _$UpdateUserCertificateSuccessImpl
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserCertificateSuccess?.call(response);
   }
@@ -9632,6 +10177,8 @@ class _$UpdateUserCertificateSuccessImpl
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (updateUserCertificateSuccess != null) {
@@ -9687,6 +10234,8 @@ class _$UpdateUserCertificateSuccessImpl
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserCertificateSuccess(this);
   }
@@ -9733,6 +10282,8 @@ class _$UpdateUserCertificateSuccessImpl
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserCertificateSuccess?.call(this);
   }
@@ -9778,6 +10329,8 @@ class _$UpdateUserCertificateSuccessImpl
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (updateUserCertificateSuccess != null) {
@@ -9902,6 +10455,8 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserEducationsSuccess(educations);
   }
@@ -9934,6 +10489,8 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserEducationsSuccess?.call(educations);
   }
@@ -9965,6 +10522,8 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -10020,6 +10579,8 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserEducationsSuccess(this);
   }
@@ -10066,6 +10627,8 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserEducationsSuccess?.call(this);
   }
@@ -10111,6 +10674,8 @@ class _$GetUserEducationsSuccessImpl implements GetUserEducationsSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -10199,6 +10764,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return addUserEducationsSuccess();
   }
@@ -10231,6 +10798,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return addUserEducationsSuccess?.call();
   }
@@ -10262,6 +10831,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (addUserEducationsSuccess != null) {
@@ -10317,6 +10888,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return addUserEducationsSuccess(this);
   }
@@ -10363,6 +10936,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return addUserEducationsSuccess?.call(this);
   }
@@ -10408,6 +10983,8 @@ class _$AddUserEducationSuccessImpl implements AddUserEducationSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (addUserEducationsSuccess != null) {
@@ -10527,6 +11104,8 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getEducationInfoSuccess(response);
   }
@@ -10559,6 +11138,8 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getEducationInfoSuccess?.call(response);
   }
@@ -10590,6 +11171,8 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getEducationInfoSuccess != null) {
@@ -10645,6 +11228,8 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getEducationInfoSuccess(this);
   }
@@ -10691,6 +11276,8 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getEducationInfoSuccess?.call(this);
   }
@@ -10736,6 +11323,8 @@ class _$GetEducationInfoSuccessImpl implements GetEducationInfoSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getEducationInfoSuccess != null) {
@@ -10824,6 +11413,8 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return deleteUserEducationSuccess();
   }
@@ -10856,6 +11447,8 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return deleteUserEducationSuccess?.call();
   }
@@ -10887,6 +11480,8 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (deleteUserEducationSuccess != null) {
@@ -10942,6 +11537,8 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return deleteUserEducationSuccess(this);
   }
@@ -10988,6 +11585,8 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return deleteUserEducationSuccess?.call(this);
   }
@@ -11033,6 +11632,8 @@ class _$DeleteUserEducationSuccessImpl implements DeleteUserEducationSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (deleteUserEducationSuccess != null) {
@@ -11152,6 +11753,8 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserEducationSuccess(response);
   }
@@ -11184,6 +11787,8 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserEducationSuccess?.call(response);
   }
@@ -11215,6 +11820,8 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (updateUserEducationSuccess != null) {
@@ -11270,6 +11877,8 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserEducationSuccess(this);
   }
@@ -11316,6 +11925,8 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserEducationSuccess?.call(this);
   }
@@ -11361,6 +11972,8 @@ class _$UpdateUserEducationSuccessImpl implements UpdateUserEducationSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (updateUserEducationSuccess != null) {
@@ -11486,6 +12099,8 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserExperiencesSuccess(response);
   }
@@ -11518,6 +12133,8 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserExperiencesSuccess?.call(response);
   }
@@ -11549,6 +12166,8 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -11604,6 +12223,8 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserExperiencesSuccess(this);
   }
@@ -11650,6 +12271,8 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getUserExperiencesSuccess?.call(this);
   }
@@ -11695,6 +12318,8 @@ class _$GetUserExperiencesSuccessImpl implements GetUserExperiencesSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -11783,6 +12408,8 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return addUserExperiencesSuccess();
   }
@@ -11815,6 +12442,8 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return addUserExperiencesSuccess?.call();
   }
@@ -11846,6 +12475,8 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (addUserExperiencesSuccess != null) {
@@ -11901,6 +12532,8 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return addUserExperiencesSuccess(this);
   }
@@ -11947,6 +12580,8 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return addUserExperiencesSuccess?.call(this);
   }
@@ -11992,6 +12627,8 @@ class _$AddUserExperienceSuccessImpl implements AddUserExperienceSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (addUserExperiencesSuccess != null) {
@@ -12111,6 +12748,8 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getExperienceInfoSuccess(response);
   }
@@ -12143,6 +12782,8 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getExperienceInfoSuccess?.call(response);
   }
@@ -12174,6 +12815,8 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getExperienceInfoSuccess != null) {
@@ -12229,6 +12872,8 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return getExperienceInfoSuccess(this);
   }
@@ -12275,6 +12920,8 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return getExperienceInfoSuccess?.call(this);
   }
@@ -12320,6 +12967,8 @@ class _$GetExperienceInfoSuccessImpl implements GetExperienceInfoSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (getExperienceInfoSuccess != null) {
@@ -12408,6 +13057,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return deleteUserExperienceSuccess();
   }
@@ -12440,6 +13091,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return deleteUserExperienceSuccess?.call();
   }
@@ -12471,6 +13124,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (deleteUserExperienceSuccess != null) {
@@ -12526,6 +13181,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return deleteUserExperienceSuccess(this);
   }
@@ -12572,6 +13229,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return deleteUserExperienceSuccess?.call(this);
   }
@@ -12617,6 +13276,8 @@ class _$DeleteUserExperienceSuccessImpl implements DeleteUserExperienceSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (deleteUserExperienceSuccess != null) {
@@ -12738,6 +13399,8 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserExperienceSuccess(response);
   }
@@ -12770,6 +13433,8 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserExperienceSuccess?.call(response);
   }
@@ -12801,6 +13466,8 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (updateUserExperienceSuccess != null) {
@@ -12856,6 +13523,8 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserExperienceSuccess(this);
   }
@@ -12902,6 +13571,8 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateUserExperienceSuccess?.call(this);
   }
@@ -12947,6 +13618,8 @@ class _$UpdateUserExperienceSuccessImpl implements UpdateUserExperienceSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (updateUserExperienceSuccess != null) {
@@ -13036,6 +13709,8 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return saveUpdatedProfileSuccess();
   }
@@ -13068,6 +13743,8 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return saveUpdatedProfileSuccess?.call();
   }
@@ -13099,6 +13776,8 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (saveUpdatedProfileSuccess != null) {
@@ -13154,6 +13833,8 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return saveUpdatedProfileSuccess(this);
   }
@@ -13200,6 +13881,8 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return saveUpdatedProfileSuccess?.call(this);
   }
@@ -13245,6 +13928,8 @@ class _$SaveUpdatedProfileSuccessImpl implements SaveUpdatedProfileSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (saveUpdatedProfileSuccess != null) {
@@ -13327,6 +14012,8 @@ class _$CreateDigitalProfileSuccessImpl implements CreateDigitalProfileSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return createDigitalProfileSuccess();
   }
@@ -13359,6 +14046,8 @@ class _$CreateDigitalProfileSuccessImpl implements CreateDigitalProfileSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return createDigitalProfileSuccess?.call();
   }
@@ -13390,6 +14079,8 @@ class _$CreateDigitalProfileSuccessImpl implements CreateDigitalProfileSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (createDigitalProfileSuccess != null) {
@@ -13445,6 +14136,8 @@ class _$CreateDigitalProfileSuccessImpl implements CreateDigitalProfileSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return createDigitalProfileSuccess(this);
   }
@@ -13491,6 +14184,8 @@ class _$CreateDigitalProfileSuccessImpl implements CreateDigitalProfileSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return createDigitalProfileSuccess?.call(this);
   }
@@ -13536,6 +14231,8 @@ class _$CreateDigitalProfileSuccessImpl implements CreateDigitalProfileSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (createDigitalProfileSuccess != null) {
@@ -13620,6 +14317,8 @@ class _$UpdateDigitalProfileSuccessImpl implements UpdateDigitalProfileSuccess {
     required TResult Function() saveUpdatedProfileSuccess,
     required TResult Function() createDigitalProfileSuccess,
     required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateDigitalProfileSuccess();
   }
@@ -13652,6 +14351,8 @@ class _$UpdateDigitalProfileSuccessImpl implements UpdateDigitalProfileSuccess {
     TResult? Function()? saveUpdatedProfileSuccess,
     TResult? Function()? createDigitalProfileSuccess,
     TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateDigitalProfileSuccess?.call();
   }
@@ -13683,6 +14384,8 @@ class _$UpdateDigitalProfileSuccessImpl implements UpdateDigitalProfileSuccess {
     TResult Function()? saveUpdatedProfileSuccess,
     TResult Function()? createDigitalProfileSuccess,
     TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (updateDigitalProfileSuccess != null) {
@@ -13738,6 +14441,8 @@ class _$UpdateDigitalProfileSuccessImpl implements UpdateDigitalProfileSuccess {
         createDigitalProfileSuccess,
     required TResult Function(UpdateDigitalProfileSuccess value)
         updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateDigitalProfileSuccess(this);
   }
@@ -13784,6 +14489,8 @@ class _$UpdateDigitalProfileSuccessImpl implements UpdateDigitalProfileSuccess {
         createDigitalProfileSuccess,
     TResult? Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
   }) {
     return updateDigitalProfileSuccess?.call(this);
   }
@@ -13829,6 +14536,8 @@ class _$UpdateDigitalProfileSuccessImpl implements UpdateDigitalProfileSuccess {
         createDigitalProfileSuccess,
     TResult Function(UpdateDigitalProfileSuccess value)?
         updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
     required TResult orElse(),
   }) {
     if (updateDigitalProfileSuccess != null) {
@@ -13842,4 +14551,353 @@ abstract class UpdateDigitalProfileSuccess
     implements CreateDigitalProfileState {
   const factory UpdateDigitalProfileSuccess() =
       _$UpdateDigitalProfileSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$GetDProfileUpdateHistorySuccessImplCopyWith<$Res> {
+  factory _$$GetDProfileUpdateHistorySuccessImplCopyWith(
+          _$GetDProfileUpdateHistorySuccessImpl value,
+          $Res Function(_$GetDProfileUpdateHistorySuccessImpl) then) =
+      __$$GetDProfileUpdateHistorySuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<HistoryDProfileUpdateModel> histories});
+}
+
+/// @nodoc
+class __$$GetDProfileUpdateHistorySuccessImplCopyWithImpl<$Res>
+    extends _$CreateDigitalProfileStateCopyWithImpl<$Res,
+        _$GetDProfileUpdateHistorySuccessImpl>
+    implements _$$GetDProfileUpdateHistorySuccessImplCopyWith<$Res> {
+  __$$GetDProfileUpdateHistorySuccessImplCopyWithImpl(
+      _$GetDProfileUpdateHistorySuccessImpl _value,
+      $Res Function(_$GetDProfileUpdateHistorySuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? histories = null,
+  }) {
+    return _then(_$GetDProfileUpdateHistorySuccessImpl(
+      null == histories
+          ? _value._histories
+          : histories // ignore: cast_nullable_to_non_nullable
+              as List<HistoryDProfileUpdateModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetDProfileUpdateHistorySuccessImpl
+    implements GetDProfileUpdateHistorySuccess {
+  const _$GetDProfileUpdateHistorySuccessImpl(
+      final List<HistoryDProfileUpdateModel> histories)
+      : _histories = histories;
+
+  final List<HistoryDProfileUpdateModel> _histories;
+  @override
+  List<HistoryDProfileUpdateModel> get histories {
+    if (_histories is EqualUnmodifiableListView) return _histories;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_histories);
+  }
+
+  @override
+  String toString() {
+    return 'CreateDigitalProfileState.getDProfileUpateHisotrySuccess(histories: $histories)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetDProfileUpdateHistorySuccessImpl &&
+            const DeepCollectionEquality()
+                .equals(other._histories, _histories));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_histories));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetDProfileUpdateHistorySuccessImplCopyWith<
+          _$GetDProfileUpdateHistorySuccessImpl>
+      get copyWith => __$$GetDProfileUpdateHistorySuccessImplCopyWithImpl<
+          _$GetDProfileUpdateHistorySuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<String> message, String? title) error,
+    required TResult Function(int currentStep) changeCreationStepSuccess,
+    required TResult Function(BaseResponse? response) updateUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserInfoSuccess,
+    required TResult Function(BaseResponse response) getUserCertificatesSuccess,
+    required TResult Function() addUserCertificatesSuccess,
+    required TResult Function(BaseResponse response) getCertificateInfoSuccess,
+    required TResult Function() deleteUserCertificateSuccess,
+    required TResult Function(BaseResponse response)
+        updateUserCertificateSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function() addUserEducationsSuccess,
+    required TResult Function(BaseResponse response) getEducationInfoSuccess,
+    required TResult Function() deleteUserEducationSuccess,
+    required TResult Function(BaseResponse response) updateUserEducationSuccess,
+    required TResult Function(BaseResponse response) getUserExperiencesSuccess,
+    required TResult Function() addUserExperiencesSuccess,
+    required TResult Function(BaseResponse response) getExperienceInfoSuccess,
+    required TResult Function() deleteUserExperienceSuccess,
+    required TResult Function(BaseResponse response)
+        updateUserExperienceSuccess,
+    required TResult Function() saveUpdatedProfileSuccess,
+    required TResult Function() createDigitalProfileSuccess,
+    required TResult Function() updateDigitalProfileSuccess,
+    required TResult Function(List<HistoryDProfileUpdateModel> histories)
+        getDProfileUpateHisotrySuccess,
+  }) {
+    return getDProfileUpateHisotrySuccess(histories);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<String> message, String? title)? error,
+    TResult? Function(int currentStep)? changeCreationStepSuccess,
+    TResult? Function(BaseResponse? response)? updateUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserInfoSuccess,
+    TResult? Function(BaseResponse response)? getUserCertificatesSuccess,
+    TResult? Function()? addUserCertificatesSuccess,
+    TResult? Function(BaseResponse response)? getCertificateInfoSuccess,
+    TResult? Function()? deleteUserCertificateSuccess,
+    TResult? Function(BaseResponse response)? updateUserCertificateSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function()? addUserEducationsSuccess,
+    TResult? Function(BaseResponse response)? getEducationInfoSuccess,
+    TResult? Function()? deleteUserEducationSuccess,
+    TResult? Function(BaseResponse response)? updateUserEducationSuccess,
+    TResult? Function(BaseResponse response)? getUserExperiencesSuccess,
+    TResult? Function()? addUserExperiencesSuccess,
+    TResult? Function(BaseResponse response)? getExperienceInfoSuccess,
+    TResult? Function()? deleteUserExperienceSuccess,
+    TResult? Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult? Function()? saveUpdatedProfileSuccess,
+    TResult? Function()? createDigitalProfileSuccess,
+    TResult? Function()? updateDigitalProfileSuccess,
+    TResult? Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
+  }) {
+    return getDProfileUpateHisotrySuccess?.call(histories);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<String> message, String? title)? error,
+    TResult Function(int currentStep)? changeCreationStepSuccess,
+    TResult Function(BaseResponse? response)? updateUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserInfoSuccess,
+    TResult Function(BaseResponse response)? getUserCertificatesSuccess,
+    TResult Function()? addUserCertificatesSuccess,
+    TResult Function(BaseResponse response)? getCertificateInfoSuccess,
+    TResult Function()? deleteUserCertificateSuccess,
+    TResult Function(BaseResponse response)? updateUserCertificateSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function()? addUserEducationsSuccess,
+    TResult Function(BaseResponse response)? getEducationInfoSuccess,
+    TResult Function()? deleteUserEducationSuccess,
+    TResult Function(BaseResponse response)? updateUserEducationSuccess,
+    TResult Function(BaseResponse response)? getUserExperiencesSuccess,
+    TResult Function()? addUserExperiencesSuccess,
+    TResult Function(BaseResponse response)? getExperienceInfoSuccess,
+    TResult Function()? deleteUserExperienceSuccess,
+    TResult Function(BaseResponse response)? updateUserExperienceSuccess,
+    TResult Function()? saveUpdatedProfileSuccess,
+    TResult Function()? createDigitalProfileSuccess,
+    TResult Function()? updateDigitalProfileSuccess,
+    TResult Function(List<HistoryDProfileUpdateModel> histories)?
+        getDProfileUpateHisotrySuccess,
+    required TResult orElse(),
+  }) {
+    if (getDProfileUpateHisotrySuccess != null) {
+      return getDProfileUpateHisotrySuccess(histories);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(CreateDigitalProfileLoading value) loading,
+    required TResult Function(CreateDigitalProfileError value) error,
+    required TResult Function(ChangeCreationStepSuccess value)
+        changeCreationStepSuccess,
+    required TResult Function(UpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(GetUserInfoSuccess value) getUserInfoSuccess,
+    required TResult Function(GetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(AddUserCertificateSuccess value)
+        addUserCertificatesSuccess,
+    required TResult Function(GetCertificateInfoSuccess value)
+        getCertificateInfoSuccess,
+    required TResult Function(DeleteUserCertificateSuccess value)
+        deleteUserCertificateSuccess,
+    required TResult Function(UpdateUserCertificateSuccess value)
+        updateUserCertificateSuccess,
+    required TResult Function(GetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(AddUserEducationSuccess value)
+        addUserEducationsSuccess,
+    required TResult Function(GetEducationInfoSuccess value)
+        getEducationInfoSuccess,
+    required TResult Function(DeleteUserEducationSuccess value)
+        deleteUserEducationSuccess,
+    required TResult Function(UpdateUserEducationSuccess value)
+        updateUserEducationSuccess,
+    required TResult Function(GetUserExperiencesSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(AddUserExperienceSuccess value)
+        addUserExperiencesSuccess,
+    required TResult Function(GetExperienceInfoSuccess value)
+        getExperienceInfoSuccess,
+    required TResult Function(DeleteUserExperienceSuccess value)
+        deleteUserExperienceSuccess,
+    required TResult Function(UpdateUserExperienceSuccess value)
+        updateUserExperienceSuccess,
+    required TResult Function(SaveUpdatedProfileSuccess value)
+        saveUpdatedProfileSuccess,
+    required TResult Function(CreateDigitalProfileSuccess value)
+        createDigitalProfileSuccess,
+    required TResult Function(UpdateDigitalProfileSuccess value)
+        updateDigitalProfileSuccess,
+    required TResult Function(GetDProfileUpdateHistorySuccess value)
+        getDProfileUpateHisotrySuccess,
+  }) {
+    return getDProfileUpateHisotrySuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(CreateDigitalProfileLoading value)? loading,
+    TResult? Function(CreateDigitalProfileError value)? error,
+    TResult? Function(ChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult? Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult? Function(GetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(GetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(AddUserCertificateSuccess value)?
+        addUserCertificatesSuccess,
+    TResult? Function(GetCertificateInfoSuccess value)?
+        getCertificateInfoSuccess,
+    TResult? Function(DeleteUserCertificateSuccess value)?
+        deleteUserCertificateSuccess,
+    TResult? Function(UpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult? Function(GetUserEducationsSuccess value)? getUserEducationsSuccess,
+    TResult? Function(AddUserEducationSuccess value)? addUserEducationsSuccess,
+    TResult? Function(GetEducationInfoSuccess value)? getEducationInfoSuccess,
+    TResult? Function(DeleteUserEducationSuccess value)?
+        deleteUserEducationSuccess,
+    TResult? Function(UpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult? Function(GetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(AddUserExperienceSuccess value)?
+        addUserExperiencesSuccess,
+    TResult? Function(GetExperienceInfoSuccess value)? getExperienceInfoSuccess,
+    TResult? Function(DeleteUserExperienceSuccess value)?
+        deleteUserExperienceSuccess,
+    TResult? Function(UpdateUserExperienceSuccess value)?
+        updateUserExperienceSuccess,
+    TResult? Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
+    TResult? Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult? Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
+    TResult? Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
+  }) {
+    return getDProfileUpateHisotrySuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(CreateDigitalProfileLoading value)? loading,
+    TResult Function(CreateDigitalProfileError value)? error,
+    TResult Function(ChangeCreationStepSuccess value)?
+        changeCreationStepSuccess,
+    TResult Function(UpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(GetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(GetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(AddUserCertificateSuccess value)?
+        addUserCertificatesSuccess,
+    TResult Function(GetCertificateInfoSuccess value)?
+        getCertificateInfoSuccess,
+    TResult Function(DeleteUserCertificateSuccess value)?
+        deleteUserCertificateSuccess,
+    TResult Function(UpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult Function(GetUserEducationsSuccess value)? getUserEducationsSuccess,
+    TResult Function(AddUserEducationSuccess value)? addUserEducationsSuccess,
+    TResult Function(GetEducationInfoSuccess value)? getEducationInfoSuccess,
+    TResult Function(DeleteUserEducationSuccess value)?
+        deleteUserEducationSuccess,
+    TResult Function(UpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult Function(GetUserExperiencesSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(AddUserExperienceSuccess value)? addUserExperiencesSuccess,
+    TResult Function(GetExperienceInfoSuccess value)? getExperienceInfoSuccess,
+    TResult Function(DeleteUserExperienceSuccess value)?
+        deleteUserExperienceSuccess,
+    TResult Function(UpdateUserExperienceSuccess value)?
+        updateUserExperienceSuccess,
+    TResult Function(SaveUpdatedProfileSuccess value)?
+        saveUpdatedProfileSuccess,
+    TResult Function(CreateDigitalProfileSuccess value)?
+        createDigitalProfileSuccess,
+    TResult Function(UpdateDigitalProfileSuccess value)?
+        updateDigitalProfileSuccess,
+    TResult Function(GetDProfileUpdateHistorySuccess value)?
+        getDProfileUpateHisotrySuccess,
+    required TResult orElse(),
+  }) {
+    if (getDProfileUpateHisotrySuccess != null) {
+      return getDProfileUpateHisotrySuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetDProfileUpdateHistorySuccess
+    implements CreateDigitalProfileState {
+  const factory GetDProfileUpdateHistorySuccess(
+          final List<HistoryDProfileUpdateModel> histories) =
+      _$GetDProfileUpdateHistorySuccessImpl;
+
+  List<HistoryDProfileUpdateModel> get histories;
+  @JsonKey(ignore: true)
+  _$$GetDProfileUpdateHistorySuccessImplCopyWith<
+          _$GetDProfileUpdateHistorySuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

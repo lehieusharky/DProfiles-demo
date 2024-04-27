@@ -22,6 +22,12 @@ abstract class ProfileUseCase {
   Future<Either<String, UploadFileResponse?>> uploadImage();
 
   Future<Either<String, BaseResponse>> getMetaLanguage();
+
+  Future<Either<String, BaseResponse>> deleteUserExperience(int id);
+
+  Future<Either<String, BaseResponse>> deleteUserEducation(int id);
+
+  Future<Either<String, BaseResponse>> deleteUserCertificate(int id);
 }
 
 @Injectable(as: ProfileUseCase)
@@ -92,10 +98,37 @@ class ProfileUseCaseImpl implements ProfileUseCase {
       (r) => Right(r),
     );
   }
-  
+
   @override
-  Future<Either<String, BaseResponse>> getMetaLanguage()async {
-     final result = await _profileRepository.getMetaLanguage();
+  Future<Either<String, BaseResponse>> getMetaLanguage() async {
+    final result = await _profileRepository.getMetaLanguage();
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> deleteUserCertificate(int id) async {
+    final result = await _profileRepository.deleteUserCertificate(id);
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> deleteUserEducation(int id) async {
+    final result = await _profileRepository.deleteUserEducation(id);
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> deleteUserExperience(int id) async {
+    final result = await _profileRepository.deleteUserExperience(id);
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),

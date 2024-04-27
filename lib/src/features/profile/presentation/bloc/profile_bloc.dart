@@ -33,6 +33,10 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<ProfileUploadAvatar>(_uploadAvatar);
     on<ProfileCheckDigitalProfileAvailable>(_checkDigitalProfileAvailable);
     on<ProfileGetMetaLanguage>(_getMetaLanguage);
+
+    on<ProfileDeleteCertificate>(_deleteCertificate);
+    on<ProfileDeleteEducation>(_deleteEducation);
+    on<ProfileDeleteExperience>(_deleteExperience);
   }
 
   Future<void> _getUserInfo(
@@ -158,18 +162,49 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       ProfileGetMetaLanguage event, Emitter<ProfileState> emit) async {
     emit(const ProfileLoading());
 
-    final status =
-        await profileUseCase.getMetaLanguage();
+    final status = await profileUseCase.getMetaLanguage();
 
     status.fold(
-      (l) => emit(const ProfileError(message: 'Get meta language failed', title: 'Failed')),
-      (r) {
-        final data = r.data as List;
+        (l) => emit(const ProfileError(
+            message: 'Get meta language failed', title: 'Failed')), (r) {
+      final data = r.data as List;
 
-        final languages = data.map((e) => MetaLanguageModel.fromJson(e)).toList();
+      final languages = data.map((e) => MetaLanguageModel.fromJson(e)).toList();
 
-        emit(ProfileGetMetaLanguageSuccess(languages));
-      }
-    );
+      emit(ProfileGetMetaLanguageSuccess(languages));
+    });
+  }
+
+  FutureOr<void> _deleteCertificate(
+      ProfileDeleteCertificate event, Emitter<ProfileState> emit) async {
+    emit(const _Initial());
+    final status = await profileUseCase.deleteUserCertificate(event.id);
+
+    status.fold(
+        (l) => emit(
+            const ProfileError(message: 'Delete  failed', title: 'Failed')),
+        (r) => emit(ProfileDeleteCertificateSuccess(event.id)));
+  }
+
+  FutureOr<void> _deleteEducation(
+      ProfileDeleteEducation event, Emitter<ProfileState> emit) async {
+    emit(const _Initial());
+    final status = await profileUseCase.deleteUserEducation(event.id);
+
+    status.fold(
+        (l) => emit(
+            const ProfileError(message: 'Delete  failed', title: 'Failed')),
+        (r) => emit(ProfileDeleteEducationSuccess(event.id)));
+  }
+
+  FutureOr<void> _deleteExperience(
+      ProfileDeleteExperience event, Emitter<ProfileState> emit) async {
+    emit(const _Initial());
+    final status = await profileUseCase.deleteUserExperience(event.id);
+
+    status.fold(
+        (l) => emit(
+            const ProfileError(message: 'Delete  failed', title: 'Failed')),
+        (r) => emit(ProfileDeleteExperienceSuccess(event.id)));
   }
 }

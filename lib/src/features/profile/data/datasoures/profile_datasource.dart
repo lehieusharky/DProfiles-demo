@@ -17,4 +17,10 @@ abstract class ProfileDataSource {
   Future<UploadFileResponse?> uploadImage();
 
   Future<BaseResponse> getMetaLanguage();
+
+  Future<BaseResponse> deleteUserExperience(int id);
+
+  Future<BaseResponse> deleteUserEducation(int id);
+
+  Future<BaseResponse> deleteUserCertificate(int id);
 }

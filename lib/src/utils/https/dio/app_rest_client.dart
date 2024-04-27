@@ -50,7 +50,7 @@ abstract class RestClient {
   Future<BaseResponse> getEducationInfo(@Path() String id);
 
   @DELETE('/api/v1/user-education/{id}')
-  Future<BaseResponse> deleteEducationInfo(@Path() String id);
+  Future<BaseResponse> deleteEducationInfo(@Path() int id);
 
   @PUT('/api/v1/user-education/{id}')
   Future<BaseResponse> updateEducationInfo(
@@ -72,7 +72,7 @@ abstract class RestClient {
       @Path() String id, @Body() Map<String, dynamic> body);
 
   @DELETE('/api/v1/user-certificate/{id}')
-  Future<BaseResponse> deleteCertificate(@Path() String id);
+  Future<BaseResponse> deleteCertificate(@Path() int id);
 
   // experience
 
@@ -90,7 +90,7 @@ abstract class RestClient {
       @Path() String id, @Body() Map<String, dynamic> body);
 
   @DELETE('/api/v1/user-experience/{id}')
-  Future<BaseResponse> deleteExperienceInfo(@Path() String id);
+  Future<BaseResponse> deleteExperienceInfo(@Path() int id);
 
   // auto generate
 
@@ -125,6 +125,9 @@ abstract class RestClient {
 
   @GET('/api/v1/dprofile-stored')
   Future<BaseResponse> checkDigitalProfileStored();
+
+  @GET('/api/v1/dprofile-history')
+  Future<BaseResponse> getDigitalProfileUpdateHistory();
 
   // ai character
 

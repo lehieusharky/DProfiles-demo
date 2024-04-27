@@ -325,7 +325,7 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<BaseResponse> deleteEducationInfo(String id) async {
+  Future<BaseResponse> deleteEducationInfo(int id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -496,7 +496,7 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<BaseResponse> deleteCertificate(String id) async {
+  Future<BaseResponse> deleteCertificate(int id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -636,7 +636,7 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<BaseResponse> deleteExperienceInfo(String id) async {
+  Future<BaseResponse> deleteExperienceInfo(int id) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -899,6 +899,33 @@ class _RestClient implements RestClient {
             .compose(
               _dio.options,
               '/api/v1/dprofile-stored',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = BaseResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<BaseResponse> getDigitalProfileUpdateHistory() async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<BaseResponse>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/api/v1/dprofile-history',
               queryParameters: queryParameters,
               data: _data,
             )

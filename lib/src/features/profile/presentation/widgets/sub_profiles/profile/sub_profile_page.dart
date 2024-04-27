@@ -31,24 +31,27 @@ class SubProfilePage extends StatelessWidget {
           ..add(const ProfileGetUserSkills())
           ..add(const ProfileGetUserLanguages()),
         child: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const OpenToComponent(),
-              const MyDivider(verticalMargin: 8),
-              const AboutComponent(),
-              const MyDivider(verticalMargin: 8),
-              const ExperienceComponent(),
-              const MyDivider(verticalMargin: 8),
-              const SkillComponent(),
-              const MyDivider(verticalMargin: 8),
-              const EducationComponent(),
-              const MyDivider(verticalMargin: 8),
-              const CertificateComponent(),
-              const MyDivider(verticalMargin: 8),
-              const LanguageComponent(),
-              context.sizedBox(height: 50),
-            ],
+          child: Padding(
+            padding: context.padding(horizontal: 20),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const OpenToComponent(),
+                const MyDivider(verticalMargin: 8),
+                const AboutComponent(),
+                const MyDivider(verticalMargin: 8),
+                const SkillComponent(),
+                const MyDivider(verticalMargin: 8),
+                const LanguageComponent(),
+                const MyDivider(verticalMargin: 8),
+                const ExperienceComponent(),
+                const MyDivider(verticalMargin: 8),
+                const EducationComponent(),
+                const MyDivider(verticalMargin: 8),
+                const CertificateComponent(),
+                context.sizedBox(height: 50),
+              ],
+            ),
           ),
         ));
   }

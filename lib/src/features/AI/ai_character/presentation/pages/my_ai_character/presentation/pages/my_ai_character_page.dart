@@ -69,6 +69,4 @@ class _MyAICharacterPageState extends State<MyAICharacterPage> {
       style: AppFont().fontTheme(context, weight: FontWeight.w600).titleSmall,
     );
   }
-
-  
 }

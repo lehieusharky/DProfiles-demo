@@ -30,7 +30,7 @@ abstract class CreateDigitalProfileRepository {
       updateUserCertificate(String id, CertificateModel data);
 
   Future<Either<CreateDigitalProfileFailure, BaseResponse>>
-      deleteUserCertificate(String id);
+      deleteUserCertificate(int id);
 
   // education
 
@@ -46,7 +46,7 @@ abstract class CreateDigitalProfileRepository {
       String id, EducationModel data);
 
   Future<Either<CreateDigitalProfileFailure, BaseResponse>> deleteEducation(
-      String id);
+      int id);
 
   // experience
 
@@ -63,7 +63,7 @@ abstract class CreateDigitalProfileRepository {
       updateExperienceInfo(String id, ExperienceModel data);
 
   Future<Either<CreateDigitalProfileFailure, BaseResponse>> deleteExperience(
-      String id);
+      int id);
 
   Future<Either<CreateDigitalProfileFailure, void>> createDigitalProfile();
 

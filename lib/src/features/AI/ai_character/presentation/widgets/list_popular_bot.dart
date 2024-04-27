@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/domain/entities/ext_ai_character_bot_entity.dart';
@@ -64,17 +62,17 @@ class _ListPopularBotState extends State<ListPopularBot>
       if (bots != null) {
         _addBot(state);
       } else {
-        _nitBots(state);
+        _initBots(state);
       }
     }
   }
 
-  void _nitBots(GetListPopularCharacterBotSuccess state) {
+  void _initBots(GetListPopularCharacterBotSuccess state) {
     bots = state.bots;
   }
 
   void _addBot(GetListPopularCharacterBotSuccess state) {
-     for (var element in state.bots) {
+    for (var element in state.bots) {
       bots!.add(element);
     }
   }
