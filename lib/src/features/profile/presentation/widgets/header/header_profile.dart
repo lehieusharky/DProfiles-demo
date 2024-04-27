@@ -4,6 +4,7 @@ import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/header/title_wallet_follower_profile.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/header/username_profile.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/profile/see_more_text_profile.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -53,6 +54,8 @@ class _HeaderProfileState extends State<HeaderProfile> {
                       padding: context.padding(vertical: 12),
                       child: Text(
                         userInfo!.headline ?? 'Create Your Headline now',
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
                         style: AppFont().fontTheme(context).bodyLarge,
                       ),
                     ),
