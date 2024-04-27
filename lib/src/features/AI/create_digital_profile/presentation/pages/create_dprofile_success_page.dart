@@ -39,8 +39,8 @@ class _CreateDigitalProfileSuccessPageState
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CreateDigitalProfileBloc(),
+    return BlocProvider<CreateDigitalProfileBloc>(
+      create: (context) => injector.get<CreateDigitalProfileBloc>(),
       child: BlocConsumer<CreateDigitalProfileBloc, CreateDigitalProfileState>(
         listener: (context, state) {
           if (state is GetUserInfoSuccess) {

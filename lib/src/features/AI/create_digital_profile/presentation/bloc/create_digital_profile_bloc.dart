@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:developer';
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/data/models/history_dprofile_update_model.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart';
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/usecases/dprofile_usecase.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
@@ -15,6 +17,10 @@ part 'create_digital_profile_bloc.freezed.dart';
 
 class CreateDigitalProfileBloc
     extends Bloc<CreateDigitalProfileEvent, CreateDigitalProfileState> {
+  final CreateDigitalProfileUseCase createDigitalProfileUseCase;
+
+  final DProfileUseCase dProfileUseCase;
+
   int _currentStep = 0;
 
   int get currentStep => _currentStep;
@@ -27,13 +33,15 @@ class CreateDigitalProfileBloc
 
   List<ExperienceModel> experiences = [];
 
-  CreateDigitalProfileBloc()
+  CreateDigitalProfileBloc(
+      this.createDigitalProfileUseCase, this.dProfileUseCase)
       : super(const CreateDigitalProfileState.initial()) {
     on<ChangeCreationStep>(_changeCreateStep);
 
     on<SaveUpdatedProfile>(_saveUpdatedProfile);
 
     on<CreateDigitalProfile>(_createDigitalProfile);
+    on<GetDProfileUpdateHistory>(_getDProfileHistory);
 
     // basic info
 
@@ -349,5 +357,22 @@ class CreateDigitalProfileBloc
     } catch (e) {
       emit(const UpdateDigitalProfileSuccess());
     }
+  }
+
+  FutureOr<void> _getDProfileHistory(GetDProfileUpdateHistory event,
+      Emitter<CreateDigitalProfileState> emit) async {
+    final result = await dProfileUseCase.getDProfileUpdateHistory();
+
+    result.fold(
+      (l) => emit(CreateDigitalProfileError(message: [l])),
+      (r) {
+        final data = r.data as List;
+
+        final histories =
+            data.map((e) => HistoryDProfileUpdateModel.fromJson(e)).toList();
+
+        emit(GetDProfileUpdateHistorySuccess(histories));
+      },
+    );
   }
 }

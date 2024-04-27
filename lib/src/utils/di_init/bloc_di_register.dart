@@ -7,6 +7,8 @@ import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/domain/usecases/chat_with_ai_usecase.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/presentation/bloc/chat_with_ai_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart';
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/usecases/dprofile_usecase.dart';
+import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/bloc/create_digital_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/bloc/dashboard_bloc.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/domain/usecases/edit_profile_usecase.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/bloc/edit_profile_bloc.dart';
@@ -86,6 +88,13 @@ class BlocDI {
 
     injector.registerFactory<PublicProfileBloc>(
       () => PublicProfileBloc(injector.get<PublicProfileUseCase>()),
+    );
+
+    injector.registerFactory<CreateDigitalProfileBloc>(
+      () => CreateDigitalProfileBloc(
+        injector.get<CreateDigitalProfileUseCase>(),
+        injector.get<DProfileUseCase>(),
+      ),
     );
   }
 }

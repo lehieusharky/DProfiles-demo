@@ -11,8 +11,7 @@ import 'package:demo_dprofiles/src/utils/https/my_response/error_response.dart';
 
 import 'package:injectable/injectable.dart';
 
-CreateDigitalProfileUseCase get createDigitalProfileUseCase =>
-    injector.get<CreateDigitalProfileUseCase>();
+
 
 abstract class CreateDigitalProfileUseCase {
   Future<Either<List<String>, BaseResponse>> updateUserInfo(

@@ -12,6 +12,9 @@ class CreateDigitalProfileEvent with _$CreateDigitalProfileEvent {
 
   const factory CreateDigitalProfileEvent.getUserInfo() = GetUserInfo;
 
+  const factory CreateDigitalProfileEvent.getDProfileUpateHisotry() =
+      GetDProfileUpdateHistory;
+
   // certificate
 
   const factory CreateDigitalProfileEvent.getUserCertificates() =
