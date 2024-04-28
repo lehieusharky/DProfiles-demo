@@ -1,6 +1,6 @@
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/data/models/public_user_info_model.dart';
-import 'package:demo_dprofiles/src/features/pubic_profile/presentation/bloc/bloc/public_profile_bloc.dart';
+import 'package:demo_dprofiles/src/features/pubic_profile/presentation/bloc/public_profile_bloc.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

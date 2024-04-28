@@ -29,12 +29,11 @@ class AvatarPublicProfile extends StatelessWidget {
                       padding: context.padding(top: 40),
                       child: IconButton(
                           onPressed: () => Navigator.pop(context),
-                          icon: const Icon(IconsaxOutline.arrow_left,
+                          icon: const Icon(IconsaxOutline.arrow_left_2,
                               color: MyColor.getWhite)),
                     )
                   ],
                 ),
-                _buildBackgroundAction(context),
               ],
             ),
             const SizedBox(height: 50),
@@ -42,53 +41,22 @@ class AvatarPublicProfile extends StatelessWidget {
         ),
         Padding(
           padding: context.padding(horizontal: 20),
-          child: Stack(
-            alignment: Alignment.bottomRight,
-            children: [
-              _buildAvatar(context),
-              _buildEditWidget(context),
-            ],
-          ),
+          child: _buildAvatar(context),
         ),
       ],
     );
   }
 
   Widget _buildAvatar(BuildContext context) {
-    return InkWell(
-      onTap: () => context.read<ProfileBloc>().add(const ProfileUploadAvatar()),
-      child: Container(
-        padding: context.padding(all: 1.5),
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: colorScheme(context).background,
-        ),
-        child: Assets.images.home.avatarHolder.image(
-          width: context.sizeWidth(96),
-          height: context.sizeWidth(96),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildEditWidget(BuildContext context) {
     return Container(
-      padding: context.padding(all: 1),
+      padding: context.padding(all: 1.5),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: colorScheme(context).background,
       ),
-      child: Container(
-        padding: context.padding(all: 8),
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: colorScheme(context).primary,
-        ),
-        child: Assets.icons.iconEdit.svg(
-          width: context.sizeWidth(18),
-          colorFilter:
-              const ColorFilter.mode(MyColor.getWhite, BlendMode.srcIn),
-        ),
+      child: Assets.images.home.avatarHolder.image(
+        width: context.sizeWidth(96),
+        height: context.sizeWidth(96),
       ),
     );
   }
@@ -102,13 +70,6 @@ class AvatarPublicProfile extends StatelessWidget {
         color: colorScheme(context).background,
       ),
       child: Assets.icons.iconUpload.svg(),
-    );
-  }
-
-  Widget _buildBackgroundAction(BuildContext context) {
-    return Padding(
-      padding: context.padding(horizontal: 20, top: 40),
-      child: _buildUploadWidget(context),
     );
   }
 }

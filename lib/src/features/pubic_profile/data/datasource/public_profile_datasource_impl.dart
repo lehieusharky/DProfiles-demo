@@ -16,4 +16,37 @@ class PublicProfileDataSourceImpl implements PublicProfileDataSource {
       rethrow;
     }
   }
+
+  @override
+  Future<BaseResponse> getPublicCertificates(String userName) async {
+    try {
+      final response = await MyHttp.rl().getPublicCertificate(userName);
+
+      return response;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<BaseResponse> getPublicEducations(String userName) async {
+    try {
+      final response = await MyHttp.rl().getPublicEducations(userName);
+
+      return response;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<BaseResponse> getPublicExperiences(String userName) async {
+    try {
+      final response = await MyHttp.rl().getPublicExperiences(userName);
+
+      return response;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
 }

@@ -11,4 +11,15 @@ class PublicProfileState with _$PublicProfileState {
 
   const factory PublicProfileState.getBasicInfoSuccess(
       PublicUserInfoModel userInfo) = PublicProfileGetBasicInfoSuccess;
+
+  const factory PublicProfileState.getExperiencesSuccess(
+          List<ExperienceModel> experiences) =
+      PublicProfileGetUserExperienceSuccess;
+
+  const factory PublicProfileState.getEducationsSuccess(
+      List<EducationModel> educations) = PublicProfileGetUserEducationsSuccess;
+
+  const factory PublicProfileState.getCertificatesSuccess(
+          List<CertificateModel> certificates) =
+      PublicProfileGetUserCertificatesSuccess;
 }

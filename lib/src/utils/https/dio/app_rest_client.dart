@@ -385,4 +385,13 @@ abstract class RestClient {
 
   @GET('/api/v1/public/user/{username}')
   Future<BaseResponse> getPublicUserInfo(@Path('username') String userName);
+
+  @GET('/api/v1/public/certificate/{username}')
+  Future<BaseResponse> getPublicCertificate(@Path('username') String userName);
+
+  @GET('/api/v1/public/education/{username}')
+  Future<BaseResponse> getPublicEducations(@Path('username') String userName);
+
+  @GET('/api/v1/public/experience/{username}')
+  Future<BaseResponse> getPublicExperiences(@Path('username') String userName);
 }

@@ -40,7 +40,7 @@ extension CertificateModelExt on CertificateModel {
                     Padding(
                       padding: context.padding(vertical: 5),
                       child: Text(
-                        date.convertToDDMMYYFormat() ?? 'Jul 2019 - Mar 2024',
+                        date.convertToDDMMYYFormat(),
                         style: AppFont()
                             .fontTheme(context,
                                 color: colorScheme(context).outline)
