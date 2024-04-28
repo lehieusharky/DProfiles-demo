@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
@@ -17,20 +18,34 @@ class ExperienceComponent extends StatefulWidget {
 }
 
 class _ExperienceComponentState extends State<ExperienceComponent> {
-  List<ExperienceModel> experiences = [];
+  List<ExperienceModel>? experiences;
 
   @override
   Widget build(BuildContext context) {
-    return BlocSelector<ProfileBloc, ProfileState, List<ExperienceModel>?>(
-      selector: (state) {
+    return BlocConsumer<ProfileBloc, ProfileState>(
+      listener: (context, state) {
         if (state is ProfileGetUserExperienceSuccess) {
-          experiences = state.experiences;
+          experiences = [];
+          for (var element in state.experiences) {
+            experiences?.add(element);
+          }
         }
 
         if (state is ProfileDeleteExperienceSuccess) {
-          context.read<ProfileBloc>().add(const ProfileGetUserExperience());
+          experiences?.removeWhere((element) => element.id == state.id);
         }
-        return experiences;
+        if (state is ProfileUpdateUserExperienceSuccess) {
+          final itemWillbeRemove = experiences
+              ?.firstWhere((element) => element.id == state.experienceModel.id);
+          if (itemWillbeRemove != null) {
+            final position = experiences?.indexOf(itemWillbeRemove);
+            if (position != null) {
+              experiences?.removeAt(position);
+
+              experiences?.insert(position, state.experienceModel);
+            }
+          }
+        }
       },
       builder: (context, state) {
         return Column(
@@ -43,15 +58,16 @@ class _ExperienceComponentState extends State<ExperienceComponent> {
                   .read<ProfileBloc>()
                   .add(const ProfileGetUserExperience()),
             ),
-            if (state == null)
-              const MyShimmer(count: 1, height: 150)
+            if (experiences == null)
+              const MyShimmer(count: 1, height: 50)
             else
               Column(
                 mainAxisSize: MainAxisSize.min,
-                children: experiences
+                children: experiences!
                     .map((e) => e.toWidget(
                           context,
                           onDelete: () => _deleteExpe(context, e),
+                          onUpdate: () => _updateExp(context, e),
                         ))
                     .toList(),
               )
@@ -71,8 +87,9 @@ class _ExperienceComponentState extends State<ExperienceComponent> {
             child: const Text('OK'),
           ),
           AppFlatButton(context).elevatedButton(
-              title: 'Cancel',
-              onPressed: () => Navigator.pop(context, 'cancel')),
+            title: 'Cancel',
+            onPressed: () => Navigator.pop(context, 'cancel'),
+          ),
         ]).then((value) {
       if (value == 'ok') {
         context
@@ -81,4 +98,17 @@ class _ExperienceComponentState extends State<ExperienceComponent> {
       }
     });
   }
+
+  void _updateExp(BuildContext context, ExperienceModel experienceModel) {
+    context.router
+        .push(FormEditExperienceRoute(experienceModel: experienceModel))
+        .then((value) => value == null
+            ? null
+            : _onUpdate(context, value as ExperienceModel));
+  }
+
+  void _onUpdate(BuildContext context, ExperienceModel experienceModel) =>
+      context
+          .read<ProfileBloc>()
+          .add(ProfileUpdateUserExperience(experienceModel));
 }

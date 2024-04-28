@@ -24,12 +24,19 @@ class ProfileEvent with _$ProfileEvent {
   const factory ProfileEvent.getMetaLanguage({String? search}) =
       ProfileGetMetaLanguage;
 
-  const factory ProfileEvent.deleteEducation(int id) =
-      ProfileDeleteEducation;
+  const factory ProfileEvent.deleteEducation(int id) = ProfileDeleteEducation;
 
   const factory ProfileEvent.deleteCertificate(int id) =
       ProfileDeleteCertificate;
 
-  const factory ProfileEvent.deleteExperience(int id) =
-      ProfileDeleteExperience;
+  const factory ProfileEvent.deleteExperience(int id) = ProfileDeleteExperience;
+
+  const factory ProfileEvent.updateUserExperience(
+      ExperienceModel experienceModel) = ProfileUpdateUserExperience;
+
+  const factory ProfileEvent.updateUserEducation(
+      EducationModel educationModel) = ProfileUpdateUserEducation;
+
+  const factory ProfileEvent.updateUserCertificate(
+      CertificateModel certificateModel) = ProfileUpdateUserCertificate;
 }

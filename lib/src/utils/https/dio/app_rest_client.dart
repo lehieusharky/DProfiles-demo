@@ -54,7 +54,7 @@ abstract class RestClient {
 
   @PUT('/api/v1/user-education/{id}')
   Future<BaseResponse> updateEducationInfo(
-      @Path() String id, @Body() Map<String, dynamic> body);
+      @Path() int id, @Body() Map<String, dynamic> body);
 
   // certificate
 
@@ -69,7 +69,7 @@ abstract class RestClient {
 
   @PUT('/api/v1/user-certificate/{id}')
   Future<BaseResponse> updateCertificateInfo(
-      @Path() String id, @Body() Map<String, dynamic> body);
+      @Path() int id, @Body() Map<String, dynamic> body);
 
   @DELETE('/api/v1/user-certificate/{id}')
   Future<BaseResponse> deleteCertificate(@Path() int id);
@@ -87,7 +87,7 @@ abstract class RestClient {
 
   @PUT('/api/v1/user-experience/{id}')
   Future<BaseResponse> updateExperienceInfo(
-      @Path() String id, @Body() Map<String, dynamic> body);
+      @Path() int id, @Body() Map<String, dynamic> body);
 
   @DELETE('/api/v1/user-experience/{id}')
   Future<BaseResponse> deleteExperienceInfo(@Path() int id);
@@ -365,7 +365,7 @@ abstract class RestClient {
   // upload
 
   @POST('https://upload.dev.dprofiles.xyz/presigned-upload-url')
-  Future<UploadFileResponse> uploadImage(@Body() Map<String, dynamic> comment);
+  Future<BaseResponse> uploadImage(@Body() Map<String, dynamic> body);
 
   // search
 

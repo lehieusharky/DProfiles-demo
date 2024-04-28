@@ -61,7 +61,7 @@ class CreateDigitalProfileDataSourceImpl
       String id, CertificateModel data) async {
     try {
       final baseResponse =
-          await MyHttp.rl().updateCertificateInfo(id, data.toJson());
+          await MyHttp.rl().updateCertificateInfo(data.id!, data.toJson());
       return baseResponse;
     } on DioException {
       rethrow;
@@ -125,7 +125,7 @@ class CreateDigitalProfileDataSourceImpl
       String id, EducationModel data) async {
     try {
       final baseResponse =
-          await MyHttp.rl().updateEducationInfo(id, data.toJson());
+          await MyHttp.rl().updateEducationInfo(data.id!, data.toJson());
       return baseResponse;
     } on DioException {
       rethrow;
@@ -179,7 +179,7 @@ class CreateDigitalProfileDataSourceImpl
       String id, ExperienceModel data) async {
     try {
       final baseResponse =
-          await MyHttp.rl().updateExperienceInfo(id, data.toJson());
+          await MyHttp.rl().updateExperienceInfo(data.id!, data.toJson());
       return baseResponse;
     } on DioException {
       rethrow;

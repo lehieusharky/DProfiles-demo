@@ -41,7 +41,7 @@ class _FormEditCertificatePageState extends State<FormEditCertificatePage> {
     _credentialIDController =
         TextEditingController(text: widget.certificateModel.credentialId);
     _dateController = TextEditingController(
-        text: widget.certificateModel.date.convertToDDMMYYFormat());
+        text: widget.certificateModel.date.convertToDDMMYYYYDateTimeFormat());
 
     _linkController = TextEditingController(text: widget.certificateModel.link);
   }
@@ -152,7 +152,7 @@ class _FormEditCertificatePageState extends State<FormEditCertificatePage> {
 
   void _save(BuildContext context) {
     if (_keyForm.currentState?.validate() ?? false) {
-      final newData = CertificateModel(
+      final newData = widget.certificateModel.copyWith(
           name: _nameController.text,
           organization: _organizationController.text,
           date: _dateController.text.convertToIOSDateTimeFormat(),

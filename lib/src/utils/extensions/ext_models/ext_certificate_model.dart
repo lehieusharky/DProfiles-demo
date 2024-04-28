@@ -62,7 +62,8 @@ extension CertificateModelExt on CertificateModel {
               Padding(
                 padding: context.padding(horizontal: 15),
                 child: InkWell(
-                    onTap: onUpdate, child: Assets.icons.iconEdit.svg()),
+                    onTap: onUpdate,
+                    child: const Icon(IconsaxOutline.edit, size: 20)),
               ),
             if (onDelete != null)
               InkWell(

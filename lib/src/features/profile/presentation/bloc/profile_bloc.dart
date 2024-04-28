@@ -37,6 +37,10 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<ProfileDeleteCertificate>(_deleteCertificate);
     on<ProfileDeleteEducation>(_deleteEducation);
     on<ProfileDeleteExperience>(_deleteExperience);
+
+    on<ProfileUpdateUserExperience>(_updateExperience);
+    on<ProfileUpdateUserEducation>(_updateEducation);
+    on<ProfileUpdateUserCertificate>(_updateCertificate);
   }
 
   Future<void> _getUserInfo(
@@ -206,5 +210,42 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
         (l) => emit(
             const ProfileError(message: 'Delete  failed', title: 'Failed')),
         (r) => emit(ProfileDeleteExperienceSuccess(event.id)));
+  }
+
+  FutureOr<void> _updateExperience(
+      ProfileUpdateUserExperience event, Emitter<ProfileState> emit) async {
+    emit(const _Initial());
+    final status =
+        await profileUseCase.updateUserExperience(event.experienceModel);
+
+    status.fold(
+        (l) => emit(
+            const ProfileError(message: 'Delete  failed', title: 'Failed')),
+        (r) => emit(ProfileUpdateUserExperienceSuccess(event.experienceModel)));
+  }
+
+  FutureOr<void> _updateEducation(
+      ProfileUpdateUserEducation event, Emitter<ProfileState> emit) async {
+    emit(const _Initial());
+    final status =
+        await profileUseCase.updateUserEducation(event.educationModel);
+
+    status.fold(
+        (l) => emit(
+            const ProfileError(message: 'Delete  failed', title: 'Failed')),
+        (r) => emit(ProfileUpdateUserEducationSuccess(event.educationModel)));
+  }
+
+  FutureOr<void> _updateCertificate(
+      ProfileUpdateUserCertificate event, Emitter<ProfileState> emit) async {
+    emit(const _Initial());
+    final status =
+        await profileUseCase.updateUserCertificate(event.certificateModel);
+
+    status.fold(
+        (l) => emit(
+            const ProfileError(message: 'Delete  failed', title: 'Failed')),
+        (r) =>
+            emit(ProfileUpdateUserCertificateSuccess(event.certificateModel)));
   }
 }

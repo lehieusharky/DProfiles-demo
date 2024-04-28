@@ -1,5 +1,7 @@
-import 'dart:io';
 import 'package:demo_dprofiles/src/features/profile/data/datasoures/profile_datasource.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
 import 'package:demo_dprofiles/src/utils/https/dio/http_util.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
@@ -89,20 +91,13 @@ class ProfileDataSourceImpl implements ProfileDataSource {
           "content_type": "image/${file.extension}"
         };
 
-        await MyHttp.rl().uploadImage(body).then((uploadedResponse) async {
-          List<int> bytes = await File(file.path!).readAsBytes();
+        await MyHttp.rl().uploadImage({
+          "file_name": "1000120629.jpg",
+          "file_size_bytes": 1436453,
+          "content_type": "image/jpg"
+        }).then((value) => print(value));
 
-          final response = await MyHttp.getDio().put(
-            uploadedResponse.presignedUrl!,
-            data: bytes,
-          );
-
-          if (response.statusCode == 200) {
-            return uploadedResponse;
-          } else {
-            return null;
-          }
-        });
+        return null;
       }
 
       return null;
@@ -145,6 +140,42 @@ class ProfileDataSourceImpl implements ProfileDataSource {
   Future<BaseResponse> deleteUserExperience(int id) async {
     try {
       final baseResponse = await MyHttp.rl().deleteExperienceInfo(id);
+      return baseResponse;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<BaseResponse> updateUserCertificate(
+      CertificateModel certificateModel) async {
+    try {
+      final baseResponse = await MyHttp.rl().updateCertificateInfo(
+          certificateModel.id!, certificateModel.toJson());
+      return baseResponse;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<BaseResponse> updateUserEducation(
+      EducationModel educationModel) async {
+    try {
+      final baseResponse = await MyHttp.rl()
+          .updateCertificateInfo(educationModel.id!, educationModel.toJson());
+      return baseResponse;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<BaseResponse> updateUserExperience(
+      ExperienceModel experienceModel) async {
+    try {
+      final baseResponse = await MyHttp.rl()
+          .updateCertificateInfo(experienceModel.id!, experienceModel.toJson());
       return baseResponse;
     } on DioException catch (e) {
       rethrow;

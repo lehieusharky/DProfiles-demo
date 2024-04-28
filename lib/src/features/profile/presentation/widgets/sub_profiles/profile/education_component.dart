@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/widgets/edit_form/form_edit_education_page.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/title_sub_page.dart';
@@ -17,20 +19,35 @@ class EducationComponent extends StatefulWidget {
 }
 
 class _EducationComponentState extends State<EducationComponent> {
-  List<EducationModel> educations = [];
+  List<EducationModel>? educations;
 
   @override
   Widget build(BuildContext context) {
-    return BlocSelector<ProfileBloc, ProfileState, List<EducationModel>?>(
-      selector: (state) {
+    return BlocConsumer<ProfileBloc, ProfileState>(
+      listener: (context, state) {
         if (state is ProfileGetUserEducationsSuccess) {
-          educations = state.educations;
+          educations = [];  
+          for (var element in state.educations) {
+            educations?.add(element); 
+          }
         }
 
         if (state is ProfileDeleteEducationSuccess) {
-          context.read<ProfileBloc>().add(const ProfileGetUserEducations());
+          educations?.removeWhere((element) => element.id == state.id);
         }
-        return educations;
+
+        if (state is ProfileUpdateUserEducationSuccess) {
+          final itemWillbeRemove = educations
+              ?.firstWhere((element) => element.id == state.educationModel.id);
+          if (itemWillbeRemove != null) {
+            final position = educations?.indexOf(itemWillbeRemove);
+            if (position != null) {
+              educations?.removeAt(position);
+
+              educations?.insert(position, state.educationModel);
+            }
+          }
+        }
       },
       builder: (context, state) {
         return Column(
@@ -43,13 +60,14 @@ class _EducationComponentState extends State<EducationComponent> {
                   .read<ProfileBloc>()
                   .add(const ProfileGetUserEducations()),
             ),
-            if (state == null)
-              const MyShimmer(count: 1, height: 150)
+            if (educations == null)
+              const MyShimmer(count: 1, height: 50)
             else
               Column(
                 mainAxisSize: MainAxisSize.min,
-                children: educations
+                children: educations!
                     .map((e) => e.toWidget(context,
+                        onUpdate: () => _updateEdu(context, e),
                         onDelete: () => _deleteEducation(context, e)))
                     .toList(),
               )
@@ -77,4 +95,15 @@ class _EducationComponentState extends State<EducationComponent> {
       }
     });
   }
+
+  void _updateEdu(BuildContext context, EducationModel educationModel) {
+    context.router
+        .push(FormEditEducationRoute(educationModel: educationModel))
+        .then((value) =>
+            value == null ? null : _onUpdate(context, value as EducationModel));
+  }
+
+  void _onUpdate(BuildContext context, EducationModel educationModel) => context
+      .read<ProfileBloc>()
+      .add(ProfileUpdateUserEducation(educationModel));
 }

@@ -353,7 +353,7 @@ class _RestClient implements RestClient {
 
   @override
   Future<BaseResponse> updateEducationInfo(
-    String id,
+    int id,
     Map<String, dynamic> body,
   ) async {
     const _extra = <String, dynamic>{};
@@ -466,7 +466,7 @@ class _RestClient implements RestClient {
 
   @override
   Future<BaseResponse> updateCertificateInfo(
-    String id,
+    int id,
     Map<String, dynamic> body,
   ) async {
     const _extra = <String, dynamic>{};
@@ -606,7 +606,7 @@ class _RestClient implements RestClient {
 
   @override
   Future<BaseResponse> updateExperienceInfo(
-    String id,
+    int id,
     Map<String, dynamic> body,
   ) async {
     const _extra = <String, dynamic>{};
@@ -2366,14 +2366,14 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<UploadFileResponse> uploadImage(Map<String, dynamic> comment) async {
+  Future<BaseResponse> uploadImage(Map<String, dynamic> body) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    _data.addAll(comment);
+    _data.addAll(body);
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<UploadFileResponse>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<BaseResponse>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -2389,7 +2389,7 @@ class _RestClient implements RestClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = UploadFileResponse.fromJson(_result.data!);
+    final value = BaseResponse.fromJson(_result.data!);
     return value;
   }
 

@@ -40,9 +40,10 @@ class _FormEditEducationPageState extends State<FormEditEducationPage> {
     _descriptionController =
         TextEditingController(text: widget.educationModel.description);
     _startDateController = TextEditingController(
-        text: widget.educationModel.startDate.convertToDDMMYYFormat());
+        text:
+            widget.educationModel.startDate.convertToDDMMYYYYDateTimeFormat());
     _endDateController = TextEditingController(
-        text: widget.educationModel.endDate.convertToDDMMYYFormat());
+        text: widget.educationModel.endDate.convertToDDMMYYYYDateTimeFormat());
 
     super.initState();
   }
@@ -144,7 +145,7 @@ class _FormEditEducationPageState extends State<FormEditEducationPage> {
 
   void _save(BuildContext context) {
     if (_keyForm.currentState?.validate() ?? false) {
-      final updatedData = EducationModel(
+      final updatedData = widget.educationModel.copyWith(
           schoolName: _nameController.text,
           description: _descriptionController.text,
           degreeID: int.parse(_degreeController.text),
