@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:demo_dprofiles/src/features/profile/data/datasoures/profile_datasource.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
@@ -7,6 +9,7 @@ import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 
 @Injectable(as: ProfileDataSource)
@@ -91,13 +94,20 @@ class ProfileDataSourceImpl implements ProfileDataSource {
           "content_type": "image/${file.extension}"
         };
 
-        await MyHttp.rl().uploadImage({
-          "file_name": "1000120629.jpg",
-          "file_size_bytes": 1436453,
-          "content_type": "image/jpg"
-        }).then((value) => print(value));
-
-        return null;
+        final res = await MyHttp.rl().uploadImage(body);
+        Uint8List image = File(file.path!).readAsBytesSync();
+        final putAWSRes = await Dio().put(
+          res.presignedUrl ?? '',
+          options: Options(
+            headers: {
+              Headers.contentTypeHeader: "image/${file.extension}",
+              Headers.contentLengthHeader: image.length, 
+            }
+          ),
+          data: Stream.fromIterable(image.map((e) => [e])),
+        );
+        print(putAWSRes);
+        return res;
       }
 
       return null;
