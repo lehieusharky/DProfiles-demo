@@ -38,6 +38,7 @@ mixin _$ProfileEvent {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,6 +60,7 @@ mixin _$ProfileEvent {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -80,6 +82,7 @@ mixin _$ProfileEvent {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -108,6 +111,7 @@ mixin _$ProfileEvent {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -131,6 +135,7 @@ mixin _$ProfileEvent {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -153,6 +158,7 @@ mixin _$ProfileEvent {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -234,6 +240,7 @@ class _$StartedImpl implements _Started {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return started();
   }
@@ -258,6 +265,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return started?.call();
   }
@@ -282,6 +290,7 @@ class _$StartedImpl implements _Started {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -316,6 +325,7 @@ class _$StartedImpl implements _Started {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return started(this);
   }
@@ -342,6 +352,7 @@ class _$StartedImpl implements _Started {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return started?.call(this);
   }
@@ -367,6 +378,7 @@ class _$StartedImpl implements _Started {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -438,6 +450,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return getUserinfo();
   }
@@ -462,6 +475,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return getUserinfo?.call();
   }
@@ -486,6 +500,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -520,6 +535,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return getUserinfo(this);
   }
@@ -546,6 +562,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return getUserinfo?.call(this);
   }
@@ -571,6 +588,7 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (getUserinfo != null) {
@@ -645,6 +663,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return getUserExperiences();
   }
@@ -669,6 +688,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return getUserExperiences?.call();
   }
@@ -693,6 +713,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -727,6 +748,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return getUserExperiences(this);
   }
@@ -753,6 +775,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return getUserExperiences?.call(this);
   }
@@ -778,6 +801,7 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (getUserExperiences != null) {
@@ -852,6 +876,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return getUserEducations();
   }
@@ -876,6 +901,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return getUserEducations?.call();
   }
@@ -900,6 +926,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -934,6 +961,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return getUserEducations(this);
   }
@@ -960,6 +988,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return getUserEducations?.call(this);
   }
@@ -985,6 +1014,7 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (getUserEducations != null) {
@@ -1059,6 +1089,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return getUserCertificates();
   }
@@ -1083,6 +1114,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return getUserCertificates?.call();
   }
@@ -1107,6 +1139,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -1141,6 +1174,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return getUserCertificates(this);
   }
@@ -1167,6 +1201,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return getUserCertificates?.call(this);
   }
@@ -1192,6 +1227,7 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (getUserCertificates != null) {
@@ -1264,6 +1300,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return getUserSkills();
   }
@@ -1288,6 +1325,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return getUserSkills?.call();
   }
@@ -1312,6 +1350,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -1346,6 +1385,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return getUserSkills(this);
   }
@@ -1372,6 +1412,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return getUserSkills?.call(this);
   }
@@ -1397,6 +1438,7 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -1471,6 +1513,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return getUserLanguages();
   }
@@ -1495,6 +1538,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return getUserLanguages?.call();
   }
@@ -1519,6 +1563,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -1553,6 +1598,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return getUserLanguages(this);
   }
@@ -1579,6 +1625,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return getUserLanguages?.call(this);
   }
@@ -1604,6 +1651,7 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -1676,6 +1724,7 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return uploadAvatar();
   }
@@ -1700,6 +1749,7 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return uploadAvatar?.call();
   }
@@ -1724,6 +1774,7 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (uploadAvatar != null) {
@@ -1758,6 +1809,7 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return uploadAvatar(this);
   }
@@ -1784,6 +1836,7 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return uploadAvatar?.call(this);
   }
@@ -1809,6 +1862,7 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (uploadAvatar != null) {
@@ -1885,6 +1939,7 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return checkDigitalProfileAvailable();
   }
@@ -1909,6 +1964,7 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return checkDigitalProfileAvailable?.call();
   }
@@ -1933,6 +1989,7 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (checkDigitalProfileAvailable != null) {
@@ -1967,6 +2024,7 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return checkDigitalProfileAvailable(this);
   }
@@ -1993,6 +2051,7 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return checkDigitalProfileAvailable?.call(this);
   }
@@ -2018,6 +2077,7 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (checkDigitalProfileAvailable != null) {
@@ -2119,6 +2179,7 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return getMetaLanguage(search);
   }
@@ -2143,6 +2204,7 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return getMetaLanguage?.call(search);
   }
@@ -2167,6 +2229,7 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (getMetaLanguage != null) {
@@ -2201,6 +2264,7 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return getMetaLanguage(this);
   }
@@ -2227,6 +2291,7 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return getMetaLanguage?.call(this);
   }
@@ -2252,6 +2317,7 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (getMetaLanguage != null) {
@@ -2358,6 +2424,7 @@ class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return deleteEducation(id);
   }
@@ -2382,6 +2449,7 @@ class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return deleteEducation?.call(id);
   }
@@ -2406,6 +2474,7 @@ class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (deleteEducation != null) {
@@ -2440,6 +2509,7 @@ class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return deleteEducation(this);
   }
@@ -2466,6 +2536,7 @@ class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return deleteEducation?.call(this);
   }
@@ -2491,6 +2562,7 @@ class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (deleteEducation != null) {
@@ -2597,6 +2669,7 @@ class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return deleteCertificate(id);
   }
@@ -2621,6 +2694,7 @@ class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return deleteCertificate?.call(id);
   }
@@ -2645,6 +2719,7 @@ class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (deleteCertificate != null) {
@@ -2679,6 +2754,7 @@ class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return deleteCertificate(this);
   }
@@ -2705,6 +2781,7 @@ class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return deleteCertificate?.call(this);
   }
@@ -2730,6 +2807,7 @@ class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (deleteCertificate != null) {
@@ -2836,6 +2914,7 @@ class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return deleteExperience(id);
   }
@@ -2860,6 +2939,7 @@ class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return deleteExperience?.call(id);
   }
@@ -2884,6 +2964,7 @@ class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (deleteExperience != null) {
@@ -2918,6 +2999,7 @@ class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return deleteExperience(this);
   }
@@ -2944,6 +3026,7 @@ class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return deleteExperience?.call(this);
   }
@@ -2969,6 +3052,7 @@ class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (deleteExperience != null) {
@@ -3086,6 +3170,7 @@ class _$ProfileUpdateUserExperienceImpl implements ProfileUpdateUserExperience {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return updateUserExperience(experienceModel);
   }
@@ -3110,6 +3195,7 @@ class _$ProfileUpdateUserExperienceImpl implements ProfileUpdateUserExperience {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return updateUserExperience?.call(experienceModel);
   }
@@ -3134,6 +3220,7 @@ class _$ProfileUpdateUserExperienceImpl implements ProfileUpdateUserExperience {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (updateUserExperience != null) {
@@ -3168,6 +3255,7 @@ class _$ProfileUpdateUserExperienceImpl implements ProfileUpdateUserExperience {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return updateUserExperience(this);
   }
@@ -3194,6 +3282,7 @@ class _$ProfileUpdateUserExperienceImpl implements ProfileUpdateUserExperience {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return updateUserExperience?.call(this);
   }
@@ -3219,6 +3308,7 @@ class _$ProfileUpdateUserExperienceImpl implements ProfileUpdateUserExperience {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (updateUserExperience != null) {
@@ -3337,6 +3427,7 @@ class _$ProfileUpdateUserEducationImpl implements ProfileUpdateUserEducation {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return updateUserEducation(educationModel);
   }
@@ -3361,6 +3452,7 @@ class _$ProfileUpdateUserEducationImpl implements ProfileUpdateUserEducation {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return updateUserEducation?.call(educationModel);
   }
@@ -3385,6 +3477,7 @@ class _$ProfileUpdateUserEducationImpl implements ProfileUpdateUserEducation {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (updateUserEducation != null) {
@@ -3419,6 +3512,7 @@ class _$ProfileUpdateUserEducationImpl implements ProfileUpdateUserEducation {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return updateUserEducation(this);
   }
@@ -3445,6 +3539,7 @@ class _$ProfileUpdateUserEducationImpl implements ProfileUpdateUserEducation {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return updateUserEducation?.call(this);
   }
@@ -3470,6 +3565,7 @@ class _$ProfileUpdateUserEducationImpl implements ProfileUpdateUserEducation {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (updateUserEducation != null) {
@@ -3589,6 +3685,7 @@ class _$ProfileUpdateUserCertificateImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return updateUserCertificate(certificateModel);
   }
@@ -3613,6 +3710,7 @@ class _$ProfileUpdateUserCertificateImpl
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return updateUserCertificate?.call(certificateModel);
   }
@@ -3637,6 +3735,7 @@ class _$ProfileUpdateUserCertificateImpl
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (updateUserCertificate != null) {
@@ -3671,6 +3770,7 @@ class _$ProfileUpdateUserCertificateImpl
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return updateUserCertificate(this);
   }
@@ -3697,6 +3797,7 @@ class _$ProfileUpdateUserCertificateImpl
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return updateUserCertificate?.call(this);
   }
@@ -3722,6 +3823,7 @@ class _$ProfileUpdateUserCertificateImpl
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (updateUserCertificate != null) {
@@ -3840,6 +3942,7 @@ class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificate,
     required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
   }) {
     return updateUserInfo(userInfoModel);
   }
@@ -3864,6 +3967,7 @@ class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
     TResult? Function(EducationModel educationModel)? updateUserEducation,
     TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
   }) {
     return updateUserInfo?.call(userInfoModel);
   }
@@ -3888,6 +3992,7 @@ class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
     TResult Function(EducationModel educationModel)? updateUserEducation,
     TResult Function(CertificateModel certificateModel)? updateUserCertificate,
     TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
     required TResult orElse(),
   }) {
     if (updateUserInfo != null) {
@@ -3922,6 +4027,7 @@ class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
     required TResult Function(ProfileUpdateUserCertificate value)
         updateUserCertificate,
     required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
   }) {
     return updateUserInfo(this);
   }
@@ -3948,6 +4054,7 @@ class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
     TResult? Function(ProfileUpdateUserCertificate value)?
         updateUserCertificate,
     TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
   }) {
     return updateUserInfo?.call(this);
   }
@@ -3973,6 +4080,7 @@ class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
     TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
     TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
     TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
     required TResult orElse(),
   }) {
     if (updateUserInfo != null) {
@@ -3990,6 +4098,217 @@ abstract class ProfileUpdateUserInfo implements ProfileEvent {
   @JsonKey(ignore: true)
   _$$ProfileUpdateUserInfoImplCopyWith<_$ProfileUpdateUserInfoImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileGetUserPostsImplCopyWith<$Res> {
+  factory _$$ProfileGetUserPostsImplCopyWith(_$ProfileGetUserPostsImpl value,
+          $Res Function(_$ProfileGetUserPostsImpl) then) =
+      __$$ProfileGetUserPostsImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ProfileGetUserPostsImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileGetUserPostsImpl>
+    implements _$$ProfileGetUserPostsImplCopyWith<$Res> {
+  __$$ProfileGetUserPostsImplCopyWithImpl(_$ProfileGetUserPostsImpl _value,
+      $Res Function(_$ProfileGetUserPostsImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ProfileGetUserPostsImpl implements ProfileGetUserPosts {
+  const _$ProfileGetUserPostsImpl();
+
+  @override
+  String toString() {
+    return 'ProfileEvent.getUserPosts()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileGetUserPostsImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
+    required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        updateUserExperience,
+    required TResult Function(EducationModel educationModel)
+        updateUserEducation,
+    required TResult Function(CertificateModel certificateModel)
+        updateUserCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
+  }) {
+    return getUserPosts();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
+    TResult? Function(ExperienceModel experienceModel)? updateUserExperience,
+    TResult? Function(EducationModel educationModel)? updateUserEducation,
+    TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
+  }) {
+    return getUserPosts?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
+    TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
+    TResult Function(ExperienceModel experienceModel)? updateUserExperience,
+    TResult Function(EducationModel educationModel)? updateUserEducation,
+    TResult Function(CertificateModel certificateModel)? updateUserCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
+    required TResult orElse(),
+  }) {
+    if (getUserPosts != null) {
+      return getUserPosts();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(ProfileGetUserSkills value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
+    required TResult Function(ProfileUpdateUserExperience value)
+        updateUserExperience,
+    required TResult Function(ProfileUpdateUserEducation value)
+        updateUserEducation,
+    required TResult Function(ProfileUpdateUserCertificate value)
+        updateUserCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
+  }) {
+    return getUserPosts(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult? Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
+    TResult? Function(ProfileUpdateUserExperience value)? updateUserExperience,
+    TResult? Function(ProfileUpdateUserEducation value)? updateUserEducation,
+    TResult? Function(ProfileUpdateUserCertificate value)?
+        updateUserCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
+  }) {
+    return getUserPosts?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
+    TResult Function(ProfileUpdateUserExperience value)? updateUserExperience,
+    TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
+    TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
+    required TResult orElse(),
+  }) {
+    if (getUserPosts != null) {
+      return getUserPosts(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileGetUserPosts implements ProfileEvent {
+  const factory ProfileGetUserPosts() = _$ProfileGetUserPostsImpl;
 }
 
 /// @nodoc
@@ -4024,6 +4343,7 @@ mixin _$ProfileState {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -4055,6 +4375,7 @@ mixin _$ProfileState {
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -4083,6 +4404,7 @@ mixin _$ProfileState {
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -4122,6 +4444,8 @@ mixin _$ProfileState {
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -4157,6 +4481,7 @@ mixin _$ProfileState {
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -4191,6 +4516,7 @@ mixin _$ProfileState {
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -4280,6 +4606,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return initial();
   }
@@ -4314,6 +4641,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return initial?.call();
   }
@@ -4345,6 +4673,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -4390,6 +4719,8 @@ class _$InitialImpl implements _Initial {
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return initial(this);
   }
@@ -4428,6 +4759,7 @@ class _$InitialImpl implements _Initial {
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return initial?.call(this);
   }
@@ -4465,6 +4797,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -4578,6 +4911,7 @@ class _$ProfileErrorImpl implements ProfileError {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return error(message, title);
   }
@@ -4612,6 +4946,7 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return error?.call(message, title);
   }
@@ -4643,6 +4978,7 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -4688,6 +5024,8 @@ class _$ProfileErrorImpl implements ProfileError {
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return error(this);
   }
@@ -4726,6 +5064,7 @@ class _$ProfileErrorImpl implements ProfileError {
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return error?.call(this);
   }
@@ -4763,6 +5102,7 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -4850,6 +5190,7 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return loading();
   }
@@ -4884,6 +5225,7 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return loading?.call();
   }
@@ -4915,6 +5257,7 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -4960,6 +5303,8 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return loading(this);
   }
@@ -4998,6 +5343,7 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return loading?.call(this);
   }
@@ -5035,6 +5381,7 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -5154,6 +5501,7 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return getUserInfoSuccess(userInfoModel);
   }
@@ -5188,6 +5536,7 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return getUserInfoSuccess?.call(userInfoModel);
   }
@@ -5219,6 +5568,7 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -5264,6 +5614,8 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return getUserInfoSuccess(this);
   }
@@ -5302,6 +5654,7 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return getUserInfoSuccess?.call(this);
   }
@@ -5339,6 +5692,7 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getUserInfoSuccess != null) {
@@ -5465,6 +5819,7 @@ class _$ProfileGetUserExperienceSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return getUserExperiencesSuccess(experiences);
   }
@@ -5499,6 +5854,7 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return getUserExperiencesSuccess?.call(experiences);
   }
@@ -5530,6 +5886,7 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -5575,6 +5932,8 @@ class _$ProfileGetUserExperienceSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return getUserExperiencesSuccess(this);
   }
@@ -5613,6 +5972,7 @@ class _$ProfileGetUserExperienceSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return getUserExperiencesSuccess?.call(this);
   }
@@ -5650,6 +6010,7 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getUserExperiencesSuccess != null) {
@@ -5778,6 +6139,7 @@ class _$ProfileGetUserEducationsSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return getUserEducationsSuccess(educations);
   }
@@ -5812,6 +6174,7 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return getUserEducationsSuccess?.call(educations);
   }
@@ -5843,6 +6206,7 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -5888,6 +6252,8 @@ class _$ProfileGetUserEducationsSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return getUserEducationsSuccess(this);
   }
@@ -5926,6 +6292,7 @@ class _$ProfileGetUserEducationsSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return getUserEducationsSuccess?.call(this);
   }
@@ -5963,6 +6330,7 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getUserEducationsSuccess != null) {
@@ -6091,6 +6459,7 @@ class _$ProfileGetUserCertificatesSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return getUserCertificatesSuccess(certificates);
   }
@@ -6125,6 +6494,7 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return getUserCertificatesSuccess?.call(certificates);
   }
@@ -6156,6 +6526,7 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -6201,6 +6572,8 @@ class _$ProfileGetUserCertificatesSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return getUserCertificatesSuccess(this);
   }
@@ -6239,6 +6612,7 @@ class _$ProfileGetUserCertificatesSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return getUserCertificatesSuccess?.call(this);
   }
@@ -6276,6 +6650,7 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getUserCertificatesSuccess != null) {
@@ -6401,6 +6776,7 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return getUserSkills(skillModels);
   }
@@ -6435,6 +6811,7 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return getUserSkills?.call(skillModels);
   }
@@ -6466,6 +6843,7 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -6511,6 +6889,8 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return getUserSkills(this);
   }
@@ -6549,6 +6929,7 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return getUserSkills?.call(this);
   }
@@ -6586,6 +6967,7 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getUserSkills != null) {
@@ -6713,6 +7095,7 @@ class _$ProfileGetUserLanguagesSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return getUserLanguages(languages);
   }
@@ -6747,6 +7130,7 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return getUserLanguages?.call(languages);
   }
@@ -6778,6 +7162,7 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -6823,6 +7208,8 @@ class _$ProfileGetUserLanguagesSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return getUserLanguages(this);
   }
@@ -6861,6 +7248,7 @@ class _$ProfileGetUserLanguagesSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return getUserLanguages?.call(this);
   }
@@ -6898,6 +7286,7 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getUserLanguages != null) {
@@ -7030,6 +7419,7 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return uploadAvatarSuccess(uploadImageResponse);
   }
@@ -7064,6 +7454,7 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return uploadAvatarSuccess?.call(uploadImageResponse);
   }
@@ -7095,6 +7486,7 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (uploadAvatarSuccess != null) {
@@ -7140,6 +7532,8 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return uploadAvatarSuccess(this);
   }
@@ -7178,6 +7572,7 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return uploadAvatarSuccess?.call(this);
   }
@@ -7215,6 +7610,7 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (uploadAvatarSuccess != null) {
@@ -7336,6 +7732,7 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return checkDigitalProfileAvailableSuccess(status);
   }
@@ -7370,6 +7767,7 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return checkDigitalProfileAvailableSuccess?.call(status);
   }
@@ -7401,6 +7799,7 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (checkDigitalProfileAvailableSuccess != null) {
@@ -7446,6 +7845,8 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return checkDigitalProfileAvailableSuccess(this);
   }
@@ -7484,6 +7885,7 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return checkDigitalProfileAvailableSuccess?.call(this);
   }
@@ -7521,6 +7923,7 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (checkDigitalProfileAvailableSuccess != null) {
@@ -7649,6 +8052,7 @@ class _$ProfileGetMetaLanguageSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return getMetaLanguageSuccess(languages);
   }
@@ -7683,6 +8087,7 @@ class _$ProfileGetMetaLanguageSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return getMetaLanguageSuccess?.call(languages);
   }
@@ -7714,6 +8119,7 @@ class _$ProfileGetMetaLanguageSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getMetaLanguageSuccess != null) {
@@ -7759,6 +8165,8 @@ class _$ProfileGetMetaLanguageSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return getMetaLanguageSuccess(this);
   }
@@ -7797,6 +8205,7 @@ class _$ProfileGetMetaLanguageSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return getMetaLanguageSuccess?.call(this);
   }
@@ -7834,6 +8243,7 @@ class _$ProfileGetMetaLanguageSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (getMetaLanguageSuccess != null) {
@@ -7953,6 +8363,7 @@ class _$ProfileDeleteEducationSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return deleteEducationSuccess(id);
   }
@@ -7987,6 +8398,7 @@ class _$ProfileDeleteEducationSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return deleteEducationSuccess?.call(id);
   }
@@ -8018,6 +8430,7 @@ class _$ProfileDeleteEducationSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (deleteEducationSuccess != null) {
@@ -8063,6 +8476,8 @@ class _$ProfileDeleteEducationSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return deleteEducationSuccess(this);
   }
@@ -8101,6 +8516,7 @@ class _$ProfileDeleteEducationSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return deleteEducationSuccess?.call(this);
   }
@@ -8138,6 +8554,7 @@ class _$ProfileDeleteEducationSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (deleteEducationSuccess != null) {
@@ -8256,6 +8673,7 @@ class _$ProfileDeleteCertificateSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return deleteCertificateSuccess(id);
   }
@@ -8290,6 +8708,7 @@ class _$ProfileDeleteCertificateSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return deleteCertificateSuccess?.call(id);
   }
@@ -8321,6 +8740,7 @@ class _$ProfileDeleteCertificateSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (deleteCertificateSuccess != null) {
@@ -8366,6 +8786,8 @@ class _$ProfileDeleteCertificateSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return deleteCertificateSuccess(this);
   }
@@ -8404,6 +8826,7 @@ class _$ProfileDeleteCertificateSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return deleteCertificateSuccess?.call(this);
   }
@@ -8441,6 +8864,7 @@ class _$ProfileDeleteCertificateSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (deleteCertificateSuccess != null) {
@@ -8559,6 +8983,7 @@ class _$ProfileDeleteExperienceSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return deleteExperienceSuccess(id);
   }
@@ -8593,6 +9018,7 @@ class _$ProfileDeleteExperienceSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return deleteExperienceSuccess?.call(id);
   }
@@ -8624,6 +9050,7 @@ class _$ProfileDeleteExperienceSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (deleteExperienceSuccess != null) {
@@ -8669,6 +9096,8 @@ class _$ProfileDeleteExperienceSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return deleteExperienceSuccess(this);
   }
@@ -8707,6 +9136,7 @@ class _$ProfileDeleteExperienceSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return deleteExperienceSuccess?.call(this);
   }
@@ -8744,6 +9174,7 @@ class _$ProfileDeleteExperienceSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (deleteExperienceSuccess != null) {
@@ -8873,6 +9304,7 @@ class _$ProfileUpdateUserExperienceSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return updateUserExperiencesSuccess(experienceModel);
   }
@@ -8907,6 +9339,7 @@ class _$ProfileUpdateUserExperienceSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return updateUserExperiencesSuccess?.call(experienceModel);
   }
@@ -8938,6 +9371,7 @@ class _$ProfileUpdateUserExperienceSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (updateUserExperiencesSuccess != null) {
@@ -8983,6 +9417,8 @@ class _$ProfileUpdateUserExperienceSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return updateUserExperiencesSuccess(this);
   }
@@ -9021,6 +9457,7 @@ class _$ProfileUpdateUserExperienceSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return updateUserExperiencesSuccess?.call(this);
   }
@@ -9058,6 +9495,7 @@ class _$ProfileUpdateUserExperienceSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (updateUserExperiencesSuccess != null) {
@@ -9188,6 +9626,7 @@ class _$ProfileUpdateUserEducationSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return updateUserEducationSuccess(educationModel);
   }
@@ -9222,6 +9661,7 @@ class _$ProfileUpdateUserEducationSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return updateUserEducationSuccess?.call(educationModel);
   }
@@ -9253,6 +9693,7 @@ class _$ProfileUpdateUserEducationSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (updateUserEducationSuccess != null) {
@@ -9298,6 +9739,8 @@ class _$ProfileUpdateUserEducationSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return updateUserEducationSuccess(this);
   }
@@ -9336,6 +9779,7 @@ class _$ProfileUpdateUserEducationSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return updateUserEducationSuccess?.call(this);
   }
@@ -9373,6 +9817,7 @@ class _$ProfileUpdateUserEducationSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (updateUserEducationSuccess != null) {
@@ -9503,6 +9948,7 @@ class _$ProfileUpdateUserCertificateSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return updateUserCertificateSuccess(certificateModel);
   }
@@ -9537,6 +9983,7 @@ class _$ProfileUpdateUserCertificateSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return updateUserCertificateSuccess?.call(certificateModel);
   }
@@ -9568,6 +10015,7 @@ class _$ProfileUpdateUserCertificateSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (updateUserCertificateSuccess != null) {
@@ -9613,6 +10061,8 @@ class _$ProfileUpdateUserCertificateSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return updateUserCertificateSuccess(this);
   }
@@ -9651,6 +10101,7 @@ class _$ProfileUpdateUserCertificateSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return updateUserCertificateSuccess?.call(this);
   }
@@ -9688,6 +10139,7 @@ class _$ProfileUpdateUserCertificateSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (updateUserCertificateSuccess != null) {
@@ -9779,6 +10231,7 @@ class _$ProfileUpdateUserInfoSuccessImpl
     required TResult Function(CertificateModel certificateModel)
         updateUserCertificateSuccess,
     required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
   }) {
     return updateUserInfoSuccess();
   }
@@ -9813,6 +10266,7 @@ class _$ProfileUpdateUserInfoSuccessImpl
     TResult? Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
   }) {
     return updateUserInfoSuccess?.call();
   }
@@ -9844,6 +10298,7 @@ class _$ProfileUpdateUserInfoSuccessImpl
     TResult Function(CertificateModel certificateModel)?
         updateUserCertificateSuccess,
     TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (updateUserInfoSuccess != null) {
@@ -9889,6 +10344,8 @@ class _$ProfileUpdateUserInfoSuccessImpl
         updateUserCertificateSuccess,
     required TResult Function(ProfileUpdateUserInfoSuccess value)
         updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
   }) {
     return updateUserInfoSuccess(this);
   }
@@ -9927,6 +10384,7 @@ class _$ProfileUpdateUserInfoSuccessImpl
         updateUserCertificateSuccess,
     TResult? Function(ProfileUpdateUserInfoSuccess value)?
         updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
   }) {
     return updateUserInfoSuccess?.call(this);
   }
@@ -9964,6 +10422,7 @@ class _$ProfileUpdateUserInfoSuccessImpl
     TResult Function(ProfileUpdateUserCertificateSuccess value)?
         updateUserCertificateSuccess,
     TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
     required TResult orElse(),
   }) {
     if (updateUserInfoSuccess != null) {
@@ -9976,4 +10435,317 @@ class _$ProfileUpdateUserInfoSuccessImpl
 abstract class ProfileUpdateUserInfoSuccess implements ProfileState {
   const factory ProfileUpdateUserInfoSuccess() =
       _$ProfileUpdateUserInfoSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$ProfileGetUserPostsSuccessImplCopyWith<$Res> {
+  factory _$$ProfileGetUserPostsSuccessImplCopyWith(
+          _$ProfileGetUserPostsSuccessImpl value,
+          $Res Function(_$ProfileGetUserPostsSuccessImpl) then) =
+      __$$ProfileGetUserPostsSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<PostModel> posts});
+}
+
+/// @nodoc
+class __$$ProfileGetUserPostsSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$ProfileGetUserPostsSuccessImpl>
+    implements _$$ProfileGetUserPostsSuccessImplCopyWith<$Res> {
+  __$$ProfileGetUserPostsSuccessImplCopyWithImpl(
+      _$ProfileGetUserPostsSuccessImpl _value,
+      $Res Function(_$ProfileGetUserPostsSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? posts = null,
+  }) {
+    return _then(_$ProfileGetUserPostsSuccessImpl(
+      null == posts
+          ? _value._posts
+          : posts // ignore: cast_nullable_to_non_nullable
+              as List<PostModel>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileGetUserPostsSuccessImpl implements ProfileGetUserPostsSuccess {
+  const _$ProfileGetUserPostsSuccessImpl(final List<PostModel> posts)
+      : _posts = posts;
+
+  final List<PostModel> _posts;
+  @override
+  List<PostModel> get posts {
+    if (_posts is EqualUnmodifiableListView) return _posts;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_posts);
+  }
+
+  @override
+  String toString() {
+    return 'ProfileState.getUserPostsSuccess(posts: $posts)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileGetUserPostsSuccessImpl &&
+            const DeepCollectionEquality().equals(other._posts, _posts));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_posts));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileGetUserPostsSuccessImplCopyWith<_$ProfileGetUserPostsSuccessImpl>
+      get copyWith => __$$ProfileGetUserPostsSuccessImplCopyWithImpl<
+          _$ProfileGetUserPostsSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
+    required TResult Function(ExperienceModel experienceModel)
+        updateUserExperiencesSuccess,
+    required TResult Function(EducationModel educationModel)
+        updateUserEducationSuccess,
+    required TResult Function(CertificateModel certificateModel)
+        updateUserCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
+  }) {
+    return getUserPostsSuccess(posts);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
+    TResult? Function(ExperienceModel experienceModel)?
+        updateUserExperiencesSuccess,
+    TResult? Function(EducationModel educationModel)?
+        updateUserEducationSuccess,
+    TResult? Function(CertificateModel certificateModel)?
+        updateUserCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
+  }) {
+    return getUserPostsSuccess?.call(posts);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
+    TResult Function(ExperienceModel experienceModel)?
+        updateUserExperiencesSuccess,
+    TResult Function(EducationModel educationModel)? updateUserEducationSuccess,
+    TResult Function(CertificateModel certificateModel)?
+        updateUserCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
+    required TResult orElse(),
+  }) {
+    if (getUserPostsSuccess != null) {
+      return getUserPostsSuccess(posts);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguagesSuccess value)
+        getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
+    required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
+    required TResult Function(ProfileUpdateUserExperienceSuccess value)
+        updateUserExperiencesSuccess,
+    required TResult Function(ProfileUpdateUserEducationSuccess value)
+        updateUserEducationSuccess,
+    required TResult Function(ProfileUpdateUserCertificateSuccess value)
+        updateUserCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
+  }) {
+    return getUserPostsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+    TResult? Function(ProfileUpdateUserExperienceSuccess value)?
+        updateUserExperiencesSuccess,
+    TResult? Function(ProfileUpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult? Function(ProfileUpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
+  }) {
+    return getUserPostsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+    TResult Function(ProfileUpdateUserExperienceSuccess value)?
+        updateUserExperiencesSuccess,
+    TResult Function(ProfileUpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult Function(ProfileUpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
+    required TResult orElse(),
+  }) {
+    if (getUserPostsSuccess != null) {
+      return getUserPostsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileGetUserPostsSuccess implements ProfileState {
+  const factory ProfileGetUserPostsSuccess(final List<PostModel> posts) =
+      _$ProfileGetUserPostsSuccessImpl;
+
+  List<PostModel> get posts;
+  @JsonKey(ignore: true)
+  _$$ProfileGetUserPostsSuccessImplCopyWith<_$ProfileGetUserPostsSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

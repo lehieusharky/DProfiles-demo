@@ -56,4 +56,7 @@ class ProfileState with _$ProfileState {
 
   const factory ProfileState.updateUserInfoSuccess() =
       ProfileUpdateUserInfoSuccess;
+
+  const factory ProfileState.getUserPostsSuccess(List<PostModel> posts) =
+      ProfileGetUserPostsSuccess;
 }

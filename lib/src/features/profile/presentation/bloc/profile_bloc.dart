@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/domain/usecases/edit_profile_usecase.dart';
+import 'package:demo_dprofiles/src/features/post/data/models/post_model.dart';
+import 'package:demo_dprofiles/src/features/post/domain/usecases/post_usecase.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
@@ -24,12 +26,14 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   final CreateDigitalProfileUseCase createDigitalProfileUseCase;
   final FileUseCase fileUseCase;
   final EditProfileUseCase editProfileUseCase;
+  final PostUseCase postUseCase;
 
   ProfileBloc(
     this.profileUseCase,
     this.createDigitalProfileUseCase,
     this.fileUseCase,
     this.editProfileUseCase,
+    this.postUseCase,
   ) : super(const ProfileState.initial()) {
     on<ProfileGetUserInfo>(_getUserInfo);
     on<ProfileUpdateUserInfo>(_updateUserInfo);
@@ -50,6 +54,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<ProfileUpdateUserExperience>(_updateExperience);
     on<ProfileUpdateUserEducation>(_updateEducation);
     on<ProfileUpdateUserCertificate>(_updateCertificate);
+
+    on<ProfileGetUserPosts>(_getUserPosts);
   }
 
   Future<void> _getUserInfo(
@@ -267,5 +273,20 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
         (l) => emit(
             const ProfileError(message: 'Delete  failed', title: 'Failed')),
         (r) => emit(const ProfileUpdateUserInfoSuccess()));
+  }
+
+  FutureOr<void> _getUserPosts(
+      ProfileGetUserPosts event, Emitter<ProfileState> emit) async {
+    emit(const ProfileLoading());
+    final status = await postUseCase.getUserPosts();
+
+    status.fold(
+        (l) => emit(const ProfileError(
+            message: 'get user post failed', title: 'Failed')), (r) {
+      final data = r.data as List;
+      final posts = data.map((e) => PostModel.fromJson(e)).toList();
+
+      emit(ProfileGetUserPostsSuccess(posts));
+    });
   }
 }
