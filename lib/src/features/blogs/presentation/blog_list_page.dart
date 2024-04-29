@@ -28,12 +28,11 @@ class _BlogListPageState extends State<BlogListPage>
       create: (context) => BlogBloc()..add(const BlogEvent.load()),
       child: BlocBuilder<BlogBloc, BlogState>(
         builder: (context, state) {
-          final bloc = context.read<BlogBloc>();
           Widget child;
           if (state is BlogInitial) {
-            child = const MyShimmer(count: 4, height: 200);
+            child = const MyShimmer(count: 4, height: 300);
           } else if (state is BlogLoading) {
-            child = const MyShimmer(count: 4, height: 200);
+            child = const MyShimmer(count: 4, height: 300);
           } else if (state is BlogLoaded) {
             child = _buildBlogList(context, state.blogs);
           } else if (state is BlogError) {

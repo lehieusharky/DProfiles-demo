@@ -36,6 +36,7 @@ class _PublicExperienceComponentState extends State<PublicExperienceComponent> {
             mainAxisSize: MainAxisSize.min,
             children: [
               const TitleSubPage(title: 'Experience', canEdit: false),
+              context.sizedBox(height: 5),
               if (state == null)
                 const MyShimmer(count: 1, height: 150)
               else

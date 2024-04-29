@@ -4,11 +4,13 @@ import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/seperate_profile.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/presentation/bloc/public_profile_bloc.dart';
+import 'package:demo_dprofiles/src/features/pubic_profile/presentation/widgets/pubic_languages.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/presentation/widgets/public_avatar.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/presentation/widgets/public_certificate_component.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/presentation/widgets/public_education_component.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/presentation/widgets/public_experience_component.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/presentation/widgets/public_header.dart';
+import 'package:demo_dprofiles/src/features/pubic_profile/presentation/widgets/public_skills.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
 
 import 'package:flutter/material.dart';
@@ -26,6 +28,8 @@ class PublicProfilePage extends StatelessWidget {
     return BlocProvider(
       create: (context) => injector.get<PublicProfileBloc>()
         ..add(PublicProfileGetBasicInfo(userName))
+        ..add(PublicProfileGetSkills(userName))
+        ..add(PublicProfileGetLanguages(userName))
         ..add(PublicProfileGetExperiences(userName))
         ..add(PublicProfileGetEducation(userName))
         ..add(PublicProfileGetCertificates(userName)),
@@ -44,12 +48,17 @@ class PublicProfilePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                context.sizedBox(height: 50),
+                const SeparatedProfile(),
+                const PublicSkillsComponent(),
+                const SeparatedProfile(),
+                const PublicLanguagesComponent(),
+                const SeparatedProfile(),
                 const PublicExperienceComponent(),
                 const SeparatedProfile(),
                 const PublicEducationComponent(),
                 const SeparatedProfile(),
                 const PublicCertificateComponent(),
+                context.sizedBox(height: 50),
               ],
             ),
           ),

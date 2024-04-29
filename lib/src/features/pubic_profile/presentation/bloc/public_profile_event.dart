@@ -13,4 +13,10 @@ class PublicProfileEvent with _$PublicProfileEvent {
 
   const factory PublicProfileEvent.getExperiences(String userName) =
       PublicProfileGetExperiences;
+
+  const factory PublicProfileEvent.getLanguages(String userName) =
+      PublicProfileGetLanguages;
+
+  const factory PublicProfileEvent.getSkills(String userName) =
+      PublicProfileGetSkills;
 }

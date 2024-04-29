@@ -394,4 +394,14 @@ abstract class RestClient {
 
   @GET('/api/v1/public/experience/{username}')
   Future<BaseResponse> getPublicExperiences(@Path('username') String userName);
+
+  @GET('/api/v1/public/language/{username}')
+  Future<BaseResponse> getPublicLanguages(@Path('username') String userName);
+
+  @GET('/api/v1/public/skill/{username}')
+  Future<BaseResponse> getPublicSkills(@Path('username') String userName);
+
+  @GET('/api/v1/public/working-location/{username}')
+  Future<BaseResponse> getPublicWorkingLocation(
+      @Path('username') String userName);
 }

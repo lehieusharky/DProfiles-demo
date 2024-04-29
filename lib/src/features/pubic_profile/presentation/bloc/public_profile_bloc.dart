@@ -2,6 +2,8 @@ import 'dart:async';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
+import 'package:demo_dprofiles/src/features/pubic_profile/data/models/public_language_model.dart';
+import 'package:demo_dprofiles/src/features/pubic_profile/data/models/public_skill_model.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/data/models/public_user_info_model.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/domain/usecases/public_profile_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,7 +22,8 @@ class PublicProfileBloc extends Bloc<PublicProfileEvent, PublicProfileState> {
     on<PublicProfileGetExperiences>(_getExperiences);
     on<PublicProfileGetCertificates>(_getCertificates);
 
-    
+    on<PublicProfileGetSkills>(_getSkills);
+    on<PublicProfileGetLanguages>(_getLanguages);
   }
 
   FutureOr<void> _getUserInfo(
@@ -85,6 +88,42 @@ class PublicProfileBloc extends Bloc<PublicProfileEvent, PublicProfileState> {
           data.map((e) => CertificateModel.fromJson(e)).toList();
 
       emit(PublicProfileGetUserCertificatesSuccess(certificates));
+    });
+  }
+
+  FutureOr<void> _getSkills(
+      PublicProfileGetSkills event, Emitter<PublicProfileState> emit) async {
+    emit(const PublicProfileLoading());
+    final result = await publicProfileUseCase.getPublicSkills(event.userName);
+
+    result.fold(
+        (l) =>
+            emit(PublicProfileError(msg: l, title: 'Get user skill  failed')),
+        (r) {
+      final data = r.data as List;
+
+      final skills = data.map((e) => PublicSkillModel.fromJson(e)).toList();
+
+      emit(PublicProfileGetSkillsSuccess(skills));
+    });
+  }
+
+  FutureOr<void> _getLanguages(
+      PublicProfileGetLanguages event, Emitter<PublicProfileState> emit) async {
+    emit(const PublicProfileLoading());
+    final result =
+        await publicProfileUseCase.getPublicLanguages(event.userName);
+
+    result.fold(
+        (l) => emit(
+            PublicProfileError(msg: l, title: 'Get user languages  failed')),
+        (r) {
+      final data = r.data as List;
+
+      final languages =
+          data.map((e) => PublicLanguageModel.fromJson(e)).toList();
+
+      emit(PublicProfileGetLanguagesSuccess(languages));
     });
   }
 }

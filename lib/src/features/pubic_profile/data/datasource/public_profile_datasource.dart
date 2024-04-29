@@ -8,4 +8,8 @@ abstract class PublicProfileDataSource {
   Future<BaseResponse> getPublicExperiences(String userName);
 
   Future<BaseResponse> getPublicCertificates(String userName);
+
+  Future<BaseResponse> getPublicLanguages(String userName);
+
+  Future<BaseResponse> getPublicSkills(String userName);
 }

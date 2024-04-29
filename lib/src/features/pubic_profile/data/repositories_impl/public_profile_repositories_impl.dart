@@ -63,4 +63,30 @@ class PublicProfileRepositoryImpl implements PublicProfileRepository {
           response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
+
+  @override
+  Future<Either<PublicFailure, BaseResponse>> getPublicLanguages(
+      String userName) async {
+    try {
+      final response = await _profileDataSource.getPublicLanguages(userName);
+
+      return Right(response);
+    } on DioException catch (e) {
+      return Left(PublicFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<PublicFailure, BaseResponse>> getPublicSkills(
+      String userName) async {
+    try {
+      final response = await _profileDataSource.getPublicSkills(userName);
+
+      return Right(response);
+    } on DioException catch (e) {
+      return Left(PublicFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
+    }
+  }
 }

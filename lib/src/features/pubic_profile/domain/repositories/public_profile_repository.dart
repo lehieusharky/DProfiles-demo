@@ -11,6 +11,11 @@ abstract class PublicProfileRepository {
   Future<Either<PublicFailure, BaseResponse>> getExperiences(String userName);
 
   Future<Either<PublicFailure, BaseResponse>> getCertificates(String userName);
+
+  Future<Either<PublicFailure, BaseResponse>> getPublicLanguages(
+      String userName);
+
+  Future<Either<PublicFailure, BaseResponse>> getPublicSkills(String userName);
 }
 
 class PublicFailure extends AppFailure {

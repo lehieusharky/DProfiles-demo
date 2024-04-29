@@ -24,9 +24,11 @@ class SubProfilePage extends StatefulWidget {
   State<SubProfilePage> createState() => _SubProfilePageState();
 }
 
-class _SubProfilePageState extends State<SubProfilePage>  {
+class _SubProfilePageState extends State<SubProfilePage>
+    with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocProvider<ProfileBloc>(
         create: (context) => injector.get<ProfileBloc>()
           ..add(const ProfileGetUserInfo())
@@ -60,4 +62,7 @@ class _SubProfilePageState extends State<SubProfilePage>  {
           ),
         ));
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

@@ -37,6 +37,7 @@ class _PublicCertificateComponentState
             mainAxisSize: MainAxisSize.min,
             children: [
               const TitleSubPage(title: 'Certificates', canEdit: false),
+              context.sizedBox(height: 5),
               if (state == null)
                 const MyShimmer(count: 1, height: 150)
               else

@@ -49,4 +49,26 @@ class PublicProfileDataSourceImpl implements PublicProfileDataSource {
       rethrow;
     }
   }
+
+  @override
+  Future<BaseResponse> getPublicLanguages(String userName) async {
+    try {
+      final response = await MyHttp.rl().getPublicLanguages(userName);
+
+      return response;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<BaseResponse> getPublicSkills(String userName) async {
+    try {
+      final response = await MyHttp.rl().getPublicSkills(userName);
+
+      return response;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
 }

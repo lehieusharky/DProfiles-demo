@@ -27,20 +27,23 @@ class _EducationDProfileState extends State<EducationDProfile> {
         return educations;
       },
       builder: (context, state) {
-        return Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            context.sizedBox(height: 10),
-            const TitleSubPage(title: 'Education', canEdit: false),
-            context.sizedBox(height: 5),
-            if (state == null)
-              const MyShimmer(count: 1, height: 150)
-            else
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: educations.map((e) => e.toWidget(context)).toList(),
-              )
-          ],
+        return Padding(
+          padding: context.padding(horizontal: 20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              context.sizedBox(height: 10),
+              const TitleSubPage(title: 'Education', canEdit: false),
+              context.sizedBox(height: 5),
+              if (state == null)
+                const MyShimmer(count: 1, height: 150)
+              else
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: educations.map((e) => e.toWidget(context)).toList(),
+                )
+            ],
+          ),
         );
       },
     );

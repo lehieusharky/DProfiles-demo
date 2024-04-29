@@ -22,4 +22,10 @@ class PublicProfileState with _$PublicProfileState {
   const factory PublicProfileState.getCertificatesSuccess(
           List<CertificateModel> certificates) =
       PublicProfileGetUserCertificatesSuccess;
+
+  const factory PublicProfileState.getLanguagesSuccess(
+      List<PublicLanguageModel> languages) = PublicProfileGetLanguagesSuccess;
+
+  const factory PublicProfileState.getSkillsSuccess(
+      List<PublicSkillModel> skills) = PublicProfileGetSkillsSuccess;
 }

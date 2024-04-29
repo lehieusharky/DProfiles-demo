@@ -33,40 +33,52 @@ class _BasicInfoOfDigitalProfileState extends State<BasicInfoOfDigitalProfile> {
           return const MyShimmer(count: 1, height: 100);
         }
         return Padding(
-          padding: context.padding(top: 8),
+          padding: context.padding(top: 8, horizontal: 20),
           child: Column(
-              children: [
-            Tuple2('Name', userInfo!.username),
-            Tuple2('DOB', userInfo!.birthDay),
-            Tuple2('Nationality', userInfo!.nationality),
-            Tuple2('ID Card Number', userInfo!.idCardNumber),
-          ]
-                  .map(
-                    (e) => Padding(
-                      padding: context.padding(bottom: 8),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            e.item1,
-                            style: AppFont()
-                                .fontTheme(context,
-                                    weight: FontWeight.w600,
-                                    color: colorScheme(context).outline)
-                                .bodyMedium,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                'Basic Information',
+                style: AppFont()
+                    .fontTheme(context, weight: FontWeight.w600)
+                    .titleSmall,
+              ),
+              Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Tuple2('Name', userInfo!.username),
+                    Tuple2('DOB', userInfo!.birthDay),
+                    Tuple2('Nationality', userInfo!.nationality),
+                    Tuple2('ID Card Number', userInfo!.idCardNumber),
+                  ]
+                      .map(
+                        (e) => Padding(
+                          padding: context.padding(bottom: 8),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                e.item1,
+                                style: AppFont()
+                                    .fontTheme(context,
+                                        weight: FontWeight.w600,
+                                        color: colorScheme(context).outline)
+                                    .bodyMedium,
+                              ),
+                              Text(
+                                e.item2 ?? '',
+                                style: AppFont()
+                                    .fontTheme(context,
+                                        color: colorScheme(context).outline)
+                                    .bodyMedium,
+                              ),
+                            ],
                           ),
-                          Text(
-                            e.item2 ?? '',
-                            style: AppFont()
-                                .fontTheme(context,
-                                    color: colorScheme(context).outline)
-                                .bodyMedium,
-                          ),
-                        ],
-                      ),
-                    ),
-                  )
-                  .toList()),
+                        ),
+                      )
+                      .toList()),
+            ],
+          ),
         );
       },
     );
