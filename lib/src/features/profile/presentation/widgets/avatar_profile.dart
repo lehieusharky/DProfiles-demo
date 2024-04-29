@@ -110,22 +110,25 @@ class _AvatarProfileState extends State<AvatarProfile> {
   }
 
   Widget _buildEditWidget(BuildContext context) {
-    return Container(
-      padding: context.padding(all: 1),
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: colorScheme(context).background,
-      ),
+    return InkWell(
+      onTap: () => context.read<ProfileBloc>().add(const ProfileUploadAvatar()),
       child: Container(
-        padding: context.padding(all: 8),
+        padding: context.padding(all: 1),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: colorScheme(context).primary,
+          color: colorScheme(context).background,
         ),
-        child: Assets.icons.iconEdit.svg(
-          width: context.sizeWidth(18),
-          colorFilter:
-              const ColorFilter.mode(MyColor.getWhite, BlendMode.srcIn),
+        child: Container(
+          padding: context.padding(all: 8),
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: colorScheme(context).primary,
+          ),
+          child: Assets.icons.iconEdit.svg(
+            width: context.sizeWidth(18),
+            colorFilter:
+                const ColorFilter.mode(MyColor.getWhite, BlendMode.srcIn),
+          ),
         ),
       ),
     );

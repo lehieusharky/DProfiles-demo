@@ -16,7 +16,7 @@ class FileDataSourceImpl implements FileDataSource {
     try {
       FilePickerResult? result = await FilePicker.platform.pickFiles(
         type: FileType.custom,
-        allowedExtensions: ['jpg', 'png'],
+        allowedExtensions: ['jpg', 'png', 'jpeg'],
         withReadStream: true,
         withData: false,
       );
