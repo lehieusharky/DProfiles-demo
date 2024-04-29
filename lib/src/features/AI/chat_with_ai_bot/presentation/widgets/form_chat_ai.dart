@@ -49,20 +49,15 @@ class _FormChatAiState extends State<FormChatAi> {
         }
       },
       builder: (context, state) {
-        if (messages == null) {
-          return MyShimmer(count: 5, height: context.height * 0.8);
-        } else {
-          return Column(
-            children: [
-              if (messages == null)
-                Expanded(
-                    child: MyShimmer(count: 5, height: context.height * 0.8))
-              else
-                Expanded(child: _buildMessageSegment()),
-              _buildBottomAction(),
-            ],
-          );
-        }
+        return Column(
+          children: [
+            if (messages == null)
+              Expanded(child: MyShimmer(count: 5, height: context.height * 0.8))
+            else
+              Expanded(child: _buildMessageSegment()),
+            _buildBottomAction(),
+          ],
+        );
       },
     );
   }
