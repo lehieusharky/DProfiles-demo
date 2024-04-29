@@ -15,13 +15,20 @@ import 'language_component.dart';
 import 'open_to_component.dart';
 import 'skill_component.dart';
 
-class SubProfilePage extends StatelessWidget {
+class SubProfilePage extends StatefulWidget {
   final UserInfoModel userInfo;
 
   const SubProfilePage({Key? key, required this.userInfo}) : super(key: key);
 
   @override
+  State<SubProfilePage> createState() => _SubProfilePageState();
+}
+
+class _SubProfilePageState extends State<SubProfilePage>
+    with AutomaticKeepAliveClientMixin {
+  @override
   Widget build(BuildContext context) {
+    super.build(context);
     return BlocProvider<ProfileBloc>(
         create: (context) => injector.get<ProfileBloc>()
           ..add(const ProfileGetUserInfo())
@@ -55,4 +62,7 @@ class SubProfilePage extends StatelessWidget {
           ),
         ));
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

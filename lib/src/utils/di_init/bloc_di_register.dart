@@ -17,7 +17,7 @@ import 'package:demo_dprofiles/src/features/home/presentation/bloc/home_bloc.dar
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/domain/usecases/public_profile_usecase.dart';
-import 'package:demo_dprofiles/src/features/pubic_profile/presentation/bloc/bloc/public_profile_bloc.dart';
+import 'package:demo_dprofiles/src/features/pubic_profile/presentation/bloc/public_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/search/domain/usecases/search_usecase.dart';
 import 'package:demo_dprofiles/src/features/search/presentation/bloc/bloc/search_bloc.dart';
 import 'package:demo_dprofiles/src/features/setting/domain/usecases/setting_usecase.dart';

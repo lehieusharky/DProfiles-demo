@@ -40,7 +40,7 @@ extension CertificateModelExt on CertificateModel {
                     Padding(
                       padding: context.padding(vertical: 5),
                       child: Text(
-                        date.convertToDDMMYYFormat() ?? 'Jul 2019 - Mar 2024',
+                        date.convertToDDMMYYFormat(),
                         style: AppFont()
                             .fontTheme(context,
                                 color: colorScheme(context).outline)
@@ -62,7 +62,9 @@ extension CertificateModelExt on CertificateModel {
               Padding(
                 padding: context.padding(horizontal: 15),
                 child: InkWell(
-                    onTap: onUpdate, child: Assets.icons.iconEdit.svg()),
+                  onTap: onUpdate,
+                  child: const Icon(IconsaxOutline.edit, size: 20),
+                ),
               ),
             if (onDelete != null)
               InkWell(

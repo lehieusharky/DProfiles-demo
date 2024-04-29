@@ -1,5 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:demo_dprofiles/src/features/profile/data/datasoures/profile_datasource.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/repositories/profile_repository.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/error_response.dart';
@@ -140,6 +143,47 @@ class ProfileRepositoryImpl implements ProfileRepository {
       int id) async {
     try {
       final res = await _profileDataSource.deleteUserExperience(id);
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(
+          ProfileFailure(response: ErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<ProfileFailure, BaseResponse>> updateUserCertificate(
+      CertificateModel certificateModel) async {
+    try {
+      final res =
+          await _profileDataSource.updateUserCertificate(certificateModel);
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(
+          ProfileFailure(response: ErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<ProfileFailure, BaseResponse>> updateUserEducation(
+      EducationModel educationModel) async {
+    try {
+      final res = await _profileDataSource.updateUserEducation(educationModel);
+
+      return Right(res);
+    } on DioException catch (e) {
+      return Left(
+          ProfileFailure(response: ErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<ProfileFailure, BaseResponse>> updateUserExperience(
+      ExperienceModel experienceModel) async {
+    try {
+      final res =
+          await _profileDataSource.updateUserExperience(experienceModel);
 
       return Right(res);
     } on DioException catch (e) {

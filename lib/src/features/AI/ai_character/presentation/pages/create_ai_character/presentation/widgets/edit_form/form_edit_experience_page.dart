@@ -39,10 +39,10 @@ class _FormEditExperiencePageState extends State<FormEditExperiencePage> {
     _titleController =
         TextEditingController(text: widget.experienceModel.jobTitle);
     _endDateController = TextEditingController(
-        text: widget.experienceModel.endDate.convertToDDMMYYFormat());
-
+        text: widget.experienceModel.endDate.convertToDDMMYYYYDateTimeFormat());
     _startDateController = TextEditingController(
-        text: widget.experienceModel.startDate.convertToDDMMYYFormat());
+        text:
+            widget.experienceModel.startDate.convertToDDMMYYYYDateTimeFormat());
     _descriptionController =
         TextEditingController(text: widget.experienceModel.description);
   }
@@ -143,12 +143,12 @@ class _FormEditExperiencePageState extends State<FormEditExperiencePage> {
 
   void _save(BuildContext context) {
     if (_keyForm.currentState?.validate() ?? false) {
-      final newData = ExperienceModel(
+      final newData = widget.experienceModel.copyWith(
         companyName: _companyNameController.text,
         jobTitle: _titleController.text,
         description: _descriptionController.text,
         startDate: _startDateController.text.convertToIOSDateTimeFormat(),
-        // endDate: _endDateController.text.convertToIOSDateTimeFormat(),
+        endDate: _endDateController.text.convertToIOSDateTimeFormat(),
       );
 
       Navigator.pop(context, newData);

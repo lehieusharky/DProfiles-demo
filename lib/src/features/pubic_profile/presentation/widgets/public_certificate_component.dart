@@ -1,29 +1,33 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/title_sub_page.dart';
+import 'package:demo_dprofiles/src/features/pubic_profile/presentation/bloc/public_profile_bloc.dart';
 import 'package:demo_dprofiles/src/utils/extensions/ext_models/ext_certificate_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CertificateDProfile extends StatefulWidget {
-  const CertificateDProfile({Key? key}) : super(key: key);
+class PublicCertificateComponent extends StatefulWidget {
+  const PublicCertificateComponent({Key? key}) : super(key: key);
 
   @override
-  State<CertificateDProfile> createState() => _CertificateDProfileState();
+  State<PublicCertificateComponent> createState() =>
+      _PublicCertificateComponentState();
 }
 
-class _CertificateDProfileState extends State<CertificateDProfile> {
+class _PublicCertificateComponentState
+    extends State<PublicCertificateComponent> {
   List<CertificateModel> certificates = [];
 
   @override
   Widget build(BuildContext context) {
-    return BlocSelector<ProfileBloc, ProfileState, List<CertificateModel>?>(
+    return BlocSelector<PublicProfileBloc, PublicProfileState,
+        List<CertificateModel>?>(
       selector: (state) {
-        if (state is ProfileGetUserCertificatesSuccess) {
+        if (state is PublicProfileGetUserCertificatesSuccess) {
           certificates = state.certificates;
         }
+
         return certificates;
       },
       builder: (context, state) {
@@ -32,7 +36,6 @@ class _CertificateDProfileState extends State<CertificateDProfile> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              context.sizedBox(height: 10),
               const TitleSubPage(title: 'Certificates', canEdit: false),
               context.sizedBox(height: 5),
               if (state == null)

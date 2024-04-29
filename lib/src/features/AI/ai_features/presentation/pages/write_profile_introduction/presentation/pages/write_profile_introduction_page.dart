@@ -23,15 +23,6 @@ class WriteProfileIntroductionPage extends StatefulWidget {
 
 class _WriteProfileIntroductionPageState
     extends State<WriteProfileIntroductionPage> {
-  late ScrollController _scrollController;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _scrollController = ScrollController();
-  }
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -44,12 +35,6 @@ class _WriteProfileIntroductionPageState
             Navigator.pop(context);
 
             context.read<AiFeaturesBloc>().add(const GetAutoGenerateHistory());
-
-            _scrollController.animateTo(
-              _scrollController.position.maxScrollExtent,
-              duration: const Duration(milliseconds: 500),
-              curve: Curves.easeOut,
-            );
           }
 
           if (state is AiFeaturesError) {

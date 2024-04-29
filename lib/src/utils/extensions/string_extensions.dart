@@ -50,6 +50,23 @@ extension StringExt on String? {
     return formattedDate;
   }
 
+  String? convertToDDMMYYYYDateTimeFormat() {
+    if (this == null) {
+      return null;
+    } else {
+      String datePart = this!.split('T')[0];
+      List<String> parts = datePart.split('-');
+
+      String year = parts[0];
+      String month = parts[1];
+      String day = parts[2];
+
+      String formattedDate = '$day/$month/$year';
+
+      return formattedDate;
+    }
+  }
+
   String? validationForDDMMYYYYY(BuildContext context) {
     RegExp dateRegex = RegExp(r'^\d{2}/\d{2}/\d{4}$');
 

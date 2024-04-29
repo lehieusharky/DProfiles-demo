@@ -1,29 +1,32 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/title_sub_page.dart';
+import 'package:demo_dprofiles/src/features/pubic_profile/presentation/bloc/public_profile_bloc.dart';
 import 'package:demo_dprofiles/src/utils/extensions/ext_models/ext_education_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class EducationDProfile extends StatefulWidget {
-  const EducationDProfile({Key? key}) : super(key: key);
+class PublicEducationComponent extends StatefulWidget {
+  const PublicEducationComponent({Key? key}) : super(key: key);
 
   @override
-  State<EducationDProfile> createState() => _EducationDProfileState();
+  State<PublicEducationComponent> createState() =>
+      _PublicEducationComponentState();
 }
 
-class _EducationDProfileState extends State<EducationDProfile> {
+class _PublicEducationComponentState extends State<PublicEducationComponent> {
   List<EducationModel> educations = [];
 
   @override
   Widget build(BuildContext context) {
-    return BlocSelector<ProfileBloc, ProfileState, List<EducationModel>?>(
+    return BlocSelector<PublicProfileBloc, PublicProfileState,
+        List<EducationModel>?>(
       selector: (state) {
-        if (state is ProfileGetUserEducationsSuccess) {
+        if (state is PublicProfileGetUserEducationsSuccess) {
           educations = state.educations;
         }
+
         return educations;
       },
       builder: (context, state) {

@@ -15,7 +15,7 @@ class CreateAICharacterBotButton extends StatefulWidget {
 
 class _CreateAICharacterBotButtonState
     extends State<CreateAICharacterBotButton> {
-  bool _showButton = true;
+  bool _showButton = false;
 
   @override
   Widget build(BuildContext context) {

@@ -77,7 +77,8 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
                   controller: _promptController,
                   title: appLocal(context).prompt.toUpperCase(),
                   maxLines: 2,
-                  hint: 'How many words for this?'
+                  keyboardType: TextInputType.number,
+                  hint: 'How many words for this?',
                 ),
               ),
               Padding(
@@ -129,7 +130,7 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
   void _sendToAI(BuildContext context, SupportedChatGPT gptVersion) {
     if (_keyForm.currentState?.validate() ?? false) {
       final model = WriteCoverLetterModel(
-        maxToken: gptVersion.getPoint(),
+        maxToken: int.parse(_promptController.text.trim()),
         jobTitle: _jobTitleController.text,
         summary: _aboutYourSelfController.text + _promptController.text,
         gptModel: gptVersion.toVersion(),

@@ -44,4 +44,13 @@ class ProfileState with _$ProfileState {
 
   const factory ProfileState.deleteExperienceSuccess(int id) =
       ProfileDeleteExperienceSuccess;
+
+  const factory ProfileState.updateUserExperiencesSuccess(
+      ExperienceModel experienceModel) = ProfileUpdateUserExperienceSuccess;
+
+  const factory ProfileState.updateUserEducationSuccess(
+      EducationModel educationModel) = ProfileUpdateUserEducationSuccess;
+
+  const factory ProfileState.updateUserCertificateSuccess(
+      CertificateModel certificateModel) = ProfileUpdateUserCertificateSuccess;
 }

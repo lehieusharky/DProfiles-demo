@@ -162,7 +162,7 @@ class _AddNewEducationPageState extends State<AddNewEducationPage> {
         description: _descritptionController.text,
         degreeID: int.parse(_degreeController.text),
         startDate: _startDateController.text.convertToIOSDateTimeFormat(),
-        // endDate: _endDateController.text.convertToIOSDateTimeFormat(),
+        endDate: _endDateController.text.convertToIOSDateTimeFormat(),
       );
 
       context.read<EditProfileBloc>().add(EditProfileAddNewEducation(newData));

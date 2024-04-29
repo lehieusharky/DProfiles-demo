@@ -179,7 +179,7 @@ class _AddNewExperiencePageState extends State<AddNewExperiencePage> {
         jobTitle: _titleController.text,
         description: _descriptionController.text,
         startDate: _startDateController.text.convertToIOSDateTimeFormat(),
-        // endDate: _endDateController.text.convertToIOSDateTimeFormat(),
+        endDate: _endDateController.text.convertToIOSDateTimeFormat(),
       );
 
       context.read<EditProfileBloc>().add(EditProfileAddNewExperience(newData));

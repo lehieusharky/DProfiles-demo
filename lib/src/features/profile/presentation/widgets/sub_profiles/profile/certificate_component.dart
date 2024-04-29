@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
+import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/widgets/edit_form/form_edit_certificate_page.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/title_sub_page.dart';
@@ -17,19 +19,34 @@ class CertificateComponent extends StatefulWidget {
 }
 
 class _CertificateComponentState extends State<CertificateComponent> {
-  List<CertificateModel> certificates = [];
+  List<CertificateModel>? certificates;
 
   @override
   Widget build(BuildContext context) {
-    return BlocSelector<ProfileBloc, ProfileState, List<CertificateModel>?>(
-      selector: (state) {
+    return BlocConsumer<ProfileBloc, ProfileState>(
+      listener: (context, state) {
         if (state is ProfileGetUserCertificatesSuccess) {
-          certificates = state.certificates;
+          certificates = [];
+          for (var element in state.certificates) {
+            certificates?.add(element);
+          }
         }
         if (state is ProfileDeleteCertificateSuccess) {
-          context.read<ProfileBloc>().add(const ProfileGetUserCertificates());
+          certificates?.removeWhere((element) => element.id == state.id);
         }
-        return certificates;
+
+        if (state is ProfileUpdateUserCertificateSuccess) {
+          final itemWillbeRemove = certificates?.firstWhere(
+              (element) => element.id == state.certificateModel.id);
+          if (itemWillbeRemove != null) {
+            final position = certificates?.indexOf(itemWillbeRemove);
+            if (position != null) {
+              certificates?.removeAt(position);
+
+              certificates?.insert(position, state.certificateModel);
+            }
+          }
+        }
       },
       builder: (context, state) {
         return Column(
@@ -42,13 +59,14 @@ class _CertificateComponentState extends State<CertificateComponent> {
                   .read<ProfileBloc>()
                   .add(const ProfileGetUserCertificates()),
             ),
-            if (state == null)
+            if (certificates == null)
               const MyShimmer(count: 1, height: 150)
             else
               Column(
                 mainAxisSize: MainAxisSize.min,
-                children: certificates
+                children: certificates!
                     .map((e) => e.toWidget(context,
+                        onUpdate: () => _updateCer(context, e),
                         onDelete: () => _deleteCertificate(context, e)))
                     .toList(),
               )
@@ -79,4 +97,17 @@ class _CertificateComponentState extends State<CertificateComponent> {
       }
     });
   }
+
+  void _updateCer(BuildContext context, CertificateModel certificateModel) {
+    context.router
+        .push(FormEditCertificateRoute(certificateModel: certificateModel))
+        .then((value) => value == null
+            ? null
+            : _onUpdate(context, value as CertificateModel));
+  }
+
+  void _onUpdate(BuildContext context, CertificateModel certificateModel) =>
+      context
+          .read<ProfileBloc>()
+          .add(ProfileUpdateUserCertificate(certificateModel));
 }

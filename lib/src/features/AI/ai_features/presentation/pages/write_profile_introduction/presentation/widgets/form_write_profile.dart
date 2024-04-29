@@ -42,6 +42,7 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
               AuthField(
                   autoFocus: true,
                   controller: _aboutYourSelfController,
+                  maxLines: 3,
                   title: appLocal(context).aboutYourSelf.toUpperCase(),
                   textInputAction: TextInputAction.next,
                   validator: (about) {
@@ -73,9 +74,15 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
                 padding: context.padding(top: 32),
                 child: AuthField(
                   controller: _promptController,
-                  keyboardType: TextInputType.name,
+                  keyboardType: TextInputType.number,
                   title: appLocal(context).prompt.toUpperCase(),
-                  maxLines: 2,
+                  validator: (style) {
+                    if (style == null || style.isEmpty) {
+                      return appLocal(context).fieldCannotBeEmpty;
+                    } else {
+                      return null;
+                    }
+                  },
                   hint: 'How many words for this?',
                 ),
               ),
@@ -128,10 +135,11 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
   void _sendToAI(BuildContext context, SupportedChatGPT gptVersion) {
     if (_keyForm.currentState?.validate() ?? false) {
       final model = WriteProfileIntroductionModel(
-        summary: _aboutYourSelfController.text + _promptController.text,
+        summary:
+            "${_aboutYourSelfController.text} with prompt: ${_promptController.text}",
         style: _writeStyleController.text.trim(),
         gptModel: gptVersion.toVersion(),
-        maxToken: gptVersion.getPoint(),
+        maxToken: int.parse(_promptController.text.trim()),
       );
       context.read<AiFeaturesBloc>().add(GenerateProfileIntroduction(model));
     }

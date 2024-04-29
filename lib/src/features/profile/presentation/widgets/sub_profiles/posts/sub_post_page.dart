@@ -9,13 +9,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SubPostPage extends StatelessWidget {
+class SubPostPage extends StatefulWidget {
   final UserInfoModel userInfo;
 
   const SubPostPage({Key? key, required this.userInfo}) : super(key: key);
 
   @override
+  State<SubPostPage> createState() => _SubPostPageState();
+}
+
+class _SubPostPageState extends State<SubPostPage>
+    with AutomaticKeepAliveClientMixin {
+  @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Padding(
       padding: context.padding(top: 20),
       child: Column(
@@ -32,4 +39,7 @@ class SubPostPage extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

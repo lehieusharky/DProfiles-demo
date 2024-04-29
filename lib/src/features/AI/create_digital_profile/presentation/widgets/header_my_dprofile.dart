@@ -12,7 +12,7 @@ class HeaderMyDprofile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.padding(bottom: 28),
+      padding: context.padding(bottom: 28, horizontal: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
