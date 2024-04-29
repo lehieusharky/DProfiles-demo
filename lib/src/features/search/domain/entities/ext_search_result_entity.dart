@@ -64,9 +64,14 @@ extension SearchBarResultModelExt on SearchBarResultModel {
   }
 
   Widget _buildAvatar(BuildContext context) {
-    return (avatar == null || avatar!.isNotEmpty)
+    return (avatar == null || avatar!.isEmpty)
         ? _buildEmptyAvatar(context)
-        : MyCacheImage(imageUrl: avatar!);
+        : ClipRRect(
+            borderRadius: BorderRadius.circular(100),
+            child: MyCacheImage(
+                width: context.sizeWidth(60),
+                height: context.sizeWidth(60),
+                imageUrl: 'https://d3v3a2vsni37rv.cloudfront.net/$avatar'));
   }
 
   Widget _buildEmptyAvatar(BuildContext context) => Container(
