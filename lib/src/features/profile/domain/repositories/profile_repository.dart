@@ -19,8 +19,6 @@ abstract class ProfileRepository {
 
   Future<Either<ProfileFailure, BaseResponse>> getUserLanguage();
 
-  Future<Either<ProfileFailure, UploadFileResponse?>> uploadImage();
-
   Future<Either<ProfileFailure, BaseResponse>> getMetaLanguage();
 
   Future<Either<ProfileFailure, BaseResponse>> deleteUserExperience(int id);

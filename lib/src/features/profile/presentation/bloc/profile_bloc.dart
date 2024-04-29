@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart';
+import 'package:demo_dprofiles/src/features/edit_profile/domain/usecases/edit_profile_usecase.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
@@ -9,6 +10,7 @@ import 'package:demo_dprofiles/src/features/profile/data/models/user_language_mo
 import 'package:demo_dprofiles/src/features/profile/data/models/user_skill_model.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
 import 'package:demo_dprofiles/src/utils/data/models/meta_language_model.dart';
+import 'package:demo_dprofiles/src/utils/domain/usecases/file_usecase.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -20,10 +22,17 @@ part 'profile_bloc.freezed.dart';
 class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   final ProfileUseCase profileUseCase;
   final CreateDigitalProfileUseCase createDigitalProfileUseCase;
+  final FileUseCase fileUseCase;
+  final EditProfileUseCase editProfileUseCase;
 
-  ProfileBloc(this.profileUseCase, this.createDigitalProfileUseCase)
-      : super(const ProfileState.initial()) {
+  ProfileBloc(
+    this.profileUseCase,
+    this.createDigitalProfileUseCase,
+    this.fileUseCase,
+    this.editProfileUseCase,
+  ) : super(const ProfileState.initial()) {
     on<ProfileGetUserInfo>(_getUserInfo);
+    on<ProfileUpdateUserInfo>(_updateUserInfo);
 
     on<ProfileGetUserCertificates>(_getUserCertificates);
     on<ProfileGetUserEducations>(_getUserEducations);
@@ -141,7 +150,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
 
   FutureOr<void> _uploadAvatar(
       ProfileUploadAvatar event, Emitter<ProfileState> emit) async {
-    final result = await profileUseCase.uploadImage();
+    final result = await fileUseCase.uploadImage();
 
     result.fold(
         (l) => emit(ProfileError(message: l, title: 'Upload avatar failed')),
@@ -247,5 +256,16 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
             const ProfileError(message: 'Delete  failed', title: 'Failed')),
         (r) =>
             emit(ProfileUpdateUserCertificateSuccess(event.certificateModel)));
+  }
+
+  FutureOr<void> _updateUserInfo(
+      ProfileUpdateUserInfo event, Emitter<ProfileState> emit) async {
+    emit(const ProfileLoading());
+    final status = await editProfileUseCase.updateUserInfo(event.userInfoModel);
+
+    status.fold(
+        (l) => emit(
+            const ProfileError(message: 'Delete  failed', title: 'Failed')),
+        (r) => emit(const ProfileUpdateUserInfoSuccess()));
   }
 }

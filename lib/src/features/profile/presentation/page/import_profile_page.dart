@@ -6,7 +6,6 @@ import 'package:demo_dprofiles/src/features/profile/presentation/widgets/avatar_
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/body_profile.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/dprofile_component.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/header/header_profile.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/seperate_profile.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/social_media_component.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/tab_bar_profile.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';

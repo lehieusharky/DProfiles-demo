@@ -22,8 +22,6 @@ abstract class ProfileUseCase {
 
   Future<Either<String, BaseResponse>> getUserLanguage();
 
-  Future<Either<String, UploadFileResponse?>> uploadImage();
-
   Future<Either<String, BaseResponse>> getMetaLanguage();
 
   Future<Either<String, BaseResponse>> deleteUserExperience(int id);
@@ -96,15 +94,6 @@ class ProfileUseCaseImpl implements ProfileUseCase {
   @override
   Future<Either<String, BaseResponse>> getUserSkills() async {
     final result = await _profileRepository.getUserSkills();
-    return result.fold(
-      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
-      (r) => Right(r),
-    );
-  }
-
-  @override
-  Future<Either<String, UploadFileResponse?>> uploadImage() async {
-    final result = await _profileRepository.uploadImage();
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),

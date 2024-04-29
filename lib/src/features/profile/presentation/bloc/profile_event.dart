@@ -39,4 +39,7 @@ class ProfileEvent with _$ProfileEvent {
 
   const factory ProfileEvent.updateUserCertificate(
       CertificateModel certificateModel) = ProfileUpdateUserCertificate;
+
+  const factory ProfileEvent.updateUserInfo(UserInfoModel userInfoModel) =
+      ProfileUpdateUserInfo;
 }

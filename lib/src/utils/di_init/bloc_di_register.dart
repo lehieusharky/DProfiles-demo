@@ -22,6 +22,7 @@ import 'package:demo_dprofiles/src/features/search/domain/usecases/search_usecas
 import 'package:demo_dprofiles/src/features/search/presentation/bloc/bloc/search_bloc.dart';
 import 'package:demo_dprofiles/src/features/setting/domain/usecases/setting_usecase.dart';
 import 'package:demo_dprofiles/src/features/setting/presentation/bloc/setting_bloc.dart';
+import 'package:demo_dprofiles/src/utils/domain/usecases/file_usecase.dart';
 import 'package:get_it/get_it.dart';
 
 class BlocDI {
@@ -49,6 +50,8 @@ class BlocDI {
       () => ProfileBloc(
         injector.get<ProfileUseCase>(),
         injector.get<CreateDigitalProfileUseCase>(),
+        injector.get<FileUseCase>(),
+        injector.get<EditProfileUseCase>(),
       ),
     );
 
