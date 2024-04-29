@@ -89,18 +89,6 @@ class ProfileRepositoryImpl implements ProfileRepository {
   }
 
   @override
-  Future<Either<ProfileFailure, UploadFileResponse?>> uploadImage() async {
-    try {
-      final res = await _profileDataSource.uploadImage();
-
-      return Right(res);
-    } on DioException catch (e) {
-      return Left(
-          ProfileFailure(response: ErrorResponse.fromJson(e.response!.data)));
-    }
-  }
-
-  @override
   Future<Either<ProfileFailure, BaseResponse>> getMetaLanguage() async {
     try {
       final res = await _profileDataSource.getMetaLanguage();

@@ -53,4 +53,7 @@ class ProfileState with _$ProfileState {
 
   const factory ProfileState.updateUserCertificateSuccess(
       CertificateModel certificateModel) = ProfileUpdateUserCertificateSuccess;
+
+  const factory ProfileState.updateUserInfoSuccess() =
+      ProfileUpdateUserInfoSuccess;
 }

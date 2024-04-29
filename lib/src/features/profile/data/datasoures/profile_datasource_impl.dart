@@ -75,46 +75,7 @@ class ProfileDataSourceImpl implements ProfileDataSource {
     }
   }
 
-  @override
-  Future<UploadFileResponse?> uploadImage() async {
-    try {
-      FilePickerResult? result = await FilePicker.platform.pickFiles(
-        type: FileType.custom,
-        allowedExtensions: ['jpg', 'png'],
-        withReadStream: true,
-        withData: false,
-      );
-
-      if (result != null) {
-        PlatformFile file = result.files.first;
-
-        final body = {
-          "file_name": file.name,
-          "file_size_bytes": file.size,
-          "content_type": "image/${file.extension}"
-        };
-
-        final res = await MyHttp.rl().uploadImage(body);
-        Uint8List image = File(file.path!).readAsBytesSync();
-        final putAWSRes = await Dio().put(
-          res.presignedUrl ?? '',
-          options: Options(
-            headers: {
-              Headers.contentTypeHeader: "image/${file.extension}",
-              Headers.contentLengthHeader: image.length, 
-            }
-          ),
-          data: Stream.fromIterable(image.map((e) => [e])),
-        );
-        print(putAWSRes);
-        return res;
-      }
-
-      return null;
-    } on DioException catch (e) {
-      rethrow;
-    }
-  }
+  
 
   @override
   Future<BaseResponse> getMetaLanguage() async {
