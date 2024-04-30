@@ -2,12 +2,13 @@ import 'package:dartz/dartz.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/auth_error_response.dart';
 import 'package:demo_dprofiles/src/features/post/domain/repositoties/post_repository.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
+import 'package:demo_dprofiles/src/utils/https/my_response/error_response.dart';
 import 'package:injectable/injectable.dart';
 
 abstract class PostUseCase {
   Future<Either<String, BaseResponse>> getUserPosts();
 
-  Future<Either<String, BaseResponse>> post({
+  Future<Either<List<String>, BaseResponse>> post({
     required int userID,
     int? adminID,
     required String content,
@@ -33,7 +34,7 @@ class PostUseCaseImpl implements PostUseCase {
   }
 
   @override
-  Future<Either<String, BaseResponse>> post(
+  Future<Either<List<String>, BaseResponse>> post(
       {required int userID,
       int? adminID,
       required String content,
@@ -48,7 +49,7 @@ class PostUseCaseImpl implements PostUseCase {
     );
 
     return result.fold(
-      (l) => Left((l.response as RegularErrorResponse).message!),
+      (l) => Left((l.response as ErrorResponse).message),
       (r) => Right(r),
     );
   }

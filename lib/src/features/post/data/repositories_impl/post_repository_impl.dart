@@ -3,6 +3,7 @@ import 'package:demo_dprofiles/src/features/auth/data/models/auth_error_response
 import 'package:demo_dprofiles/src/features/post/data/datasources/post_datasource.dart';
 import 'package:demo_dprofiles/src/features/post/domain/repositoties/post_repository.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
+import 'package:demo_dprofiles/src/utils/https/my_response/error_response.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 
@@ -43,7 +44,7 @@ class PostRespotoryImpl implements PostRepository {
       return Right(response);
     } on DioException catch (e) {
       return Left(PostFailure(
-          response: RegularErrorResponse.fromJson(e.response!.data)));
+          response: ErrorResponse.fromJson(e.response!.data)));
     }
   }
 }

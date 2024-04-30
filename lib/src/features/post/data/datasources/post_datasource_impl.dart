@@ -31,12 +31,15 @@ class PostDataSourceImpl implements PostDataSource {
         "admin_id": adminID ?? 0,
         "content": content,
         "image_url": imageUrl ?? [],
-        "video_url": videoUrl ?? [],
+        "video_url": videoUrl ??
+            [
+              'https://www.youtube.com/watch?v=1YyAzVmP9xQ&pp=ygUMY3J5cHRvIGludHJv'
+            ],
       };
       final response = await MyHttp.rl().postUserPosts(body);
 
       return response;
-    } on DioException {
+    } on DioException catch (e) {
       rethrow;
     }
   }

@@ -2,7 +2,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
-import 'package:demo_dprofiles/src/core/ui/my_text_form_field.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
@@ -36,7 +35,11 @@ class _PostFormState extends State<PostForm> {
           return const MyShimmer(count: 1, height: 50);
         } else {
           return ListTile(
-            onTap: () => context.router.push(const CreatePostRoute()),
+            onTap: () => context.router
+                .push(CreatePostRoute(userID: userInfo!.id!))
+                .then((value) => context
+                    .read<ProfileBloc>()
+                    .add(const ProfileGetUserPosts())),
             leading: _buildAvatar(context),
             title: _buildField(context),
             trailing: const Icon(IconsaxOutline.gallery),
@@ -48,16 +51,17 @@ class _PostFormState extends State<PostForm> {
 
   Widget _buildField(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: colorScheme(context).outlineVariant)),
-        padding: context.padding(horizontal: 10, vertical: 10),
-        child: Text(
-          "What's on your mind, Barton",
-          style: AppFont()
-              .fontTheme(context, color: colorScheme(context).outline)
-              .bodyMedium,
-        ));
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: colorScheme(context).outlineVariant)),
+      padding: context.padding(horizontal: 10, vertical: 10),
+      child: Text(
+        "What's on your mind, Barton",
+        style: AppFont()
+            .fontTheme(context, color: colorScheme(context).outline)
+            .bodyMedium,
+      ),
+    );
   }
 
   Widget _buildAvatar(BuildContext context) {

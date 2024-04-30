@@ -10,4 +10,10 @@ class PostState with _$PostState {
     required String title,
     required String mesg,
   }) = PostError;
+
+  const factory PostState.createPostSuccess(PostModel createdPost) =
+      PostCreatePostSuccess;
+
+  const factory PostState.uploadImagesSuccess(List<String> images) =
+      PostUploadImagesSuccess;
 }

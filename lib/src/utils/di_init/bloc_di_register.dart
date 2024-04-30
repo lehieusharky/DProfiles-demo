@@ -15,6 +15,7 @@ import 'package:demo_dprofiles/src/features/edit_profile/presentation/bloc/edit_
 import 'package:demo_dprofiles/src/features/home/domain/usecases/home_usecase.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/bloc/home_bloc.dart';
 import 'package:demo_dprofiles/src/features/post/domain/usecases/post_usecase.dart';
+import 'package:demo_dprofiles/src/features/post/presentation/bloc/bloc/post_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/domain/usecases/public_profile_usecase.dart';
@@ -99,6 +100,13 @@ class BlocDI {
       () => CreateDigitalProfileBloc(
         injector.get<CreateDigitalProfileUseCase>(),
         injector.get<DProfileUseCase>(),
+      ),
+    );
+
+    injector.registerFactory<PostBloc>(
+      () => PostBloc(
+        injector.get<PostUseCase>(),
+        injector.get<FileUseCase>(),
       ),
     );
   }

@@ -37,10 +37,7 @@ extension PostModelExt on PostModel {
             children: [
               Padding(
                 padding: context.padding(right: 12),
-                child: CircleAvatar(
-                  radius: context.sizeHeight(20),
-                  child: Assets.icons.homeLogo.image(),
-                ),
+                child: _buildAvatar(context),
               ),
               Expanded(
                 child: Column(
@@ -75,17 +72,21 @@ extension PostModelExt on PostModel {
                     .bodyMedium,
               ),
             ),
-          if (imageUrl != null)
-            Padding(
-                padding: context.padding(top: 25),
-                child: Column(
-                  children: imageUrl!
-                      .map((e) => MyCacheImage(
-                            imageUrl: e,
-                            errorWidget: Assets.images.home.live.image(),
-                          ))
-                      .toList(),
-                )),
+          if (imageUrl != null && imageUrl!.isNotEmpty)
+            SizedBox(
+              height: context.sizeHeight(200),
+              child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: imageUrl!.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => Padding(
+                        padding: context.padding(right: 10),
+                        child: MyCacheImage(
+                            height: 200,
+                            width: context.width * 0.7,
+                            imageUrl: imageUrl![index]),
+                      )),
+            ),
           ReactionPost(
             likes: noOfLike!,
             comments: noOfComment!,
@@ -97,6 +98,21 @@ extension PostModelExt on PostModel {
         ],
       ),
     );
+  }
+
+  Widget _buildAvatar(BuildContext context) {
+    return (user!.avatar == null)
+        ? Assets.images.home.avatarHolder.image(
+            width: context.sizeWidth(40),
+            height: context.sizeWidth(40),
+          )
+        : ClipRRect(
+            borderRadius: BorderRadius.circular(100),
+            child: MyCacheImage(
+                width: context.sizeWidth(40),
+                height: context.sizeWidth(40),
+                imageUrl:
+                    'https://d3v3a2vsni37rv.cloudfront.net/${user!.avatar}'));
   }
 
   Widget _buildMenu(BuildContext context) {

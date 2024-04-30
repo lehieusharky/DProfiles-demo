@@ -227,9 +227,13 @@ abstract class $AppRouter extends _i46.RootStackRouter {
       );
     },
     CreatePostRoute.name: (routeData) {
+      final args = routeData.argsAs<CreatePostRouteArgs>();
       return _i46.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i16.CreatePostPage(),
+        child: _i16.CreatePostPage(
+          key: args.key,
+          userID: args.userID,
+        ),
       );
     },
     DashboardRoute.name: (routeData) {
@@ -758,16 +762,40 @@ class CreateDigitalProfileSuccessRoute extends _i46.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i16.CreatePostPage]
-class CreatePostRoute extends _i46.PageRouteInfo<void> {
-  const CreatePostRoute({List<_i46.PageRouteInfo>? children})
-      : super(
+class CreatePostRoute extends _i46.PageRouteInfo<CreatePostRouteArgs> {
+  CreatePostRoute({
+    _i47.Key? key,
+    required int userID,
+    List<_i46.PageRouteInfo>? children,
+  }) : super(
           CreatePostRoute.name,
+          args: CreatePostRouteArgs(
+            key: key,
+            userID: userID,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'CreatePostRoute';
 
-  static const _i46.PageInfo<void> page = _i46.PageInfo<void>(name);
+  static const _i46.PageInfo<CreatePostRouteArgs> page =
+      _i46.PageInfo<CreatePostRouteArgs>(name);
+}
+
+class CreatePostRouteArgs {
+  const CreatePostRouteArgs({
+    this.key,
+    required this.userID,
+  });
+
+  final _i47.Key? key;
+
+  final int userID;
+
+  @override
+  String toString() {
+    return 'CreatePostRouteArgs{key: $key, userID: $userID}';
+  }
 }
 
 /// generated route for
