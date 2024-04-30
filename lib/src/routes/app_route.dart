@@ -75,5 +75,6 @@ class AppRouter extends $AppRouter {
             page: HistoryUpdateDigitalProfileRoute.page),
         AutoRoute(path: '/search_home_page', page: SearchHomeRoute.page),
         AutoRoute(path: '/public_profile', page: PublicProfileRoute.page),
+        AutoRoute(path: '/create_post', page: CreatePostRoute.page),
       ];
 }

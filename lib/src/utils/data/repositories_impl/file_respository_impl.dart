@@ -23,4 +23,16 @@ class FileRepositoryImpl implements FileRepository {
           response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
+
+  @override
+  Future<Either<FileFailure, List<String>>> uploadMultipleImages() async {
+    try {
+      final response = await _fileDataSource.uploadMultipleImages();
+
+      return Right(response);
+    } on DioException catch (e) {
+      return Left(FileFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
+    }
+  }
 }

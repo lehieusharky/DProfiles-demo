@@ -404,4 +404,15 @@ abstract class RestClient {
   @GET('/api/v1/public/working-location/{username}')
   Future<BaseResponse> getPublicWorkingLocation(
       @Path('username') String userName);
+
+  // post
+
+  @GET('/api/v1/post')
+  Future<BaseResponse> getUserPosts({
+    @Query('page') int? page,
+    @Query('limit') int? limit,
+  });
+
+  @POST('/api/v1/post')
+  Future<BaseResponse> postUserPosts(@Body() Map<String, dynamic> body);
 }

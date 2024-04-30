@@ -57,7 +57,8 @@ class MyTextFormField extends StatefulWidget {
     this.onSubmit,
     this.isPasswordField,
     this.labelText,
-    this.minLines, this.inputFormatters,
+    this.minLines,
+    this.inputFormatters,
   });
 
   @override
@@ -71,16 +72,24 @@ class MyTextFormField extends StatefulWidget {
     String? labelText,
     int? maxLines,
     int? minLines,
+    Color? defaultBorderColor,
+    Color? focusBorderColor,
+    String? Function(String?)? validator,
+    bool? autoFocus,
   }) {
     return MyTextFormField(
       controller: controller,
       keyboardType: TextInputType.multiline,
+      defaultBorderColor: defaultBorderColor,
+      focusBorderColor: focusBorderColor,
       hintText: hintText,
       maxLines: maxLines,
       minLines: minLines,
       onChanged: onChanged,
       backgroundColor: backgroundColor,
       labelText: labelText,
+      validator: validator,
+      autoFocus: autoFocus,
     );
   }
 }

@@ -4,6 +4,8 @@ import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.
 
 abstract class FileRepository {
   Future<Either<FileFailure, UploadFileResponse?>> uploadImage();
+
+  Future<Either<FileFailure, List<String>>> uploadMultipleImages();
 }
 
 class FileFailure extends AppFailure {

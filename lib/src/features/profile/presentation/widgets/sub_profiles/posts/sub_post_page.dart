@@ -3,7 +3,9 @@ import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/bloc/home_bloc.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/news_feed_home.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/seperate_profile.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/posts/post_component.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/posts/post_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -23,18 +25,15 @@ class _SubPostPageState extends State<SubPostPage>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return Padding(
-      padding: context.padding(top: 20),
-      child: Column(
+    return BlocProvider<ProfileBloc>(
+      create: (context) => injector.get<ProfileBloc>()
+        ..add(const ProfileGetUserInfo())
+        ..add(const ProfileGetUserPosts()),
+      child: const Column(
         children: [
-          const PostForm(),
-          const SeparatedProfile(),
-          Expanded(
-            child: BlocProvider.value(
-              value: injector.get<HomeBloc>(),
-              child: const NewsFeedHome(),
-            ),
-          ),
+          PostForm(),
+          SeparatedProfile(),
+          Expanded(child: PostComponent())
         ],
       ),
     );

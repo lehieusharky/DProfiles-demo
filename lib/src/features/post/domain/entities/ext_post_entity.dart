@@ -1,36 +1,34 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
-import 'package:demo_dprofiles/src/features/feed/presentation/cubit/feed_detail_cubit.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/feed_menu.dart';
-import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
+import 'package:demo_dprofiles/src/features/post/data/models/post_model.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
-import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tuple/tuple.dart';
 
-extension NewFeedModelExt on NewFeedModel {
+extension PostModelExt on PostModel {
   Widget toWidget(
     BuildContext context, {
     VoidCallback? onLikeClick,
     VoidCallback? onCommentClick,
     VoidCallback? onShareClick,
   }) {
-    final bloc = context.read<FeedDetailCubit>();
-    return _buildBody(context, bloc.state.feed);
+    return Padding(
+      padding: context.padding(vertical: 5),
+      child: _buildBody(context),
+    );
   }
 
   Widget _buildBody(
-    BuildContext context,
-    NewFeedModel feed, {
+    BuildContext context, {
     VoidCallback? onLikeClick,
     VoidCallback? onCommentClick,
     VoidCallback? onShareClick,
   }) {
-    final bloc = context.read<FeedDetailCubit>();
     return Padding(
       padding: context.padding(horizontal: 20),
       child: Column(
@@ -42,10 +40,7 @@ extension NewFeedModelExt on NewFeedModel {
             children: [
               Padding(
                 padding: context.padding(right: 12),
-                child: CircleAvatar(
-                  radius: context.sizeHeight(20),
-                  child: Assets.icons.homeLogo.image(),
-                ),
+                child: _buildAvatar(context),
               ),
               Expanded(
                 child: Column(
@@ -53,19 +48,11 @@ extension NewFeedModelExt on NewFeedModel {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      feed.user?.username ?? '',
+                      user!.username ?? '',
                       style: AppFont()
                           .fontTheme(context, weight: FontWeight.w600)
                           .bodyLarge,
                     ),
-                    Text(
-                      feed.postCreatedTs.toString().convertToDDMMYYFormat(),
-                      style: AppFont()
-                          .fontTheme(context,
-                              weight: FontWeight.w400,
-                              color: colorScheme(context).outline)
-                          .bodySmall,
-                    )
                   ],
                 ),
               ),
@@ -78,37 +65,57 @@ extension NewFeedModelExt on NewFeedModel {
               )
             ],
           ),
-          if (feed.postContent != null)
+          if (content != null)
             Padding(
               padding: context.padding(top: 16),
               child: Text(
-                feed.postContent!,
+                content!,
                 style: AppFont()
                     .fontTheme(context, height: 1.5, letterSpacing: 0.5)
                     .bodyMedium,
               ),
             ),
-          Padding(
-              padding: context.padding(top: 25),
-              child: MyCacheImage(
-                imageUrl: feed.postImageUrl ?? '',
-                errorWidget: Assets.images.home.live.image(),
-              )),
+          if (imageUrl != null && imageUrl!.isNotEmpty)
+            SizedBox(
+              height: context.sizeHeight(200),
+              child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: imageUrl!.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => Padding(
+                        padding: context.padding(right: 10),
+                        child: MyCacheImage(
+                            height: 200,
+                            width: context.width * 0.7,
+                            imageUrl: imageUrl![index]),
+                      )),
+            ),
           ReactionPost(
-            likes: feed.noOfLike!,
-            comments: feed.noOfComment!,
-            shares: feed.noOfShare!,
-            liked: feed.liked,
-            onLikeClick: () {
-              bloc.like();
-              onLikeClick?.call();
-            },
+            likes: noOfLike!,
+            comments: noOfComment!,
+            shares: noOfShare!,
+            onLikeClick: () {},
             onCommentClick: onCommentClick,
             onShareClick: onShareClick,
           ),
         ],
       ),
     );
+  }
+
+  Widget _buildAvatar(BuildContext context) {
+    return (user!.avatar == null)
+        ? Assets.images.home.avatarHolder.image(
+            width: context.sizeWidth(40),
+            height: context.sizeWidth(40),
+          )
+        : ClipRRect(
+            borderRadius: BorderRadius.circular(100),
+            child: MyCacheImage(
+                width: context.sizeWidth(40),
+                height: context.sizeWidth(40),
+                imageUrl:
+                    'https://d3v3a2vsni37rv.cloudfront.net/${user!.avatar}'));
   }
 
   Widget _buildMenu(BuildContext context) {

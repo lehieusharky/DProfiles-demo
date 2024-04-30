@@ -62,8 +62,6 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
     on<AICharacterEditExperience>(_editExperience);
     on<AICharacterGetChatWithBotHistory>(_getChatWithBotHistory);
     on<AICharacterFollowBot>(_followBot);
-
-    add(GetListPopularCharacterBot(page: _currentPagePopularBot));
   }
 
   FutureOr<void> _changeCreateStep(
