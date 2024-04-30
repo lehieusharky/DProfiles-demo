@@ -28,14 +28,14 @@ class _CreateAICharacterBotButtonState
         return _showButton;
       },
       builder: (context, state) {
-        if (_showButton) {
-          return AppFlatButton(context).elevatedButton(
-              title: 'Create Your AI Character',
-              onPressed: () =>
-                  context.router.push(const CreateAiCharacterRoute()));
-        } else {
-          return Container();
-        }
+        // if (_showButton) {
+        return AppFlatButton(context).elevatedButton(
+            title: 'Create Your AI Character',
+            onPressed: () =>
+                context.router.push(const CreateAiCharacterRoute()));
+        // } else {
+        //   return Container();
+        // }
       },
     );
   }
