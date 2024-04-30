@@ -17,7 +17,10 @@ extension PostModelExt on PostModel {
     VoidCallback? onCommentClick,
     VoidCallback? onShareClick,
   }) {
-    return _buildBody(context);
+    return Padding(
+      padding: context.padding(vertical: 5),
+      child: _buildBody(context),
+    );
   }
 
   Widget _buildBody(
