@@ -30,6 +30,15 @@ class ProfileState with _$ProfileState {
   const factory ProfileState.uploadAvatarSuccess(
       UploadFileResponse? uploadImageResponse) = ProfileUploadAvatarSuccess;
 
+  const factory ProfileState.uploadBannerSuccess(String bannerUrl) =
+      ProfilUploadBannerSuccess;
+
+  const factory ProfileState.updateBannerSuccess(BannerModel bannerModel) =
+      ProfileUpdateBannerSuccess;
+
+  const factory ProfileState.getBanner(BannerModel banner) =
+      ProfileGetBannerSuccess;
+
   const factory ProfileState.checkDigitalProfileAvailableSuccess(bool status) =
       ProfileCheckDigitalProfileAvailableSuccess;
 

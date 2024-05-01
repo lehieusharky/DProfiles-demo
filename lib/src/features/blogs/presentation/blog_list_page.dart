@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
+import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/blogs/data/models/blog_model.dart';
 import 'package:demo_dprofiles/src/features/blogs/presentation/bloc/blog_bloc.dart';
 import 'package:demo_dprofiles/src/features/home/domain/entities/ext_new_feed_entity.dart';
@@ -30,15 +29,15 @@ class _BlogListPageState extends State<BlogListPage>
         builder: (context, state) {
           Widget child;
           if (state is BlogInitial) {
-            child = const MyShimmer(count: 4, height: 300);
+            child = const MyLoading();
           } else if (state is BlogLoading) {
-            child = const MyShimmer(count: 4, height: 300);
+            child = const MyLoading();
           } else if (state is BlogLoaded) {
             child = _buildBlogList(context, state.blogs);
           } else if (state is BlogError) {
             child = Center(child: Text(state.message));
           } else {
-            child = const Center(child: CircularProgressIndicator());
+            child = const MyLoading();
           }
           return child;
         },
@@ -53,7 +52,7 @@ class _BlogListPageState extends State<BlogListPage>
     return Padding(
       padding: context.padding(horizontal: 20),
       child: ListView.separated(
-        physics: const ClampingScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: blogs.length,
         itemBuilder: (_, index) => _itemBuilder(context, blogs[index]),
         separatorBuilder: (_, __) => const Divider(),
@@ -70,14 +69,15 @@ class _BlogListPageState extends State<BlogListPage>
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            if (data.thumbnail.isNotEmpty) ...[
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: AspectRatio(
-                    aspectRatio: 16 / 5,
-                    child: MyCacheImage(imageUrl: data.thumbnail)),
-              ),
-            ],
+            // TODO thumbnail blog
+            // if (data.thumbnail.isNotEmpty) ...[
+            //   ClipRRect(
+            //     borderRadius: BorderRadius.circular(8),
+            //     child: AspectRatio(
+            //         aspectRatio: 16 / 5,
+            //         child: MyCacheImage(imageUrl: data.thumbnail)),
+            //   ),
+            // ],
             SizedBox(height: context.sizeHeight(8)),
             Text(
               data.title,

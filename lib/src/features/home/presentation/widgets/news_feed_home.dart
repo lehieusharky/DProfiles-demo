@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_divider.dart';
+import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/cubit/feed_detail_cubit.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
@@ -36,7 +37,7 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
       },
       builder: (context, state) {
         if (state == null) {
-          return const MyShimmer(count: 4, height: 200);
+          return const MyLoading();
         } else if (state.isEmpty) {
           return _buildEmtpyFeed();
         }

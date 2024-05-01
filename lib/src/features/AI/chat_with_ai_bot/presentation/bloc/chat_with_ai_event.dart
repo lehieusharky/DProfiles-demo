@@ -17,4 +17,8 @@ class ChatWithAiEvent with _$ChatWithAiEvent {
       required int page,
       required int limit,
       required String search}) = ChatWithAIGetChatWithBotHistory;
+
+  const factory ChatWithAiEvent.getUserInfo() = ChatWithAIGetUserInfo;
+
+  const factory ChatWithAiEvent.afterSendMessage() = ChatWithAIAfterSendMessage;
 }

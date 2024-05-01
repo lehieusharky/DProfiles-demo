@@ -35,6 +35,11 @@ abstract class ProfileRepository {
 
   Future<Either<ProfileFailure, BaseResponse>> updateUserCertificate(
       CertificateModel certificateModel);
+
+  Future<Either<ProfileFailure, BaseResponse>> getBanner();
+
+  Future<Either<ProfileFailure, BaseResponse>> postBanner(
+      String bannenUrlBanner);
 }
 
 class ProfileFailure extends AppFailure {

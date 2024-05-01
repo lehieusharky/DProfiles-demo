@@ -15,6 +15,7 @@ class _ProfilePageState extends State<ProfilePage>
     return BlocProvider(
       create: (context) => injector.get<ProfileBloc>()
         ..add(const ProfileGetUserInfo())
+        ..add(const ProfileGetBanner())
         ..add(const ProfileCheckDigitalProfileAvailable()),
       child: MyScaffold(
         topPadding: 0,

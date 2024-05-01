@@ -33,7 +33,7 @@ class _AppBarChatPageState extends State<AppBarChatPage> {
       },
       builder: (context, state) {
         if (_botInfo == null) {
-          return const MyShimmer(count: 1, height: 30);
+          return Container(height: 50);
         } else {
           return InkWell(
             onTap: () => context.router.push(MyAICharacterRoute(

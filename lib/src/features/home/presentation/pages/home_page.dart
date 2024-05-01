@@ -11,6 +11,7 @@ class _HomePageState extends State<HomePage>
     with AutomaticKeepAliveClientMixin
     implements ActionDashboard {
   final _skey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
@@ -26,22 +27,26 @@ class _HomePageState extends State<HomePage>
         endDrawer: buildEndDrawer(),
         body: DefaultTabController(
           length: 2,
-          child: NestedScrollView(
-            headerSliverBuilder:
-                (BuildContext context, bool innerBoxIsScrolled) => [
-              const MySliverAppBar(
-                height: 280,
-                child: HomeBanner(),
+          child: CustomScrollView(
+            physics: const BouncingScrollPhysics(),
+            slivers: [
+              SliverList(
+                delegate: SliverChildListDelegate(
+                  [const HomeBanner()],
+                ),
+              ),
+              const SliverFillRemaining(
+                hasScrollBody: true,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    TitleHome(title: 'Discover'),
+                    TabBarHome(),
+                    Expanded(child: HomeDiscover()),
+                  ],
+                ),
               ),
             ],
-            body: const Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                TitleHome(title: 'Discover'),
-                TabBarHome(),
-                Expanded(child: HomeDiscover()),
-              ],
-            ),
           ),
         ),
       ),

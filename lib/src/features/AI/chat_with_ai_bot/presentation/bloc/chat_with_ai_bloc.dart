@@ -4,6 +4,8 @@ import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_chara
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/chat_bot_message_history_model.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/send_message_to_bot_ai_model.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/domain/usecases/chat_with_ai_usecase.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
+import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -13,13 +15,15 @@ part 'chat_with_ai_bloc.freezed.dart';
 
 class ChatWithAiBloc extends Bloc<ChatWithAiEvent, ChatWithAiState> {
   final ChatWithAIUseCase chatWithAIUseCase;
+  final ProfileUseCase profileUseCase;
 
-  ChatWithAiBloc(this.chatWithAIUseCase)
+  ChatWithAiBloc(this.chatWithAIUseCase, this.profileUseCase)
       : super(const ChatWithAiState.initial()) {
     on<ChatWithAILoadBotAI>(_loadChatAI);
     on<ChatWithAIGetChatBotDetail>(_getChatBotDetail);
     on<ChatWithAISendMessage>(_sendMessage);
     on<ChatWithAIGetChatWithBotHistory>(_getChatWithAIHistory);
+    
   }
 
   FutureOr<void> _loadChatAI(

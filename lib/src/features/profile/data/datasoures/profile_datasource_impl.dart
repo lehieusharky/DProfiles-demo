@@ -1,15 +1,10 @@
-import 'dart:io';
-
 import 'package:demo_dprofiles/src/features/profile/data/datasoures/profile_datasource.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
 import 'package:demo_dprofiles/src/utils/https/dio/http_util.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
-import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 import 'package:dio/dio.dart';
-import 'package:file_picker/file_picker.dart';
-import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 
 @Injectable(as: ProfileDataSource)
@@ -74,8 +69,6 @@ class ProfileDataSourceImpl implements ProfileDataSource {
       rethrow;
     }
   }
-
-  
 
   @override
   Future<BaseResponse> getMetaLanguage() async {
@@ -147,6 +140,29 @@ class ProfileDataSourceImpl implements ProfileDataSource {
     try {
       final baseResponse = await MyHttp.rl()
           .updateCertificateInfo(experienceModel.id!, experienceModel.toJson());
+      return baseResponse;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<BaseResponse> getBanner() async {
+    try {
+      final baseResponse = await MyHttp.rl().getBanner();
+      return baseResponse;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
+
+  @override
+  Future<BaseResponse> postBanner(String bannenUrlBanner) async {
+    try {
+      final body = {"banner_url": bannenUrlBanner};
+
+      final baseResponse = await MyHttp.rl().postBanner(body);
+      
       return baseResponse;
     } on DioException catch (e) {
       rethrow;

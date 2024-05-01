@@ -66,7 +66,10 @@ class BlocDI {
     );
 
     injector.registerFactory<ChatWithAiBloc>(
-      () => ChatWithAiBloc(injector.get<ChatWithAIUseCase>()),
+      () => ChatWithAiBloc(
+        injector.get<ChatWithAIUseCase>(),
+        injector.get<ProfileUseCase>(),
+      ),
     );
 
     injector.registerFactory<EditProfileBloc>(

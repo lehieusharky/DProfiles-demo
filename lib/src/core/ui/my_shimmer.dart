@@ -25,12 +25,10 @@ class MyShimmer extends StatelessWidget {
             final delay = (i * 100);
             return Container(
               decoration: BoxDecoration(
-                  color: sharePreference.isDarkMode()
-                      ? Theme.of(context).colorScheme.outline.withOpacity(0.5)
-                      : Theme.of(context)
-                          .colorScheme
-                          .outlineVariant
-                          .withOpacity(0.1),
+                  color: Theme.of(context)
+                      .colorScheme
+                      .outlineVariant
+                      .withOpacity(0.1),
                   borderRadius: BorderRadius.circular(context.sizeHeight(10))),
               margin: context.padding(horizontal: 0),
               padding: margin ?? context.padding(all: 16),
