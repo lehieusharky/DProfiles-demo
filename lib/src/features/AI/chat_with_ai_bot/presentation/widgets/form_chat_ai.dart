@@ -39,6 +39,8 @@ class _FormChatAiState extends State<FormChatAi> {
                         .format(DateTime.parse(e.createdOn!)),
                   ))
               .toList();
+
+              
         }
 
         if (state is ChatWithAISendMessageSuccess) {

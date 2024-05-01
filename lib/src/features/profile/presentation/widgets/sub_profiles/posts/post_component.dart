@@ -1,3 +1,4 @@
+import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/post/data/models/post_model.dart';
 import 'package:demo_dprofiles/src/features/post/domain/entities/ext_post_entity.dart';
@@ -20,15 +21,15 @@ class _PostComponentState extends State<PostComponent> {
     return BlocConsumer<ProfileBloc, ProfileState>(
       listener: (context, state) {
         if (state is ProfileGetUserPostsSuccess) {
-          posts = state.posts;
+          posts = state.posts.reversed.toList();
         }
       },
       builder: (context, state) {
         if (posts == null) {
-          return const MyShimmer(count: 3, height: 300);
+          return const MyLoading();
         } else {
           return SingleChildScrollView(
-            child: Column( 
+            child: Column(
               mainAxisSize: MainAxisSize.min,
               children: posts!.map((e) => e.toWidget(context)).toList(),
             ),

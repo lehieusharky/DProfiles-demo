@@ -1,9 +1,6 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
-import 'package:demo_dprofiles/src/features/feed/presentation/feed_menu.dart';
 import 'package:demo_dprofiles/src/features/post/data/models/post_model.dart';
-import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
-import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:ficonsax/ficonsax.dart';
@@ -25,7 +22,6 @@ extension PostModelExt on PostModel {
 
   Widget _buildBody(
     BuildContext context, {
-    VoidCallback? onLikeClick,
     VoidCallback? onCommentClick,
     VoidCallback? onShareClick,
   }) {
@@ -36,7 +32,7 @@ extension PostModelExt on PostModel {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
                 padding: context.padding(right: 12),
@@ -56,13 +52,6 @@ extension PostModelExt on PostModel {
                   ],
                 ),
               ),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const _FollowingButton(),
-                  _buildMenu(context),
-                ],
-              )
             ],
           ),
           if (content != null)
@@ -75,6 +64,7 @@ extension PostModelExt on PostModel {
                     .bodyMedium,
               ),
             ),
+          context.sizedBox(height: 5),
           if (imageUrl != null && imageUrl!.isNotEmpty)
             SizedBox(
               height: context.sizeHeight(200),
@@ -116,33 +106,6 @@ extension PostModelExt on PostModel {
                 height: context.sizeWidth(40),
                 imageUrl:
                     'https://d3v3a2vsni37rv.cloudfront.net/${user!.avatar}'));
-  }
-
-  Widget _buildMenu(BuildContext context) {
-    return const FeedMenu();
-  }
-}
-
-class _FollowingButton extends StatelessWidget {
-  const _FollowingButton();
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Container(
-        padding: context.padding(horizontal: 12, vertical: 5),
-        decoration: BoxDecoration(
-            color: colorScheme(context).primary,
-            borderRadius: BorderRadius.circular(16)),
-        child: Text(
-          'Following',
-          style: AppFont()
-              .fontTheme(context, color: colorScheme(context).background)
-              .bodyMedium,
-        ),
-      ),
-    );
   }
 }
 

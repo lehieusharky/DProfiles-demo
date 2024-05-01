@@ -53,7 +53,7 @@ class _BlogListPageState extends State<BlogListPage>
     return Padding(
       padding: context.padding(horizontal: 20),
       child: ListView.separated(
-        physics: const ClampingScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: blogs.length,
         itemBuilder: (_, index) => _itemBuilder(context, blogs[index]),
         separatorBuilder: (_, __) => const Divider(),
@@ -70,14 +70,15 @@ class _BlogListPageState extends State<BlogListPage>
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            if (data.thumbnail.isNotEmpty) ...[
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: AspectRatio(
-                    aspectRatio: 16 / 5,
-                    child: MyCacheImage(imageUrl: data.thumbnail)),
-              ),
-            ],
+            // TODO thumbnail blog
+            // if (data.thumbnail.isNotEmpty) ...[
+            //   ClipRRect(
+            //     borderRadius: BorderRadius.circular(8),
+            //     child: AspectRatio(
+            //         aspectRatio: 16 / 5,
+            //         child: MyCacheImage(imageUrl: data.thumbnail)),
+            //   ),
+            // ],
             SizedBox(height: context.sizeHeight(8)),
             Text(
               data.title,

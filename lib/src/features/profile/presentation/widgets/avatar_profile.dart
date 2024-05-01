@@ -110,23 +110,25 @@ class _AvatarProfileState extends State<AvatarProfile> {
     return InkWell(
       onTap: () => context.read<ProfileBloc>().add(const ProfileUploadAvatar()),
       child: Container(
-          padding: context.padding(all: 1.5),
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: colorScheme(context).background,
-          ),
-          child: (userInfo!.avatar == null)
-              ? Assets.images.home.avatarHolder.image(
-                  width: context.sizeWidth(96),
-                  height: context.sizeWidth(96),
-                )
-              : ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: MyCacheImage(
-                      width: context.sizeWidth(96),
-                      height: context.sizeWidth(96),
-                      imageUrl:
-                          'https://d3v3a2vsni37rv.cloudfront.net/${userInfo!.avatar}'))),
+        padding: context.padding(all: 1.5),
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: colorScheme(context).background,
+        ),
+        child: (userInfo!.avatar == null)
+            ? Assets.images.home.avatarHolder.image(
+                width: context.sizeWidth(96),
+                height: context.sizeWidth(96),
+              )
+            : ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: MyCacheImage(
+                    width: context.sizeWidth(96),
+                    height: context.sizeWidth(96),
+                    imageUrl:
+                        'https://d3v3a2vsni37rv.cloudfront.net/${userInfo!.avatar}'),
+              ),
+      ),
     );
   }
 

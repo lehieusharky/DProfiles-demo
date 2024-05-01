@@ -21,7 +21,7 @@ class _BodyProfileState extends State<BodyProfile> {
     return BlocSelector<ProfileBloc, ProfileState, UserInfoModel?>(
       selector: (state) {
         if (state is ProfileGetUserInfoSuccess) {
-          userInfo =  state.userInfoModel;
+          userInfo = state.userInfoModel;
         }
 
         return userInfo;
