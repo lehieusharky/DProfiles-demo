@@ -15,7 +15,7 @@ extension PostModelExt on PostModel {
     VoidCallback? onShareClick,
   }) {
     return Padding(
-      padding: context.padding(vertical: 5),
+      padding: context.padding(vertical: 10),
       child: _buildBody(context),
     );
   }
@@ -80,14 +80,14 @@ extension PostModelExt on PostModel {
                             imageUrl: imageUrl![index]),
                       )),
             ),
-          ReactionPost(
-            likes: noOfLike!,
-            comments: noOfComment!,
-            shares: noOfShare!,
-            onLikeClick: () {},
-            onCommentClick: onCommentClick,
-            onShareClick: onShareClick,
-          ),
+          // ReactionPost(
+          //   likes: noOfLike!,
+          //   comments: noOfComment!,
+          //   shares: noOfShare!,
+          //   onLikeClick: () {},
+          //   onCommentClick: onCommentClick,
+          //   onShareClick: onShareClick,
+          // ),
         ],
       ),
     );

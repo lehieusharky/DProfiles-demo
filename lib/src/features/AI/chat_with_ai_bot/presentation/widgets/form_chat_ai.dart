@@ -1,5 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
+import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_text_form_field.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/send_message_to_bot_ai_model.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/message_with_bot_model.dart';
@@ -29,44 +29,35 @@ class _FormChatAiState extends State<FormChatAi> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<ChatWithAiBloc, ChatWithAiState>(
-      listener: (context, state) {
-        if (state is ChatWithAIGetChatWithBotHistorySuccess) {
-          messages = state.messagesHistory
-              .map((e) => MessageWithBotModel(
-                    isUser: e.userSenderId != null ? true : false,
-                    message: e.content ?? '',
-                    createAt: DateFormat('yyyy-MM-dd HH:mm:ss')
-                        .format(DateTime.parse(e.createdOn!)),
-                  ))
-              .toList();
+        listener: (context, state) {
+      if (state is ChatWithAIGetChatWithBotHistorySuccess) {
+        messages = state.messagesHistory
+            .map((e) => MessageWithBotModel(
+                  isUser: e.userSenderId != null ? true : false,
+                  message: e.content ?? '',
+                  createAt: DateFormat('yyyy-MM-dd HH:mm:ss')
+                      .format(DateTime.parse(e.createdOn!)),
+                ))
+            .toList();
+      }
 
-              
-        }
+      if (state is ChatWithAISendMessageSuccess) {
+        final botMessage = MessageWithBotModel(
+            message: state.msg, isUser: false, createAt: _createAt());
 
-        if (state is ChatWithAISendMessageSuccess) {
-          final botMessage = MessageWithBotModel(
-              message: state.msg, isUser: false, createAt: _createAt());
-
-          messages?.insert(0, botMessage);
-        }
-      },
-      builder: (context, state) {
-        if (messages == null) {
-          return MyShimmer(count: 5, height: context.height * 0.8);
-        } else {
-          return Column(
-            children: [
-              if (messages == null)
-                Expanded(
-                    child: MyShimmer(count: 5, height: context.height * 0.8))
-              else
-                Expanded(child: _buildMessageSegment()),
-              _buildBottomAction(),
-            ],
-          );
-        }
-      },
-    );
+        messages?.insert(0, botMessage);
+      }
+    }, builder: (context, state) {
+      return Column(
+        children: [
+          if (messages == null)
+            const Expanded(child: MyLoading())
+          else
+            Expanded(child: _buildMessageSegment()),
+          _buildBottomAction(),
+        ],
+      );
+    });
   }
 
   Widget _buildBottomAction() {

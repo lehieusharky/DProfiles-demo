@@ -78,6 +78,7 @@ class _AvatarProfileState extends State<AvatarProfile> {
             alignment: Alignment.bottomLeft,
             children: [
               Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Stack(
                     alignment: Alignment.topRight,

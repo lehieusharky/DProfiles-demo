@@ -32,9 +32,7 @@ class _HomePageState extends State<HomePage>
             slivers: [
               SliverList(
                 delegate: SliverChildListDelegate(
-                  [
-                    const HomeBanner(),
-                  ],
+                  [const HomeBanner()],
                 ),
               ),
               const SliverFillRemaining(
