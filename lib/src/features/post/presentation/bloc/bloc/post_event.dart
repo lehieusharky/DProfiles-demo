@@ -12,5 +12,6 @@ class PostEvent with _$PostEvent {
     List<String>? videoUrl,
   }) = PostCreatePost;
 
-  const factory PostEvent.uploadImages() = PostUploadImages;
+  const factory PostEvent.uploadImages() =
+      PostUploadImages;
 }

@@ -15,18 +15,25 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'seperate_profile.dart';
 
-class SocialMediaComponent extends StatelessWidget {
+class SocialMediaComponent extends StatefulWidget {
   const SocialMediaComponent({Key? key}) : super(key: key);
+
+  @override
+  State<SocialMediaComponent> createState() => _SocialMediaComponentState();
+}
+
+class _SocialMediaComponentState extends State<SocialMediaComponent> {
+  UserInfoModel? userInfo;
 
   @override
   Widget build(BuildContext context) {
     return BlocSelector<ProfileBloc, ProfileState, UserInfoModel?>(
       selector: (state) {
         if (state is ProfileGetUserInfoSuccess) {
-          return state.userInfoModel;
+          userInfo = state.userInfoModel;
         }
 
-        return null;
+        return userInfo;
       },
       builder: (context, state) => Column(
         mainAxisSize: MainAxisSize.min,
@@ -42,18 +49,18 @@ class SocialMediaComponent extends StatelessWidget {
                       .fontTheme(context, weight: FontWeight.bold)
                       .bodyLarge,
                 ),
-                if (state != null)
+                if (userInfo != null)
                   Row(
                     children: [
                       Tuple2(Assets.icons.socialInstagram.path,
-                          state.instagramUrl),
-                      Tuple2(Assets.icons.socialX.path, state.twitterUrl),
-                      Tuple2(
-                          Assets.icons.socialTelegram.path, state.telegramUrl),
-                      Tuple2(
-                          Assets.icons.socialWhatapp.path, state.whatsappUrl),
-                      Tuple2(
-                          Assets.icons.socialLinkedin.path, state.linkedinUrl)
+                          userInfo!.instagramUrl),
+                      Tuple2(Assets.icons.socialX.path, userInfo!.twitterUrl),
+                      Tuple2(Assets.icons.socialTelegram.path,
+                          userInfo!.telegramUrl),
+                      Tuple2(Assets.icons.socialWhatapp.path,
+                          userInfo!.whatsappUrl),
+                      Tuple2(Assets.icons.socialLinkedin.path,
+                          userInfo!.linkedinUrl)
                     ]
                         .map(
                           (e) => Padding(

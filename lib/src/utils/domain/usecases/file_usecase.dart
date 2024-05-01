@@ -5,6 +5,10 @@ import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.
 import 'package:injectable/injectable.dart';
 
 abstract class FileUseCase {
+  Future<Either<String, UploadFileResponse?>> uploadFile();
+
+  Future<Either<String, List<String>>> uploadMultipleFiles();
+
   Future<Either<String, UploadFileResponse?>> uploadImage();
 
   Future<Either<String, List<String>>> uploadMultipleImages();
@@ -15,6 +19,24 @@ class FileUseCaseImpl implements FileUseCase {
   final FileRepository _fileRepository;
 
   FileUseCaseImpl(this._fileRepository);
+
+  @override
+  Future<Either<String, UploadFileResponse?>> uploadFile() async {
+    final result = await _fileRepository.uploadFile();
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, List<String>>> uploadMultipleFiles() async {
+    final result = await _fileRepository.uploadMultipleFiles();
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
 
   @override
   Future<Either<String, UploadFileResponse?>> uploadImage() async {

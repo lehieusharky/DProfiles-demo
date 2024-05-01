@@ -146,11 +146,19 @@ class _FormCreatePostState extends State<FormCreatePost> {
 
   void _save(BuildContext context) {
     if (keyForm.currentState?.validate() ?? false) {
-      context.read<PostBloc>().add(PostCreatePost(
-            userID: widget.userID,
-            content: _contentController.text.trim(),
-            imageUrl: imagesUrl,
-          ));
+      if (imagesUrl.isEmpty) {
+        showErrorDialog(
+          context,
+          title: 'Post failed',
+          description: 'At least at 1 image',
+        );
+      } else {
+        context.read<PostBloc>().add(PostCreatePost(
+              userID: widget.userID,
+              content: _contentController.text.trim(),
+              imageUrl: imagesUrl,
+            ));
+      }
     }
   }
 }

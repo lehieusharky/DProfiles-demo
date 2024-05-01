@@ -1,7 +1,7 @@
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 
 abstract class PostDataSource {
-  Future<BaseResponse> getUserPosts();
+  Future<BaseResponse> getUserPosts({int? page, int? limit});
 
   Future<BaseResponse> post({
     required int userID,

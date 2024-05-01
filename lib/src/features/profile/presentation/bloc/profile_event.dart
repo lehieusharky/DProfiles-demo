@@ -50,5 +50,6 @@ class ProfileEvent with _$ProfileEvent {
   const factory ProfileEvent.updateUserInfo(UserInfoModel userInfoModel) =
       ProfileUpdateUserInfo;
 
-  const factory ProfileEvent.getUserPosts() = ProfileGetUserPosts;
+  const factory ProfileEvent.getUserPosts({int? page, int? limit}) =
+      ProfileGetUserPosts;
 }

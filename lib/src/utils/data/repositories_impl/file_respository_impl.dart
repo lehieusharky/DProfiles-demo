@@ -13,6 +13,30 @@ class FileRepositoryImpl implements FileRepository {
   FileRepositoryImpl(this._fileDataSource);
 
   @override
+  Future<Either<FileFailure, UploadFileResponse?>> uploadFile() async {
+    try {
+      final response = await _fileDataSource.uploadFile();
+
+      return Right(response);
+    } on DioException catch (e) {
+      return Left(FileFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
+  Future<Either<FileFailure, List<String>>> uploadMultipleFiles() async {
+    try {
+      final response = await _fileDataSource.uploadMultipleFiles();
+
+      return Right(response);
+    } on DioException catch (e) {
+      return Left(FileFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
+    }
+  }
+
+  @override
   Future<Either<FileFailure, UploadFileResponse?>> uploadImage() async {
     try {
       final response = await _fileDataSource.uploadImage();
@@ -26,7 +50,7 @@ class FileRepositoryImpl implements FileRepository {
 
   @override
   Future<Either<FileFailure, List<String>>> uploadMultipleImages() async {
-    try {
+     try {
       final response = await _fileDataSource.uploadMultipleImages();
 
       return Right(response);

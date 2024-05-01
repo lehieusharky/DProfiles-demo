@@ -6,7 +6,7 @@ import 'package:demo_dprofiles/src/utils/https/my_response/error_response.dart';
 import 'package:injectable/injectable.dart';
 
 abstract class PostUseCase {
-  Future<Either<String, BaseResponse>> getUserPosts();
+  Future<Either<String, BaseResponse>> getUserPosts({int? page, int? limit});
 
   Future<Either<List<String>, BaseResponse>> post({
     required int userID,
@@ -24,8 +24,12 @@ class PostUseCaseImpl implements PostUseCase {
   PostUseCaseImpl(this._postRepository);
 
   @override
-  Future<Either<String, BaseResponse>> getUserPosts() async {
-    final result = await _postRepository.getUserPosts();
+  Future<Either<String, BaseResponse>> getUserPosts(
+      {int? page, int? limit}) async {
+    final result = await _postRepository.getUserPosts(
+      page: page,
+      limit: limit,
+    );
 
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message!),

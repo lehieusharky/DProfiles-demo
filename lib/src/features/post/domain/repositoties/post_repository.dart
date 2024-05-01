@@ -3,7 +3,8 @@ import 'package:demo_dprofiles/src/utils/domain/failures/app_failure.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 
 abstract class PostRepository {
-  Future<Either<PostFailure, BaseResponse>> getUserPosts();
+  Future<Either<PostFailure, BaseResponse>> getUserPosts(
+      {int? page, int? limit});
 
   Future<Either<PostFailure, BaseResponse>> post({
     required int userID,

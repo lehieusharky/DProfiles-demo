@@ -7,9 +7,12 @@ import 'package:injectable/injectable.dart';
 @Injectable(as: PostDataSource)
 class PostDataSourceImpl implements PostDataSource {
   @override
-  Future<BaseResponse> getUserPosts() async {
+  Future<BaseResponse> getUserPosts({int? page, int? limit}) async {
     try {
-      final response = await MyHttp.rl().getUserPosts();
+      final response = await MyHttp.rl().getUserPosts(
+        page: page,
+        limit: limit,
+      );
 
       return response;
     } on DioException {

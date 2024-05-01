@@ -1,6 +1,4 @@
 import 'dart:async';
-
-import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/domain/usecases/edit_profile_usecase.dart';
 import 'package:demo_dprofiles/src/features/post/data/models/post_model.dart';
@@ -29,6 +27,8 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   final FileUseCase fileUseCase;
   final EditProfileUseCase editProfileUseCase;
   final PostUseCase postUseCase;
+
+  int _currentPagePosts = 0;
 
   ProfileBloc(
     this.profileUseCase,
@@ -304,7 +304,7 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
   FutureOr<void> _getUserPosts(
       ProfileGetUserPosts event, Emitter<ProfileState> emit) async {
     emit(const ProfileLoading());
-    final status = await postUseCase.getUserPosts();
+    final status = await postUseCase.getUserPosts(page: ++_currentPagePosts);
 
     status.fold(
         (l) => emit(const ProfileError(

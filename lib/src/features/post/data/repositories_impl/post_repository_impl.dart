@@ -14,9 +14,11 @@ class PostRespotoryImpl implements PostRepository {
   PostRespotoryImpl(this._postDataSource);
 
   @override
-  Future<Either<PostFailure, BaseResponse>> getUserPosts() async {
+  Future<Either<PostFailure, BaseResponse>> getUserPosts(
+      {int? page, int? limit}) async {
     try {
-      final response = await _postDataSource.getUserPosts();
+      final response =
+          await _postDataSource.getUserPosts(page: page, limit: limit);
 
       return Right(response);
     } on DioException catch (e) {
@@ -43,8 +45,8 @@ class PostRespotoryImpl implements PostRepository {
 
       return Right(response);
     } on DioException catch (e) {
-      return Left(PostFailure(
-          response: ErrorResponse.fromJson(e.response!.data)));
+      return Left(
+          PostFailure(response: ErrorResponse.fromJson(e.response!.data)));
     }
   }
 }
