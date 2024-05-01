@@ -6,7 +6,6 @@ import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model
 import 'package:demo_dprofiles/src/features/profile/domain/repositories/profile_repository.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/error_response.dart';
-import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 import 'package:injectable/injectable.dart';
 
 abstract class ProfileUseCase {
@@ -38,6 +37,10 @@ abstract class ProfileUseCase {
 
   Future<Either<String, BaseResponse>> updateUserCertificate(
       CertificateModel certificateModel);
+
+  Future<Either<String, BaseResponse>> getBanner();
+
+  Future<Either<String, BaseResponse>> postBanner(String bannenUrlBanner);
 }
 
 @Injectable(as: ProfileUseCase)
@@ -162,6 +165,25 @@ class ProfileUseCaseImpl implements ProfileUseCase {
       ExperienceModel experienceModel) async {
     final result =
         await _profileRepository.updateUserExperience(experienceModel);
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> getBanner() async {
+    final result = await _profileRepository.getBanner();
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> postBanner(
+      String bannenUrlBanner) async {
+    final result = await _profileRepository.postBanner(bannenUrlBanner);
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),

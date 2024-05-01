@@ -1,9 +1,11 @@
 import 'dart:async';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/usecases/create_digital_profile_usecase.dart';
 import 'package:demo_dprofiles/src/features/edit_profile/domain/usecases/edit_profile_usecase.dart';
 import 'package:demo_dprofiles/src/features/post/data/models/post_model.dart';
 import 'package:demo_dprofiles/src/features/post/domain/usecases/post_usecase.dart';
+import 'package:demo_dprofiles/src/features/profile/data/models/banner_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
@@ -44,6 +46,9 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     on<ProfileGetUserLanguages>(_getLanguages);
     on<ProfileGetUserSkills>(_getSkills);
     on<ProfileUploadAvatar>(_uploadAvatar);
+    on<ProfileUploadBanner>(_uploadBanner);
+    on<ProfileUpdateBanner>(_updateBanner);
+    on<ProfileGetBanner>(_getBanner);
     on<ProfileCheckDigitalProfileAvailable>(_checkDigitalProfileAvailable);
     on<ProfileGetMetaLanguage>(_getMetaLanguage);
 
@@ -161,6 +166,27 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
     result.fold(
         (l) => emit(ProfileError(message: l, title: 'Upload avatar failed')),
         (r) => emit(ProfileUploadAvatarSuccess(r)));
+  }
+
+  FutureOr<void> _uploadBanner(
+      ProfileUploadBanner event, Emitter<ProfileState> emit) async {
+    emit(const ProfileLoading());
+
+    final result = await fileUseCase.uploadImage();
+
+    result.fold(
+        (l) => emit(ProfileError(message: l, title: 'Upload image failed')),
+        (r) => emit(ProfilUploadBannerSuccess(r!.objectKey!)));
+  }
+
+  FutureOr<void> _updateBanner(
+      ProfileUpdateBanner event, Emitter<ProfileState> emit) async {
+    final postResult = await profileUseCase.postBanner(event.bannerUrlKey);
+
+    postResult.fold(
+      (l1) => emit(ProfileError(message: l1, title: 'Upload banner failed')),
+      (r2) => emit(ProfileUpdateBannerSuccess(BannerModel.fromJson(r2.data))),
+    );
   }
 
   FutureOr<void> _checkDigitalProfileAvailable(
@@ -287,6 +313,22 @@ class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
       final posts = data.map((e) => PostModel.fromJson(e)).toList();
 
       emit(ProfileGetUserPostsSuccess(posts));
+    });
+  }
+
+  FutureOr<void> _getBanner(
+      ProfileGetBanner event, Emitter<ProfileState> emit) async {
+    emit(const ProfileLoading());
+    final status = await profileUseCase.getBanner();
+
+    status.fold(
+        (l) => emit(const ProfileError(
+            message: 'get user banner failed', title: 'Failed')), (r) {
+      final data = r.data as List;
+
+      final banners = data.map((e) => BannerModel.fromJson(e)).toList();
+
+      emit(ProfileGetBannerSuccess(banners.first));
     });
   }
 }

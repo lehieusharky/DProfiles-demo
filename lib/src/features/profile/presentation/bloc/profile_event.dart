@@ -18,6 +18,13 @@ class ProfileEvent with _$ProfileEvent {
 
   const factory ProfileEvent.uploadAvatar() = ProfileUploadAvatar;
 
+  const factory ProfileEvent.uploadBanner() = ProfileUploadBanner;
+
+  const factory ProfileEvent.updateBanner(String bannerUrlKey) =
+      ProfileUpdateBanner;
+
+  const factory ProfileEvent.getBanner() = ProfileGetBanner;
+
   const factory ProfileEvent.checkDigitalProfileAvailable() =
       ProfileCheckDigitalProfileAvailable;
 
@@ -43,6 +50,5 @@ class ProfileEvent with _$ProfileEvent {
   const factory ProfileEvent.updateUserInfo(UserInfoModel userInfoModel) =
       ProfileUpdateUserInfo;
 
-  const factory ProfileEvent.getUserPosts() =
-      ProfileGetUserPosts;
+  const factory ProfileEvent.getUserPosts() = ProfileGetUserPosts;
 }

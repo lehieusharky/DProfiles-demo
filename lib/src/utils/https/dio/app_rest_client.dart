@@ -38,6 +38,12 @@ abstract class RestClient {
   @DELETE('/api/v1/user')
   Future<BaseResponse> deleteUser();
 
+  @GET('/api/v1/user-banner')
+  Future<BaseResponse> getBanner();
+
+  @POST('/api/v1/user-banner')
+  Future<BaseResponse> postBanner(@Body() Map<String, dynamic> body);
+
   // education
 
   @POST('/api/v1/user-education')

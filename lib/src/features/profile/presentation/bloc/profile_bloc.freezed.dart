@@ -26,6 +26,9 @@ mixin _$ProfileEvent {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -51,6 +54,9 @@ mixin _$ProfileEvent {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -73,6 +79,9 @@ mixin _$ProfileEvent {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -98,6 +107,9 @@ mixin _$ProfileEvent {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -124,6 +136,9 @@ mixin _$ProfileEvent {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -148,6 +163,9 @@ mixin _$ProfileEvent {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -228,6 +246,9 @@ class _$StartedImpl implements _Started {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -256,6 +277,9 @@ class _$StartedImpl implements _Started {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -281,6 +305,9 @@ class _$StartedImpl implements _Started {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -312,6 +339,9 @@ class _$StartedImpl implements _Started {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -341,6 +371,9 @@ class _$StartedImpl implements _Started {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -368,6 +401,9 @@ class _$StartedImpl implements _Started {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -438,6 +474,9 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -466,6 +505,9 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -491,6 +533,9 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -522,6 +567,9 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -551,6 +599,9 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -578,6 +629,9 @@ class _$ProfileGetUserInfoImpl implements ProfileGetUserInfo {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -651,6 +705,9 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -679,6 +736,9 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -704,6 +764,9 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -735,6 +798,9 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -764,6 +830,9 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -791,6 +860,9 @@ class _$ProfileGetUserExperienceImpl implements ProfileGetUserExperience {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -864,6 +936,9 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -892,6 +967,9 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -917,6 +995,9 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -948,6 +1029,9 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -977,6 +1061,9 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -1004,6 +1091,9 @@ class _$ProfileGetUserEducationsImpl implements ProfileGetUserEducations {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -1077,6 +1167,9 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -1105,6 +1198,9 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -1130,6 +1226,9 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -1161,6 +1260,9 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -1190,6 +1292,9 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -1217,6 +1322,9 @@ class _$ProfileGetUserCertificatesImpl implements ProfileGetUserCertificates {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -1288,6 +1396,9 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -1316,6 +1427,9 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -1341,6 +1455,9 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -1372,6 +1489,9 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -1401,6 +1521,9 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -1428,6 +1551,9 @@ class _$ProfileGetUserSkillsImpl implements ProfileGetUserSkills {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -1501,6 +1627,9 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -1529,6 +1658,9 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -1554,6 +1686,9 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -1585,6 +1720,9 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -1614,6 +1752,9 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -1641,6 +1782,9 @@ class _$ProfileGetUserLanguagesImpl implements ProfileGetUserLanguages {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -1712,6 +1856,9 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -1740,6 +1887,9 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -1765,6 +1915,9 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -1796,6 +1949,9 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -1825,6 +1981,9 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -1852,6 +2011,9 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -1874,6 +2036,725 @@ class _$ProfileUploadAvatarImpl implements ProfileUploadAvatar {
 
 abstract class ProfileUploadAvatar implements ProfileEvent {
   const factory ProfileUploadAvatar() = _$ProfileUploadAvatarImpl;
+}
+
+/// @nodoc
+abstract class _$$ProfileUploadBannerImplCopyWith<$Res> {
+  factory _$$ProfileUploadBannerImplCopyWith(_$ProfileUploadBannerImpl value,
+          $Res Function(_$ProfileUploadBannerImpl) then) =
+      __$$ProfileUploadBannerImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ProfileUploadBannerImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileUploadBannerImpl>
+    implements _$$ProfileUploadBannerImplCopyWith<$Res> {
+  __$$ProfileUploadBannerImplCopyWithImpl(_$ProfileUploadBannerImpl _value,
+      $Res Function(_$ProfileUploadBannerImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ProfileUploadBannerImpl implements ProfileUploadBanner {
+  const _$ProfileUploadBannerImpl();
+
+  @override
+  String toString() {
+    return 'ProfileEvent.uploadBanner()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileUploadBannerImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
+    required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        updateUserExperience,
+    required TResult Function(EducationModel educationModel)
+        updateUserEducation,
+    required TResult Function(CertificateModel certificateModel)
+        updateUserCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
+  }) {
+    return uploadBanner();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
+    TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
+    TResult? Function(ExperienceModel experienceModel)? updateUserExperience,
+    TResult? Function(EducationModel educationModel)? updateUserEducation,
+    TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
+  }) {
+    return uploadBanner?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
+    TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
+    TResult Function(ExperienceModel experienceModel)? updateUserExperience,
+    TResult Function(EducationModel educationModel)? updateUserEducation,
+    TResult Function(CertificateModel certificateModel)? updateUserCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
+    required TResult orElse(),
+  }) {
+    if (uploadBanner != null) {
+      return uploadBanner();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(ProfileGetUserSkills value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
+    required TResult Function(ProfileCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
+    required TResult Function(ProfileUpdateUserExperience value)
+        updateUserExperience,
+    required TResult Function(ProfileUpdateUserEducation value)
+        updateUserEducation,
+    required TResult Function(ProfileUpdateUserCertificate value)
+        updateUserCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
+  }) {
+    return uploadBanner(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult? Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
+    TResult? Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
+    TResult? Function(ProfileUpdateUserExperience value)? updateUserExperience,
+    TResult? Function(ProfileUpdateUserEducation value)? updateUserEducation,
+    TResult? Function(ProfileUpdateUserCertificate value)?
+        updateUserCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
+  }) {
+    return uploadBanner?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
+    TResult Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
+    TResult Function(ProfileUpdateUserExperience value)? updateUserExperience,
+    TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
+    TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
+    required TResult orElse(),
+  }) {
+    if (uploadBanner != null) {
+      return uploadBanner(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileUploadBanner implements ProfileEvent {
+  const factory ProfileUploadBanner() = _$ProfileUploadBannerImpl;
+}
+
+/// @nodoc
+abstract class _$$ProfileUpdateBannerImplCopyWith<$Res> {
+  factory _$$ProfileUpdateBannerImplCopyWith(_$ProfileUpdateBannerImpl value,
+          $Res Function(_$ProfileUpdateBannerImpl) then) =
+      __$$ProfileUpdateBannerImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String bannerUrlKey});
+}
+
+/// @nodoc
+class __$$ProfileUpdateBannerImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileUpdateBannerImpl>
+    implements _$$ProfileUpdateBannerImplCopyWith<$Res> {
+  __$$ProfileUpdateBannerImplCopyWithImpl(_$ProfileUpdateBannerImpl _value,
+      $Res Function(_$ProfileUpdateBannerImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? bannerUrlKey = null,
+  }) {
+    return _then(_$ProfileUpdateBannerImpl(
+      null == bannerUrlKey
+          ? _value.bannerUrlKey
+          : bannerUrlKey // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfileUpdateBannerImpl implements ProfileUpdateBanner {
+  const _$ProfileUpdateBannerImpl(this.bannerUrlKey);
+
+  @override
+  final String bannerUrlKey;
+
+  @override
+  String toString() {
+    return 'ProfileEvent.updateBanner(bannerUrlKey: $bannerUrlKey)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileUpdateBannerImpl &&
+            (identical(other.bannerUrlKey, bannerUrlKey) ||
+                other.bannerUrlKey == bannerUrlKey));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, bannerUrlKey);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileUpdateBannerImplCopyWith<_$ProfileUpdateBannerImpl> get copyWith =>
+      __$$ProfileUpdateBannerImplCopyWithImpl<_$ProfileUpdateBannerImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
+    required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        updateUserExperience,
+    required TResult Function(EducationModel educationModel)
+        updateUserEducation,
+    required TResult Function(CertificateModel certificateModel)
+        updateUserCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
+  }) {
+    return updateBanner(bannerUrlKey);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
+    TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
+    TResult? Function(ExperienceModel experienceModel)? updateUserExperience,
+    TResult? Function(EducationModel educationModel)? updateUserEducation,
+    TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
+  }) {
+    return updateBanner?.call(bannerUrlKey);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
+    TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
+    TResult Function(ExperienceModel experienceModel)? updateUserExperience,
+    TResult Function(EducationModel educationModel)? updateUserEducation,
+    TResult Function(CertificateModel certificateModel)? updateUserCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
+    required TResult orElse(),
+  }) {
+    if (updateBanner != null) {
+      return updateBanner(bannerUrlKey);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(ProfileGetUserSkills value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
+    required TResult Function(ProfileCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
+    required TResult Function(ProfileUpdateUserExperience value)
+        updateUserExperience,
+    required TResult Function(ProfileUpdateUserEducation value)
+        updateUserEducation,
+    required TResult Function(ProfileUpdateUserCertificate value)
+        updateUserCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
+  }) {
+    return updateBanner(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult? Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
+    TResult? Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
+    TResult? Function(ProfileUpdateUserExperience value)? updateUserExperience,
+    TResult? Function(ProfileUpdateUserEducation value)? updateUserEducation,
+    TResult? Function(ProfileUpdateUserCertificate value)?
+        updateUserCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
+  }) {
+    return updateBanner?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
+    TResult Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
+    TResult Function(ProfileUpdateUserExperience value)? updateUserExperience,
+    TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
+    TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
+    required TResult orElse(),
+  }) {
+    if (updateBanner != null) {
+      return updateBanner(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileUpdateBanner implements ProfileEvent {
+  const factory ProfileUpdateBanner(final String bannerUrlKey) =
+      _$ProfileUpdateBannerImpl;
+
+  String get bannerUrlKey;
+  @JsonKey(ignore: true)
+  _$$ProfileUpdateBannerImplCopyWith<_$ProfileUpdateBannerImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileGetBannerImplCopyWith<$Res> {
+  factory _$$ProfileGetBannerImplCopyWith(_$ProfileGetBannerImpl value,
+          $Res Function(_$ProfileGetBannerImpl) then) =
+      __$$ProfileGetBannerImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ProfileGetBannerImplCopyWithImpl<$Res>
+    extends _$ProfileEventCopyWithImpl<$Res, _$ProfileGetBannerImpl>
+    implements _$$ProfileGetBannerImplCopyWith<$Res> {
+  __$$ProfileGetBannerImplCopyWithImpl(_$ProfileGetBannerImpl _value,
+      $Res Function(_$ProfileGetBannerImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ProfileGetBannerImpl implements ProfileGetBanner {
+  const _$ProfileGetBannerImpl();
+
+  @override
+  String toString() {
+    return 'ProfileEvent.getBanner()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ProfileGetBannerImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function() getUserinfo,
+    required TResult Function() getUserExperiences,
+    required TResult Function() getUserEducations,
+    required TResult Function() getUserCertificates,
+    required TResult Function() getUserSkills,
+    required TResult Function() getUserLanguages,
+    required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
+    required TResult Function() checkDigitalProfileAvailable,
+    required TResult Function(String? search) getMetaLanguage,
+    required TResult Function(int id) deleteEducation,
+    required TResult Function(int id) deleteCertificate,
+    required TResult Function(int id) deleteExperience,
+    required TResult Function(ExperienceModel experienceModel)
+        updateUserExperience,
+    required TResult Function(EducationModel educationModel)
+        updateUserEducation,
+    required TResult Function(CertificateModel certificateModel)
+        updateUserCertificate,
+    required TResult Function(UserInfoModel userInfoModel) updateUserInfo,
+    required TResult Function() getUserPosts,
+  }) {
+    return getBanner();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function()? getUserinfo,
+    TResult? Function()? getUserExperiences,
+    TResult? Function()? getUserEducations,
+    TResult? Function()? getUserCertificates,
+    TResult? Function()? getUserSkills,
+    TResult? Function()? getUserLanguages,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
+    TResult? Function()? checkDigitalProfileAvailable,
+    TResult? Function(String? search)? getMetaLanguage,
+    TResult? Function(int id)? deleteEducation,
+    TResult? Function(int id)? deleteCertificate,
+    TResult? Function(int id)? deleteExperience,
+    TResult? Function(ExperienceModel experienceModel)? updateUserExperience,
+    TResult? Function(EducationModel educationModel)? updateUserEducation,
+    TResult? Function(CertificateModel certificateModel)? updateUserCertificate,
+    TResult? Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult? Function()? getUserPosts,
+  }) {
+    return getBanner?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function()? getUserinfo,
+    TResult Function()? getUserExperiences,
+    TResult Function()? getUserEducations,
+    TResult Function()? getUserCertificates,
+    TResult Function()? getUserSkills,
+    TResult Function()? getUserLanguages,
+    TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
+    TResult Function()? checkDigitalProfileAvailable,
+    TResult Function(String? search)? getMetaLanguage,
+    TResult Function(int id)? deleteEducation,
+    TResult Function(int id)? deleteCertificate,
+    TResult Function(int id)? deleteExperience,
+    TResult Function(ExperienceModel experienceModel)? updateUserExperience,
+    TResult Function(EducationModel educationModel)? updateUserEducation,
+    TResult Function(CertificateModel certificateModel)? updateUserCertificate,
+    TResult Function(UserInfoModel userInfoModel)? updateUserInfo,
+    TResult Function()? getUserPosts,
+    required TResult orElse(),
+  }) {
+    if (getBanner != null) {
+      return getBanner();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(ProfileGetUserInfo value) getUserinfo,
+    required TResult Function(ProfileGetUserExperience value)
+        getUserExperiences,
+    required TResult Function(ProfileGetUserEducations value) getUserEducations,
+    required TResult Function(ProfileGetUserCertificates value)
+        getUserCertificates,
+    required TResult Function(ProfileGetUserSkills value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
+    required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
+    required TResult Function(ProfileCheckDigitalProfileAvailable value)
+        checkDigitalProfileAvailable,
+    required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
+    required TResult Function(ProfileDeleteEducation value) deleteEducation,
+    required TResult Function(ProfileDeleteCertificate value) deleteCertificate,
+    required TResult Function(ProfileDeleteExperience value) deleteExperience,
+    required TResult Function(ProfileUpdateUserExperience value)
+        updateUserExperience,
+    required TResult Function(ProfileUpdateUserEducation value)
+        updateUserEducation,
+    required TResult Function(ProfileUpdateUserCertificate value)
+        updateUserCertificate,
+    required TResult Function(ProfileUpdateUserInfo value) updateUserInfo,
+    required TResult Function(ProfileGetUserPosts value) getUserPosts,
+  }) {
+    return getBanner(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult? Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult? Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult? Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult? Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
+    TResult? Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult? Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult? Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult? Function(ProfileDeleteExperience value)? deleteExperience,
+    TResult? Function(ProfileUpdateUserExperience value)? updateUserExperience,
+    TResult? Function(ProfileUpdateUserEducation value)? updateUserEducation,
+    TResult? Function(ProfileUpdateUserCertificate value)?
+        updateUserCertificate,
+    TResult? Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult? Function(ProfileGetUserPosts value)? getUserPosts,
+  }) {
+    return getBanner?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(ProfileGetUserInfo value)? getUserinfo,
+    TResult Function(ProfileGetUserExperience value)? getUserExperiences,
+    TResult Function(ProfileGetUserEducations value)? getUserEducations,
+    TResult Function(ProfileGetUserCertificates value)? getUserCertificates,
+    TResult Function(ProfileGetUserSkills value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
+    TResult Function(ProfileCheckDigitalProfileAvailable value)?
+        checkDigitalProfileAvailable,
+    TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
+    TResult Function(ProfileDeleteEducation value)? deleteEducation,
+    TResult Function(ProfileDeleteCertificate value)? deleteCertificate,
+    TResult Function(ProfileDeleteExperience value)? deleteExperience,
+    TResult Function(ProfileUpdateUserExperience value)? updateUserExperience,
+    TResult Function(ProfileUpdateUserEducation value)? updateUserEducation,
+    TResult Function(ProfileUpdateUserCertificate value)? updateUserCertificate,
+    TResult Function(ProfileUpdateUserInfo value)? updateUserInfo,
+    TResult Function(ProfileGetUserPosts value)? getUserPosts,
+    required TResult orElse(),
+  }) {
+    if (getBanner != null) {
+      return getBanner(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileGetBanner implements ProfileEvent {
+  const factory ProfileGetBanner() = _$ProfileGetBannerImpl;
 }
 
 /// @nodoc
@@ -1927,6 +2808,9 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -1955,6 +2839,9 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -1980,6 +2867,9 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -2011,6 +2901,9 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -2040,6 +2933,9 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -2067,6 +2963,9 @@ class _$ProfileCheckDigitalProfileAvailableImpl
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -2167,6 +3066,9 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -2195,6 +3097,9 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -2220,6 +3125,9 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -2251,6 +3159,9 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -2280,6 +3191,9 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -2307,6 +3221,9 @@ class _$ProfileGetMetaLanguageImpl implements ProfileGetMetaLanguage {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -2412,6 +3329,9 @@ class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -2440,6 +3360,9 @@ class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -2465,6 +3388,9 @@ class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -2496,6 +3422,9 @@ class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -2525,6 +3454,9 @@ class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -2552,6 +3484,9 @@ class _$ProfileDeleteEducationImpl implements ProfileDeleteEducation {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -2657,6 +3592,9 @@ class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -2685,6 +3623,9 @@ class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -2710,6 +3651,9 @@ class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -2741,6 +3685,9 @@ class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -2770,6 +3717,9 @@ class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -2797,6 +3747,9 @@ class _$ProfileDeleteCertificateImpl implements ProfileDeleteCertificate {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -2902,6 +3855,9 @@ class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -2930,6 +3886,9 @@ class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -2955,6 +3914,9 @@ class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -2986,6 +3948,9 @@ class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -3015,6 +3980,9 @@ class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -3042,6 +4010,9 @@ class _$ProfileDeleteExperienceImpl implements ProfileDeleteExperience {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -3158,6 +4129,9 @@ class _$ProfileUpdateUserExperienceImpl implements ProfileUpdateUserExperience {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -3186,6 +4160,9 @@ class _$ProfileUpdateUserExperienceImpl implements ProfileUpdateUserExperience {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -3211,6 +4188,9 @@ class _$ProfileUpdateUserExperienceImpl implements ProfileUpdateUserExperience {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -3242,6 +4222,9 @@ class _$ProfileUpdateUserExperienceImpl implements ProfileUpdateUserExperience {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -3271,6 +4254,9 @@ class _$ProfileUpdateUserExperienceImpl implements ProfileUpdateUserExperience {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -3298,6 +4284,9 @@ class _$ProfileUpdateUserExperienceImpl implements ProfileUpdateUserExperience {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -3415,6 +4404,9 @@ class _$ProfileUpdateUserEducationImpl implements ProfileUpdateUserEducation {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -3443,6 +4435,9 @@ class _$ProfileUpdateUserEducationImpl implements ProfileUpdateUserEducation {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -3468,6 +4463,9 @@ class _$ProfileUpdateUserEducationImpl implements ProfileUpdateUserEducation {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -3499,6 +4497,9 @@ class _$ProfileUpdateUserEducationImpl implements ProfileUpdateUserEducation {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -3528,6 +4529,9 @@ class _$ProfileUpdateUserEducationImpl implements ProfileUpdateUserEducation {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -3555,6 +4559,9 @@ class _$ProfileUpdateUserEducationImpl implements ProfileUpdateUserEducation {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -3673,6 +4680,9 @@ class _$ProfileUpdateUserCertificateImpl
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -3701,6 +4711,9 @@ class _$ProfileUpdateUserCertificateImpl
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -3726,6 +4739,9 @@ class _$ProfileUpdateUserCertificateImpl
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -3757,6 +4773,9 @@ class _$ProfileUpdateUserCertificateImpl
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -3786,6 +4805,9 @@ class _$ProfileUpdateUserCertificateImpl
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -3813,6 +4835,9 @@ class _$ProfileUpdateUserCertificateImpl
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -3930,6 +4955,9 @@ class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -3958,6 +4986,9 @@ class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -3983,6 +5014,9 @@ class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -4014,6 +5048,9 @@ class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -4043,6 +5080,9 @@ class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -4070,6 +5110,9 @@ class _$ProfileUpdateUserInfoImpl implements ProfileUpdateUserInfo {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -4147,6 +5190,9 @@ class _$ProfileGetUserPostsImpl implements ProfileGetUserPosts {
     required TResult Function() getUserSkills,
     required TResult Function() getUserLanguages,
     required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+    required TResult Function(String bannerUrlKey) updateBanner,
+    required TResult Function() getBanner,
     required TResult Function() checkDigitalProfileAvailable,
     required TResult Function(String? search) getMetaLanguage,
     required TResult Function(int id) deleteEducation,
@@ -4175,6 +5221,9 @@ class _$ProfileGetUserPostsImpl implements ProfileGetUserPosts {
     TResult? Function()? getUserSkills,
     TResult? Function()? getUserLanguages,
     TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+    TResult? Function(String bannerUrlKey)? updateBanner,
+    TResult? Function()? getBanner,
     TResult? Function()? checkDigitalProfileAvailable,
     TResult? Function(String? search)? getMetaLanguage,
     TResult? Function(int id)? deleteEducation,
@@ -4200,6 +5249,9 @@ class _$ProfileGetUserPostsImpl implements ProfileGetUserPosts {
     TResult Function()? getUserSkills,
     TResult Function()? getUserLanguages,
     TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    TResult Function(String bannerUrlKey)? updateBanner,
+    TResult Function()? getBanner,
     TResult Function()? checkDigitalProfileAvailable,
     TResult Function(String? search)? getMetaLanguage,
     TResult Function(int id)? deleteEducation,
@@ -4231,6 +5283,9 @@ class _$ProfileGetUserPostsImpl implements ProfileGetUserPosts {
     required TResult Function(ProfileGetUserSkills value) getUserSkills,
     required TResult Function(ProfileGetUserLanguages value) getUserLanguages,
     required TResult Function(ProfileUploadAvatar value) uploadAvatar,
+    required TResult Function(ProfileUploadBanner value) uploadBanner,
+    required TResult Function(ProfileUpdateBanner value) updateBanner,
+    required TResult Function(ProfileGetBanner value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailable value)
         checkDigitalProfileAvailable,
     required TResult Function(ProfileGetMetaLanguage value) getMetaLanguage,
@@ -4260,6 +5315,9 @@ class _$ProfileGetUserPostsImpl implements ProfileGetUserPosts {
     TResult? Function(ProfileGetUserSkills value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult? Function(ProfileUploadBanner value)? uploadBanner,
+    TResult? Function(ProfileUpdateBanner value)? updateBanner,
+    TResult? Function(ProfileGetBanner value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult? Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -4287,6 +5345,9 @@ class _$ProfileGetUserPostsImpl implements ProfileGetUserPosts {
     TResult Function(ProfileGetUserSkills value)? getUserSkills,
     TResult Function(ProfileGetUserLanguages value)? getUserLanguages,
     TResult Function(ProfileUploadAvatar value)? uploadAvatar,
+    TResult Function(ProfileUploadBanner value)? uploadBanner,
+    TResult Function(ProfileUpdateBanner value)? updateBanner,
+    TResult Function(ProfileGetBanner value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailable value)?
         checkDigitalProfileAvailable,
     TResult Function(ProfileGetMetaLanguage value)? getMetaLanguage,
@@ -4330,6 +5391,9 @@ mixin _$ProfileState {
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -4362,6 +5426,9 @@ mixin _$ProfileState {
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -4393,6 +5460,9 @@ mixin _$ProfileState {
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -4426,6 +5496,11 @@ mixin _$ProfileState {
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -4463,6 +5538,9 @@ mixin _$ProfileState {
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -4499,6 +5577,9 @@ mixin _$ProfileState {
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -4593,6 +5674,9 @@ class _$InitialImpl implements _Initial {
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -4628,6 +5712,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -4662,6 +5749,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -4701,6 +5791,11 @@ class _$InitialImpl implements _Initial {
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -4741,6 +5836,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -4780,6 +5878,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -4898,6 +5999,9 @@ class _$ProfileErrorImpl implements ProfileError {
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -4933,6 +6037,9 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -4967,6 +6074,9 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -5006,6 +6116,11 @@ class _$ProfileErrorImpl implements ProfileError {
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -5046,6 +6161,9 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -5085,6 +6203,9 @@ class _$ProfileErrorImpl implements ProfileError {
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -5177,6 +6298,9 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -5212,6 +6336,9 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -5246,6 +6373,9 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -5285,6 +6415,11 @@ class _$ProfileLoadingImpl implements ProfileLoading {
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -5325,6 +6460,9 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -5364,6 +6502,9 @@ class _$ProfileLoadingImpl implements ProfileLoading {
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -5488,6 +6629,9 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -5523,6 +6667,9 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -5557,6 +6704,9 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -5596,6 +6746,11 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -5636,6 +6791,9 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -5675,6 +6833,9 @@ class _$ProfileGetUserInfoSuccessImpl implements ProfileGetUserInfoSuccess {
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -5806,6 +6967,9 @@ class _$ProfileGetUserExperienceSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -5841,6 +7005,9 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -5875,6 +7042,9 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -5914,6 +7084,11 @@ class _$ProfileGetUserExperienceSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -5954,6 +7129,9 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -5993,6 +7171,9 @@ class _$ProfileGetUserExperienceSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -6126,6 +7307,9 @@ class _$ProfileGetUserEducationsSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -6161,6 +7345,9 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -6195,6 +7382,9 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -6234,6 +7424,11 @@ class _$ProfileGetUserEducationsSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -6274,6 +7469,9 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -6313,6 +7511,9 @@ class _$ProfileGetUserEducationsSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -6446,6 +7647,9 @@ class _$ProfileGetUserCertificatesSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -6481,6 +7685,9 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -6515,6 +7722,9 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -6554,6 +7764,11 @@ class _$ProfileGetUserCertificatesSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -6594,6 +7809,9 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -6633,6 +7851,9 @@ class _$ProfileGetUserCertificatesSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -6763,6 +7984,9 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -6798,6 +8022,9 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -6832,6 +8059,9 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -6871,6 +8101,11 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -6911,6 +8146,9 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -6950,6 +8188,9 @@ class _$ProfileGetUserSkillsSuccessImpl implements ProfileGetUserSkillsSuccess {
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -7082,6 +8323,9 @@ class _$ProfileGetUserLanguagesSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -7117,6 +8361,9 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -7151,6 +8398,9 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -7190,6 +8440,11 @@ class _$ProfileGetUserLanguagesSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -7230,6 +8485,9 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -7269,6 +8527,9 @@ class _$ProfileGetUserLanguagesSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -7406,6 +8667,9 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -7441,6 +8705,9 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -7475,6 +8742,9 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -7514,6 +8784,11 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -7554,6 +8829,9 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -7593,6 +8871,9 @@ class _$ProfileUploadAvatarSuccessImpl implements ProfileUploadAvatarSuccess {
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -7628,6 +8909,1006 @@ abstract class ProfileUploadAvatarSuccess implements ProfileState {
   UploadFileResponse? get uploadImageResponse;
   @JsonKey(ignore: true)
   _$$ProfileUploadAvatarSuccessImplCopyWith<_$ProfileUploadAvatarSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfilUploadBannerSuccessImplCopyWith<$Res> {
+  factory _$$ProfilUploadBannerSuccessImplCopyWith(
+          _$ProfilUploadBannerSuccessImpl value,
+          $Res Function(_$ProfilUploadBannerSuccessImpl) then) =
+      __$$ProfilUploadBannerSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String bannerUrl});
+}
+
+/// @nodoc
+class __$$ProfilUploadBannerSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$ProfilUploadBannerSuccessImpl>
+    implements _$$ProfilUploadBannerSuccessImplCopyWith<$Res> {
+  __$$ProfilUploadBannerSuccessImplCopyWithImpl(
+      _$ProfilUploadBannerSuccessImpl _value,
+      $Res Function(_$ProfilUploadBannerSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? bannerUrl = null,
+  }) {
+    return _then(_$ProfilUploadBannerSuccessImpl(
+      null == bannerUrl
+          ? _value.bannerUrl
+          : bannerUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ProfilUploadBannerSuccessImpl implements ProfilUploadBannerSuccess {
+  const _$ProfilUploadBannerSuccessImpl(this.bannerUrl);
+
+  @override
+  final String bannerUrl;
+
+  @override
+  String toString() {
+    return 'ProfileState.uploadBannerSuccess(bannerUrl: $bannerUrl)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfilUploadBannerSuccessImpl &&
+            (identical(other.bannerUrl, bannerUrl) ||
+                other.bannerUrl == bannerUrl));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, bannerUrl);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfilUploadBannerSuccessImplCopyWith<_$ProfilUploadBannerSuccessImpl>
+      get copyWith => __$$ProfilUploadBannerSuccessImplCopyWithImpl<
+          _$ProfilUploadBannerSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
+    required TResult Function(ExperienceModel experienceModel)
+        updateUserExperiencesSuccess,
+    required TResult Function(EducationModel educationModel)
+        updateUserEducationSuccess,
+    required TResult Function(CertificateModel certificateModel)
+        updateUserCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
+  }) {
+    return uploadBannerSuccess(bannerUrl);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
+    TResult? Function(ExperienceModel experienceModel)?
+        updateUserExperiencesSuccess,
+    TResult? Function(EducationModel educationModel)?
+        updateUserEducationSuccess,
+    TResult? Function(CertificateModel certificateModel)?
+        updateUserCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
+  }) {
+    return uploadBannerSuccess?.call(bannerUrl);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
+    TResult Function(ExperienceModel experienceModel)?
+        updateUserExperiencesSuccess,
+    TResult Function(EducationModel educationModel)? updateUserEducationSuccess,
+    TResult Function(CertificateModel certificateModel)?
+        updateUserCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
+    required TResult orElse(),
+  }) {
+    if (uploadBannerSuccess != null) {
+      return uploadBannerSuccess(bannerUrl);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguagesSuccess value)
+        getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
+    required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
+    required TResult Function(ProfileUpdateUserExperienceSuccess value)
+        updateUserExperiencesSuccess,
+    required TResult Function(ProfileUpdateUserEducationSuccess value)
+        updateUserEducationSuccess,
+    required TResult Function(ProfileUpdateUserCertificateSuccess value)
+        updateUserCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
+  }) {
+    return uploadBannerSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
+    TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+    TResult? Function(ProfileUpdateUserExperienceSuccess value)?
+        updateUserExperiencesSuccess,
+    TResult? Function(ProfileUpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult? Function(ProfileUpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
+  }) {
+    return uploadBannerSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
+    TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+    TResult Function(ProfileUpdateUserExperienceSuccess value)?
+        updateUserExperiencesSuccess,
+    TResult Function(ProfileUpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult Function(ProfileUpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
+    required TResult orElse(),
+  }) {
+    if (uploadBannerSuccess != null) {
+      return uploadBannerSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfilUploadBannerSuccess implements ProfileState {
+  const factory ProfilUploadBannerSuccess(final String bannerUrl) =
+      _$ProfilUploadBannerSuccessImpl;
+
+  String get bannerUrl;
+  @JsonKey(ignore: true)
+  _$$ProfilUploadBannerSuccessImplCopyWith<_$ProfilUploadBannerSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileUpdateBannerSuccessImplCopyWith<$Res> {
+  factory _$$ProfileUpdateBannerSuccessImplCopyWith(
+          _$ProfileUpdateBannerSuccessImpl value,
+          $Res Function(_$ProfileUpdateBannerSuccessImpl) then) =
+      __$$ProfileUpdateBannerSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({BannerModel bannerModel});
+
+  $BannerModelCopyWith<$Res> get bannerModel;
+}
+
+/// @nodoc
+class __$$ProfileUpdateBannerSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$ProfileUpdateBannerSuccessImpl>
+    implements _$$ProfileUpdateBannerSuccessImplCopyWith<$Res> {
+  __$$ProfileUpdateBannerSuccessImplCopyWithImpl(
+      _$ProfileUpdateBannerSuccessImpl _value,
+      $Res Function(_$ProfileUpdateBannerSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? bannerModel = null,
+  }) {
+    return _then(_$ProfileUpdateBannerSuccessImpl(
+      null == bannerModel
+          ? _value.bannerModel
+          : bannerModel // ignore: cast_nullable_to_non_nullable
+              as BannerModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BannerModelCopyWith<$Res> get bannerModel {
+    return $BannerModelCopyWith<$Res>(_value.bannerModel, (value) {
+      return _then(_value.copyWith(bannerModel: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ProfileUpdateBannerSuccessImpl implements ProfileUpdateBannerSuccess {
+  const _$ProfileUpdateBannerSuccessImpl(this.bannerModel);
+
+  @override
+  final BannerModel bannerModel;
+
+  @override
+  String toString() {
+    return 'ProfileState.updateBannerSuccess(bannerModel: $bannerModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileUpdateBannerSuccessImpl &&
+            (identical(other.bannerModel, bannerModel) ||
+                other.bannerModel == bannerModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, bannerModel);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileUpdateBannerSuccessImplCopyWith<_$ProfileUpdateBannerSuccessImpl>
+      get copyWith => __$$ProfileUpdateBannerSuccessImplCopyWithImpl<
+          _$ProfileUpdateBannerSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
+    required TResult Function(ExperienceModel experienceModel)
+        updateUserExperiencesSuccess,
+    required TResult Function(EducationModel educationModel)
+        updateUserEducationSuccess,
+    required TResult Function(CertificateModel certificateModel)
+        updateUserCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
+  }) {
+    return updateBannerSuccess(bannerModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
+    TResult? Function(ExperienceModel experienceModel)?
+        updateUserExperiencesSuccess,
+    TResult? Function(EducationModel educationModel)?
+        updateUserEducationSuccess,
+    TResult? Function(CertificateModel certificateModel)?
+        updateUserCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
+  }) {
+    return updateBannerSuccess?.call(bannerModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
+    TResult Function(ExperienceModel experienceModel)?
+        updateUserExperiencesSuccess,
+    TResult Function(EducationModel educationModel)? updateUserEducationSuccess,
+    TResult Function(CertificateModel certificateModel)?
+        updateUserCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateBannerSuccess != null) {
+      return updateBannerSuccess(bannerModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguagesSuccess value)
+        getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
+    required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
+    required TResult Function(ProfileUpdateUserExperienceSuccess value)
+        updateUserExperiencesSuccess,
+    required TResult Function(ProfileUpdateUserEducationSuccess value)
+        updateUserEducationSuccess,
+    required TResult Function(ProfileUpdateUserCertificateSuccess value)
+        updateUserCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
+  }) {
+    return updateBannerSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
+    TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+    TResult? Function(ProfileUpdateUserExperienceSuccess value)?
+        updateUserExperiencesSuccess,
+    TResult? Function(ProfileUpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult? Function(ProfileUpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
+  }) {
+    return updateBannerSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
+    TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+    TResult Function(ProfileUpdateUserExperienceSuccess value)?
+        updateUserExperiencesSuccess,
+    TResult Function(ProfileUpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult Function(ProfileUpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
+    required TResult orElse(),
+  }) {
+    if (updateBannerSuccess != null) {
+      return updateBannerSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileUpdateBannerSuccess implements ProfileState {
+  const factory ProfileUpdateBannerSuccess(final BannerModel bannerModel) =
+      _$ProfileUpdateBannerSuccessImpl;
+
+  BannerModel get bannerModel;
+  @JsonKey(ignore: true)
+  _$$ProfileUpdateBannerSuccessImplCopyWith<_$ProfileUpdateBannerSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ProfileGetBannerSuccessImplCopyWith<$Res> {
+  factory _$$ProfileGetBannerSuccessImplCopyWith(
+          _$ProfileGetBannerSuccessImpl value,
+          $Res Function(_$ProfileGetBannerSuccessImpl) then) =
+      __$$ProfileGetBannerSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({BannerModel banner});
+
+  $BannerModelCopyWith<$Res> get banner;
+}
+
+/// @nodoc
+class __$$ProfileGetBannerSuccessImplCopyWithImpl<$Res>
+    extends _$ProfileStateCopyWithImpl<$Res, _$ProfileGetBannerSuccessImpl>
+    implements _$$ProfileGetBannerSuccessImplCopyWith<$Res> {
+  __$$ProfileGetBannerSuccessImplCopyWithImpl(
+      _$ProfileGetBannerSuccessImpl _value,
+      $Res Function(_$ProfileGetBannerSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? banner = null,
+  }) {
+    return _then(_$ProfileGetBannerSuccessImpl(
+      null == banner
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as BannerModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BannerModelCopyWith<$Res> get banner {
+    return $BannerModelCopyWith<$Res>(_value.banner, (value) {
+      return _then(_value.copyWith(banner: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ProfileGetBannerSuccessImpl implements ProfileGetBannerSuccess {
+  const _$ProfileGetBannerSuccessImpl(this.banner);
+
+  @override
+  final BannerModel banner;
+
+  @override
+  String toString() {
+    return 'ProfileState.getBanner(banner: $banner)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ProfileGetBannerSuccessImpl &&
+            (identical(other.banner, banner) || other.banner == banner));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, banner);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ProfileGetBannerSuccessImplCopyWith<_$ProfileGetBannerSuccessImpl>
+      get copyWith => __$$ProfileGetBannerSuccessImplCopyWithImpl<
+          _$ProfileGetBannerSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(String message, String title) error,
+    required TResult Function() loading,
+    required TResult Function(UserInfoModel userInfoModel) getUserInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getUserExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getUserEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getUserCertificatesSuccess,
+    required TResult Function(List<UserSkillModel> skillModels) getUserSkills,
+    required TResult Function(List<UserLanguageModel> languages)
+        getUserLanguages,
+    required TResult Function(UploadFileResponse? uploadImageResponse)
+        uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
+    required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
+    required TResult Function(List<MetaLanguageModel> languages)
+        getMetaLanguageSuccess,
+    required TResult Function(int id) deleteEducationSuccess,
+    required TResult Function(int id) deleteCertificateSuccess,
+    required TResult Function(int id) deleteExperienceSuccess,
+    required TResult Function(ExperienceModel experienceModel)
+        updateUserExperiencesSuccess,
+    required TResult Function(EducationModel educationModel)
+        updateUserEducationSuccess,
+    required TResult Function(CertificateModel certificateModel)
+        updateUserCertificateSuccess,
+    required TResult Function() updateUserInfoSuccess,
+    required TResult Function(List<PostModel> posts) getUserPostsSuccess,
+  }) {
+    return getBanner(banner);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(String message, String title)? error,
+    TResult? Function()? loading,
+    TResult? Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)?
+        getUserEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult? Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult? Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
+    TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult? Function(List<MetaLanguageModel> languages)?
+        getMetaLanguageSuccess,
+    TResult? Function(int id)? deleteEducationSuccess,
+    TResult? Function(int id)? deleteCertificateSuccess,
+    TResult? Function(int id)? deleteExperienceSuccess,
+    TResult? Function(ExperienceModel experienceModel)?
+        updateUserExperiencesSuccess,
+    TResult? Function(EducationModel educationModel)?
+        updateUserEducationSuccess,
+    TResult? Function(CertificateModel certificateModel)?
+        updateUserCertificateSuccess,
+    TResult? Function()? updateUserInfoSuccess,
+    TResult? Function(List<PostModel> posts)? getUserPostsSuccess,
+  }) {
+    return getBanner?.call(banner);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(String message, String title)? error,
+    TResult Function()? loading,
+    TResult Function(UserInfoModel userInfoModel)? getUserInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)?
+        getUserExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getUserEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getUserCertificatesSuccess,
+    TResult Function(List<UserSkillModel> skillModels)? getUserSkills,
+    TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
+    TResult Function(UploadFileResponse? uploadImageResponse)?
+        uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
+    TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
+    TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
+    TResult Function(int id)? deleteEducationSuccess,
+    TResult Function(int id)? deleteCertificateSuccess,
+    TResult Function(int id)? deleteExperienceSuccess,
+    TResult Function(ExperienceModel experienceModel)?
+        updateUserExperiencesSuccess,
+    TResult Function(EducationModel educationModel)? updateUserEducationSuccess,
+    TResult Function(CertificateModel certificateModel)?
+        updateUserCertificateSuccess,
+    TResult Function()? updateUserInfoSuccess,
+    TResult Function(List<PostModel> posts)? getUserPostsSuccess,
+    required TResult orElse(),
+  }) {
+    if (getBanner != null) {
+      return getBanner(banner);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProfileError value) error,
+    required TResult Function(ProfileLoading value) loading,
+    required TResult Function(ProfileGetUserInfoSuccess value)
+        getUserInfoSuccess,
+    required TResult Function(ProfileGetUserExperienceSuccess value)
+        getUserExperiencesSuccess,
+    required TResult Function(ProfileGetUserEducationsSuccess value)
+        getUserEducationsSuccess,
+    required TResult Function(ProfileGetUserCertificatesSuccess value)
+        getUserCertificatesSuccess,
+    required TResult Function(ProfileGetUserSkillsSuccess value) getUserSkills,
+    required TResult Function(ProfileGetUserLanguagesSuccess value)
+        getUserLanguages,
+    required TResult Function(ProfileUploadAvatarSuccess value)
+        uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
+    required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
+        checkDigitalProfileAvailableSuccess,
+    required TResult Function(ProfileGetMetaLanguageSuccess value)
+        getMetaLanguageSuccess,
+    required TResult Function(ProfileDeleteEducationSuccess value)
+        deleteEducationSuccess,
+    required TResult Function(ProfileDeleteCertificateSuccess value)
+        deleteCertificateSuccess,
+    required TResult Function(ProfileDeleteExperienceSuccess value)
+        deleteExperienceSuccess,
+    required TResult Function(ProfileUpdateUserExperienceSuccess value)
+        updateUserExperiencesSuccess,
+    required TResult Function(ProfileUpdateUserEducationSuccess value)
+        updateUserEducationSuccess,
+    required TResult Function(ProfileUpdateUserCertificateSuccess value)
+        updateUserCertificateSuccess,
+    required TResult Function(ProfileUpdateUserInfoSuccess value)
+        updateUserInfoSuccess,
+    required TResult Function(ProfileGetUserPostsSuccess value)
+        getUserPostsSuccess,
+  }) {
+    return getBanner(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProfileError value)? error,
+    TResult? Function(ProfileLoading value)? loading,
+    TResult? Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult? Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult? Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult? Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
+    TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult? Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult? Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult? Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult? Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+    TResult? Function(ProfileUpdateUserExperienceSuccess value)?
+        updateUserExperiencesSuccess,
+    TResult? Function(ProfileUpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult? Function(ProfileUpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult? Function(ProfileUpdateUserInfoSuccess value)?
+        updateUserInfoSuccess,
+    TResult? Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
+  }) {
+    return getBanner?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProfileError value)? error,
+    TResult Function(ProfileLoading value)? loading,
+    TResult Function(ProfileGetUserInfoSuccess value)? getUserInfoSuccess,
+    TResult Function(ProfileGetUserExperienceSuccess value)?
+        getUserExperiencesSuccess,
+    TResult Function(ProfileGetUserEducationsSuccess value)?
+        getUserEducationsSuccess,
+    TResult Function(ProfileGetUserCertificatesSuccess value)?
+        getUserCertificatesSuccess,
+    TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
+    TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
+    TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
+    TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
+        checkDigitalProfileAvailableSuccess,
+    TResult Function(ProfileGetMetaLanguageSuccess value)?
+        getMetaLanguageSuccess,
+    TResult Function(ProfileDeleteEducationSuccess value)?
+        deleteEducationSuccess,
+    TResult Function(ProfileDeleteCertificateSuccess value)?
+        deleteCertificateSuccess,
+    TResult Function(ProfileDeleteExperienceSuccess value)?
+        deleteExperienceSuccess,
+    TResult Function(ProfileUpdateUserExperienceSuccess value)?
+        updateUserExperiencesSuccess,
+    TResult Function(ProfileUpdateUserEducationSuccess value)?
+        updateUserEducationSuccess,
+    TResult Function(ProfileUpdateUserCertificateSuccess value)?
+        updateUserCertificateSuccess,
+    TResult Function(ProfileUpdateUserInfoSuccess value)? updateUserInfoSuccess,
+    TResult Function(ProfileGetUserPostsSuccess value)? getUserPostsSuccess,
+    required TResult orElse(),
+  }) {
+    if (getBanner != null) {
+      return getBanner(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ProfileGetBannerSuccess implements ProfileState {
+  const factory ProfileGetBannerSuccess(final BannerModel banner) =
+      _$ProfileGetBannerSuccessImpl;
+
+  BannerModel get banner;
+  @JsonKey(ignore: true)
+  _$$ProfileGetBannerSuccessImplCopyWith<_$ProfileGetBannerSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -7719,6 +10000,9 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -7754,6 +10038,9 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -7788,6 +10075,9 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -7827,6 +10117,11 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -7867,6 +10162,9 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -7906,6 +10204,9 @@ class _$ProfileCheckDigitalProfileAvailableSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -8039,6 +10340,9 @@ class _$ProfileGetMetaLanguageSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -8074,6 +10378,9 @@ class _$ProfileGetMetaLanguageSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -8108,6 +10415,9 @@ class _$ProfileGetMetaLanguageSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -8147,6 +10457,11 @@ class _$ProfileGetMetaLanguageSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -8187,6 +10502,9 @@ class _$ProfileGetMetaLanguageSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -8226,6 +10544,9 @@ class _$ProfileGetMetaLanguageSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -8350,6 +10671,9 @@ class _$ProfileDeleteEducationSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -8385,6 +10709,9 @@ class _$ProfileDeleteEducationSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -8419,6 +10746,9 @@ class _$ProfileDeleteEducationSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -8458,6 +10788,11 @@ class _$ProfileDeleteEducationSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -8498,6 +10833,9 @@ class _$ProfileDeleteEducationSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -8537,6 +10875,9 @@ class _$ProfileDeleteEducationSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -8660,6 +11001,9 @@ class _$ProfileDeleteCertificateSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -8695,6 +11039,9 @@ class _$ProfileDeleteCertificateSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -8729,6 +11076,9 @@ class _$ProfileDeleteCertificateSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -8768,6 +11118,11 @@ class _$ProfileDeleteCertificateSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -8808,6 +11163,9 @@ class _$ProfileDeleteCertificateSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -8847,6 +11205,9 @@ class _$ProfileDeleteCertificateSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -8970,6 +11331,9 @@ class _$ProfileDeleteExperienceSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -9005,6 +11369,9 @@ class _$ProfileDeleteExperienceSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -9039,6 +11406,9 @@ class _$ProfileDeleteExperienceSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -9078,6 +11448,11 @@ class _$ProfileDeleteExperienceSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -9118,6 +11493,9 @@ class _$ProfileDeleteExperienceSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -9157,6 +11535,9 @@ class _$ProfileDeleteExperienceSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -9291,6 +11672,9 @@ class _$ProfileUpdateUserExperienceSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -9326,6 +11710,9 @@ class _$ProfileUpdateUserExperienceSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -9360,6 +11747,9 @@ class _$ProfileUpdateUserExperienceSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -9399,6 +11789,11 @@ class _$ProfileUpdateUserExperienceSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -9439,6 +11834,9 @@ class _$ProfileUpdateUserExperienceSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -9478,6 +11876,9 @@ class _$ProfileUpdateUserExperienceSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -9613,6 +12014,9 @@ class _$ProfileUpdateUserEducationSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -9648,6 +12052,9 @@ class _$ProfileUpdateUserEducationSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -9682,6 +12089,9 @@ class _$ProfileUpdateUserEducationSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -9721,6 +12131,11 @@ class _$ProfileUpdateUserEducationSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -9761,6 +12176,9 @@ class _$ProfileUpdateUserEducationSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -9800,6 +12218,9 @@ class _$ProfileUpdateUserEducationSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -9935,6 +12356,9 @@ class _$ProfileUpdateUserCertificateSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -9970,6 +12394,9 @@ class _$ProfileUpdateUserCertificateSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -10004,6 +12431,9 @@ class _$ProfileUpdateUserCertificateSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -10043,6 +12473,11 @@ class _$ProfileUpdateUserCertificateSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -10083,6 +12518,9 @@ class _$ProfileUpdateUserCertificateSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -10122,6 +12560,9 @@ class _$ProfileUpdateUserCertificateSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -10218,6 +12659,9 @@ class _$ProfileUpdateUserInfoSuccessImpl
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -10253,6 +12697,9 @@ class _$ProfileUpdateUserInfoSuccessImpl
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -10287,6 +12734,9 @@ class _$ProfileUpdateUserInfoSuccessImpl
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -10326,6 +12776,11 @@ class _$ProfileUpdateUserInfoSuccessImpl
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -10366,6 +12821,9 @@ class _$ProfileUpdateUserInfoSuccessImpl
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -10405,6 +12863,9 @@ class _$ProfileUpdateUserInfoSuccessImpl
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?
@@ -10526,6 +12987,9 @@ class _$ProfileGetUserPostsSuccessImpl implements ProfileGetUserPostsSuccess {
         getUserLanguages,
     required TResult Function(UploadFileResponse? uploadImageResponse)
         uploadAvatarSuccess,
+    required TResult Function(String bannerUrl) uploadBannerSuccess,
+    required TResult Function(BannerModel bannerModel) updateBannerSuccess,
+    required TResult Function(BannerModel banner) getBanner,
     required TResult Function(bool status) checkDigitalProfileAvailableSuccess,
     required TResult Function(List<MetaLanguageModel> languages)
         getMetaLanguageSuccess,
@@ -10561,6 +13025,9 @@ class _$ProfileGetUserPostsSuccessImpl implements ProfileGetUserPostsSuccess {
     TResult? Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult? Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult? Function(String bannerUrl)? uploadBannerSuccess,
+    TResult? Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult? Function(BannerModel banner)? getBanner,
     TResult? Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult? Function(List<MetaLanguageModel> languages)?
         getMetaLanguageSuccess,
@@ -10595,6 +13062,9 @@ class _$ProfileGetUserPostsSuccessImpl implements ProfileGetUserPostsSuccess {
     TResult Function(List<UserLanguageModel> languages)? getUserLanguages,
     TResult Function(UploadFileResponse? uploadImageResponse)?
         uploadAvatarSuccess,
+    TResult Function(String bannerUrl)? uploadBannerSuccess,
+    TResult Function(BannerModel bannerModel)? updateBannerSuccess,
+    TResult Function(BannerModel banner)? getBanner,
     TResult Function(bool status)? checkDigitalProfileAvailableSuccess,
     TResult Function(List<MetaLanguageModel> languages)? getMetaLanguageSuccess,
     TResult Function(int id)? deleteEducationSuccess,
@@ -10634,6 +13104,11 @@ class _$ProfileGetUserPostsSuccessImpl implements ProfileGetUserPostsSuccess {
         getUserLanguages,
     required TResult Function(ProfileUploadAvatarSuccess value)
         uploadAvatarSuccess,
+    required TResult Function(ProfilUploadBannerSuccess value)
+        uploadBannerSuccess,
+    required TResult Function(ProfileUpdateBannerSuccess value)
+        updateBannerSuccess,
+    required TResult Function(ProfileGetBannerSuccess value) getBanner,
     required TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)
         checkDigitalProfileAvailableSuccess,
     required TResult Function(ProfileGetMetaLanguageSuccess value)
@@ -10674,6 +13149,9 @@ class _$ProfileGetUserPostsSuccessImpl implements ProfileGetUserPostsSuccess {
     TResult? Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult? Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult? Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult? Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult? Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult? Function(ProfileGetBannerSuccess value)? getBanner,
     TResult? Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult? Function(ProfileGetMetaLanguageSuccess value)?
@@ -10713,6 +13191,9 @@ class _$ProfileGetUserPostsSuccessImpl implements ProfileGetUserPostsSuccess {
     TResult Function(ProfileGetUserSkillsSuccess value)? getUserSkills,
     TResult Function(ProfileGetUserLanguagesSuccess value)? getUserLanguages,
     TResult Function(ProfileUploadAvatarSuccess value)? uploadAvatarSuccess,
+    TResult Function(ProfilUploadBannerSuccess value)? uploadBannerSuccess,
+    TResult Function(ProfileUpdateBannerSuccess value)? updateBannerSuccess,
+    TResult Function(ProfileGetBannerSuccess value)? getBanner,
     TResult Function(ProfileCheckDigitalProfileAvailableSuccess value)?
         checkDigitalProfileAvailableSuccess,
     TResult Function(ProfileGetMetaLanguageSuccess value)?

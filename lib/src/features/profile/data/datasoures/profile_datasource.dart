@@ -30,4 +30,8 @@ abstract class ProfileDataSource {
   Future<BaseResponse> updateUserEducation(EducationModel educationModel);
 
   Future<BaseResponse> updateUserCertificate(CertificateModel certificateModel);
+
+  Future<BaseResponse> getBanner();
+
+  Future<BaseResponse> postBanner(String bannenUrlBanner);
 }

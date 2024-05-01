@@ -24,65 +24,86 @@ class AvatarProfile extends StatefulWidget {
 class _AvatarProfileState extends State<AvatarProfile> {
   UserInfoModel? userInfo;
   UploadFileResponse? ploadFileResponse;
+  String? bannerUrl;
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<ProfileBloc, ProfileState>(listener: (context, state) {
-      if (state is ProfileUploadAvatarSuccess) {
-        ploadFileResponse = state.uploadImageResponse;
+    return BlocConsumer<ProfileBloc, ProfileState>(
+      listener: (context, state) {
+        if (state is ProfileUploadAvatarSuccess) {
+          ploadFileResponse = state.uploadImageResponse;
 
-        final updateUser =
-            userInfo!.copyWith(avatar: ploadFileResponse!.objectKey);
+          final updateUser =
+              userInfo!.copyWith(avatar: ploadFileResponse!.objectKey);
 
-        context.read<ProfileBloc>().add(ProfileUpdateUserInfo(updateUser));
-      }
+          context.read<ProfileBloc>().add(ProfileUpdateUserInfo(updateUser));
+        }
 
-      if (state is ProfileGetUserInfoSuccess) {
-        userInfo = state.userInfoModel;
-      }
+        if (state is ProfileGetBannerSuccess) {
+          bannerUrl = state.banner.bannerUrl;
+        }
 
-      if (state is ProfileUpdateUserInfoSuccess) {
-        context.read<ProfileBloc>().add(const ProfileGetUserInfo());
+        if (state is ProfilUploadBannerSuccess) {
+          context.read<ProfileBloc>().add(ProfileUpdateBanner(state.bannerUrl));
+        }
 
-        showErrorDialog(
-          context,
-          title: 'Upload success',
-          description: 'Update avatar success',
-        );
-      }
-    }, builder: (context, state) {
-      if (userInfo == null) {
-        return const MyShimmer(count: 1, height: 200);
-      } else {
-        return Stack(
-          alignment: Alignment.bottomLeft,
-          children: [
-            Column(
-              children: [
-                Stack(
-                  alignment: Alignment.topRight,
-                  children: [
-                    Assets.images.profile.profileBackground.image(),
-                    _buildBackgroundAction(context),
-                  ],
-                ),
-                const SizedBox(height: 50),
-              ],
-            ),
-            Padding(
-              padding: context.padding(horizontal: 20),
-              child: Stack(
-                alignment: Alignment.bottomRight,
+        if (state is ProfileUpdateBannerSuccess) {
+          showErrorDialog(
+            context,
+            title: 'Upload success',
+            description: 'Update banner success',
+          );
+          bannerUrl = state.bannerModel.bannerUrl;
+        }
+
+        if (state is ProfileGetUserInfoSuccess) {
+          userInfo = state.userInfoModel;
+        }
+
+        if (state is ProfileUpdateUserInfoSuccess) {
+          context.read<ProfileBloc>().add(const ProfileGetUserInfo());
+
+          showErrorDialog(
+            context,
+            title: 'Upload success',
+            description: 'Update avatar success',
+          );
+        }
+      },
+      builder: (context, state) {
+        if (userInfo == null) {
+          return const MyShimmer(count: 1, height: 200);
+        } else {
+          return Stack(
+            alignment: Alignment.bottomLeft,
+            children: [
+              Column(
                 children: [
-                  _buildAvatar(context),
-                  _buildEditWidget(context),
+                  Stack(
+                    alignment: Alignment.topRight,
+                    children: [
+                      _buildBackground(),
+                      _buildBackgroundAction(context),
+                    ],
+                  ),
+                  const SizedBox(height: 50),
                 ],
               ),
-            ),
-          ],
-        );
-      }
-    });
+              Padding(
+                padding: context.padding(horizontal: 20),
+                child: Stack(
+                  alignment: Alignment.bottomRight,
+                  children: [
+                    _buildAvatar(context),
+                    _buildEditWidget(context),
+                  ],
+                ),
+              ),
+            ],
+          );
+        }
+      },
+    );
   }
 
   Widget _buildAvatar(BuildContext context) {
@@ -109,6 +130,15 @@ class _AvatarProfileState extends State<AvatarProfile> {
     );
   }
 
+  Widget _buildBackground() {
+    return (bannerUrl == null)
+        ? Assets.images.profile.profileBackground.image()
+        : MyCacheImage(
+            width: context.width,
+            height: context.sizeHeight(150),
+            imageUrl: 'https://d3v3a2vsni37rv.cloudfront.net/$bannerUrl');
+  }
+
   Widget _buildEditWidget(BuildContext context) {
     return Container(
       padding: context.padding(all: 1),
@@ -132,14 +162,17 @@ class _AvatarProfileState extends State<AvatarProfile> {
   }
 
   Widget _buildUploadWidget(BuildContext context) {
-    return Container(
-      padding: context.padding(all: 10),
-      margin: context.padding(top: 50),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: colorScheme(context).background,
+    return InkWell(
+      onTap: () => context.read<ProfileBloc>().add(const ProfileUploadBanner()),
+      child: Container(
+        padding: context.padding(all: 10),
+        margin: context.padding(top: 50),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: colorScheme(context).background,
+        ),
+        child: Assets.icons.iconUpload.svg(),
       ),
-      child: Assets.icons.iconUpload.svg(),
     );
   }
 
