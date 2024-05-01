@@ -1,4 +1,4 @@
-
+import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/presentation/bloc/bloc/my_ai_character_bloc.dart';
@@ -36,13 +36,13 @@ class _YourChatAiCharacterHistoryState
                         .format(DateTime.parse(e.createdOn!)),
                   ))
               .toList();
-    
+
           messages = newData.reversed.toList();
         }
       },
       builder: (context, state) {
         if (messages == null) {
-          return const MyShimmer(count: 2, height: 300);
+          return const MyLoading();
         } else {
           return AnimationLimiter(
             child: ListView.builder(

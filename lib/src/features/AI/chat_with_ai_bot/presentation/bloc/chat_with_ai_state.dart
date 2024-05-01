@@ -20,4 +20,7 @@ class ChatWithAiState with _$ChatWithAiState {
   const factory ChatWithAiState.getChatWithBotHistorySuccess(
           List<ChatBotMessageHistoryModel> messagesHistory) =
       ChatWithAIGetChatWithBotHistorySuccess;
+
+  const factory ChatWithAiState.getUserInfoSuccess(UserInfoModel userInfo) =
+      ChatWithAIGetUserInfoSuccess;
 }
