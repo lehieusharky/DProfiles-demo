@@ -18,6 +18,7 @@ class AuthField extends StatelessWidget {
   final VoidCallback? onTap;
   final bool? autoFocus;
   final List<TextInputFormatter>? inputFormatters;
+  final void Function(String)? onSubmit;
 
   const AuthField(
       {Key? key,
@@ -31,7 +32,9 @@ class AuthField extends StatelessWidget {
       this.validator,
       this.textInputAction,
       this.onTap,
-      this.autoFocus, this.inputFormatters})
+      this.autoFocus,
+      this.inputFormatters,
+      this.onSubmit})
       : super(key: key);
 
   @override
@@ -62,6 +65,7 @@ class AuthField extends StatelessWidget {
           onTap: onTap,
           maxLines: maxLines,
           validator: validator,
+          onSubmit: onSubmit,
           textInputAction: textInputAction ?? TextInputAction.done,
           keyboardType: keyboardType ?? TextInputType.text,
         ),
