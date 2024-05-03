@@ -74,7 +74,7 @@ extension PostModelExt on PostModel {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => Padding(
                         padding: context.padding(right: 10),
-                        child: MyCacheImage(
+                        child: MyCachedImage(
                             height: 200,
                             width: context.width * 0.7,
                             imageUrl: imageUrl![index]),
@@ -101,7 +101,7 @@ extension PostModelExt on PostModel {
           )
         : ClipRRect(
             borderRadius: BorderRadius.circular(100),
-            child: MyCacheImage(
+            child: MyCachedImage(
                 width: context.sizeWidth(40),
                 height: context.sizeWidth(40),
                 imageUrl:

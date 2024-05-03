@@ -1,9 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
 
-class MyCacheImage extends StatelessWidget {
+class MyCachedImage extends StatelessWidget {
   final String imageUrl;
   final double? width;
   final double? height;
@@ -11,7 +10,7 @@ class MyCacheImage extends StatelessWidget {
   final double? opacity;
   final Widget? errorWidget;
 
-  const MyCacheImage({
+  const MyCachedImage({
     super.key,
     required this.imageUrl,
     this.width,
@@ -40,7 +39,7 @@ class MyCacheImage extends StatelessWidget {
                 ),
               ),
             ),
-        placeholder: (context, url) => MyShimmer(count: 1, height: height),
+        // placeholder: (context, url) => MyShimmer(count: 1, height: height),
         errorWidget: (context, url, error) =>
             errorWidget ??
             Assets.icons.logos.dWhitePWhiteDprofileGreen.image());

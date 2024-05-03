@@ -16,6 +16,8 @@ abstract class PublicProfileRepository {
       String userName);
 
   Future<Either<PublicFailure, BaseResponse>> getPublicSkills(String userName);
+
+  Future<Either<PublicFailure, BaseResponse>> getPublicBanner(String userName);
 }
 
 class PublicFailure extends AppFailure {

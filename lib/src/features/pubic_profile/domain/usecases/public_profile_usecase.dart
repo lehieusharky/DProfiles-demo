@@ -16,6 +16,8 @@ abstract class PublicProfileUseCase {
   Future<Either<String, BaseResponse>> getPublicLanguages(String userName);
 
   Future<Either<String, BaseResponse>> getPublicSkills(String userName);
+
+  Future<Either<String, BaseResponse>> getPublicBanner(String userName);
 }
 
 @Injectable(as: PublicProfileUseCase)
@@ -74,6 +76,15 @@ class PublicProfileUseCaseImpl implements PublicProfileUseCase {
   @override
   Future<Either<String, BaseResponse>> getPublicSkills(String userName) async {
     final result = await _profileRepository.getPublicSkills(userName);
+    return result.fold(
+      (l) => Left((l.response as RegularErrorResponse).message ?? ''),
+      (r) => Right(r),
+    );
+  }
+
+  @override
+  Future<Either<String, BaseResponse>> getPublicBanner(String userName) async {
+    final result = await _profileRepository.getPublicBanner(userName);
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message ?? ''),
       (r) => Right(r),

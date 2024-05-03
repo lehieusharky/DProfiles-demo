@@ -28,4 +28,7 @@ class PublicProfileState with _$PublicProfileState {
 
   const factory PublicProfileState.getSkillsSuccess(
       List<PublicSkillModel> skills) = PublicProfileGetSkillsSuccess;
+
+  const factory PublicProfileState.getBannerSuccess(BannerModel banner) =
+      PublicProfileGetBannerSuccess;
 }

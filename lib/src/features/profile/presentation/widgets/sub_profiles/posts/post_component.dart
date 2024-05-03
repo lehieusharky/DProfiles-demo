@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/post/data/models/post_model.dart';
 import 'package:demo_dprofiles/src/features/post/domain/entities/ext_post_entity.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';

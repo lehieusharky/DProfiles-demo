@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/presentation/bloc/chat_with_ai_bloc.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
@@ -63,7 +62,7 @@ class _AppBarChatPageState extends State<AppBarChatPage> {
               radius: context.sizeWidth(20),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(100),
-                child: MyCacheImage(
+                child: MyCachedImage(
                     imageUrl:
                         'https://d3v3a2vsni37rv.cloudfront.net/${_botInfo!.avatar}'),
               ),

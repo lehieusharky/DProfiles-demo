@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
-import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
@@ -72,7 +71,7 @@ class _PostFormState extends State<PostForm> {
           )
         : ClipRRect(
             borderRadius: BorderRadius.circular(100),
-            child: MyCacheImage(
+            child: MyCachedImage(
                 width: context.sizeWidth(40),
                 height: context.sizeWidth(40),
                 imageUrl:

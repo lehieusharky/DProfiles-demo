@@ -1,11 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
 import 'package:demo_dprofiles/src/features/search/data/models/search_bar_result_model.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/avatar/user_avatar.dart';
 import 'package:flutter/material.dart';
 
 extension SearchBarResultModelExt on SearchBarResultModel {
@@ -23,7 +22,7 @@ extension SearchBarResultModelExt on SearchBarResultModel {
           ),
           child: Row(
             children: [
-              _buildAvatar(context),
+              UserAvatar(avatarUrlKey: avatar, radius: 60),
               context.sizedBox(width: 10),
               _buildName(context),
               const Spacer(),
@@ -62,22 +61,4 @@ extension SearchBarResultModelExt on SearchBarResultModel {
       ],
     );
   }
-
-  Widget _buildAvatar(BuildContext context) {
-    return (avatar == null || avatar!.isNotEmpty)
-        ? _buildEmptyAvatar(context)
-        : MyCacheImage(imageUrl: avatar!);
-  }
-
-  Widget _buildEmptyAvatar(BuildContext context) => Container(
-        padding: context.padding(all: 1.5),
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: colorScheme(context).background,
-        ),
-        child: Assets.images.home.avatarHolder.image(
-          width: context.sizeWidth(60),
-          height: context.sizeWidth(60),
-        ),
-      );
 }

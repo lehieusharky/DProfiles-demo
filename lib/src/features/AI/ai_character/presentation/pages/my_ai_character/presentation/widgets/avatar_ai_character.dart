@@ -3,7 +3,6 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/presentation/bloc/bloc/my_ai_character_bloc.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
@@ -292,7 +291,7 @@ class _HeaderMyAICharacterState extends State<HeaderMyAICharacter> {
             radius: context.sizeWidth(40),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(1000),
-              child: MyCacheImage(
+              child: MyCachedImage(
                   imageUrl: 'https://d3v3a2vsni37rv.cloudfront.net/$avatar'),
             ),
           );

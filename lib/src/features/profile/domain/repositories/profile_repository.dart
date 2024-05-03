@@ -4,7 +4,6 @@ import 'package:demo_dprofiles/src/features/profile/data/models/education_model.
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
 import 'package:demo_dprofiles/src/utils/domain/failures/app_failure.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
-import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 
 abstract class ProfileRepository {
   Future<Either<ProfileFailure, BaseResponse>> getUserInfo();

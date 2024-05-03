@@ -8,11 +8,8 @@ import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_banne
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_discover.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_tab_bar.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/widgets/title_home.dart';
-import 'package:demo_dprofiles/src/features/profile/data/models/user_skill_model.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/icons/my_icon_app.dart';
-import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'home_page.dart';

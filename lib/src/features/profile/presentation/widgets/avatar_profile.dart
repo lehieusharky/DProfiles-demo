@@ -1,7 +1,5 @@
-import 'dart:developer';
 
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
@@ -10,6 +8,8 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/avatar/user_avatar.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/avatar/user_banner.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -109,37 +109,13 @@ class _AvatarProfileState extends State<AvatarProfile> {
 
   Widget _buildAvatar(BuildContext context) {
     return InkWell(
-      onTap: () => context.read<ProfileBloc>().add(const ProfileUploadAvatar()),
-      child: Container(
-        padding: context.padding(all: 1.5),
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: colorScheme(context).background,
-        ),
-        child: (userInfo!.avatar == null)
-            ? Assets.images.home.avatarHolder.image(
-                width: context.sizeWidth(96),
-                height: context.sizeWidth(96),
-              )
-            : ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: MyCacheImage(
-                    width: context.sizeWidth(96),
-                    height: context.sizeWidth(96),
-                    imageUrl:
-                        'https://d3v3a2vsni37rv.cloudfront.net/${userInfo!.avatar}'),
-              ),
-      ),
-    );
+        onTap: () =>
+            context.read<ProfileBloc>().add(const ProfileUploadAvatar()),
+        child: UserAvatar(avatarUrlKey: userInfo!.avatar));
   }
 
   Widget _buildBackground() {
-    return (bannerUrl == null)
-        ? Assets.images.profile.profileBackground.image()
-        : MyCacheImage(
-            width: context.width,
-            height: context.sizeHeight(150),
-            imageUrl: 'https://d3v3a2vsni37rv.cloudfront.net/$bannerUrl');
+    return UserBanner(bannerUrlKey: bannerUrl);
   }
 
   Widget _buildEditWidget(BuildContext context) {

@@ -411,6 +411,9 @@ abstract class RestClient {
   Future<BaseResponse> getPublicWorkingLocation(
       @Path('username') String userName);
 
+  @GET('/api/v1/public/banner/{username}')
+  Future<BaseResponse> getPublicBanner(@Path('username') String userName);
+
   // post
 
   @GET('/api/v1/post')

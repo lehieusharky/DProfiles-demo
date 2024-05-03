@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/domain/repositories/create_digital_profile_repository.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/auth_error_response.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';

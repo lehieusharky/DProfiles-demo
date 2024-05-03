@@ -2,7 +2,6 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_divider.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
-import 'package:demo_dprofiles/src/features/profile/domain/entities/ext_user_info_entity.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

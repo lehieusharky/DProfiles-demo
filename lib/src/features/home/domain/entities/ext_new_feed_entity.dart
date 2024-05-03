@@ -90,7 +90,7 @@ extension NewFeedModelExt on NewFeedModel {
             ),
           Padding(
               padding: context.padding(top: 25),
-              child: MyCacheImage(
+              child: MyCachedImage(
                 imageUrl: feed.postImageUrl ?? '',
                 errorWidget: Assets.images.home.live.image(),
               )),

@@ -25,6 +25,7 @@ mixin _$PublicProfileEvent {
     required TResult Function(String userName) getExperiences,
     required TResult Function(String userName) getLanguages,
     required TResult Function(String userName) getSkills,
+    required TResult Function(String userName) getBanner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +36,7 @@ mixin _$PublicProfileEvent {
     TResult? Function(String userName)? getExperiences,
     TResult? Function(String userName)? getLanguages,
     TResult? Function(String userName)? getSkills,
+    TResult? Function(String userName)? getBanner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -45,6 +47,7 @@ mixin _$PublicProfileEvent {
     TResult Function(String userName)? getExperiences,
     TResult Function(String userName)? getLanguages,
     TResult Function(String userName)? getSkills,
+    TResult Function(String userName)? getBanner,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -57,6 +60,7 @@ mixin _$PublicProfileEvent {
     required TResult Function(PublicProfileGetExperiences value) getExperiences,
     required TResult Function(PublicProfileGetLanguages value) getLanguages,
     required TResult Function(PublicProfileGetSkills value) getSkills,
+    required TResult Function(PublicProfileGetBanner value) getBanner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -67,6 +71,7 @@ mixin _$PublicProfileEvent {
     TResult? Function(PublicProfileGetExperiences value)? getExperiences,
     TResult? Function(PublicProfileGetLanguages value)? getLanguages,
     TResult? Function(PublicProfileGetSkills value)? getSkills,
+    TResult? Function(PublicProfileGetBanner value)? getBanner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -77,6 +82,7 @@ mixin _$PublicProfileEvent {
     TResult Function(PublicProfileGetExperiences value)? getExperiences,
     TResult Function(PublicProfileGetLanguages value)? getLanguages,
     TResult Function(PublicProfileGetSkills value)? getSkills,
+    TResult Function(PublicProfileGetBanner value)? getBanner,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -196,6 +202,7 @@ class _$PublicProfileGetBasicInfoImpl implements PublicProfileGetBasicInfo {
     required TResult Function(String userName) getExperiences,
     required TResult Function(String userName) getLanguages,
     required TResult Function(String userName) getSkills,
+    required TResult Function(String userName) getBanner,
   }) {
     return getBasicInfo(userName);
   }
@@ -209,6 +216,7 @@ class _$PublicProfileGetBasicInfoImpl implements PublicProfileGetBasicInfo {
     TResult? Function(String userName)? getExperiences,
     TResult? Function(String userName)? getLanguages,
     TResult? Function(String userName)? getSkills,
+    TResult? Function(String userName)? getBanner,
   }) {
     return getBasicInfo?.call(userName);
   }
@@ -222,6 +230,7 @@ class _$PublicProfileGetBasicInfoImpl implements PublicProfileGetBasicInfo {
     TResult Function(String userName)? getExperiences,
     TResult Function(String userName)? getLanguages,
     TResult Function(String userName)? getSkills,
+    TResult Function(String userName)? getBanner,
     required TResult orElse(),
   }) {
     if (getBasicInfo != null) {
@@ -240,6 +249,7 @@ class _$PublicProfileGetBasicInfoImpl implements PublicProfileGetBasicInfo {
     required TResult Function(PublicProfileGetExperiences value) getExperiences,
     required TResult Function(PublicProfileGetLanguages value) getLanguages,
     required TResult Function(PublicProfileGetSkills value) getSkills,
+    required TResult Function(PublicProfileGetBanner value) getBanner,
   }) {
     return getBasicInfo(this);
   }
@@ -253,6 +263,7 @@ class _$PublicProfileGetBasicInfoImpl implements PublicProfileGetBasicInfo {
     TResult? Function(PublicProfileGetExperiences value)? getExperiences,
     TResult? Function(PublicProfileGetLanguages value)? getLanguages,
     TResult? Function(PublicProfileGetSkills value)? getSkills,
+    TResult? Function(PublicProfileGetBanner value)? getBanner,
   }) {
     return getBasicInfo?.call(this);
   }
@@ -266,6 +277,7 @@ class _$PublicProfileGetBasicInfoImpl implements PublicProfileGetBasicInfo {
     TResult Function(PublicProfileGetExperiences value)? getExperiences,
     TResult Function(PublicProfileGetLanguages value)? getLanguages,
     TResult Function(PublicProfileGetSkills value)? getSkills,
+    TResult Function(PublicProfileGetBanner value)? getBanner,
     required TResult orElse(),
   }) {
     if (getBasicInfo != null) {
@@ -364,6 +376,7 @@ class _$PublicProfileGetEducationImpl implements PublicProfileGetEducation {
     required TResult Function(String userName) getExperiences,
     required TResult Function(String userName) getLanguages,
     required TResult Function(String userName) getSkills,
+    required TResult Function(String userName) getBanner,
   }) {
     return getEducations(userName);
   }
@@ -377,6 +390,7 @@ class _$PublicProfileGetEducationImpl implements PublicProfileGetEducation {
     TResult? Function(String userName)? getExperiences,
     TResult? Function(String userName)? getLanguages,
     TResult? Function(String userName)? getSkills,
+    TResult? Function(String userName)? getBanner,
   }) {
     return getEducations?.call(userName);
   }
@@ -390,6 +404,7 @@ class _$PublicProfileGetEducationImpl implements PublicProfileGetEducation {
     TResult Function(String userName)? getExperiences,
     TResult Function(String userName)? getLanguages,
     TResult Function(String userName)? getSkills,
+    TResult Function(String userName)? getBanner,
     required TResult orElse(),
   }) {
     if (getEducations != null) {
@@ -408,6 +423,7 @@ class _$PublicProfileGetEducationImpl implements PublicProfileGetEducation {
     required TResult Function(PublicProfileGetExperiences value) getExperiences,
     required TResult Function(PublicProfileGetLanguages value) getLanguages,
     required TResult Function(PublicProfileGetSkills value) getSkills,
+    required TResult Function(PublicProfileGetBanner value) getBanner,
   }) {
     return getEducations(this);
   }
@@ -421,6 +437,7 @@ class _$PublicProfileGetEducationImpl implements PublicProfileGetEducation {
     TResult? Function(PublicProfileGetExperiences value)? getExperiences,
     TResult? Function(PublicProfileGetLanguages value)? getLanguages,
     TResult? Function(PublicProfileGetSkills value)? getSkills,
+    TResult? Function(PublicProfileGetBanner value)? getBanner,
   }) {
     return getEducations?.call(this);
   }
@@ -434,6 +451,7 @@ class _$PublicProfileGetEducationImpl implements PublicProfileGetEducation {
     TResult Function(PublicProfileGetExperiences value)? getExperiences,
     TResult Function(PublicProfileGetLanguages value)? getLanguages,
     TResult Function(PublicProfileGetSkills value)? getSkills,
+    TResult Function(PublicProfileGetBanner value)? getBanner,
     required TResult orElse(),
   }) {
     if (getEducations != null) {
@@ -534,6 +552,7 @@ class _$PublicProfileGetCertificatesImpl
     required TResult Function(String userName) getExperiences,
     required TResult Function(String userName) getLanguages,
     required TResult Function(String userName) getSkills,
+    required TResult Function(String userName) getBanner,
   }) {
     return getCertificates(userName);
   }
@@ -547,6 +566,7 @@ class _$PublicProfileGetCertificatesImpl
     TResult? Function(String userName)? getExperiences,
     TResult? Function(String userName)? getLanguages,
     TResult? Function(String userName)? getSkills,
+    TResult? Function(String userName)? getBanner,
   }) {
     return getCertificates?.call(userName);
   }
@@ -560,6 +580,7 @@ class _$PublicProfileGetCertificatesImpl
     TResult Function(String userName)? getExperiences,
     TResult Function(String userName)? getLanguages,
     TResult Function(String userName)? getSkills,
+    TResult Function(String userName)? getBanner,
     required TResult orElse(),
   }) {
     if (getCertificates != null) {
@@ -578,6 +599,7 @@ class _$PublicProfileGetCertificatesImpl
     required TResult Function(PublicProfileGetExperiences value) getExperiences,
     required TResult Function(PublicProfileGetLanguages value) getLanguages,
     required TResult Function(PublicProfileGetSkills value) getSkills,
+    required TResult Function(PublicProfileGetBanner value) getBanner,
   }) {
     return getCertificates(this);
   }
@@ -591,6 +613,7 @@ class _$PublicProfileGetCertificatesImpl
     TResult? Function(PublicProfileGetExperiences value)? getExperiences,
     TResult? Function(PublicProfileGetLanguages value)? getLanguages,
     TResult? Function(PublicProfileGetSkills value)? getSkills,
+    TResult? Function(PublicProfileGetBanner value)? getBanner,
   }) {
     return getCertificates?.call(this);
   }
@@ -604,6 +627,7 @@ class _$PublicProfileGetCertificatesImpl
     TResult Function(PublicProfileGetExperiences value)? getExperiences,
     TResult Function(PublicProfileGetLanguages value)? getLanguages,
     TResult Function(PublicProfileGetSkills value)? getSkills,
+    TResult Function(PublicProfileGetBanner value)? getBanner,
     required TResult orElse(),
   }) {
     if (getCertificates != null) {
@@ -703,6 +727,7 @@ class _$PublicProfileGetExperiencesImpl implements PublicProfileGetExperiences {
     required TResult Function(String userName) getExperiences,
     required TResult Function(String userName) getLanguages,
     required TResult Function(String userName) getSkills,
+    required TResult Function(String userName) getBanner,
   }) {
     return getExperiences(userName);
   }
@@ -716,6 +741,7 @@ class _$PublicProfileGetExperiencesImpl implements PublicProfileGetExperiences {
     TResult? Function(String userName)? getExperiences,
     TResult? Function(String userName)? getLanguages,
     TResult? Function(String userName)? getSkills,
+    TResult? Function(String userName)? getBanner,
   }) {
     return getExperiences?.call(userName);
   }
@@ -729,6 +755,7 @@ class _$PublicProfileGetExperiencesImpl implements PublicProfileGetExperiences {
     TResult Function(String userName)? getExperiences,
     TResult Function(String userName)? getLanguages,
     TResult Function(String userName)? getSkills,
+    TResult Function(String userName)? getBanner,
     required TResult orElse(),
   }) {
     if (getExperiences != null) {
@@ -747,6 +774,7 @@ class _$PublicProfileGetExperiencesImpl implements PublicProfileGetExperiences {
     required TResult Function(PublicProfileGetExperiences value) getExperiences,
     required TResult Function(PublicProfileGetLanguages value) getLanguages,
     required TResult Function(PublicProfileGetSkills value) getSkills,
+    required TResult Function(PublicProfileGetBanner value) getBanner,
   }) {
     return getExperiences(this);
   }
@@ -760,6 +788,7 @@ class _$PublicProfileGetExperiencesImpl implements PublicProfileGetExperiences {
     TResult? Function(PublicProfileGetExperiences value)? getExperiences,
     TResult? Function(PublicProfileGetLanguages value)? getLanguages,
     TResult? Function(PublicProfileGetSkills value)? getSkills,
+    TResult? Function(PublicProfileGetBanner value)? getBanner,
   }) {
     return getExperiences?.call(this);
   }
@@ -773,6 +802,7 @@ class _$PublicProfileGetExperiencesImpl implements PublicProfileGetExperiences {
     TResult Function(PublicProfileGetExperiences value)? getExperiences,
     TResult Function(PublicProfileGetLanguages value)? getLanguages,
     TResult Function(PublicProfileGetSkills value)? getSkills,
+    TResult Function(PublicProfileGetBanner value)? getBanner,
     required TResult orElse(),
   }) {
     if (getExperiences != null) {
@@ -871,6 +901,7 @@ class _$PublicProfileGetLanguagesImpl implements PublicProfileGetLanguages {
     required TResult Function(String userName) getExperiences,
     required TResult Function(String userName) getLanguages,
     required TResult Function(String userName) getSkills,
+    required TResult Function(String userName) getBanner,
   }) {
     return getLanguages(userName);
   }
@@ -884,6 +915,7 @@ class _$PublicProfileGetLanguagesImpl implements PublicProfileGetLanguages {
     TResult? Function(String userName)? getExperiences,
     TResult? Function(String userName)? getLanguages,
     TResult? Function(String userName)? getSkills,
+    TResult? Function(String userName)? getBanner,
   }) {
     return getLanguages?.call(userName);
   }
@@ -897,6 +929,7 @@ class _$PublicProfileGetLanguagesImpl implements PublicProfileGetLanguages {
     TResult Function(String userName)? getExperiences,
     TResult Function(String userName)? getLanguages,
     TResult Function(String userName)? getSkills,
+    TResult Function(String userName)? getBanner,
     required TResult orElse(),
   }) {
     if (getLanguages != null) {
@@ -915,6 +948,7 @@ class _$PublicProfileGetLanguagesImpl implements PublicProfileGetLanguages {
     required TResult Function(PublicProfileGetExperiences value) getExperiences,
     required TResult Function(PublicProfileGetLanguages value) getLanguages,
     required TResult Function(PublicProfileGetSkills value) getSkills,
+    required TResult Function(PublicProfileGetBanner value) getBanner,
   }) {
     return getLanguages(this);
   }
@@ -928,6 +962,7 @@ class _$PublicProfileGetLanguagesImpl implements PublicProfileGetLanguages {
     TResult? Function(PublicProfileGetExperiences value)? getExperiences,
     TResult? Function(PublicProfileGetLanguages value)? getLanguages,
     TResult? Function(PublicProfileGetSkills value)? getSkills,
+    TResult? Function(PublicProfileGetBanner value)? getBanner,
   }) {
     return getLanguages?.call(this);
   }
@@ -941,6 +976,7 @@ class _$PublicProfileGetLanguagesImpl implements PublicProfileGetLanguages {
     TResult Function(PublicProfileGetExperiences value)? getExperiences,
     TResult Function(PublicProfileGetLanguages value)? getLanguages,
     TResult Function(PublicProfileGetSkills value)? getSkills,
+    TResult Function(PublicProfileGetBanner value)? getBanner,
     required TResult orElse(),
   }) {
     if (getLanguages != null) {
@@ -1038,6 +1074,7 @@ class _$PublicProfileGetSkillsImpl implements PublicProfileGetSkills {
     required TResult Function(String userName) getExperiences,
     required TResult Function(String userName) getLanguages,
     required TResult Function(String userName) getSkills,
+    required TResult Function(String userName) getBanner,
   }) {
     return getSkills(userName);
   }
@@ -1051,6 +1088,7 @@ class _$PublicProfileGetSkillsImpl implements PublicProfileGetSkills {
     TResult? Function(String userName)? getExperiences,
     TResult? Function(String userName)? getLanguages,
     TResult? Function(String userName)? getSkills,
+    TResult? Function(String userName)? getBanner,
   }) {
     return getSkills?.call(userName);
   }
@@ -1064,6 +1102,7 @@ class _$PublicProfileGetSkillsImpl implements PublicProfileGetSkills {
     TResult Function(String userName)? getExperiences,
     TResult Function(String userName)? getLanguages,
     TResult Function(String userName)? getSkills,
+    TResult Function(String userName)? getBanner,
     required TResult orElse(),
   }) {
     if (getSkills != null) {
@@ -1082,6 +1121,7 @@ class _$PublicProfileGetSkillsImpl implements PublicProfileGetSkills {
     required TResult Function(PublicProfileGetExperiences value) getExperiences,
     required TResult Function(PublicProfileGetLanguages value) getLanguages,
     required TResult Function(PublicProfileGetSkills value) getSkills,
+    required TResult Function(PublicProfileGetBanner value) getBanner,
   }) {
     return getSkills(this);
   }
@@ -1095,6 +1135,7 @@ class _$PublicProfileGetSkillsImpl implements PublicProfileGetSkills {
     TResult? Function(PublicProfileGetExperiences value)? getExperiences,
     TResult? Function(PublicProfileGetLanguages value)? getLanguages,
     TResult? Function(PublicProfileGetSkills value)? getSkills,
+    TResult? Function(PublicProfileGetBanner value)? getBanner,
   }) {
     return getSkills?.call(this);
   }
@@ -1108,6 +1149,7 @@ class _$PublicProfileGetSkillsImpl implements PublicProfileGetSkills {
     TResult Function(PublicProfileGetExperiences value)? getExperiences,
     TResult Function(PublicProfileGetLanguages value)? getLanguages,
     TResult Function(PublicProfileGetSkills value)? getSkills,
+    TResult Function(PublicProfileGetBanner value)? getBanner,
     required TResult orElse(),
   }) {
     if (getSkills != null) {
@@ -1130,6 +1172,179 @@ abstract class PublicProfileGetSkills implements PublicProfileEvent {
 }
 
 /// @nodoc
+abstract class _$$PublicProfileGetBannerImplCopyWith<$Res>
+    implements $PublicProfileEventCopyWith<$Res> {
+  factory _$$PublicProfileGetBannerImplCopyWith(
+          _$PublicProfileGetBannerImpl value,
+          $Res Function(_$PublicProfileGetBannerImpl) then) =
+      __$$PublicProfileGetBannerImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String userName});
+}
+
+/// @nodoc
+class __$$PublicProfileGetBannerImplCopyWithImpl<$Res>
+    extends _$PublicProfileEventCopyWithImpl<$Res, _$PublicProfileGetBannerImpl>
+    implements _$$PublicProfileGetBannerImplCopyWith<$Res> {
+  __$$PublicProfileGetBannerImplCopyWithImpl(
+      _$PublicProfileGetBannerImpl _value,
+      $Res Function(_$PublicProfileGetBannerImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userName = null,
+  }) {
+    return _then(_$PublicProfileGetBannerImpl(
+      null == userName
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PublicProfileGetBannerImpl implements PublicProfileGetBanner {
+  const _$PublicProfileGetBannerImpl(this.userName);
+
+  @override
+  final String userName;
+
+  @override
+  String toString() {
+    return 'PublicProfileEvent.getBanner(userName: $userName)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PublicProfileGetBannerImpl &&
+            (identical(other.userName, userName) ||
+                other.userName == userName));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, userName);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PublicProfileGetBannerImplCopyWith<_$PublicProfileGetBannerImpl>
+      get copyWith => __$$PublicProfileGetBannerImplCopyWithImpl<
+          _$PublicProfileGetBannerImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String userName) getBasicInfo,
+    required TResult Function(String userName) getEducations,
+    required TResult Function(String userName) getCertificates,
+    required TResult Function(String userName) getExperiences,
+    required TResult Function(String userName) getLanguages,
+    required TResult Function(String userName) getSkills,
+    required TResult Function(String userName) getBanner,
+  }) {
+    return getBanner(userName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String userName)? getBasicInfo,
+    TResult? Function(String userName)? getEducations,
+    TResult? Function(String userName)? getCertificates,
+    TResult? Function(String userName)? getExperiences,
+    TResult? Function(String userName)? getLanguages,
+    TResult? Function(String userName)? getSkills,
+    TResult? Function(String userName)? getBanner,
+  }) {
+    return getBanner?.call(userName);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String userName)? getBasicInfo,
+    TResult Function(String userName)? getEducations,
+    TResult Function(String userName)? getCertificates,
+    TResult Function(String userName)? getExperiences,
+    TResult Function(String userName)? getLanguages,
+    TResult Function(String userName)? getSkills,
+    TResult Function(String userName)? getBanner,
+    required TResult orElse(),
+  }) {
+    if (getBanner != null) {
+      return getBanner(userName);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PublicProfileGetBasicInfo value) getBasicInfo,
+    required TResult Function(PublicProfileGetEducation value) getEducations,
+    required TResult Function(PublicProfileGetCertificates value)
+        getCertificates,
+    required TResult Function(PublicProfileGetExperiences value) getExperiences,
+    required TResult Function(PublicProfileGetLanguages value) getLanguages,
+    required TResult Function(PublicProfileGetSkills value) getSkills,
+    required TResult Function(PublicProfileGetBanner value) getBanner,
+  }) {
+    return getBanner(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PublicProfileGetBasicInfo value)? getBasicInfo,
+    TResult? Function(PublicProfileGetEducation value)? getEducations,
+    TResult? Function(PublicProfileGetCertificates value)? getCertificates,
+    TResult? Function(PublicProfileGetExperiences value)? getExperiences,
+    TResult? Function(PublicProfileGetLanguages value)? getLanguages,
+    TResult? Function(PublicProfileGetSkills value)? getSkills,
+    TResult? Function(PublicProfileGetBanner value)? getBanner,
+  }) {
+    return getBanner?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PublicProfileGetBasicInfo value)? getBasicInfo,
+    TResult Function(PublicProfileGetEducation value)? getEducations,
+    TResult Function(PublicProfileGetCertificates value)? getCertificates,
+    TResult Function(PublicProfileGetExperiences value)? getExperiences,
+    TResult Function(PublicProfileGetLanguages value)? getLanguages,
+    TResult Function(PublicProfileGetSkills value)? getSkills,
+    TResult Function(PublicProfileGetBanner value)? getBanner,
+    required TResult orElse(),
+  }) {
+    if (getBanner != null) {
+      return getBanner(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PublicProfileGetBanner implements PublicProfileEvent {
+  const factory PublicProfileGetBanner(final String userName) =
+      _$PublicProfileGetBannerImpl;
+
+  @override
+  String get userName;
+  @override
+  @JsonKey(ignore: true)
+  _$$PublicProfileGetBannerImplCopyWith<_$PublicProfileGetBannerImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$PublicProfileState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -1146,6 +1361,7 @@ mixin _$PublicProfileState {
     required TResult Function(List<PublicLanguageModel> languages)
         getLanguagesSuccess,
     required TResult Function(List<PublicSkillModel> skills) getSkillsSuccess,
+    required TResult Function(BannerModel banner) getBannerSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1160,6 +1376,7 @@ mixin _$PublicProfileState {
         getCertificatesSuccess,
     TResult? Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult? Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult? Function(BannerModel banner)? getBannerSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1174,6 +1391,7 @@ mixin _$PublicProfileState {
         getCertificatesSuccess,
     TResult Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult Function(BannerModel banner)? getBannerSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1194,6 +1412,8 @@ mixin _$PublicProfileState {
         getLanguagesSuccess,
     required TResult Function(PublicProfileGetSkillsSuccess value)
         getSkillsSuccess,
+    required TResult Function(PublicProfileGetBannerSuccess value)
+        getBannerSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1212,6 +1432,7 @@ mixin _$PublicProfileState {
     TResult? Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult? Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult? Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1230,6 +1451,7 @@ mixin _$PublicProfileState {
     TResult Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1304,6 +1526,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function(List<PublicLanguageModel> languages)
         getLanguagesSuccess,
     required TResult Function(List<PublicSkillModel> skills) getSkillsSuccess,
+    required TResult Function(BannerModel banner) getBannerSuccess,
   }) {
     return initial();
   }
@@ -1321,6 +1544,7 @@ class _$InitialImpl implements _Initial {
         getCertificatesSuccess,
     TResult? Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult? Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult? Function(BannerModel banner)? getBannerSuccess,
   }) {
     return initial?.call();
   }
@@ -1338,6 +1562,7 @@ class _$InitialImpl implements _Initial {
         getCertificatesSuccess,
     TResult Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult Function(BannerModel banner)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1364,6 +1589,8 @@ class _$InitialImpl implements _Initial {
         getLanguagesSuccess,
     required TResult Function(PublicProfileGetSkillsSuccess value)
         getSkillsSuccess,
+    required TResult Function(PublicProfileGetBannerSuccess value)
+        getBannerSuccess,
   }) {
     return initial(this);
   }
@@ -1385,6 +1612,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult? Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult? Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
   }) {
     return initial?.call(this);
   }
@@ -1406,6 +1634,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1471,6 +1700,7 @@ class _$PublicProfileLoadingImpl implements PublicProfileLoading {
     required TResult Function(List<PublicLanguageModel> languages)
         getLanguagesSuccess,
     required TResult Function(List<PublicSkillModel> skills) getSkillsSuccess,
+    required TResult Function(BannerModel banner) getBannerSuccess,
   }) {
     return loading();
   }
@@ -1488,6 +1718,7 @@ class _$PublicProfileLoadingImpl implements PublicProfileLoading {
         getCertificatesSuccess,
     TResult? Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult? Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult? Function(BannerModel banner)? getBannerSuccess,
   }) {
     return loading?.call();
   }
@@ -1505,6 +1736,7 @@ class _$PublicProfileLoadingImpl implements PublicProfileLoading {
         getCertificatesSuccess,
     TResult Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult Function(BannerModel banner)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1531,6 +1763,8 @@ class _$PublicProfileLoadingImpl implements PublicProfileLoading {
         getLanguagesSuccess,
     required TResult Function(PublicProfileGetSkillsSuccess value)
         getSkillsSuccess,
+    required TResult Function(PublicProfileGetBannerSuccess value)
+        getBannerSuccess,
   }) {
     return loading(this);
   }
@@ -1552,6 +1786,7 @@ class _$PublicProfileLoadingImpl implements PublicProfileLoading {
     TResult? Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult? Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult? Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
   }) {
     return loading?.call(this);
   }
@@ -1573,6 +1808,7 @@ class _$PublicProfileLoadingImpl implements PublicProfileLoading {
     TResult Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1672,6 +1908,7 @@ class _$PublicProfileErrorImpl implements PublicProfileError {
     required TResult Function(List<PublicLanguageModel> languages)
         getLanguagesSuccess,
     required TResult Function(List<PublicSkillModel> skills) getSkillsSuccess,
+    required TResult Function(BannerModel banner) getBannerSuccess,
   }) {
     return error(title, msg);
   }
@@ -1689,6 +1926,7 @@ class _$PublicProfileErrorImpl implements PublicProfileError {
         getCertificatesSuccess,
     TResult? Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult? Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult? Function(BannerModel banner)? getBannerSuccess,
   }) {
     return error?.call(title, msg);
   }
@@ -1706,6 +1944,7 @@ class _$PublicProfileErrorImpl implements PublicProfileError {
         getCertificatesSuccess,
     TResult Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult Function(BannerModel banner)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1732,6 +1971,8 @@ class _$PublicProfileErrorImpl implements PublicProfileError {
         getLanguagesSuccess,
     required TResult Function(PublicProfileGetSkillsSuccess value)
         getSkillsSuccess,
+    required TResult Function(PublicProfileGetBannerSuccess value)
+        getBannerSuccess,
   }) {
     return error(this);
   }
@@ -1753,6 +1994,7 @@ class _$PublicProfileErrorImpl implements PublicProfileError {
     TResult? Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult? Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult? Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
   }) {
     return error?.call(this);
   }
@@ -1774,6 +2016,7 @@ class _$PublicProfileErrorImpl implements PublicProfileError {
     TResult Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1889,6 +2132,7 @@ class _$PublicProfileGetBasicInfoSuccessImpl
     required TResult Function(List<PublicLanguageModel> languages)
         getLanguagesSuccess,
     required TResult Function(List<PublicSkillModel> skills) getSkillsSuccess,
+    required TResult Function(BannerModel banner) getBannerSuccess,
   }) {
     return getBasicInfoSuccess(userInfo);
   }
@@ -1906,6 +2150,7 @@ class _$PublicProfileGetBasicInfoSuccessImpl
         getCertificatesSuccess,
     TResult? Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult? Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult? Function(BannerModel banner)? getBannerSuccess,
   }) {
     return getBasicInfoSuccess?.call(userInfo);
   }
@@ -1923,6 +2168,7 @@ class _$PublicProfileGetBasicInfoSuccessImpl
         getCertificatesSuccess,
     TResult Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult Function(BannerModel banner)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (getBasicInfoSuccess != null) {
@@ -1949,6 +2195,8 @@ class _$PublicProfileGetBasicInfoSuccessImpl
         getLanguagesSuccess,
     required TResult Function(PublicProfileGetSkillsSuccess value)
         getSkillsSuccess,
+    required TResult Function(PublicProfileGetBannerSuccess value)
+        getBannerSuccess,
   }) {
     return getBasicInfoSuccess(this);
   }
@@ -1970,6 +2218,7 @@ class _$PublicProfileGetBasicInfoSuccessImpl
     TResult? Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult? Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult? Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
   }) {
     return getBasicInfoSuccess?.call(this);
   }
@@ -1991,6 +2240,7 @@ class _$PublicProfileGetBasicInfoSuccessImpl
     TResult Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (getBasicInfoSuccess != null) {
@@ -2104,6 +2354,7 @@ class _$PublicProfileGetUserExperienceSuccessImpl
     required TResult Function(List<PublicLanguageModel> languages)
         getLanguagesSuccess,
     required TResult Function(List<PublicSkillModel> skills) getSkillsSuccess,
+    required TResult Function(BannerModel banner) getBannerSuccess,
   }) {
     return getExperiencesSuccess(experiences);
   }
@@ -2121,6 +2372,7 @@ class _$PublicProfileGetUserExperienceSuccessImpl
         getCertificatesSuccess,
     TResult? Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult? Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult? Function(BannerModel banner)? getBannerSuccess,
   }) {
     return getExperiencesSuccess?.call(experiences);
   }
@@ -2138,6 +2390,7 @@ class _$PublicProfileGetUserExperienceSuccessImpl
         getCertificatesSuccess,
     TResult Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult Function(BannerModel banner)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (getExperiencesSuccess != null) {
@@ -2164,6 +2417,8 @@ class _$PublicProfileGetUserExperienceSuccessImpl
         getLanguagesSuccess,
     required TResult Function(PublicProfileGetSkillsSuccess value)
         getSkillsSuccess,
+    required TResult Function(PublicProfileGetBannerSuccess value)
+        getBannerSuccess,
   }) {
     return getExperiencesSuccess(this);
   }
@@ -2185,6 +2440,7 @@ class _$PublicProfileGetUserExperienceSuccessImpl
     TResult? Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult? Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult? Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
   }) {
     return getExperiencesSuccess?.call(this);
   }
@@ -2206,6 +2462,7 @@ class _$PublicProfileGetUserExperienceSuccessImpl
     TResult Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (getExperiencesSuccess != null) {
@@ -2320,6 +2577,7 @@ class _$PublicProfileGetUserEducationsSuccessImpl
     required TResult Function(List<PublicLanguageModel> languages)
         getLanguagesSuccess,
     required TResult Function(List<PublicSkillModel> skills) getSkillsSuccess,
+    required TResult Function(BannerModel banner) getBannerSuccess,
   }) {
     return getEducationsSuccess(educations);
   }
@@ -2337,6 +2595,7 @@ class _$PublicProfileGetUserEducationsSuccessImpl
         getCertificatesSuccess,
     TResult? Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult? Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult? Function(BannerModel banner)? getBannerSuccess,
   }) {
     return getEducationsSuccess?.call(educations);
   }
@@ -2354,6 +2613,7 @@ class _$PublicProfileGetUserEducationsSuccessImpl
         getCertificatesSuccess,
     TResult Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult Function(BannerModel banner)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (getEducationsSuccess != null) {
@@ -2380,6 +2640,8 @@ class _$PublicProfileGetUserEducationsSuccessImpl
         getLanguagesSuccess,
     required TResult Function(PublicProfileGetSkillsSuccess value)
         getSkillsSuccess,
+    required TResult Function(PublicProfileGetBannerSuccess value)
+        getBannerSuccess,
   }) {
     return getEducationsSuccess(this);
   }
@@ -2401,6 +2663,7 @@ class _$PublicProfileGetUserEducationsSuccessImpl
     TResult? Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult? Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult? Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
   }) {
     return getEducationsSuccess?.call(this);
   }
@@ -2422,6 +2685,7 @@ class _$PublicProfileGetUserEducationsSuccessImpl
     TResult Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (getEducationsSuccess != null) {
@@ -2537,6 +2801,7 @@ class _$PublicProfileGetUserCertificatesSuccessImpl
     required TResult Function(List<PublicLanguageModel> languages)
         getLanguagesSuccess,
     required TResult Function(List<PublicSkillModel> skills) getSkillsSuccess,
+    required TResult Function(BannerModel banner) getBannerSuccess,
   }) {
     return getCertificatesSuccess(certificates);
   }
@@ -2554,6 +2819,7 @@ class _$PublicProfileGetUserCertificatesSuccessImpl
         getCertificatesSuccess,
     TResult? Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult? Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult? Function(BannerModel banner)? getBannerSuccess,
   }) {
     return getCertificatesSuccess?.call(certificates);
   }
@@ -2571,6 +2837,7 @@ class _$PublicProfileGetUserCertificatesSuccessImpl
         getCertificatesSuccess,
     TResult Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult Function(BannerModel banner)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (getCertificatesSuccess != null) {
@@ -2597,6 +2864,8 @@ class _$PublicProfileGetUserCertificatesSuccessImpl
         getLanguagesSuccess,
     required TResult Function(PublicProfileGetSkillsSuccess value)
         getSkillsSuccess,
+    required TResult Function(PublicProfileGetBannerSuccess value)
+        getBannerSuccess,
   }) {
     return getCertificatesSuccess(this);
   }
@@ -2618,6 +2887,7 @@ class _$PublicProfileGetUserCertificatesSuccessImpl
     TResult? Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult? Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult? Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
   }) {
     return getCertificatesSuccess?.call(this);
   }
@@ -2639,6 +2909,7 @@ class _$PublicProfileGetUserCertificatesSuccessImpl
     TResult Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (getCertificatesSuccess != null) {
@@ -2753,6 +3024,7 @@ class _$PublicProfileGetLanguagesSuccessImpl
     required TResult Function(List<PublicLanguageModel> languages)
         getLanguagesSuccess,
     required TResult Function(List<PublicSkillModel> skills) getSkillsSuccess,
+    required TResult Function(BannerModel banner) getBannerSuccess,
   }) {
     return getLanguagesSuccess(languages);
   }
@@ -2770,6 +3042,7 @@ class _$PublicProfileGetLanguagesSuccessImpl
         getCertificatesSuccess,
     TResult? Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult? Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult? Function(BannerModel banner)? getBannerSuccess,
   }) {
     return getLanguagesSuccess?.call(languages);
   }
@@ -2787,6 +3060,7 @@ class _$PublicProfileGetLanguagesSuccessImpl
         getCertificatesSuccess,
     TResult Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult Function(BannerModel banner)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (getLanguagesSuccess != null) {
@@ -2813,6 +3087,8 @@ class _$PublicProfileGetLanguagesSuccessImpl
         getLanguagesSuccess,
     required TResult Function(PublicProfileGetSkillsSuccess value)
         getSkillsSuccess,
+    required TResult Function(PublicProfileGetBannerSuccess value)
+        getBannerSuccess,
   }) {
     return getLanguagesSuccess(this);
   }
@@ -2834,6 +3110,7 @@ class _$PublicProfileGetLanguagesSuccessImpl
     TResult? Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult? Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult? Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
   }) {
     return getLanguagesSuccess?.call(this);
   }
@@ -2855,6 +3132,7 @@ class _$PublicProfileGetLanguagesSuccessImpl
     TResult Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (getLanguagesSuccess != null) {
@@ -2966,6 +3244,7 @@ class _$PublicProfileGetSkillsSuccessImpl
     required TResult Function(List<PublicLanguageModel> languages)
         getLanguagesSuccess,
     required TResult Function(List<PublicSkillModel> skills) getSkillsSuccess,
+    required TResult Function(BannerModel banner) getBannerSuccess,
   }) {
     return getSkillsSuccess(skills);
   }
@@ -2983,6 +3262,7 @@ class _$PublicProfileGetSkillsSuccessImpl
         getCertificatesSuccess,
     TResult? Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult? Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult? Function(BannerModel banner)? getBannerSuccess,
   }) {
     return getSkillsSuccess?.call(skills);
   }
@@ -3000,6 +3280,7 @@ class _$PublicProfileGetSkillsSuccessImpl
         getCertificatesSuccess,
     TResult Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
     TResult Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult Function(BannerModel banner)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (getSkillsSuccess != null) {
@@ -3026,6 +3307,8 @@ class _$PublicProfileGetSkillsSuccessImpl
         getLanguagesSuccess,
     required TResult Function(PublicProfileGetSkillsSuccess value)
         getSkillsSuccess,
+    required TResult Function(PublicProfileGetBannerSuccess value)
+        getBannerSuccess,
   }) {
     return getSkillsSuccess(this);
   }
@@ -3047,6 +3330,7 @@ class _$PublicProfileGetSkillsSuccessImpl
     TResult? Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult? Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult? Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
   }) {
     return getSkillsSuccess?.call(this);
   }
@@ -3068,6 +3352,7 @@ class _$PublicProfileGetSkillsSuccessImpl
     TResult Function(PublicProfileGetLanguagesSuccess value)?
         getLanguagesSuccess,
     TResult Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
     required TResult orElse(),
   }) {
     if (getSkillsSuccess != null) {
@@ -3086,5 +3371,227 @@ abstract class PublicProfileGetSkillsSuccess implements PublicProfileState {
   @JsonKey(ignore: true)
   _$$PublicProfileGetSkillsSuccessImplCopyWith<
           _$PublicProfileGetSkillsSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PublicProfileGetBannerSuccessImplCopyWith<$Res> {
+  factory _$$PublicProfileGetBannerSuccessImplCopyWith(
+          _$PublicProfileGetBannerSuccessImpl value,
+          $Res Function(_$PublicProfileGetBannerSuccessImpl) then) =
+      __$$PublicProfileGetBannerSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({BannerModel banner});
+
+  $BannerModelCopyWith<$Res> get banner;
+}
+
+/// @nodoc
+class __$$PublicProfileGetBannerSuccessImplCopyWithImpl<$Res>
+    extends _$PublicProfileStateCopyWithImpl<$Res,
+        _$PublicProfileGetBannerSuccessImpl>
+    implements _$$PublicProfileGetBannerSuccessImplCopyWith<$Res> {
+  __$$PublicProfileGetBannerSuccessImplCopyWithImpl(
+      _$PublicProfileGetBannerSuccessImpl _value,
+      $Res Function(_$PublicProfileGetBannerSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? banner = null,
+  }) {
+    return _then(_$PublicProfileGetBannerSuccessImpl(
+      null == banner
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as BannerModel,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BannerModelCopyWith<$Res> get banner {
+    return $BannerModelCopyWith<$Res>(_value.banner, (value) {
+      return _then(_value.copyWith(banner: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$PublicProfileGetBannerSuccessImpl
+    implements PublicProfileGetBannerSuccess {
+  const _$PublicProfileGetBannerSuccessImpl(this.banner);
+
+  @override
+  final BannerModel banner;
+
+  @override
+  String toString() {
+    return 'PublicProfileState.getBannerSuccess(banner: $banner)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PublicProfileGetBannerSuccessImpl &&
+            (identical(other.banner, banner) || other.banner == banner));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, banner);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PublicProfileGetBannerSuccessImplCopyWith<
+          _$PublicProfileGetBannerSuccessImpl>
+      get copyWith => __$$PublicProfileGetBannerSuccessImplCopyWithImpl<
+          _$PublicProfileGetBannerSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(String title, String msg) error,
+    required TResult Function(PublicUserInfoModel userInfo) getBasicInfoSuccess,
+    required TResult Function(List<ExperienceModel> experiences)
+        getExperiencesSuccess,
+    required TResult Function(List<EducationModel> educations)
+        getEducationsSuccess,
+    required TResult Function(List<CertificateModel> certificates)
+        getCertificatesSuccess,
+    required TResult Function(List<PublicLanguageModel> languages)
+        getLanguagesSuccess,
+    required TResult Function(List<PublicSkillModel> skills) getSkillsSuccess,
+    required TResult Function(BannerModel banner) getBannerSuccess,
+  }) {
+    return getBannerSuccess(banner);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(String title, String msg)? error,
+    TResult? Function(PublicUserInfoModel userInfo)? getBasicInfoSuccess,
+    TResult? Function(List<ExperienceModel> experiences)? getExperiencesSuccess,
+    TResult? Function(List<EducationModel> educations)? getEducationsSuccess,
+    TResult? Function(List<CertificateModel> certificates)?
+        getCertificatesSuccess,
+    TResult? Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
+    TResult? Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult? Function(BannerModel banner)? getBannerSuccess,
+  }) {
+    return getBannerSuccess?.call(banner);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(String title, String msg)? error,
+    TResult Function(PublicUserInfoModel userInfo)? getBasicInfoSuccess,
+    TResult Function(List<ExperienceModel> experiences)? getExperiencesSuccess,
+    TResult Function(List<EducationModel> educations)? getEducationsSuccess,
+    TResult Function(List<CertificateModel> certificates)?
+        getCertificatesSuccess,
+    TResult Function(List<PublicLanguageModel> languages)? getLanguagesSuccess,
+    TResult Function(List<PublicSkillModel> skills)? getSkillsSuccess,
+    TResult Function(BannerModel banner)? getBannerSuccess,
+    required TResult orElse(),
+  }) {
+    if (getBannerSuccess != null) {
+      return getBannerSuccess(banner);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(PublicProfileLoading value) loading,
+    required TResult Function(PublicProfileError value) error,
+    required TResult Function(PublicProfileGetBasicInfoSuccess value)
+        getBasicInfoSuccess,
+    required TResult Function(PublicProfileGetUserExperienceSuccess value)
+        getExperiencesSuccess,
+    required TResult Function(PublicProfileGetUserEducationsSuccess value)
+        getEducationsSuccess,
+    required TResult Function(PublicProfileGetUserCertificatesSuccess value)
+        getCertificatesSuccess,
+    required TResult Function(PublicProfileGetLanguagesSuccess value)
+        getLanguagesSuccess,
+    required TResult Function(PublicProfileGetSkillsSuccess value)
+        getSkillsSuccess,
+    required TResult Function(PublicProfileGetBannerSuccess value)
+        getBannerSuccess,
+  }) {
+    return getBannerSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(PublicProfileLoading value)? loading,
+    TResult? Function(PublicProfileError value)? error,
+    TResult? Function(PublicProfileGetBasicInfoSuccess value)?
+        getBasicInfoSuccess,
+    TResult? Function(PublicProfileGetUserExperienceSuccess value)?
+        getExperiencesSuccess,
+    TResult? Function(PublicProfileGetUserEducationsSuccess value)?
+        getEducationsSuccess,
+    TResult? Function(PublicProfileGetUserCertificatesSuccess value)?
+        getCertificatesSuccess,
+    TResult? Function(PublicProfileGetLanguagesSuccess value)?
+        getLanguagesSuccess,
+    TResult? Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult? Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
+  }) {
+    return getBannerSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(PublicProfileLoading value)? loading,
+    TResult Function(PublicProfileError value)? error,
+    TResult Function(PublicProfileGetBasicInfoSuccess value)?
+        getBasicInfoSuccess,
+    TResult Function(PublicProfileGetUserExperienceSuccess value)?
+        getExperiencesSuccess,
+    TResult Function(PublicProfileGetUserEducationsSuccess value)?
+        getEducationsSuccess,
+    TResult Function(PublicProfileGetUserCertificatesSuccess value)?
+        getCertificatesSuccess,
+    TResult Function(PublicProfileGetLanguagesSuccess value)?
+        getLanguagesSuccess,
+    TResult Function(PublicProfileGetSkillsSuccess value)? getSkillsSuccess,
+    TResult Function(PublicProfileGetBannerSuccess value)? getBannerSuccess,
+    required TResult orElse(),
+  }) {
+    if (getBannerSuccess != null) {
+      return getBannerSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PublicProfileGetBannerSuccess implements PublicProfileState {
+  const factory PublicProfileGetBannerSuccess(final BannerModel banner) =
+      _$PublicProfileGetBannerSuccessImpl;
+
+  BannerModel get banner;
+  @JsonKey(ignore: true)
+  _$$PublicProfileGetBannerSuccessImplCopyWith<
+          _$PublicProfileGetBannerSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

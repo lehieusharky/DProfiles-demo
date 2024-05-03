@@ -105,7 +105,7 @@ import 'package:demo_dprofiles/src/features/profile/data/models/education_model.
     as _i52;
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart'
     as _i53;
-import 'package:demo_dprofiles/src/features/pubic_profile/presentation/pages/public_profile_page.dart'
+import 'package:demo_dprofiles/src/features/pubic_profile/presentation/pages/import_public_profile_page.dart'
     as _i34;
 import 'package:demo_dprofiles/src/features/search/presentation/pages/search_home_page.dart'
     as _i35;

@@ -1,7 +1,6 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
-import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
+import 'package:demo_dprofiles/src/features/pubic_profile/data/models/public_user_info_model.dart';
+import 'package:demo_dprofiles/src/features/pubic_profile/presentation/bloc/public_profile_bloc.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
@@ -9,29 +8,31 @@ import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class FreelancerLanguageProfile extends StatefulWidget {
-  const FreelancerLanguageProfile({Key? key}) : super(key: key);
+class PublicFreelancerLanguageProfile extends StatefulWidget {
+  const PublicFreelancerLanguageProfile({Key? key}) : super(key: key);
 
   @override
-  State<FreelancerLanguageProfile> createState() =>
-      _FreelancerLanguageProfileState();
+  State<PublicFreelancerLanguageProfile> createState() =>
+      _PublicFreelancerLanguageProfileState();
 }
 
-class _FreelancerLanguageProfileState extends State<FreelancerLanguageProfile> {
-  UserInfoModel? userInfo;
+class _PublicFreelancerLanguageProfileState
+    extends State<PublicFreelancerLanguageProfile> {
+  PublicUserInfoModel? userInfo;
 
   @override
   Widget build(BuildContext context) {
-    return BlocSelector<ProfileBloc, ProfileState, UserInfoModel?>(
+    return BlocSelector<PublicProfileBloc, PublicProfileState,
+        PublicUserInfoModel?>(
       selector: (state) {
-        if (state is ProfileGetUserInfoSuccess) {
-          userInfo = state.userInfoModel;
+        if (state is PublicProfileGetBasicInfoSuccess) {
+          userInfo = state.userInfo;
         }
         return userInfo;
       },
       builder: (context, state) {
         if (userInfo == null) {
-          return const MyShimmer(count: 1, height: 50);
+          return Container();
         } else {
           return Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -60,7 +61,6 @@ class _FreelancerLanguageProfileState extends State<FreelancerLanguageProfile> {
                 ),
               ),
               Assets.images.profile.usFlag.svg(),
-              
               Padding(
                 padding: context.padding(left: 8),
                 child: Text(
@@ -101,6 +101,4 @@ class _FreelancerLanguageProfileState extends State<FreelancerLanguageProfile> {
       },
     );
   }
-
-
 }

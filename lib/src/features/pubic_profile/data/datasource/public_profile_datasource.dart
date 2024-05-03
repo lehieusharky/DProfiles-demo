@@ -12,4 +12,6 @@ abstract class PublicProfileDataSource {
   Future<BaseResponse> getPublicLanguages(String userName);
 
   Future<BaseResponse> getPublicSkills(String userName);
+
+  Future<BaseResponse> getPublicBanner(String userName);
 }
