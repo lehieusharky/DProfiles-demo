@@ -65,7 +65,7 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
       },
       builder: (context, state) {
         if (state == null) {
-          return const MyShimmer(count: 3);
+          return Container();
         }
         return Padding(
           padding: context.padding(top: 16),

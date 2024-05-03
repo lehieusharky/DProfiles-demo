@@ -1,4 +1,3 @@
-
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
@@ -72,7 +71,7 @@ class _AvatarProfileState extends State<AvatarProfile> {
       },
       builder: (context, state) {
         if (userInfo == null) {
-          return const MyShimmer(count: 1, height: 200);
+          return Container();
         } else {
           return Stack(
             alignment: Alignment.bottomLeft,

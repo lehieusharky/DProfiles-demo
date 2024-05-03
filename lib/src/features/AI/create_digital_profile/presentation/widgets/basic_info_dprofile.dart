@@ -30,7 +30,7 @@ class _BasicInfoOfDigitalProfileState extends State<BasicInfoOfDigitalProfile> {
       },
       builder: (context, state) {
         if (userInfo == null) {
-          return const MyShimmer(count: 1, height: 100);
+          return Container();
         }
         return Padding(
           padding: context.padding(top: 8, horizontal: 20),

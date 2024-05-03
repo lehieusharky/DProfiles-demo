@@ -33,6 +33,8 @@ class AICharacterBotModel with _$AICharacterBotModel {
     @JsonKey(name: 'updated_on') String? updatedOn,
     @JsonKey(name: 'updated_ts') String? updatedTs,
     @JsonKey(name: 'created_ts') String? createdTs,
+    @Default(0) int? noOfConversation,
+    @Default(0) int? noOfMessage,
   }) = _AICharacterBotModel;
 
   factory AICharacterBotModel.fromJson(Map<String, Object?> json) =>

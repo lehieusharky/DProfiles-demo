@@ -59,7 +59,7 @@ class _ExperienceComponentState extends State<ExperienceComponent> {
                   .add(const ProfileGetUserExperience()),
             ),
             if (experiences == null)
-              const MyShimmer(count: 1, height: 50)
+              Container()
             else
               Column(
                 mainAxisSize: MainAxisSize.min,

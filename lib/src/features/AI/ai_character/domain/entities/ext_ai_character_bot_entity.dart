@@ -156,7 +156,7 @@ extension AICharacterBotModelExt on AICharacterBotModel {
       children: [
         Assets.icons.iconChat.svg(color: MyColor.getWhite),
         Text(
-          '10 k',
+          noOfConversation.toString(),
           style:
               AppFont().fontTheme(context, color: MyColor.getWhite).bodyMedium,
         ),

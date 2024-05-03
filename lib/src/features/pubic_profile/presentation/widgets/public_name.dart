@@ -28,7 +28,7 @@ class _NamePublicProfileState extends State<NamePublicProfile> {
       },
       builder: (context, state) {
         if (userInfo == null) {
-          return const MyShimmer(count: 1, height: 30);
+          return Container();
         } else {
           return _buildName();
         }

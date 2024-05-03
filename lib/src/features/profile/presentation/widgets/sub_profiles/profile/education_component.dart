@@ -25,9 +25,9 @@ class _EducationComponentState extends State<EducationComponent> {
     return BlocConsumer<ProfileBloc, ProfileState>(
       listener: (context, state) {
         if (state is ProfileGetUserEducationsSuccess) {
-          educations = [];  
+          educations = [];
           for (var element in state.educations) {
-            educations?.add(element); 
+            educations?.add(element);
           }
         }
 
@@ -60,7 +60,7 @@ class _EducationComponentState extends State<EducationComponent> {
                   .add(const ProfileGetUserEducations()),
             ),
             if (educations == null)
-              const MyShimmer(count: 1, height: 50)
+              Container()
             else
               Column(
                 mainAxisSize: MainAxisSize.min,

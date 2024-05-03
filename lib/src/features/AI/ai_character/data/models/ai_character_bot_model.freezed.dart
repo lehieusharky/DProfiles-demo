@@ -50,6 +50,8 @@ mixin _$AICharacterBotModel {
   String? get updatedTs => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_ts')
   String? get createdTs => throw _privateConstructorUsedError;
+  int? get noOfConversation => throw _privateConstructorUsedError;
+  int? get noOfMessage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -89,7 +91,9 @@ abstract class $AICharacterBotModelCopyWith<$Res> {
       int? flirty,
       @JsonKey(name: 'updated_on') String? updatedOn,
       @JsonKey(name: 'updated_ts') String? updatedTs,
-      @JsonKey(name: 'created_ts') String? createdTs});
+      @JsonKey(name: 'created_ts') String? createdTs,
+      int? noOfConversation,
+      int? noOfMessage});
 
   $DefinitionCopyWith<$Res>? get definition;
 }
@@ -133,6 +137,8 @@ class _$AICharacterBotModelCopyWithImpl<$Res, $Val extends AICharacterBotModel>
     Object? updatedOn = freezed,
     Object? updatedTs = freezed,
     Object? createdTs = freezed,
+    Object? noOfConversation = freezed,
+    Object? noOfMessage = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -239,6 +245,14 @@ class _$AICharacterBotModelCopyWithImpl<$Res, $Val extends AICharacterBotModel>
           ? _value.createdTs
           : createdTs // ignore: cast_nullable_to_non_nullable
               as String?,
+      noOfConversation: freezed == noOfConversation
+          ? _value.noOfConversation
+          : noOfConversation // ignore: cast_nullable_to_non_nullable
+              as int?,
+      noOfMessage: freezed == noOfMessage
+          ? _value.noOfMessage
+          : noOfMessage // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 
@@ -289,7 +303,9 @@ abstract class _$$AICharacterBotModelImplCopyWith<$Res>
       int? flirty,
       @JsonKey(name: 'updated_on') String? updatedOn,
       @JsonKey(name: 'updated_ts') String? updatedTs,
-      @JsonKey(name: 'created_ts') String? createdTs});
+      @JsonKey(name: 'created_ts') String? createdTs,
+      int? noOfConversation,
+      int? noOfMessage});
 
   @override
   $DefinitionCopyWith<$Res>? get definition;
@@ -332,6 +348,8 @@ class __$$AICharacterBotModelImplCopyWithImpl<$Res>
     Object? updatedOn = freezed,
     Object? updatedTs = freezed,
     Object? createdTs = freezed,
+    Object? noOfConversation = freezed,
+    Object? noOfMessage = freezed,
   }) {
     return _then(_$AICharacterBotModelImpl(
       id: freezed == id
@@ -438,6 +456,14 @@ class __$$AICharacterBotModelImplCopyWithImpl<$Res>
           ? _value.createdTs
           : createdTs // ignore: cast_nullable_to_non_nullable
               as String?,
+      noOfConversation: freezed == noOfConversation
+          ? _value.noOfConversation
+          : noOfConversation // ignore: cast_nullable_to_non_nullable
+              as int?,
+      noOfMessage: freezed == noOfMessage
+          ? _value.noOfMessage
+          : noOfMessage // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -471,7 +497,9 @@ class _$AICharacterBotModelImpl implements _AICharacterBotModel {
       this.flirty,
       @JsonKey(name: 'updated_on') this.updatedOn,
       @JsonKey(name: 'updated_ts') this.updatedTs,
-      @JsonKey(name: 'created_ts') this.createdTs});
+      @JsonKey(name: 'created_ts') this.createdTs,
+      this.noOfConversation = 0,
+      this.noOfMessage = 0});
 
   factory _$AICharacterBotModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$AICharacterBotModelImplFromJson(json);
@@ -532,10 +560,16 @@ class _$AICharacterBotModelImpl implements _AICharacterBotModel {
   @override
   @JsonKey(name: 'created_ts')
   final String? createdTs;
+  @override
+  @JsonKey()
+  final int? noOfConversation;
+  @override
+  @JsonKey()
+  final int? noOfMessage;
 
   @override
   String toString() {
-    return 'AICharacterBotModel(id: $id, userId: $userId, name: $name, summary: $summary, type: $type, definition: $definition, url: $url, avatar: $avatar, inspiring: $inspiring, smart: $smart, friendly: $friendly, supportive: $supportive, helpful: $helpful, humorous: $humorous, passive: $passive, aggressive: $aggressive, violent: $violent, formal: $formal, spiritual: $spiritual, chatty: $chatty, energetic: $energetic, sexy: $sexy, flirty: $flirty, updatedOn: $updatedOn, updatedTs: $updatedTs, createdTs: $createdTs)';
+    return 'AICharacterBotModel(id: $id, userId: $userId, name: $name, summary: $summary, type: $type, definition: $definition, url: $url, avatar: $avatar, inspiring: $inspiring, smart: $smart, friendly: $friendly, supportive: $supportive, helpful: $helpful, humorous: $humorous, passive: $passive, aggressive: $aggressive, violent: $violent, formal: $formal, spiritual: $spiritual, chatty: $chatty, energetic: $energetic, sexy: $sexy, flirty: $flirty, updatedOn: $updatedOn, updatedTs: $updatedTs, createdTs: $createdTs, noOfConversation: $noOfConversation, noOfMessage: $noOfMessage)';
   }
 
   @override
@@ -579,7 +613,11 @@ class _$AICharacterBotModelImpl implements _AICharacterBotModel {
             (identical(other.updatedTs, updatedTs) ||
                 other.updatedTs == updatedTs) &&
             (identical(other.createdTs, createdTs) ||
-                other.createdTs == createdTs));
+                other.createdTs == createdTs) &&
+            (identical(other.noOfConversation, noOfConversation) ||
+                other.noOfConversation == noOfConversation) &&
+            (identical(other.noOfMessage, noOfMessage) ||
+                other.noOfMessage == noOfMessage));
   }
 
   @JsonKey(ignore: true)
@@ -611,7 +649,9 @@ class _$AICharacterBotModelImpl implements _AICharacterBotModel {
         flirty,
         updatedOn,
         updatedTs,
-        createdTs
+        createdTs,
+        noOfConversation,
+        noOfMessage
       ]);
 
   @JsonKey(ignore: true)
@@ -631,33 +671,34 @@ class _$AICharacterBotModelImpl implements _AICharacterBotModel {
 
 abstract class _AICharacterBotModel implements AICharacterBotModel {
   const factory _AICharacterBotModel(
-          {final int? id,
-          @JsonKey(name: 'user_id') final int? userId,
-          final String? name,
-          final String? summary,
-          final int? type,
-          final Definition? definition,
-          final String? url,
-          final String? avatar,
-          final int? inspiring,
-          final int? smart,
-          final int? friendly,
-          final int? supportive,
-          final int? helpful,
-          final int? humorous,
-          final int? passive,
-          final int? aggressive,
-          final int? violent,
-          final int? formal,
-          final int? spiritual,
-          final int? chatty,
-          final int? energetic,
-          final int? sexy,
-          final int? flirty,
-          @JsonKey(name: 'updated_on') final String? updatedOn,
-          @JsonKey(name: 'updated_ts') final String? updatedTs,
-          @JsonKey(name: 'created_ts') final String? createdTs}) =
-      _$AICharacterBotModelImpl;
+      {final int? id,
+      @JsonKey(name: 'user_id') final int? userId,
+      final String? name,
+      final String? summary,
+      final int? type,
+      final Definition? definition,
+      final String? url,
+      final String? avatar,
+      final int? inspiring,
+      final int? smart,
+      final int? friendly,
+      final int? supportive,
+      final int? helpful,
+      final int? humorous,
+      final int? passive,
+      final int? aggressive,
+      final int? violent,
+      final int? formal,
+      final int? spiritual,
+      final int? chatty,
+      final int? energetic,
+      final int? sexy,
+      final int? flirty,
+      @JsonKey(name: 'updated_on') final String? updatedOn,
+      @JsonKey(name: 'updated_ts') final String? updatedTs,
+      @JsonKey(name: 'created_ts') final String? createdTs,
+      final int? noOfConversation,
+      final int? noOfMessage}) = _$AICharacterBotModelImpl;
 
   factory _AICharacterBotModel.fromJson(Map<String, dynamic> json) =
       _$AICharacterBotModelImpl.fromJson;
@@ -718,6 +759,10 @@ abstract class _AICharacterBotModel implements AICharacterBotModel {
   @override
   @JsonKey(name: 'created_ts')
   String? get createdTs;
+  @override
+  int? get noOfConversation;
+  @override
+  int? get noOfMessage;
   @override
   @JsonKey(ignore: true)
   _$$AICharacterBotModelImplCopyWith<_$AICharacterBotModelImpl> get copyWith =>

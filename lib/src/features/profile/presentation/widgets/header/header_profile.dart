@@ -36,7 +36,7 @@ class _HeaderProfileState extends State<HeaderProfile> {
         return Padding(
           padding: context.padding(horizontal: 20, top: 16),
           child: (userInfo == null)
-              ? MyShimmer(count: 2, height: context.sizeHeight(320))
+              ? Container()
               : Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,

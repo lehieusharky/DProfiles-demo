@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
+import 'package:demo_dprofiles/src/features/feed/presentation/feed_menu.dart';
 import 'package:demo_dprofiles/src/features/post/data/models/post_model.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
@@ -52,6 +53,7 @@ extension PostModelExt on PostModel {
                   ],
                 ),
               ),
+              _buildMenu(context),
             ],
           ),
           if (content != null)
@@ -76,18 +78,18 @@ extension PostModelExt on PostModel {
                         padding: context.padding(right: 10),
                         child: MyCachedImage(
                             height: 200,
-                            width: context.width * 0.7,
+                            width: context.width * 0.8,
                             imageUrl: imageUrl![index]),
                       )),
             ),
-          // ReactionPost(
-          //   likes: noOfLike!,
-          //   comments: noOfComment!,
-          //   shares: noOfShare!,
-          //   onLikeClick: () {},
-          //   onCommentClick: onCommentClick,
-          //   onShareClick: onShareClick,
-          // ),
+          ReactionPost(
+            likes: noOfLike!,
+            comments: noOfComment!,
+            shares: noOfShare!,
+            onLikeClick: () {},
+            onCommentClick: onCommentClick,
+            onShareClick: onShareClick,
+          ),
         ],
       ),
     );
@@ -106,6 +108,10 @@ extension PostModelExt on PostModel {
                 height: context.sizeWidth(40),
                 imageUrl:
                     'https://d3v3a2vsni37rv.cloudfront.net/${user!.avatar}'));
+  }
+
+  Widget _buildMenu(BuildContext context) {
+    return const FeedMenu();
   }
 }
 

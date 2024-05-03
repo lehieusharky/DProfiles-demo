@@ -1,8 +1,8 @@
 import 'package:auto_route/annotations.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
+import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/auto_generate_history_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/widgets/auto_generate_text_to_speech.dart';
@@ -38,14 +38,13 @@ class AutoGenerationHistoryDetailPage extends StatelessWidget {
             canBack: true,
             appBarTitle: 'History details',
             body: state == null
-                ? MyShimmer(count: 5, height: context.height)
+                ? const MyLoading()
                 : Padding(
                     padding: context.padding(horizontal: 20, top: 20),
                     child: SingleChildScrollView(
                       child: AutoGenerateTextToSpeech(
-                        textGenerated: state.result,
-                        createAt: state.createdTs.convertToDDMMYYFormat()
-                      ),
+                          textGenerated: state.result,
+                          createAt: state.createdTs.convertToDDMMYYFormat()),
                     ),
                   ),
           );

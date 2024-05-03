@@ -31,7 +31,7 @@ class _FreelancerLanguageProfileState extends State<FreelancerLanguageProfile> {
       },
       builder: (context, state) {
         if (userInfo == null) {
-          return const MyShimmer(count: 1, height: 50);
+          return Container();
         } else {
           return Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -60,7 +60,6 @@ class _FreelancerLanguageProfileState extends State<FreelancerLanguageProfile> {
                 ),
               ),
               Assets.images.profile.usFlag.svg(),
-              
               Padding(
                 padding: context.padding(left: 8),
                 child: Text(
@@ -101,6 +100,4 @@ class _FreelancerLanguageProfileState extends State<FreelancerLanguageProfile> {
       },
     );
   }
-
-
 }
