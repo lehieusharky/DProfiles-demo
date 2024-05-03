@@ -111,4 +111,16 @@ extension StringExt on String? {
       return true;
     }
   }
+
+  String? urlValidation(BuildContext context) {
+    if (this == null || this!.isEmpty) {
+      return appLocal(context).fieldCannotBeEmpty;
+    } else if (!RegExp(
+            r'^((?:.|\n)*?)((http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)([-A-Z0-9.]+)(/[-A-Z0-9+&@#/%=~_|!:,.;]*)?(\?[A-Z0-9+&@#/%=~_|!:‌​,.;]*)?)')
+        .hasMatch(this!)) {
+      return 'The url is not valid';
+    } else {
+      return null;
+    }
+  }
 }
