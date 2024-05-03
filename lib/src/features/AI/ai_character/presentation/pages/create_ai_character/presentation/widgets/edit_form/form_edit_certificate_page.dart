@@ -72,7 +72,7 @@ class _FormEditCertificatePageState extends State<FormEditCertificatePage> {
                           return null;
                         }
                       },
-                      hint: appLocal(context).schoolName),
+                      hint: 'Certificate Name'),
                   Padding(
                     padding: context.padding(top: 32),
                     child: AuthField(

@@ -112,7 +112,7 @@ class _FormCertificateState extends State<FormCertificate> {
                           controller: _issuedByController,
                           textInputAction: TextInputAction.next,
                           title: appLocal(context).issuedBy,
-                          hint: appLocal(context).schoolName,
+                          hint: 'Certificate Name',
                         ),
                       ),
                       Padding(
