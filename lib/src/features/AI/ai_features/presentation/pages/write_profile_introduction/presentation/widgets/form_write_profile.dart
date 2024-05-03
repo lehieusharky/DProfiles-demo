@@ -120,7 +120,7 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
-              gptVersion.getPoint().toString(),
+              "-${gptVersion.getPoint()}",
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.bold)
                   .bodyMedium,
