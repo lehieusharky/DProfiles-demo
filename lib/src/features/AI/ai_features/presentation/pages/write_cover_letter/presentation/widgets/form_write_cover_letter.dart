@@ -132,7 +132,7 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
       final model = WriteCoverLetterModel(
         maxToken: int.parse(_promptController.text.trim()),
         jobTitle: _jobTitleController.text,
-        summary: _aboutYourSelfController.text + _promptController.text,
+        summary: _aboutYourSelfController.text,
         gptModel: gptVersion.toVersion(),
       );
       context.read<AiFeaturesBloc>().add(GenerateCoverLetter(model));

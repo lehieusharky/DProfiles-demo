@@ -116,7 +116,7 @@ abstract class RestClient {
   Future<BaseResponse> generateCoverLetter(@Body() Map<String, dynamic> body);
 
   @GET('/api/v1/auto-generate-history')
-  Future<BaseResponse> getAutoGenerateHistory();
+  Future<BaseResponse> getAutoGenerateHistory({int? page, int? limit});
 
   @GET('/api/v1/auto-generate-history/{id}')
   Future<BaseResponse> getAutoGenerateHistoryItem(@Path() int id);

@@ -19,8 +19,8 @@ import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/c
     as _i23;
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/presentation/pages/import_my_ai_character_page.dart'
     as _i30;
-import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/ai_features_history_page.dart'
-    as _i7;
+import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/ai_auto_gen_history/page/ai_features_history_page.dart'
+    as _i1;
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/auto_generation_history_detail.dart'
     as _i9;
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/pages/write_cover_letter/presentation/pages/write_cover_letter_page.dart'
@@ -68,17 +68,17 @@ import 'package:demo_dprofiles/src/features/blogs/presentation/blog_detail_page.
 import 'package:demo_dprofiles/src/features/dashboard/presentation/page/dashboard_page.dart'
     as _i17;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/about_page.dart'
-    as _i1;
-import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/add_language_page.dart'
     as _i2;
-import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/add_new_certificate_page.dart'
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/add_language_page.dart'
     as _i3;
-import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/add_new_education_page.dart'
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/add_new_certificate_page.dart'
     as _i4;
-import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/add_new_experience_page.dart'
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/add_new_education_page.dart'
     as _i5;
-import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/add_skill_page.dart'
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/add_new_experience_page.dart'
     as _i6;
+import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/add_skill_page.dart'
+    as _i7;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/edit_profile_page.dart'
     as _i18;
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/pages/list_certificate_page.dart'
@@ -118,46 +118,46 @@ abstract class $AppRouter extends _i46.RootStackRouter {
 
   @override
   final Map<String, _i46.PageFactory> pagesMap = {
+    AIAutoGenHistoryRoute.name: (routeData) {
+      return _i46.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i1.AIAutoGenHistoryPage(),
+      );
+    },
     AboutRoute.name: (routeData) {
       return _i46.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.AboutPage(),
+        child: const _i2.AboutPage(),
       );
     },
     AddLanguageRoute.name: (routeData) {
       return _i46.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.AddLanguagePage(),
+        child: const _i3.AddLanguagePage(),
       );
     },
     AddNewCertificateRoute.name: (routeData) {
       return _i46.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i3.AddNewCertificatePage(),
+        child: const _i4.AddNewCertificatePage(),
       );
     },
     AddNewEducationRoute.name: (routeData) {
       return _i46.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i4.AddNewEducationPage(),
+        child: const _i5.AddNewEducationPage(),
       );
     },
     AddNewExperienceRoute.name: (routeData) {
       return _i46.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i5.AddNewExperiencePage(),
+        child: const _i6.AddNewExperiencePage(),
       );
     },
     AddSkillRoute.name: (routeData) {
       return _i46.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i6.AddSkillPage(),
-      );
-    },
-    AiFeaturesHistoryRoute.name: (routeData) {
-      return _i46.AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const _i7.AiFeaturesHistoryPage(),
+        child: const _i7.AddSkillPage(),
       );
     },
     AuthGateRoute.name: (routeData) {
@@ -443,7 +443,21 @@ abstract class $AppRouter extends _i46.RootStackRouter {
 }
 
 /// generated route for
-/// [_i1.AboutPage]
+/// [_i1.AIAutoGenHistoryPage]
+class AIAutoGenHistoryRoute extends _i46.PageRouteInfo<void> {
+  const AIAutoGenHistoryRoute({List<_i46.PageRouteInfo>? children})
+      : super(
+          AIAutoGenHistoryRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AIAutoGenHistoryRoute';
+
+  static const _i46.PageInfo<void> page = _i46.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i2.AboutPage]
 class AboutRoute extends _i46.PageRouteInfo<void> {
   const AboutRoute({List<_i46.PageRouteInfo>? children})
       : super(
@@ -457,7 +471,7 @@ class AboutRoute extends _i46.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.AddLanguagePage]
+/// [_i3.AddLanguagePage]
 class AddLanguageRoute extends _i46.PageRouteInfo<void> {
   const AddLanguageRoute({List<_i46.PageRouteInfo>? children})
       : super(
@@ -471,7 +485,7 @@ class AddLanguageRoute extends _i46.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i3.AddNewCertificatePage]
+/// [_i4.AddNewCertificatePage]
 class AddNewCertificateRoute extends _i46.PageRouteInfo<void> {
   const AddNewCertificateRoute({List<_i46.PageRouteInfo>? children})
       : super(
@@ -485,7 +499,7 @@ class AddNewCertificateRoute extends _i46.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i4.AddNewEducationPage]
+/// [_i5.AddNewEducationPage]
 class AddNewEducationRoute extends _i46.PageRouteInfo<void> {
   const AddNewEducationRoute({List<_i46.PageRouteInfo>? children})
       : super(
@@ -499,7 +513,7 @@ class AddNewEducationRoute extends _i46.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i5.AddNewExperiencePage]
+/// [_i6.AddNewExperiencePage]
 class AddNewExperienceRoute extends _i46.PageRouteInfo<void> {
   const AddNewExperienceRoute({List<_i46.PageRouteInfo>? children})
       : super(
@@ -513,7 +527,7 @@ class AddNewExperienceRoute extends _i46.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i6.AddSkillPage]
+/// [_i7.AddSkillPage]
 class AddSkillRoute extends _i46.PageRouteInfo<void> {
   const AddSkillRoute({List<_i46.PageRouteInfo>? children})
       : super(
@@ -522,20 +536,6 @@ class AddSkillRoute extends _i46.PageRouteInfo<void> {
         );
 
   static const String name = 'AddSkillRoute';
-
-  static const _i46.PageInfo<void> page = _i46.PageInfo<void>(name);
-}
-
-/// generated route for
-/// [_i7.AiFeaturesHistoryPage]
-class AiFeaturesHistoryRoute extends _i46.PageRouteInfo<void> {
-  const AiFeaturesHistoryRoute({List<_i46.PageRouteInfo>? children})
-      : super(
-          AiFeaturesHistoryRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'AiFeaturesHistoryRoute';
 
   static const _i46.PageInfo<void> page = _i46.PageInfo<void>(name);
 }

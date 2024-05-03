@@ -28,7 +28,7 @@ class TitleAiFeatures extends StatelessWidget {
 
   Widget _buildViewHistoryTitle(BuildContext context) {
     return InkWell(
-      onTap: () => context.router.push(const AiFeaturesHistoryRoute()),
+      onTap: () => context.router.push(const AIAutoGenHistoryRoute()),
       child: Row(
         children: [
           Icon(IconsaxOutline.timer_1, color: colorScheme(context).primary),

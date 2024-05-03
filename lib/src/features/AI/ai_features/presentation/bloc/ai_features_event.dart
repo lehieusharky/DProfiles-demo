@@ -4,8 +4,8 @@ part of 'ai_features_bloc.dart';
 class AiFeaturesEvent with _$AiFeaturesEvent {
   const factory AiFeaturesEvent.started() = _Started;
 
-  const factory AiFeaturesEvent.getAutoGenerateHistory() =
-      GetAutoGenerateHistory;
+  const factory AiFeaturesEvent.getAutoGenerateHistory(
+      {int? page, int? limit}) = GetAutoGenerateHistory;
 
   const factory AiFeaturesEvent.generateProfileIntroduction(
           WriteProfileIntroductionModel profileIntroductionModel) =

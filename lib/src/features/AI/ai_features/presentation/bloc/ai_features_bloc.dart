@@ -22,6 +22,8 @@ class AiFeaturesBloc extends Bloc<AiFeaturesEvent, AiFeaturesState> {
 
   SupportedChatGPT currentChatGPTVersion = sharePreference.getChatGPTVersion();
 
+  int _currentAutoGenHistory = 0;
+
   AiFeaturesBloc(this.autoGenerateUseCase, this.profileUseCase)
       : super(const AiFeaturesState.initial()) {
     on<GetAutoGenerateHistory>(_getAutoGenerateHistory);
@@ -36,7 +38,8 @@ class AiFeaturesBloc extends Bloc<AiFeaturesEvent, AiFeaturesState> {
 
   FutureOr<void> _getAutoGenerateHistory(
       GetAutoGenerateHistory event, Emitter<AiFeaturesState> emit) async {
-    final result = await autoGenerateUseCase.getAutoGenerateHistory();
+    final result = await autoGenerateUseCase.getAutoGenerateHistory(
+        page: ++_currentAutoGenHistory);
 
     result.fold(
       (l) => emit(AiFeaturesError(

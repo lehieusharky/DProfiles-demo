@@ -19,7 +19,7 @@ mixin _$AiFeaturesEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(int? page, int? limit) getAutoGenerateHistory,
     required TResult Function(
             WriteProfileIntroductionModel profileIntroductionModel)
         generateProfileIntroduction,
@@ -38,7 +38,7 @@ mixin _$AiFeaturesEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -55,7 +55,7 @@ mixin _$AiFeaturesEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getAutoGenerateHistory,
+    TResult Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -182,7 +182,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(int? page, int? limit) getAutoGenerateHistory,
     required TResult Function(
             WriteProfileIntroductionModel profileIntroductionModel)
         generateProfileIntroduction,
@@ -204,7 +204,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -224,7 +224,7 @@ class _$StartedImpl implements _Started {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getAutoGenerateHistory,
+    TResult Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -320,6 +320,8 @@ abstract class _$$GetAutoGenerateHistoryImplCopyWith<$Res> {
           _$GetAutoGenerateHistoryImpl value,
           $Res Function(_$GetAutoGenerateHistoryImpl) then) =
       __$$GetAutoGenerateHistoryImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int? page, int? limit});
 }
 
 /// @nodoc
@@ -330,33 +332,65 @@ class __$$GetAutoGenerateHistoryImplCopyWithImpl<$Res>
       _$GetAutoGenerateHistoryImpl _value,
       $Res Function(_$GetAutoGenerateHistoryImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? page = freezed,
+    Object? limit = freezed,
+  }) {
+    return _then(_$GetAutoGenerateHistoryImpl(
+      page: freezed == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: freezed == limit
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
-  const _$GetAutoGenerateHistoryImpl();
+  const _$GetAutoGenerateHistoryImpl({this.page, this.limit});
+
+  @override
+  final int? page;
+  @override
+  final int? limit;
 
   @override
   String toString() {
-    return 'AiFeaturesEvent.getAutoGenerateHistory()';
+    return 'AiFeaturesEvent.getAutoGenerateHistory(page: $page, limit: $limit)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GetAutoGenerateHistoryImpl);
+            other is _$GetAutoGenerateHistoryImpl &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, page, limit);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetAutoGenerateHistoryImplCopyWith<_$GetAutoGenerateHistoryImpl>
+      get copyWith => __$$GetAutoGenerateHistoryImplCopyWithImpl<
+          _$GetAutoGenerateHistoryImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(int? page, int? limit) getAutoGenerateHistory,
     required TResult Function(
             WriteProfileIntroductionModel profileIntroductionModel)
         generateProfileIntroduction,
@@ -371,14 +405,14 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
     required TResult Function() getCurrentPointOfUser,
     required TResult Function(SupportedChatGPT version) changeGPTVersion,
   }) {
-    return getAutoGenerateHistory();
+    return getAutoGenerateHistory(page, limit);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -391,14 +425,14 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
     TResult? Function()? getCurrentPointOfUser,
     TResult? Function(SupportedChatGPT version)? changeGPTVersion,
   }) {
-    return getAutoGenerateHistory?.call();
+    return getAutoGenerateHistory?.call(page, limit);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getAutoGenerateHistory,
+    TResult Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -413,7 +447,7 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
     required TResult orElse(),
   }) {
     if (getAutoGenerateHistory != null) {
-      return getAutoGenerateHistory();
+      return getAutoGenerateHistory(page, limit);
     }
     return orElse();
   }
@@ -485,7 +519,14 @@ class _$GetAutoGenerateHistoryImpl implements GetAutoGenerateHistory {
 }
 
 abstract class GetAutoGenerateHistory implements AiFeaturesEvent {
-  const factory GetAutoGenerateHistory() = _$GetAutoGenerateHistoryImpl;
+  const factory GetAutoGenerateHistory({final int? page, final int? limit}) =
+      _$GetAutoGenerateHistoryImpl;
+
+  int? get page;
+  int? get limit;
+  @JsonKey(ignore: true)
+  _$$GetAutoGenerateHistoryImplCopyWith<_$GetAutoGenerateHistoryImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -570,7 +611,7 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(int? page, int? limit) getAutoGenerateHistory,
     required TResult Function(
             WriteProfileIntroductionModel profileIntroductionModel)
         generateProfileIntroduction,
@@ -592,7 +633,7 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -612,7 +653,7 @@ class _$GenerateProfileIntroductionImpl implements GenerateProfileIntroduction {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getAutoGenerateHistory,
+    TResult Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -789,7 +830,7 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(int? page, int? limit) getAutoGenerateHistory,
     required TResult Function(
             WriteProfileIntroductionModel profileIntroductionModel)
         generateProfileIntroduction,
@@ -811,7 +852,7 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -831,7 +872,7 @@ class _$GenerateInterviewQuestionImpl implements GenerateInterviewQuestion {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getAutoGenerateHistory,
+    TResult Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -1008,7 +1049,7 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(int? page, int? limit) getAutoGenerateHistory,
     required TResult Function(
             WriteProfileIntroductionModel profileIntroductionModel)
         generateProfileIntroduction,
@@ -1030,7 +1071,7 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -1050,7 +1091,7 @@ class _$GenerateSkillKnowledgeImpl implements GenerateSkillKnowledge {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getAutoGenerateHistory,
+    TResult Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -1225,7 +1266,7 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(int? page, int? limit) getAutoGenerateHistory,
     required TResult Function(
             WriteProfileIntroductionModel profileIntroductionModel)
         generateProfileIntroduction,
@@ -1247,7 +1288,7 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -1267,7 +1308,7 @@ class _$GenerateCoverLetterImpl implements GenerateCoverLetter {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getAutoGenerateHistory,
+    TResult Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -1434,7 +1475,7 @@ class _$GetAutoGenerateHistoryDetailImpl
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(int? page, int? limit) getAutoGenerateHistory,
     required TResult Function(
             WriteProfileIntroductionModel profileIntroductionModel)
         generateProfileIntroduction,
@@ -1456,7 +1497,7 @@ class _$GetAutoGenerateHistoryDetailImpl
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -1476,7 +1517,7 @@ class _$GetAutoGenerateHistoryDetailImpl
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getAutoGenerateHistory,
+    TResult Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -1614,7 +1655,7 @@ class _$GetCurrentPointOfUserImpl implements GetCurrentPointOfUser {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(int? page, int? limit) getAutoGenerateHistory,
     required TResult Function(
             WriteProfileIntroductionModel profileIntroductionModel)
         generateProfileIntroduction,
@@ -1636,7 +1677,7 @@ class _$GetCurrentPointOfUserImpl implements GetCurrentPointOfUser {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -1656,7 +1697,7 @@ class _$GetCurrentPointOfUserImpl implements GetCurrentPointOfUser {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getAutoGenerateHistory,
+    TResult Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -1815,7 +1856,7 @@ class _$AICharacterChangeGPTVersionImpl implements AICharacterChangeGPTVersion {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() getAutoGenerateHistory,
+    required TResult Function(int? page, int? limit) getAutoGenerateHistory,
     required TResult Function(
             WriteProfileIntroductionModel profileIntroductionModel)
         generateProfileIntroduction,
@@ -1837,7 +1878,7 @@ class _$AICharacterChangeGPTVersionImpl implements AICharacterChangeGPTVersion {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? started,
-    TResult? Function()? getAutoGenerateHistory,
+    TResult? Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult? Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult? Function(WriteInterviewQuestionModel interviewQuestionModel)?
@@ -1857,7 +1898,7 @@ class _$AICharacterChangeGPTVersionImpl implements AICharacterChangeGPTVersion {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? getAutoGenerateHistory,
+    TResult Function(int? page, int? limit)? getAutoGenerateHistory,
     TResult Function(WriteProfileIntroductionModel profileIntroductionModel)?
         generateProfileIntroduction,
     TResult Function(WriteInterviewQuestionModel interviewQuestionModel)?
