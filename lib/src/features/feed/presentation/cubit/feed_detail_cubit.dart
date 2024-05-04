@@ -14,30 +14,30 @@ class FeedDetailCubit extends Cubit<FeedDetailState> {
   final feedRepository = injector.get<FeedRepository>();
 
   // Like and increase the number of likes
-  void like() {
-    if (state.feed.liked == true) {
-      final newFeed = state.feed.copyWith(
-          liked: !state.feed.liked,
-          noOfLike: state.feed.noOfLike! + (state.feed.liked ? -1 : 1));
-      injector.get<HomeBloc>().add(UpdateFeedEvent(newFeed));
-      emit(FeedDetailState(newFeed));
-      return;
-    }
-    final newFeed = state.feed.copyWith(
-      liked: !state.feed.liked,
-      noOfLike: state.feed.noOfLike! + (state.feed.liked! ? -1 : 1),
-    );
-    feedRepository.createLike({
-      'post_id': newFeed.postId,
-      'type': 0,
-      'status': 1,
-    });
-    injector.get<HomeBloc>().add(UpdateFeedEvent(newFeed));
-    emit(FeedDetailState(newFeed));
-  }
+  // void like() {
+  //   if (state.feed.liked == true) {
+  //     final newFeed = state.feed.copyWith(
+  //         liked: !state.feed.liked,
+  //         noOfLike: state.feed.noOfLike! + (state.feed.liked ? -1 : 1));
+  //     injector.get<HomeBloc>().add(UpdateFeedEvent(newFeed));
+  //     emit(FeedDetailState(newFeed));
+  //     return;
+  //   }
+  //   final newFeed = state.feed.copyWith(
+  //     liked: !state.feed.liked,
+  //     noOfLike: state.feed.noOfLike! + (state.feed.liked! ? -1 : 1),
+  //   );
+  //   feedRepository.createLike({
+  //     'post_id': newFeed.postId,
+  //     'type': 0,
+  //     'status': 1,
+  //   });
+  //   injector.get<HomeBloc>().add(UpdateFeedEvent(newFeed));
+  //   emit(FeedDetailState(newFeed));
+  // }
 
   void refetch() async {
-    final res = await feedRepository.readPost(state.feed.postId ?? 0);
+    final res = await feedRepository.readPost(state.feed.id ?? 0);
     res.fold(
       (l) {},
       (r) {

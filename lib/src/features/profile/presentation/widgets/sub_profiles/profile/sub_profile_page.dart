@@ -36,28 +36,26 @@ class _SubProfilePageState extends State<SubProfilePage>
           ..add(const ProfileGetUserExperience())
           ..add(const ProfileGetUserSkills())
           ..add(const ProfileGetUserLanguages()),
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: context.padding(horizontal: 20),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const OpenToComponent(),
-                const MyDivider(verticalMargin: 8),
-                const AboutComponent(),
-                const MyDivider(verticalMargin: 8),
-                const SkillComponent(),
-                const MyDivider(verticalMargin: 8),
-                const LanguageComponent(),
-                const MyDivider(verticalMargin: 8),
-                const ExperienceComponent(),
-                const MyDivider(verticalMargin: 8),
-                const EducationComponent(),
-                const MyDivider(verticalMargin: 8),
-                const CertificateComponent(),
-                context.sizedBox(height: 50),
-              ],
-            ),
+        child: Padding(
+          padding: context.padding(horizontal: 20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const OpenToComponent(),
+              const MyDivider(verticalMargin: 8),
+              const AboutComponent(),
+              const MyDivider(verticalMargin: 8),
+              const SkillComponent(),
+              const MyDivider(verticalMargin: 8),
+              const LanguageComponent(),
+              const MyDivider(verticalMargin: 8),
+              const ExperienceComponent(),
+              const MyDivider(verticalMargin: 8),
+              const EducationComponent(),
+              const MyDivider(verticalMargin: 8),
+              const CertificateComponent(),
+              context.sizedBox(height: 50),
+            ],
           ),
         ));
   }

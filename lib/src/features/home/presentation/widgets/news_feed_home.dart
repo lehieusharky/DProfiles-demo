@@ -1,8 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_divider.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/cubit/feed_detail_cubit.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
 import 'package:demo_dprofiles/src/features/home/domain/entities/ext_new_feed_entity.dart';
@@ -13,7 +11,6 @@ import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/icons/my_icon_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
 class NewsFeedHome extends StatefulWidget {
   const NewsFeedHome({super.key});
@@ -70,43 +67,25 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
   }
 
   Widget _buildBody(List<NewFeedModel> state) {
-    return AnimationLimiter(
-      child: ListView.separated(
-        physics: const ClampingScrollPhysics(),
-        itemCount: state.length,
-        itemBuilder: (context, index) => _buildItem(context, index, state),
-        separatorBuilder: (BuildContext context, int index) => MyDivider(
-          thickness: 10,
-          color: colorScheme(context).outlineVariant.withOpacity(0.3),
-        ),
+    return SingleChildScrollView(
+      physics: const NeverScrollableScrollPhysics(),
+      child: Column(
+        children: state.map((e) => _buildNewsItem(e)).toList(),
       ),
     );
   }
 
-  Widget _buildItem(BuildContext context, int index, List<NewFeedModel> state) {
-    final data = state[index];
-    return AnimationConfiguration.staggeredList(
-      position: index,
-      delay: const Duration(milliseconds: 100),
-      child: SlideAnimation(
-        duration: const Duration(milliseconds: 2500),
-        curve: Curves.fastLinearToSlowEaseIn,
-        child: FadeInAnimation(
-          curve: Curves.fastLinearToSlowEaseIn,
-          duration: const Duration(milliseconds: 2500),
-          child: InkWell(
-            onTap: () => context.router.push(
-              FeedDetailRoute(feed: data),
-            ),
-            child: BlocProvider(
-              create: (_) => FeedDetailCubit(data),
-              child: BlocBuilder<FeedDetailCubit, FeedDetailState>(
-                builder: (context, state) {
-                  return data.toWidget(context);
-                },
-              ),
-            ),
-          ),
+  Widget _buildNewsItem(NewFeedModel e) {
+    return InkWell(
+      onTap: () => context.router.push(
+        FeedDetailRoute(feed: e),
+      ),
+      child: BlocProvider(
+        create: (_) => FeedDetailCubit(e),
+        child: BlocBuilder<FeedDetailCubit, FeedDetailState>(
+          builder: (context, state) {
+            return e.toWidget(context);
+          },
         ),
       ),
     );

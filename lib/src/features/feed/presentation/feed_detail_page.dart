@@ -26,10 +26,10 @@ class FeedDetailPage extends StatelessWidget {
       body: MultiBlocProvider(
         providers: [
           BlocProvider(
-              create: (context) => FeedCommentBloc(feed.postId ?? 0)
+              create: (context) => FeedCommentBloc(feed.id ?? 0)
                 ..add(const FeedCommentFetchEvent())),
           BlocProvider(
-            create: (context) => FocusCommentCubit(feed.postId ?? 0),
+            create: (context) => FocusCommentCubit(feed.id ?? 0),
           ),
           BlocProvider(
             create: (_) => FeedDetailCubit(feed),

@@ -123,12 +123,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   Future<NewFeedModel> _updateLiked(NewFeedModel feed) async {
-    final res = await feedRepository.getLikedPost(feed.postId ?? 0);
-    bool liked = feed.liked;
+    final res = await feedRepository.getLikedPost(feed.id ?? 0);
+    // bool liked = feed.liked;
     res.fold((l) {}, (r) {
-      liked = r.data as bool;
+      // liked = r.data as bool;
     });
-    return feed.copyWith(liked: liked);
+    return feed;
   }
 
   FutureOr<void> _updateFeed(
@@ -136,7 +136,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     if (state is HomeGetFeedsSuccess) {
       final newsFeed = (state as HomeGetFeedsSuccess).newsFeed;
       final updatedNewsFeed = newsFeed.map((e) {
-        if (e.postId == event.feed.postId) {
+        if (e.id == event.feed.id) {
           return event.feed;
         }
         return e;

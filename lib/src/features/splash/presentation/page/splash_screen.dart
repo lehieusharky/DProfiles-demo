@@ -80,11 +80,7 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
         (status) {
           if (status == AnimationStatus.completed) {
             _onComplete();
-            // Navigator.of(context).pushReplacement(
-            //   PageTransition(
-            //       type: PageTransitionType.bottomToTop,
-            //       child: const AuthGatePage()),
-            // );
+
             Timer(
               const Duration(milliseconds: 300),
               () {

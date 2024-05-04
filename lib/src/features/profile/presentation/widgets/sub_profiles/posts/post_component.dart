@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/post/data/models/post_model.dart';
 import 'package:demo_dprofiles/src/features/post/domain/entities/ext_post_entity.dart';
@@ -29,10 +27,9 @@ class _PostComponentState extends State<PostComponent> {
         if (posts == null) {
           return const MyLoading();
         } else {
-          return SingleChildScrollView(
-            child: Column(
-              children: posts!.map((e) => e.toWidget(context)).toList(),
-            ),
+          return Column(
+            mainAxisSize: MainAxisSize.min,
+            children: posts!.map((e) => e.toWidget(context)).toList(),
           );
         }
       },

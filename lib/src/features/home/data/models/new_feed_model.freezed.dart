@@ -20,31 +20,19 @@ NewFeedModel _$NewFeedModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$NewFeedModel {
-  @JsonKey(name: 'id')
-  int? get postId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'user_id')
-  int? get postUserId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'admin_id')
-  int? get postAdminId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'content')
-  String? get postContent => throw _privateConstructorUsedError;
-  @JsonKey(name: 'image_url')
-  String? get postImageUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'video_url')
-  String? get postVideoUrl => throw _privateConstructorUsedError;
-  @JsonKey(name: 'updated_on')
-  String? get postUpdatedOn => throw _privateConstructorUsedError;
-  @JsonKey(name: 'updated_ts')
-  String? get postUpdatedTs => throw _privateConstructorUsedError;
-  @JsonKey(name: 'created_ts')
-  String? get postCreatedTs => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
+  int? get userId => throw _privateConstructorUsedError;
+  int? get adminId => throw _privateConstructorUsedError;
+  String? get content => throw _privateConstructorUsedError;
+  List<String>? get imageUrl => throw _privateConstructorUsedError;
+  List<String>? get videoUrl => throw _privateConstructorUsedError;
+  String? get updatedOn => throw _privateConstructorUsedError;
+  String? get updatedTs => throw _privateConstructorUsedError;
+  String? get createdTs => throw _privateConstructorUsedError;
+  User? get user => throw _privateConstructorUsedError;
   int? get noOfLike => throw _privateConstructorUsedError;
   int? get noOfShare => throw _privateConstructorUsedError;
   int? get noOfComment => throw _privateConstructorUsedError;
-  @JsonKey(name: 'liked')
-  bool get liked => throw _privateConstructorUsedError;
-  @JsonKey(name: 'user')
-  UserInfoModel? get user => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -59,22 +47,21 @@ abstract class $NewFeedModelCopyWith<$Res> {
       _$NewFeedModelCopyWithImpl<$Res, NewFeedModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int? postId,
-      @JsonKey(name: 'user_id') int? postUserId,
-      @JsonKey(name: 'admin_id') int? postAdminId,
-      @JsonKey(name: 'content') String? postContent,
-      @JsonKey(name: 'image_url') String? postImageUrl,
-      @JsonKey(name: 'video_url') String? postVideoUrl,
-      @JsonKey(name: 'updated_on') String? postUpdatedOn,
-      @JsonKey(name: 'updated_ts') String? postUpdatedTs,
-      @JsonKey(name: 'created_ts') String? postCreatedTs,
+      {int? id,
+      int? userId,
+      int? adminId,
+      String? content,
+      List<String>? imageUrl,
+      List<String>? videoUrl,
+      String? updatedOn,
+      String? updatedTs,
+      String? createdTs,
+      User? user,
       int? noOfLike,
       int? noOfShare,
-      int? noOfComment,
-      @JsonKey(name: 'liked') bool liked,
-      @JsonKey(name: 'user') UserInfoModel? user});
+      int? noOfComment});
 
-  $UserInfoModelCopyWith<$Res>? get user;
+  $UserCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -90,58 +77,61 @@ class _$NewFeedModelCopyWithImpl<$Res, $Val extends NewFeedModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? postUserId = freezed,
-    Object? postAdminId = freezed,
-    Object? postContent = freezed,
-    Object? postImageUrl = freezed,
-    Object? postVideoUrl = freezed,
-    Object? postUpdatedOn = freezed,
-    Object? postUpdatedTs = freezed,
-    Object? postCreatedTs = freezed,
+    Object? id = freezed,
+    Object? userId = freezed,
+    Object? adminId = freezed,
+    Object? content = freezed,
+    Object? imageUrl = freezed,
+    Object? videoUrl = freezed,
+    Object? updatedOn = freezed,
+    Object? updatedTs = freezed,
+    Object? createdTs = freezed,
+    Object? user = freezed,
     Object? noOfLike = freezed,
     Object? noOfShare = freezed,
     Object? noOfComment = freezed,
-    Object? liked = null,
-    Object? user = freezed,
   }) {
     return _then(_value.copyWith(
-      postId: freezed == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      postUserId: freezed == postUserId
-          ? _value.postUserId
-          : postUserId // ignore: cast_nullable_to_non_nullable
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
               as int?,
-      postAdminId: freezed == postAdminId
-          ? _value.postAdminId
-          : postAdminId // ignore: cast_nullable_to_non_nullable
+      adminId: freezed == adminId
+          ? _value.adminId
+          : adminId // ignore: cast_nullable_to_non_nullable
               as int?,
-      postContent: freezed == postContent
-          ? _value.postContent
-          : postContent // ignore: cast_nullable_to_non_nullable
+      content: freezed == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
               as String?,
-      postImageUrl: freezed == postImageUrl
-          ? _value.postImageUrl
-          : postImageUrl // ignore: cast_nullable_to_non_nullable
+      imageUrl: freezed == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      videoUrl: freezed == videoUrl
+          ? _value.videoUrl
+          : videoUrl // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      updatedOn: freezed == updatedOn
+          ? _value.updatedOn
+          : updatedOn // ignore: cast_nullable_to_non_nullable
               as String?,
-      postVideoUrl: freezed == postVideoUrl
-          ? _value.postVideoUrl
-          : postVideoUrl // ignore: cast_nullable_to_non_nullable
+      updatedTs: freezed == updatedTs
+          ? _value.updatedTs
+          : updatedTs // ignore: cast_nullable_to_non_nullable
               as String?,
-      postUpdatedOn: freezed == postUpdatedOn
-          ? _value.postUpdatedOn
-          : postUpdatedOn // ignore: cast_nullable_to_non_nullable
+      createdTs: freezed == createdTs
+          ? _value.createdTs
+          : createdTs // ignore: cast_nullable_to_non_nullable
               as String?,
-      postUpdatedTs: freezed == postUpdatedTs
-          ? _value.postUpdatedTs
-          : postUpdatedTs // ignore: cast_nullable_to_non_nullable
-              as String?,
-      postCreatedTs: freezed == postCreatedTs
-          ? _value.postCreatedTs
-          : postCreatedTs // ignore: cast_nullable_to_non_nullable
-              as String?,
+      user: freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User?,
       noOfLike: freezed == noOfLike
           ? _value.noOfLike
           : noOfLike // ignore: cast_nullable_to_non_nullable
@@ -154,25 +144,17 @@ class _$NewFeedModelCopyWithImpl<$Res, $Val extends NewFeedModel>
           ? _value.noOfComment
           : noOfComment // ignore: cast_nullable_to_non_nullable
               as int?,
-      liked: null == liked
-          ? _value.liked
-          : liked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      user: freezed == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserInfoModel?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $UserInfoModelCopyWith<$Res>? get user {
+  $UserCopyWith<$Res>? get user {
     if (_value.user == null) {
       return null;
     }
 
-    return $UserInfoModelCopyWith<$Res>(_value.user!, (value) {
+    return $UserCopyWith<$Res>(_value.user!, (value) {
       return _then(_value.copyWith(user: value) as $Val);
     });
   }
@@ -187,23 +169,22 @@ abstract class _$$NewFeedModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') int? postId,
-      @JsonKey(name: 'user_id') int? postUserId,
-      @JsonKey(name: 'admin_id') int? postAdminId,
-      @JsonKey(name: 'content') String? postContent,
-      @JsonKey(name: 'image_url') String? postImageUrl,
-      @JsonKey(name: 'video_url') String? postVideoUrl,
-      @JsonKey(name: 'updated_on') String? postUpdatedOn,
-      @JsonKey(name: 'updated_ts') String? postUpdatedTs,
-      @JsonKey(name: 'created_ts') String? postCreatedTs,
+      {int? id,
+      int? userId,
+      int? adminId,
+      String? content,
+      List<String>? imageUrl,
+      List<String>? videoUrl,
+      String? updatedOn,
+      String? updatedTs,
+      String? createdTs,
+      User? user,
       int? noOfLike,
       int? noOfShare,
-      int? noOfComment,
-      @JsonKey(name: 'liked') bool liked,
-      @JsonKey(name: 'user') UserInfoModel? user});
+      int? noOfComment});
 
   @override
-  $UserInfoModelCopyWith<$Res>? get user;
+  $UserCopyWith<$Res>? get user;
 }
 
 /// @nodoc
@@ -217,58 +198,61 @@ class __$$NewFeedModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? postId = freezed,
-    Object? postUserId = freezed,
-    Object? postAdminId = freezed,
-    Object? postContent = freezed,
-    Object? postImageUrl = freezed,
-    Object? postVideoUrl = freezed,
-    Object? postUpdatedOn = freezed,
-    Object? postUpdatedTs = freezed,
-    Object? postCreatedTs = freezed,
+    Object? id = freezed,
+    Object? userId = freezed,
+    Object? adminId = freezed,
+    Object? content = freezed,
+    Object? imageUrl = freezed,
+    Object? videoUrl = freezed,
+    Object? updatedOn = freezed,
+    Object? updatedTs = freezed,
+    Object? createdTs = freezed,
+    Object? user = freezed,
     Object? noOfLike = freezed,
     Object? noOfShare = freezed,
     Object? noOfComment = freezed,
-    Object? liked = null,
-    Object? user = freezed,
   }) {
     return _then(_$NewFeedModelImpl(
-      postId: freezed == postId
-          ? _value.postId
-          : postId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      postUserId: freezed == postUserId
-          ? _value.postUserId
-          : postUserId // ignore: cast_nullable_to_non_nullable
+      userId: freezed == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
               as int?,
-      postAdminId: freezed == postAdminId
-          ? _value.postAdminId
-          : postAdminId // ignore: cast_nullable_to_non_nullable
+      adminId: freezed == adminId
+          ? _value.adminId
+          : adminId // ignore: cast_nullable_to_non_nullable
               as int?,
-      postContent: freezed == postContent
-          ? _value.postContent
-          : postContent // ignore: cast_nullable_to_non_nullable
+      content: freezed == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
               as String?,
-      postImageUrl: freezed == postImageUrl
-          ? _value.postImageUrl
-          : postImageUrl // ignore: cast_nullable_to_non_nullable
+      imageUrl: freezed == imageUrl
+          ? _value._imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      videoUrl: freezed == videoUrl
+          ? _value._videoUrl
+          : videoUrl // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      updatedOn: freezed == updatedOn
+          ? _value.updatedOn
+          : updatedOn // ignore: cast_nullable_to_non_nullable
               as String?,
-      postVideoUrl: freezed == postVideoUrl
-          ? _value.postVideoUrl
-          : postVideoUrl // ignore: cast_nullable_to_non_nullable
+      updatedTs: freezed == updatedTs
+          ? _value.updatedTs
+          : updatedTs // ignore: cast_nullable_to_non_nullable
               as String?,
-      postUpdatedOn: freezed == postUpdatedOn
-          ? _value.postUpdatedOn
-          : postUpdatedOn // ignore: cast_nullable_to_non_nullable
+      createdTs: freezed == createdTs
+          ? _value.createdTs
+          : createdTs // ignore: cast_nullable_to_non_nullable
               as String?,
-      postUpdatedTs: freezed == postUpdatedTs
-          ? _value.postUpdatedTs
-          : postUpdatedTs // ignore: cast_nullable_to_non_nullable
-              as String?,
-      postCreatedTs: freezed == postCreatedTs
-          ? _value.postCreatedTs
-          : postCreatedTs // ignore: cast_nullable_to_non_nullable
-              as String?,
+      user: freezed == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User?,
       noOfLike: freezed == noOfLike
           ? _value.noOfLike
           : noOfLike // ignore: cast_nullable_to_non_nullable
@@ -281,14 +265,6 @@ class __$$NewFeedModelImplCopyWithImpl<$Res>
           ? _value.noOfComment
           : noOfComment // ignore: cast_nullable_to_non_nullable
               as int?,
-      liked: null == liked
-          ? _value.liked
-          : liked // ignore: cast_nullable_to_non_nullable
-              as bool,
-      user: freezed == user
-          ? _value.user
-          : user // ignore: cast_nullable_to_non_nullable
-              as UserInfoModel?,
     ));
   }
 }
@@ -297,70 +273,71 @@ class __$$NewFeedModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$NewFeedModelImpl implements _NewFeedModel {
   const _$NewFeedModelImpl(
-      {@JsonKey(name: 'id') this.postId = 0,
-      @JsonKey(name: 'user_id') this.postUserId = 0,
-      @JsonKey(name: 'admin_id') this.postAdminId = 0,
-      @JsonKey(name: 'content') this.postContent,
-      @JsonKey(name: 'image_url') this.postImageUrl,
-      @JsonKey(name: 'video_url') this.postVideoUrl,
-      @JsonKey(name: 'updated_on') this.postUpdatedOn,
-      @JsonKey(name: 'updated_ts') this.postUpdatedTs,
-      @JsonKey(name: 'created_ts') this.postCreatedTs,
-      this.noOfLike = 0,
-      this.noOfShare = 0,
-      this.noOfComment = 0,
-      @JsonKey(name: 'liked') this.liked = false,
-      @JsonKey(name: 'user') this.user});
+      {this.id,
+      this.userId,
+      this.adminId,
+      this.content,
+      final List<String>? imageUrl,
+      final List<String>? videoUrl,
+      this.updatedOn,
+      this.updatedTs,
+      this.createdTs,
+      this.user,
+      this.noOfLike,
+      this.noOfShare,
+      this.noOfComment})
+      : _imageUrl = imageUrl,
+        _videoUrl = videoUrl;
 
   factory _$NewFeedModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$NewFeedModelImplFromJson(json);
 
   @override
-  @JsonKey(name: 'id')
-  final int? postId;
+  final int? id;
   @override
-  @JsonKey(name: 'user_id')
-  final int? postUserId;
+  final int? userId;
   @override
-  @JsonKey(name: 'admin_id')
-  final int? postAdminId;
+  final int? adminId;
   @override
-  @JsonKey(name: 'content')
-  final String? postContent;
+  final String? content;
+  final List<String>? _imageUrl;
   @override
-  @JsonKey(name: 'image_url')
-  final String? postImageUrl;
+  List<String>? get imageUrl {
+    final value = _imageUrl;
+    if (value == null) return null;
+    if (_imageUrl is EqualUnmodifiableListView) return _imageUrl;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _videoUrl;
   @override
-  @JsonKey(name: 'video_url')
-  final String? postVideoUrl;
+  List<String>? get videoUrl {
+    final value = _videoUrl;
+    if (value == null) return null;
+    if (_videoUrl is EqualUnmodifiableListView) return _videoUrl;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
-  @JsonKey(name: 'updated_on')
-  final String? postUpdatedOn;
+  final String? updatedOn;
   @override
-  @JsonKey(name: 'updated_ts')
-  final String? postUpdatedTs;
+  final String? updatedTs;
   @override
-  @JsonKey(name: 'created_ts')
-  final String? postCreatedTs;
+  final String? createdTs;
   @override
-  @JsonKey()
+  final User? user;
+  @override
   final int? noOfLike;
   @override
-  @JsonKey()
   final int? noOfShare;
   @override
-  @JsonKey()
   final int? noOfComment;
-  @override
-  @JsonKey(name: 'liked')
-  final bool liked;
-  @override
-  @JsonKey(name: 'user')
-  final UserInfoModel? user;
 
   @override
   String toString() {
-    return 'NewFeedModel(postId: $postId, postUserId: $postUserId, postAdminId: $postAdminId, postContent: $postContent, postImageUrl: $postImageUrl, postVideoUrl: $postVideoUrl, postUpdatedOn: $postUpdatedOn, postUpdatedTs: $postUpdatedTs, postCreatedTs: $postCreatedTs, noOfLike: $noOfLike, noOfShare: $noOfShare, noOfComment: $noOfComment, liked: $liked, user: $user)';
+    return 'NewFeedModel(id: $id, userId: $userId, adminId: $adminId, content: $content, imageUrl: $imageUrl, videoUrl: $videoUrl, updatedOn: $updatedOn, updatedTs: $updatedTs, createdTs: $createdTs, user: $user, noOfLike: $noOfLike, noOfShare: $noOfShare, noOfComment: $noOfComment)';
   }
 
   @override
@@ -368,51 +345,44 @@ class _$NewFeedModelImpl implements _NewFeedModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NewFeedModelImpl &&
-            (identical(other.postId, postId) || other.postId == postId) &&
-            (identical(other.postUserId, postUserId) ||
-                other.postUserId == postUserId) &&
-            (identical(other.postAdminId, postAdminId) ||
-                other.postAdminId == postAdminId) &&
-            (identical(other.postContent, postContent) ||
-                other.postContent == postContent) &&
-            (identical(other.postImageUrl, postImageUrl) ||
-                other.postImageUrl == postImageUrl) &&
-            (identical(other.postVideoUrl, postVideoUrl) ||
-                other.postVideoUrl == postVideoUrl) &&
-            (identical(other.postUpdatedOn, postUpdatedOn) ||
-                other.postUpdatedOn == postUpdatedOn) &&
-            (identical(other.postUpdatedTs, postUpdatedTs) ||
-                other.postUpdatedTs == postUpdatedTs) &&
-            (identical(other.postCreatedTs, postCreatedTs) ||
-                other.postCreatedTs == postCreatedTs) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.userId, userId) || other.userId == userId) &&
+            (identical(other.adminId, adminId) || other.adminId == adminId) &&
+            (identical(other.content, content) || other.content == content) &&
+            const DeepCollectionEquality().equals(other._imageUrl, _imageUrl) &&
+            const DeepCollectionEquality().equals(other._videoUrl, _videoUrl) &&
+            (identical(other.updatedOn, updatedOn) ||
+                other.updatedOn == updatedOn) &&
+            (identical(other.updatedTs, updatedTs) ||
+                other.updatedTs == updatedTs) &&
+            (identical(other.createdTs, createdTs) ||
+                other.createdTs == createdTs) &&
+            (identical(other.user, user) || other.user == user) &&
             (identical(other.noOfLike, noOfLike) ||
                 other.noOfLike == noOfLike) &&
             (identical(other.noOfShare, noOfShare) ||
                 other.noOfShare == noOfShare) &&
             (identical(other.noOfComment, noOfComment) ||
-                other.noOfComment == noOfComment) &&
-            (identical(other.liked, liked) || other.liked == liked) &&
-            (identical(other.user, user) || other.user == user));
+                other.noOfComment == noOfComment));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      postId,
-      postUserId,
-      postAdminId,
-      postContent,
-      postImageUrl,
-      postVideoUrl,
-      postUpdatedOn,
-      postUpdatedTs,
-      postCreatedTs,
+      id,
+      userId,
+      adminId,
+      content,
+      const DeepCollectionEquality().hash(_imageUrl),
+      const DeepCollectionEquality().hash(_videoUrl),
+      updatedOn,
+      updatedTs,
+      createdTs,
+      user,
       noOfLike,
       noOfShare,
-      noOfComment,
-      liked,
-      user);
+      noOfComment);
 
   @JsonKey(ignore: true)
   @override
@@ -430,51 +400,43 @@ class _$NewFeedModelImpl implements _NewFeedModel {
 
 abstract class _NewFeedModel implements NewFeedModel {
   const factory _NewFeedModel(
-      {@JsonKey(name: 'id') final int? postId,
-      @JsonKey(name: 'user_id') final int? postUserId,
-      @JsonKey(name: 'admin_id') final int? postAdminId,
-      @JsonKey(name: 'content') final String? postContent,
-      @JsonKey(name: 'image_url') final String? postImageUrl,
-      @JsonKey(name: 'video_url') final String? postVideoUrl,
-      @JsonKey(name: 'updated_on') final String? postUpdatedOn,
-      @JsonKey(name: 'updated_ts') final String? postUpdatedTs,
-      @JsonKey(name: 'created_ts') final String? postCreatedTs,
+      {final int? id,
+      final int? userId,
+      final int? adminId,
+      final String? content,
+      final List<String>? imageUrl,
+      final List<String>? videoUrl,
+      final String? updatedOn,
+      final String? updatedTs,
+      final String? createdTs,
+      final User? user,
       final int? noOfLike,
       final int? noOfShare,
-      final int? noOfComment,
-      @JsonKey(name: 'liked') final bool liked,
-      @JsonKey(name: 'user') final UserInfoModel? user}) = _$NewFeedModelImpl;
+      final int? noOfComment}) = _$NewFeedModelImpl;
 
   factory _NewFeedModel.fromJson(Map<String, dynamic> json) =
       _$NewFeedModelImpl.fromJson;
 
   @override
-  @JsonKey(name: 'id')
-  int? get postId;
+  int? get id;
   @override
-  @JsonKey(name: 'user_id')
-  int? get postUserId;
+  int? get userId;
   @override
-  @JsonKey(name: 'admin_id')
-  int? get postAdminId;
+  int? get adminId;
   @override
-  @JsonKey(name: 'content')
-  String? get postContent;
+  String? get content;
   @override
-  @JsonKey(name: 'image_url')
-  String? get postImageUrl;
+  List<String>? get imageUrl;
   @override
-  @JsonKey(name: 'video_url')
-  String? get postVideoUrl;
+  List<String>? get videoUrl;
   @override
-  @JsonKey(name: 'updated_on')
-  String? get postUpdatedOn;
+  String? get updatedOn;
   @override
-  @JsonKey(name: 'updated_ts')
-  String? get postUpdatedTs;
+  String? get updatedTs;
   @override
-  @JsonKey(name: 'created_ts')
-  String? get postCreatedTs;
+  String? get createdTs;
+  @override
+  User? get user;
   @override
   int? get noOfLike;
   @override
@@ -482,13 +444,309 @@ abstract class _NewFeedModel implements NewFeedModel {
   @override
   int? get noOfComment;
   @override
-  @JsonKey(name: 'liked')
-  bool get liked;
-  @override
-  @JsonKey(name: 'user')
-  UserInfoModel? get user;
-  @override
   @JsonKey(ignore: true)
   _$$NewFeedModelImplCopyWith<_$NewFeedModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+User _$UserFromJson(Map<String, dynamic> json) {
+  return _User.fromJson(json);
+}
+
+/// @nodoc
+mixin _$User {
+  int? get id => throw _privateConstructorUsedError;
+  String? get username => throw _privateConstructorUsedError;
+  String? get email => throw _privateConstructorUsedError;
+  String? get jobTitle => throw _privateConstructorUsedError;
+  String? get firstName => throw _privateConstructorUsedError;
+  String? get lastName => throw _privateConstructorUsedError; // Null? genderId,
+  String? get birthDay => throw _privateConstructorUsedError;
+  String? get address => throw _privateConstructorUsedError;
+  String? get avatar => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UserCopyWith<$Res> {
+  factory $UserCopyWith(User value, $Res Function(User) then) =
+      _$UserCopyWithImpl<$Res, User>;
+  @useResult
+  $Res call(
+      {int? id,
+      String? username,
+      String? email,
+      String? jobTitle,
+      String? firstName,
+      String? lastName,
+      String? birthDay,
+      String? address,
+      String? avatar});
+}
+
+/// @nodoc
+class _$UserCopyWithImpl<$Res, $Val extends User>
+    implements $UserCopyWith<$Res> {
+  _$UserCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? username = freezed,
+    Object? email = freezed,
+    Object? jobTitle = freezed,
+    Object? firstName = freezed,
+    Object? lastName = freezed,
+    Object? birthDay = freezed,
+    Object? address = freezed,
+    Object? avatar = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      username: freezed == username
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String?,
+      email: freezed == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      jobTitle: freezed == jobTitle
+          ? _value.jobTitle
+          : jobTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      firstName: freezed == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastName: freezed == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      birthDay: freezed == birthDay
+          ? _value.birthDay
+          : birthDay // ignore: cast_nullable_to_non_nullable
+              as String?,
+      address: freezed == address
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as String?,
+      avatar: freezed == avatar
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
+  factory _$$UserImplCopyWith(
+          _$UserImpl value, $Res Function(_$UserImpl) then) =
+      __$$UserImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int? id,
+      String? username,
+      String? email,
+      String? jobTitle,
+      String? firstName,
+      String? lastName,
+      String? birthDay,
+      String? address,
+      String? avatar});
+}
+
+/// @nodoc
+class __$$UserImplCopyWithImpl<$Res>
+    extends _$UserCopyWithImpl<$Res, _$UserImpl>
+    implements _$$UserImplCopyWith<$Res> {
+  __$$UserImplCopyWithImpl(_$UserImpl _value, $Res Function(_$UserImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? username = freezed,
+    Object? email = freezed,
+    Object? jobTitle = freezed,
+    Object? firstName = freezed,
+    Object? lastName = freezed,
+    Object? birthDay = freezed,
+    Object? address = freezed,
+    Object? avatar = freezed,
+  }) {
+    return _then(_$UserImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      username: freezed == username
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String?,
+      email: freezed == email
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      jobTitle: freezed == jobTitle
+          ? _value.jobTitle
+          : jobTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      firstName: freezed == firstName
+          ? _value.firstName
+          : firstName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lastName: freezed == lastName
+          ? _value.lastName
+          : lastName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      birthDay: freezed == birthDay
+          ? _value.birthDay
+          : birthDay // ignore: cast_nullable_to_non_nullable
+              as String?,
+      address: freezed == address
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as String?,
+      avatar: freezed == avatar
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$UserImpl implements _User {
+  const _$UserImpl(
+      {this.id,
+      this.username,
+      this.email,
+      this.jobTitle,
+      this.firstName,
+      this.lastName,
+      this.birthDay,
+      this.address,
+      this.avatar});
+
+  factory _$UserImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserImplFromJson(json);
+
+  @override
+  final int? id;
+  @override
+  final String? username;
+  @override
+  final String? email;
+  @override
+  final String? jobTitle;
+  @override
+  final String? firstName;
+  @override
+  final String? lastName;
+// Null? genderId,
+  @override
+  final String? birthDay;
+  @override
+  final String? address;
+  @override
+  final String? avatar;
+
+  @override
+  String toString() {
+    return 'User(id: $id, username: $username, email: $email, jobTitle: $jobTitle, firstName: $firstName, lastName: $lastName, birthDay: $birthDay, address: $address, avatar: $avatar)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UserImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.username, username) ||
+                other.username == username) &&
+            (identical(other.email, email) || other.email == email) &&
+            (identical(other.jobTitle, jobTitle) ||
+                other.jobTitle == jobTitle) &&
+            (identical(other.firstName, firstName) ||
+                other.firstName == firstName) &&
+            (identical(other.lastName, lastName) ||
+                other.lastName == lastName) &&
+            (identical(other.birthDay, birthDay) ||
+                other.birthDay == birthDay) &&
+            (identical(other.address, address) || other.address == address) &&
+            (identical(other.avatar, avatar) || other.avatar == avatar));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, username, email, jobTitle,
+      firstName, lastName, birthDay, address, avatar);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UserImplCopyWith<_$UserImpl> get copyWith =>
+      __$$UserImplCopyWithImpl<_$UserImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$UserImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _User implements User {
+  const factory _User(
+      {final int? id,
+      final String? username,
+      final String? email,
+      final String? jobTitle,
+      final String? firstName,
+      final String? lastName,
+      final String? birthDay,
+      final String? address,
+      final String? avatar}) = _$UserImpl;
+
+  factory _User.fromJson(Map<String, dynamic> json) = _$UserImpl.fromJson;
+
+  @override
+  int? get id;
+  @override
+  String? get username;
+  @override
+  String? get email;
+  @override
+  String? get jobTitle;
+  @override
+  String? get firstName;
+  @override
+  String? get lastName;
+  @override // Null? genderId,
+  String? get birthDay;
+  @override
+  String? get address;
+  @override
+  String? get avatar;
+  @override
+  @JsonKey(ignore: true)
+  _$$UserImplCopyWith<_$UserImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
