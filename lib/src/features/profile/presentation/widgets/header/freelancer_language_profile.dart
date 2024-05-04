@@ -1,5 +1,4 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
@@ -22,12 +21,11 @@ class _FreelancerLanguageProfileState extends State<FreelancerLanguageProfile> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocSelector<ProfileBloc, ProfileState, UserInfoModel?>(
-      selector: (state) {
+    return BlocConsumer<ProfileBloc, ProfileState>(
+      listener: (context, state) {
         if (state is ProfileGetUserInfoSuccess) {
           userInfo = state.userInfoModel;
         }
-        return userInfo;
       },
       builder: (context, state) {
         if (userInfo == null) {

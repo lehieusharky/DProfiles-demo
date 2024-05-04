@@ -21,30 +21,27 @@ class _ProfilePageState extends State<ProfilePage>
         topPadding: 0,
         body: DefaultTabController(
           length: 2,
-          child: CustomScrollView(
-            physics: const BouncingScrollPhysics(),
-            slivers: [
-              SliverList(
-                delegate: SliverChildListDelegate(
-                  [
-                    const AvatarProfile(),
-                    const HeaderProfile(),
-                    const DProfileComponent(),
-                    const SocialMediaComponent(),
-                  ],
-                ),
+          child: NestedScrollView(
+            headerSliverBuilder:
+                (BuildContext context, bool innerBoxIsScrolled) => [
+              const Tuple2(AvatarProfile(), 170),
+              const Tuple2(HeaderProfile(), 260),
+              const Tuple2(DProfileComponent(), 175),
+              const Tuple2(SocialMediaComponent(), 80),
+            ]
+                    .map((e) => MySliverAppBar(
+                        height: e.item2.toDouble(), child: e.item1))
+                    .toList(),
+            body: Padding(
+              padding: context.padding(top: 5),
+              child: const Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  TabBarProfile(),
+                  Expanded(child: BodyProfile()),
+                ],
               ),
-              const SliverFillRemaining(
-                hasScrollBody: true,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    TabBarProfile(),
-                    Expanded(child: BodyProfile()),
-                  ],
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),
