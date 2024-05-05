@@ -39,7 +39,7 @@ class _PublicLanguagesComponentState extends State<PublicLanguagesComponent> {
               const TitleSubPage(title: 'Languages', canEdit: false),
               context.sizedBox(height: 5),
               if (languages == null)
-                const MyShimmer(count: 1, height: 150)
+                Container()
               else
                 Wrap(
                   spacing: 1,

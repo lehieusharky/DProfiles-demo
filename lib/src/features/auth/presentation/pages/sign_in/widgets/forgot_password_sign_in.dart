@@ -18,7 +18,7 @@ class ForgotPasswordSignIn extends StatelessWidget {
                 .fontTheme(
                   context,
                   weight: FontWeight.w700,
-                  color: colorScheme(context).onBackground,
+                  color: colorScheme(context).outline,
                 )
                 .bodyMedium),
         TextButton(

@@ -115,7 +115,7 @@ extension AICharacterBotModelExt on AICharacterBotModel {
                 radius: context.sizeWidth(25),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(1000),
-                  child: MyCacheImage(
+                  child: MyCachedImage(
                       imageUrl:
                           'https://d3v3a2vsni37rv.cloudfront.net/$avatar'),
                 ),
@@ -156,7 +156,7 @@ extension AICharacterBotModelExt on AICharacterBotModel {
       children: [
         Assets.icons.iconChat.svg(color: MyColor.getWhite),
         Text(
-          '10 k',
+          noOfConversation.toString(),
           style:
               AppFont().fontTheme(context, color: MyColor.getWhite).bodyMedium,
         ),

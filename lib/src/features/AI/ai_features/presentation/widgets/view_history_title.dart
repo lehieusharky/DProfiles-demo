@@ -35,7 +35,7 @@ class ViewHistoryTitle extends StatelessWidget {
               ),
               TextButton(
                 onPressed: (state != null && state != 0)
-                    ? () => context.router.push(const AiFeaturesHistoryRoute())
+                    ? () => context.router.push(const AIAutoGenHistoryRoute())
                     : null,
                 child: Text(appLocal(context).viewAll,
                     style: AppFont()

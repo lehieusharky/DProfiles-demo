@@ -1,5 +1,4 @@
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/my_ai_character/presentation/bloc/bloc/my_ai_character_bloc.dart';
 import 'package:demo_dprofiles/src/features/AI/chat_with_ai_bot/data/models/message_with_bot_model.dart';

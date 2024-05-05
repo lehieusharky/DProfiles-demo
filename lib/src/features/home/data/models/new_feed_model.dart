@@ -7,22 +7,39 @@ part 'new_feed_model.g.dart';
 @freezed
 class NewFeedModel with _$NewFeedModel {
   const factory NewFeedModel({
-    @JsonKey(name: 'id') @Default(0) int? postId,
-    @JsonKey(name: 'user_id') @Default(0) int? postUserId,
-    @JsonKey(name: 'admin_id') @Default(0) int? postAdminId,
-    @JsonKey(name: 'content') String? postContent,
-    @JsonKey(name: 'image_url') String? postImageUrl,
-    @JsonKey(name: 'video_url') String? postVideoUrl,
-    @JsonKey(name: 'updated_on') String? postUpdatedOn,
-    @JsonKey(name: 'updated_ts') String? postUpdatedTs,
-    @JsonKey(name: 'created_ts') String? postCreatedTs,
-    @Default(0) int? noOfLike,
-    @Default(0) int? noOfShare,
-    @Default(0) int? noOfComment,
-    @JsonKey(name: 'liked') @Default(false) bool liked,
-    @JsonKey(name: 'user') UserInfoModel? user,
+    int? id,
+    int? userId,
+    int? adminId,
+    String? content,
+    List<String>? imageUrl,
+    List<String>? videoUrl,
+    String? updatedOn,
+    String? updatedTs,
+    String? createdTs,
+    User? user,
+    int? noOfLike,
+    int? noOfShare,
+    int? noOfComment,
   }) = _NewFeedModel;
 
   factory NewFeedModel.fromJson(Map<String, Object?> json) =>
       _$NewFeedModelFromJson(json);
+}
+
+@freezed
+class User with _$User {
+  const factory User({
+    int? id,
+    String? username,
+    String? email,
+    String? jobTitle,
+    String? firstName,
+    String? lastName,
+    // Null? genderId,
+    String? birthDay,
+    String? address,
+    String? avatar,
+  }) = _User;
+
+  factory User.fromJson(Map<String, Object?> json) => _$UserFromJson(json);
 }

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:demo_dprofiles/src/features/profile/data/models/banner_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/certificate_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
@@ -24,6 +25,25 @@ class PublicProfileBloc extends Bloc<PublicProfileEvent, PublicProfileState> {
 
     on<PublicProfileGetSkills>(_getSkills);
     on<PublicProfileGetLanguages>(_getLanguages);
+    on<PublicProfileGetBanner>(_getBanner);
+  }
+
+  FutureOr<void> _getBanner(
+      PublicProfileGetBanner event, Emitter<PublicProfileState> emit) async {
+    emit(const PublicProfileLoading());
+    final status = await publicProfileUseCase.getPublicBanner(event.userName);
+
+    status.fold(
+      (l) => emit(const PublicProfileError(
+          msg: 'get user banner failed', title: 'Failed')),
+      (r) {
+        final data = r.data as List;
+
+        final banners = data.map((e) => BannerModel.fromJson(e)).toList();
+
+        emit(PublicProfileGetBannerSuccess(banners.first));
+      },
+    );
   }
 
   FutureOr<void> _getUserInfo(

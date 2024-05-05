@@ -72,7 +72,7 @@ class _FormEditCertificatePageState extends State<FormEditCertificatePage> {
                           return null;
                         }
                       },
-                      hint: appLocal(context).schoolName),
+                      hint: 'Certificate Name'),
                   Padding(
                     padding: context.padding(top: 32),
                     child: AuthField(
@@ -120,18 +120,7 @@ class _FormEditCertificatePageState extends State<FormEditCertificatePage> {
                         controller: _linkController,
                         textInputAction: TextInputAction.done,
                         title: 'Credential URL'.toUpperCase(),
-                        validator: (value) {
-                          final _urlPattern = RegExp(
-                            r'^https:\/\/www\.[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-]+$',
-                          );
-                          if (value == null || value.isEmpty) {
-                            return appLocal(context).fieldCannotBeEmpty;
-                          } else if (!_urlPattern.hasMatch(value)) {
-                            return 'URL starting with https://www.';
-                          } else {
-                            return null;
-                          }
-                        },
+                        validator: (value) => value.urlValidation(context),
                         hint: 'Credential URL'),
                   ),
                   Padding(

@@ -37,6 +37,8 @@ _$AICharacterBotModelImpl _$$AICharacterBotModelImplFromJson(
       updatedOn: json['updated_on'] as String?,
       updatedTs: json['updated_ts'] as String?,
       createdTs: json['created_ts'] as String?,
+      noOfConversation: json['noOfConversation'] as int? ?? 0,
+      noOfMessage: json['noOfMessage'] as int? ?? 0,
     );
 
 Map<String, dynamic> _$$AICharacterBotModelImplToJson(
@@ -68,6 +70,8 @@ Map<String, dynamic> _$$AICharacterBotModelImplToJson(
       'updated_on': instance.updatedOn,
       'updated_ts': instance.updatedTs,
       'created_ts': instance.createdTs,
+      'noOfConversation': instance.noOfConversation,
+      'noOfMessage': instance.noOfMessage,
     };
 
 _$DefinitionImpl _$$DefinitionImplFromJson(Map<String, dynamic> json) =>

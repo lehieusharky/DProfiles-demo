@@ -89,4 +89,17 @@ class PublicProfileRepositoryImpl implements PublicProfileRepository {
           response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
+
+  @override
+  Future<Either<PublicFailure, BaseResponse>> getPublicBanner(
+      String userName) async {
+    try {
+      final response = await _profileDataSource.getPublicBanner(userName);
+
+      return Right(response);
+    } on DioException catch (e) {
+      return Left(PublicFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
+    }
+  }
 }

@@ -30,7 +30,7 @@ class _NameProfileState extends State<NameProfile> {
       },
       builder: (context, state) {
         if (userInfo == null) {
-          return const MyShimmer(count: 1, height: 30);
+          return Container();
         } else {
           return Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

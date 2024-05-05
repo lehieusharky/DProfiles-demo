@@ -1,5 +1,6 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
+import 'package:demo_dprofiles/src/core/ui/my_divider.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/cubit/feed_detail_cubit.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/feed_menu.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
@@ -59,7 +60,7 @@ extension NewFeedModelExt on NewFeedModel {
                           .bodyLarge,
                     ),
                     Text(
-                      feed.postCreatedTs.toString().convertToDDMMYYFormat(),
+                      feed.createdTs.convertToDDMMYYFormat(),
                       style: AppFont()
                           .fontTheme(context,
                               weight: FontWeight.w400,
@@ -78,34 +79,36 @@ extension NewFeedModelExt on NewFeedModel {
               )
             ],
           ),
-          if (feed.postContent != null)
+          if (feed.content != null)
             Padding(
               padding: context.padding(top: 16),
               child: Text(
-                feed.postContent!,
+                feed.content!,
                 style: AppFont()
                     .fontTheme(context, height: 1.5, letterSpacing: 0.5)
                     .bodyMedium,
               ),
             ),
-          Padding(
-              padding: context.padding(top: 25),
-              child: MyCacheImage(
-                imageUrl: feed.postImageUrl ?? '',
-                errorWidget: Assets.images.home.live.image(),
-              )),
+          if (feed.imageUrl != null)
+            Padding(
+                padding: context.padding(top: 25),
+                child: MyCachedImage(
+                  imageUrl: feed.imageUrl![0],
+                  errorWidget: Assets.images.home.live.image(),
+                )),
           ReactionPost(
             likes: feed.noOfLike!,
             comments: feed.noOfComment!,
             shares: feed.noOfShare!,
-            liked: feed.liked,
+            // liked: feed.liked,
             onLikeClick: () {
-              bloc.like();
+              // bloc.like();
               onLikeClick?.call();
             },
             onCommentClick: onCommentClick,
             onShareClick: onShareClick,
           ),
+          const MyDivider(verticalMargin: 3),
         ],
       ),
     );

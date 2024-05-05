@@ -5,7 +5,8 @@ import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(path: '/auth_gate', initial: true, page: AuthGateRoute.page),
+        AutoRoute(path: '/splash', initial: true, page: SplashRoute.page),
+        AutoRoute(path: '/auth_gate', page: AuthGateRoute.page),
         AutoRoute(path: '/local_auth', page: LocalAuthRoute.page),
         AutoRoute(path: '/onboarding', page: OnboardingRoute.page),
         AutoRoute(path: '/dashboard', page: DashboardRoute.page),
@@ -45,7 +46,7 @@ class AppRouter extends $AppRouter {
         AutoRoute(path: '/my_ai_character', page: MyAICharacterRoute.page),
         AutoRoute(path: '/blog_detail', page: BlogDetailRoute.page),
         AutoRoute(
-            path: '/ai_features_history', page: AiFeaturesHistoryRoute.page),
+            path: '/ai_auto_gen_history', page: AIAutoGenHistoryRoute.page),
         AutoRoute(
             path: '/auto_generation_history_detail',
             page: AutoGenerationHistoryDetailRoute.page),

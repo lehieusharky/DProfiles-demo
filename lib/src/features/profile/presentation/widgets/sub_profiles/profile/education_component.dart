@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
-import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/pages/create_ai_character/presentation/widgets/edit_form/form_edit_education_page.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/education_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/title_sub_page.dart';
@@ -26,9 +25,9 @@ class _EducationComponentState extends State<EducationComponent> {
     return BlocConsumer<ProfileBloc, ProfileState>(
       listener: (context, state) {
         if (state is ProfileGetUserEducationsSuccess) {
-          educations = [];  
+          educations = [];
           for (var element in state.educations) {
-            educations?.add(element); 
+            educations?.add(element);
           }
         }
 
@@ -61,7 +60,7 @@ class _EducationComponentState extends State<EducationComponent> {
                   .add(const ProfileGetUserEducations()),
             ),
             if (educations == null)
-              const MyShimmer(count: 1, height: 50)
+              Container()
             else
               Column(
                 mainAxisSize: MainAxisSize.min,

@@ -31,6 +31,7 @@ class _FormSearchBarState extends State<FormSearchBar> {
               maxLines: 1,
               keyboardType: TextInputType.text,
               autoFocus: true,
+              onSubmit: (value) => _search(context),
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return appLocal(context).fieldCannotBeEmpty;

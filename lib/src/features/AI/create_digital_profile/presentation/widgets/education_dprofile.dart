@@ -36,7 +36,7 @@ class _EducationDProfileState extends State<EducationDProfile> {
               const TitleSubPage(title: 'Education', canEdit: false),
               context.sizedBox(height: 5),
               if (state == null)
-                const MyShimmer(count: 1, height: 150)
+                Container()
               else
                 Column(
                   mainAxisSize: MainAxisSize.min,

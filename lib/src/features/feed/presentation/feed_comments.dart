@@ -24,7 +24,7 @@ class FeedComments extends StatelessWidget {
       },
       builder: (context, state) {
         if (state == null) {
-          return const MyShimmer(count: 4, height: 200);
+          return Container();
         }
 
         return _buildBody(context, state);

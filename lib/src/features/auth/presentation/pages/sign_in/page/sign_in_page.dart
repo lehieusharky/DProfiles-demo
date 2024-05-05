@@ -32,7 +32,7 @@ class _SignInPageState extends State<SignInPage> {
         child: MyScaffold(
           horizontalMargin: 32,
           body: SingleChildScrollView(
-            child: Column(
+            child: Column( 
               children: [
                 AuthLogo(),
                 AuthTitle(title: appLocal(context).login),

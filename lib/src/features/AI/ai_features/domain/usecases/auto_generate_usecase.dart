@@ -9,7 +9,8 @@ import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
 import 'package:injectable/injectable.dart';
 
 abstract class AutoGenerateUseCase {
-  Future<Either<String, BaseResponse>> getAutoGenerateHistory();
+  Future<Either<String, BaseResponse>> getAutoGenerateHistory(
+      {int? page, int? limit});
 
   Future<Either<String, BaseResponse>> getAutoGenerateHistoryDetail(int id);
 
@@ -33,8 +34,10 @@ class AutoGenerateUseCaseImpl implements AutoGenerateUseCase {
   AutoGenerateUseCaseImpl(this._autoGenerateRepository);
 
   @override
-  Future<Either<String, BaseResponse>> getAutoGenerateHistory() async {
-    final result = await _autoGenerateRepository.getAutoGenerateHistory();
+  Future<Either<String, BaseResponse>> getAutoGenerateHistory(
+      {int? page, int? limit}) async {
+    final result = await _autoGenerateRepository.getAutoGenerateHistory(
+        page: page, limit: limit);
 
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message!),

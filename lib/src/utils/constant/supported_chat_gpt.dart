@@ -24,7 +24,7 @@ extension ChatGPTTypesExt on SupportedChatGPT {
 
   int getPoint() {
     return switch (this) {
-      SupportedChatGPT.gpt_3_5 => 10,
+      SupportedChatGPT.gpt_3_5 => 5,
       SupportedChatGPT.gpt_4 => 20,
     };
   }

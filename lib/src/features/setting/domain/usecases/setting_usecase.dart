@@ -1,8 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/setting/domain/repositories/setting_repository.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:injectable/injectable.dart';
 
 abstract class SettingUseCase {

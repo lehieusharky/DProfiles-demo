@@ -52,7 +52,7 @@ class _FormAboutState extends State<FormAbout> {
       },
       builder: (context, state) {
         if (state == null) {
-          return const MyShimmer(count: 3);
+          return Container();
         }
         return Padding(
           padding: context.padding(top: 16),

@@ -118,6 +118,7 @@ class _MyTextFormFieldState extends State<MyTextFormField> {
       controller: widget.controller,
       maxLines: widget.maxLines ?? 1,
       focusNode: widget.focusNode,
+      
       obscureText: _obscuteText,
       onTapOutside: (value) => FocusManager.instance.primaryFocus!.unfocus(),
       autofocus: widget.autoFocus ?? false,

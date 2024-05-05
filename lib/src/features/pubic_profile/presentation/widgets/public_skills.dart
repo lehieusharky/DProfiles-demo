@@ -38,7 +38,7 @@ class _PublicSkillsComponentState extends State<PublicSkillsComponent> {
               const TitleSubPage(title: 'Skills', canEdit: false),
               context.sizedBox(height: 5),
               if (skills == null)
-                const MyShimmer(count: 1, height: 150)
+                 Container()
               else
                 Wrap(
                   spacing: 1,

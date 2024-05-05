@@ -116,7 +116,7 @@ abstract class RestClient {
   Future<BaseResponse> generateCoverLetter(@Body() Map<String, dynamic> body);
 
   @GET('/api/v1/auto-generate-history')
-  Future<BaseResponse> getAutoGenerateHistory();
+  Future<BaseResponse> getAutoGenerateHistory({int? page, int? limit});
 
   @GET('/api/v1/auto-generate-history/{id}')
   Future<BaseResponse> getAutoGenerateHistoryItem(@Path() int id);
@@ -410,6 +410,9 @@ abstract class RestClient {
   @GET('/api/v1/public/working-location/{username}')
   Future<BaseResponse> getPublicWorkingLocation(
       @Path('username') String userName);
+
+  @GET('/api/v1/public/banner/{username}')
+  Future<BaseResponse> getPublicBanner(@Path('username') String userName);
 
   // post
 

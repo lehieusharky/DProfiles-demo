@@ -11,6 +11,7 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
+import 'package:demo_dprofiles/src/utils/presentation/widgets/avatar/user_avatar.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:demo_dprofiles/src/utils/services/connect_wallet_service.dart';
 import 'package:ficonsax/ficonsax.dart';
@@ -97,17 +98,11 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CircleAvatar(
-                      radius: context.sizeHeight(20),
-                      child: Assets.images.home.avatarHolder.image(
-                        width: context.sizeWidth(60),
-                        height: context.sizeWidth(60),
-                      ),
-                    ),
+                    UserAvatar(avatarUrlKey: userInfo.avatar, radius: 50),
                     context.sizedBox(width: 16),
                     Expanded(
                       child: Text(
-                        userInfo.username ?? '',
+                        "${userInfo.firstName} ${userInfo.lastName}",
                         overflow: TextOverflow.ellipsis,
                         maxLines: 2,
                         style: AppFont()

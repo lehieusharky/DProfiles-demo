@@ -1,7 +1,4 @@
-import 'dart:developer';
-
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/post/data/models/post_model.dart';
 import 'package:demo_dprofiles/src/features/post/domain/entities/ext_post_entity.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
@@ -18,27 +15,6 @@ class PostComponent extends StatefulWidget {
 class _PostComponentState extends State<PostComponent> {
   List<PostModel>? posts;
 
-  bool _fetch = true;
-
-  final ScrollController _scrollController = ScrollController();
-
-  @override
-  void initState() {
-    _scrollController.addListener(() {
-      if (_scrollController.position.pixels ==
-          _scrollController.position.maxScrollExtent) {
-        _getMore();
-      }
-    });
-    super.initState();
-  }
-
-  void _getMore() {
-    if (_fetch) {
-      context.read<ProfileBloc>().add(const ProfileGetUserPosts());
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<ProfileBloc, ProfileState>(
@@ -51,11 +27,9 @@ class _PostComponentState extends State<PostComponent> {
         if (posts == null) {
           return const MyLoading();
         } else {
-          return SingleChildScrollView(
-            controller: _scrollController,
-            child: Column(
-              children: posts!.map((e) => e.toWidget(context)).toList(),
-            ),
+          return Column(
+            mainAxisSize: MainAxisSize.min,
+            children: posts!.map((e) => e.toWidget(context)).toList(),
           );
         }
       },
@@ -71,15 +45,11 @@ class _PostComponentState extends State<PostComponent> {
   }
 
   void _addPost(ProfileGetUserPostsSuccess state) {
-    log(state.posts.toString());
-    if (state.posts.isEmpty) {
-      setState(() {
-        _fetch = false;
-      });
-    } else {
+    if (state.posts.isNotEmpty) {
       for (var element in state.posts) {
         posts!.add(element);
       }
+      context.read<ProfileBloc>().add(const ProfileGetUserPosts());
       setState(() {});
     }
   }
@@ -89,5 +59,6 @@ class _PostComponentState extends State<PostComponent> {
     for (var element in state.posts) {
       posts!.add(element);
     }
+    context.read<ProfileBloc>().add(const ProfileGetUserPosts());
   }
 }

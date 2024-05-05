@@ -67,7 +67,6 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
                       return null;
                     }
                   },
-                  suffixIcon: const Icon(IconsaxOutline.arrow_down_1),
                 ),
               ),
               Padding(
@@ -121,7 +120,7 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
-              gptVersion.getPoint().toString(),
+              "-${gptVersion.getPoint()}",
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.bold)
                   .bodyMedium,
@@ -135,8 +134,7 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
   void _sendToAI(BuildContext context, SupportedChatGPT gptVersion) {
     if (_keyForm.currentState?.validate() ?? false) {
       final model = WriteProfileIntroductionModel(
-        summary:
-            "${_aboutYourSelfController.text} with prompt: ${_promptController.text}",
+        summary: _aboutYourSelfController.text,
         style: _writeStyleController.text.trim(),
         gptModel: gptVersion.toVersion(),
         maxToken: int.parse(_promptController.text.trim()),

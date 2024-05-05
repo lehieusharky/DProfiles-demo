@@ -9,7 +9,6 @@ import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentati
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/header_my_dprofile.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/seperate_profile.dart';
-import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/sliver_app_bar/my_sliver_app_bar.dart';
 
 import 'package:flutter/material.dart';

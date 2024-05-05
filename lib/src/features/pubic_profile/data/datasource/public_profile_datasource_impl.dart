@@ -71,4 +71,15 @@ class PublicProfileDataSourceImpl implements PublicProfileDataSource {
       rethrow;
     }
   }
+
+  @override
+  Future<BaseResponse> getPublicBanner(String userName) async {
+    try {
+      final response = await MyHttp.rl().getPublicBanner(userName);
+
+      return response;
+    } on DioException catch (e) {
+      rethrow;
+    }
+  }
 }

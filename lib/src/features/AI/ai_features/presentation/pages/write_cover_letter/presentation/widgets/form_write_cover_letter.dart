@@ -116,7 +116,7 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
-              gptVersion.getPoint().toString(),
+              "-${gptVersion.getPoint()}",
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.bold)
                   .bodyMedium,
@@ -132,7 +132,7 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
       final model = WriteCoverLetterModel(
         maxToken: int.parse(_promptController.text.trim()),
         jobTitle: _jobTitleController.text,
-        summary: _aboutYourSelfController.text + _promptController.text,
+        summary: _aboutYourSelfController.text,
         gptModel: gptVersion.toVersion(),
       );
       context.read<AiFeaturesBloc>().add(GenerateCoverLetter(model));

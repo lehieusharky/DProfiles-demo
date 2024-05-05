@@ -832,9 +832,13 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<BaseResponse> getAutoGenerateHistory() async {
+  Future<BaseResponse> getAutoGenerateHistory({
+    int? page,
+    int? limit,
+  }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
+    queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio
@@ -2688,6 +2692,33 @@ class _RestClient implements RestClient {
             .compose(
               _dio.options,
               '/api/v1/public/working-location/${userName}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = BaseResponse.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<BaseResponse> getPublicBanner(String userName) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<BaseResponse>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/api/v1/public/banner/${userName}',
               queryParameters: queryParameters,
               data: _data,
             )

@@ -19,4 +19,6 @@ class PublicProfileEvent with _$PublicProfileEvent {
 
   const factory PublicProfileEvent.getSkills(String userName) =
       PublicProfileGetSkills;
+
+  const factory PublicProfileEvent.getBanner(String userName) = PublicProfileGetBanner;
 }

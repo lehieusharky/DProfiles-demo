@@ -79,7 +79,7 @@ class _FormCreatePostState extends State<FormCreatePost> {
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) => Padding(
                               padding: context.padding(right: 10),
-                              child: MyCacheImage(
+                              child: MyCachedImage(
                                   height: 200,
                                   width: context.width * 0.7,
                                   imageUrl: imagesUrl[index]),
