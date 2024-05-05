@@ -9,7 +9,6 @@ import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bl
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
-import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/avatar/user_avatar.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
@@ -72,76 +71,85 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
           },
         ),
       ],
-      child: SidebarX(
-        animationDuration: const Duration(milliseconds: 200),
-        controller: _drawerController,
-        showToggleButton: false,
-        theme: SidebarXTheme(
-          margin: context.padding(vertical: 50),
-          decoration: BoxDecoration(
-            color: colorScheme(context).background,
-            borderRadius: BorderRadius.circular(16),
-          ),
-          textStyle: AppFont().fontTheme(context).bodyLarge,
-          itemTextPadding: context.padding(left: 20),
-          selectedItemTextPadding: context.padding(left: 20),
-        ),
-        extendedTheme: SidebarXTheme(
-          width: context.sizeWidth(280),
-          decoration: BoxDecoration(color: colorScheme(context).background),
-        ),
-        headerBuilder: (context, extended) {
-          return Padding(
-            padding: context.padding(top: 50, horizontal: 8),
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+      child: BlocBuilder<ProfileBloc, ProfileState>(
+        builder: (context, state) {
+          if (state is ProfileGetUserInfoSuccess) {
+            userInfo = state.userInfoModel;
+          }
+          return SidebarX(
+            animationDuration: const Duration(milliseconds: 200),
+            controller: _drawerController,
+            showToggleButton: false,
+            theme: SidebarXTheme(
+              margin: context.padding(vertical: 50),
+              decoration: BoxDecoration(
+                color: colorScheme(context).background,
+                borderRadius: BorderRadius.circular(16),
+              ),
+              textStyle: AppFont().fontTheme(context).bodyLarge,
+              itemTextPadding: context.padding(left: 20),
+              selectedItemTextPadding: context.padding(left: 20),
+            ),
+            extendedTheme: SidebarXTheme(
+              width: context.sizeWidth(280),
+              decoration: BoxDecoration(color: colorScheme(context).background),
+            ),
+            headerBuilder: (context, extended) {
+              return Padding(
+                padding: context.padding(top: 50, horizontal: 8),
+                child: Column(
                   children: [
-                    UserAvatar(avatarUrlKey: userInfo.avatar, radius: 50),
-                    context.sizedBox(width: 16),
-                    Expanded(
-                      child: Text(
-                        "${userInfo.firstName} ${userInfo.lastName}",
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 2,
-                        style: AppFont()
-                            .fontTheme(context, weight: FontWeight.w600)
-                            .bodyLarge,
-                      ),
-                    )
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        UserAvatar(avatarUrlKey: userInfo.avatar, radius: 50),
+                        context.sizedBox(width: 16),
+                        Expanded(
+                          child: Text(
+                            "${userInfo.firstName} ${userInfo.lastName}",
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                            style: AppFont()
+                                .fontTheme(context, weight: FontWeight.w600)
+                                .bodyLarge,
+                          ),
+                        )
+                      ],
+                    ),
+                    context.sizedBox(height: 10),
+                    AppFlatButton(context).elevatedButton(
+                        title: userInfo.walletAddress == null
+                            ? 'Connect Wallet'
+                            : 'Disconnect wallet',
+                        onPressed: () => AppConnectWalletService()
+                            .connectWallet(
+                                context,
+                                (walletAddress) =>
+                                    _onConnectWallet(walletAddress))),
                   ],
                 ),
-                context.sizedBox(height: 10),
-                AppFlatButton(context).elevatedButton(
-                    title: userInfo.walletAddress == null
-                        ? 'Connect Wallet'
-                        : 'Disconnect wallet',
-                    onPressed: () => AppConnectWalletService().connectWallet(
-                        context,
-                        (walletAddress) => _onConnectWallet(walletAddress))),
-              ],
-            ),
+              );
+            },
+            items: [
+              Tuple3(const Icon(IconsaxOutline.profile_circle),
+                  'Digital Profile', () => _onOpenDProfile(context)),
+              Tuple3(const Icon(IconsaxOutline.edit), 'Edit Profile',
+                  () => _onEditProfile(context)),
+              Tuple3(const Icon(IconsaxOutline.paperclip), 'Privacy & Policy',
+                  () => _openPrivacyDoc()),
+              Tuple3(const Icon(IconsaxOutline.logout), 'Log out',
+                  () => _logout(context)),
+              Tuple3(const Icon(IconsaxOutline.profile_delete),
+                  'Delete Account', () => _deleteAccount(context)),
+            ]
+                .map((e) => SidebarXItem(
+                      iconBuilder: (_, __) => e.item1,
+                      label: e.item2,
+                      onTap: e.item3,
+                    ))
+                .toList(),
           );
         },
-        items: [
-          Tuple3(const Icon(IconsaxOutline.profile_circle), 'Digital Profile',
-              () => _onOpenDProfile(context)),
-          Tuple3(const Icon(IconsaxOutline.edit), 'Edit Profile',
-              () => _onEditProfile(context)),
-          Tuple3(const Icon(IconsaxOutline.paperclip), 'Privacy & Policy',
-              () => _openPrivacyDoc()),
-          Tuple3(const Icon(IconsaxOutline.logout), 'Log out',
-              () => _logout(context)),
-          Tuple3(const Icon(IconsaxOutline.profile_delete), 'Delete Account',
-              () => _deleteAccount(context)),
-        ]
-            .map((e) => SidebarXItem(
-                  iconBuilder: (_, __) => e.item1,
-                  label: e.item2,
-                  onTap: e.item3,
-                ))
-            .toList(),
       ),
     );
   }
