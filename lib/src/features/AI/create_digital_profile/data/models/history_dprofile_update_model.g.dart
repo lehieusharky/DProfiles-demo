@@ -9,8 +9,8 @@ part of 'history_dprofile_update_model.dart';
 _$HistoryDProfileUpdateModelImpl _$$HistoryDProfileUpdateModelImplFromJson(
         Map<String, dynamic> json) =>
     _$HistoryDProfileUpdateModelImpl(
-      id: json['id'] as int?,
-      userId: json['user_id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      userId: (json['user_id'] as num?)?.toInt(),
       transactionHash: json['transactionHash'] as String?,
       transactionDate: json['transactionDate'] as String?,
       description: json['description'] as String?,

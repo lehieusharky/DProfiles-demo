@@ -11,7 +11,7 @@ _$BaseResponseImpl _$$BaseResponseImplFromJson(Map<String, dynamic> json) =>
       message: json['message'] as String? ?? "",
       success: json['success'] as bool? ?? false,
       error: json['error'] as String? ?? null,
-      statusCode: json['statusCode'] as int? ?? 200,
+      statusCode: (json['statusCode'] as num?)?.toInt() ?? 200,
       data: json['data'],
       response: json['response'],
     );

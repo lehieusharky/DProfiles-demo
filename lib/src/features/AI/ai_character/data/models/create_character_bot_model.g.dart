@@ -13,7 +13,7 @@ _$CreateCharacterBotModelImpl _$$CreateCharacterBotModelImplFromJson(
           ? null
           : CharacterDefinition.fromJson(
               json['character_definition'] as Map<String, dynamic>),
-      chatBotId: json['chat_bot_id'] as int? ?? 0,
+      chatBotId: (json['chat_bot_id'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$$CreateCharacterBotModelImplToJson(

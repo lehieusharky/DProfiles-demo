@@ -11,7 +11,7 @@ _$WriteInterviewQuestionModelImpl _$$WriteInterviewQuestionModelImplFromJson(
     _$WriteInterviewQuestionModelImpl(
       jobTitle: json['job_title'] as String?,
       about: json['about'] as String?,
-      gptModel: json['gpt_model'] as int? ?? 3,
+      gptModel: (json['gpt_model'] as num?)?.toInt() ?? 3,
       language: json['language'] as String? ?? 'en',
     );
 

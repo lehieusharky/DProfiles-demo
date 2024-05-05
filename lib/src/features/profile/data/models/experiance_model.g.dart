@@ -9,8 +9,8 @@ part of 'experiance_model.dart';
 _$ExperienceModelImpl _$$ExperienceModelImplFromJson(
         Map<String, dynamic> json) =>
     _$ExperienceModelImpl(
-      id: json['id'] as int?,
-      userId: json['userId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      userId: (json['userId'] as num?)?.toInt(),
       jobTitle: json['job_title'] as String?,
       companyName: json['company_name'] as String?,
       startDate: json['start_date'] as String?,
@@ -19,8 +19,8 @@ _$ExperienceModelImpl _$$ExperienceModelImplFromJson(
       updatedTs: json['updated_ts'] as String?,
       createdTs: json['created_ts'] as String?,
       description: json['description'] as String?,
-      order: json['order'] as int?,
-      isCurrent: json['is_current'] as int?,
+      order: (json['order'] as num?)?.toInt(),
+      isCurrent: (json['is_current'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$ExperienceModelImplToJson(

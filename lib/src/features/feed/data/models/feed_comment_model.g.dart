@@ -9,10 +9,10 @@ part of 'feed_comment_model.dart';
 _$FeedCommentModelImpl _$$FeedCommentModelImplFromJson(
         Map<String, dynamic> json) =>
     _$FeedCommentModelImpl(
-      id: json['id'] as int,
-      postId: json['post_id'] as int,
-      userId: json['user_id'] as int,
-      commentId: json['comment_id'] as int,
+      id: (json['id'] as num).toInt(),
+      postId: (json['post_id'] as num).toInt(),
+      userId: (json['user_id'] as num).toInt(),
+      commentId: (json['comment_id'] as num).toInt(),
       content: json['content'] as String,
       imageUrl: json['image_url'] as String?,
       videoUrl: json['video_url'] as String?,

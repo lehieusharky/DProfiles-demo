@@ -9,11 +9,11 @@ part of 'chat_bot_message_history_model.dart';
 _$ChatBotMessageHistoryModelImpl _$$ChatBotMessageHistoryModelImplFromJson(
         Map<String, dynamic> json) =>
     _$ChatBotMessageHistoryModelImpl(
-      id: json['id'] as int?,
-      userSenderId: json['user_sender_id'] as int?,
-      chatbotSenderId: json['chatbot_sender_id'] as int?,
-      userReceiverId: json['user_receiver_id'] as int?,
-      chatbotReceiverId: json['chatbot_receiver_id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      userSenderId: (json['user_sender_id'] as num?)?.toInt(),
+      chatbotSenderId: (json['chatbot_sender_id'] as num?)?.toInt(),
+      userReceiverId: (json['user_receiver_id'] as num?)?.toInt(),
+      chatbotReceiverId: (json['chatbot_receiver_id'] as num?)?.toInt(),
       conversationId: json['conversation_id'] as String?,
       content: json['content'] as String?,
       updatedOn: json['updated_on'] as String?,

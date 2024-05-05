@@ -8,7 +8,7 @@ part of 'blog_model.dart';
 
 _$BlogModelImpl _$$BlogModelImplFromJson(Map<String, dynamic> json) =>
     _$BlogModelImpl(
-      id: json['id'] as int,
+      id: (json['id'] as num).toInt(),
       title: json['title'] as String,
       thumbnail: json['thumbnail'] as String,
       summary: json['summary'] as String,

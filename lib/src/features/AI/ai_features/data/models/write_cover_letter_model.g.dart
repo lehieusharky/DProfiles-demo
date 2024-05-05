@@ -9,10 +9,10 @@ part of 'write_cover_letter_model.dart';
 _$WriteCoverLetterModelImpl _$$WriteCoverLetterModelImplFromJson(
         Map<String, dynamic> json) =>
     _$WriteCoverLetterModelImpl(
-      maxToken: json['max_token'] as int? ?? 10,
+      maxToken: (json['max_token'] as num?)?.toInt() ?? 10,
       jobTitle: json['job_title'] as String?,
       summary: json['summary'] as String?,
-      gptModel: json['gpt_model'] as int? ?? 3,
+      gptModel: (json['gpt_model'] as num?)?.toInt() ?? 3,
       language: json['language'] as String? ?? 'en',
     );
 

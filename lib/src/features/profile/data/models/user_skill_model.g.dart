@@ -8,12 +8,12 @@ part of 'user_skill_model.dart';
 
 _$UserSkillModelImpl _$$UserSkillModelImplFromJson(Map<String, dynamic> json) =>
     _$UserSkillModelImpl(
-      id: json['id'] as int?,
-      userId: json['user_id'] as int?,
-      skillId: json['skill_id'] as int?,
-      level: json['level'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      userId: (json['user_id'] as num?)?.toInt(),
+      skillId: (json['skill_id'] as num?)?.toInt(),
+      level: (json['level'] as num?)?.toInt(),
       updatedOn: json['updated_on'] as String?,
-      order: json['order'] as int?,
+      order: (json['order'] as num?)?.toInt(),
       updatedTs: json['updated_ts'] as String?,
       createdTs: json['created_ts'] as String?,
       skill: json['skill'] == null
@@ -36,10 +36,10 @@ Map<String, dynamic> _$$UserSkillModelImplToJson(
     };
 
 _$SkillImpl _$$SkillImplFromJson(Map<String, dynamic> json) => _$SkillImpl(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
-      language: json['language'] as int?,
-      order: json['order'] as int?,
+      language: (json['language'] as num?)?.toInt(),
+      order: (json['order'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$SkillImplToJson(_$SkillImpl instance) =>

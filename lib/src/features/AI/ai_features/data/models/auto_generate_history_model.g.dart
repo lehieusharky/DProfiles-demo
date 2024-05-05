@@ -9,14 +9,14 @@ part of 'auto_generate_history_model.dart';
 _$AutoGenerateHistoryModelImpl _$$AutoGenerateHistoryModelImplFromJson(
         Map<String, dynamic> json) =>
     _$AutoGenerateHistoryModelImpl(
-      id: json['id'] as int?,
-      userId: json['userId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      userId: (json['userId'] as num?)?.toInt(),
       prompt: json['prompt'] == null
           ? null
           : Prompt.fromJson(json['prompt'] as Map<String, dynamic>),
       historyType: json['historyType'] as String?,
       language: json['language'] as String? ?? 'en',
-      gptType: json['gptType'] as int? ?? 3,
+      gptType: (json['gptType'] as num?)?.toInt() ?? 3,
       historyDate: json['historyDate'] as String?,
       result: json['result'] as String?,
       updatedOn: json['updated_on'] as String?,
@@ -45,7 +45,7 @@ _$PromptImpl _$$PromptImplFromJson(Map<String, dynamic> json) => _$PromptImpl(
       style: json['style'] as String?,
       jobTitle: json['job_title'] as String?,
       about: json['about'] as String?,
-      maxToken: json['max_token'] as int?,
+      maxToken: (json['max_token'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$PromptImplToJson(_$PromptImpl instance) =>

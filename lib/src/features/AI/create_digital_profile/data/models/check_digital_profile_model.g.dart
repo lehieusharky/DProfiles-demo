@@ -9,8 +9,8 @@ part of 'check_digital_profile_model.dart';
 _$CheckDigitalProfileModelImpl _$$CheckDigitalProfileModelImplFromJson(
         Map<String, dynamic> json) =>
     _$CheckDigitalProfileModelImpl(
-      id: json['id'] as int?,
-      userId: json['user_id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      userId: (json['user_id'] as num?)?.toInt(),
       data: json['data'] == null
           ? null
           : Data.fromJson(json['data'] as Map<String, dynamic>),

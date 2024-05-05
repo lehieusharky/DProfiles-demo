@@ -8,9 +8,9 @@ part of 'post_model.dart';
 
 _$PostModelImpl _$$PostModelImplFromJson(Map<String, dynamic> json) =>
     _$PostModelImpl(
-      id: json['id'] as int?,
-      userId: json['user_id'] as int?,
-      adminId: json['admin_id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      userId: (json['user_id'] as num?)?.toInt(),
+      adminId: (json['admin_id'] as num?)?.toInt(),
       content: json['content'] as String?,
       imageUrl: (json['image_url'] as List<dynamic>?)
           ?.map((e) => e as String)
@@ -24,9 +24,9 @@ _$PostModelImpl _$$PostModelImplFromJson(Map<String, dynamic> json) =>
       user: json['user'] == null
           ? null
           : User.fromJson(json['user'] as Map<String, dynamic>),
-      noOfLike: json['noOfLike'] as int? ?? 0,
-      noOfShare: json['noOfShare'] as int? ?? 0,
-      noOfComment: json['noOfComment'] as int? ?? 0,
+      noOfLike: (json['noOfLike'] as num?)?.toInt() ?? 0,
+      noOfShare: (json['noOfShare'] as num?)?.toInt() ?? 0,
+      noOfComment: (json['noOfComment'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$$PostModelImplToJson(_$PostModelImpl instance) =>
@@ -47,7 +47,7 @@ Map<String, dynamic> _$$PostModelImplToJson(_$PostModelImpl instance) =>
     };
 
 _$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       username: json['username'] as String?,
       email: json['email'] as String?,
       jobTitle: json['jobTitle'] as String?,

@@ -9,10 +9,10 @@ part of 'meta_language_model.dart';
 _$MetaLanguageModelImpl _$$MetaLanguageModelImplFromJson(
         Map<String, dynamic> json) =>
     _$MetaLanguageModelImpl(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       name: json['name'] as String?,
-      language: json['language'] as int?,
-      order: json['order'] as int?,
+      language: (json['language'] as num?)?.toInt(),
+      order: (json['order'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$MetaLanguageModelImplToJson(

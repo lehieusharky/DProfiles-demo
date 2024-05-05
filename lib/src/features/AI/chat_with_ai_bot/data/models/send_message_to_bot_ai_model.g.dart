@@ -9,8 +9,8 @@ part of 'send_message_to_bot_ai_model.dart';
 _$SendMessageToBotAIModelImpl _$$SendMessageToBotAIModelImplFromJson(
         Map<String, dynamic> json) =>
     _$SendMessageToBotAIModelImpl(
-      sessionId: json['session_id'] as int?,
-      chatBotId: json['chat_bot_id'] as int?,
+      sessionId: (json['session_id'] as num?)?.toInt(),
+      chatBotId: (json['chat_bot_id'] as num?)?.toInt(),
       message: json['message'] as String?,
     );
 

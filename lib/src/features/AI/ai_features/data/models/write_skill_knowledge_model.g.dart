@@ -10,7 +10,7 @@ _$WriteSkillKnowledgeModelImpl _$$WriteSkillKnowledgeModelImplFromJson(
         Map<String, dynamic> json) =>
     _$WriteSkillKnowledgeModelImpl(
       jobTitle: json['job_title'] as String?,
-      gptModel: json['gpt_model'] as int? ?? 3,
+      gptModel: (json['gpt_model'] as num?)?.toInt() ?? 3,
       language: json['language'] as String? ?? 'en',
     );
 

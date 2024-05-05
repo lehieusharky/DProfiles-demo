@@ -8,9 +8,9 @@ part of 'new_feed_model.dart';
 
 _$NewFeedModelImpl _$$NewFeedModelImplFromJson(Map<String, dynamic> json) =>
     _$NewFeedModelImpl(
-      id: json['id'] as int?,
-      userId: json['userId'] as int?,
-      adminId: json['adminId'] as int?,
+      id: (json['id'] as num?)?.toInt(),
+      userId: (json['userId'] as num?)?.toInt(),
+      adminId: (json['adminId'] as num?)?.toInt(),
       content: json['content'] as String?,
       imageUrl: (json['imageUrl'] as List<dynamic>?)
           ?.map((e) => e as String)
@@ -24,9 +24,9 @@ _$NewFeedModelImpl _$$NewFeedModelImplFromJson(Map<String, dynamic> json) =>
       user: json['user'] == null
           ? null
           : User.fromJson(json['user'] as Map<String, dynamic>),
-      noOfLike: json['noOfLike'] as int?,
-      noOfShare: json['noOfShare'] as int?,
-      noOfComment: json['noOfComment'] as int?,
+      noOfLike: (json['noOfLike'] as num?)?.toInt(),
+      noOfShare: (json['noOfShare'] as num?)?.toInt(),
+      noOfComment: (json['noOfComment'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$NewFeedModelImplToJson(_$NewFeedModelImpl instance) =>
@@ -47,7 +47,7 @@ Map<String, dynamic> _$$NewFeedModelImplToJson(_$NewFeedModelImpl instance) =>
     };
 
 _$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
-      id: json['id'] as int?,
+      id: (json['id'] as num?)?.toInt(),
       username: json['username'] as String?,
       email: json['email'] as String?,
       jobTitle: json['jobTitle'] as String?,

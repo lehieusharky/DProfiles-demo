@@ -9,7 +9,7 @@ part of 'search_bar_result_model.dart';
 _$SearchBarResultModelImpl _$$SearchBarResultModelImplFromJson(
         Map<String, dynamic> json) =>
     _$SearchBarResultModelImpl(
-      userId: json['userId'] as int?,
+      userId: (json['userId'] as num?)?.toInt(),
       firstName: json['first_name'] as String?,
       lastName: json['last_name'] as String?,
       username: json['username'] as String?,
