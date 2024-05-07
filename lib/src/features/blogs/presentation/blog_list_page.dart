@@ -51,11 +51,14 @@ class _BlogListPageState extends State<BlogListPage>
   ) {
     return Padding(
       padding: context.padding(horizontal: 20),
-      child: ListView.separated(
-        physics: const NeverScrollableScrollPhysics(),
-        itemCount: blogs.length,
-        itemBuilder: (_, index) => _itemBuilder(context, blogs[index]),
-        separatorBuilder: (_, __) => const Divider(),
+      child: SizedBox(
+        height: blogs.length * 400,
+        child: ListView.separated(
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: blogs.length,
+          itemBuilder: (_, index) => _itemBuilder(context, blogs[index]),
+          separatorBuilder: (_, __) => const Divider(),
+        ),
       ),
     );
   }
@@ -69,6 +72,9 @@ class _BlogListPageState extends State<BlogListPage>
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            SizedBox(
+              height: 200,
+            ),
             // TODO thumbnail blog
             // if (data.thumbnail.isNotEmpty) ...[
             //   ClipRRect(

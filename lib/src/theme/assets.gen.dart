@@ -403,6 +403,10 @@ class $AssetsImagesProfileGen {
   SvgGenImage get usFlag =>
       const SvgGenImage('assets/images/profile/us_flag.svg');
 
+  /// File path: assets/images/profile/vn_flag.svg
+  SvgGenImage get vnFlag =>
+      const SvgGenImage('assets/images/profile/vn_flag.svg');
+
   /// List of all assets
   List<dynamic> get values => [
         companyDemo,
@@ -411,7 +415,8 @@ class $AssetsImagesProfileGen {
         mockEdu,
         profileBackground,
         transaction,
-        usFlag
+        usFlag,
+        vnFlag
       ];
 }
 

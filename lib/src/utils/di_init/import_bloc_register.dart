@@ -14,6 +14,7 @@ import 'package:demo_dprofiles/src/features/edit_profile/domain/usecases/edit_pr
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/bloc/edit_profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/home/domain/usecases/home_usecase.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/bloc/home_bloc.dart';
+import 'package:demo_dprofiles/src/features/home/presentation/cubit/tab_bar_cubit.dart';
 import 'package:demo_dprofiles/src/features/post/domain/usecases/post_usecase.dart';
 import 'package:demo_dprofiles/src/features/post/presentation/bloc/bloc/post_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/domain/usecases/profile_usecase.dart';
@@ -26,6 +27,5 @@ import 'package:demo_dprofiles/src/features/setting/domain/usecases/setting_usec
 import 'package:demo_dprofiles/src/features/setting/presentation/bloc/setting_bloc.dart';
 import 'package:demo_dprofiles/src/utils/domain/usecases/file_usecase.dart';
 import 'package:get_it/get_it.dart';
-
 
 part 'bloc_di_register.dart';

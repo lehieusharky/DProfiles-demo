@@ -15,8 +15,16 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return BlocProvider(
-      create: (context) => injector.get<HomeBloc>()..add(const HomeGetFeeds()),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) =>
+              injector.get<HomeBloc>()..add(const HomeGetFeeds()),
+        ),
+        BlocProvider(
+          create: (context) => injector.get<TabBarCubit>(),
+        ),
+      ],
       child: MyScaffold(
         sKey: _skey,
         topPadding: 20,
@@ -32,19 +40,11 @@ class _HomePageState extends State<HomePage>
             slivers: [
               SliverList(
                 delegate: SliverChildListDelegate(
-                  [
-                    const HomeBanner(),
-                  ],
-                ),
-              ),
-              const SliverFillRemaining(
-                hasScrollBody: true,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
+                  const [
+                    HomeBanner(),
                     TitleHome(title: 'Discover'),
                     TabBarHome(),
-                    Expanded(child: HomeDiscover()),
+                    HomeDiscover(),
                   ],
                 ),
               ),

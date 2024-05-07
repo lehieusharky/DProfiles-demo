@@ -85,5 +85,9 @@ class BlocDI {
         injector.get<FileUseCase>(),
       ),
     );
+
+    injector.registerLazySingleton<TabBarCubit>(
+      () => TabBarCubit(),
+    );
   }
 }

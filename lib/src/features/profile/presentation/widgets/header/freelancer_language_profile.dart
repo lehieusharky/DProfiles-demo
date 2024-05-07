@@ -57,7 +57,7 @@ class _FreelancerLanguageProfileState extends State<FreelancerLanguageProfile> {
                       .bodyMedium,
                 ),
               ),
-              Assets.images.profile.usFlag.svg(),
+              nationFlag,
               Padding(
                 padding: context.padding(left: 8),
                 child: Text(
@@ -97,5 +97,21 @@ class _FreelancerLanguageProfileState extends State<FreelancerLanguageProfile> {
         }
       },
     );
+  }
+
+  Widget get nationFlag {
+    // Create a Map to store the flag of each country vn and us
+    final Map<String, Widget> flagMap = {
+      'vn': Assets.images.profile.vnFlag.svg(),
+      'us': Assets.images.profile.usFlag.svg(),
+    };
+    switch (userInfo?.nationality?.toLowerCase()) {
+      case 'vn':
+        return Assets.images.profile.vnFlag.svg();
+      case 'us':
+        return Assets.images.profile.usFlag.svg();
+      default:
+        return Assets.images.profile.vnFlag.svg();
+    }
   }
 }
