@@ -28,6 +28,9 @@ class _FreelancerLanguageProfileState extends State<FreelancerLanguageProfile> {
         }
       },
       builder: (context, state) {
+        if (state is ProfileGetUserInfoSuccess) {
+          userInfo = state.userInfoModel;
+        }
         if (userInfo == null) {
           return Container();
         } else {

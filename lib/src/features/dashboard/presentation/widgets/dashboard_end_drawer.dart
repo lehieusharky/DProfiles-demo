@@ -106,7 +106,7 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
                         context.sizedBox(width: 16),
                         Expanded(
                           child: Text(
-                            "${userInfo.firstName} ${userInfo.lastName}",
+                            "${userInfo.firstName ?? ''} ${userInfo.lastName ?? ''}",
                             overflow: TextOverflow.ellipsis,
                             maxLines: 2,
                             style: AppFont()

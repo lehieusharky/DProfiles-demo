@@ -52,7 +52,7 @@ class _BlogListPageState extends State<BlogListPage>
     return Padding(
       padding: context.padding(horizontal: 20),
       child: SizedBox(
-        height: blogs.length * 400,
+        height: blogs.length * 300,
         child: ListView.separated(
           physics: const NeverScrollableScrollPhysics(),
           itemCount: blogs.length,
@@ -72,9 +72,6 @@ class _BlogListPageState extends State<BlogListPage>
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(
-              height: 200,
-            ),
             // TODO thumbnail blog
             // if (data.thumbnail.isNotEmpty) ...[
             //   ClipRRect(

@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage>
         body: DefaultTabController(
           length: 2,
           child: CustomScrollView(
-            physics: const BouncingScrollPhysics(),
+            physics: const ClampingScrollPhysics(),
             slivers: [
               SliverList(
                 delegate: SliverChildListDelegate(

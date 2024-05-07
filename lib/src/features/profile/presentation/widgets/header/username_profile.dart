@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
@@ -51,7 +50,7 @@ class _NameProfileState extends State<NameProfile> {
     String name = '';
 
     if (userInfo?.lastName != null || userInfo?.firstName != null) {
-      name = "${userInfo!.lastName} ${userInfo!.firstName}";
+      name = "${userInfo!.lastName ?? ''} ${userInfo!.firstName ?? ''}";
     }
 
     if (name.isEmpty) {
