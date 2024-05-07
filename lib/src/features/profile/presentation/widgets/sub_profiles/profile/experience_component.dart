@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
@@ -66,8 +65,8 @@ class _ExperienceComponentState extends State<ExperienceComponent> {
                 children: experiences!
                     .map((e) => e.toWidget(
                           context,
-                          onDelete: () => _deleteExpe(context, e),
-                          onUpdate: () => _updateExp(context, e),
+                          // onDelete: () => _deleteExpe(context, e),
+                          // onUpdate: () => _updateExp(context, e),
                         ))
                     .toList(),
               )

@@ -3,6 +3,7 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
+import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
@@ -27,15 +28,27 @@ class _ListExperiencePageState extends State<ListExperiencePage> {
     return BlocProvider(
       create: (context) =>
           injector.get<ProfileBloc>()..add(const ProfileGetUserExperience()),
-      child: BlocSelector<ProfileBloc, ProfileState, List<ExperienceModel>?>(
-        selector: (state) {
+      child: BlocBuilder<ProfileBloc, ProfileState>(
+        builder: (context, state) {
           if (state is ProfileGetUserExperienceSuccess) {
             experiences = state.experiences;
+          } else if (state is ProfileDeleteExperienceSuccess) {
+            final experiencesCopy = [...experiences];
+            experiencesCopy?.removeWhere((element) => element.id == state.id);
+            experiences = experiencesCopy;
+          } else if (state is ProfileUpdateUserExperienceSuccess) {
+            final itemWillbeRemove = experiences?.firstWhere(
+                (element) => element.id == state.experienceModel.id);
+            if (itemWillbeRemove != null) {
+              final position = experiences?.indexOf(itemWillbeRemove);
+              if (position != null) {
+                final experiencesCopy = [...experiences];
+                experiencesCopy?.removeAt(position);
+                experiencesCopy?.insert(position, state.experienceModel);
+                experiences = experiencesCopy;
+              }
+            }
           }
-
-          return experiences;
-        },
-        builder: (context, state) {
           return MyScaffold(
             useAppBar: true,
             canBack: true,
@@ -60,10 +73,17 @@ class _ListExperiencePageState extends State<ListExperiencePage> {
                       ),
                       Expanded(
                           child: ListView.builder(
-                              itemCount: experiences.length,
-                              shrinkWrap: true,
-                              itemBuilder: (context, index) =>
-                                  experiences[index].toWidget(context)))
+                        itemCount: experiences.length,
+                        shrinkWrap: true,
+                        itemBuilder: (context, index) =>
+                            experiences[index].toWidget(
+                          context,
+                          onUpdate: () =>
+                              _updateExp(context, experiences[index]),
+                          onDelete: () =>
+                              _deleteExpe(context, experiences[index]),
+                        ),
+                      ))
                     ],
                   ),
           );
@@ -71,4 +91,39 @@ class _ListExperiencePageState extends State<ListExperiencePage> {
       ),
     );
   }
+
+  void _deleteExpe(BuildContext context, ExperienceModel experience) async {
+    await showMyDialog<String?>(context,
+        title: const Text('Are you want to delete your experience?'),
+        content: const Text('Be careful when click OK'),
+        action: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, 'ok'),
+            child: const Text('OK'),
+          ),
+          AppFlatButton(context).elevatedButton(
+            title: 'Cancel',
+            onPressed: () => Navigator.pop(context, 'cancel'),
+          ),
+        ]).then((value) {
+      if (value == 'ok') {
+        context
+            .read<ProfileBloc>()
+            .add(ProfileDeleteExperience(experience.id!));
+      }
+    });
+  }
+
+  void _updateExp(BuildContext context, ExperienceModel experienceModel) {
+    context.router
+        .push(FormEditExperienceRoute(experienceModel: experienceModel))
+        .then((value) => value == null
+            ? null
+            : _onUpdate(context, value as ExperienceModel));
+  }
+
+  void _onUpdate(BuildContext context, ExperienceModel experienceModel) =>
+      context
+          .read<ProfileBloc>()
+          .add(ProfileUpdateUserExperience(experienceModel));
 }
