@@ -44,7 +44,11 @@ class FeedDetailPage extends StatelessWidget {
                     [
                       BlocBuilder<FeedDetailCubit, FeedDetailState>(
                           builder: (context, state) {
-                        return feed.toWidget(context);
+                        return feed.toWidget(
+                          context,
+                          onLikeClick: () =>
+                              context.read<FeedDetailCubit>().like(),
+                        );
                       }),
                     ],
                   ),

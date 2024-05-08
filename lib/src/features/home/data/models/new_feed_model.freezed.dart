@@ -33,6 +33,7 @@ mixin _$NewFeedModel {
   int? get noOfLike => throw _privateConstructorUsedError;
   int? get noOfShare => throw _privateConstructorUsedError;
   int? get noOfComment => throw _privateConstructorUsedError;
+  bool get liked => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -59,7 +60,8 @@ abstract class $NewFeedModelCopyWith<$Res> {
       User? user,
       int? noOfLike,
       int? noOfShare,
-      int? noOfComment});
+      int? noOfComment,
+      bool liked});
 
   $UserCopyWith<$Res>? get user;
 }
@@ -90,6 +92,7 @@ class _$NewFeedModelCopyWithImpl<$Res, $Val extends NewFeedModel>
     Object? noOfLike = freezed,
     Object? noOfShare = freezed,
     Object? noOfComment = freezed,
+    Object? liked = null,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -144,6 +147,10 @@ class _$NewFeedModelCopyWithImpl<$Res, $Val extends NewFeedModel>
           ? _value.noOfComment
           : noOfComment // ignore: cast_nullable_to_non_nullable
               as int?,
+      liked: null == liked
+          ? _value.liked
+          : liked // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 
@@ -181,7 +188,8 @@ abstract class _$$NewFeedModelImplCopyWith<$Res>
       User? user,
       int? noOfLike,
       int? noOfShare,
-      int? noOfComment});
+      int? noOfComment,
+      bool liked});
 
   @override
   $UserCopyWith<$Res>? get user;
@@ -211,6 +219,7 @@ class __$$NewFeedModelImplCopyWithImpl<$Res>
     Object? noOfLike = freezed,
     Object? noOfShare = freezed,
     Object? noOfComment = freezed,
+    Object? liked = null,
   }) {
     return _then(_$NewFeedModelImpl(
       id: freezed == id
@@ -265,6 +274,10 @@ class __$$NewFeedModelImplCopyWithImpl<$Res>
           ? _value.noOfComment
           : noOfComment // ignore: cast_nullable_to_non_nullable
               as int?,
+      liked: null == liked
+          ? _value.liked
+          : liked // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -285,7 +298,8 @@ class _$NewFeedModelImpl implements _NewFeedModel {
       this.user,
       this.noOfLike,
       this.noOfShare,
-      this.noOfComment})
+      this.noOfComment,
+      this.liked = false})
       : _imageUrl = imageUrl,
         _videoUrl = videoUrl;
 
@@ -334,10 +348,13 @@ class _$NewFeedModelImpl implements _NewFeedModel {
   final int? noOfShare;
   @override
   final int? noOfComment;
+  @override
+  @JsonKey()
+  final bool liked;
 
   @override
   String toString() {
-    return 'NewFeedModel(id: $id, userId: $userId, adminId: $adminId, content: $content, imageUrl: $imageUrl, videoUrl: $videoUrl, updatedOn: $updatedOn, updatedTs: $updatedTs, createdTs: $createdTs, user: $user, noOfLike: $noOfLike, noOfShare: $noOfShare, noOfComment: $noOfComment)';
+    return 'NewFeedModel(id: $id, userId: $userId, adminId: $adminId, content: $content, imageUrl: $imageUrl, videoUrl: $videoUrl, updatedOn: $updatedOn, updatedTs: $updatedTs, createdTs: $createdTs, user: $user, noOfLike: $noOfLike, noOfShare: $noOfShare, noOfComment: $noOfComment, liked: $liked)';
   }
 
   @override
@@ -363,7 +380,8 @@ class _$NewFeedModelImpl implements _NewFeedModel {
             (identical(other.noOfShare, noOfShare) ||
                 other.noOfShare == noOfShare) &&
             (identical(other.noOfComment, noOfComment) ||
-                other.noOfComment == noOfComment));
+                other.noOfComment == noOfComment) &&
+            (identical(other.liked, liked) || other.liked == liked));
   }
 
   @JsonKey(ignore: true)
@@ -382,7 +400,8 @@ class _$NewFeedModelImpl implements _NewFeedModel {
       user,
       noOfLike,
       noOfShare,
-      noOfComment);
+      noOfComment,
+      liked);
 
   @JsonKey(ignore: true)
   @override
@@ -412,7 +431,8 @@ abstract class _NewFeedModel implements NewFeedModel {
       final User? user,
       final int? noOfLike,
       final int? noOfShare,
-      final int? noOfComment}) = _$NewFeedModelImpl;
+      final int? noOfComment,
+      final bool liked}) = _$NewFeedModelImpl;
 
   factory _NewFeedModel.fromJson(Map<String, dynamic> json) =
       _$NewFeedModelImpl.fromJson;
@@ -443,6 +463,8 @@ abstract class _NewFeedModel implements NewFeedModel {
   int? get noOfShare;
   @override
   int? get noOfComment;
+  @override
+  bool get liked;
   @override
   @JsonKey(ignore: true)
   _$$NewFeedModelImplCopyWith<_$NewFeedModelImpl> get copyWith =>

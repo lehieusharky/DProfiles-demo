@@ -139,7 +139,7 @@ class ProfileDataSourceImpl implements ProfileDataSource {
       ExperienceModel experienceModel) async {
     try {
       final baseResponse = await MyHttp.rl()
-          .updateCertificateInfo(experienceModel.id!, experienceModel.toJson());
+          .updateExperienceInfo(experienceModel.id!, experienceModel.toJson());
       return baseResponse;
     } on DioException catch (e) {
       rethrow;
@@ -162,7 +162,7 @@ class ProfileDataSourceImpl implements ProfileDataSource {
       final body = {"banner_url": bannenUrlBanner};
 
       final baseResponse = await MyHttp.rl().postBanner(body);
-      
+
       return baseResponse;
     } on DioException catch (e) {
       rethrow;

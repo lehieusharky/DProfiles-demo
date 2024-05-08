@@ -68,8 +68,9 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
 
   Widget _buildBody(List<NewFeedModel> state) {
     return SizedBox(
-      height: state.length * 200,
+      height: state.length * 400,
       child: ListView.builder(
+        itemCount: state.length,
         itemBuilder: (context, index) => _buildNewsItem(state[index]),
         physics: const NeverScrollableScrollPhysics(),
       ),
@@ -77,17 +78,22 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
   }
 
   Widget _buildNewsItem(NewFeedModel e) {
-    return InkWell(
-      onTap: () => context.router.push(
-        FeedDetailRoute(feed: e),
-      ),
-      child: BlocProvider(
-        create: (_) => FeedDetailCubit(e),
-        child: BlocBuilder<FeedDetailCubit, FeedDetailState>(
-          builder: (context, state) {
-            return e.toWidget(context);
-          },
-        ),
+    return BlocProvider(
+      create: (_) => FeedDetailCubit(e),
+      child: BlocBuilder<FeedDetailCubit, FeedDetailState>(
+        builder: (context, state) {
+          return InkWell(
+            onTap: () => context.router.push(
+              FeedDetailRoute(feed: state.feed),
+            ),
+            child: e.toWidget(
+              context,
+              onLikeClick: () {
+                context.read<FeedDetailCubit>().like();
+              },
+            ),
+          );
+        },
       ),
     );
   }

@@ -1,4 +1,3 @@
-import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'new_feed_model.freezed.dart';
@@ -20,6 +19,7 @@ class NewFeedModel with _$NewFeedModel {
     int? noOfLike,
     int? noOfShare,
     int? noOfComment,
+    @Default(false) bool liked,
   }) = _NewFeedModel;
 
   factory NewFeedModel.fromJson(Map<String, Object?> json) =>

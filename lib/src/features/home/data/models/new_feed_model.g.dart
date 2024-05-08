@@ -27,6 +27,7 @@ _$NewFeedModelImpl _$$NewFeedModelImplFromJson(Map<String, dynamic> json) =>
       noOfLike: (json['noOfLike'] as num?)?.toInt(),
       noOfShare: (json['noOfShare'] as num?)?.toInt(),
       noOfComment: (json['noOfComment'] as num?)?.toInt(),
+      liked: json['liked'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$$NewFeedModelImplToJson(_$NewFeedModelImpl instance) =>
@@ -44,6 +45,7 @@ Map<String, dynamic> _$$NewFeedModelImplToJson(_$NewFeedModelImpl instance) =>
       'noOfLike': instance.noOfLike,
       'noOfShare': instance.noOfShare,
       'noOfComment': instance.noOfComment,
+      'liked': instance.liked,
     };
 
 _$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(

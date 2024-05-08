@@ -21,7 +21,13 @@ extension NewFeedModelExt on NewFeedModel {
     VoidCallback? onShareClick,
   }) {
     final bloc = context.read<FeedDetailCubit>();
-    return _buildBody(context, bloc.state.feed);
+    return _buildBody(
+      context,
+      bloc.state.feed,
+      onLikeClick: onLikeClick,
+      onCommentClick: onCommentClick,
+      onShareClick: onShareClick,
+    );
   }
 
   Widget _buildBody(
@@ -100,11 +106,8 @@ extension NewFeedModelExt on NewFeedModel {
             likes: feed.noOfLike!,
             comments: feed.noOfComment!,
             shares: feed.noOfShare!,
-            // liked: feed.liked,
-            onLikeClick: () {
-              // bloc.like();
-              onLikeClick?.call();
-            },
+            liked: feed.liked,
+            onLikeClick: onLikeClick,
             onCommentClick: onCommentClick,
             onShareClick: onShareClick,
           ),
