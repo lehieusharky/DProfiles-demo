@@ -80,20 +80,21 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   FutureOr<void> _refreshNewsFeed(
       HomeRefreshNewsFeed event, Emitter<HomeState> emit) async {
-    refreshController.requestRefresh();
-
-    page = 0;
+    // refreshController.requestRefresh();
+    page = 1;
 
     final result = await homeUseCase.getNewsFeed(page, limitPage);
-    result.fold(
-      (l) => refreshController.refreshFailed(),
+    await result.fold(
+      (l) async {
+        refreshController.refreshFailed();
+      },
       (r) async {
         final data = r.data as List;
 
         final newsFeed = data.map((e) => NewFeedModel.fromJson(e)).toList();
 
-        // emit(HomeGetFeedsSuccess(newsFeed));
-        emit(HomeGetFeedsSuccess(await _updatesLiked(newsFeed)));
+        final feedUpdated = await _updatesLiked(newsFeed);
+        emit(HomeState.getFeedsSuccess(feedUpdated));
       },
     );
   }

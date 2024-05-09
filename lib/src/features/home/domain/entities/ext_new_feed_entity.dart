@@ -19,11 +19,12 @@ extension NewFeedModelExt on NewFeedModel {
     VoidCallback? onLikeClick,
     VoidCallback? onCommentClick,
     VoidCallback? onShareClick,
+    NewFeedModel? overrideValue,
   }) {
     final bloc = context.read<FeedDetailCubit>();
     return _buildBody(
       context,
-      bloc.state.feed,
+      overrideValue ?? bloc.state.feed,
       onLikeClick: onLikeClick,
       onCommentClick: onCommentClick,
       onShareClick: onShareClick,

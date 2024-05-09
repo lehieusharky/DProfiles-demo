@@ -38,7 +38,6 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
         } else if (state.isEmpty) {
           return _buildEmtpyFeed();
         }
-
         return _buildBody(state);
       },
     );
@@ -83,11 +82,13 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
       child: BlocBuilder<FeedDetailCubit, FeedDetailState>(
         builder: (context, state) {
           return InkWell(
-            onTap: () => context.router.push(
-              FeedDetailRoute(feed: state.feed),
-            ),
+            onTap: () async {
+              await context.router.push(FeedDetailRoute(feed: e));
+              context.read<HomeBloc>().add(const HomeRefreshNewsFeed());
+            },
             child: e.toWidget(
               context,
+              overrideValue: e,
               onLikeClick: () {
                 context.read<FeedDetailCubit>().like();
               },
