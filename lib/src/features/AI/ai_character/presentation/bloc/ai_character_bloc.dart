@@ -160,7 +160,7 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
 
   FutureOr<void> _getExperiences(AICharacterGetUserExperiences event,
       Emitter<AiCharacterState> emit) async {
-    final result = await profileUseCase.getUserEducations();
+    final result = await profileUseCase.getUserExperiences();
 
     result.fold(
         (l) =>
