@@ -5,6 +5,7 @@ import 'package:demo_dprofiles/src/features/feed/presentation/cubit/feed_detail_
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
 import 'package:demo_dprofiles/src/features/home/domain/entities/ext_new_feed_entity.dart';
 import 'package:demo_dprofiles/src/features/home/presentation/bloc/home_bloc.dart';
+import 'package:demo_dprofiles/src/features/home/presentation/widgets/home_loading.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -26,7 +27,9 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
     super.build(context);
     return BlocSelector<HomeBloc, HomeState, List<NewFeedModel>?>(
       selector: (state) {
+
         if (state is HomeGetFeedsSuccess) {
+
           return state.newsFeed;
         }
 
@@ -34,7 +37,7 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
       },
       builder: (context, state) {
         if (state == null) {
-          return const MyLoading();
+          return const NewsFeedLoading();
         } else if (state.isEmpty) {
           return _buildEmtpyFeed();
         }
