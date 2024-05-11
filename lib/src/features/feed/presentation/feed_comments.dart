@@ -111,9 +111,9 @@ class _CommentShimmerList extends StatelessWidget{
 
   Widget _buildCommentShimmer(){
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 16),
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 12.0),
+        padding: const EdgeInsets.only(bottom: 16.0),
         child: Row(
           children: [
             Container(
