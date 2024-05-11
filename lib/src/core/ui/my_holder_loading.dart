@@ -23,9 +23,9 @@ class MyFeedListShimmer extends StatelessWidget {
 
   Widget _buildFeedShimmer(){
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 16),
       child: Padding(
-        padding: const EdgeInsets.only(bottom: 12.0),
+        padding: const EdgeInsets.only(bottom: 16),
         child: Row(
           children: [
             Container(
@@ -58,13 +58,13 @@ class MyFeedListShimmer extends StatelessWidget {
 
 
 class MyRoundedShimmer extends StatelessWidget {
-  final double height, width, radius;
+  final double? height, width, radius;
 
   const MyRoundedShimmer({
     Key? key,
-    this.width = 50,
-    this.height = 50,
-    this.radius = 50,
+    this.width,
+    this.height,
+    this.radius
   }) : super(key: key);
 
   @override
@@ -73,11 +73,11 @@ class MyRoundedShimmer extends StatelessWidget {
       baseColor: Colors.grey.shade200,
       highlightColor: Colors.grey.shade300,
       child: Container(
-        width: width,
-        height: height,
+        width: context.sizeWidth(width ?? 50),
+        height: context.sizeHeight(height ?? 50),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(radius)),
+          borderRadius: BorderRadius.all(Radius.circular(radius ?? 50)),
         ),
       ),
     );
@@ -85,9 +85,9 @@ class MyRoundedShimmer extends StatelessWidget {
 }
 
 class MyRectangleShimmer extends StatelessWidget {
-  final double width, height;
+  final double? width, height;
 
-  const MyRectangleShimmer({Key? key, this.width = 100, this.height = 10})
+  const MyRectangleShimmer({Key? key, this.width, this.height })
       : super(key: key);
 
   @override
@@ -96,8 +96,8 @@ class MyRectangleShimmer extends StatelessWidget {
       baseColor: Colors.grey.shade200,
       highlightColor: Colors.grey.shade300,
       child: Container(
-        height: height,
-        width: width,
+        height: context.sizeHeight(height ?? 50),
+        width: context.sizeWidth(width ?? 50),
         color: Colors.white,
 
       ),
