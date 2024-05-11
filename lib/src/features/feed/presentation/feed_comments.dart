@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/ui/my_holder_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/feed/data/models/feed_comment_model.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/bloc/feed_comment_bloc.dart';
@@ -24,7 +25,7 @@ class FeedComments extends StatelessWidget {
       },
       builder: (context, state) {
         if (state == null) {
-          return Container();
+          return  const _CommentShimmerList();
         }
 
         return _buildBody(context, state);
@@ -87,3 +88,46 @@ class FeedComments extends StatelessWidget {
     return CommentItem(item);
   }
 }
+
+class _CommentShimmerList extends StatelessWidget{
+  const _CommentShimmerList({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        _buildCommentShimmer(),
+        SizedBox(height: 10,),
+        _buildCommentShimmer(),
+        SizedBox(height: 10,),
+        _buildCommentShimmer(),
+        SizedBox(height: 10,),
+        _buildCommentShimmer(),
+        SizedBox(height: 10,),
+        _buildCommentShimmer(),
+      ],
+    );
+  }
+
+  Widget _buildCommentShimmer(){
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 10),
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 12.0),
+        child: Row(
+          children: [
+            Container(
+              margin: const EdgeInsets.only(right: 20),
+              child: const MyRoundedShimmer(),
+            ),
+            Container(
+              margin: const EdgeInsets.only(right: 10),
+              child: const MyRoundedShimmer(width: 150, height: 15,),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+

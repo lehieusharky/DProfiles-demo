@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/ui/my_holder_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
@@ -29,6 +30,8 @@ class _AvatarProfileState extends State<AvatarProfile> {
   Widget build(BuildContext context) {
     return BlocConsumer<ProfileBloc, ProfileState>(
       listener: (context, state) {
+
+
         if (state is ProfileUploadAvatarSuccess) {
           ploadFileResponse = state.uploadImageResponse;
 
@@ -71,7 +74,7 @@ class _AvatarProfileState extends State<AvatarProfile> {
       },
       builder: (context, state) {
         if (userInfo == null) {
-          return Container();
+          return const _ProfileShimmer();
         } else {
           return Stack(
             alignment: Alignment.bottomLeft,
@@ -158,6 +161,36 @@ class _AvatarProfileState extends State<AvatarProfile> {
     return Padding(
       padding: context.padding(horizontal: 20, top: 40),
       child: _buildUploadWidget(context),
+    );
+  }
+}
+
+
+class _ProfileShimmer extends StatelessWidget{
+  const _ProfileShimmer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      alignment: Alignment.bottomLeft,
+      children: [
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            MyRectangleShimmer(width: context.width, height: context.sizeHeight(150),),
+            const SizedBox(height: 50),
+          ],
+        ),
+        Padding(
+          padding: context.padding(horizontal: 20),
+          child: Stack(
+            alignment: Alignment.bottomRight,
+            children: [
+              MyRoundedShimmer(width: context.sizeWidth(96), height: context.sizeHeight(96),)
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

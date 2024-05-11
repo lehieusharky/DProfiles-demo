@@ -16,6 +16,7 @@ class HomeDiscover extends StatelessWidget {
           children: const [
             NewsFeedHome(),
             BlogListPage(),
+
           ],
         );
       },

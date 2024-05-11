@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/ui/my_holder_loading.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/blogs/data/models/blog_model.dart';
 import 'package:demo_dprofiles/src/features/blogs/presentation/bloc/blog_bloc.dart';
@@ -29,9 +30,9 @@ class _BlogListPageState extends State<BlogListPage>
         builder: (context, state) {
           Widget child;
           if (state is BlogInitial) {
-            child = const MyLoading();
+            child = const MyFeedListShimmer();
           } else if (state is BlogLoading) {
-            child = const MyLoading();
+            child =  const MyFeedListShimmer();
           } else if (state is BlogLoaded) {
             child = _buildBlogList(context, state.blogs);
           } else if (state is BlogError) {
@@ -40,6 +41,7 @@ class _BlogListPageState extends State<BlogListPage>
             child = const MyLoading();
           }
           return child;
+
         },
       ),
     );
@@ -47,7 +49,7 @@ class _BlogListPageState extends State<BlogListPage>
 
   Widget _buildBlogList(
     BuildContext context,
-    List<BlogModel> blogs,
+      List<BlogModel> blogs,
   ) {
     return Padding(
       padding: context.padding(horizontal: 20),
@@ -118,3 +120,6 @@ class _BlogListPageState extends State<BlogListPage>
   @override
   bool get wantKeepAlive => true;
 }
+
+
+
