@@ -19,8 +19,8 @@ class AuthLogo extends StatelessWidget {
           const MyIconApp(),
           context.sizedBox(width: 9),
           _isDarkMode
-              ? Assets.icons.logos.dGreyProfileGreen.svg()
-              : Assets.icons.logos.dprofilesBlack.svg(),
+              ? Assets.icons.logos.dprofilesBlack.svg()
+              : Assets.icons.logos.dGreyProfileGreen.svg(),
         ],
       ),
     );
