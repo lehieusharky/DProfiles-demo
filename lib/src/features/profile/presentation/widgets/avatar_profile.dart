@@ -177,7 +177,7 @@ class _ProfileShimmer extends StatelessWidget{
         Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            MyRectangleShimmer(width: context.width, height: context.sizeHeight(150),),
+            MyShimmer(width: context.width, height: 150,),
             const SizedBox(height: 50),
           ],
         ),
@@ -186,7 +186,7 @@ class _ProfileShimmer extends StatelessWidget{
           child: Stack(
             alignment: Alignment.bottomRight,
             children: [
-              MyRoundedShimmer(width: context.sizeWidth(96), height: context.sizeHeight(96),)
+              MyShimmer(width: 96, height: 96, radius: 96, period: Duration(milliseconds: 0),)
             ],
           ),
         ),

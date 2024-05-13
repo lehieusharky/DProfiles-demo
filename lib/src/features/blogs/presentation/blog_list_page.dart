@@ -30,9 +30,9 @@ class _BlogListPageState extends State<BlogListPage>
         builder: (context, state) {
           Widget child;
           if (state is BlogInitial) {
-            child = const MyFeedListShimmer();
+            child = const MyListFeedShimmer(count: 3,);
           } else if (state is BlogLoading) {
-            child =  const MyFeedListShimmer();
+            child =  const MyListFeedShimmer(count: 3,);
           } else if (state is BlogLoaded) {
             child = _buildBlogList(context, state.blogs);
           } else if (state is BlogError) {

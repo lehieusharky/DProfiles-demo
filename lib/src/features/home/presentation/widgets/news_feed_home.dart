@@ -36,8 +36,9 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
       },
       builder: (context, state) {
         if (state == null) {
-          return const MyFeedListShimmer();
-        } else if (state.isEmpty) {
+          return const MyListFeedShimmer(count: 3,);
+        }
+        else if (state.isEmpty) {
           return _buildEmtpyFeed();
         }
         return _buildBody(state);
