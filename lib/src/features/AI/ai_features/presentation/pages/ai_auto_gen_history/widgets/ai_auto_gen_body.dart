@@ -1,4 +1,3 @@
-import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/auto_generate_history_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/domain/entities/auto_generate_history_entity.dart';
@@ -53,32 +52,23 @@ class _AIAutoGenHistoryBodyState extends State<AIAutoGenHistoryBody> {
         if (histories == null) {
           return const MyLoading();
         } else {
-          return SingleChildScrollView(
-            controller: _scrollController,
-            child: SizedBox(
-              height: context.height,
-              child: AnimationLimiter(
-                child: ListView.builder(
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: histories!.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return AnimationConfiguration.staggeredList(
-                      position: index,
-                      delay: const Duration(milliseconds: 100),
-                      child: SlideAnimation(
-                        duration: const Duration(milliseconds: 2500),
-                        curve: Curves.fastLinearToSlowEaseIn,
-                        child: FadeInAnimation(
-                          curve: Curves.fastLinearToSlowEaseIn,
-                          duration: const Duration(milliseconds: 2500),
-                          child: histories![index].toWidget(context),
-                        ),
-                      ),
-                    );
-                  },
+          return ListView.builder(
+            itemCount: histories!.length,
+            itemBuilder: (BuildContext context, int index) {
+              return AnimationConfiguration.staggeredList(
+                position: index,
+                delay: const Duration(milliseconds: 100),
+                child: SlideAnimation(
+                  duration: const Duration(milliseconds: 2500),
+                  curve: Curves.fastLinearToSlowEaseIn,
+                  child: FadeInAnimation(
+                    curve: Curves.fastLinearToSlowEaseIn,
+                    duration: const Duration(milliseconds: 2500),
+                    child: histories![index].toWidget(context),
+                  ),
                 ),
-              ),
-            ),
+              );
+            },
           );
         }
       },
