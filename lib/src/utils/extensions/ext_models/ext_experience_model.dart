@@ -3,15 +3,18 @@ import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
+import 'package:demo_dprofiles/src/theme/my_color.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
 
 extension ExperienceModelExt on ExperienceModel {
   Widget toWidget(
     BuildContext context, {
     VoidCallback? onDelete,
     VoidCallback? onUpdate,
+    VoidCallback? onExpand,
   }) {
     return Padding(
       padding: context.padding(top: 6),
@@ -51,9 +54,21 @@ extension ExperienceModelExt on ExperienceModel {
                       ),
                     ),
                     if (description != null)
-                      Text(
+                      ReadMoreText(
                         description!,
-                        maxLines: 3,
+                        trimMode: TrimMode.Line,
+                        trimLines: 3,
+                        trimCollapsedText: 'Show more',
+                        trimExpandedText: ' Show less',
+                        moreStyle: const TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: MyColor.green58BD7D,
+                        ),
+                        lessStyle: const TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                        ),
                         style: AppFont().fontTheme(context).bodyMedium,
                       ),
                   ],
