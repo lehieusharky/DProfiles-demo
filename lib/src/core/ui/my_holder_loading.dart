@@ -46,7 +46,7 @@ class MyListFeedShimmer extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          margin: const EdgeInsets.symmetric(vertical: 7),
+          margin: const EdgeInsets.symmetric(vertical: 5),
           child: const MyShimmer(
             width: 100,
             height: 8,
@@ -54,7 +54,7 @@ class MyListFeedShimmer extends StatelessWidget {
           ),
         ),
         Container(
-          margin: const EdgeInsets.symmetric(vertical: 9),
+          margin: const EdgeInsets.symmetric(vertical: 7),
           child: const MyShimmer(
             width: 250,
             height: 8,
@@ -62,7 +62,7 @@ class MyListFeedShimmer extends StatelessWidget {
           ),
         ),
         Container(
-          margin: const EdgeInsets.symmetric(vertical: 9),
+          margin: const EdgeInsets.symmetric(vertical: 7),
           child: const MyShimmer(
             width: 200,
             height: 8,

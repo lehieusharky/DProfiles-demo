@@ -41,7 +41,8 @@ class FeedComments extends StatelessWidget {
                     .headlineMedium,
               ),
               SizedBox(height: context.sizeHeight(16)),
-              state == null ? _buildListCommentShimmer(4) : _buildBody(context, state) ,
+              // state == null ? _buildListCommentShimmer(4) : _buildBody(context, state) ,
+              _buildListCommentShimmer(4),
               SizedBox(height: context.sizeHeight(32)),
             ],
           ),
@@ -91,12 +92,13 @@ class FeedComments extends StatelessWidget {
 
   Widget _buildCommentShimmer(BuildContext context,){
     return  Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children:  [
         Container(
           margin: const EdgeInsets.only(right: 10),
-          child: const MyShimmer(width: 35, height: 35, radius: 35, period: Duration(milliseconds: 2000),),
+          child: const MyShimmer(width: 35, height: 35, radius: 35, period: Duration(milliseconds: 2500),),
         ),
-        const MyShimmer(width: 140, height: 50, radius: 18, period: Duration(milliseconds: 2000),),
+        const MyShimmer(width: 140, height: 55, radius: 12, period: Duration(milliseconds: 2500),),
 
       ],
     );
