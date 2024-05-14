@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/auto_generate_history_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_cover_letter_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/data/models/write_interview_question_model.dart';
@@ -12,9 +13,9 @@ import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'ai_features_bloc.freezed.dart';
 part 'ai_features_event.dart';
 part 'ai_features_state.dart';
-part 'ai_features_bloc.freezed.dart';
 
 class AiFeaturesBloc extends Bloc<AiFeaturesEvent, AiFeaturesState> {
   final AutoGenerateUseCase autoGenerateUseCase;
@@ -39,7 +40,7 @@ class AiFeaturesBloc extends Bloc<AiFeaturesEvent, AiFeaturesState> {
   FutureOr<void> _getAutoGenerateHistory(
       GetAutoGenerateHistory event, Emitter<AiFeaturesState> emit) async {
     final result = await autoGenerateUseCase.getAutoGenerateHistory(
-        page: ++_currentAutoGenHistory);
+        page: ++_currentAutoGenHistory, limit: 10000);
 
     result.fold(
       (l) => emit(AiFeaturesError(

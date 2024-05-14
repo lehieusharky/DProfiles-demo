@@ -3,7 +3,6 @@ import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/blogs/data/models/blog_model.dart';
 import 'package:demo_dprofiles/src/features/blogs/presentation/bloc/blog_bloc.dart';
-import 'package:demo_dprofiles/src/features/home/domain/entities/ext_new_feed_entity.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -104,11 +103,11 @@ class _BlogListPageState extends State<BlogListPage>
                     .bodyMedium,
               ),
             ),
-            const ReactionPost(
-              likes: 112,
-              comments: 0,
-              shares: 3,
-            ),
+            // const ReactionPost(
+            //   likes: 112,
+            //   comments: 0,
+            //   shares: 3,
+            // ),
           ],
         ),
       ),
