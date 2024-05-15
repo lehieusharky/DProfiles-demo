@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/blogs/data/models/blog_model.dart';
@@ -51,7 +52,7 @@ class _BlogListPageState extends State<BlogListPage>
     return Padding(
       padding: context.padding(horizontal: 20),
       child: SizedBox(
-        height: blogs.length * 300,
+        height: blogs.length * 500,
         child: ListView.separated(
           physics: const NeverScrollableScrollPhysics(),
           itemCount: blogs.length,
@@ -72,14 +73,12 @@ class _BlogListPageState extends State<BlogListPage>
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             // TODO thumbnail blog
-            // if (data.thumbnail.isNotEmpty) ...[
-            //   ClipRRect(
-            //     borderRadius: BorderRadius.circular(8),
-            //     child: AspectRatio(
-            //         aspectRatio: 16 / 5,
-            //         child: MyCacheImage(imageUrl: data.thumbnail)),
-            //   ),
-            // ],
+            if (data.thumbnail.isNotEmpty) ...[
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: CachedNetworkImage(imageUrl: data.thumbnail),
+              ),
+            ],
             SizedBox(height: context.sizeHeight(8)),
             Text(
               data.title,

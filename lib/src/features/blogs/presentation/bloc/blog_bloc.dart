@@ -10,12 +10,21 @@ part 'blog_state.dart';
 
 class BlogBloc extends Bloc<BlogEvent, BlogState> {
   BlogBloc() : super(const BlogState.initial()) {
+    List<BlogModel> _sortProcess(List<BlogModel> lst) {
+      return lst
+        ..sort((a, b) {
+          final aDate = a.createdAt;
+          final bDate = b.createdAt;
+          return bDate.compareTo(aDate);
+        });
+    }
+
     on<_Load>((event, emit) async {
       emit(const BlogState.loading());
       final result = await fetchAllBlogsUseCase.execute(++page);
       result.fold(
         (l) => emit(const BlogState.error('Error fetching blogs')),
-        (r) => emit(BlogState.loaded(r)),
+        (r) => emit(BlogState.loaded(_sortProcess(r))),
       );
     });
     on<_LoadMore>((event, emit) async {
@@ -25,7 +34,7 @@ class BlogBloc extends Bloc<BlogEvent, BlogState> {
       final result = await fetchAllBlogsUseCase.execute(++page);
       result.fold((l) => refreshController.loadFailed(), (r) {
         refreshController.loadComplete();
-        emit(BlogState.loaded(currentBlogs + r));
+        emit(BlogState.loaded(_sortProcess(currentBlogs + r)));
       });
     });
     on<_Refresh>((event, emit) async {
@@ -36,7 +45,7 @@ class BlogBloc extends Bloc<BlogEvent, BlogState> {
         (l) => refreshController.refreshFailed(),
         (r) {
           refreshController.refreshCompleted();
-          emit(BlogState.loaded(r));
+          emit(BlogState.loaded(_sortProcess(r)));
         },
       );
     });
