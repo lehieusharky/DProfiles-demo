@@ -21,6 +21,8 @@ mixin _$MyAiCharacterEvent {
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
     required TResult Function(int chatBotID, int page, int limit, String search)
         getChatWithBotHistory,
+    required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +30,8 @@ mixin _$MyAiCharacterEvent {
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
     TResult? Function(int chatBotID, int page, int limit, String search)?
         getChatWithBotHistory,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +39,8 @@ mixin _$MyAiCharacterEvent {
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     TResult Function(int chatBotID, int page, int limit, String search)?
         getChatWithBotHistory,
+    TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -44,6 +50,8 @@ mixin _$MyAiCharacterEvent {
         getChatBotDetail,
     required TResult Function(MyAiCharacterGetChatWithBotHistory value)
         getChatWithBotHistory,
+    required TResult Function(MyAiCharacterUploadAvatar value) uploadAvatar,
+    required TResult Function(MyAiCharacterUploadBanner value) uploadBanner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +59,8 @@ mixin _$MyAiCharacterEvent {
     TResult? Function(MyAiCharacterGetChatBotDetail value)? getChatBotDetail,
     TResult? Function(MyAiCharacterGetChatWithBotHistory value)?
         getChatWithBotHistory,
+    TResult? Function(MyAiCharacterUploadAvatar value)? uploadAvatar,
+    TResult? Function(MyAiCharacterUploadBanner value)? uploadBanner,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +68,8 @@ mixin _$MyAiCharacterEvent {
     TResult Function(MyAiCharacterGetChatBotDetail value)? getChatBotDetail,
     TResult Function(MyAiCharacterGetChatWithBotHistory value)?
         getChatWithBotHistory,
+    TResult Function(MyAiCharacterUploadAvatar value)? uploadAvatar,
+    TResult Function(MyAiCharacterUploadBanner value)? uploadBanner,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -163,6 +175,8 @@ class _$MyAiCharacterGetChatBotDetailImpl
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
     required TResult Function(int chatBotID, int page, int limit, String search)
         getChatWithBotHistory,
+    required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
   }) {
     return getChatBotDetail(id, isPopularBot);
   }
@@ -173,6 +187,8 @@ class _$MyAiCharacterGetChatBotDetailImpl
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
     TResult? Function(int chatBotID, int page, int limit, String search)?
         getChatWithBotHistory,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
   }) {
     return getChatBotDetail?.call(id, isPopularBot);
   }
@@ -183,6 +199,8 @@ class _$MyAiCharacterGetChatBotDetailImpl
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     TResult Function(int chatBotID, int page, int limit, String search)?
         getChatWithBotHistory,
+    TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
     required TResult orElse(),
   }) {
     if (getChatBotDetail != null) {
@@ -198,6 +216,8 @@ class _$MyAiCharacterGetChatBotDetailImpl
         getChatBotDetail,
     required TResult Function(MyAiCharacterGetChatWithBotHistory value)
         getChatWithBotHistory,
+    required TResult Function(MyAiCharacterUploadAvatar value) uploadAvatar,
+    required TResult Function(MyAiCharacterUploadBanner value) uploadBanner,
   }) {
     return getChatBotDetail(this);
   }
@@ -208,6 +228,8 @@ class _$MyAiCharacterGetChatBotDetailImpl
     TResult? Function(MyAiCharacterGetChatBotDetail value)? getChatBotDetail,
     TResult? Function(MyAiCharacterGetChatWithBotHistory value)?
         getChatWithBotHistory,
+    TResult? Function(MyAiCharacterUploadAvatar value)? uploadAvatar,
+    TResult? Function(MyAiCharacterUploadBanner value)? uploadBanner,
   }) {
     return getChatBotDetail?.call(this);
   }
@@ -218,6 +240,8 @@ class _$MyAiCharacterGetChatBotDetailImpl
     TResult Function(MyAiCharacterGetChatBotDetail value)? getChatBotDetail,
     TResult Function(MyAiCharacterGetChatWithBotHistory value)?
         getChatWithBotHistory,
+    TResult Function(MyAiCharacterUploadAvatar value)? uploadAvatar,
+    TResult Function(MyAiCharacterUploadBanner value)? uploadBanner,
     required TResult orElse(),
   }) {
     if (getChatBotDetail != null) {
@@ -342,6 +366,8 @@ class _$MyAiCharacterGetChatWithBotHistoryImpl
     required TResult Function(int id, bool isPopularBot) getChatBotDetail,
     required TResult Function(int chatBotID, int page, int limit, String search)
         getChatWithBotHistory,
+    required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
   }) {
     return getChatWithBotHistory(chatBotID, page, limit, search);
   }
@@ -352,6 +378,8 @@ class _$MyAiCharacterGetChatWithBotHistoryImpl
     TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
     TResult? Function(int chatBotID, int page, int limit, String search)?
         getChatWithBotHistory,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
   }) {
     return getChatWithBotHistory?.call(chatBotID, page, limit, search);
   }
@@ -362,6 +390,8 @@ class _$MyAiCharacterGetChatWithBotHistoryImpl
     TResult Function(int id, bool isPopularBot)? getChatBotDetail,
     TResult Function(int chatBotID, int page, int limit, String search)?
         getChatWithBotHistory,
+    TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
     required TResult orElse(),
   }) {
     if (getChatWithBotHistory != null) {
@@ -377,6 +407,8 @@ class _$MyAiCharacterGetChatWithBotHistoryImpl
         getChatBotDetail,
     required TResult Function(MyAiCharacterGetChatWithBotHistory value)
         getChatWithBotHistory,
+    required TResult Function(MyAiCharacterUploadAvatar value) uploadAvatar,
+    required TResult Function(MyAiCharacterUploadBanner value) uploadBanner,
   }) {
     return getChatWithBotHistory(this);
   }
@@ -387,6 +419,8 @@ class _$MyAiCharacterGetChatWithBotHistoryImpl
     TResult? Function(MyAiCharacterGetChatBotDetail value)? getChatBotDetail,
     TResult? Function(MyAiCharacterGetChatWithBotHistory value)?
         getChatWithBotHistory,
+    TResult? Function(MyAiCharacterUploadAvatar value)? uploadAvatar,
+    TResult? Function(MyAiCharacterUploadBanner value)? uploadBanner,
   }) {
     return getChatWithBotHistory?.call(this);
   }
@@ -397,6 +431,8 @@ class _$MyAiCharacterGetChatWithBotHistoryImpl
     TResult Function(MyAiCharacterGetChatBotDetail value)? getChatBotDetail,
     TResult Function(MyAiCharacterGetChatWithBotHistory value)?
         getChatWithBotHistory,
+    TResult Function(MyAiCharacterUploadAvatar value)? uploadAvatar,
+    TResult Function(MyAiCharacterUploadBanner value)? uploadBanner,
     required TResult orElse(),
   }) {
     if (getChatWithBotHistory != null) {
@@ -422,6 +458,256 @@ abstract class MyAiCharacterGetChatWithBotHistory
   _$$MyAiCharacterGetChatWithBotHistoryImplCopyWith<
           _$MyAiCharacterGetChatWithBotHistoryImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$MyAiCharacterUploadAvatarImplCopyWith<$Res> {
+  factory _$$MyAiCharacterUploadAvatarImplCopyWith(
+          _$MyAiCharacterUploadAvatarImpl value,
+          $Res Function(_$MyAiCharacterUploadAvatarImpl) then) =
+      __$$MyAiCharacterUploadAvatarImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$MyAiCharacterUploadAvatarImplCopyWithImpl<$Res>
+    extends _$MyAiCharacterEventCopyWithImpl<$Res,
+        _$MyAiCharacterUploadAvatarImpl>
+    implements _$$MyAiCharacterUploadAvatarImplCopyWith<$Res> {
+  __$$MyAiCharacterUploadAvatarImplCopyWithImpl(
+      _$MyAiCharacterUploadAvatarImpl _value,
+      $Res Function(_$MyAiCharacterUploadAvatarImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$MyAiCharacterUploadAvatarImpl implements MyAiCharacterUploadAvatar {
+  const _$MyAiCharacterUploadAvatarImpl();
+
+  @override
+  String toString() {
+    return 'MyAiCharacterEvent.uploadAvatar()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MyAiCharacterUploadAvatarImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(int chatBotID, int page, int limit, String search)
+        getChatWithBotHistory,
+    required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+  }) {
+    return uploadAvatar();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+  }) {
+    return uploadAvatar?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
+    TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    required TResult orElse(),
+  }) {
+    if (uploadAvatar != null) {
+      return uploadAvatar();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(MyAiCharacterGetChatBotDetail value)
+        getChatBotDetail,
+    required TResult Function(MyAiCharacterGetChatWithBotHistory value)
+        getChatWithBotHistory,
+    required TResult Function(MyAiCharacterUploadAvatar value) uploadAvatar,
+    required TResult Function(MyAiCharacterUploadBanner value) uploadBanner,
+  }) {
+    return uploadAvatar(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(MyAiCharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(MyAiCharacterGetChatWithBotHistory value)?
+        getChatWithBotHistory,
+    TResult? Function(MyAiCharacterUploadAvatar value)? uploadAvatar,
+    TResult? Function(MyAiCharacterUploadBanner value)? uploadBanner,
+  }) {
+    return uploadAvatar?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(MyAiCharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(MyAiCharacterGetChatWithBotHistory value)?
+        getChatWithBotHistory,
+    TResult Function(MyAiCharacterUploadAvatar value)? uploadAvatar,
+    TResult Function(MyAiCharacterUploadBanner value)? uploadBanner,
+    required TResult orElse(),
+  }) {
+    if (uploadAvatar != null) {
+      return uploadAvatar(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class MyAiCharacterUploadAvatar implements MyAiCharacterEvent {
+  const factory MyAiCharacterUploadAvatar() = _$MyAiCharacterUploadAvatarImpl;
+}
+
+/// @nodoc
+abstract class _$$MyAiCharacterUploadBannerImplCopyWith<$Res> {
+  factory _$$MyAiCharacterUploadBannerImplCopyWith(
+          _$MyAiCharacterUploadBannerImpl value,
+          $Res Function(_$MyAiCharacterUploadBannerImpl) then) =
+      __$$MyAiCharacterUploadBannerImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$MyAiCharacterUploadBannerImplCopyWithImpl<$Res>
+    extends _$MyAiCharacterEventCopyWithImpl<$Res,
+        _$MyAiCharacterUploadBannerImpl>
+    implements _$$MyAiCharacterUploadBannerImplCopyWith<$Res> {
+  __$$MyAiCharacterUploadBannerImplCopyWithImpl(
+      _$MyAiCharacterUploadBannerImpl _value,
+      $Res Function(_$MyAiCharacterUploadBannerImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$MyAiCharacterUploadBannerImpl implements MyAiCharacterUploadBanner {
+  const _$MyAiCharacterUploadBannerImpl();
+
+  @override
+  String toString() {
+    return 'MyAiCharacterEvent.uploadBanner()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MyAiCharacterUploadBannerImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int id, bool isPopularBot) getChatBotDetail,
+    required TResult Function(int chatBotID, int page, int limit, String search)
+        getChatWithBotHistory,
+    required TResult Function() uploadAvatar,
+    required TResult Function() uploadBanner,
+  }) {
+    return uploadBanner();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult? Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
+    TResult? Function()? uploadAvatar,
+    TResult? Function()? uploadBanner,
+  }) {
+    return uploadBanner?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int id, bool isPopularBot)? getChatBotDetail,
+    TResult Function(int chatBotID, int page, int limit, String search)?
+        getChatWithBotHistory,
+    TResult Function()? uploadAvatar,
+    TResult Function()? uploadBanner,
+    required TResult orElse(),
+  }) {
+    if (uploadBanner != null) {
+      return uploadBanner();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(MyAiCharacterGetChatBotDetail value)
+        getChatBotDetail,
+    required TResult Function(MyAiCharacterGetChatWithBotHistory value)
+        getChatWithBotHistory,
+    required TResult Function(MyAiCharacterUploadAvatar value) uploadAvatar,
+    required TResult Function(MyAiCharacterUploadBanner value) uploadBanner,
+  }) {
+    return uploadBanner(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(MyAiCharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult? Function(MyAiCharacterGetChatWithBotHistory value)?
+        getChatWithBotHistory,
+    TResult? Function(MyAiCharacterUploadAvatar value)? uploadAvatar,
+    TResult? Function(MyAiCharacterUploadBanner value)? uploadBanner,
+  }) {
+    return uploadBanner?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(MyAiCharacterGetChatBotDetail value)? getChatBotDetail,
+    TResult Function(MyAiCharacterGetChatWithBotHistory value)?
+        getChatWithBotHistory,
+    TResult Function(MyAiCharacterUploadAvatar value)? uploadAvatar,
+    TResult Function(MyAiCharacterUploadBanner value)? uploadBanner,
+    required TResult orElse(),
+  }) {
+    if (uploadBanner != null) {
+      return uploadBanner(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class MyAiCharacterUploadBanner implements MyAiCharacterEvent {
+  const factory MyAiCharacterUploadBanner() = _$MyAiCharacterUploadBannerImpl;
 }
 
 /// @nodoc

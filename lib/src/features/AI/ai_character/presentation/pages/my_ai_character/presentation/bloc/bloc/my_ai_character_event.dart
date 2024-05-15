@@ -10,4 +10,8 @@ class MyAiCharacterEvent with _$MyAiCharacterEvent {
       required int page,
       required int limit,
       required String search}) = MyAiCharacterGetChatWithBotHistory;
+
+  const factory MyAiCharacterEvent.uploadAvatar() = MyAiCharacterUploadAvatar;
+
+  const factory MyAiCharacterEvent.uploadBanner() = MyAiCharacterUploadBanner;
 }

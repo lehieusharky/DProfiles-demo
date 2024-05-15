@@ -55,7 +55,11 @@ class _HeaderMyAICharacterState extends State<HeaderMyAICharacter> {
                     const SizedBox(height: 50),
                   ],
                 ),
-                _buildAvatar(_botInfo!.avatar),
+                InkWell(
+                    onTap: () => context
+                        .read<MyAiCharacterBloc>()
+                        .add(const MyAiCharacterEvent.uploadAvatar()),
+                    child: _buildAvatar(_botInfo!.avatar)),
               ],
             ),
             Padding(
@@ -70,9 +74,11 @@ class _HeaderMyAICharacterState extends State<HeaderMyAICharacter> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      _buildCountOfChat(appLocal(context).conversations, '120'),
+                      _buildCountOfChat(appLocal(context).conversations,
+                          _botInfo?.noOfConversation?.toString() ?? '0'),
                       context.sizedBox(width: 4),
-                      _buildCountOfChat(appLocal(context).messages, '120'),
+                      _buildCountOfChat(appLocal(context).messages,
+                          _botInfo?.noOfMessage?.toString() ?? '0'),
                     ],
                   ),
                   Padding(
@@ -246,7 +252,16 @@ class _HeaderMyAICharacterState extends State<HeaderMyAICharacter> {
                       shape: BoxShape.circle,
                       color: colorScheme(context).background,
                     ),
-                    child: _buildAvatar2(context, avatar)),
+                    child: BlocBuilder<MyAiCharacterBloc, MyAiCharacterState>(
+                      builder: (context, state) {
+                        if (state is MyAiCharacterGetChatBotDetailSuccess) {
+                          return _buildAvatar2(
+                              context, state.characterBotDetail.avatar);
+                        } else {
+                          return _buildAvatar2(context, avatar);
+                        }
+                      },
+                    )),
                 Container(
                     padding: context.padding(horizontal: 6, vertical: 2),
                     decoration: BoxDecoration(
