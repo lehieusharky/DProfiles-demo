@@ -54,4 +54,5 @@ class BlogBloc extends Bloc<BlogEvent, BlogState> {
   // Page number starts from 1
   int page = 0;
   final refreshController = RefreshController();
+
 }
