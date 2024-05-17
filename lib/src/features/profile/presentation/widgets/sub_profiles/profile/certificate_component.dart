@@ -65,8 +65,9 @@ class _CertificateComponentState extends State<CertificateComponent> {
                 mainAxisSize: MainAxisSize.min,
                 children: certificates!
                     .map((e) => e.toWidget(context,
-                        onUpdate: () => _updateCer(context, e),
-                        onDelete: () => _deleteCertificate(context, e)))
+                        // onUpdate: () => _updateCer(context, e),
+                        // onDelete: () => _deleteCertificate(context, e)
+                ))
                     .toList(),
               )
           ],

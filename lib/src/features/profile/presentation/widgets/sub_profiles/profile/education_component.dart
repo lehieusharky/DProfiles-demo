@@ -66,8 +66,10 @@ class _EducationComponentState extends State<EducationComponent> {
                 mainAxisSize: MainAxisSize.min,
                 children: educations!
                     .map((e) => e.toWidget(context,
-                        onUpdate: () => _updateEdu(context, e),
-                        onDelete: () => _deleteEducation(context, e)))
+                        // onUpdate: () => _updateEdu(context, e),
+                        // onDelete: () => _deleteEducation(context, e)
+                )
+                )
                     .toList(),
               )
           ],
