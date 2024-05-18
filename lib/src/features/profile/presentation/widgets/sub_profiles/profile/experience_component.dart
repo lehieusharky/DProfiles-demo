@@ -51,7 +51,7 @@ class _ExperienceComponentState extends State<ExperienceComponent> {
           mainAxisSize: MainAxisSize.min,
           children: [
             TitleSubPage(
-              title: 'Experience',
+              title: 'Experiences',
               route: const ListExperienceRoute(),
               onCallBack: () => context
                   .read<ProfileBloc>()

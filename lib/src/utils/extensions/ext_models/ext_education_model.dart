@@ -81,10 +81,7 @@ extension EducationModelExt on EducationModel {
     return ProfileItem(
       title: schoolName,
       subTitle1: "${startDate.convertToMMYYFormat()}  -  ${endDate.convertToMMYYFormat()}",
-      image: Image(
-        image: Assets.images.profile.companyDemo.provider(),
-        fit: BoxFit.cover,
-      ),
+      image: Assets.images.profile.companyDemo.provider(),
       description: description,
       layout: LayoutProfileItem.row,
       onDelete: onDelete,

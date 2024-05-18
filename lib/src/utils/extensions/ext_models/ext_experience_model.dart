@@ -96,10 +96,7 @@ extension ExperienceModelExt on ExperienceModel {
       title: companyName,
       subTitle1: "${startDate.convertToMMYYFormat()}  -  ${endDate.convertToMMYYFormat()}",
       subTitle2: "${startDate.calculateDistanceBetweenDates(endDate)}",
-      image: Image(
-        image: Assets.images.profile.companyDemo.provider(),
-        fit: BoxFit.cover,
-      ),
+      image: Assets.images.profile.companyDemo.provider(),
       description: description,
       onDelete: onDelete,
       onExpand: onExpand,

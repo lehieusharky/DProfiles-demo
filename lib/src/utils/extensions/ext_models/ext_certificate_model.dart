@@ -79,10 +79,7 @@ extension CertificateModelExt on CertificateModel {
     return ProfileItem(
       title: organization,
       subTitle1: "${date.convertToMMYYFormat()} ",
-      image: Image(
-        image: Assets.images.profile.companyDemo.provider(),
-        fit: BoxFit.cover,
-      ),
+      image: Assets.images.profile.companyDemo.provider(),
       description: name,
       layout: LayoutProfileItem.row,
       onDelete: onDelete,
