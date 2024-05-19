@@ -4,7 +4,7 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/profile_item.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/widgets/profile_info_item.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
@@ -92,7 +92,7 @@ extension ExperienceModelExt on ExperienceModel {
     //     ),
     //   ),
     // );
-    return ProfileItem(
+    return ProfileInfoItem(
       title: companyName,
       subTitle1: "${startDate.convertToMMYYFormat()}  -  ${endDate.convertToMMYYFormat()}",
       subTitle2: "${startDate.calculateDistanceBetweenDates(endDate)}",

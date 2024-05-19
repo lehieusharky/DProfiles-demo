@@ -3,7 +3,7 @@ import 'package:demo_dprofiles/src/features/profile/data/models/certificate_mode
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
-import 'package:demo_dprofiles/src/features/profile/presentation/widgets/profile_item.dart';
+import 'package:demo_dprofiles/src/features/profile/presentation/widgets/profile_info_item.dart';
 import 'package:demo_dprofiles/src/utils/extensions/string_extensions.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
@@ -76,7 +76,7 @@ extension CertificateModelExt on CertificateModel {
     //   ),
     // );
 
-    return ProfileItem(
+    return ProfileInfoItem(
       title: organization,
       subTitle1: "${date.convertToMMYYFormat()} ",
       image: Assets.images.profile.companyDemo.provider(),

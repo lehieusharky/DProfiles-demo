@@ -22,7 +22,7 @@ enum LayoutProfileItem{
   row
 }
 
-class ProfileItem extends StatelessWidget {
+class ProfileInfoItem extends StatelessWidget {
   final String? title;
   final String? subTitle1;
   final String? subTitle2;
@@ -34,7 +34,7 @@ class ProfileItem extends StatelessWidget {
   final VoidCallback? onExpand;
   final LayoutProfileItem layout;
 
-  const ProfileItem(
+  const ProfileInfoItem(
       {super.key,
         this.layout = LayoutProfileItem.column,
       this.title,
