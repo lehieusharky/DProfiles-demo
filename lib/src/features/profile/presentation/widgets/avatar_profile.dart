@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
@@ -49,8 +50,8 @@ class _AvatarProfileState extends State<AvatarProfile> {
         if (state is ProfileUpdateBannerSuccess) {
           showErrorDialog(
             context,
-            title: 'Upload success',
-            description: 'Update banner success',
+            title: appLocal(context).uploadSuccess,
+            description: appLocal(context).updateBannerSuccess,
           );
           bannerUrl = state.bannerModel.bannerUrl;
         }
@@ -64,8 +65,8 @@ class _AvatarProfileState extends State<AvatarProfile> {
 
           showErrorDialog(
             context,
-            title: 'Upload success',
-            description: 'Update avatar success',
+            title: appLocal(context).uploadSuccess,
+            description:  appLocal(context).updateAvatarSuccess,
           );
         }
       },

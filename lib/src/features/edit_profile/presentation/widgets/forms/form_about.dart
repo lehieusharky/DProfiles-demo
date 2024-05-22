@@ -64,8 +64,8 @@ class _FormAboutState extends State<FormAbout> {
                 Padding(
                   padding: context.padding(top: 32),
                   child: AuthField(
-                    title: 'ABOUT',
-                    hint: 'Describe your self',
+                    title: appLocal(context).about.toUpperCase(),
+                    hint: appLocal(context).describeYourSelf,
                     maxLines: 7,
                     keyboardType: TextInputType.multiline,
                     autoFocus: true,
@@ -87,14 +87,14 @@ class _FormAboutState extends State<FormAbout> {
                       Expanded(
                         child: AppOutlineButton(context).elevatedButton(
                           onPressed: () => Navigator.pop(context),
-                          title: 'Cancel',
+                          title:  appLocal(context).cancel,
                         ),
                       ),
                       context.sizedBox(width: 16),
                       Expanded(
                         child: MyButton(
                           onPressed: () => _save(state),
-                          title: 'Save',
+                          title: appLocal(context).save,
                         ),
                       ),
                     ],

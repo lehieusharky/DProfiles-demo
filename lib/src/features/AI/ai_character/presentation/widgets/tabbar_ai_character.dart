@@ -1,5 +1,6 @@
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai_character_bloc.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -39,7 +40,7 @@ class TabBarAICharacter extends StatelessWidget {
             indicatorColor: colorScheme(context).primary,
             tabBarIndicatorSize: TabBarIndicatorSize.tab,
           ),
-          tabs: ['Explore', 'Following'].map((e) => _buildTab(e)).toList(),
+          tabs: [appLocal(context).explore, appLocal(context).following].map((e) => _buildTab(e)).toList(),
         ),
       ),
     );

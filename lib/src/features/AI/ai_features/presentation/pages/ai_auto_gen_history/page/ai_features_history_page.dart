@@ -20,13 +20,13 @@ class _AIAutoGenHistoryPageState extends State<AIAutoGenHistoryPage> {
     return BlocProvider(
       create: (context) =>
           injector.get<AiFeaturesBloc>()..add(const GetAutoGenerateHistory()),
-      child: const MyScaffold(
+      child:  MyScaffold(
         useAppBar: true,
         canBack: true,
         horizontalMargin: 20,
         topPadding: 80,
-        appBarTitle: 'Auto Generation History',
-        body: AIAutoGenHistoryBody(),
+        appBarTitle: appLocal(context).autoGenerationHistory,
+        body: const AIAutoGenHistoryBody(),
       ),
     );
   }

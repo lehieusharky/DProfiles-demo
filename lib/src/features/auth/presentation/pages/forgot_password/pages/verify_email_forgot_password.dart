@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/sign_up/widgets/pinput_verify_email_code.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/bottom_navigation_text.dart';
@@ -41,14 +42,14 @@ class _VerifyEmailForgotPasswordPageState
             ),
           ),
           BottomNavigationText(
-            content1: "Don’t have an account?   ",
-            content2: 'Sign up for free',
+            content1: appLocal(context).dontHaveAnAccount,
+            content2: appLocal(context).signupForFree,
             onPressed: () => context.router.push(const SignUpRoute()),
           ),
           Padding(
             padding: context.padding(top: 80, bottom: 32),
             child: Text(
-              'Security verification',
+              appLocal(context).securityVerification,
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.w700)
                   .headlineMedium,
@@ -57,7 +58,7 @@ class _VerifyEmailForgotPasswordPageState
           Padding(
             padding: context.padding(bottom: 12, horizontal: 16),
             child: Text(
-              'Please enter the 6-digit code sent to your email for verification.',
+              appLocal(context).pleaseEnterThe6DigitCodeSentToYourEmailForVerification,
               textAlign: TextAlign.center,
               style: AppFont()
                   .fontTheme(context, color: colorScheme(context).outline)
@@ -74,7 +75,7 @@ class _VerifyEmailForgotPasswordPageState
               text: TextSpan(
                 children: [
                   TextSpan(
-                    text: 'Didn’t receive any code?    ',
+                    text: appLocal(context).didntReceiveAnyCode,
                     style: AppFont()
                         .fontTheme(
                           context,
@@ -84,7 +85,7 @@ class _VerifyEmailForgotPasswordPageState
                         .bodyMedium,
                   ),
                   TextSpan(
-                    text: 'Resend Again',
+                    text: appLocal(context).resendAgain,
                     style: AppFont()
                         .fontTheme(context,
                             color: colorScheme(context).outline,
@@ -99,7 +100,7 @@ class _VerifyEmailForgotPasswordPageState
           Padding(
             padding: context.padding(top: 12),
             child: Text(
-              'Request new code in 01:59s',
+              '${appLocal(context).requestNewCodeIn} 01:59s',
               style: AppFont()
                   .fontTheme(context, color: colorScheme(context).outline)
                   .bodyMedium,

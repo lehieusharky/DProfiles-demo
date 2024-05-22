@@ -11,7 +11,7 @@ extension VefifySignUpCodePageExt on VerifySignUpPage {
     if (state is AuthResendSignUpEmailSuccess) {
       Navigator.pop(context);
       showErrorDialog(context,
-          title: 'Code was resend', description: 'Check your email again!');
+          title: appLocal(context).codeWasResend, description: appLocal(context).checkYourEmailAgain);
     }
 
     if (state is AuthValidateSignUpCodeSuccess) {

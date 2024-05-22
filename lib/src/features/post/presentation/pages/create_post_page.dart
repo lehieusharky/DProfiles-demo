@@ -27,7 +27,7 @@ class _CreatePostPageState extends State<CreatePostPage> {
         useAppBar: true,
         canBack: true,
         horizontalMargin: 20,
-        appBarTitle: 'Create post',
+        appBarTitle: appLocal(context).createPost,
         body: SingleChildScrollView(
           child: Column(
             children: [

@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/seperate_profile.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
@@ -76,7 +77,7 @@ class _DProfileComponentState extends State<DProfileComponent> {
         child: Row(
           children: [
             Text(
-              status ? 'View Digital Profile' : 'Create dProfile',
+              status ?  appLocal(context).viewDigitalProfile :  appLocal(context).createDProile,
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.bold)
                   .bodyMedium,

@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
 import 'package:demo_dprofiles/src/core/ui/my_text_form_field.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
@@ -42,8 +43,8 @@ class _FormCreatePostState extends State<FormCreatePost> {
           Navigator.pop(context);
           showErrorDialog(context,
               onPressed: () => Navigator.pop(context, state.createdPost),
-              title: 'Success',
-              description: 'Create post success');
+              title: appLocal(context).success,
+              description: appLocal(context).createPostSuccess);
         }
       },
       builder: (context, state) {
@@ -59,11 +60,11 @@ class _FormCreatePostState extends State<FormCreatePost> {
                   defaultBorderColor: Colors.transparent,
                   maxLines: 10,
                   minLines: 1,
-                  hintText: 'Your content here',
+                  hintText: appLocal(context).yourContentHere,
                   autoFocus: true,
                   validator: (text) {
                     if (text == null || text.isEmpty) {
-                      return 'Content can not null';
+                      return appLocal(context).contentCannotNull;
                     } else {
                       return null;
                     }
@@ -89,7 +90,7 @@ class _FormCreatePostState extends State<FormCreatePost> {
                 context.sizedBox(height: 20),
                 AppFlatButton(context).elevatedButton(
                   width: context.width,
-                  title: 'Post',
+                  title: appLocal(context).post,
                   onPressed: () => _save(context),
                 ),
               ],
@@ -123,7 +124,7 @@ class _FormCreatePostState extends State<FormCreatePost> {
                 Padding(
                   padding: context.padding(top: 8, bottom: 4),
                   child: Text(
-                    'Upload your images',
+                    appLocal(context).uploadYourImages,
                     style: AppFont()
                         .fontTheme(
                           context,
@@ -149,8 +150,8 @@ class _FormCreatePostState extends State<FormCreatePost> {
       if (imagesUrl.isEmpty) {
         showErrorDialog(
           context,
-          title: 'Post failed',
-          description: 'At least at 1 image',
+          title: appLocal(context).postFailed,
+          description: appLocal(context).atLeastAt1Image,
         );
       } else {
         context.read<PostBloc>().add(PostCreatePost(

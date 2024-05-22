@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
@@ -38,7 +39,7 @@ class _BasicInfoOfDigitalProfileState extends State<BasicInfoOfDigitalProfile> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                'Basic Information',
+                appLocal(context).basicInformation,
                 style: AppFont()
                     .fontTheme(context, weight: FontWeight.w600)
                     .titleSmall,
@@ -46,10 +47,10 @@ class _BasicInfoOfDigitalProfileState extends State<BasicInfoOfDigitalProfile> {
               Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Tuple2('Name', userInfo!.username),
-                    Tuple2('DOB', userInfo!.birthDay),
-                    Tuple2('Nationality', userInfo!.nationality),
-                    Tuple2('ID Card Number', userInfo!.idCardNumber),
+                    Tuple2(appLocal(context).name, userInfo!.username),
+                    Tuple2(appLocal(context).dob.toUpperCase(), userInfo!.birthDay),
+                    Tuple2(appLocal(context).nationality, userInfo!.nationality),
+                    Tuple2(appLocal(context).idCardNumber, userInfo!.idCardNumber),
                   ]
                       .map(
                         (e) => Padding(

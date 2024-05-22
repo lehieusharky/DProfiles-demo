@@ -45,15 +45,15 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
           if (state is EditProfileAddNewCertificateSuccess) {
             Navigator.pop(context);
             showMyDialog(context,
-                title: const Text('Add success'),
-                content: const Text('You have add new certificate'),
+                title:  Text(appLocal(context).addSuccess),
+                content:  Text(appLocal(context).youHaveAddNewCertificate),
                 action: [
                   TextButton(
                       onPressed: () {
                         Navigator.pop(context);
                         Navigator.pop(context, state.certificateModel);
                       },
-                      child: const Text('OK'))
+                      child: Text(appLocal(context).ok))
                 ]);
           }
         },
@@ -61,7 +61,7 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
           useAppBar: true,
           canBack: true,
           horizontalMargin: 20,
-          appBarTitle: 'Certificates',
+          appBarTitle: appLocal(context).certificates,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -72,7 +72,7 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
                     children: [
                       AuthField(
                           controller: _nameController,
-                          title: 'Name'.toUpperCase(),
+                          title: appLocal(context).name,
                           textInputAction: TextInputAction.next,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -81,14 +81,14 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
                               return null;
                             }
                           },
-                          hint: 'Certificate Name'),
+                          hint: appLocal(context).certificateName),
                       Padding(
                         padding: context.padding(top: 32),
                         child: AuthField(
                           controller: _organizationController,
                           textInputAction: TextInputAction.next,
-                          title: 'Organization'.toUpperCase(),
-                          hint: 'Organization name',
+                          title: appLocal(context).organization.toUpperCase(),
+                          hint: appLocal(context).organizationName,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
                               return appLocal(context).fieldCannotBeEmpty;
@@ -103,7 +103,7 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
                         child: AuthField(
                           controller: _dateController,
                           textInputAction: TextInputAction.next,
-                          title: 'Date'.toUpperCase(),
+                          title: appLocal(context).date.toUpperCase(),
                           hint: appLocal(context).dateTimeFormatddmmyyyyy,
                           validator: (date) =>
                               date.validationForDDMMYYYYY(context),
@@ -114,7 +114,7 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
                         child: AuthField(
                             controller: _credentialIDController,
                             textInputAction: TextInputAction.next,
-                            title: 'Credential ID'.toUpperCase(),
+                            title: appLocal(context).credentialID.toUpperCase(),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
                                 return appLocal(context).fieldCannotBeEmpty;
@@ -122,22 +122,22 @@ class _AddNewCertificatePageState extends State<AddNewCertificatePage> {
                                 return null;
                               }
                             },
-                            hint: 'Credential ID'),
+                            hint: appLocal(context).credentialID),
                       ),
                       Padding(
                         padding: context.padding(top: 32),
                         child: AuthField(
                             controller: _linkController,
                             textInputAction: TextInputAction.done,
-                            title: 'Credential URL'.toUpperCase(),
+                            title: appLocal(context).credentialURL.toUpperCase(),
                             validator: (value) => value.urlValidation(context),
-                            hint: 'Credential URL'),
+                            hint: appLocal(context).credentialURL),
                       ),
                       Padding(
                         padding: context.padding(top: 16, bottom: 50),
                         child: AppFlatButton(context).elevatedButton(
                             width: context.width,
-                            title: 'Add',
+                            title: appLocal(context).add,
                             onPressed: () => _save(context)),
                       ),
                     ],

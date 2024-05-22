@@ -69,7 +69,7 @@ class _CreateDigitalProfileSuccessPageState
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Digital Profile',
+                      Text(appLocal(context).digitalProfile,
                           style: AppFont()
                               .fontTheme(context, weight: FontWeight.bold)
                               .titleSmall),
@@ -79,7 +79,7 @@ class _CreateDigitalProfileSuccessPageState
                         child: Icon(IconsaxOutline.timer_1,
                             color: colorScheme(context).primary),
                       ),
-                      Text('View History',
+                      Text(appLocal(context).viewHistory,
                           style: AppFont()
                               .fontTheme(context,
                                   color: colorScheme(context).primary)
@@ -177,7 +177,7 @@ class _CreateDigitalProfileSuccessPageState
         children: [
           Padding(
             padding: context.padding(bottom: 8),
-            child: Text('Basic information',
+            child: Text(appLocal(context).basicInformation,
                 style: AppFont()
                     .fontTheme(context, weight: FontWeight.bold)
                     .labelMedium),
@@ -185,10 +185,10 @@ class _CreateDigitalProfileSuccessPageState
           Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Tuple2('Name', userInfo.username),
-                Tuple2('DOB', userInfo.birthDay ?? ''),
-                Tuple2('Nationality', userInfo.nationality ?? ''),
-                Tuple2('ID Card Number', userInfo.idCardNumber ?? ''),
+                Tuple2(appLocal(context).name, userInfo.username),
+                Tuple2(appLocal(context).dob.toUpperCase(), userInfo.birthDay ?? ''),
+                Tuple2(appLocal(context).nationality, userInfo.nationality ?? ''),
+                Tuple2(appLocal(context).idCardNumber, userInfo.idCardNumber ?? ''),
               ]
                   .map((e) => Padding(
                         padding: context.padding(top: 8),

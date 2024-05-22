@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ extension WriteProfileIntroductionPageExt on WriteSkillKnowledgePage {
       [
         AppFlatButton(context).elevatedButton(
           onPressed: () {},
-          title: 'Connect wallet',
+          title: appLocal(context).connectWallet,
         ),
         Padding(
           padding: context.padding(horizontal: 5),

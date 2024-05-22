@@ -50,9 +50,9 @@ class _TabBarHomeState extends State<TabBarHome>
             indicatorColor: colorScheme(context).primary,
             tabBarIndicatorSize: TabBarIndicatorSize.tab,
           ),
-          tabs: const [
-            Text('Feed'),
-            Text('Blog'),
+          tabs:  [
+            Text(appLocal(context).feed),
+            Text(appLocal(context).blog),
           ],
         ),
       ),

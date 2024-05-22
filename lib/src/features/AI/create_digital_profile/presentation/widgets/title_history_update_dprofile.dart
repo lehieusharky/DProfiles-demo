@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -13,11 +14,11 @@ class TitleHistoryUpdateDProfile extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-              width: context.width * 0.3, child: _buildTitle(context, 'ID')),
+              width: context.width * 0.3, child: _buildTitle(context, appLocal(context).id.toUpperCase())),
           SizedBox(
-              width: context.width * 0.3, child: _buildTitle(context, 'Time')),
+              width: context.width * 0.3, child: _buildTitle(context, appLocal(context).time)),
           const Spacer(),
-          _buildTitle(context, 'Change')
+          _buildTitle(context, appLocal(context).change)
         ],
       ),
     );

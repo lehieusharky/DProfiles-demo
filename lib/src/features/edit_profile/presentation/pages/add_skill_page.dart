@@ -14,12 +14,12 @@ class AddSkillPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider<EditProfileBloc>(
       create: (context) => injector.get<EditProfileBloc>(),
-      child: const MyScaffold(
+      child: MyScaffold(
         horizontalMargin: 20,
         useAppBar: true,
         canBack: true,
-        appBarTitle: 'Skill',
-        body: SingleChildScrollView(child: FormSkill()),
+        appBarTitle: appLocal(context).skill,
+        body: const SingleChildScrollView(child: FormSkill()),
       ),
     );
   }

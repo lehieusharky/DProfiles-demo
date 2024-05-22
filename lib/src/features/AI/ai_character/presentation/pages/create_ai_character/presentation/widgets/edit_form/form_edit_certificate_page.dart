@@ -52,7 +52,7 @@ class _FormEditCertificatePageState extends State<FormEditCertificatePage> {
       useAppBar: true,
       canBack: true,
       horizontalMargin: 20,
-      appBarTitle: 'Edit Certificates',
+      appBarTitle: appLocal(context).editCertificates,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -63,7 +63,7 @@ class _FormEditCertificatePageState extends State<FormEditCertificatePage> {
                 children: [
                   AuthField(
                       controller: _nameController,
-                      title: 'Name'.toUpperCase(),
+                      title: appLocal(context).name.toUpperCase(),
                       textInputAction: TextInputAction.next,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -72,14 +72,14 @@ class _FormEditCertificatePageState extends State<FormEditCertificatePage> {
                           return null;
                         }
                       },
-                      hint: 'Certificate Name'),
+                      hint: appLocal(context).certificateName),
                   Padding(
                     padding: context.padding(top: 32),
                     child: AuthField(
                       controller: _organizationController,
                       textInputAction: TextInputAction.next,
-                      title: 'Organization'.toUpperCase(),
-                      hint: 'Organization name',
+                      title: appLocal(context).organization.toUpperCase(),
+                      hint: appLocal(context).organizationName,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return appLocal(context).fieldCannotBeEmpty;
@@ -104,7 +104,7 @@ class _FormEditCertificatePageState extends State<FormEditCertificatePage> {
                     child: AuthField(
                         controller: _credentialIDController,
                         textInputAction: TextInputAction.next,
-                        title: 'Credential ID'.toUpperCase(),
+                        title: appLocal(context).credentialID.toUpperCase(),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return appLocal(context).fieldCannotBeEmpty;
@@ -112,22 +112,22 @@ class _FormEditCertificatePageState extends State<FormEditCertificatePage> {
                             return null;
                           }
                         },
-                        hint: 'Credential ID'),
+                        hint: appLocal(context).credentialID),
                   ),
                   Padding(
                     padding: context.padding(top: 32),
                     child: AuthField(
                         controller: _linkController,
                         textInputAction: TextInputAction.done,
-                        title: 'Credential URL'.toUpperCase(),
+                        title: appLocal(context).credentialURL.toUpperCase(),
                         validator: (value) => value.urlValidation(context),
-                        hint: 'Credential URL'),
+                        hint: appLocal(context).credentialURL),
                   ),
                   Padding(
                     padding: context.padding(top: 16, bottom: 50),
                     child: AppFlatButton(context).elevatedButton(
                         width: context.width,
-                        title: 'Save',
+                        title: appLocal(context).save,
                         onPressed: () => _save(context)),
                   ),
                 ],

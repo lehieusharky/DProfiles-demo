@@ -35,21 +35,21 @@ class _WriteSkillKnowledgePageState extends State<WriteSkillKnowledgePage> {
           if (state is AiFeaturesError) {
             Navigator.pop(context);
             showErrorDialog(context,
-                title: 'Generate failed', description: state.message);
+                title: appLocal(context).generateFailed, description: state.message);
           }
         },
         child: MyScaffold(
           horizontalMargin: 20,
           useAppBar: true,
           canBack: true,
-          appBarTitle: 'Skill & Knowledge by Job Title',
+          appBarTitle: appLocal(context).skillsKnowledgeByJobTitle,
           body: NestedScrollView(
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => [
-              const MySliverAppBar(
+                MySliverAppBar(
                 height: 130,
                 child: HeaderAutoGenerate(
-                  aiFeatureTitle: 'Improve your skills with AI tools.',
+                  aiFeatureTitle: appLocal(context).improveYourSkillWithAITools,
                 ),
               ),
             ],

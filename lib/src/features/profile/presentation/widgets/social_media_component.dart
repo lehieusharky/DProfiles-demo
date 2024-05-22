@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_toast.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
@@ -44,7 +45,7 @@ class _SocialMediaComponentState extends State<SocialMediaComponent> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Social Media',
+                   appLocal(context).socialMedia,
                   style: AppFont()
                       .fontTheme(context, weight: FontWeight.bold)
                       .bodyLarge,
@@ -91,7 +92,7 @@ class _SocialMediaComponentState extends State<SocialMediaComponent> {
   Future<void> _openUrl(BuildContext context, String? uri) async {
     try {
       if (uri == null || uri.isEmpty) {
-        showToast(context, 'Social media was not set up');
+        showToast(context,  appLocal(context).socialMediaWasNotSetUp);
       } else {
         await _launchUrl(uri);
       }

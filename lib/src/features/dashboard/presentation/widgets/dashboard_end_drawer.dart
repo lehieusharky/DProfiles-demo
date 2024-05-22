@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/dashboard/presentation/bloc/dashboard_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
@@ -58,8 +59,8 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
               context.read<ProfileBloc>().add(const ProfileGetUserInfo());
 
               showErrorDialog(context,
-                  title: 'Success',
-                  description: 'Update wallet address success');
+                  title: appLocal(context).success,
+                  description: appLocal(context).updateWalletAddressSuccess);
             }
           },
         ),
@@ -119,8 +120,8 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
                     context.sizedBox(height: 10),
                     AppFlatButton(context).elevatedButton(
                         title: userInfo.walletAddress == null
-                            ? 'Connect Wallet'
-                            : 'Disconnect wallet',
+                            ? appLocal(context).connectWallet
+                            : appLocal(context).disconnectWallet,
                         onPressed: () => AppConnectWalletService()
                             .connectWallet(
                                 context,
@@ -132,15 +133,15 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
             },
             items: [
               Tuple3(const Icon(IconsaxOutline.profile_circle),
-                  'Digital Profile', () => _onOpenDProfile(context)),
-              Tuple3(const Icon(IconsaxOutline.edit), 'Edit Profile',
+                  appLocal(context).digitalProfile, () => _onOpenDProfile(context)),
+              Tuple3(const Icon(IconsaxOutline.edit), appLocal(context).editProfile,
                   () => _onEditProfile(context)),
-              Tuple3(const Icon(IconsaxOutline.paperclip), 'Privacy & Policy',
+              Tuple3(const Icon(IconsaxOutline.paperclip),  appLocal(context).privacyPolicy ,
                   () => _openPrivacyDoc()),
-              Tuple3(const Icon(IconsaxOutline.logout), 'Log out',
+              Tuple3(const Icon(IconsaxOutline.logout), appLocal(context).logout,
                   () => _logout(context)),
               Tuple3(const Icon(IconsaxOutline.profile_delete),
-                  'Delete Account', () => _deleteAccount(context)),
+                  appLocal(context).deleteAccount, () => _deleteAccount(context)),
             ]
                 .map((e) => SidebarXItem(
                       iconBuilder: (_, __) => e.item1,
@@ -185,7 +186,7 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
   void _onCheckDigitalProfileSuccess(bool status) {
     if (!status) {
       showErrorDialog(context,
-          title: "Failed", description: "You don't have digital profile");
+          title: appLocal(context).failed, description: appLocal(context).youDontHaveDigitalProfile);
     } else {
       context.router.push(const MyDigitalProfileRoute());
     }
@@ -216,7 +217,7 @@ class _DashboardEndDrawerState extends State<DashboardEndDrawer>
           Uri.parse('https://docs.dprofiles.xyz/privacy-and-policy');
 
       if (!await launchUrl(url)) {
-        throw Exception('Could not launch $url');
+        throw Exception('Couch not launch $url');
       }
     } catch (e) {
       log(e.toString());

@@ -1,5 +1,6 @@
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
@@ -29,9 +30,9 @@ class TabBarChatHistoryMyAiCharacter extends StatelessWidget {
             indicatorColor: colorScheme(context).primary,
             tabBarIndicatorSize: TabBarIndicatorSize.tab,
           ),
-          tabs: const [
-            Text('Your AI Character'),
-            Text('Others'),
+          tabs:  [
+            Text(appLocal(context).yourAiCharacters),
+            Text(appLocal(context).others),
           ],
         ),
       ),

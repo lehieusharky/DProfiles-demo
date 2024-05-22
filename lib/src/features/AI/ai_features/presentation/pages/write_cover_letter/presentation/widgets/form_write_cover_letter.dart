@@ -43,7 +43,7 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
               AuthField(
                 autoFocus: true,
                 controller: _jobTitleController,
-                title: 'JOB TITLE',
+                title:  appLocal(context).jobTitle.toUpperCase(),
                 textInputAction: TextInputAction.next,
                 validator: (about) {
                   if (about == null || about.isEmpty) {
@@ -52,7 +52,7 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
                     return null;
                   }
                 },
-                hint: 'Which job are you applying for',
+                hint: appLocal(context).whichJobAreYouApplingFor,
               ),
               Padding(
                 padding: context.padding(top: 32),
@@ -60,7 +60,7 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
                   controller: _aboutYourSelfController,
                   title: appLocal(context).aboutYourSelf.toUpperCase(),
                   textInputAction: TextInputAction.next,
-                  hint: 'Some thing about your self and your experience',
+                  hint: appLocal(context).someThingAboutYourselfAndYourExperience,
                   maxLines: 3,
                   validator: (style) {
                     if (style == null || style.isEmpty) {
@@ -78,7 +78,7 @@ class _FormCoverLetterState extends State<FormCoverLetter> {
                   title: appLocal(context).prompt.toUpperCase(),
                   maxLines: 2,
                   keyboardType: TextInputType.number,
-                  hint: 'How many words for this?',
+                  hint: appLocal(context).howManyWordsForThis,
                 ),
               ),
               Padding(

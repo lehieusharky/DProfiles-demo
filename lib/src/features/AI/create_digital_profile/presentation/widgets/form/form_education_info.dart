@@ -94,7 +94,7 @@ class _FormEducationInfoState extends State<FormEducationInfo> {
                               controller: _degreeController,
                               textInputAction: TextInputAction.next,
                               title: appLocal(context).degree.toUpperCase(),
-                              hint: 'Degree',
+                              hint: appLocal(context).degree,
                               validator: (data) {
                                 if (data == null || data.isEmpty) {
                                   return appLocal(context).fieldCannotBeEmpty;

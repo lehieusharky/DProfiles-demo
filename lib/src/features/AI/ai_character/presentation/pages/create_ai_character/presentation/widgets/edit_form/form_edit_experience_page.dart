@@ -53,7 +53,7 @@ class _FormEditExperiencePageState extends State<FormEditExperiencePage> {
       useAppBar: true,
       canBack: true,
       horizontalMargin: 20,
-      appBarTitle: 'Experience',
+      appBarTitle: appLocal(context).experience,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -64,7 +64,7 @@ class _FormEditExperiencePageState extends State<FormEditExperiencePage> {
                 children: [
                   AuthField(
                       controller: _companyNameController,
-                      title: 'Company'.toUpperCase(),
+                      title: appLocal(context).company.toUpperCase(),
                       textInputAction: TextInputAction.next,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -73,14 +73,14 @@ class _FormEditExperiencePageState extends State<FormEditExperiencePage> {
                           return null;
                         }
                       },
-                      hint: 'Company name'),
+                      hint: appLocal(context).companyName),
                   Padding(
                     padding: context.padding(top: 32),
                     child: AuthField(
                       controller: _titleController,
                       textInputAction: TextInputAction.next,
-                      title: 'Title'.toUpperCase(),
-                      hint: 'Your title',
+                      title: appLocal(context).title.toUpperCase(),
+                      hint: appLocal(context).yourTitle,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return appLocal(context).fieldCannotBeEmpty;
@@ -95,7 +95,7 @@ class _FormEditExperiencePageState extends State<FormEditExperiencePage> {
                     child: AuthField(
                       controller: _startDateController,
                       textInputAction: TextInputAction.next,
-                      title: 'Start date'.toUpperCase(),
+                      title: appLocal(context).startDate.toUpperCase(),
                       hint: appLocal(context).dateTimeFormatddmmyyyyy,
                       validator: (date) => date.validationForDDMMYYYYY(context),
                     ),
@@ -105,7 +105,7 @@ class _FormEditExperiencePageState extends State<FormEditExperiencePage> {
                     child: AuthField(
                       controller: _endDateController,
                       textInputAction: TextInputAction.next,
-                      title: 'End date'.toUpperCase(),
+                      title: appLocal(context).endDate.toUpperCase(),
                       hint: appLocal(context).dateTimeFormatddmmyyyyy,
                       validator: (date) => date.validationForDDMMYYYYY(context),
                     ),
@@ -115,7 +115,7 @@ class _FormEditExperiencePageState extends State<FormEditExperiencePage> {
                     child: AuthField(
                         controller: _descriptionController,
                         textInputAction: TextInputAction.done,
-                        title: 'Description'.toUpperCase(),
+                        title: appLocal(context).description.toUpperCase(),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return appLocal(context).fieldCannotBeEmpty;
@@ -123,13 +123,13 @@ class _FormEditExperiencePageState extends State<FormEditExperiencePage> {
                             return null;
                           }
                         },
-                        hint: 'Description'),
+                        hint: appLocal(context).description),
                   ),
                   Padding(
                     padding: context.padding(top: 16, bottom: 50),
                     child: AppFlatButton(context).elevatedButton(
                         width: context.width,
-                        title: 'Add',
+                        title: appLocal(context).add,
                         onPressed: () => _save(context)),
                   ),
                 ],

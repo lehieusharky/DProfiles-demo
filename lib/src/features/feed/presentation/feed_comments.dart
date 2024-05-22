@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/feed/data/models/feed_comment_model.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/bloc/feed_comment_bloc.dart';
@@ -36,7 +37,7 @@ class FeedComments extends StatelessWidget {
     if (state.isEmpty) {
       return Center(
         child: Text(
-          'No comments yet',
+          appLocal(context).noCommentsYet,
           style: AppFont().fontTheme(context).bodyLarge,
         ),
       );
@@ -47,7 +48,7 @@ class FeedComments extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-            'Comments',
+            appLocal(context).comments,
             style: AppFont()
                 .fontTheme(context, weight: FontWeight.w600)
                 .headlineMedium,

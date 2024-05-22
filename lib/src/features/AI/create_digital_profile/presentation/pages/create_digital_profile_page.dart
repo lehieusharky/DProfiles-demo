@@ -52,7 +52,7 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
           if (state is CreateDigitalProfileError) {
             showErrorDialog(
               context,
-              title: state.title ?? 'Error',
+              title: state.title ?? appLocal(context).error,
               description: state.message.first,
             );
           }
@@ -62,7 +62,7 @@ class _CreateDigitalProfilePageState extends State<CreateDigitalProfilePage>
           child: MyScaffold(
             useAppBar: true,
             canBack: true,
-            appBarTitle: 'Create Digital Profile',
+            appBarTitle: appLocal(context).createDigitalProfile,
             body: NestedScrollView(
               headerSliverBuilder:
                   (BuildContext context, bool innerBoxIsScrolled) => [

@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -21,44 +22,44 @@ class ReportDialog extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'Select a reason',
-                  style: TextStyle(
+                 Text(
+                  appLocal(context).selectAReason,
+                  style: const TextStyle(
                     fontSize: 18.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 IconButton(
-                  icon: Icon(Icons.close),
+                  icon: const Icon(Icons.close),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
                 ),
               ],
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             DropdownButtonFormField<String>(
               isExpanded: true,
-              items: const [
+              items:  [
                 DropdownMenuItem(
-                  value: 'Hate and harassment',
-                  child: Text('Hate and harassment'),
+                  value: appLocal(context).hateAndHarassment,
+                  child: Text(appLocal(context).hateAndHarassment),
                 ),
                 DropdownMenuItem(
-                  value: 'Suicide and Self-harm',
-                  child: Text('Suicide and Self-harm'),
+                  value: appLocal(context).suicideAndSelfHarm,
+                  child: Text(appLocal(context).suicideAndSelfHarm),
                 ),
                 DropdownMenuItem(
-                  value: 'Disordered eating and unhealthy body image',
-                  child: Text('Disordered eating and unhealthy body image'),
+                  value: appLocal(context).disorderedEatingAndUnhealthyBodyImage,
+                  child: Text(appLocal(context).disorderedEatingAndUnhealthyBodyImage),
                 ),
                 DropdownMenuItem(
-                  value: 'Dangerous activities and challenges',
-                  child: Text('Dangerous activities and challenges'),
+                  value: appLocal(context).dangerousActivitiesAndChallenges,
+                  child: Text(appLocal(context).dangerousActivitiesAndChallenges),
                 ),
                 DropdownMenuItem(
-                  value: 'Nudity and sexual content',
-                  child: Text('Nudity and sexual content'),
+                  value: appLocal(context).nudityAndSexualContent,
+                  child: Text(appLocal(context).nudityAndSexualContent),
                 ),
               ],
               onChanged: (value) {
@@ -92,7 +93,7 @@ class ReportDialog extends StatelessWidget {
                         : colorScheme(context).outline),
                 fillColor: Colors.transparent,
                 filled: true,
-                hintText: 'Select a reason',
+                hintText: appLocal(context).selectAReason,
                 errorStyle: AppFont().fontTheme(context).bodyMedium,
                 errorBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(context.sizeWidth(12)),
@@ -116,7 +117,7 @@ class ReportDialog extends StatelessWidget {
                 Navigator.of(context).pop();
                 onPressed?.call();
               },
-              title: 'Submit',
+              title: appLocal(context).submit,
             ),
           ],
         ),

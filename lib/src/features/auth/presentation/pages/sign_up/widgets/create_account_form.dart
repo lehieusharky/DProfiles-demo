@@ -42,8 +42,8 @@ class _CreateAccountFormState extends State<CreateAccountForm> {
               inputFormatters: [
                 FilteringTextInputFormatter.deny(RegExp(r'\s')),
               ],
-              title: 'USERNAME',
-              hint: 'Enter Your Username',
+              title: appLocal(context).userName.toUpperCase(),
+              hint: appLocal(context).enterYourUserName,
               autoFocus: true,
               textInputAction: TextInputAction.next,
               validator: (name) => name != null && name.isNotEmpty

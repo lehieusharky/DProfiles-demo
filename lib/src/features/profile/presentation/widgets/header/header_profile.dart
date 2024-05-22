@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/header/title_wallet_follower_profile.dart';
@@ -51,7 +52,7 @@ class _HeaderProfileState extends State<HeaderProfile> {
                     Padding(
                       padding: context.padding(vertical: 12),
                       child: Text(
-                        userInfo!.headline ?? 'Create Your Headline now',
+                        userInfo!.headline ?? appLocal(context).createYourHeadlineNow,
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
                         style: AppFont().fontTheme(context).bodyLarge,

@@ -5,6 +5,7 @@ import 'package:demo_dprofiles/src/features/edit_profile/presentation/bloc/edit_
 import 'package:demo_dprofiles/src/features/edit_profile/presentation/widgets/forms/form_about.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:path/path.dart';
 
 @RoutePage()
 class AboutPage extends StatefulWidget {
@@ -20,12 +21,12 @@ class _AboutPageState extends State<AboutPage> {
     return BlocProvider<EditProfileBloc>(
       create: (context) =>
           injector.get<EditProfileBloc>()..add(const EditProfileGetUserInfo()),
-      child: const MyScaffold(
+      child:  MyScaffold(
         horizontalMargin: 20,
         useAppBar: true,
         canBack: true,
-        appBarTitle: 'About',
-        body: SingleChildScrollView(child: FormAbout()),
+        appBarTitle: appLocal(context).about,
+        body: const SingleChildScrollView(child: FormAbout()),
       ),
     );
   }

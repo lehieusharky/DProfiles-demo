@@ -47,8 +47,8 @@ class _FormAddBasicInfoState extends State<FormAddBasicInfo>
           if (_userInfo.walletAddress == null &&
               AppConnectWalletService().walletAddress == null) {
             showErrorDialog(context,
-                    title: 'Cannot create digital profile',
-                    description: 'You have to connect wallet before')
+                    title: appLocal(context).cannotCreateDigitalProfile,
+                    description: appLocal(context).youHaveToConnectWalletBefore)
                 .then(
               (value) => Navigator.pop(context),
             );
@@ -68,7 +68,7 @@ class _FormAddBasicInfoState extends State<FormAddBasicInfo>
                 Padding(
                   padding: context.padding(bottom: 24),
                   child: Text(
-                    'Add Basic Info',
+                    appLocal(context).addBasicInfo,
                     style: AppFont()
                         .fontTheme(context, weight: FontWeight.bold)
                         .labelMedium,

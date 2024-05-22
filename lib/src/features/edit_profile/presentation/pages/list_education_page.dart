@@ -38,7 +38,7 @@ class _ListEducationPageState extends State<ListEducationPage> {
               useAppBar: true,
               canBack: true,
               horizontalMargin: 20,
-              appBarTitle: 'Educations',
+              appBarTitle: appLocal(context).educationInformation,
               body: (educations == null)
                   ? const MyLoading()
                   : Column(
@@ -47,7 +47,7 @@ class _ListEducationPageState extends State<ListEducationPage> {
                           padding: context.padding(vertical: 32, bottom: 12),
                           child: AppFlatButton(context).elevatedButton(
                               width: context.width,
-                              title: 'Add New Education',
+                              title: appLocal(context).addNewEducation,
                               onPressed: () => context.router
                                   .push(const AddNewEducationRoute())
                                   .then((value) => value != null

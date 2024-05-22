@@ -77,8 +77,8 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
                 Padding(
                   padding: context.padding(top: 32),
                   child: AuthField(
-                      title: 'PAY',
-                      hint: 'Pay per job',
+                      title: appLocal(context).pay.toUpperCase(),
+                      hint: appLocal(context).payPerJob,
                       autoFocus: true,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -95,9 +95,9 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
                   padding: context.padding(top: 32),
                   child: AuthField(
                     controller: _salaryController,
-                    title: 'SALARY',
+                    title: appLocal(context).salary.toUpperCase(),
                     keyboardType: TextInputType.number,
-                    hint: '\$10,000',
+                    hint:  appLocal(context).salaryHint,
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return appLocal(context).fieldCannotBeEmpty;
@@ -117,14 +117,14 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
                       Expanded(
                         child: AppOutlineButton(context).elevatedButton(
                           onPressed: () => Navigator.pop(context),
-                          title: 'Cancel',
+                          title: appLocal(context).cancel,
                         ),
                       ),
                       context.sizedBox(width: 16),
                       Expanded(
                         child: MyButton(
                           onPressed: () => _save(state),
-                          title: 'Save',
+                          title: appLocal(context).save,
                         ),
                       ),
                     ],
@@ -143,7 +143,7 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          '/hour',
+          appLocal(context).hour,
           style: AppFont()
               .fontTheme(context, color: colorScheme(context).outline)
               .bodyMedium,
@@ -157,7 +157,7 @@ class _OpenToWorkFormState extends State<OpenToWorkForm> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'Open to work',
+          appLocal(context).openToWork,
           style: AppFont().fontTheme(context).bodyLarge,
         ),
         Switch.adaptive(

@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
@@ -30,7 +31,7 @@ class NftsPage extends StatelessWidget {
             child: Assets.images.myWallet.nftDemo.image(),
           ),
           Text(
-            'Auto technology',
+            appLocal(context).autoTechnology,
             style:
                 AppFont().fontTheme(context, weight: FontWeight.w600).bodyLarge,
           ),
@@ -40,7 +41,7 @@ class NftsPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Price',
+                  appLocal(context).price,
                   style: AppFont()
                       .fontTheme(context, weight: FontWeight.w600)
                       .bodyMedium,
@@ -60,13 +61,13 @@ class NftsPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Author',
+                appLocal(context).author,
                 style: AppFont()
                     .fontTheme(context, weight: FontWeight.w600)
                     .bodyMedium,
               ),
               Text(
-                'Dean',
+                appLocal(context).dean,
                 style: AppFont()
                     .fontTheme(context,
                         color: colorScheme(context).outline,

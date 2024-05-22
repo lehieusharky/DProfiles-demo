@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/user_info_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/bloc/profile_bloc.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
@@ -54,7 +55,7 @@ class _NameProfileState extends State<NameProfile> {
     }
 
     if (name.isEmpty) {
-      name = 'Your Name';
+      name = appLocal(context).yourName;
     }
 
     return Column(

@@ -82,7 +82,7 @@ class _FormWriteProfileState extends State<FormWriteProfile> {
                       return null;
                     }
                   },
-                  hint: 'How many words for this?',
+                  hint: appLocal(context).howManyWordsForThis,
                 ),
               ),
               Padding(

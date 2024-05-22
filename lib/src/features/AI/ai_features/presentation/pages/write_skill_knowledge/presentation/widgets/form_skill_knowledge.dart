@@ -41,7 +41,7 @@ class _FormSkillKnowledgeState extends State<FormSkillKnowledge> {
               AuthField(
                 autoFocus: true,
                 controller: _jobTitleController,
-                title: 'JOB TITLE',
+                title: appLocal(context).jobTitle.toUpperCase(),
                 textInputAction: TextInputAction.done,
                 validator: (about) {
                   if (about == null || about.isEmpty) {
@@ -50,7 +50,7 @@ class _FormSkillKnowledgeState extends State<FormSkillKnowledge> {
                     return null;
                   }
                 },
-                hint: 'Which job are you apply for?',
+                hint: appLocal(context).whichJobAreYouApplingFor,
               ),
               Padding(
                 padding: context.padding(vertical: 32),

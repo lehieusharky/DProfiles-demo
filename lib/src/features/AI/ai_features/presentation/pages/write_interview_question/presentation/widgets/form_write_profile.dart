@@ -45,7 +45,7 @@ class _FormWriteInterviewQuestionState
               AuthField(
                   autoFocus: true,
                   controller: _jobTitleController,
-                  title: 'JOB TITLE',
+                  title: appLocal(context).jobTitle.toUpperCase(),
                   textInputAction: TextInputAction.next,
                   validator: (about) {
                     if (about == null || about.isEmpty) {
@@ -54,14 +54,14 @@ class _FormWriteInterviewQuestionState
                       return null;
                     }
                   },
-                  hint: 'What job are you applying for?'),
+                  hint: appLocal(context).whatJobAreYouApplingFor),
               Padding(
                 padding: context.padding(top: 32),
                 child: AuthField(
                   controller: _interviewQuestionController,
-                  title: 'INTERVIEW QUESTION',
+                  title: appLocal(context).interviewQuestion.toUpperCase(),
                   textInputAction: TextInputAction.done,
-                  hint: 'Interview question about',
+                  hint: appLocal(context).interviewQuestionAbout,
                   validator: (style) {
                     if (style == null || style.isEmpty) {
                       return appLocal(context).fieldCannotBeEmpty;

@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
@@ -42,9 +43,9 @@ class _TitleWalletFollowerProfileState
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Tuple2('Follower', widget.follower),
-              Tuple2('Following', widget.following),
-              Tuple2('Post', widget.post),
+              Tuple2(appLocal(context).follwer, widget.follower),
+              Tuple2(appLocal(context).following, widget.following),
+              Tuple2(appLocal(context).post, widget.post),
             ].map((e) => _buildFollow(e.item1, e.item2)).toList(),
           ),
         ),
@@ -79,7 +80,7 @@ class _TitleWalletFollowerProfileState
     return Padding(
       padding: context.padding(vertical: 2),
       child: Text(
-        "Wallet: ${widget.walletAddress}",
+        "${appLocal(context).wallet}: ${widget.walletAddress}",
         style: AppFont()
             .fontTheme(context,
                 weight: FontWeight.w600, color: colorScheme(context).outline)
@@ -93,7 +94,7 @@ class _TitleWalletFollowerProfileState
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "Title: ${widget.title}",
+          "${appLocal(context).title}: ${widget.title}",
           style: AppFont()
               .fontTheme(context,
                   weight: FontWeight.w600, color: colorScheme(context).outline)

@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_divider.dart';
 import 'package:demo_dprofiles/src/features/feed/data/models/feed_comment_model.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/cubit/focus_comment_cubit.dart';
@@ -21,7 +22,7 @@ class CommentItem extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 20,
             ),
             const SizedBox(width: 10),
@@ -66,7 +67,7 @@ class CommentItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                "Reply",
+                appLocal(context).reply,
                 style: AppFont()
                     .fontTheme(context, color: MyColor.grayB1B5C3)
                     .bodyMedium,

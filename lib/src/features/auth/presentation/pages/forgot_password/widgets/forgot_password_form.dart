@@ -1,3 +1,4 @@
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/pages/cubit/forgot_password_cubit.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:flutter/material.dart';
@@ -21,8 +22,8 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         AuthField(
-          title: 'ENTER YOUR ACCOUNT EMAIL',
-          hint: 'Your email',
+          title:  appLocal(context).enterYourAccountEmail.toUpperCase(),
+          hint: appLocal(context).yourEmail,
           suffixIcon: const Icon(Icons.email_outlined),
           controller: cubit.emailController,
         ),
