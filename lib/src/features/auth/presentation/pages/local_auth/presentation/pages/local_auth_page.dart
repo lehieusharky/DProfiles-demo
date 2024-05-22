@@ -32,7 +32,7 @@ class _LocalAuthPageState extends State<LocalAuthPage> {
 
     try {
       authenticated = await auth.authenticate(
-        localizedReason: appLocal(context).letOSDetermineAuthMethod,
+        localizedReason: 'Let OS determine authentication method',
         options: const AuthenticationOptions(
           stickyAuth: true,
           useErrorDialogs: true,
