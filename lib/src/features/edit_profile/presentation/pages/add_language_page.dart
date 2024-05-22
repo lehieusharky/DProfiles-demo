@@ -16,12 +16,12 @@ class AddLanguagePage extends StatelessWidget {
     return BlocProvider<EditProfileBloc>(
       create: (context) => injector.get<EditProfileBloc>()
         ..add(const EditProfileGetMetaLanguage()),
-      child: const MyScaffold(
+      child:  MyScaffold(
         horizontalMargin: 20,
         useAppBar: true,
         canBack: true,
-        appBarTitle: 'Language',
-        body: SingleChildScrollView(child: FormLanguage()),
+        appBarTitle: appLocal(context).language,
+        body: const SingleChildScrollView(child: FormLanguage()),
       ),
     );
   }

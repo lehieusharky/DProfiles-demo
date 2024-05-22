@@ -45,15 +45,15 @@ class _FormLanguageState extends State<FormLanguage> {
         if (state is EditProfileAddNewLanguageSuccess) {
           Navigator.pop(context);
           showMyDialog(context,
-              title: const Text('Add success'),
-              content: const Text('You have add new language'),
+              title:  Text(appLocal(context).addSuccess),
+              content:  Text(appLocal(context).youHaveAddNewLanguage),
               action: [
                 TextButton(
                     onPressed: () {
                       Navigator.pop(context);
                       Navigator.pop(context, state.languageModel);
                     },
-                    child: const Text('OK'))
+                    child:  Text(appLocal(context).ok))
               ]);
         }
       },
@@ -67,8 +67,8 @@ class _FormLanguageState extends State<FormLanguage> {
               Padding(
                 padding: context.padding(top: 32),
                 child: AuthField(
-                  title: 'Language',
-                  hint: 'Add new language',
+                  title: appLocal(context).language,
+                  hint: appLocal(context).addNewLanguage,
                   keyboardType: TextInputType.number,
                   autoFocus: true,
                   validator: (value) {
@@ -76,7 +76,7 @@ class _FormLanguageState extends State<FormLanguage> {
                       return appLocal(context).fieldCannotBeEmpty;
                     }
                     if (int.parse(value) < 0 || int.parse(value) > 78) {
-                      return 'Your choose is invalid';
+                      return appLocal(context).yourChooseIsInvalid;
                     } else {
                       return null;
                     }
@@ -113,14 +113,14 @@ class _FormLanguageState extends State<FormLanguage> {
                     Expanded(
                       child: AppOutlineButton(context).elevatedButton(
                         onPressed: () => Navigator.pop(context),
-                        title: 'Cancel',
+                        title: appLocal(context).cancel,
                       ),
                     ),
                     context.sizedBox(width: 16),
                     Expanded(
                       child: MyButton(
                         onPressed: () => _save(),
-                        title: 'Save',
+                        title: appLocal(context).save,
                       ),
                     ),
                   ],

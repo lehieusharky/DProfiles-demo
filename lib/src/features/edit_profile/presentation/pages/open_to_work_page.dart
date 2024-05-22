@@ -15,12 +15,12 @@ class OpenToWorkPage extends StatelessWidget {
     return BlocProvider<EditProfileBloc>(
       create: (context) =>
           injector.get<EditProfileBloc>()..add(const EditProfileGetUserInfo()),
-      child: const MyScaffold(
+      child:  MyScaffold(
         horizontalMargin: 20,
         canBack: true,
         useAppBar: true,
-        appBarTitle: 'Open to work',
-        body: SingleChildScrollView(
+        appBarTitle: appLocal(context).openToWork,
+        body: const SingleChildScrollView(
           child: OpenToWorkForm(),
         ),
       ),

@@ -36,7 +36,7 @@ class AutoGenerationHistoryDetailPage extends StatelessWidget {
           return MyScaffold(
             useAppBar: true,
             canBack: true,
-            appBarTitle: 'History details',
+            appBarTitle: appLocal(context).historyDetails,
             body: state == null
                 ? const MyLoading()
                 : Padding(

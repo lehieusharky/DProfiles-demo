@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/common/simple_status/simple_state_status.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_text_form_field.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/bloc/feed_comment_bloc.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/cubit/feed_detail_cubit.dart';
@@ -34,7 +35,7 @@ class CommentBar extends StatelessWidget {
                 child: MyTextFormField(
                   focusNode: bloc.focusNode,
                   controller: bloc.commentTextController,
-                  hintText: 'Write a comment...',
+                  hintText: appLocal(context).writeAComment,
                 ),
               ),
               _buildSubmitButton(context, state),

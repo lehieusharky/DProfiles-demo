@@ -53,7 +53,7 @@ class _ListExperiencePageState extends State<ListExperiencePage> {
             useAppBar: true,
             canBack: true,
             horizontalMargin: 20,
-            appBarTitle: 'Experience',
+            appBarTitle: appLocal(context).experiences,
             body: (state == null)
                 ? const MyLoading()
                 : Column(
@@ -62,7 +62,7 @@ class _ListExperiencePageState extends State<ListExperiencePage> {
                         padding: context.padding(vertical: 32, bottom: 12),
                         child: AppFlatButton(context).elevatedButton(
                             width: context.width,
-                            title: 'Add New Experience',
+                            title: appLocal(context).addNewExperience,
                             onPressed: () => context.router
                                 .push(const AddNewExperienceRoute())
                                 .then((value) => value != null
@@ -94,19 +94,19 @@ class _ListExperiencePageState extends State<ListExperiencePage> {
 
   void _deleteExpe(BuildContext context, ExperienceModel experience) async {
     await showMyDialog<String?>(context,
-        title: const Text('Are you want to delete your experience?'),
-        content: const Text('Be careful when click OK'),
+        title:  Text(appLocal(context).areYouWantToDeleteYourExperience),
+        content:  Text(appLocal(context).beCarefullWhenClickOk),
         action: [
           TextButton(
-            onPressed: () => Navigator.pop(context, 'ok'),
-            child: const Text('OK'),
+            onPressed: () => Navigator.pop(context, appLocal(context).ok),
+            child:  Text(appLocal(context).ok),
           ),
           AppFlatButton(context).elevatedButton(
-            title: 'Cancel',
-            onPressed: () => Navigator.pop(context, 'cancel'),
+            title: appLocal(context).cancel,
+            onPressed: () => Navigator.pop(context, appLocal(context).cancel),
           ),
         ]).then((value) {
-      if (value == 'ok') {
+      if (value == appLocal(context).ok) {
         context
             .read<ProfileBloc>()
             .add(ProfileDeleteExperience(experience.id!));

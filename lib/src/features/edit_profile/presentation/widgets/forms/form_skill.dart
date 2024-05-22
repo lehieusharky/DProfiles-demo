@@ -39,15 +39,15 @@ class _FormSkillState extends State<FormSkill> {
         if (state is EditProfileAddNewSkillSuccess) {
           Navigator.pop(context);
           showMyDialog(context,
-              title: const Text('Add success'),
-              content: const Text('You have add new skill'),
+              title:  Text(appLocal(context).addSuccess),
+              content: Text(appLocal(context).youHaveAddNewSkill),
               action: [
                 TextButton(
                     onPressed: () {
                       Navigator.pop(context);
                       Navigator.pop(context, state.skillModel);
                     },
-                    child: const Text('OK'))
+                    child:  Text(appLocal(context).ok))
               ]);
         }
       },
@@ -61,8 +61,8 @@ class _FormSkillState extends State<FormSkill> {
               Padding(
                 padding: context.padding(top: 32),
                 child: AuthField(
-                  title: 'Skill',
-                  hint: 'Write your skill content',
+                  title: appLocal(context).skill,
+                  hint: appLocal(context).writeYourSkillContent,
                   maxLines: 2,
                   keyboardType: TextInputType.multiline,
                   autoFocus: true,
@@ -84,14 +84,14 @@ class _FormSkillState extends State<FormSkill> {
                     Expanded(
                       child: AppOutlineButton(context).elevatedButton(
                         onPressed: () => Navigator.pop(context),
-                        title: 'Cancel',
+                        title: appLocal(context).cancel,
                       ),
                     ),
                     context.sizedBox(width: 16),
                     Expanded(
                       child: MyButton(
                         onPressed: () => _save(),
-                        title: 'Save',
+                        title: appLocal(context).save,
                       ),
                     ),
                   ],

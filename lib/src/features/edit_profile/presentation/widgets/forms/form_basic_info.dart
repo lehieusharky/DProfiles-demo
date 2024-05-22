@@ -63,8 +63,8 @@ class _FormEditBasicInfoState extends State<FormEditBasicInfo> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 AuthField(
-                  title: 'USERNAME',
-                  hint: 'Your Username',
+                  title: appLocal(context).userName.toUpperCase(),
+                  hint: appLocal(context).yourName,
                   keyboardType: TextInputType.text,
                   textInputAction: TextInputAction.next,
                   autoFocus: true,
@@ -80,8 +80,8 @@ class _FormEditBasicInfoState extends State<FormEditBasicInfo> {
                 Padding(
                   padding: context.padding(top: 32),
                   child: AuthField(
-                    title: 'FIRST NAME',
-                    hint: 'Your First Name',
+                    title: appLocal(context).firstName.toUpperCase(),
+                    hint: appLocal(context).yourFirstName,
                     textInputAction: TextInputAction.next,
                     keyboardType: TextInputType.text,
                     controller: _firstNameController,
@@ -90,8 +90,8 @@ class _FormEditBasicInfoState extends State<FormEditBasicInfo> {
                 Padding(
                   padding: context.padding(top: 32),
                   child: AuthField(
-                    title: 'LAST NAME',
-                    hint: 'Your Last Name',
+                    title: appLocal(context).lastName.toUpperCase(),
+                    hint:  appLocal(context).yourLastName,
                     textInputAction: TextInputAction.next,
                     keyboardType: TextInputType.text,
                     controller: _lastNameController,
@@ -100,8 +100,8 @@ class _FormEditBasicInfoState extends State<FormEditBasicInfo> {
                 Padding(
                   padding: context.padding(top: 32),
                   child: AuthField(
-                    title: 'HEADLINE',
-                    hint: 'Headline',
+                    title: appLocal(context).headline.toUpperCase(),
+                    hint: appLocal(context).headline,
                     maxLines: 5,
                     textInputAction: TextInputAction.next,
                     keyboardType: TextInputType.text,
@@ -111,8 +111,8 @@ class _FormEditBasicInfoState extends State<FormEditBasicInfo> {
                 Padding(
                   padding: context.padding(top: 32),
                   child: AuthField(
-                    title: 'JOB TITLE',
-                    hint: 'Your job title',
+                    title: appLocal(context).jobTitle.toUpperCase(),
+                    hint: appLocal(context).yourJobTitle,
                     textInputAction: TextInputAction.next,
                     keyboardType: TextInputType.text,
                     validator: (value) {
@@ -128,8 +128,8 @@ class _FormEditBasicInfoState extends State<FormEditBasicInfo> {
                 Padding(
                   padding: context.padding(top: 32),
                   child: AuthField(
-                    title: 'NATIONALITY',
-                    hint: 'Your nationality',
+                    title: appLocal(context).nationality.toUpperCase(),
+                    hint: appLocal(context).yourNationality,
                     keyboardType: TextInputType.text,
                     textInputAction: TextInputAction.next,
                     validator: (value) {
@@ -190,14 +190,14 @@ class _FormEditBasicInfoState extends State<FormEditBasicInfo> {
                       Expanded(
                         child: AppOutlineButton(context).elevatedButton(
                           onPressed: () => Navigator.pop(context),
-                          title: 'Cancel',
+                          title: appLocal(context).cancel,
                         ),
                       ),
                       context.sizedBox(width: 16),
                       Expanded(
                         child: MyButton(
                           onPressed: () => _save(state),
-                          title: 'Save',
+                          title:  appLocal(context).save,
                         ),
                       ),
                     ],

@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_features/presentation/bloc/ai_features_bloc.dart';
@@ -48,8 +49,8 @@ class _HeaderAutoGenerateState extends State<HeaderAutoGenerate> {
             state is GenerateSkillKnowledgeSuccess) {
           if (_currentPoint == 0) {
             showErrorDialog(context,
-                title: 'Generate failed',
-                description: "You don't have enough token!");
+                title: appLocal(context).generateFailed,
+                description: appLocal(context).youDontHaveEnoughToken);
           } else {
             _scrollController.animateToItem(_currentPoint - 10,
                 duration: const Duration(seconds: 1), curve: Curves.easeInOut);
@@ -80,7 +81,7 @@ class _HeaderAutoGenerateState extends State<HeaderAutoGenerate> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'AI Tools',
+          appLocal(context).aiTools,
           style:
               AppFont().fontTheme(context, weight: FontWeight.bold).titleSmall,
         ),

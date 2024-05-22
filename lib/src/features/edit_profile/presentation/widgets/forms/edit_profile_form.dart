@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/outline_button.dart';
@@ -24,29 +25,29 @@ class _EditProfileFormState extends State<EditProfileForm> {
         Padding(
           padding: context.padding(top: 32),
           child: AuthField(
-              title: 'FIRST NAME',
-              hint: 'Breanna',
+              title: appLocal(context).firstName.toUpperCase(),
+              hint: appLocal(context).firstNameHint,
               controller: _firstNameController),
         ),
         Padding(
           padding: context.padding(top: 32),
           child: AuthField(
-              title: 'LAST NAME',
-              hint: 'Schinner',
+              title: appLocal(context).lastName.toUpperCase(),
+              hint: appLocal(context).lastNameHint,
               controller: _firstNameController),
         ),
         Padding(
           padding: context.padding(top: 32),
           child: AuthField(
-              title: 'TITLE',
-              hint: 'Product Designer',
+              title: appLocal(context).title.toUpperCase(),
+              hint: appLocal(context).titleHint,
               controller: _firstNameController),
         ),
         Padding(
           padding: context.padding(top: 32),
           child: AuthField(
-            title: 'LOCATION',
-            hint: 'US',
+            title: appLocal(context).location.toUpperCase(),
+            hint: appLocal(context).locationHint.toUpperCase(),
             suffixIcon: const Icon(IconsaxOutline.arrow_down_1),
             controller: _firstNameController,
           ),
@@ -54,7 +55,7 @@ class _EditProfileFormState extends State<EditProfileForm> {
         Padding(
           padding: context.padding(top: 32),
           child: AuthField(
-            title: 'BIO',
+            title: appLocal(context).bio.toUpperCase(),
             hint: '',
             maxLines: 2,
             keyboardType: TextInputType.multiline,
@@ -69,14 +70,14 @@ class _EditProfileFormState extends State<EditProfileForm> {
               Expanded(
                 child: AppOutlineButton(context).elevatedButton(
                   onPressed: () {},
-                  title: 'Cancel',
+                  title: appLocal(context).cancel,
                 ),
               ),
               context.sizedBox(width: 16),
               Expanded(
                 child: MyButton(
                   onPressed: () {},
-                  title: 'Save',
+                  title: appLocal(context).save,
                 ),
               ),
             ],

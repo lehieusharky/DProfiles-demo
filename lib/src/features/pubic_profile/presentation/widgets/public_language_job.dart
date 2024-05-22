@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/data/models/public_user_info_model.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/presentation/bloc/public_profile_bloc.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
@@ -87,7 +88,7 @@ class _PublicFreelancerLanguageProfileState
               Padding(
                 padding: context.padding(left: 8),
                 child: Text(
-                  userInfo?.jobOpenStatus == 1 ? 'Available' : 'Unavailable',
+                  userInfo?.jobOpenStatus == 1 ?  appLocal(context).available :  appLocal(context).unavailable,
                   style: AppFont()
                       .fontTheme(context,
                           weight: FontWeight.bold,

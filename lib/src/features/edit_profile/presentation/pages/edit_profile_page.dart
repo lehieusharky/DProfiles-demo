@@ -20,12 +20,12 @@ class _EditProfilePageState extends State<EditProfilePage> {
     return BlocProvider<EditProfileBloc>(
       create: (context) =>
           injector.get<EditProfileBloc>()..add(const EditProfileGetUserInfo()),
-      child: const MyScaffold(
+      child:  MyScaffold(
         horizontalMargin: 20,
         useAppBar: true,
         canBack: true,
-        appBarTitle: 'Basic information',
-        body: SingleChildScrollView(child: FormEditBasicInfo()),
+        appBarTitle: appLocal(context).basicInformation,
+        body: const SingleChildScrollView(child: FormEditBasicInfo()),
       ),
     );
   }

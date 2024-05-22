@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/feed_menu_item.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +35,7 @@ class _FeedMenuState extends State<FeedMenu> {
       ),
       menuChildren: [
         FeedMenuItem(
-          title: 'Report',
+          title: appLocal(context).report,
           onPressed: () {
             menuController.close();
             _openReportDialog(context);

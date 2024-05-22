@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_button.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/widgets/auth_field.dart';
 import 'package:flutter/material.dart';
@@ -24,22 +25,22 @@ class _UpdateNewPasswordFormState extends State<UpdateNewPasswordForm> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         AuthField(
-            title: 'EMAIL',
-            hint: 'Your email',
+            title: appLocal(context).email.toUpperCase(),
+            hint: appLocal(context).yourEmail,
             controller: cubit.emailController),
         Padding(
           padding: context.padding(top: 32),
           child: AuthField(
-              title: 'NEW PASSWORD',
-              hint: 'Password',
+              title: appLocal(context).newPassword.toUpperCase(),
+              hint:  appLocal(context).password.toUpperCase(),
               isPasswordField: true,
               controller: cubit.passwordController),
         ),
         Padding(
           padding: context.padding(top: 32),
           child: AuthField(
-              title: 'CONFIRM PASSWORD',
-              hint: 'Password',
+              title: appLocal(context).confirmPassword.toUpperCase(),
+              hint: appLocal(context).password,
               isPasswordField: true,
               controller: cubit.confirmPasswordController),
         ),
@@ -59,7 +60,7 @@ class _UpdateNewPasswordFormState extends State<UpdateNewPasswordForm> {
           width: context.width,
           enabled: state.submitEnabled,
           onPressed: () => cubit.resetPassword(),
-          title: 'Continue',
+          title: appLocal(context).continueButton,
         );
       },
     );

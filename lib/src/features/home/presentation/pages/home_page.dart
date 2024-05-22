@@ -40,11 +40,11 @@ class _HomePageState extends State<HomePage>
             slivers: [
               SliverList(
                 delegate: SliverChildListDelegate(
-                  const [
-                    HomeBanner(),
-                    TitleHome(title: 'Discover'),
-                    TabBarHome(),
-                    HomeDiscover(),
+                   [
+                    const HomeBanner(),
+                    TitleHome(title: appLocal(context).discover),
+                    const TabBarHome(),
+                    const HomeDiscover(),
                   ],
                 ),
               ),

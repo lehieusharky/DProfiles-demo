@@ -29,7 +29,7 @@ class _FormTrainingAiState extends State<FormTrainingAi>
           Padding(
             padding: context.padding(bottom: 32),
             child: Text(
-              'Upload your documents to your AI knowledge base',
+              appLocal(context).uploadDocumentToAIKnowledgeDescription,
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.bold)
                   .labelMedium,
@@ -57,7 +57,7 @@ class _FormTrainingAiState extends State<FormTrainingAi>
                       Padding(
                         padding: context.padding(top: 8, bottom: 4),
                         child: Text(
-                          'Upload your file',
+                          appLocal(context).uploadYourFile,
                           style: AppFont()
                               .fontTheme(
                                 context,
@@ -68,7 +68,7 @@ class _FormTrainingAiState extends State<FormTrainingAi>
                         ),
                       ),
                       Text(
-                        'Max 5Mb for 1 file',
+                        appLocal(context).max5MbFor1File,
                         style: AppFont()
                             .fontTheme(context,
                                 color: colorScheme(context).outline)
@@ -92,7 +92,7 @@ class _FormTrainingAiState extends State<FormTrainingAi>
                 ),
                 Expanded(
                     child: Text(
-                        'You can upload text file .pdf or .docx format about specific knowledge your AI will share with the targeted audience, for example: Menu, best pr articles about your store, history of store..',
+                        appLocal(context).uploadTextFileDescription,
                         style: AppFont()
                             .fontTheme(context,
                                 color: colorScheme(context).outline)

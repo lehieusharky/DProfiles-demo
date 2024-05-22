@@ -53,10 +53,11 @@ class _AiCharacterPageState extends State<AiCharacterPage>
             body: NestedScrollView(
               headerSliverBuilder:
                   (BuildContext context, bool innerBoxIsScrolled) => [
-                const MySliverAppBar(
+                MySliverAppBar(
                     height: 50,
                     child: HeaderAICharacterPage(
-                        textGenerated: 'Discover AI Character Bot now!'))
+                        textGenerated:
+                            appLocal(context).discoverAICharacterBotNow))
               ],
               body: Column(
                 children: [

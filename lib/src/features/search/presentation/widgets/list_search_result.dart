@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/search/data/models/search_bar_result_model.dart';
 import 'package:demo_dprofiles/src/features/search/domain/entities/ext_search_result_entity.dart';
@@ -79,7 +80,7 @@ class _ListSearchResultState extends State<ListSearchResult> {
           Padding(
             padding: context.padding(vertical: 5),
             child: Text(
-              'Find your friend profile now',
+               appLocal(context).findYourFriendProfileNow,
               style: AppFont()
                   .fontTheme(context, color: colorScheme(context).outline)
                   .bodyLarge,
@@ -101,7 +102,7 @@ class _ListSearchResultState extends State<ListSearchResult> {
           Padding(
             padding: context.padding(vertical: 5),
             child: Text(
-              'Result is empty. Try another keywords!',
+               appLocal(context).resultIsEmptyTryAnotherKeyword,
               style: AppFont()
                   .fontTheme(context, color: colorScheme(context).outline)
                   .bodyLarge,

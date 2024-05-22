@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/common/simple_status/simple_state_status.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/core/ui/show_my_dialog.dart';
 import 'package:demo_dprofiles/src/features/auth/presentation/pages/forgot_password/pages/cubit/update_new_password_cubit.dart';
@@ -30,8 +31,8 @@ class UpdateNewPasswordPage extends StatelessWidget {
           case SimpleStateStatus.failure:
             showErrorDialog(
               context,
-              title: "Error",
-              description: "Update password failed",
+              title: appLocal(context).error,
+              description: appLocal(context).updatePasswordFailed,
             );
             break;
         }
@@ -64,14 +65,14 @@ class UpdateNewPasswordPage extends StatelessWidget {
             ),
           ),
           BottomNavigationText(
-            content1: "Don’t have an account?   ",
-            content2: 'Sign up for free',
+            content1: appLocal(context).dontHaveAnAccount,
+            content2: appLocal(context).signupForFree,
             onPressed: () => context.router.push(const SignUpRoute()),
           ),
           Padding(
             padding: context.padding(top: 80, bottom: 32),
             child: Text(
-              'New password',
+              appLocal(context).newPassword,
               style: AppFont()
                   .fontTheme(context, weight: FontWeight.w700)
                   .headlineMedium,

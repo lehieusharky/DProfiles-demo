@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/profile/skill_component.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/title_sub_page.dart';
@@ -36,7 +37,7 @@ class _PublicLanguagesComponentState extends State<PublicLanguagesComponent> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const TitleSubPage(title: 'Languages', canEdit: false),
+              TitleSubPage(title:  appLocal(context).languages, canEdit: false),
               context.sizedBox(height: 5),
               if (languages == null)
                 Container()

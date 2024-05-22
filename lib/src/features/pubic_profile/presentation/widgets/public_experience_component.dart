@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/profile/data/models/experiance_model.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/title_sub_page.dart';
@@ -35,7 +36,7 @@ class _PublicExperienceComponentState extends State<PublicExperienceComponent> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const TitleSubPage(title: 'Experience', canEdit: false),
+              TitleSubPage(title:  appLocal(context).experience, canEdit: false),
               context.sizedBox(height: 5),
               if (state == null)
                 Container()

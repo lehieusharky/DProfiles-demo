@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/data/models/public_user_info_model.dart';
 import 'package:demo_dprofiles/src/features/pubic_profile/presentation/bloc/public_profile_bloc.dart';
@@ -52,7 +53,7 @@ class _HeaderPublicProfileState extends State<HeaderPublicProfile> {
                     Padding(
                       padding: context.padding(vertical: 12),
                       child: Text(
-                        userInfo!.headline ?? 'Create Your Headline now',
+                        userInfo!.headline ??  appLocal(context).createYourHeadlineNow,
                         style: AppFont().fontTheme(context).bodyLarge,
                       ),
                     ),

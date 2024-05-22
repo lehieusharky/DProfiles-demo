@@ -21,7 +21,7 @@ class SearchHomePage extends StatelessWidget {
         horizontalMargin: 20,
         useAppBar: true,
         canBack: true,
-        appBarTitle: 'Search',
+        appBarTitle:  appLocal(context).search,
         body: NestedScrollView(
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => [

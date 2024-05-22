@@ -54,7 +54,7 @@ class _FormEditEducationPageState extends State<FormEditEducationPage> {
       useAppBar: true,
       canBack: true,
       horizontalMargin: 20,
-      appBarTitle: 'Edit Education',
+      appBarTitle: appLocal(context).editEducation,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -65,7 +65,7 @@ class _FormEditEducationPageState extends State<FormEditEducationPage> {
                 children: [
                   AuthField(
                       controller: _nameController,
-                      title: 'School'.toUpperCase(),
+                      title: appLocal(context).school.toUpperCase(),
                       textInputAction: TextInputAction.next,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
@@ -81,8 +81,8 @@ class _FormEditEducationPageState extends State<FormEditEducationPage> {
                       controller: _degreeController,
                       textInputAction: TextInputAction.next,
                       keyboardType: TextInputType.number,
-                      title: 'Degree'.toUpperCase(),
-                      hint: 'Degree',
+                      title: appLocal(context).degree.toUpperCase(),
+                      hint: appLocal(context).degree,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return appLocal(context).fieldCannotBeEmpty;
@@ -117,7 +117,7 @@ class _FormEditEducationPageState extends State<FormEditEducationPage> {
                     child: AuthField(
                         controller: _descriptionController,
                         textInputAction: TextInputAction.done,
-                        title: 'Description'.toUpperCase(),
+                        title: appLocal(context).description.toUpperCase(),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return appLocal(context).fieldCannotBeEmpty;
@@ -125,13 +125,13 @@ class _FormEditEducationPageState extends State<FormEditEducationPage> {
                             return null;
                           }
                         },
-                        hint: 'Description'),
+                        hint: appLocal(context).description),
                   ),
                   Padding(
                     padding: context.padding(top: 16, bottom: 50),
                     child: AppFlatButton(context).elevatedButton(
                         width: context.width,
-                        title: 'Save',
+                        title: appLocal(context).save,
                         onPressed: () => _save(context)),
                   ),
                 ],

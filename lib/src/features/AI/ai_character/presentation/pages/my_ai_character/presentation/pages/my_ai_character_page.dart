@@ -65,7 +65,7 @@ class _MyAICharacterPageState extends State<MyAICharacterPage> {
 
   Widget _buildViewHistoryTitle() {
     return Text(
-      'View Chat History',
+      appLocal(context).viewChatHistory,
       style: AppFont().fontTheme(context, weight: FontWeight.w600).titleSmall,
     );
   }

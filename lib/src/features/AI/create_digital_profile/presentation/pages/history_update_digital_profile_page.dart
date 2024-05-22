@@ -6,6 +6,8 @@ import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentati
 import 'package:demo_dprofiles/src/features/AI/create_digital_profile/presentation/widgets/title_history_update_dprofile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:path/path.dart';
+
 
 @RoutePage()
 class HistoryUpdateDigitalProfilePage extends StatelessWidget {
@@ -16,13 +18,13 @@ class HistoryUpdateDigitalProfilePage extends StatelessWidget {
     return BlocProvider<CreateDigitalProfileBloc>(
       create: (context) => injector.get<CreateDigitalProfileBloc>()
         ..add(const GetDProfileUpdateHistory()),
-      child: const MyScaffold(
+      child: MyScaffold(
         useAppBar: true,
         canBack: true,
         horizontalMargin: 20,
-        appBarTitle: 'History update dProfile',
-        body: Column(
-          children: [
+        appBarTitle: appLocal(context).historyUpdateDProfile,
+        body: const Column(
+          children:  [
             TitleHistoryUpdateDProfile(),
             Expanded(child: ListHistoryDProfileUpdate())
           ],

@@ -64,7 +64,7 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
               while (context.router.canPop()) {
                 Navigator.pop(context);
               }
-            }, title: 'Success', description: 'Create bot success');
+            }, title: appLocal(context).success, description: appLocal(context).createBotSuccess);
             
             // context.replaceRoute(MyAICharacterRoute(
             //     chatBotID: state.createCharacterBotModel.chatBotId!,
@@ -84,7 +84,7 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
           if (state is AICharacterError) {
             Navigator.pop(context);
             showErrorDialog(context,
-                title: 'Generate failed', description: state.message[0]);
+                title: appLocal(context).generateFailed, description: state.message[0]);
           }
 
           if (state is AICharacterFollowBotSuccess) {}
@@ -94,7 +94,7 @@ class _CreateAiCharacterPageState extends State<CreateAiCharacterPage>
           child: MyScaffold(
             useAppBar: true,
             canBack: true,
-            titleWidget: const Text("Create your AI character"),
+            titleWidget: Text(appLocal(context).createYourAiCharacter),
             body: NestedScrollView(
               headerSliverBuilder:
                   (BuildContext context, bool innerBoxIsScrolled) => [

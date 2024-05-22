@@ -103,7 +103,7 @@ class _FormProfilesState extends State<FormProfiles> {
               Padding(
                 padding: context.padding(bottom: 15, top: 27),
                 child: Text(
-                  'Experiences',
+                  appLocal(context).experiences,
                   style: AppFont()
                       .fontTheme(context, weight: FontWeight.bold)
                       .bodyLarge,

@@ -40,7 +40,7 @@ class _WriteProfileIntroductionPageState
           if (state is AiFeaturesError) {
             Navigator.pop(context);
             showErrorDialog(context,
-                title: 'Generate failed', description: state.message);
+                title: appLocal(context).generateFailed, description: state.message);
           }
         },
         child: MyScaffold(
@@ -48,15 +48,15 @@ class _WriteProfileIntroductionPageState
           useAppBar: true,
           canBack: true,
           resizeToAvoidBottomInset: false,
-          appBarTitle: 'Write Profile Introduction',
+          appBarTitle: appLocal(context).writeProfileIntroduction,
           body: NestedScrollView(
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => [
-              const MySliverAppBar(
+                MySliverAppBar(
                 height: 130,
                 child: HeaderAutoGenerate(
                     aiFeatureTitle:
-                        'Impress the employer with your profile introduction.'),
+                        appLocal(context).impressEmployerWithYourProfileIntroduction),
               ),
             ],
             body: SingleChildScrollView(

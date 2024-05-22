@@ -40,7 +40,7 @@ class _ListCertificatePageState extends State<ListCertificatePage> {
             useAppBar: true,
             canBack: true,
             horizontalMargin: 20,
-            appBarTitle: 'Certificates',
+            appBarTitle: appLocal(context).certificates,
             body: (state == null)
                 ? const MyLoading()
                 : Column(
@@ -49,7 +49,7 @@ class _ListCertificatePageState extends State<ListCertificatePage> {
                         padding: context.padding(vertical: 32, bottom: 12),
                         child: AppFlatButton(context).elevatedButton(
                             width: context.width,
-                            title: 'Add New Certificate',
+                            title: appLocal(context).addNewCertificate,
                             onPressed: () => context.router
                                 .push(const AddNewCertificateRoute())
                                 .then((value) => value != null

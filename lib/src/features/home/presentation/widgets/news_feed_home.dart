@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/feed/presentation/cubit/feed_detail_cubit.dart';
 import 'package:demo_dprofiles/src/features/home/data/models/new_feed_model.dart';
@@ -54,7 +55,7 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
           Padding(
             padding: context.padding(vertical: 5),
             child: Text(
-              'Feed is empty now. We will update soon!',
+              appLocal(context).feedIsEmptyDescription,
               style: AppFont()
                   .fontTheme(context, color: colorScheme(context).outline)
                   .bodyLarge,

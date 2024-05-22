@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/presentation/bloc/ai_character_bloc.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/utils/presentation/widgets/buttons/flat_button.dart';
@@ -30,7 +31,7 @@ class _CreateAICharacterBotButtonState
       builder: (context, state) {
         if (_showButton) {
           return AppFlatButton(context).elevatedButton(
-              title: 'Create Your AI Character',
+              title: appLocal(context).createYourAiCharacter,
               onPressed: () =>
                   context.router.push(const CreateAiCharacterRoute()));
         } else {

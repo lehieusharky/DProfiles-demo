@@ -38,15 +38,15 @@ class _WriteInterviewQuestionPageState
           useAppBar: true,
           canBack: true,
           resizeToAvoidBottomInset: false,
-          appBarTitle: 'Write Interview Question',
+          appBarTitle: appLocal(context).writeInterviewQuestion,
           body: NestedScrollView(
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => [
-              const MySliverAppBar(
+                MySliverAppBar(
                 height: 130,
                 child: HeaderAutoGenerate(
                     aiFeatureTitle:
-                        'We will help you answer interview questions.'),
+                        appLocal(context).weWillHelpYouAnswerInterViewQuestion),
               ),
             ],
             body: SingleChildScrollView(

@@ -45,15 +45,15 @@ class _AddNewEducationPageState extends State<AddNewEducationPage> {
           if (state is EditProfileAddNewEducationSuccess) {
             Navigator.pop(context);
             showMyDialog(context,
-                title: const Text('Add success'),
-                content: const Text('You have add new education'),
+                title:  Text(appLocal(context).addSuccess),
+                content:  Text(appLocal(context).youHaveAddNewEducation),
                 action: [
                   TextButton(
                       onPressed: () {
                         Navigator.pop(context);
                         Navigator.pop(context, state.educationModel);
                       },
-                      child: const Text('OK'))
+                      child:  Text(appLocal(context).ok))
                 ]);
           }
         },
@@ -61,7 +61,7 @@ class _AddNewEducationPageState extends State<AddNewEducationPage> {
           useAppBar: true,
           canBack: true,
           horizontalMargin: 20,
-          appBarTitle: 'Education',
+          appBarTitle: appLocal(context).education,
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -72,7 +72,7 @@ class _AddNewEducationPageState extends State<AddNewEducationPage> {
                     children: [
                       AuthField(
                           controller: _nameController,
-                          title: 'School'.toUpperCase(),
+                          title: appLocal(context).school.toUpperCase(),
                           textInputAction: TextInputAction.next,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
@@ -88,8 +88,8 @@ class _AddNewEducationPageState extends State<AddNewEducationPage> {
                           controller: _degreeController,
                           textInputAction: TextInputAction.next,
                           keyboardType: TextInputType.number,
-                          title: 'Degree'.toUpperCase(),
-                          hint: 'Degree',
+                          title: appLocal(context).degree.toUpperCase(),
+                          hint: appLocal(context).degree,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
                               return appLocal(context).fieldCannotBeEmpty;
@@ -127,7 +127,7 @@ class _AddNewEducationPageState extends State<AddNewEducationPage> {
                             controller: _descritptionController,
                             textInputAction: TextInputAction.done,
                             maxLines: 5,
-                            title: 'Description'.toUpperCase(),
+                            title: appLocal(context).description.toUpperCase(),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
                                 return appLocal(context).fieldCannotBeEmpty;
@@ -135,13 +135,13 @@ class _AddNewEducationPageState extends State<AddNewEducationPage> {
                                 return null;
                               }
                             },
-                            hint: 'Description'),
+                            hint: appLocal(context).description),
                       ),
                       Padding(
                         padding: context.padding(top: 16, bottom: 50),
                         child: AppFlatButton(context).elevatedButton(
                             width: context.width,
-                            title: 'Add',
+                            title: appLocal(context).add,
                             onPressed: () => _save(context)),
                       ),
                     ],

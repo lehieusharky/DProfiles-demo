@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_shimmer.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/sub_profiles/profile/skill_component.dart';
 import 'package:demo_dprofiles/src/features/profile/presentation/widgets/title_sub_page.dart';
@@ -35,7 +36,7 @@ class _PublicSkillsComponentState extends State<PublicSkillsComponent> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const TitleSubPage(title: 'Skills', canEdit: false),
+              TitleSubPage(title:  appLocal(context).skills, canEdit: false),
               context.sizedBox(height: 5),
               if (skills == null)
                  Container()

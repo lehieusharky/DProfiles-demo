@@ -106,7 +106,7 @@ class _HomeBannerState extends State<HomeBanner> {
               ),
               MyButton(
                 onPressed: () async => _launchUrl(),
-                title: 'Buy DP1',
+                title: appLocal(context).buyDP1,
               ),
             ],
           ),

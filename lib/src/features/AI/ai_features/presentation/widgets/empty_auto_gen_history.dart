@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -27,7 +28,7 @@ class EmptyAutoGenHistory extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                "History is empty",
+                appLocal(context).historyIsEmpty,
                 textAlign: TextAlign.center,
                 style: AppFont()
                     .fontTheme(
@@ -40,7 +41,7 @@ class EmptyAutoGenHistory extends StatelessWidget {
               Padding(
                 padding: context.padding(top: 2, bottom: 10),
                 child: Text(
-                  "Try to discover DProfile's AI tools",
+                  appLocal(context).tryToDiscoverDprofileAITools,
                   textAlign: TextAlign.center,
                   style: AppFont()
                       .fontTheme(
@@ -52,7 +53,7 @@ class EmptyAutoGenHistory extends StatelessWidget {
               ),
               AppFlatButton(context).elevatedButton(
                   width: context.width / 2,
-                  title: 'Try now',
+                  title: appLocal(context).tryNow,
                   onPressed: () => context.router
                       .push(const WriteProfileIntroductionRoute()))
             ],

@@ -93,11 +93,23 @@ abstract class AppLocalizations {
     Locale('vi')
   ];
 
+  /// No description provided for @aProfessionalCoverLetterCanGiveYouMoreOpportunities.
+  ///
+  /// In en, this message translates to:
+  /// **'A professional cover letter can give you more opportunities.'**
+  String get aProfessionalCoverLetterCanGiveYouMoreOpportunities;
+
   /// No description provided for @about.
   ///
   /// In en, this message translates to:
   /// **'About'**
   String get about;
+
+  /// No description provided for @aboutHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Describe your self'**
+  String get aboutHint;
 
   /// No description provided for @aboutYourSelf.
   ///
@@ -117,11 +129,65 @@ abstract class AppLocalizations {
   /// **'Add'**
   String get add;
 
+  /// No description provided for @addBasicInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'Add Basic Infor'**
+  String get addBasicInfo;
+
   /// No description provided for @addBasicInformation.
   ///
   /// In en, this message translates to:
   /// **'Add Basic Information'**
   String get addBasicInformation;
+
+  /// No description provided for @addNewCertificate.
+  ///
+  /// In en, this message translates to:
+  /// **'Add New Certificate'**
+  String get addNewCertificate;
+
+  /// No description provided for @addNewCertificateFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Add new certificate failed'**
+  String get addNewCertificateFailed;
+
+  /// No description provided for @addNewEducation.
+  ///
+  /// In en, this message translates to:
+  /// **'Add New Education'**
+  String get addNewEducation;
+
+  /// No description provided for @addNewEducationFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Add new education failed'**
+  String get addNewEducationFailed;
+
+  /// No description provided for @addNewExperience.
+  ///
+  /// In en, this message translates to:
+  /// **'Add New Experience'**
+  String get addNewExperience;
+
+  /// No description provided for @addNewExperienceFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Add new experience failed'**
+  String get addNewExperienceFailed;
+
+  /// No description provided for @addNewLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Add new language'**
+  String get addNewLanguage;
+
+  /// No description provided for @addSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Add success'**
+  String get addSuccess;
 
   /// No description provided for @addYourCharacter.
   ///
@@ -140,6 +206,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Aggessive'**
   String get aggressive;
+
+  /// No description provided for @ai.
+  ///
+  /// In en, this message translates to:
+  /// **'AI'**
+  String get ai;
 
   /// No description provided for @aiCharacter.
   ///
@@ -177,11 +249,53 @@ abstract class AppLocalizations {
   /// **'Archived'**
   String get archived;
 
+  /// No description provided for @areYouWantToDeleteYourExperience.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you want to delete your experience?'**
+  String get areYouWantToDeleteYourExperience;
+
+  /// No description provided for @asset.
+  ///
+  /// In en, this message translates to:
+  /// **'Asset'**
+  String get asset;
+
+  /// No description provided for @atLeastAt1Image.
+  ///
+  /// In en, this message translates to:
+  /// **'At least at 1 image'**
+  String get atLeastAt1Image;
+
   /// No description provided for @attachment.
   ///
   /// In en, this message translates to:
   /// **'Attachment'**
   String get attachment;
+
+  /// No description provided for @author.
+  ///
+  /// In en, this message translates to:
+  /// **'Author'**
+  String get author;
+
+  /// No description provided for @autoGenerationHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto Generation History'**
+  String get autoGenerationHistory;
+
+  /// No description provided for @autoTechnology.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto technology'**
+  String get autoTechnology;
+
+  /// No description provided for @available.
+  ///
+  /// In en, this message translates to:
+  /// **'Available'**
+  String get available;
 
   /// No description provided for @back.
   ///
@@ -195,6 +309,36 @@ abstract class AppLocalizations {
   /// **'Basic Information'**
   String get basicInformation;
 
+  /// No description provided for @beCarefullWhenClickOk.
+  ///
+  /// In en, this message translates to:
+  /// **'Be careful when click OK'**
+  String get beCarefullWhenClickOk;
+
+  /// No description provided for @bio.
+  ///
+  /// In en, this message translates to:
+  /// **'Bio'**
+  String get bio;
+
+  /// No description provided for @blog.
+  ///
+  /// In en, this message translates to:
+  /// **'Blog'**
+  String get blog;
+
+  /// No description provided for @btc.
+  ///
+  /// In en, this message translates to:
+  /// **'BTC'**
+  String get btc;
+
+  /// No description provided for @buyDP1.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy DP1'**
+  String get buyDP1;
+
   /// No description provided for @byCreatingAFreeAccount.
   ///
   /// In en, this message translates to:
@@ -206,6 +350,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'By signing up I agree that I’m 18 years of age or older, to the '**
   String get bySigningUpIAgree;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @cannotCreateDigitalProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Cannot create digital profile'**
+  String get cannotCreateDigitalProfile;
 
   /// No description provided for @certificate.
   ///
@@ -231,6 +387,24 @@ abstract class AppLocalizations {
   /// **'Change'**
   String get change;
 
+  /// No description provided for @changeCreationStepFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Change creation\'s step failed'**
+  String get changeCreationStepFailed;
+
+  /// No description provided for @changeGptFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'change gpt failed'**
+  String get changeGptFailed;
+
+  /// No description provided for @character.
+  ///
+  /// In en, this message translates to:
+  /// **'Character'**
+  String get character;
+
   /// No description provided for @characters.
   ///
   /// In en, this message translates to:
@@ -255,17 +429,47 @@ abstract class AppLocalizations {
   /// **'Chatty'**
   String get chatty;
 
+  /// No description provided for @checkYourEmailAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your email again!'**
+  String get checkYourEmailAgain;
+
   /// No description provided for @checkYourEmailOrPasswordAgain.
   ///
   /// In en, this message translates to:
   /// **'Check your email or password again'**
   String get checkYourEmailOrPasswordAgain;
 
+  /// No description provided for @checkYourInfoAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your info again'**
+  String get checkYourInfoAgain;
+
+  /// No description provided for @checkYourKeywordAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Check your keyword again'**
+  String get checkYourKeywordAgain;
+
   /// No description provided for @clearAll.
   ///
   /// In en, this message translates to:
   /// **'Clear all'**
   String get clearAll;
+
+  /// No description provided for @codeWasResend.
+  ///
+  /// In en, this message translates to:
+  /// **'Code was resend'**
+  String get codeWasResend;
+
+  /// No description provided for @comments.
+  ///
+  /// In en, this message translates to:
+  /// **'Comments'**
+  String get comments;
 
   /// No description provided for @company.
   ///
@@ -309,6 +513,12 @@ abstract class AppLocalizations {
   /// **'Connect your Wallet'**
   String get connectYourWallet;
 
+  /// No description provided for @contentCannotNull.
+  ///
+  /// In en, this message translates to:
+  /// **'Content can not null'**
+  String get contentCannotNull;
+
   /// No description provided for @continueButton.
   ///
   /// In en, this message translates to:
@@ -321,11 +531,29 @@ abstract class AppLocalizations {
   /// **'Conversations'**
   String get conversations;
 
+  /// No description provided for @converts.
+  ///
+  /// In en, this message translates to:
+  /// **'Converts'**
+  String get converts;
+
+  /// No description provided for @copied.
+  ///
+  /// In en, this message translates to:
+  /// **'Copied'**
+  String get copied;
+
   /// No description provided for @copy.
   ///
   /// In en, this message translates to:
   /// **'Copy'**
   String get copy;
+
+  /// No description provided for @couldNotLaunch.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not launch'**
+  String get couldNotLaunch;
 
   /// No description provided for @createAccount.
   ///
@@ -345,6 +573,18 @@ abstract class AppLocalizations {
   /// **'Create an account failed'**
   String get createAnAccountFailed;
 
+  /// No description provided for @createBotSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Create bot success'**
+  String get createBotSuccess;
+
+  /// No description provided for @createDProile.
+  ///
+  /// In en, this message translates to:
+  /// **'Create dProfile'**
+  String get createDProile;
+
   /// No description provided for @createDigitalProfile.
   ///
   /// In en, this message translates to:
@@ -363,11 +603,47 @@ abstract class AppLocalizations {
   /// **'Create New dProfile'**
   String get createNewDProfile;
 
+  /// No description provided for @createPost.
+  ///
+  /// In en, this message translates to:
+  /// **'Create post'**
+  String get createPost;
+
+  /// No description provided for @createPostSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Create post success'**
+  String get createPostSuccess;
+
   /// No description provided for @createYourAiCharacter.
   ///
   /// In en, this message translates to:
   /// **'Create your AI character'**
   String get createYourAiCharacter;
+
+  /// No description provided for @createYourHeadlineNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Your Headline now'**
+  String get createYourHeadlineNow;
+
+  /// No description provided for @credentialID.
+  ///
+  /// In en, this message translates to:
+  /// **'Credential ID'**
+  String get credentialID;
+
+  /// No description provided for @credentialURL.
+  ///
+  /// In en, this message translates to:
+  /// **'Credential URL'**
+  String get credentialURL;
+
+  /// No description provided for @cryptoWallet.
+  ///
+  /// In en, this message translates to:
+  /// **'Crypto Wallet'**
+  String get cryptoWallet;
 
   /// No description provided for @dProfile.
   ///
@@ -381,6 +657,18 @@ abstract class AppLocalizations {
   /// **'dProfiles opens sales of \$DP1 Tokens'**
   String get dProfilesOpensSales;
 
+  /// No description provided for @dangerousActivitiesAndChallenges.
+  ///
+  /// In en, this message translates to:
+  /// **'Dangerous activities and challenges'**
+  String get dangerousActivitiesAndChallenges;
+
+  /// No description provided for @date.
+  ///
+  /// In en, this message translates to:
+  /// **'Date'**
+  String get date;
+
   /// No description provided for @dateTimeFormatddmmyyyyy.
   ///
   /// In en, this message translates to:
@@ -393,6 +681,12 @@ abstract class AppLocalizations {
   /// **'Please enter a valid date of birth (dd/mm/yyyy)'**
   String get dateTimeformatValidation;
 
+  /// No description provided for @dean.
+  ///
+  /// In en, this message translates to:
+  /// **'Dean'**
+  String get dean;
+
   /// No description provided for @degree.
   ///
   /// In en, this message translates to:
@@ -404,6 +698,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Delete'**
   String get delete;
+
+  /// No description provided for @deleteAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Account'**
+  String get deleteAccount;
+
+  /// No description provided for @deleteAccountFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete account failed'**
+  String get deleteAccountFailed;
+
+  /// No description provided for @deleteCertificateFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete certificate failed'**
+  String get deleteCertificateFailed;
+
+  /// No description provided for @deleteEducationFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete education failed'**
+  String get deleteEducationFailed;
+
+  /// No description provided for @deleteExperienceFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete experience failed'**
+  String get deleteExperienceFailed;
+
+  /// No description provided for @deleteFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete  failed'**
+  String get deleteFailed;
+
+  /// No description provided for @describeSomethingAboutYourBot.
+  ///
+  /// In en, this message translates to:
+  /// **'Describe something about your bot'**
+  String get describeSomethingAboutYourBot;
+
+  /// No description provided for @describeYourSelf.
+  ///
+  /// In en, this message translates to:
+  /// **'Describe your self'**
+  String get describeYourSelf;
 
   /// No description provided for @description.
   ///
@@ -435,6 +777,36 @@ abstract class AppLocalizations {
   /// **'Didn’t receive any code?'**
   String get didntReceiveAnyCode;
 
+  /// No description provided for @digitalProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Digital Profile'**
+  String get digitalProfile;
+
+  /// No description provided for @disconnectWallet.
+  ///
+  /// In en, this message translates to:
+  /// **'Disconnect wallet'**
+  String get disconnectWallet;
+
+  /// No description provided for @discover.
+  ///
+  /// In en, this message translates to:
+  /// **'Discover'**
+  String get discover;
+
+  /// No description provided for @discoverAICharacterBotNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Discover AI Character Bot now!'**
+  String get discoverAICharacterBotNow;
+
+  /// No description provided for @disorderedEatingAndUnhealthyBodyImage.
+  ///
+  /// In en, this message translates to:
+  /// **'Disordered eating and unhealthy body image'**
+  String get disorderedEatingAndUnhealthyBodyImage;
+
   /// No description provided for @dob.
   ///
   /// In en, this message translates to:
@@ -447,6 +819,30 @@ abstract class AppLocalizations {
   /// **'Don\'t have an account'**
   String get dontHaveAnAccount;
 
+  /// No description provided for @dp1.
+  ///
+  /// In en, this message translates to:
+  /// **'DP1'**
+  String get dp1;
+
+  /// No description provided for @editCertificates.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Certificates'**
+  String get editCertificates;
+
+  /// No description provided for @editEducation.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Education'**
+  String get editEducation;
+
+  /// No description provided for @editProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Profile'**
+  String get editProfile;
+
   /// No description provided for @education.
   ///
   /// In en, this message translates to:
@@ -458,6 +854,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Education Information'**
   String get educationInformation;
+
+  /// No description provided for @educations.
+  ///
+  /// In en, this message translates to:
+  /// **'Educations'**
+  String get educations;
 
   /// No description provided for @email.
   ///
@@ -495,6 +897,18 @@ abstract class AppLocalizations {
   /// **'Energetic'**
   String get energetic;
 
+  /// No description provided for @enterEmailToResetPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email to receive an email to reset your password'**
+  String get enterEmailToResetPassword;
+
+  /// No description provided for @enterYourAccountEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your account email'**
+  String get enterYourAccountEmail;
+
   /// No description provided for @enterYourName.
   ///
   /// In en, this message translates to:
@@ -506,6 +920,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Enter your security code'**
   String get enterYourSecurityCode;
+
+  /// No description provided for @enterYourUserName.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Your Username'**
+  String get enterYourUserName;
+
+  /// No description provided for @error.
+  ///
+  /// In en, this message translates to:
+  /// **'Error'**
+  String get error;
 
   /// No description provided for @experience.
   ///
@@ -519,6 +945,42 @@ abstract class AppLocalizations {
   /// **'experiences'**
   String get experiences;
 
+  /// No description provided for @explore.
+  ///
+  /// In en, this message translates to:
+  /// **'Explore'**
+  String get explore;
+
+  /// No description provided for @failed.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed'**
+  String get failed;
+
+  /// No description provided for @failedToToggleLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to toggle language'**
+  String get failedToToggleLanguage;
+
+  /// No description provided for @failedToToggleTheme.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to toggle theme'**
+  String get failedToToggleTheme;
+
+  /// No description provided for @feed.
+  ///
+  /// In en, this message translates to:
+  /// **'Feed'**
+  String get feed;
+
+  /// No description provided for @feedIsEmptyDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Feed is empty now. We will update soon!'**
+  String get feedIsEmptyDescription;
+
   /// No description provided for @fieldCannotBeEmpty.
   ///
   /// In en, this message translates to:
@@ -531,11 +993,53 @@ abstract class AppLocalizations {
   /// **'Field Of Study'**
   String get fieldOfStudy;
 
+  /// No description provided for @findYourFriendProfileNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Find your friend profile now'**
+  String get findYourFriendProfileNow;
+
+  /// No description provided for @firstName.
+  ///
+  /// In en, this message translates to:
+  /// **'FIRST NAME'**
+  String get firstName;
+
+  /// No description provided for @firstNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Breanna'**
+  String get firstNameHint;
+
   /// No description provided for @flirty.
   ///
   /// In en, this message translates to:
   /// **'Flirty'**
   String get flirty;
+
+  /// No description provided for @following.
+  ///
+  /// In en, this message translates to:
+  /// **'Following'**
+  String get following;
+
+  /// No description provided for @follwer.
+  ///
+  /// In en, this message translates to:
+  /// **'Follower'**
+  String get follwer;
+
+  /// No description provided for @forgotPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot password'**
+  String get forgotPassword;
+
+  /// No description provided for @forgotPasswordFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot password failed'**
+  String get forgotPasswordFailed;
 
   /// No description provided for @forgotYourPassword.
   ///
@@ -567,11 +1071,191 @@ abstract class AppLocalizations {
   /// **'Gender'**
   String get gender;
 
+  /// No description provided for @generateCharacterBotFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Generate character bot failed'**
+  String get generateCharacterBotFailed;
+
+  /// No description provided for @generateCoverLetterFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Generate cover letter failed'**
+  String get generateCoverLetterFailed;
+
+  /// No description provided for @generateFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Generate failed'**
+  String get generateFailed;
+
+  /// No description provided for @generateInterViewQuestionFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Generate interview question failed'**
+  String get generateInterViewQuestionFailed;
+
+  /// No description provided for @generateProfileIntroductionFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Generate profile introduction failed'**
+  String get generateProfileIntroductionFailed;
+
+  /// No description provided for @generateSkillKnowledgeFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Generate skill knowledge failed'**
+  String get generateSkillKnowledgeFailed;
+
+  /// No description provided for @getAutoGenerate.
+  ///
+  /// In en, this message translates to:
+  /// **'Get auto generate history failed'**
+  String get getAutoGenerate;
+
+  /// No description provided for @getAutoGenerateHistoryFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get auto generate history failed'**
+  String get getAutoGenerateHistoryFailed;
+
+  /// No description provided for @getAutoGenerationDetailFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get auto generation detail failed'**
+  String get getAutoGenerationDetailFailed;
+
+  /// No description provided for @getCertificatesFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get certificates failed'**
+  String get getCertificatesFailed;
+
+  /// No description provided for @getChatBotDetailFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get chat bot detail failed'**
+  String get getChatBotDetailFailed;
+
+  /// No description provided for @getDetailsBotFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'get details bot failed'**
+  String get getDetailsBotFailed;
+
+  /// No description provided for @getEducationFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get educations failed'**
+  String get getEducationFailed;
+
+  /// No description provided for @getExperiencesFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get experiences failed'**
+  String get getExperiencesFailed;
+
+  /// No description provided for @getInfoFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get info failed'**
+  String get getInfoFailed;
+
+  /// No description provided for @getListCharacterBotFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get list character bot failed'**
+  String get getListCharacterBotFailed;
+
+  /// No description provided for @getListPopularCharacterBotFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get list popular character bot failed'**
+  String get getListPopularCharacterBotFailed;
+
+  /// No description provided for @getMetaLanguageFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get meta language failed'**
+  String get getMetaLanguageFailed;
+
+  /// No description provided for @getNewsFeedFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get news feed failed'**
+  String get getNewsFeedFailed;
+
+  /// No description provided for @getPointFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get point failed'**
+  String get getPointFailed;
+
   /// No description provided for @getStarted.
   ///
   /// In en, this message translates to:
   /// **'Get Started'**
   String get getStarted;
+
+  /// No description provided for @getUserBannerFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'get user banner failed'**
+  String get getUserBannerFailed;
+
+  /// No description provided for @getUserCertificatesFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get user certificates  failed'**
+  String get getUserCertificatesFailed;
+
+  /// No description provided for @getUserEducationFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get user education  failed'**
+  String get getUserEducationFailed;
+
+  /// No description provided for @getUserExperienceFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get user experience  failed'**
+  String get getUserExperienceFailed;
+
+  /// No description provided for @getUserInfoFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get user info failed'**
+  String get getUserInfoFailed;
+
+  /// No description provided for @getUserLanguagesFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get user languages  failed'**
+  String get getUserLanguagesFailed;
+
+  /// No description provided for @getUserPostFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'get user post failed'**
+  String get getUserPostFailed;
+
+  /// No description provided for @getUserSkillFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Get user skill  failed'**
+  String get getUserSkillFailed;
+
+  /// No description provided for @hateAndHarassment.
+  ///
+  /// In en, this message translates to:
+  /// **'Hate and harassment'**
+  String get hateAndHarassment;
+
+  /// No description provided for @headline.
+  ///
+  /// In en, this message translates to:
+  /// **'Headline'**
+  String get headline;
 
   /// No description provided for @helpful.
   ///
@@ -579,17 +1263,47 @@ abstract class AppLocalizations {
   /// **'Helpful'**
   String get helpful;
 
+  /// No description provided for @historyDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'History details'**
+  String get historyDetails;
+
+  /// No description provided for @historyIsEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'History is empty'**
+  String get historyIsEmpty;
+
+  /// No description provided for @historyUpdateDProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'History update dProfile'**
+  String get historyUpdateDProfile;
+
   /// No description provided for @home.
   ///
   /// In en, this message translates to:
   /// **'Home'**
   String get home;
 
+  /// No description provided for @hour.
+  ///
+  /// In en, this message translates to:
+  /// **'/hour'**
+  String get hour;
+
   /// No description provided for @hourAgo.
   ///
   /// In en, this message translates to:
   /// **'hour ago'**
   String get hourAgo;
+
+  /// No description provided for @howManyWordsForThis.
+  ///
+  /// In en, this message translates to:
+  /// **'How many words for this?'**
+  String get howManyWordsForThis;
 
   /// No description provided for @humorous.
   ///
@@ -609,6 +1323,18 @@ abstract class AppLocalizations {
   /// **'ID Card Number'**
   String get idCardNumber;
 
+  /// No description provided for @impressEmployerWithYourProfileIntroduction.
+  ///
+  /// In en, this message translates to:
+  /// **'Impress the employer with your profile introduction.'**
+  String get impressEmployerWithYourProfileIntroduction;
+
+  /// No description provided for @improveYourSkillWithAITools.
+  ///
+  /// In en, this message translates to:
+  /// **'Improve your skills with AI tools.'**
+  String get improveYourSkillWithAITools;
+
   /// No description provided for @inAngelnvestorRound.
   ///
   /// In en, this message translates to:
@@ -620,6 +1346,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Inspiring'**
   String get inspiring;
+
+  /// No description provided for @instagram.
+  ///
+  /// In en, this message translates to:
+  /// **'INSTAGRAM'**
+  String get instagram;
+
+  /// No description provided for @instagramURL.
+  ///
+  /// In en, this message translates to:
+  /// **'Instagram URL'**
+  String get instagramURL;
+
+  /// No description provided for @interviewQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Interview question'**
+  String get interviewQuestion;
+
+  /// No description provided for @interviewQuestionAbout.
+  ///
+  /// In en, this message translates to:
+  /// **'Interview question about'**
+  String get interviewQuestionAbout;
 
   /// No description provided for @investmentOpportunity.
   ///
@@ -645,6 +1395,78 @@ abstract class AppLocalizations {
   /// **'Job Position'**
   String get jobPosition;
 
+  /// No description provided for @jobTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Job title'**
+  String get jobTitle;
+
+  /// No description provided for @language.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get language;
+
+  /// No description provided for @languages.
+  ///
+  /// In en, this message translates to:
+  /// **'Languages'**
+  String get languages;
+
+  /// No description provided for @lastName.
+  ///
+  /// In en, this message translates to:
+  /// **'LAST NAME'**
+  String get lastName;
+
+  /// No description provided for @lastNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Schinner'**
+  String get lastNameHint;
+
+  /// No description provided for @letOSDetermineAuthMethod.
+  ///
+  /// In en, this message translates to:
+  /// **'Let OS determine authentication method'**
+  String get letOSDetermineAuthMethod;
+
+  /// No description provided for @linkedin.
+  ///
+  /// In en, this message translates to:
+  /// **'LINKEDIN'**
+  String get linkedin;
+
+  /// No description provided for @linkedinURL.
+  ///
+  /// In en, this message translates to:
+  /// **'Linkedin URL'**
+  String get linkedinURL;
+
+  /// No description provided for @loadBotFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Load bot failed'**
+  String get loadBotFailed;
+
+  /// No description provided for @loadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Load failed'**
+  String get loadFailed;
+
+  /// No description provided for @location.
+  ///
+  /// In en, this message translates to:
+  /// **'location'**
+  String get location;
+
+  /// No description provided for @locationHint.
+  ///
+  /// In en, this message translates to:
+  /// **'US'**
+  String get locationHint;
+
   /// No description provided for @login.
   ///
   /// In en, this message translates to:
@@ -656,6 +1478,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Login failed'**
   String get loginFailed;
+
+  /// No description provided for @logout.
+  ///
+  /// In en, this message translates to:
+  /// **'Log out'**
+  String get logout;
+
+  /// No description provided for @max5MbFor1File.
+  ///
+  /// In en, this message translates to:
+  /// **'Max 5Mb for 1 file'**
+  String get max5MbFor1File;
 
   /// No description provided for @messages.
   ///
@@ -681,6 +1515,12 @@ abstract class AppLocalizations {
   /// **'Nationality'**
   String get nationality;
 
+  /// No description provided for @nevermindIGotIt.
+  ///
+  /// In en, this message translates to:
+  /// **'Nevermind, I got it'**
+  String get nevermindIGotIt;
+
   /// No description provided for @newPassword.
   ///
   /// In en, this message translates to:
@@ -693,11 +1533,29 @@ abstract class AppLocalizations {
   /// **'Next'**
   String get nextButton;
 
+  /// No description provided for @nfts.
+  ///
+  /// In en, this message translates to:
+  /// **'NFTs'**
+  String get nfts;
+
+  /// No description provided for @noCommentsYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No comments yet'**
+  String get noCommentsYet;
+
   /// No description provided for @normal.
   ///
   /// In en, this message translates to:
   /// **'Normal'**
   String get normal;
+
+  /// No description provided for @nudityAndSexualContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Nudity and sexual content'**
+  String get nudityAndSexualContent;
 
   /// No description provided for @number.
   ///
@@ -711,11 +1569,35 @@ abstract class AppLocalizations {
   /// **'OK'**
   String get ok;
 
+  /// No description provided for @openToWork.
+  ///
+  /// In en, this message translates to:
+  /// **'Open to work'**
+  String get openToWork;
+
+  /// No description provided for @organization.
+  ///
+  /// In en, this message translates to:
+  /// **'Organization'**
+  String get organization;
+
+  /// No description provided for @organizationName.
+  ///
+  /// In en, this message translates to:
+  /// **'Organization name'**
+  String get organizationName;
+
   /// No description provided for @others.
   ///
   /// In en, this message translates to:
   /// **'Others'**
   String get others;
+
+  /// No description provided for @overview.
+  ///
+  /// In en, this message translates to:
+  /// **'Overview'**
+  String get overview;
 
   /// No description provided for @passive.
   ///
@@ -741,6 +1623,24 @@ abstract class AppLocalizations {
   /// **'Password must have at least 8 characters'**
   String get passwordMustHaveAtLeast8Characters;
 
+  /// No description provided for @pay.
+  ///
+  /// In en, this message translates to:
+  /// **'PAY'**
+  String get pay;
+
+  /// No description provided for @payByMonth.
+  ///
+  /// In en, this message translates to:
+  /// **'Pay by month'**
+  String get payByMonth;
+
+  /// No description provided for @payPerJob.
+  ///
+  /// In en, this message translates to:
+  /// **'Pay per job'**
+  String get payPerJob;
+
   /// No description provided for @pleaseEnterThe6DigitCodeSentToYourEmailForVerification.
   ///
   /// In en, this message translates to:
@@ -752,6 +1652,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Position'**
   String get position;
+
+  /// No description provided for @post.
+  ///
+  /// In en, this message translates to:
+  /// **'Post'**
+  String get post;
+
+  /// No description provided for @postFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'post failed'**
+  String get postFailed;
+
+  /// No description provided for @posts.
+  ///
+  /// In en, this message translates to:
+  /// **'Posts'**
+  String get posts;
+
+  /// No description provided for @price.
+  ///
+  /// In en, this message translates to:
+  /// **'Price'**
+  String get price;
 
   /// No description provided for @privacyPolicy.
   ///
@@ -777,6 +1701,24 @@ abstract class AppLocalizations {
   /// **'Prompt'**
   String get prompt;
 
+  /// No description provided for @receive.
+  ///
+  /// In en, this message translates to:
+  /// **'Receive'**
+  String get receive;
+
+  /// No description provided for @reply.
+  ///
+  /// In en, this message translates to:
+  /// **'Reply'**
+  String get reply;
+
+  /// No description provided for @report.
+  ///
+  /// In en, this message translates to:
+  /// **'Report'**
+  String get report;
+
   /// No description provided for @requestNewCodeIn.
   ///
   /// In en, this message translates to:
@@ -801,6 +1743,24 @@ abstract class AppLocalizations {
   /// **'Reset password'**
   String get resetPassword;
 
+  /// No description provided for @resultIsEmptyTryAnotherKeyword.
+  ///
+  /// In en, this message translates to:
+  /// **'Result is empty. Try another keywords!'**
+  String get resultIsEmptyTryAnotherKeyword;
+
+  /// No description provided for @salary.
+  ///
+  /// In en, this message translates to:
+  /// **'SALARY'**
+  String get salary;
+
+  /// No description provided for @salaryHint.
+  ///
+  /// In en, this message translates to:
+  /// **'\\\$10,000'**
+  String get salaryHint;
+
   /// No description provided for @save.
   ///
   /// In en, this message translates to:
@@ -818,6 +1778,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'School name'**
   String get schoolName;
+
+  /// No description provided for @search.
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get search;
+
+  /// No description provided for @searchFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Search failed'**
+  String get searchFailed;
+
+  /// No description provided for @securityVerification.
+  ///
+  /// In en, this message translates to:
+  /// **'Security verification'**
+  String get securityVerification;
+
+  /// No description provided for @selectAReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Select a reason'**
+  String get selectAReason;
+
+  /// No description provided for @send.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get send;
 
   /// No description provided for @sendFailed.
   ///
@@ -837,11 +1827,35 @@ abstract class AppLocalizations {
   /// **'Sexy'**
   String get sexy;
 
+  /// No description provided for @signOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign out'**
+  String get signOut;
+
   /// No description provided for @signUp.
   ///
   /// In en, this message translates to:
   /// **'Sign Up'**
   String get signUp;
+
+  /// No description provided for @signupForFree.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up for free'**
+  String get signupForFree;
+
+  /// No description provided for @skill.
+  ///
+  /// In en, this message translates to:
+  /// **'Skill'**
+  String get skill;
+
+  /// No description provided for @skills.
+  ///
+  /// In en, this message translates to:
+  /// **'Skills'**
+  String get skills;
 
   /// No description provided for @skillsKnowledgeByJobTitle.
   ///
@@ -861,6 +1875,30 @@ abstract class AppLocalizations {
   /// **'Smart'**
   String get smart;
 
+  /// No description provided for @socialMedia.
+  ///
+  /// In en, this message translates to:
+  /// **'Social Media'**
+  String get socialMedia;
+
+  /// No description provided for @socialMediaWasNotSetUp.
+  ///
+  /// In en, this message translates to:
+  /// **'Social media was not set up'**
+  String get socialMediaWasNotSetUp;
+
+  /// No description provided for @someThingAboutYourselfAndYourExperience.
+  ///
+  /// In en, this message translates to:
+  /// **'Some thing about your self and your experience'**
+  String get someThingAboutYourselfAndYourExperience;
+
+  /// No description provided for @speaking.
+  ///
+  /// In en, this message translates to:
+  /// **'Speaking'**
+  String get speaking;
+
   /// No description provided for @spiritual.
   ///
   /// In en, this message translates to:
@@ -872,6 +1910,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Start Date'**
   String get startDate;
+
+  /// No description provided for @submit.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit'**
+  String get submit;
+
+  /// No description provided for @success.
+  ///
+  /// In en, this message translates to:
+  /// **'Success'**
+  String get success;
+
+  /// No description provided for @suicideAndSelfHarm.
+  ///
+  /// In en, this message translates to:
+  /// **'Suicide and Self-harm'**
+  String get suicideAndSelfHarm;
+
+  /// No description provided for @summary.
+  ///
+  /// In en, this message translates to:
+  /// **'summary'**
+  String get summary;
 
   /// No description provided for @supportive.
   ///
@@ -885,6 +1947,12 @@ abstract class AppLocalizations {
   /// **'Tell me about your self?'**
   String get tellMeAboutYourSelf;
 
+  /// No description provided for @tetherUSDT.
+  ///
+  /// In en, this message translates to:
+  /// **'Tether USDT'**
+  String get tetherUSDT;
+
   /// No description provided for @theme.
   ///
   /// In en, this message translates to:
@@ -896,6 +1964,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Time'**
   String get time;
+
+  /// No description provided for @title.
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get title;
+
+  /// No description provided for @titleHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Product Designer'**
+  String get titleHint;
 
   /// No description provided for @titleOnboarding1.
   ///
@@ -927,11 +2007,167 @@ abstract class AppLocalizations {
   /// **'Topic'**
   String get topic;
 
+  /// No description provided for @totalBalance.
+  ///
+  /// In en, this message translates to:
+  /// **'Total balance'**
+  String get totalBalance;
+
+  /// No description provided for @trainingAI.
+  ///
+  /// In en, this message translates to:
+  /// **'Training AI'**
+  String get trainingAI;
+
+  /// No description provided for @tryNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Try now'**
+  String get tryNow;
+
+  /// No description provided for @tryToDiscoverDprofileAITools.
+  ///
+  /// In en, this message translates to:
+  /// **'Try to discover DProfile\'s AI tools'**
+  String get tryToDiscoverDprofileAITools;
+
+  /// No description provided for @unavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Unavailable'**
+  String get unavailable;
+
+  /// No description provided for @updateAvatarSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Update avatar success'**
+  String get updateAvatarSuccess;
+
+  /// No description provided for @updateBannerSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Update banner success'**
+  String get updateBannerSuccess;
+
+  /// No description provided for @updateBasicInformationFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Update basic information failed'**
+  String get updateBasicInformationFailed;
+
+  /// No description provided for @updateDigitalProfileFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Update digital profile failed'**
+  String get updateDigitalProfileFailed;
+
+  /// No description provided for @updateFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Update failed'**
+  String get updateFailed;
+
+  /// No description provided for @updatePasswordFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Update password failed'**
+  String get updatePasswordFailed;
+
+  /// No description provided for @updatePropertiesFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Update properties failed'**
+  String get updatePropertiesFailed;
+
+  /// No description provided for @updateUserInfoFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Update user info  failed'**
+  String get updateUserInfoFailed;
+
+  /// No description provided for @updateWalletAddressFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Update wallet address failed'**
+  String get updateWalletAddressFailed;
+
+  /// No description provided for @updateWalletAddressSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Update wallet address success'**
+  String get updateWalletAddressSuccess;
+
+  /// No description provided for @uploadAvatarFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload avatar failed'**
+  String get uploadAvatarFailed;
+
+  /// No description provided for @uploadBannerFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload banner failed'**
+  String get uploadBannerFailed;
+
+  /// No description provided for @uploadDocumentToAIKnowledgeDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload your documents to your AI knowledge base'**
+  String get uploadDocumentToAIKnowledgeDescription;
+
+  /// No description provided for @uploadImageFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload image failed'**
+  String get uploadImageFailed;
+
+  /// No description provided for @uploadSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload success'**
+  String get uploadSuccess;
+
+  /// No description provided for @uploadTextFileDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'You can upload text file .pdf or .docx format about specific knowledge your AI will share with the targeted audience, for example: Menu, best pr articles about your store, history of store..'**
+  String get uploadTextFileDescription;
+
+  /// No description provided for @uploadYourFile.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload your file'**
+  String get uploadYourFile;
+
+  /// No description provided for @uploadYourImages.
+  ///
+  /// In en, this message translates to:
+  /// **'Upload your images'**
+  String get uploadYourImages;
+
+  /// No description provided for @usdt.
+  ///
+  /// In en, this message translates to:
+  /// **'usdt'**
+  String get usdt;
+
+  /// No description provided for @userName.
+  ///
+  /// In en, this message translates to:
+  /// **'User Name'**
+  String get userName;
+
   /// No description provided for @userNameCannotBeEmpty.
   ///
   /// In en, this message translates to:
   /// **'Username cannot be empty'**
   String get userNameCannotBeEmpty;
+
+  /// No description provided for @userNamePasswordIsIncorrect.
+  ///
+  /// In en, this message translates to:
+  /// **'The username or password you entered is incorrect!'**
+  String get userNamePasswordIsIncorrect;
 
   /// No description provided for @validateCodeFailed.
   ///
@@ -951,6 +2187,12 @@ abstract class AppLocalizations {
   /// **'View Chat History'**
   String get viewChatHistory;
 
+  /// No description provided for @viewDigitalProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'View Digital Profile'**
+  String get viewDigitalProfile;
+
   /// No description provided for @viewHistory.
   ///
   /// In en, this message translates to:
@@ -962,6 +2204,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Violent'**
   String get violent;
+
+  /// No description provided for @wallet.
+  ///
+  /// In en, this message translates to:
+  /// **'wallet'**
+  String get wallet;
+
+  /// No description provided for @weWillHelpYouAnswerInterViewQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'We will help you answer interview questions.'**
+  String get weWillHelpYouAnswerInterViewQuestion;
+
+  /// No description provided for @whatJobAreYouApplingFor.
+  ///
+  /// In en, this message translates to:
+  /// **'What job are you applying for?'**
+  String get whatJobAreYouApplingFor;
+
+  /// No description provided for @whatsApp.
+  ///
+  /// In en, this message translates to:
+  /// **'WHATSAPP'**
+  String get whatsApp;
+
+  /// No description provided for @whatsAppURL.
+  ///
+  /// In en, this message translates to:
+  /// **'Whatsapp URL'**
+  String get whatsAppURL;
+
+  /// No description provided for @whichJobAreYouApplingFor.
+  ///
+  /// In en, this message translates to:
+  /// **'Which job are you applying for'**
+  String get whichJobAreYouApplingFor;
+
+  /// No description provided for @writeAComment.
+  ///
+  /// In en, this message translates to:
+  /// **'Write a comment...'**
+  String get writeAComment;
 
   /// No description provided for @writeAgain.
   ///
@@ -975,6 +2259,18 @@ abstract class AppLocalizations {
   /// **'Write Cover Letter'**
   String get writeCoverLetter;
 
+  /// No description provided for @writeInterviewQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Write Interview Question'**
+  String get writeInterviewQuestion;
+
+  /// No description provided for @writeProfileIntroduction.
+  ///
+  /// In en, this message translates to:
+  /// **'Write Profile Introduction'**
+  String get writeProfileIntroduction;
+
   /// No description provided for @writeStyle.
   ///
   /// In en, this message translates to:
@@ -987,11 +2283,101 @@ abstract class AppLocalizations {
   /// **'Write your profile Introduction'**
   String get writeYourProfileIntroduction;
 
+  /// No description provided for @writeYourSkillContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Write your skill content'**
+  String get writeYourSkillContent;
+
+  /// No description provided for @x.
+  ///
+  /// In en, this message translates to:
+  /// **'X'**
+  String get x;
+
+  /// No description provided for @xURL.
+  ///
+  /// In en, this message translates to:
+  /// **'X URL'**
+  String get xURL;
+
+  /// No description provided for @youDontHaveDigitalProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'You don\'t have digital profile'**
+  String get youDontHaveDigitalProfile;
+
+  /// No description provided for @youDontHaveEnoughToken.
+  ///
+  /// In en, this message translates to:
+  /// **'You don\'t have enough token!'**
+  String get youDontHaveEnoughToken;
+
+  /// No description provided for @youHaveAddNewCertificate.
+  ///
+  /// In en, this message translates to:
+  /// **'You have add new certificate'**
+  String get youHaveAddNewCertificate;
+
+  /// No description provided for @youHaveAddNewEducation.
+  ///
+  /// In en, this message translates to:
+  /// **'You have add new education'**
+  String get youHaveAddNewEducation;
+
+  /// No description provided for @youHaveAddNewExperience.
+  ///
+  /// In en, this message translates to:
+  /// **'You have add new experience'**
+  String get youHaveAddNewExperience;
+
+  /// No description provided for @youHaveAddNewLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'You have add new language'**
+  String get youHaveAddNewLanguage;
+
+  /// No description provided for @youHaveAddNewSkill.
+  ///
+  /// In en, this message translates to:
+  /// **'You have add new skill'**
+  String get youHaveAddNewSkill;
+
+  /// No description provided for @youHaveToConnectWalletBefore.
+  ///
+  /// In en, this message translates to:
+  /// **'You have to connect wallet before'**
+  String get youHaveToConnectWalletBefore;
+
+  /// No description provided for @youSuccessfullySignedUpWelcomeDProfiles.
+  ///
+  /// In en, this message translates to:
+  /// **'You successfully signed up!\nWelcome to dProfiles'**
+  String get youSuccessfullySignedUpWelcomeDProfiles;
+
   /// No description provided for @yourAiCharacters.
   ///
   /// In en, this message translates to:
   /// **'Your AI Characters'**
   String get yourAiCharacters;
+
+  /// No description provided for @yourChooseIsInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'Your choose is invalid'**
+  String get yourChooseIsInvalid;
+
+  /// No description provided for @yourContentHere.
+  ///
+  /// In en, this message translates to:
+  /// **'Your content here'**
+  String get yourContentHere;
+
+  /// No description provided for @yourEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Your email'**
+  String get yourEmail;
 
   /// No description provided for @yourFieldOfStudy.
   ///
@@ -999,17 +2385,47 @@ abstract class AppLocalizations {
   /// **'Your field of study'**
   String get yourFieldOfStudy;
 
+  /// No description provided for @yourFirstName.
+  ///
+  /// In en, this message translates to:
+  /// **'Your First Name'**
+  String get yourFirstName;
+
   /// No description provided for @yourIdCard.
   ///
   /// In en, this message translates to:
   /// **'Your id card'**
   String get yourIdCard;
 
+  /// No description provided for @yourJobTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your job title'**
+  String get yourJobTitle;
+
+  /// No description provided for @yourKeyword.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Keyword'**
+  String get yourKeyword;
+
+  /// No description provided for @yourLastName.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Last Name'**
+  String get yourLastName;
+
   /// No description provided for @yourLocation.
   ///
   /// In en, this message translates to:
   /// **'Your Location'**
   String get yourLocation;
+
+  /// No description provided for @yourName.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Name'**
+  String get yourName;
 
   /// No description provided for @yourNationality.
   ///
@@ -1022,6 +2438,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Your require'**
   String get yourRequire;
+
+  /// No description provided for @yourTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Title'**
+  String get yourTitle;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

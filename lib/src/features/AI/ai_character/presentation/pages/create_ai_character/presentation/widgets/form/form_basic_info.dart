@@ -57,7 +57,7 @@ class _FormBasicInfoState extends State<FormBasicInfo>
               padding: context.padding(top: 32),
               child: AuthField(
                   controller: _summaryController,
-                  title: 'SUMMARY',
+                  title: appLocal(context).summary.toUpperCase(),
                   textInputAction: TextInputAction.done,
                   maxLines: 4,
                   validator: (name) {
@@ -67,7 +67,7 @@ class _FormBasicInfoState extends State<FormBasicInfo>
                       return null;
                     }
                   },
-                  hint: 'Describe something about your bot'),
+                  hint: appLocal(context).describeSomethingAboutYourBot),
             ),
             Padding(
               padding: context.padding(vertical: 32),

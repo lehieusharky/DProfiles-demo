@@ -35,15 +35,15 @@ class _WriteCoverLetterPageState extends State<WriteCoverLetterPage> {
           horizontalMargin: 20,
           useAppBar: true,
           canBack: true,
-          appBarTitle: 'Write Cover Letter',
+          appBarTitle: appLocal(context).writeCoverLetter,
           body: NestedScrollView(
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => [
-              const MySliverAppBar(
+                MySliverAppBar(
                 height: 130,
                 child: HeaderAutoGenerate(
                     aiFeatureTitle:
-                        'A professional cover letter can give you more opportunities.'),
+                        appLocal(context).aProfessionalCoverLetterCanGiveYouMoreOpportunities),
               ),
             ],
             body: SingleChildScrollView(

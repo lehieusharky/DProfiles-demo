@@ -27,7 +27,7 @@ class _FormSearchBarState extends State<FormSearchBar> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AuthField(
-              hint: 'Your Keyword',
+              hint:  appLocal(context).yourKeyword,
               maxLines: 1,
               keyboardType: TextInputType.text,
               autoFocus: true,

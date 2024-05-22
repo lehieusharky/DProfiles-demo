@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -17,7 +18,7 @@ class HeaderMyDprofile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'Digital Profile',
+            appLocal(context).digitalProfile,
             style: AppFont()
                 .fontTheme(context, weight: FontWeight.w600)
                 .titleSmall,
@@ -37,7 +38,7 @@ class HeaderMyDprofile extends StatelessWidget {
           Icon(IconsaxOutline.timer_1, color: colorScheme(context).primary),
           context.sizedBox(width: 5),
           Text(
-            'View History',
+            appLocal(context).viewHistory,
             style: AppFont()
                 .fontTheme(context, color: colorScheme(context).primary)
                 .bodyMedium,

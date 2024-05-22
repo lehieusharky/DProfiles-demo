@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_divider.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
@@ -21,13 +22,13 @@ class CryptoWalletPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Asset',
+                  appLocal(context).asset,
                   style: AppFont()
                       .fontTheme(context, weight: FontWeight.w600)
                       .bodyMedium,
                 ),
                 Text(
-                  'Total balance',
+                  appLocal(context).totalBalance,
                   style: AppFont()
                       .fontTheme(context, weight: FontWeight.w600)
                       .bodyMedium,
@@ -62,7 +63,7 @@ class CryptoWalletPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'USDT',
+                    appLocal(context).usdt.toUpperCase(),
                     style: AppFont()
                         .fontTheme(context, weight: FontWeight.w600)
                         .bodyMedium,
@@ -70,7 +71,7 @@ class CryptoWalletPage extends StatelessWidget {
                   Padding(
                     padding: context.padding(top: 3),
                     child: Text(
-                      'Tether USDT',
+                      appLocal(context).tetherUSDT,
                       style: AppFont()
                           .fontTheme(context,
                               weight: FontWeight.w400,
@@ -87,7 +88,7 @@ class CryptoWalletPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  '0.2785689852 BTC',
+                  '0.2785689852 ${appLocal(context).btc}',
                   style: AppFont()
                       .fontTheme(context, weight: FontWeight.w600)
                       .bodyMedium,

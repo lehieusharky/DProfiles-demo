@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
@@ -26,7 +27,7 @@ class SignUpSuccessPage extends StatelessWidget {
           Padding(
             padding: context.padding(vertical: 28),
             child: Text(
-              'You successfully signed up!\nWelcome to dProfiles',
+              appLocal(context).youSuccessfullySignedUpWelcomeDProfiles,
               textAlign: TextAlign.center,
               style: AppFont()
                   .fontTheme(context,
@@ -38,7 +39,7 @@ class SignUpSuccessPage extends StatelessWidget {
           AppFlatButton(context).elevatedButton(
             width: context.width,
             onPressed: () => context.router.push(const SignInRoute()),
-            title: 'Get started!',
+            title: appLocal(context).getStarted,
           ),
         ],
       ),

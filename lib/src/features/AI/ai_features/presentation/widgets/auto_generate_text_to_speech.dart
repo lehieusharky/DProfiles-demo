@@ -1,4 +1,5 @@
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_toast.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
@@ -76,13 +77,13 @@ class _AutoGenerateTextToSpeechState extends State<AutoGenerateTextToSpeech> {
     return Padding(
       padding: context.padding(vertical: 5),
       child: AppOutlineButton(context)
-          .elevatedButton(onPressed: () async => await _copy(), title: 'Copy'),
+          .elevatedButton(onPressed: () async => await _copy(), title: appLocal(context).copy),
     );
   }
 
   Future<void> _copy() async => await AppClipboardService()
       .copyTextToClipboard(widget.textGenerated ?? '')
-      .then((value) => showToast(context, 'Copied'));
+      .then((value) => showToast(context, appLocal(context).copied));
 
   Widget _buildTitle() {
     return Row(

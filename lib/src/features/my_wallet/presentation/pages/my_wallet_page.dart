@@ -1,5 +1,6 @@
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/core/ui/my_scaffold.dart';
 import 'package:demo_dprofiles/src/features/my_wallet/presentation/pages/crypto_wallet_page.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
@@ -60,7 +61,7 @@ class _MyWalletPageState extends State<MyWalletPage>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Overview',
+                      appLocal(context).overview,
                       style: AppFont()
                           .fontTheme(context, weight: FontWeight.bold)
                           .titleSmall,
@@ -68,7 +69,7 @@ class _MyWalletPageState extends State<MyWalletPage>
                     Padding(
                       padding: context.padding(top: 20, bottom: 8),
                       child: Text(
-                        'Total balance',
+                        appLocal(context).totalBalance,
                         style: AppFont()
                             .fontTheme(context, weight: FontWeight.bold)
                             .bodyMedium,
@@ -92,7 +93,7 @@ class _MyWalletPageState extends State<MyWalletPage>
                                 color: const Color(0xff40DCDC),
                                 borderRadius: BorderRadius.circular(4)),
                             child: Text(
-                              'DP1',
+                              appLocal(context).dp1.toUpperCase(),
                               style: AppFont()
                                   .fontTheme(context,
                                       weight: FontWeight.bold,
@@ -106,7 +107,7 @@ class _MyWalletPageState extends State<MyWalletPage>
                     Padding(
                       padding: context.padding(top: 4, bottom: 20),
                       child: Text(
-                        '0 USDT',
+                        '0 ${appLocal(context).usdt.toUpperCase()}',
                         style: AppFont()
                             .fontTheme(context,
                                 color: colorScheme(context).outline)
@@ -117,12 +118,12 @@ class _MyWalletPageState extends State<MyWalletPage>
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         _buildActionItem(
-                            'Buy DP1', IconsaxOutline.element_plus),
-                        _buildActionItem('Send', IconsaxOutline.send_square),
+                            appLocal(context).buyDP1, IconsaxOutline.element_plus),
+                        _buildActionItem(appLocal(context).send, IconsaxOutline.send_square),
                         _buildActionItem(
-                            'Receive', IconsaxOutline.receive_square),
+                            appLocal(context).receive, IconsaxOutline.receive_square),
                         _buildActionItem(
-                            'Converts', IconsaxOutline.convert_card),
+                            appLocal(context).converts, IconsaxOutline.convert_card),
                       ],
                     )
                   ],
@@ -149,9 +150,9 @@ class _MyWalletPageState extends State<MyWalletPage>
                   indicatorColor: const Color(0xff353945),
                   tabBarIndicatorSize: TabBarIndicatorSize.label,
                 ),
-                tabs: const [
-                  Text('Crypto Wallet'),
-                  Text('NFTs'),
+                tabs:  [
+                  Text(appLocal(context).cryptoWallet),
+                  Text(appLocal(context).nfts),
                 ],
               ),
             ),

@@ -1,6 +1,7 @@
 
 import 'package:auto_route/auto_route.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
@@ -31,7 +32,7 @@ class _LocalAuthPageState extends State<LocalAuthPage> {
 
     try {
       authenticated = await auth.authenticate(
-        localizedReason: 'Let OS determine authentication method',
+        localizedReason: appLocal(context).letOSDetermineAuthMethod,
         options: const AuthenticationOptions(
           stickyAuth: true,
           useErrorDialogs: true,

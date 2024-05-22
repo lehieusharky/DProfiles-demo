@@ -1,5 +1,6 @@
 import 'package:bubble_tab_indicator/bubble_tab_indicator.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
+import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
@@ -29,9 +30,9 @@ class TabBarProfile extends StatelessWidget {
             indicatorColor: colorScheme(context).primary,
             tabBarIndicatorSize: TabBarIndicatorSize.tab,
           ),
-          tabs: const [
-            Text('Profile'),
-            Text('Posts'),
+          tabs:  [
+            Text( appLocal(context).profile),
+            Text( appLocal(context).posts),
           ],
         ),
       ),

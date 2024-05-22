@@ -51,7 +51,7 @@ class _SettingPageState extends State<SettingPage> {
                   GroupSettingButton(
                     buttons: [
                       SettingButton(
-                        title: 'Language',
+                        title:  appLocal(context).language,
                         description: sharePreference.getLanguage().toTitle(),
                         onPressed: () async =>
                             widget.showToggleLanguageBottomSheet(context),
@@ -62,7 +62,7 @@ class _SettingPageState extends State<SettingPage> {
                   GroupSettingButton(
                     buttons: [
                       SettingButton(
-                        title: 'Sign out',
+                        title:  appLocal(context).signOut,
                         onPressed: () async {
                           await sharePreference.removeAccessToken();
 
