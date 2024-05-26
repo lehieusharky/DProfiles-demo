@@ -5,46 +5,46 @@ class AppLocalizationsVi extends AppLocalizations {
   AppLocalizationsVi([String locale = 'vi']) : super(locale);
 
   @override
-  String get aProfessionalCoverLetterCanGiveYouMoreOpportunities => 'Thư xin việc chuyên nghiệp có thể mang lại cho bạn nhiều cơ hội hơn.';
+  String get aProfessionalCoverLetterCanGiveYouMoreOpportunities => 'Một lá thư xin việc chuyên nghiệp có thể mang lại cho bạn nhiều cơ hội hơn.';
 
   @override
   String get about => 'Về';
 
   @override
-  String get aboutHint => 'Mô tả về bản thân bạn';
+  String get aboutHint => 'Mô tả bản thân';
 
   @override
-  String get aboutYourSelf => 'Về Bản Thân Bạn';
+  String get aboutYourSelf => 'Về bản thân bạn';
 
   @override
-  String get active => 'Hoạt động';
+  String get active => 'Tích cực';
 
   @override
-  String get add => 'Thêm';
+  String get add => 'Thêm vào';
 
   @override
-  String get addBasicInfo => 'Thêm Thông Tin Cơ Bản';
+  String get addBasicInfo => 'Thêm thông tin cơ bản';
 
   @override
-  String get addBasicInformation => 'Thêm Thông Tin Cơ Bản';
+  String get addBasicInformation => 'Thêm thông tin cơ bản';
 
   @override
-  String get addNewCertificate => 'Thêm Chứng Chỉ Mới';
+  String get addNewCertificate => 'Thêm chứng chỉ mới';
 
   @override
-  String get addNewCertificateFailed => 'Thêm chứng chỉ mới thất bại';
+  String get addNewCertificateFailed => 'Thêm chứng chỉ mới không thành công';
 
   @override
-  String get addNewEducation => 'Thêm Học Vấn Mới';
+  String get addNewEducation => 'Thêm giáo dục mới';
 
   @override
-  String get addNewEducationFailed => 'Thêm học vấn mới thất bại';
+  String get addNewEducationFailed => 'Thêm giáo dục mới không thành công';
 
   @override
-  String get addNewExperience => 'Thêm Kinh Nghiệm Mới';
+  String get addNewExperience => 'Thêm trải nghiệm mới';
 
   @override
-  String get addNewExperienceFailed => 'Thêm kinh nghiệm mới thất bại';
+  String get addNewExperienceFailed => 'Thêm trải nghiệm mới không thành công';
 
   @override
   String get addNewLanguage => 'Thêm ngôn ngữ mới';
@@ -53,67 +53,67 @@ class AppLocalizationsVi extends AppLocalizations {
   String get addSuccess => 'Thêm thành công';
 
   @override
-  String get addYourCharacter => 'Thêm tính cách của bạn';
+  String get addYourCharacter => 'Thêm nhân vật của bạn';
 
   @override
-  String get addYourProfile => 'Thêm Hồ Sơ Của Bạn';
+  String get addYourProfile => 'Thêm hồ sơ của bạn';
 
   @override
-  String get aggressive => 'Hung hăng';
+  String get aggressive => 'hung hãn';
 
   @override
-  String get ai => 'AI';
+  String get ai => 'trí tuệ nhân tạo';
 
   @override
-  String get aiCharacter => 'Tính Cách AI';
+  String get aiCharacter => 'Nhân vật AI';
 
   @override
-  String get aiFeature => 'Chức năng AI';
+  String get aiFeature => 'Tính năng AI';
 
   @override
-  String get aiFeatures => 'Các Chức Năng AI';
+  String get aiFeatures => 'Tính năng AI';
 
   @override
-  String get aiTools => 'Công Cụ AI';
+  String get aiTools => 'Công cụ AI';
 
   @override
-  String get alreadyHaveAnAccount => 'Đã có tài khoản?';
+  String get alreadyHaveAnAccount => 'Bạn co săn san để tạo một tai khoản?';
 
   @override
-  String get archived => 'Lưu trữ';
+  String get archived => 'Đã lưu trữ';
 
   @override
-  String get areYouWantToDeleteYourExperience => 'Bạn có muốn xóa kinh nghiệm của mình không?';
+  String get areYouWantToDeleteYourExperience => 'Bạn có muốn xóa trải nghiệm của mình không?';
 
   @override
   String get asset => 'Tài sản';
 
   @override
-  String get atLeastAt1Image => 'Ít nhất có 1 hình ảnh';
+  String get atLeastAt1Image => 'Ít nhất 1 hình ảnh';
 
   @override
-  String get attachment => 'Tệp đính kèm';
+  String get attachment => 'Tập tin đính kèm';
 
   @override
   String get author => 'Tác giả';
 
   @override
-  String get autoGenerationHistory => 'Lịch sử Tự Động Tạo';
+  String get autoGenerationHistory => 'Lịch sử tạo tự động';
 
   @override
-  String get autoTechnology => 'Công nghệ tự động';
+  String get autoTechnology => 'Công nghệ ô tô';
 
   @override
   String get available => 'Có sẵn';
 
   @override
-  String get back => 'Quay lại';
+  String get back => 'Mặt sau';
 
   @override
-  String get basicInformation => 'Thông Tin Cơ Bản';
+  String get basicInformation => 'Thông tin cơ bản';
 
   @override
-  String get beCarefullWhenClickOk => 'Hãy cẩn thận khi nhấp vào OK';
+  String get beCarefullWhenClickOk => 'Hãy cẩn thận khi nhấn OK';
 
   @override
   String get bio => 'Tiểu sử';
@@ -131,49 +131,49 @@ class AppLocalizationsVi extends AppLocalizations {
   String get byCreatingAFreeAccount => 'bằng cách tạo một tài khoản miễn phí.';
 
   @override
-  String get bySigningUpIAgree => 'Bằng cách đăng ký, tôi đồng ý rằng tôi trên 18 tuổi, và đồng ý với ';
+  String get bySigningUpIAgree => 'Bằng cách đăng ký, tôi đồng ý rằng tôi từ 18 tuổi trở lên, với ';
 
   @override
-  String get cancel => 'Hủy';
+  String get cancel => 'Hủy bỏ';
 
   @override
   String get cannotCreateDigitalProfile => 'Không thể tạo hồ sơ kỹ thuật số';
 
   @override
-  String get certificate => 'Chứng chỉ';
+  String get certificate => 'Giấy chứng nhận';
 
   @override
-  String get certificateName => 'Tên Chứng Chỉ';
+  String get certificateName => 'Tên chứng chỉ';
 
   @override
-  String get certificates => 'Các Chứng Chỉ';
+  String get certificates => 'Chứng chỉ';
 
   @override
   String get change => 'Thay đổi';
 
   @override
-  String get changeCreationStepFailed => 'Thay đổi bước tạo thất bại';
+  String get changeCreationStepFailed => 'Bước tạo thay đổi không thành công';
 
   @override
-  String get changeGptFailed => 'Thay đổi gpt thất bại';
+  String get changeGptFailed => 'thay đổi gpt không thành công';
 
   @override
   String get character => 'Tính cách';
 
   @override
-  String get characters => 'Các tính cách';
+  String get characters => 'Nhân vật';
 
   @override
   String get chat => 'Trò chuyện';
 
   @override
-  String get chatMore => 'Trò chuyện thêm';
+  String get chatMore => 'Trò chuyện nhiều hơn';
 
   @override
-  String get chatty => 'Thích trò chuyện';
+  String get chatty => 'trò chuyện';
 
   @override
-  String get checkYourEmailAgain => 'Kiểm tra lại email của bạn!';
+  String get checkYourEmailAgain => 'Kiểm tra email của bạn một lần nữa!';
 
   @override
   String get checkYourEmailOrPasswordAgain => 'Kiểm tra lại email hoặc mật khẩu của bạn';
@@ -185,7 +185,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get checkYourKeywordAgain => 'Kiểm tra lại từ khóa của bạn';
 
   @override
-  String get clearAll => 'Xóa tất cả';
+  String get clearAll => 'Làm sạch tất cả';
 
   @override
   String get codeWasResend => 'Mã đã được gửi lại';
@@ -197,34 +197,34 @@ class AppLocalizationsVi extends AppLocalizations {
   String get company => 'Công ty';
 
   @override
-  String get companyName => 'Tên Công Ty';
+  String get companyName => 'Tên công ty';
 
   @override
-  String get confirmPassword => 'Xác nhận Mật Khẩu';
+  String get confirmPassword => 'Xác nhận mật khẩu';
 
   @override
-  String get confirmPasswordIsNotMatch => 'Mật khẩu xác nhận không khớp';
+  String get confirmPasswordIsNotMatch => 'Xác nhận mật khẩu không khớp';
 
   @override
   String get connectWallet => 'Kết nối ví';
 
   @override
-  String get connectWalletDescription => 'Bạn cần một Địa chỉ Ví Crypto để đăng ký tài khoản trong dProfiles. Thử tạo ví crypto tại Metamask.';
+  String get connectWalletDescription => 'Bạn cần có Địa chỉ Ví tiền điện tử để đăng ký tài khoản trong dProfiles. ';
 
   @override
   String get connectYourWallet => 'Kết nối Ví của bạn';
 
   @override
-  String get contentCannotNull => 'Nội dung không được để trống';
+  String get contentCannotNull => 'Nội dung không thể rỗng';
 
   @override
   String get continueButton => 'Tiếp tục';
 
   @override
-  String get conversations => 'Các cuộc trò chuyện';
+  String get conversations => 'Cuộc trò chuyện';
 
   @override
-  String get converts => 'Chuyển đổi';
+  String get converts => 'chuyển đổi';
 
   @override
   String get copied => 'Đã sao chép';
@@ -236,28 +236,28 @@ class AppLocalizationsVi extends AppLocalizations {
   String get couldNotLaunch => 'Không thể khởi chạy';
 
   @override
-  String get createAccount => 'Tạo Tài Khoản';
+  String get createAccount => 'Tạo tài khoản';
 
   @override
   String get createAnAccount => 'Tạo một tài khoản';
 
   @override
-  String get createAnAccountFailed => 'Tạo tài khoản thất bại';
+  String get createAnAccountFailed => 'Tạo tài khoản không thành công';
 
   @override
-  String get createBotSuccess => 'Tạo bot thành công';
+  String get createBotSuccess => 'Tạo thành công bot';
 
   @override
   String get createDProile => 'Tạo dProfile';
 
   @override
-  String get createDigitalProfile => 'Tạo Hồ Sơ Kỹ Thuật Số';
+  String get createDigitalProfile => 'Tạo hồ sơ kỹ thuật số';
 
   @override
-  String get createDigitalProfileOnTheBlockchain => 'Tạo Hồ Sơ Kỹ Thuật Số trên Blockchain';
+  String get createDigitalProfileOnTheBlockchain => 'Tạo hồ sơ kỹ thuật số trên Blockchain';
 
   @override
-  String get createNewDProfile => 'Tạo dProfile Mới';
+  String get createNewDProfile => 'Tạo dProfile mới';
 
   @override
   String get createPost => 'Tạo bài đăng';
@@ -266,151 +266,151 @@ class AppLocalizationsVi extends AppLocalizations {
   String get createPostSuccess => 'Tạo bài đăng thành công';
 
   @override
-  String get createYourAiCharacter => 'Tạo tính cách AI của bạn';
+  String get createYourAiCharacter => 'Tạo nhân vật AI của bạn';
 
   @override
-  String get createYourHeadlineNow => 'Tạo Tiêu Đề của bạn ngay bây giờ';
+  String get createYourHeadlineNow => 'Tạo tiêu đề của bạn ngay bây giờ';
 
   @override
-  String get credentialID => 'ID Chứng Nhận';
+  String get credentialID => 'ID thông tin xác thực';
 
   @override
-  String get credentialURL => 'URL Chứng Nhận';
+  String get credentialURL => 'URL thông tin xác thực';
 
   @override
-  String get cryptoWallet => 'Ví Crypto';
+  String get cryptoWallet => 'Ví tiền điện tử';
 
   @override
-  String get dProfile => 'dProfile';
+  String get dProfile => 'dHồ sơ';
 
   @override
-  String get dProfilesOpensSales => 'dProfiles mở bán Token \$DP1';
+  String get dProfilesOpensSales => 'dProfiles mở đợt bán token \$DP1';
 
   @override
-  String get dangerousActivitiesAndChallenges => 'Hoạt động và thử thách nguy hiểm';
+  String get dangerousActivitiesAndChallenges => 'Các hoạt động và thử thách nguy hiểm';
 
   @override
   String get date => 'Ngày';
 
   @override
-  String get dateTimeFormatddmmyyyyy => 'dd/mm/yyyy';
+  String get dateTimeFormatddmmyyyyy => 'ngày/tháng/năm';
 
   @override
   String get dateTimeformatValidation => 'Vui lòng nhập ngày sinh hợp lệ (dd/mm/yyyy)';
 
   @override
-  String get dean => 'Trưởng khoa';
+  String get dean => 'trưởng khoa';
 
   @override
   String get degree => 'Bằng cấp';
 
   @override
-  String get delete => 'Xóa';
+  String get delete => 'Xóa bỏ';
 
   @override
-  String get deleteAccount => 'Xóa Tài Khoản';
+  String get deleteAccount => 'Xóa tài khoản';
 
   @override
-  String get deleteAccountFailed => 'Xóa tài khoản thất bại';
+  String get deleteAccountFailed => 'Xóa tài khoản không thành công';
 
   @override
-  String get deleteCertificateFailed => 'Xóa chứng chỉ thất bại';
+  String get deleteCertificateFailed => 'Xóa chứng chỉ không thành công';
 
   @override
-  String get deleteEducationFailed => 'Xóa học vấn thất bại';
+  String get deleteEducationFailed => 'Xóa giáo dục không thành công';
 
   @override
-  String get deleteExperienceFailed => 'Xóa kinh nghiệm thất bại';
+  String get deleteExperienceFailed => 'Xóa trải nghiệm không thành công';
 
   @override
-  String get deleteFailed => 'Xóa thất bại';
+  String get deleteFailed => 'Xóa không thành công';
 
   @override
   String get describeSomethingAboutYourBot => 'Mô tả điều gì đó về bot của bạn';
 
   @override
-  String get describeYourSelf => 'Mô tả bản thân bạn';
+  String get describeYourSelf => 'Mô tả bản thân';
 
   @override
-  String get description => 'Mô tả';
+  String get description => 'Sự miêu tả';
 
   @override
-  String get descriptionOnboarding1 => 'Tạo hồ sơ trên Mạng Blockchain, nền tảng việc làm và công cụ thanh toán crypto.';
+  String get descriptionOnboarding1 => 'Tạo hồ sơ trên Mạng Blockchain, nền tảng việc làm và công cụ thanh toán tiền điện tử.';
 
   @override
-  String get descriptionOnboarding2 => 'Nhiều công cụ AI sẽ giúp tăng tốc quá trình ứng tuyển việc làm và cải thiện cơ hội thành công của bạn.';
+  String get descriptionOnboarding2 => 'Rất nhiều công cụ AI sẽ giúp đẩy nhanh quá trình nộp đơn xin việc và nâng cao cơ hội thành công của bạn.';
 
   @override
-  String get descriptionOnboarding3 => 'Người dùng có thể tìm việc làm và đọc các bài viết hữu ích từ KOLs hoặc những người mà họ theo dõi.';
+  String get descriptionOnboarding3 => 'Người dùng có thể tìm việc làm và đọc các bài viết hữu ích từ KOL hoặc những người mà họ theo dõi.';
 
   @override
-  String get didntReceiveAnyCode => 'Không nhận được mã?';
+  String get didntReceiveAnyCode => 'Không nhận được bất kỳ mã nào?';
 
   @override
-  String get digitalProfile => 'Hồ Sơ Kỹ Thuật Số';
+  String get digitalProfile => 'Hồ sơ kỹ thuật số';
 
   @override
   String get disconnectWallet => 'Ngắt kết nối ví';
 
   @override
-  String get discover => 'Khám phá';
+  String get discover => 'Phát hiện';
 
   @override
-  String get discoverAICharacterBotNow => 'Khám phá Bot Tính Cách AI ngay bây giờ!';
+  String get discoverAICharacterBotNow => 'Khám phá Bot nhân vật AI ngay bây giờ!';
 
   @override
-  String get disorderedEatingAndUnhealthyBodyImage => 'Rối loạn ăn uống và hình ảnh cơ thể không lành mạnh';
+  String get disorderedEatingAndUnhealthyBodyImage => 'Ăn uống không điều độ và hình ảnh cơ thể không khỏe mạnh';
 
   @override
   String get dob => 'dob';
 
   @override
-  String get dontHaveAnAccount => 'Chưa có tài khoản';
+  String get dontHaveAnAccount => 'Không có tài khoản';
 
   @override
   String get dp1 => 'DP1';
 
   @override
-  String get editCertificates => 'Chỉnh sửa Chứng Chỉ';
+  String get editCertificates => 'Chỉnh sửa chứng chỉ';
 
   @override
-  String get editEducation => 'Chỉnh sửa Học Vấn';
+  String get editEducation => 'Chỉnh sửa giáo dục';
 
   @override
-  String get editProfile => 'Chỉnh Sửa Hồ Sơ';
+  String get editProfile => 'Chỉnh sửa hồ sơ';
 
   @override
-  String get education => 'Học vấn';
+  String get education => 'Giáo dục';
 
   @override
-  String get educationInformation => 'Thông Tin Học Vấn';
+  String get educationInformation => 'Thông tin giáo dục';
 
   @override
-  String get educations => 'Các Học Vấn';
+  String get educations => 'Giáo dục';
 
   @override
-  String get email => 'Email';
+  String get email => 'E-mail';
 
   @override
-  String get emailAddress => 'Địa chỉ Email';
+  String get emailAddress => 'Địa chỉ email';
 
   @override
-  String get emailCannotBeEmpty => 'Email không được để trống';
+  String get emailCannotBeEmpty => ' Email không được để trống';
 
   @override
-  String get emailInvalidate => 'Email không hợp lệ';
+  String get emailInvalidate => 'Email vô hiệu';
 
   @override
-  String get endDate => 'Ngày Kết Thúc';
+  String get endDate => 'Ngày cuối';
 
   @override
-  String get energetic => 'Năng động';
+  String get energetic => 'Mãnh liệt';
 
   @override
-  String get enterEmailToResetPassword => 'Nhập email của bạn để nhận email đặt lại mật khẩu';
+  String get enterEmailToResetPassword => 'Nhập email của bạn để nhận email reset mật khẩu';
 
   @override
-  String get enterYourAccountEmail => 'NHẬP EMAIL TÀI KHOẢN CỦA BẠN';
+  String get enterYourAccountEmail => 'Nhập email tài khoản của bạn';
 
   @override
   String get enterYourName => 'Nhập tên của bạn';
@@ -419,7 +419,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get enterYourSecurityCode => 'Nhập mã bảo mật của bạn';
 
   @override
-  String get enterYourUserName => 'Nhập Tên Người Dùng của Bạn';
+  String get enterYourUserName => 'Nhập tên người dùng của bạn';
 
   @override
   String get error => 'Lỗi';
@@ -428,7 +428,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get experience => 'Kinh nghiệm';
 
   @override
-  String get experiences => 'các kinh nghiệm';
+  String get experiences => 'kinh nghiệm';
 
   @override
   String get explore => 'Khám phá';
@@ -437,328 +437,328 @@ class AppLocalizationsVi extends AppLocalizations {
   String get failed => 'Thất bại';
 
   @override
-  String get failedToToggleLanguage => 'Failed to toggle language';
+  String get failedToToggleLanguage => 'Không thể chuyển đổi ngôn ngữ';
 
   @override
-  String get failedToToggleTheme => 'Failed to toggle theme';
+  String get failedToToggleTheme => 'Không chuyển đổi được chủ đề';
 
   @override
-  String get feed => 'Feed';
+  String get feed => 'Cho ăn';
 
   @override
-  String get feedIsEmptyDescription => 'Feed is empty now. We will update soon!';
+  String get feedIsEmptyDescription => 'Nguồn cấp dữ liệu hiện đang trống. ';
 
   @override
-  String get fieldCannotBeEmpty => 'Field cannot be empty';
+  String get fieldCannotBeEmpty => 'Trường không thể trống';
 
   @override
-  String get fieldOfStudy => 'Field Of Study';
+  String get fieldOfStudy => 'Chuyên ngành';
 
   @override
-  String get findYourFriendProfileNow => 'Find your friend profile now';
+  String get findYourFriendProfileNow => 'Tìm hồ sơ bạn bè của bạn ngay bây giờ';
 
   @override
-  String get firstName => 'Tên';
+  String get firstName => 'TÊN ĐẦU TIÊN';
 
   @override
   String get firstNameHint => 'Breanna';
 
   @override
-  String get flirty => 'Flirty';
+  String get flirty => 'tán tỉnh';
 
   @override
-  String get following => 'Following';
+  String get following => 'Tiếp theo';
 
   @override
-  String get follwer => 'Follower';
+  String get follwer => 'Người theo dõi';
 
   @override
   String get forgotPassword => 'Quên mật khẩu';
 
   @override
-  String get forgotPasswordFailed => 'Forgot password failed';
+  String get forgotPasswordFailed => 'Quên mật khẩu không thành công';
 
   @override
   String get forgotYourPassword => 'Quên mật khẩu?';
 
   @override
-  String get formal => 'Formal';
+  String get formal => 'Chính thức';
 
   @override
-  String get friendly => 'Friendly';
+  String get friendly => 'Thân thiện';
 
   @override
-  String get from => 'From';
+  String get from => 'Từ';
 
   @override
   String get gender => 'Giới tính';
 
   @override
-  String get generateCharacterBotFailed => 'Generate character bot failed';
+  String get generateCharacterBotFailed => 'Tạo bot nhân vật không thành công';
 
   @override
-  String get generateCoverLetterFailed => 'Generate cover letter failed';
+  String get generateCoverLetterFailed => 'Tạo thư xin việc không thành công';
 
   @override
-  String get generateFailed => 'Generate failed';
+  String get generateFailed => 'Tạo không thành công';
 
   @override
-  String get generateInterViewQuestionFailed => 'Generate interview question failed';
+  String get generateInterViewQuestionFailed => 'Tạo câu hỏi phỏng vấn không thành công';
 
   @override
-  String get generateProfileIntroductionFailed => 'Generate profile introduction failed';
+  String get generateProfileIntroductionFailed => 'Tạo giới thiệu hồ sơ không thành công';
 
   @override
-  String get generateSkillKnowledgeFailed => 'Generate skill knowledge failed';
+  String get generateSkillKnowledgeFailed => 'Tạo kiến ​​thức kỹ năng không thành công';
 
   @override
-  String get getAutoGenerate => 'Get auto generate history failed';
+  String get getAutoGenerate => 'Nhận lịch sử tạo tự động không thành công';
 
   @override
-  String get getAutoGenerateHistoryFailed => 'Get auto generate history failed';
+  String get getAutoGenerateHistoryFailed => 'Nhận lịch sử tạo tự động không thành công';
 
   @override
-  String get getAutoGenerationDetailFailed => 'Get auto generation detail failed';
+  String get getAutoGenerationDetailFailed => 'Nhận chi tiết tạo tự động không thành công';
 
   @override
-  String get getCertificatesFailed => 'Get certificates failed';
+  String get getCertificatesFailed => 'Nhận chứng chỉ không thành công';
 
   @override
-  String get getChatBotDetailFailed => 'Get chat bot detail failed';
+  String get getChatBotDetailFailed => 'Nhận chi tiết bot trò chuyện không thành công';
 
   @override
-  String get getDetailsBotFailed => 'get details bot failed';
+  String get getDetailsBotFailed => 'lấy thông tin chi tiết bot không thành công';
 
   @override
-  String get getEducationFailed => 'Get educations failed';
+  String get getEducationFailed => 'Nhận được sự giáo dục thất bại';
 
   @override
-  String get getExperiencesFailed => 'Get experiences failed';
+  String get getExperiencesFailed => 'Nhận được kinh nghiệm thất bại';
 
   @override
-  String get getInfoFailed => 'Get info failed';
+  String get getInfoFailed => 'Nhận thông tin không thành công';
 
   @override
-  String get getListCharacterBotFailed => 'Get list character bot failed';
+  String get getListCharacterBotFailed => 'Nhận bot ký tự danh sách không thành công';
 
   @override
-  String get getListPopularCharacterBotFailed => 'Get list popular character bot failed';
+  String get getListPopularCharacterBotFailed => 'Lấy danh sách bot nhân vật phổ biến không thành công';
 
   @override
-  String get getMetaLanguageFailed => 'Get meta language failed';
+  String get getMetaLanguageFailed => 'Nhận ngôn ngữ meta không thành công';
 
   @override
-  String get getNewsFeedFailed => 'Get news feed failed';
+  String get getNewsFeedFailed => 'Nhận nguồn cấp tin tức không thành công';
 
   @override
-  String get getPointFailed => 'Get point failed';
+  String get getPointFailed => 'Nhận điểm không thành công';
 
   @override
   String get getStarted => 'Bắt đầu';
 
   @override
-  String get getUserBannerFailed => 'get user banner failed';
+  String get getUserBannerFailed => 'lấy biểu ngữ người dùng không thành công';
 
   @override
-  String get getUserCertificatesFailed => 'Get user certificates  failed';
+  String get getUserCertificatesFailed => 'Nhận chứng chỉ người dùng không thành công';
 
   @override
-  String get getUserEducationFailed => 'Get user education  failed';
+  String get getUserEducationFailed => 'Nhận hướng dẫn người dùng không thành công';
 
   @override
-  String get getUserExperienceFailed => 'Get user experience  failed';
+  String get getUserExperienceFailed => 'Nhận trải nghiệm người dùng không thành công';
 
   @override
-  String get getUserInfoFailed => 'Get user info failed';
+  String get getUserInfoFailed => 'Lấy thông tin người dùng không thành công';
 
   @override
-  String get getUserLanguagesFailed => 'Get user languages  failed';
+  String get getUserLanguagesFailed => 'Nhận ngôn ngữ người dùng không thành công';
 
   @override
-  String get getUserPostFailed => 'get user post failed';
+  String get getUserPostFailed => 'nhận được bài đăng của người dùng không thành công';
 
   @override
-  String get getUserSkillFailed => 'Get user skill  failed';
+  String get getUserSkillFailed => 'Nhận kỹ năng người dùng không thành công';
 
   @override
-  String get hateAndHarassment => 'Hate and harassment';
+  String get hateAndHarassment => 'Ghét và quấy rối';
 
   @override
   String get headline => 'Tiêu đề';
 
   @override
-  String get helpful => 'Helpful';
+  String get helpful => 'Hữu ích';
 
   @override
-  String get historyDetails => 'History details';
+  String get historyDetails => 'Chi tiết lịch sử';
 
   @override
-  String get historyIsEmpty => 'History is empty';
+  String get historyIsEmpty => 'Lịch sử trống rỗng';
 
   @override
-  String get historyUpdateDProfile => 'History update dProfile';
+  String get historyUpdateDProfile => 'Cập nhật lịch sử dProfile';
 
   @override
   String get home => 'Trang chủ';
 
   @override
-  String get hour => '/hour';
+  String get hour => '/giờ';
 
   @override
-  String get hourAgo => 'hour ago';
+  String get hourAgo => 'giờ trước';
 
   @override
-  String get howManyWordsForThis => 'How many words for this?';
+  String get howManyWordsForThis => 'Có bao nhiêu từ cho điều này?';
 
   @override
-  String get humorous => 'Humorous';
+  String get humorous => 'Hài hước';
 
   @override
-  String get id => 'ID';
+  String get id => 'NHẬN DẠNG';
 
   @override
-  String get idCardNumber => 'ID Card Number';
+  String get idCardNumber => 'Số CMND';
 
   @override
-  String get impressEmployerWithYourProfileIntroduction => 'Impress the employer with your profile introduction.';
+  String get impressEmployerWithYourProfileIntroduction => 'Gây ấn tượng với nhà tuyển dụng bằng phần giới thiệu hồ sơ của bạn.';
 
   @override
-  String get improveYourSkillWithAITools => 'Improve your skills with AI tools.';
+  String get improveYourSkillWithAITools => 'Cải thiện kỹ năng của bạn với các công cụ AI.';
 
   @override
-  String get inAngelnvestorRound => 'in angel investor round';
+  String get inAngelnvestorRound => 'trong vòng nhà đầu tư thiên thần';
 
   @override
-  String get inspiring => 'Inspiring';
+  String get inspiring => 'Cảm hứng';
 
   @override
   String get instagram => 'INSTAGRAM';
 
   @override
-  String get instagramURL => 'Instagram URL';
+  String get instagramURL => 'URL Instagram';
 
   @override
-  String get interviewQuestion => 'Interview question';
+  String get interviewQuestion => 'Câu hỏi phỏng vấn';
 
   @override
-  String get interviewQuestionAbout => 'Interview question about';
+  String get interviewQuestionAbout => 'Câu hỏi phỏng vấn về';
 
   @override
-  String get investmentOpportunity => 'Investment Opportunity';
+  String get investmentOpportunity => 'Cơ hội đầu tư';
 
   @override
-  String get issuedBy => 'Issued by';
+  String get issuedBy => 'Phát hành bởi';
 
   @override
-  String get jobInterviewQA => 'Job Interview Q&A';
+  String get jobInterviewQA => 'Hỏi đáp phỏng vấn xin việc';
 
   @override
-  String get jobPosition => 'Job Position';
+  String get jobPosition => 'Vị trí công việc';
 
   @override
-  String get jobTitle => 'Job title';
+  String get jobTitle => 'Chức danh';
 
   @override
   String get language => 'Ngôn ngữ';
 
   @override
-  String get languages => 'Các ngôn ngữ';
+  String get languages => 'Ngôn ngữ';
 
   @override
-  String get lastName => 'Họ';
+  String get lastName => 'HỌ';
 
   @override
   String get lastNameHint => 'Schinner';
 
   @override
-  String get letOSDetermineAuthMethod => 'Let OS determine authentication method';
+  String get letOSDetermineAuthMethod => 'Hãy để hệ điều hành xác định phương thức xác thực';
 
   @override
-  String get linkedin => 'LinkedIn';
+  String get linkedin => 'LINKEDIN';
 
   @override
-  String get linkedinURL => 'Linkedin URL';
+  String get linkedinURL => 'URL Linkedin';
 
   @override
-  String get loadBotFailed => 'Load bot failed';
+  String get loadBotFailed => 'Tải bot không thành công';
 
   @override
-  String get loadFailed => 'Load failed';
+  String get loadFailed => 'Tải không thành công';
 
   @override
-  String get location => 'Địa điểm';
+  String get location => 'vị trí';
 
   @override
-  String get locationHint => 'US';
+  String get locationHint => 'CHÚNG TA';
 
   @override
   String get login => 'Đăng nhập';
 
   @override
-  String get loginFailed => 'Login failed';
+  String get loginFailed => 'Đăng nhập thất bại';
 
   @override
   String get logout => 'Đăng xuất';
 
   @override
-  String get max5MbFor1File => 'Max 5Mb for 1 file';
+  String get max5MbFor1File => 'Tối đa 5Mb cho 1 file';
 
   @override
-  String get messages => 'Messages';
+  String get messages => 'Tin nhắn';
 
   @override
-  String get myAiCharacter => 'My AI Character';
+  String get myAiCharacter => 'Nhân vật AI của tôi';
 
   @override
-  String get name => 'Tên';
+  String get name => 'tên';
 
   @override
-  String get nationality => 'Nationality';
+  String get nationality => 'Quốc tịch';
 
   @override
-  String get nevermindIGotIt => 'Nevermind, I got it';
+  String get nevermindIGotIt => 'Không sao đâu, tôi hiểu rồi';
 
   @override
-  String get newPassword => 'Mật khẩu mới';
+  String get newPassword => 'mật khẩu mới';
 
   @override
-  String get nextButton => 'Next';
+  String get nextButton => 'Kế tiếp';
 
   @override
-  String get nfts => 'NFTs';
+  String get nfts => 'NFT';
 
   @override
-  String get noCommentsYet => 'No comments yet';
+  String get noCommentsYet => 'Chưa có bình luận nào';
 
   @override
-  String get normal => 'Normal';
+  String get normal => 'Bình thường';
 
   @override
-  String get nudityAndSexualContent => 'Nudity and sexual content';
+  String get nudityAndSexualContent => 'Nội dung khỏa thân và tình dục';
 
   @override
-  String get number => 'Number';
+  String get number => 'Con số';
 
   @override
-  String get ok => 'OK';
+  String get ok => 'ĐƯỢC RỒI';
 
   @override
-  String get openToWork => 'Open to work';
+  String get openToWork => 'Mở cửa làm việc';
 
   @override
-  String get organization => 'Organization';
+  String get organization => 'Tổ chức';
 
   @override
-  String get organizationName => 'Organization name';
+  String get organizationName => 'Tên tổ chức';
 
   @override
-  String get others => 'Others';
+  String get others => 'Người khác';
 
   @override
   String get overview => 'Tổng quan';
 
   @override
-  String get passive => 'Passive';
+  String get passive => 'Thụ động';
 
   @override
   String get password => 'Mật khẩu';
@@ -767,34 +767,34 @@ class AppLocalizationsVi extends AppLocalizations {
   String get passwordCannotBeEmpty => 'Mật khẩu không được để trống';
 
   @override
-  String get passwordMustHaveAtLeast8Characters => 'Password must have at least 8 characters';
+  String get passwordMustHaveAtLeast8Characters => 'Mật khẩu phải có ít nhất 8 ký tự';
 
   @override
-  String get pay => 'PAY';
+  String get pay => 'CHI TRẢ';
 
   @override
-  String get payByMonth => 'Pay by month';
+  String get payByMonth => 'Thanh toán theo tháng';
 
   @override
-  String get payPerJob => 'Pay per job';
+  String get payPerJob => 'Trả tiền cho mỗi công việc';
 
   @override
-  String get pleaseEnterThe6DigitCodeSentToYourEmailForVerification => 'Please enter the 6-digit code sent to your email for verification';
+  String get pleaseEnterThe6DigitCodeSentToYourEmailForVerification => 'Vui lòng nhập mã gồm 6 chữ số được gửi tới email của bạn để xác minh';
 
   @override
-  String get position => 'Position';
+  String get position => 'Chức vụ';
 
   @override
-  String get post => 'Post';
+  String get post => 'Bưu kiện';
 
   @override
-  String get postFailed => 'post failed';
+  String get postFailed => 'bài viết thất bại';
 
   @override
-  String get posts => 'Các bài đăng';
+  String get posts => 'bài viết';
 
   @override
-  String get price => 'Price';
+  String get price => 'Giá';
 
   @override
   String get privacyPolicy => 'Chính sách bảo mật';
@@ -803,380 +803,380 @@ class AppLocalizationsVi extends AppLocalizations {
   String get profile => 'Hồ sơ';
 
   @override
-  String get profiles => 'Profiles';
+  String get profiles => 'Hồ sơ';
 
   @override
-  String get prompt => 'Prompt';
+  String get prompt => 'Lời nhắc';
 
   @override
-  String get receive => 'Receive';
+  String get receive => 'Nhận được';
 
   @override
-  String get reply => 'Reply';
+  String get reply => 'Hồi đáp';
 
   @override
-  String get report => 'Report';
+  String get report => 'Báo cáo';
 
   @override
-  String get requestNewCodeIn => 'Request new code in';
+  String get requestNewCodeIn => 'Yêu cầu mã mới trong';
 
   @override
-  String get resendAgain => 'Resend Again';
+  String get resendAgain => 'Gửi lại lần nữa';
 
   @override
-  String get resendFailed => 'Resend failed';
+  String get resendFailed => 'Gửi lại không thành công';
 
   @override
   String get resetPassword => 'Đặt lại mật khẩu';
 
   @override
-  String get resultIsEmptyTryAnotherKeyword => 'Result is empty. Try another keywords!';
+  String get resultIsEmptyTryAnotherKeyword => 'Kết quả trống rỗng. ';
 
   @override
-  String get salary => 'SALARY';
+  String get salary => 'LƯƠNG';
 
   @override
-  String get salaryHint => '\\\$10,000';
+  String get salaryHint => '\\\$10.000';
 
   @override
-  String get save => 'Lưu';
+  String get save => 'Cứu';
 
   @override
-  String get school => 'School';
+  String get school => 'Trường học';
 
   @override
-  String get schoolName => 'School name';
+  String get schoolName => 'Tên trường';
 
   @override
   String get search => 'Tìm kiếm';
 
   @override
-  String get searchFailed => 'Search failed';
+  String get searchFailed => 'Tìm kiếm không thành công';
 
   @override
-  String get securityVerification => 'Security verification';
+  String get securityVerification => 'Xác minh bảo mật';
 
   @override
-  String get selectAReason => 'Select a reason';
+  String get selectAReason => 'Chọn một lí do';
 
   @override
-  String get send => 'Send';
+  String get send => 'Gửi';
 
   @override
-  String get sendFailed => 'Send failed';
+  String get sendFailed => 'Gửi thất bại';
 
   @override
-  String get sendToAI => 'Send to AI';
+  String get sendToAI => 'Gửi tới AI';
 
   @override
-  String get sexy => 'Sexy';
+  String get sexy => 'gợi cảm';
 
   @override
-  String get signOut => 'Sign out';
+  String get signOut => 'Đăng xuất';
 
   @override
   String get signUp => 'Đăng ký';
 
   @override
-  String get signupForFree => 'Sign up for free';
+  String get signupForFree => 'Đăng kí miễn phí';
 
   @override
-  String get skill => 'Skill';
+  String get skill => 'Kỹ năng';
 
   @override
   String get skills => 'Kỹ năng';
 
   @override
-  String get skillsKnowledgeByJobTitle => 'Skills & Knowledge by Job Title';
+  String get skillsKnowledgeByJobTitle => 'Kỹ năng & Kiến thức theo Chức danh';
 
   @override
-  String get skip => 'Skip';
+  String get skip => 'Nhảy';
 
   @override
-  String get smart => 'Smart';
+  String get smart => 'Thông minh';
 
   @override
-  String get socialMedia => 'Mạng xã hội';
+  String get socialMedia => 'Truyền thông xã hội';
 
   @override
-  String get socialMediaWasNotSetUp => 'Social media was not set up';
+  String get socialMediaWasNotSetUp => 'Phương tiện truyền thông xã hội chưa được thiết lập';
 
   @override
-  String get someThingAboutYourselfAndYourExperience => 'Some thing about your self and your experience';
+  String get someThingAboutYourselfAndYourExperience => 'Đôi điều về bản thân và trải nghiệm của bạn';
 
   @override
-  String get speaking => 'Speaking';
+  String get speaking => 'Nói';
 
   @override
-  String get spiritual => 'Spiritual';
+  String get spiritual => 'tâm linh';
 
   @override
-  String get startDate => 'Start Date';
+  String get startDate => 'Ngày bắt đầu';
 
   @override
-  String get submit => 'Submit';
+  String get submit => 'Nộp';
 
   @override
   String get success => 'Thành công';
 
   @override
-  String get suicideAndSelfHarm => 'Suicide and Self-harm';
+  String get suicideAndSelfHarm => 'Tự sát và tự làm hại bản thân';
 
   @override
-  String get summary => 'summary';
+  String get summary => 'bản tóm tắt';
 
   @override
-  String get supportive => 'Supportive';
+  String get supportive => 'hỗ trợ';
 
   @override
-  String get tellMeAboutYourSelf => 'Tell me about your self?';
+  String get tellMeAboutYourSelf => 'Cho tôi biết về bản thân của bạn?';
 
   @override
   String get tetherUSDT => 'Tether USDT';
 
   @override
-  String get theme => 'Theme';
+  String get theme => 'chủ đề';
 
   @override
-  String get time => 'Time';
+  String get time => 'Thời gian';
 
   @override
-  String get title => 'Title';
+  String get title => 'Tiêu đề';
 
   @override
-  String get titleHint => 'Product Designer';
+  String get titleHint => 'Người thiết kế sản phẩm';
 
   @override
-  String get titleOnboarding1 => 'A Web3 social network for jobs';
+  String get titleOnboarding1 => 'Mạng xã hội Web3 dành cho việc làm';
 
   @override
-  String get titleOnboarding2 => 'AI Tools to help you land your next job';
+  String get titleOnboarding2 => 'Công cụ AI giúp bạn có được công việc tiếp theo';
 
   @override
-  String get titleOnboarding3 => 'Job listing system & New Feeds';
+  String get titleOnboarding3 => 'Hệ thống danh sách việc làm & Nguồn cấp dữ liệu mới';
 
   @override
-  String get to => 'Đến';
+  String get to => 'ĐẾN';
 
   @override
-  String get topic => 'Topic';
+  String get topic => 'Đề tài';
 
   @override
-  String get totalBalance => 'Total balance';
+  String get totalBalance => 'Tổng số dư';
 
   @override
-  String get trainingAI => 'Training AI';
+  String get trainingAI => 'Đào tạo AI';
 
   @override
-  String get tryNow => 'Try now';
+  String get tryNow => 'Thử ngay bây giờ';
 
   @override
-  String get tryToDiscoverDprofileAITools => 'Try to discover DProfile\'s AI tools';
+  String get tryToDiscoverDprofileAITools => 'Hãy thử khám phá công cụ AI của DProfile';
 
   @override
-  String get unavailable => 'Unavailable';
+  String get unavailable => 'Không có sẵn';
 
   @override
-  String get updateAvatarSuccess => 'Update avatar success';
+  String get updateAvatarSuccess => 'Cập nhật hình đại diện thành công';
 
   @override
-  String get updateBannerSuccess => 'Update banner success';
+  String get updateBannerSuccess => 'Cập nhật biểu ngữ thành công';
 
   @override
-  String get updateBasicInformationFailed => 'Update basic information failed';
+  String get updateBasicInformationFailed => 'Cập nhật thông tin cơ bản không thành công';
 
   @override
-  String get updateDigitalProfileFailed => 'Update digital profile failed';
+  String get updateDigitalProfileFailed => 'Cập nhật hồ sơ kỹ thuật số không thành công';
 
   @override
-  String get updateFailed => 'Cập nhật thất bại';
+  String get updateFailed => 'Cập nhật không thành công';
 
   @override
-  String get updatePasswordFailed => 'Update password failed';
+  String get updatePasswordFailed => 'Cập nhật mật khẩu không thành công';
 
   @override
-  String get updatePropertiesFailed => 'Update properties failed';
+  String get updatePropertiesFailed => 'Cập nhật thuộc tính không thành công';
 
   @override
-  String get updateUserInfoFailed => 'Update user info  failed';
+  String get updateUserInfoFailed => 'Cập nhật thông tin người dùng không thành công';
 
   @override
-  String get updateWalletAddressFailed => 'Update wallet address failed';
+  String get updateWalletAddressFailed => 'Cập nhật địa chỉ ví không thành công';
 
   @override
-  String get updateWalletAddressSuccess => 'Update wallet address success';
+  String get updateWalletAddressSuccess => 'Cập nhật địa chỉ ví thành công';
 
   @override
-  String get uploadAvatarFailed => 'Upload avatar failed';
+  String get uploadAvatarFailed => 'Tải lên hình đại diện không thành công';
 
   @override
-  String get uploadBannerFailed => 'Upload banner failed';
+  String get uploadBannerFailed => 'Tải lên biểu ngữ không thành công';
 
   @override
-  String get uploadDocumentToAIKnowledgeDescription => 'Upload your documents to your AI knowledge base';
+  String get uploadDocumentToAIKnowledgeDescription => 'Tải tài liệu của bạn lên cơ sở kiến ​​thức AI của bạn';
 
   @override
-  String get uploadImageFailed => 'Upload image failed';
+  String get uploadImageFailed => 'Tải hình ảnh lên không thành công';
 
   @override
-  String get uploadSuccess => 'Upload success';
+  String get uploadSuccess => 'Tải lên thành công';
 
   @override
-  String get uploadTextFileDescription => 'You can upload text file .pdf or .docx format about specific knowledge your AI will share with the targeted audience, for example: Menu, best pr articles about your store, history of store..';
+  String get uploadTextFileDescription => 'Bạn có thể tải lên tệp văn bản có định dạng .pdf hoặc .docx về những kiến ​​thức cụ thể mà AI của bạn sẽ chia sẻ với đối tượng mục tiêu, ví dụ: Menu, các bài viết PR hay nhất về cửa hàng của bạn, lịch sử cửa hàng..';
 
   @override
-  String get uploadYourFile => 'Upload your file';
+  String get uploadYourFile => 'Tải tập tin của bạn lên';
 
   @override
-  String get uploadYourImages => 'Upload your images';
+  String get uploadYourImages => 'Tải lên hình ảnh của bạn';
 
   @override
   String get usdt => 'usdt';
 
   @override
-  String get userName => 'User Name';
+  String get userName => 'Tên tài khoản';
 
   @override
-  String get userNameCannotBeEmpty => 'Username cannot be empty';
+  String get userNameCannotBeEmpty => 'Tên ngươi dung không được để trông';
 
   @override
-  String get userNamePasswordIsIncorrect => 'The username or password you entered is incorrect!';
+  String get userNamePasswordIsIncorrect => 'Tên người dùng hoặc mật khẩu bạn nhập không đúng!';
 
   @override
-  String get validateCodeFailed => 'Validate code failed';
+  String get validateCodeFailed => 'Xác thực mã không thành công';
 
   @override
   String get viewAll => 'Xem tất cả';
 
   @override
-  String get viewChatHistory => 'View Chat History';
+  String get viewChatHistory => 'Xem lịch sử trò chuyện';
 
   @override
-  String get viewDigitalProfile => 'View Digital Profile';
+  String get viewDigitalProfile => 'Xem hồ sơ kỹ thuật số';
 
   @override
-  String get viewHistory => 'View History';
+  String get viewHistory => 'Xem lịch sử';
 
   @override
-  String get violent => 'Violent';
+  String get violent => 'Hung bạo';
 
   @override
-  String get wallet => 'wallet';
+  String get wallet => 'cái ví';
 
   @override
-  String get weWillHelpYouAnswerInterViewQuestion => 'We will help you answer interview questions.';
+  String get weWillHelpYouAnswerInterViewQuestion => 'Chúng tôi sẽ giúp bạn trả lời các câu hỏi phỏng vấn.';
 
   @override
-  String get whatJobAreYouApplingFor => 'What job are you applying for?';
+  String get whatJobAreYouApplingFor => 'Bạn đang ứng tuyển công việc gì?';
 
   @override
-  String get whatsApp => 'WHATSAPP';
+  String get whatsApp => 'CÁI GÌ';
 
   @override
-  String get whatsAppURL => 'Whatsapp URL';
+  String get whatsAppURL => 'URL Whatsapp';
 
   @override
-  String get whichJobAreYouApplingFor => 'Which job are you applying for';
+  String get whichJobAreYouApplingFor => 'Bạn đang ứng tuyển vào công việc nào';
 
   @override
-  String get writeAComment => 'Viết bình luận';
+  String get writeAComment => 'Viết bình luận...';
 
   @override
-  String get writeAgain => 'Write again';
+  String get writeAgain => 'Viết lại';
 
   @override
-  String get writeCoverLetter => 'Write Cover Letter';
+  String get writeCoverLetter => 'Viết thư xin việc';
 
   @override
-  String get writeInterviewQuestion => 'Write Interview Question';
+  String get writeInterviewQuestion => 'Viết câu hỏi phỏng vấn';
 
   @override
-  String get writeProfileIntroduction => 'Write Profile Introduction';
+  String get writeProfileIntroduction => 'Viết hồ sơ Giới thiệu';
 
   @override
-  String get writeStyle => 'Write Style';
+  String get writeStyle => 'Viết phong cách';
 
   @override
-  String get writeYourProfileIntroduction => 'Write your profile Introduction';
+  String get writeYourProfileIntroduction => 'Viết hồ sơ của bạn Giới thiệu';
 
   @override
-  String get writeYourSkillContent => 'Write your skill content';
+  String get writeYourSkillContent => 'Viết nội dung kỹ năng của bạn';
 
   @override
   String get x => 'X';
 
   @override
-  String get xURL => 'X URL';
+  String get xURL => 'URL X';
 
   @override
-  String get youDontHaveDigitalProfile => 'You don\'t have digital profile';
+  String get youDontHaveDigitalProfile => 'Bạn không có hồ sơ kỹ thuật số';
 
   @override
-  String get youDontHaveEnoughToken => 'You don\'t have enough token!';
+  String get youDontHaveEnoughToken => 'Bạn không có đủ mã thông báo!';
 
   @override
-  String get youHaveAddNewCertificate => 'You have add new certificate';
+  String get youHaveAddNewCertificate => 'Bạn đã thêm chứng chỉ mới';
 
   @override
-  String get youHaveAddNewEducation => 'You have add new education';
+  String get youHaveAddNewEducation => 'Bạn đã thêm giáo dục mới';
 
   @override
-  String get youHaveAddNewExperience => 'You have add new experience';
+  String get youHaveAddNewExperience => 'Bạn có thêm trải nghiệm mới';
 
   @override
-  String get youHaveAddNewLanguage => 'You have add new language';
+  String get youHaveAddNewLanguage => 'Bạn đã thêm ngôn ngữ mới';
 
   @override
-  String get youHaveAddNewSkill => 'You have add new skill';
+  String get youHaveAddNewSkill => 'Bạn có thêm kỹ năng mới';
 
   @override
-  String get youHaveToConnectWalletBefore => 'You have to connect wallet before';
+  String get youHaveToConnectWalletBefore => 'Bạn phải kết nối ví trước';
 
   @override
-  String get youSuccessfullySignedUpWelcomeDProfiles => 'You successfully signed up!\nWelcome to dProfiles';
+  String get youSuccessfullySignedUpWelcomeDProfiles => 'Bạn đã đăng ký thành công!\n';
 
   @override
-  String get yourAiCharacters => 'Your AI Characters';
+  String get yourAiCharacters => 'Nhân vật AI của bạn';
 
   @override
-  String get yourChooseIsInvalid => 'Your choose is invalid';
+  String get yourChooseIsInvalid => 'Lựa chọn của bạn không hợp lệ';
 
   @override
-  String get yourContentHere => 'Your content here';
+  String get yourContentHere => 'Nội dung của bạn ở đây';
 
   @override
-  String get yourEmail => 'Your email';
+  String get yourEmail => 'Email của bạn';
 
   @override
-  String get yourFieldOfStudy => 'Your field of study';
+  String get yourFieldOfStudy => 'Lĩnh vực học tập của bạn';
 
   @override
-  String get yourFirstName => 'Your First Name';
+  String get yourFirstName => 'Tên của bạn';
 
   @override
-  String get yourIdCard => 'Your id card';
+  String get yourIdCard => 'Thẻ ID của bạn';
 
   @override
-  String get yourJobTitle => 'Your job title';
+  String get yourJobTitle => 'Chức danh của bạn';
 
   @override
-  String get yourKeyword => 'Your Keyword';
+  String get yourKeyword => 'Từ khóa của bạn';
 
   @override
-  String get yourLastName => 'Your Last Name';
+  String get yourLastName => 'Tên của bạn';
 
   @override
-  String get yourLocation => 'Your Location';
+  String get yourLocation => 'Vị trí của bạn';
 
   @override
-  String get yourName => 'Your Name';
+  String get yourName => 'Tên của bạn';
 
   @override
-  String get yourNationality => 'Your nationality';
+  String get yourNationality => 'Quốc tịch của bạn';
 
   @override
-  String get yourRequire => 'Your require';
+  String get yourRequire => 'Yêu cầu của bạn';
 
   @override
-  String get yourTitle => 'Your Title';
+  String get yourTitle => 'Tiêu đề của bạn';
 }
