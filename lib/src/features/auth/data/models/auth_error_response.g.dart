@@ -12,6 +12,7 @@ _$RegularErrorResponseImpl _$$RegularErrorResponseImplFromJson(
       message: json['message'] as String? ?? "",
       error: json['error'] as String?,
       statusCode: (json['statusCode'] as num?)?.toInt() ?? 400,
+      serviceCode: (json['serviceCode'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$RegularErrorResponseImplToJson(
@@ -20,4 +21,5 @@ Map<String, dynamic> _$$RegularErrorResponseImplToJson(
       'message': instance.message,
       'error': instance.error,
       'statusCode': instance.statusCode,
+      'serviceCode': instance.serviceCode,
     };

@@ -23,6 +23,7 @@ mixin _$RegularErrorResponse {
   String? get message => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
   int? get statusCode => throw _privateConstructorUsedError;
+  int? get serviceCode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +37,8 @@ abstract class $RegularErrorResponseCopyWith<$Res> {
           $Res Function(RegularErrorResponse) then) =
       _$RegularErrorResponseCopyWithImpl<$Res, RegularErrorResponse>;
   @useResult
-  $Res call({String? message, String? error, int? statusCode});
+  $Res call(
+      {String? message, String? error, int? statusCode, int? serviceCode});
 }
 
 /// @nodoc
@@ -56,6 +58,7 @@ class _$RegularErrorResponseCopyWithImpl<$Res,
     Object? message = freezed,
     Object? error = freezed,
     Object? statusCode = freezed,
+    Object? serviceCode = freezed,
   }) {
     return _then(_value.copyWith(
       message: freezed == message
@@ -70,6 +73,10 @@ class _$RegularErrorResponseCopyWithImpl<$Res,
           ? _value.statusCode
           : statusCode // ignore: cast_nullable_to_non_nullable
               as int?,
+      serviceCode: freezed == serviceCode
+          ? _value.serviceCode
+          : serviceCode // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -82,7 +89,8 @@ abstract class _$$RegularErrorResponseImplCopyWith<$Res>
       __$$RegularErrorResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? message, String? error, int? statusCode});
+  $Res call(
+      {String? message, String? error, int? statusCode, int? serviceCode});
 }
 
 /// @nodoc
@@ -99,6 +107,7 @@ class __$$RegularErrorResponseImplCopyWithImpl<$Res>
     Object? message = freezed,
     Object? error = freezed,
     Object? statusCode = freezed,
+    Object? serviceCode = freezed,
   }) {
     return _then(_$RegularErrorResponseImpl(
       message: freezed == message
@@ -113,6 +122,10 @@ class __$$RegularErrorResponseImplCopyWithImpl<$Res>
           ? _value.statusCode
           : statusCode // ignore: cast_nullable_to_non_nullable
               as int?,
+      serviceCode: freezed == serviceCode
+          ? _value.serviceCode
+          : serviceCode // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -121,7 +134,7 @@ class __$$RegularErrorResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RegularErrorResponseImpl implements _RegularErrorResponse {
   const _$RegularErrorResponseImpl(
-      {this.message = "", this.error, this.statusCode = 400});
+      {this.message = "", this.error, this.statusCode = 400, this.serviceCode});
 
   factory _$RegularErrorResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$RegularErrorResponseImplFromJson(json);
@@ -134,10 +147,12 @@ class _$RegularErrorResponseImpl implements _RegularErrorResponse {
   @override
   @JsonKey()
   final int? statusCode;
+  @override
+  final int? serviceCode;
 
   @override
   String toString() {
-    return 'RegularErrorResponse(message: $message, error: $error, statusCode: $statusCode)';
+    return 'RegularErrorResponse(message: $message, error: $error, statusCode: $statusCode, serviceCode: $serviceCode)';
   }
 
   @override
@@ -148,12 +163,15 @@ class _$RegularErrorResponseImpl implements _RegularErrorResponse {
             (identical(other.message, message) || other.message == message) &&
             (identical(other.error, error) || other.error == error) &&
             (identical(other.statusCode, statusCode) ||
-                other.statusCode == statusCode));
+                other.statusCode == statusCode) &&
+            (identical(other.serviceCode, serviceCode) ||
+                other.serviceCode == serviceCode));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, message, error, statusCode);
+  int get hashCode =>
+      Object.hash(runtimeType, message, error, statusCode, serviceCode);
 
   @JsonKey(ignore: true)
   @override
@@ -175,7 +193,8 @@ abstract class _RegularErrorResponse implements RegularErrorResponse {
   const factory _RegularErrorResponse(
       {final String? message,
       final String? error,
-      final int? statusCode}) = _$RegularErrorResponseImpl;
+      final int? statusCode,
+      final int? serviceCode}) = _$RegularErrorResponseImpl;
 
   factory _RegularErrorResponse.fromJson(Map<String, dynamic> json) =
       _$RegularErrorResponseImpl.fromJson;
@@ -186,6 +205,8 @@ abstract class _RegularErrorResponse implements RegularErrorResponse {
   String? get error;
   @override
   int? get statusCode;
+  @override
+  int? get serviceCode;
   @override
   @JsonKey(ignore: true)
   _$$RegularErrorResponseImplCopyWith<_$RegularErrorResponseImpl>

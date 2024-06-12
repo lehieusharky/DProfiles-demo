@@ -41,7 +41,7 @@ class AuthUseCaseImpl implements AuthUseCase {
 
   @override
   Future<Either<String, BaseResponse>> resendSignUpEmail(String email) async {
-    final result = await _authRepository.sendSignUpEmail(email);
+    final result = await _authRepository.resendSignUpEmail(email);
 
     return result.fold(
       (l) => Left((l.response as RegularErrorResponse).message!),

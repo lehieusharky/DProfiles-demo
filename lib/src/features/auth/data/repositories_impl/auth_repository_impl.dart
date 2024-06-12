@@ -19,11 +19,10 @@ class AuthRepositoryImpl implements AuthRepository {
       String email) async {
     try {
       final response = await _authDataSource.sendSignUpEmail(email);
-
       return Right(response);
     } on DioException catch (e) {
-      return Left(
-          AuthFailure(response: RegularErrorResponse.fromJson(e.response!.data)));
+      return Left(AuthFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
 
@@ -34,8 +33,8 @@ class AuthRepositoryImpl implements AuthRepository {
       final response = await _authDataSource.sendSignUpEmail(email);
       return Right(response);
     } on DioException catch (e) {
-      return Left(
-          AuthFailure(response: RegularErrorResponse.fromJson(e.response!.data)));
+      return Left(AuthFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
 
@@ -46,8 +45,8 @@ class AuthRepositoryImpl implements AuthRepository {
       final response = await _authDataSource.validateSignUpCode(email, code);
       return Right(response);
     } on DioException catch (e) {
-      return Left(
-          AuthFailure(response: RegularErrorResponse.fromJson(e.response!.data)));
+      return Left(AuthFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
 
@@ -58,8 +57,8 @@ class AuthRepositoryImpl implements AuthRepository {
       final response = await _authDataSource.createAnAccount(model);
       return Right(response);
     } on DioException catch (e) {
-      return Left(
-          AuthFailure(response: RegularErrorResponse.fromJson(e.response!.data)));
+      return Left(AuthFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
 
@@ -70,8 +69,8 @@ class AuthRepositoryImpl implements AuthRepository {
       final response = await _authDataSource.signIn(email, password);
       return Right(response);
     } on DioException catch (e) {
-      return Left(
-          AuthFailure(response: RegularErrorResponse.fromJson(e.response!.data)));
+      return Left(AuthFailure(
+          response: RegularErrorResponse.fromJson(e.response!.data)));
     }
   }
 }

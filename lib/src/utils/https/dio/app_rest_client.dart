@@ -6,7 +6,7 @@ import 'package:retrofit/retrofit.dart';
 
 part 'app_rest_client.g.dart';
 
-@RestApi(baseUrl: 'https://api.dev.dprofiles.xyz')
+@RestApi(baseUrl: 'https://api.dprofiles.xyz')
 abstract class RestClient {
   factory RestClient(Dio dio, {String baseUrl}) = _RestClient;
 
@@ -138,7 +138,7 @@ abstract class RestClient {
 
   // ai character
 
-  @POST('https://char.dev.dprofiles.xyz/generate-character-bot/')
+  @POST('https://char.api.dprofiles.xyz/generate-character-bot/')
   Future<BaseResponse> generateCharacterBot(@Body() Map<String, dynamic> body);
 
   @GET('/api/v1/character-chatbot')
@@ -150,7 +150,7 @@ abstract class RestClient {
   @GET('/api/v1/character-chatbot/popular/{id}')
   Future<BaseResponse> getPopularCharacterBotDetail(@Path() int id);
 
-  @POST('https://char.dev.dprofiles.xyz/load-character-bot/')
+  @POST('https://char.api.dprofiles.xyz/load-character-bot/')
   Future<BaseResponse> loadCharacterBot(@Body() Map<String, dynamic> body);
 
   @GET('/api/v1/character-chatbot/popular')
@@ -215,7 +215,7 @@ abstract class RestClient {
 
   // chat with ai
 
-  @POST('https://char.dev.dprofiles.xyz/chat/')
+  @POST('https://char.api.dprofiles.xyz/chat/')
   Future<BaseResponse> chatWithBotAI(@Body() Map<String, dynamic> body);
 
   @GET('/api/v1/chatbot-message-history')
@@ -371,7 +371,7 @@ abstract class RestClient {
 
   // upload
 
-  @POST('https://upload.dev.dprofiles.xyz/presigned-upload-url')
+  @POST('https://upload.api.dprofiles.xyz/presigned-upload-url')
   Future<UploadFileResponse> uploadImage(@Body() Map<String, dynamic> body);
 
   // search

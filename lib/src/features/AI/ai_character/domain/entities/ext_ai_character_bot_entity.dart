@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:auto_route/auto_route.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_cache_image.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
@@ -7,7 +10,6 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:demo_dprofiles/src/theme/assets.gen.dart';
 import 'package:demo_dprofiles/src/theme/my_color.dart';
-import 'package:demo_dprofiles/src/utils/presentation/animation_background.dart';
 import 'package:flutter/material.dart';
 
 extension AICharacterBotModelExt on AICharacterBotModel {
@@ -15,8 +17,24 @@ extension AICharacterBotModelExt on AICharacterBotModel {
     return Stack(
       children: [
         ClipRRect(
-            borderRadius: BorderRadius.circular(12),
-            child: const AnimationBackground()),
+          borderRadius: BorderRadius.circular(12),
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              CachedNetworkImage(imageUrl: _buildAvtUrl),
+              ClipRRect(
+                // Clip it cleanly.
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 50, sigmaY: 10),
+                  child: Container(
+                    color: Colors.black.withOpacity(0.4),
+                    alignment: Alignment.center,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
         Column(
           children: [
             if (definition != null && definition!.shortDescription != null)
@@ -121,6 +139,8 @@ extension AICharacterBotModelExt on AICharacterBotModel {
                 ),
               ));
   }
+
+  String get _buildAvtUrl => 'https://d3v3a2vsni37rv.cloudfront.net/$avatar';
 
   Widget _buildChatButton(BuildContext context, bool isPopularBot) {
     return InkWell(

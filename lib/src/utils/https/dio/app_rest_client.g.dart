@@ -1015,7 +1015,7 @@ class _RestClient implements RestClient {
     )
             .compose(
               _dio.options,
-              'https://char.dev.dprofiles.xyz/generate-character-bot/',
+              'https://char.api.dprofiles.xyz/generate-character-bot/',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -1124,7 +1124,7 @@ class _RestClient implements RestClient {
     )
             .compose(
               _dio.options,
-              'https://char.dev.dprofiles.xyz/load-character-bot/',
+              'https://char.api.dprofiles.xyz/load-character-bot/',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -1565,7 +1565,7 @@ class _RestClient implements RestClient {
     )
             .compose(
               _dio.options,
-              'https://char.dev.dprofiles.xyz/chat/',
+              'https://char.api.dprofiles.xyz/chat/',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -2442,7 +2442,7 @@ class _RestClient implements RestClient {
     )
             .compose(
               _dio.options,
-              'https://upload.dev.dprofiles.xyz/presigned-upload-url',
+              'https://upload.api.dprofiles.xyz/presigned-upload-url',
               queryParameters: queryParameters,
               data: _data,
             )

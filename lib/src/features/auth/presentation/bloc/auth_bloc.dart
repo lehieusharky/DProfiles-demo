@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:demo_dprofiles/src/features/auth/data/models/create_account_model.dart';
 import 'package:demo_dprofiles/src/features/auth/domain/usecases/auth_usecase.dart';
@@ -6,9 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'auth_bloc.freezed.dart';
 part 'auth_event.dart';
 part 'auth_state.dart';
-part 'auth_bloc.freezed.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   BuildContext context;
@@ -30,7 +31,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     final result = await authUseCase.sendSignUpEmail(event.email);
 
     result.fold(
-      (l) => emit(AuthError(message: l, title: appLocal(context).sendFailed)),
+      (l) {
+        if (l == "Email has sent") {
+          emit(AuthSendSignUpEmailSuccess(event.email));
+        } else {
+          emit(AuthError(message: l, title: appLocal(context).resendFailed));
+        }
+      },
       (r) {
         if (r.statusCode != 200) {
           emit(AuthError(
@@ -49,11 +56,22 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     final result = await authUseCase.resendSignUpEmail(event.email);
 
     result.fold(
-      (l) => emit(AuthError(message: l, title: appLocal(context).resendFailed)),
+      (l) {
+        if (l == "Email has sent") {
+          emit(const AuthResendSignUpEmailSuccess());
+        } else {
+          emit(AuthError(message: l, title: appLocal(context).resendFailed));
+        }
+      },
       (r) {
         if (r.statusCode != 200) {
-          emit(AuthError(
-              message: r.message ?? '', title: appLocal(context).resendFailed));
+          if (r.message == "Email has sent") {
+            emit(const AuthResendSignUpEmailSuccess());
+          } else {
+            emit(AuthError(
+                message: r.message ?? '',
+                title: appLocal(context).resendFailed));
+          }
         } else {
           emit(const AuthResendSignUpEmailSuccess());
         }

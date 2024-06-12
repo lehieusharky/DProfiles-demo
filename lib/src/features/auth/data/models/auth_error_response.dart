@@ -10,6 +10,7 @@ class RegularErrorResponse with _$RegularErrorResponse implements AppResponse {
     @Default("") String? message,
     String? error,
     @Default(400) int? statusCode,
+    int? serviceCode,
   }) = _RegularErrorResponse;
 
   factory RegularErrorResponse.fromJson(Map<String, Object?> json) =>
