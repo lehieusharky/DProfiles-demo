@@ -30,7 +30,7 @@ class AuthRepositoryImpl implements AuthRepository {
   Future<Either<AuthFailure, BaseResponse>> resendSignUpEmail(
       String email) async {
     try {
-      final response = await _authDataSource.sendSignUpEmail(email);
+      final response = await _authDataSource.resendSignUpEmail(email);
       return Right(response);
     } on DioException catch (e) {
       return Left(AuthFailure(

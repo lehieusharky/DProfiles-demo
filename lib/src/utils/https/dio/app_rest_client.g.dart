@@ -13,7 +13,7 @@ class _RestClient implements RestClient {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://api.dev.dprofiles.xyz';
+    baseUrl ??= 'https://api.dprofiles.xyz';
   }
 
   final Dio _dio;

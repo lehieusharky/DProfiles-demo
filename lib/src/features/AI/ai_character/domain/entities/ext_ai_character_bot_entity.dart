@@ -27,7 +27,7 @@ extension AICharacterBotModelExt on AICharacterBotModel {
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 50, sigmaY: 10),
                   child: Container(
-                    color: Colors.black.withOpacity(0.4),
+                    color: Colors.black.withOpacity(0.24),
                     alignment: Alignment.center,
                   ),
                 ),
