@@ -307,7 +307,7 @@ class _HeaderMyAICharacterState extends State<HeaderMyAICharacter> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(1000),
               child: MyCachedImage(
-                  imageUrl: 'https://d3v3a2vsni37rv.cloudfront.net/$avatar'),
+                  imageUrl: 'https://d2qzasm1g6lr7.cloudfront.net/$avatar'),
             ),
           );
   }

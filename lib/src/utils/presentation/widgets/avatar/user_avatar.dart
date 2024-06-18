@@ -44,7 +44,7 @@ class UserAvatar extends StatelessWidget {
           width: context.sizeWidth(_radius()),
           height: context.sizeWidth(_radius()),
           // TODO get domain from dotenv
-          imageUrl: 'https://d3v3a2vsni37rv.cloudfront.net/$avatarUrlKey'),
+          imageUrl: 'https://d2qzasm1g6lr7.cloudfront.net/$avatarUrlKey'),
     );
   }
 

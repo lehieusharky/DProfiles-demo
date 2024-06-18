@@ -75,6 +75,6 @@ class _PostFormState extends State<PostForm> {
                 width: context.sizeWidth(40),
                 height: context.sizeWidth(40),
                 imageUrl:
-                    'https://d3v3a2vsni37rv.cloudfront.net/${userInfo!.avatar}'));
+                    'https://d2qzasm1g6lr7.cloudfront.net/${userInfo!.avatar}'));
   }
 }

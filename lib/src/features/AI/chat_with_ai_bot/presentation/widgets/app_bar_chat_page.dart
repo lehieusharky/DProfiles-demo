@@ -64,7 +64,7 @@ class _AppBarChatPageState extends State<AppBarChatPage> {
                 borderRadius: BorderRadius.circular(100),
                 child: MyCachedImage(
                     imageUrl:
-                        'https://d3v3a2vsni37rv.cloudfront.net/${_botInfo!.avatar}'),
+                        'https://d2qzasm1g6lr7.cloudfront.net/${_botInfo!.avatar}'),
               ),
             ),
     );

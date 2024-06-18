@@ -107,7 +107,7 @@ extension PostModelExt on PostModel {
                 width: context.sizeWidth(40),
                 height: context.sizeWidth(40),
                 imageUrl:
-                    'https://d3v3a2vsni37rv.cloudfront.net/${user!.avatar}'));
+                    'https://d2qzasm1g6lr7.cloudfront.net/${user!.avatar}'));
   }
 
   Widget _buildMenu(BuildContext context) {

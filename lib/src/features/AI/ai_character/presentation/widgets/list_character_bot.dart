@@ -11,7 +11,6 @@ class ListCharacterBot extends StatelessWidget {
     return GridView.count(
         controller: controller,
         primary: false,
-        shrinkWrap: true,
         crossAxisSpacing: context.sizeWidth(12),
         childAspectRatio: 0.7,
         mainAxisSpacing: context.sizeWidth(16),

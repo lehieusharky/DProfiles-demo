@@ -21,6 +21,6 @@ class UserBanner extends StatelessWidget {
         width: context.width,
         height: context.sizeHeight(150),
         // TODO get domain from dotenv
-        imageUrl: 'https://d3v3a2vsni37rv.cloudfront.net/$bannerUrlKey');
+        imageUrl: 'https://d2qzasm1g6lr7.cloudfront.net/$bannerUrlKey');
   }
 }
