@@ -13,7 +13,7 @@ class ListCharacterBot extends StatelessWidget {
         primary: false,
         shrinkWrap: true,
         crossAxisSpacing: context.sizeWidth(12),
-        childAspectRatio: 0.7,
+        childAspectRatio: 0.62,
         mainAxisSpacing: context.sizeWidth(16),
         crossAxisCount: 2,
         children: children);

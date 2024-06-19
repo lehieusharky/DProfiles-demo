@@ -14,30 +14,29 @@ class TabBarAICharacter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.padding(horizontal: 60, vertical: 8),
+      padding: context.padding(horizontal: 67, vertical: 8),
       child: Container(
-        height: context.sizeHeight(45),
-        padding: context.padding(all: 6),
+        height: context.sizeHeight(40),
         decoration: BoxDecoration(
             border: Border.all(
-              color: colorScheme(context).primary,
+              color: Colors.black,
             ),
             borderRadius: BorderRadius.circular(120)),
         child: TabBar(
           dividerColor: Colors.transparent,
           indicatorSize: TabBarIndicatorSize.tab,
           labelColor: MyColor.getWhite,
-          unselectedLabelStyle: AppFont().fontTheme(context).bodyLarge,
-          unselectedLabelColor: colorScheme(context).outline,
+          unselectedLabelStyle: AppFont().fontTheme(context, weight: FontWeight.w700).bodyLarge,
+          unselectedLabelColor: Colors.black,
           onTap: (value) => _onChange(context, value),
           labelStyle: AppFont()
               .fontTheme(context,
-                  color: MyColor.getWhite, weight: FontWeight.bold)
+                  color: MyColor.getWhite, weight: FontWeight.w700)
               .bodyLarge,
           indicator: BubbleTabIndicator(
-            indicatorHeight: context.sizeHeight(35),
-            insets: context.padding(horizontal: 0),
-            indicatorColor: colorScheme(context).primary,
+            indicatorHeight: context.sizeHeight(32),
+            insets: context.padding(horizontal: 3),
+            indicatorColor: Colors.black,
             tabBarIndicatorSize: TabBarIndicatorSize.tab,
           ),
           tabs: [appLocal(context).explore, appLocal(context).following].map((e) => _buildTab(e)).toList(),
