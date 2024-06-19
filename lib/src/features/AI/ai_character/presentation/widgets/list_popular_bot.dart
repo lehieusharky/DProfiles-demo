@@ -1,3 +1,4 @@
+import 'package:demo_dprofiles/src/core/app_responsive.dart';
 import 'package:demo_dprofiles/src/core/ui/my_loading.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/data/models/ai_character_bot_model.dart';
 import 'package:demo_dprofiles/src/features/AI/ai_character/domain/entities/ext_ai_character_bot_entity.dart';
@@ -48,14 +49,29 @@ class _ListPopularBotState extends State<ListPopularBot>
         if (bots == null) {
           return const MyLoading();
         } else {
-          return ListCharacterBot(
-            controller: _scrollController,
-            children: bots!.map((e) => e.toPopularBot(context, true)).toList(),
+          return Column(
+            children: [
+              Expanded(
+                child: ListCharacterBot(
+                  controller: _scrollController,
+                  children:
+                      bots!.map((e) => e.toPopularBot(context, true)).toList(),
+                ),
+              ),
+              if (state is AICharacterLoading) _loadMoreWidget()
+            ],
           );
         }
       },
     );
   }
+
+  Widget _loadMoreWidget() => Center(
+        child: Padding(
+          padding: context.padding(vertical: 10),
+          child: const CircularProgressIndicator(),
+        ),
+      );
 
   void _handleBots(GetListPopularCharacterBotSuccess state) {
     if (state.bots.isNotEmpty) {
