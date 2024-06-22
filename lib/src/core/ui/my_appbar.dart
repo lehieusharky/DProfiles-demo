@@ -11,6 +11,7 @@ class MyAppbar extends StatefulWidget implements PreferredSizeWidget {
     this.titleWidget,
     this.onBack,
     this.height,
+    this.backgroundColor
   }) : super(key: key);
 
   final String? title;
@@ -19,6 +20,7 @@ class MyAppbar extends StatefulWidget implements PreferredSizeWidget {
   final Widget? titleWidget;
   final VoidCallback? onBack;
   final double? height;
+  final Color? backgroundColor;
 
   @override
   State<MyAppbar> createState() => _MyAppbarState();
@@ -31,6 +33,7 @@ class _MyAppbarState extends State<MyAppbar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: widget.backgroundColor,
       centerTitle: false,
       automaticallyImplyLeading: false,
       leading: widget.isBack == true
@@ -39,11 +42,8 @@ class _MyAppbarState extends State<MyAppbar> {
               icon: const Icon(IconsaxOutline.arrow_left_2),
             )
           : null,
-      title: Padding(
-        padding: context.padding(left: 20),
-        child: widget.titleWidget ??
-            (widget.title == null ? null : Text(widget.title!)),
-      ),
+      title: widget.titleWidget ??
+          (widget.title == null ? null : Text(widget.title!)),
       actions: widget.action,
     );
   }

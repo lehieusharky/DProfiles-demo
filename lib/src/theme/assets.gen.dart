@@ -76,6 +76,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_more.svg
   SvgGenImage get iconMore => const SvgGenImage('assets/icons/icon_more.svg');
 
+  /// File path: assets/icons/icon_quote.svg
+  SvgGenImage get iconQuote => const SvgGenImage('assets/icons/icon_quote.svg');
+
   /// File path: assets/icons/icon_search.svg
   SvgGenImage get iconSearch =>
       const SvgGenImage('assets/icons/icon_search.svg');
@@ -142,6 +145,7 @@ class $AssetsIconsGen {
         iconHeart,
         iconMenu,
         iconMore,
+        iconQuote,
         iconSearch,
         iconShare,
         iconSpeak,
