@@ -1,6 +1,7 @@
 import 'package:demo_dprofiles/src/core/di/di.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'dart:math';
 
 extension StringExt on String? {
   String? emailValidation(BuildContext context) {
@@ -92,6 +93,46 @@ extension StringExt on String? {
       return formattedDate;
     }
   }
+
+  calculateDistanceBetweenDates(String? dateStr2) {
+    if ( this == null || dateStr2 == null || this!.isEmpty  || dateStr2!.isEmpty){
+      return '';
+    }else{
+      try {
+        final date1 = DateTime.parse(this!);
+        final date2 = DateTime.parse(dateStr2!);
+        int years = (date2.year - date1.year).abs() ;
+
+        // Calculate remaining months (considering year difference)
+        int months = (date2.month - date1.month).abs() ;
+
+         String yearStr = years == 0 ? "" : "$years yrs";
+         String monthStr = months == 0 ? "" : "$months mths";
+
+        return yearStr + " "+ monthStr;
+      } on FormatException {
+
+        return 0; // Or throw an exception for stricter handling
+      }
+    }
+
+
+  }
+
+  String convertToMMYYFormat(){
+    if (this == null || this!.isEmpty) {
+      return '';
+    } else {
+      DateTime dateTime = DateTime.parse(this!);
+
+      DateFormat formatter = DateFormat('MMM yyyy');
+
+      String formattedDate = formatter.format(dateTime);
+
+      return formattedDate;
+    }
+  }
+
 
   bool isValidEmail() {
     const pattern = r"(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'"

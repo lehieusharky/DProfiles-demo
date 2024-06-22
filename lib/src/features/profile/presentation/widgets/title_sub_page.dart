@@ -3,6 +3,9 @@ import 'package:demo_dprofiles/src/theme/app_color_scheme.dart';
 import 'package:demo_dprofiles/src/theme/app_text_style.dart';
 import 'package:ficonsax/ficonsax.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../../../../theme/assets.gen.dart';
 
 class TitleSubPage extends StatelessWidget {
   final String title;
@@ -32,10 +35,7 @@ class TitleSubPage extends StatelessWidget {
           IconButton(
             onPressed: () =>
                 context.router.push(route!).then((value) => onCallBack!()),
-            icon: Icon(
-              IconsaxBold.edit_2,
-              color: colorScheme(context).outlineVariant,
-            ),
+            icon: SvgPicture.asset(Assets.icons.iconEdit.path),
           ),
       ],
     );

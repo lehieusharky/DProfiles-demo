@@ -51,7 +51,7 @@ class _ExperienceComponentState extends State<ExperienceComponent> {
           mainAxisSize: MainAxisSize.min,
           children: [
             TitleSubPage(
-              title: 'Experience',
+              title: 'Experiences',
               route: const ListExperienceRoute(),
               onCallBack: () => context
                   .read<ProfileBloc>()
@@ -63,7 +63,7 @@ class _ExperienceComponentState extends State<ExperienceComponent> {
               Column(
                 mainAxisSize: MainAxisSize.min,
                 children: experiences!
-                    .map((e) => e.toWidget(
+                    .map((e) =>  e.toWidget(
                           context,
                           // onDelete: () => _deleteExpe(context, e),
                           // onUpdate: () => _updateExp(context, e),
