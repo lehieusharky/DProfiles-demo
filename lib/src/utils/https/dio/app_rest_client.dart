@@ -27,6 +27,9 @@ abstract class RestClient {
   @POST('/api/login')
   Future<SignInModel> signIn(@Body() Map<String, dynamic> body);
 
+  @POST('/api/refresh')
+  Future<SignInModel> refreshToken(@Body() Map<String, dynamic> body);
+
   // user
 
   @GET('/api/v1/user')
