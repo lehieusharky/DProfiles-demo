@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:demo_dprofiles/src/routes/app_route.gr.dart';
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
-import 'package:demo_dprofiles/src/utils/https/my_response/refresh_token_response.dart';
+import 'package:demo_dprofiles/src/utils/services/navigation_service.dart';
 import 'package:dio/dio.dart';
 import 'package:logger/logger.dart';
 
@@ -30,11 +32,12 @@ class MyHttp {
         DioInterceptor(),
         CurlLoggerDioInterceptor(printOnSuccess: true),
         InterceptorsWrapper(
-            onError: (exception, handler) =>
-                onUnauthorizedError(exception, handler, refreshToken),
-            onRequest: ((options, handler) {
-              sharePreference.getAccessToken();
-            })),
+          onError: (exception, handler) =>
+              onUnauthorizedError(exception, handler, refreshToken),
+          // onRequest: ((options, handler) {
+          //   sharePreference.getAccessToken();
+          // }),
+        ),
       ],
     );
 
@@ -68,28 +71,37 @@ class MyHttp {
     DioException exception,
     String myRefreshToken,
   ) async {
-    final body = {"token": myRefreshToken};
+    // final body = {"token": myRefreshToken};
 
-    await MyHttp.rl().refreshToken(body).then((res) => _retry(exception, res));
+    // await MyHttp.rl().refreshToken(body).then((res) => _retry(exception, res));
+
+    _logOut();
   }
 
-  static _retry(DioException exception, RefreshTokenResponse res) async {
-    await sharePreference.setAccessToken(res.accessToken);
+  static void _logOut() async {
+    await sharePreference.removeAccessToken();
 
-    await sharePreference.setRefreshToken(res.refreshToken);
-
-    final requestOptions = exception.requestOptions;
-
-    final options = Options(
-      method: requestOptions.method,
-      headers: requestOptions.headers,
-    );
-
-    getDio().request<dynamic>(
-      requestOptions.path,
-      data: requestOptions.data,
-      queryParameters: requestOptions.queryParameters,
-      options: options,
-    );
+    NavigationService.navigatorKey.currentContext!.router
+        .replace(const SignInRoute());
   }
+
+  // static _retry(DioException exception, RefreshTokenResponse res) async {
+  //   await sharePreference.setAccessToken(res.accessToken);
+
+  //   await sharePreference.setRefreshToken(res.refreshToken);
+
+  //   final requestOptions = exception.requestOptions;
+
+  //   final options = Options(
+  //     method: requestOptions.method,
+  //     headers: requestOptions.headers,
+  //   );
+
+  //   getDio().request<dynamic>(
+  //     requestOptions.path,
+  //     data: requestOptions.data,
+  //     queryParameters: requestOptions.queryParameters,
+  //     options: options,
+  //   );
+  // }
 }

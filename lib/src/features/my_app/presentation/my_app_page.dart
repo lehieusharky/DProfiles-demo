@@ -7,6 +7,7 @@ import 'package:demo_dprofiles/src/utils/constant/string_constant.dart';
 import 'package:demo_dprofiles/src/utils/constant/support_theme.dart';
 import 'package:demo_dprofiles/src/utils/constant/supported_language.dart';
 import 'package:demo_dprofiles/src/utils/data/cache/app_share_preference.dart';
+import 'package:demo_dprofiles/src/utils/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -56,6 +57,7 @@ class _MyAppPageState extends State<MyAppPage> {
           },
           builder: (context, state) {
             return MaterialApp.router(
+              key: NavigationService.navigatorKey,
               debugShowCheckedModeBanner: false,
               routerConfig: _appRoute.config(),
               darkTheme: AppColorScheme.darkTheme,
