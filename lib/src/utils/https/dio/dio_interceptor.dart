@@ -23,7 +23,3 @@ class DioInterceptor extends QueuedInterceptorsWrapper {
     super.onError(err, handler);
   }
 }
-
-class a extends InterceptorsWrapper {
-  
-}

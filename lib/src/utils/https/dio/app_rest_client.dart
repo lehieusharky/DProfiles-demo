@@ -1,13 +1,12 @@
 import 'package:demo_dprofiles/src/features/auth/data/models/sign_in_model.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/base_response.dart';
-import 'package:demo_dprofiles/src/utils/https/my_response/refresh_token_response.dart';
 import 'package:demo_dprofiles/src/utils/https/my_response/upload_file_response.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'app_rest_client.g.dart';
 
-@RestApi(baseUrl: 'https://api.dev.dprofiles.xyz')
+@RestApi(baseUrl: 'https://api.dprofiles.xyz')
 abstract class RestClient {
   factory RestClient(Dio dio, {String baseUrl}) = _RestClient;
 
@@ -28,8 +27,8 @@ abstract class RestClient {
   @POST('/api/login')
   Future<SignInModel> signIn(@Body() Map<String, dynamic> body);
 
-  @POST('/api/login')
-  Future<RefreshTokenResponse> refreshToken(@Body() Map<String, dynamic> body);
+  @POST('/api/refresh')
+  Future<SignInModel> refreshToken(@Body() Map<String, dynamic> body);
 
   // user
 

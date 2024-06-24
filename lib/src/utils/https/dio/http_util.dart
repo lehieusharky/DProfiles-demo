@@ -34,9 +34,7 @@ class MyHttp {
         InterceptorsWrapper(
           onError: (exception, handler) =>
               onUnauthorizedError(exception, handler, refreshToken),
-          // onRequest: ((options, handler) {
-          //   sharePreference.getAccessToken();
-          // }),
+          // onRequest: ((options, handler) {}),
         ),
       ],
     );
@@ -81,8 +79,10 @@ class MyHttp {
   static void _logOut() async {
     await sharePreference.removeAccessToken();
 
-    NavigationService.navigatorKey.currentContext!.router
-        .replace(const SignInRoute());
+    NavigationService().appRoute.replace(
+          const SignInRoute(),
+          onFailure: (failure) {},
+        );
   }
 
   // static _retry(DioException exception, RefreshTokenResponse res) async {

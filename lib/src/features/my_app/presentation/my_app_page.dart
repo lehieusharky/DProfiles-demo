@@ -29,6 +29,7 @@ class _MyAppPageState extends State<MyAppPage> {
     _theme = sharePreference.getTheme();
     _language = sharePreference.getLanguage();
     _appRoute = AppRouter();
+    NavigationService().appRoute = _appRoute;
     super.initState();
   }
 
@@ -57,7 +58,6 @@ class _MyAppPageState extends State<MyAppPage> {
           },
           builder: (context, state) {
             return MaterialApp.router(
-              key: NavigationService.navigatorKey,
               debugShowCheckedModeBanner: false,
               routerConfig: _appRoute.config(),
               darkTheme: AppColorScheme.darkTheme,

@@ -161,14 +161,14 @@ class _RestClient implements RestClient {
   }
 
   @override
-  Future<RefreshTokenResponse> refreshToken(Map<String, dynamic> body) async {
+  Future<SignInModel> refreshToken(Map<String, dynamic> body) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     _data.addAll(body);
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<RefreshTokenResponse>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<SignInModel>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
@@ -184,7 +184,7 @@ class _RestClient implements RestClient {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = RefreshTokenResponse.fromJson(_result.data!);
+    final value = SignInModel.fromJson(_result.data!);
     return value;
   }
 
