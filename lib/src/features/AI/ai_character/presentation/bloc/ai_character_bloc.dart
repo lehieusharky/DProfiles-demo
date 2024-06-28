@@ -38,7 +38,7 @@ class AiCharacterBloc extends Bloc<AiCharacterEvent, AiCharacterState> {
   PropertyAICharacterModel propertyAICharacterModel =
       const PropertyAICharacterModel();
 
-  int _currentPagePopularBot = 1;
+  int _currentPagePopularBot = 0;
 
   AiCharacterBloc(
       this.aiCharacterUseCase, this.profileUseCase, this.chatWithAiUseCase)
