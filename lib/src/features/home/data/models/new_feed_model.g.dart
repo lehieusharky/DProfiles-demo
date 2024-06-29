@@ -12,10 +12,10 @@ _$NewFeedModelImpl _$$NewFeedModelImplFromJson(Map<String, dynamic> json) =>
       userId: (json['userId'] as num?)?.toInt(),
       adminId: (json['adminId'] as num?)?.toInt(),
       content: json['content'] as String?,
-      imageUrl: (json['imageUrl'] as List<dynamic>?)
+      imageUrl: (json['image_url'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      videoUrl: (json['videoUrl'] as List<dynamic>?)
+      videoUrl: (json['video_url'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       updatedOn: json['updatedOn'] as String?,
@@ -36,8 +36,8 @@ Map<String, dynamic> _$$NewFeedModelImplToJson(_$NewFeedModelImpl instance) =>
       'userId': instance.userId,
       'adminId': instance.adminId,
       'content': instance.content,
-      'imageUrl': instance.imageUrl,
-      'videoUrl': instance.videoUrl,
+      'image_url': instance.imageUrl,
+      'video_url': instance.videoUrl,
       'updatedOn': instance.updatedOn,
       'updatedTs': instance.updatedTs,
       'createdTs': instance.createdTs,

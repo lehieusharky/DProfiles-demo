@@ -67,13 +67,11 @@ class _NewsFeedHomeState extends State<NewsFeedHome>
   }
 
   Widget _buildBody(List<NewFeedModel> state) {
-    return SizedBox(
-      height: state.length * 400,
-      child: ListView.builder(
-        itemCount: state.length,
-        itemBuilder: (context, index) => _buildNewsItem(state[index]),
-        physics: const NeverScrollableScrollPhysics(),
-      ),
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: state.length,
+      itemBuilder: (context, index) => _buildNewsItem(state[index]),
+      physics: const NeverScrollableScrollPhysics(),
     );
   }
 

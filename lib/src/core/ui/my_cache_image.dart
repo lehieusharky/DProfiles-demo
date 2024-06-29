@@ -29,16 +29,16 @@ class MyCachedImage extends StatelessWidget {
         imageUrl: imageUrl.isNotEmpty
             ? imageUrl
             : 'https://www.investopedia.com/thmb/pevv6dw9Hn-DK8L2tUmmyLXvcpw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/CryptoSpotlight-Recirc2-52a72e7b82124c83b1818c6f4fa14344.jpg',
-        imageBuilder: (context, imageProvider) => Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(borderRadius ?? 5),
-                image: DecorationImage(
-                  image: imageProvider,
-                  fit: BoxFit.cover,
-                  opacity: opacity ?? 1,
-                ),
-              ),
-            ),
+        // imageBuilder: (context, imageProvider) => Container(
+        //       decoration: BoxDecoration(
+        //         borderRadius: BorderRadius.circular(borderRadius ?? 5),
+        //         image: DecorationImage(
+        //           image: imageProvider,
+        //           fit: BoxFit.cover,
+        //           opacity: opacity ?? 1,
+        //         ),
+        //       ),
+        //     ),
         // placeholder: (context, url) => MyShimmer(count: 1, height: height),
         errorWidget: (context, url, error) =>
             errorWidget ??

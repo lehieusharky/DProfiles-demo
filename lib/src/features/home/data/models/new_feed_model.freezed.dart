@@ -24,7 +24,9 @@ mixin _$NewFeedModel {
   int? get userId => throw _privateConstructorUsedError;
   int? get adminId => throw _privateConstructorUsedError;
   String? get content => throw _privateConstructorUsedError;
+  @JsonKey(name: 'image_url')
   List<String>? get imageUrl => throw _privateConstructorUsedError;
+  @JsonKey(name: 'video_url')
   List<String>? get videoUrl => throw _privateConstructorUsedError;
   String? get updatedOn => throw _privateConstructorUsedError;
   String? get updatedTs => throw _privateConstructorUsedError;
@@ -52,8 +54,8 @@ abstract class $NewFeedModelCopyWith<$Res> {
       int? userId,
       int? adminId,
       String? content,
-      List<String>? imageUrl,
-      List<String>? videoUrl,
+      @JsonKey(name: 'image_url') List<String>? imageUrl,
+      @JsonKey(name: 'video_url') List<String>? videoUrl,
       String? updatedOn,
       String? updatedTs,
       String? createdTs,
@@ -180,8 +182,8 @@ abstract class _$$NewFeedModelImplCopyWith<$Res>
       int? userId,
       int? adminId,
       String? content,
-      List<String>? imageUrl,
-      List<String>? videoUrl,
+      @JsonKey(name: 'image_url') List<String>? imageUrl,
+      @JsonKey(name: 'video_url') List<String>? videoUrl,
       String? updatedOn,
       String? updatedTs,
       String? createdTs,
@@ -290,8 +292,8 @@ class _$NewFeedModelImpl implements _NewFeedModel {
       this.userId,
       this.adminId,
       this.content,
-      final List<String>? imageUrl,
-      final List<String>? videoUrl,
+      @JsonKey(name: 'image_url') final List<String>? imageUrl,
+      @JsonKey(name: 'video_url') final List<String>? videoUrl,
       this.updatedOn,
       this.updatedTs,
       this.createdTs,
@@ -316,6 +318,7 @@ class _$NewFeedModelImpl implements _NewFeedModel {
   final String? content;
   final List<String>? _imageUrl;
   @override
+  @JsonKey(name: 'image_url')
   List<String>? get imageUrl {
     final value = _imageUrl;
     if (value == null) return null;
@@ -326,6 +329,7 @@ class _$NewFeedModelImpl implements _NewFeedModel {
 
   final List<String>? _videoUrl;
   @override
+  @JsonKey(name: 'video_url')
   List<String>? get videoUrl {
     final value = _videoUrl;
     if (value == null) return null;
@@ -423,8 +427,8 @@ abstract class _NewFeedModel implements NewFeedModel {
       final int? userId,
       final int? adminId,
       final String? content,
-      final List<String>? imageUrl,
-      final List<String>? videoUrl,
+      @JsonKey(name: 'image_url') final List<String>? imageUrl,
+      @JsonKey(name: 'video_url') final List<String>? videoUrl,
       final String? updatedOn,
       final String? updatedTs,
       final String? createdTs,
@@ -446,8 +450,10 @@ abstract class _NewFeedModel implements NewFeedModel {
   @override
   String? get content;
   @override
+  @JsonKey(name: 'image_url')
   List<String>? get imageUrl;
   @override
+  @JsonKey(name: 'video_url')
   List<String>? get videoUrl;
   @override
   String? get updatedOn;
