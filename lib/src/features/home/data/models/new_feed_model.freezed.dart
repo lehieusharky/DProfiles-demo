@@ -28,8 +28,11 @@ mixin _$NewFeedModel {
   List<String>? get imageUrl => throw _privateConstructorUsedError;
   @JsonKey(name: 'video_url')
   List<String>? get videoUrl => throw _privateConstructorUsedError;
+  @JsonKey(name: 'updated_on')
   String? get updatedOn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'updated_ts')
   String? get updatedTs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'created_ts')
   String? get createdTs => throw _privateConstructorUsedError;
   User? get user => throw _privateConstructorUsedError;
   int? get noOfLike => throw _privateConstructorUsedError;
@@ -56,9 +59,9 @@ abstract class $NewFeedModelCopyWith<$Res> {
       String? content,
       @JsonKey(name: 'image_url') List<String>? imageUrl,
       @JsonKey(name: 'video_url') List<String>? videoUrl,
-      String? updatedOn,
-      String? updatedTs,
-      String? createdTs,
+      @JsonKey(name: 'updated_on') String? updatedOn,
+      @JsonKey(name: 'updated_ts') String? updatedTs,
+      @JsonKey(name: 'created_ts') String? createdTs,
       User? user,
       int? noOfLike,
       int? noOfShare,
@@ -184,9 +187,9 @@ abstract class _$$NewFeedModelImplCopyWith<$Res>
       String? content,
       @JsonKey(name: 'image_url') List<String>? imageUrl,
       @JsonKey(name: 'video_url') List<String>? videoUrl,
-      String? updatedOn,
-      String? updatedTs,
-      String? createdTs,
+      @JsonKey(name: 'updated_on') String? updatedOn,
+      @JsonKey(name: 'updated_ts') String? updatedTs,
+      @JsonKey(name: 'created_ts') String? createdTs,
       User? user,
       int? noOfLike,
       int? noOfShare,
@@ -294,9 +297,9 @@ class _$NewFeedModelImpl implements _NewFeedModel {
       this.content,
       @JsonKey(name: 'image_url') final List<String>? imageUrl,
       @JsonKey(name: 'video_url') final List<String>? videoUrl,
-      this.updatedOn,
-      this.updatedTs,
-      this.createdTs,
+      @JsonKey(name: 'updated_on') this.updatedOn,
+      @JsonKey(name: 'updated_ts') this.updatedTs,
+      @JsonKey(name: 'created_ts') this.createdTs,
       this.user,
       this.noOfLike,
       this.noOfShare,
@@ -339,10 +342,13 @@ class _$NewFeedModelImpl implements _NewFeedModel {
   }
 
   @override
+  @JsonKey(name: 'updated_on')
   final String? updatedOn;
   @override
+  @JsonKey(name: 'updated_ts')
   final String? updatedTs;
   @override
+  @JsonKey(name: 'created_ts')
   final String? createdTs;
   @override
   final User? user;
@@ -429,9 +435,9 @@ abstract class _NewFeedModel implements NewFeedModel {
       final String? content,
       @JsonKey(name: 'image_url') final List<String>? imageUrl,
       @JsonKey(name: 'video_url') final List<String>? videoUrl,
-      final String? updatedOn,
-      final String? updatedTs,
-      final String? createdTs,
+      @JsonKey(name: 'updated_on') final String? updatedOn,
+      @JsonKey(name: 'updated_ts') final String? updatedTs,
+      @JsonKey(name: 'created_ts') final String? createdTs,
       final User? user,
       final int? noOfLike,
       final int? noOfShare,
@@ -456,10 +462,13 @@ abstract class _NewFeedModel implements NewFeedModel {
   @JsonKey(name: 'video_url')
   List<String>? get videoUrl;
   @override
+  @JsonKey(name: 'updated_on')
   String? get updatedOn;
   @override
+  @JsonKey(name: 'updated_ts')
   String? get updatedTs;
   @override
+  @JsonKey(name: 'created_ts')
   String? get createdTs;
   @override
   User? get user;
